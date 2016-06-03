@@ -11,6 +11,9 @@ using System.Linq;
 static class Program
 {
     static string s_OutputFolder = @"..\..\Data\Contracts";
+    static string s_OutputSources = Path.Combine(s_OutputFolder, "src");
+    static string s_OutputDlls = Path.Combine(s_OutputFolder, "bin");
+
     static string s_SpecificationFolder = @"..\..\Data\Specifications";
     static string s_ReportPath = @"..\..\Data\report.xml";
     static string s_ExistingContracts = @"..\..\ExistingContracts";
@@ -23,7 +26,7 @@ static class Program
     {
         using (var reportWriter = new ReportWriter(s_ReportPath)) {
             if (RefactorAssemblies(reportWriter)) {         
-                LocationAnalysis.CompareFactorings(s_ExistingContracts, s_OutputFolder, reportWriter);
+                LocationAnalysis.CompareFactorings(s_ExistingContracts, s_OutputDlls, reportWriter);
             }
         }
 
@@ -36,14 +39,8 @@ static class Program
         var masterSource = CSharpSyntaxTree.ParseText(File.ReadAllText(s_MasterAPIFile));
 
         // prepare the right folders
-        if (Directory.Exists(s_OutputFolder)) {
-            var files = Directory.GetFiles(s_OutputFolder);
-            foreach (var file in files) {
-                File.Delete(file);
-            }
-        } else {
-            Directory.CreateDirectory(s_OutputFolder);
-        }
+        PrepareOutputFolder(s_OutputSources);
+        PrepareOutputFolder(s_OutputDlls);
 
         // compile master file 
         var compilation = CSharpCompilation.Create("mscorlib", new SyntaxTree[] { masterSource });
@@ -75,8 +72,8 @@ static class Program
         }
 
         if (redist.Leftover.Count > 0) {
-            reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files"); 
-            
+            reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files");
+
             foreach (var ns in redist.Leftover) {
                 var nsName = ns.Key;
                 foreach (var type in ns.Value) {
@@ -90,6 +87,19 @@ static class Program
         PrintOrphanedTypes(redist, reportWriter);
 
         return successfulBuild;
+    }
+
+    private static void PrepareOutputFolder(string folder)
+    {
+        if (Directory.Exists(folder)) {
+            var files = Directory.GetFiles(folder);
+            foreach (var file in files) {
+                File.Delete(file);
+            }
+        }
+        else {
+            Directory.CreateDirectory(folder);
+        }
     }
 
     static void PrintOrphanedTypes(FxRedist redist, ReportWriter reportWriter)
@@ -198,7 +208,7 @@ static class Program
     static void GenerateSources(FxRedist assemblies)
     {
         foreach (var module in assemblies) {
-            string file = s_OutputFolder + "\\" + module.Key + ".cs";
+            string file = s_OutputSources + "\\" + module.Key + ".cs";
             module.Value.SourceFile = file;
             StreamWriter sw = new StreamWriter(file);
             sw.WriteLine("[assembly:System.CLSCompliant(true)]");
@@ -261,7 +271,7 @@ static class Program
 
         var references = new List<MetadataReference>();
         foreach (var reference in assembly.References) {
-            var referenceFile = Path.Combine(s_OutputFolder, reference);
+            var referenceFile = Path.Combine(s_OutputDlls, reference);
             if (!File.Exists(referenceFile)) {
                 WriteMessage(ConsoleColor.Red, "References {1} of {0} missing", assembly.Name, referenceFile);
                 return false;
@@ -279,7 +289,7 @@ static class Program
             options: options
         );
 
-        var dllPath = Path.Combine(s_OutputFolder, assembly.Name + ".dll");
+        var dllPath = Path.Combine(s_OutputDlls, assembly.Name + ".dll");
 
         using (var ms = new FileStream(dllPath, FileMode.Create, FileAccess.Write, FileShare.None)) {
             EmitResult compilationResult = compilation.Emit(ms);

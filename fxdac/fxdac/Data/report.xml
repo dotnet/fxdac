@@ -173,9 +173,9 @@
     <item text="T:System.Xml.Serialization.XmlIgnoreAttribute"/>
   </ORPHANED_TYPES>
   <GENERAL_STATISTICS>
-    <item text="Previous types 1221"/>
+    <item text="Previous types 1204"/>
     <item text="Current types 2127"/>
-    <item text="Moved to System.Runtime 163"/>
+    <item text="Moved to System.Runtime 148"/>
     <item text="Moved to other locations 47"/>
   </GENERAL_STATISTICS>
   <ADDED_CONTRACTS total="29">
@@ -209,22 +209,20 @@
     <item text="System.Timer"/>
     <item text="System.Uri.Builder"/>
   </ADDED_CONTRACTS>
-  <REMOVED_CONTRACTS total="13">
+  <REMOVED_CONTRACTS total="11">
     <item text="	System.ComponentModel.Primitives"/>
     <item text="	System.Diagnostics.DiagnosticSource"/>
-    <item text="	System.Diagnostics.TextWriterTraceListener"/>
     <item text="	System.Dynamic.Runtime"/>
     <item text="	System.Reflection"/>
     <item text="	System.Reflection.DispatchProxy"/>
     <item text="	System.Reflection.Extensions"/>
     <item text="	System.Reflection.Primitives"/>
     <item text="	System.Reflection.TypeExtensions"/>
-    <item text="	System.Runtime.CompilerServices.VisualC"/>
     <item text="	System.Text.Encoding.CodePages"/>
     <item text="	System.Threading.Tasks"/>
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="210" description="corefx types that changed their location">
+  <MOVED_TYPES total="195" description="corefx types that changed their location">
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IComponent moved from System.ComponentModel.Primitives"/>
@@ -355,26 +353,11 @@
     <item text="System.Runtime,System.Runtime.CompilerServices.AsyncTaskMethodBuilder moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1 moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.AsyncVoidMethodBuilder moved from System.Threading.Tasks"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvCdecl moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvFastcall moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvStdcall moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvThiscall moved from System.Runtime.CompilerServices.VisualC"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.ConfiguredTaskAwaitable moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1 moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.IAsyncStateMachine moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.ICriticalNotifyCompletion moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.INotifyCompletion moved from System.Threading.Tasks"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsBoxed moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsByValue moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsCopyConstructed moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsExplicitlyDereferenced moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsImplicitlyDereferenced moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsJitIntrinsic moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsLong moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsSignUnspecifiedByte moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.IsUdtReturn moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.NativeCppClassAttribute moved from System.Runtime.CompilerServices.VisualC"/>
-    <item text="System.Runtime,System.Runtime.CompilerServices.RequiredAttributeAttribute moved from System.Runtime.CompilerServices.VisualC"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.TaskAwaiter moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.TaskAwaiter`1 moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.YieldAwaitable moved from System.Threading.Tasks"/>
@@ -436,7 +419,7 @@
     <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
     <item text="System.Uri.Builder,System.UriBuilder moved from System.Runtime.Extensions"/>
   </MOVED_TYPES>
-  <TYPES_NOT_IN_CORFX total="996">
+  <TYPES_NOT_IN_CORFX total="1011">
     <item text="Microsoft.Registry,Microsoft.Win32.RegistryOptions"/>
     <item text="Microsoft.Registry,Microsoft.Win32.RegistryView"/>
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid"/>
@@ -872,6 +855,10 @@
     <item text="System.Runtime,System.ResolveEventArgs"/>
     <item text="System.Runtime,System.ResolveEventHandler"/>
     <item text="System.Runtime,System.Runtime.AssemblyTargetedPatchBandAttribute"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvCdecl"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvFastcall"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvStdcall"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.CallConvThiscall"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.CompilationRelaxations"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.CompilerGlobalScopeAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.CompilerMarshalOverride"/>
@@ -880,10 +867,21 @@
     <item text="System.Runtime,System.Runtime.CompilerServices.DiscardableAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.FixedAddressValueTypeAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.HasCopySemanticsAttribute"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsBoxed"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsByValue"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsCopyConstructed"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsExplicitlyDereferenced"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsImplicitlyDereferenced"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsJitIntrinsic"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsLong"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.IsPinned"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsSignUnspecifiedByte"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.IsUdtReturn"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.IUnknownConstantAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.LoadHint"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.MethodCodeType"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.NativeCppClassAttribute"/>
+    <item text="System.Runtime,System.Runtime.CompilerServices.RequiredAttributeAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.RuntimeWrappedException"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.ScopelessEnumAttribute"/>
     <item text="System.Runtime,System.Runtime.CompilerServices.SpecialNameAttribute"/>
@@ -1434,14 +1432,12 @@
     <item text="System.Uri.Builder,System.UriIdnScope"/>
     <item text="System.Uri.Builder,System.UriParser"/>
   </TYPES_NOT_IN_CORFX>
-  <TYPES_NOT_IN_MASTER_API total="90">
+  <TYPES_NOT_IN_MASTER_API total="88">
     <item text="System.Diagnostics.DiagnosticSource,System.Diagnostics.DiagnosticListener"/>
     <item text="System.Diagnostics.DiagnosticSource,System.Diagnostics.DiagnosticSource"/>
     <item text="System.Diagnostics.DiagnosticSource,System.Diagnostics.DiagnosticSourceEventSource"/>
     <item text="System.Diagnostics.Process,Microsoft.Win32.SafeHandles.SafeProcessHandle"/>
     <item text="System.Diagnostics.StackTrace,System.Diagnostics.StackFrameExtensions"/>
-    <item text="System.Diagnostics.TextWriterTraceListener,System.Diagnostics.DelimitedListTraceListener"/>
-    <item text="System.Diagnostics.TextWriterTraceListener,System.Diagnostics.TextWriterTraceListener"/>
     <item text="System.Diagnostics.TraceSource,System.Diagnostics.EventTypeFilter"/>
     <item text="System.Diagnostics.TraceSource,System.Diagnostics.SourceFilter"/>
     <item text="System.Globalization.Extensions,System.Globalization.GlobalizationExtensions"/>
