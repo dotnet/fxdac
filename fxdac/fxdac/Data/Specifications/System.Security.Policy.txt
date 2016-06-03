@@ -1,5 +1,35 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Cryptography.Primitives.dll
+/r:System.Collections.NonGeneric.dll
+
+// the following section can be removed from here. it used to be in System.runtime
+System.Security.SecurityElement
+System.Security.ISecurityPolicyEncodable
+System.Security.HostSecurityManager
+System.Security.ISecurityEncodable
+System.Security.IPermission
+System.Security.SecurityException
+System.Security.NamedPermissionSet
+System.Security.PermissionSet
+
+System.Security.Permissions.PermissionSetAttribute
+System.Security.Permissions.ReflectionPermissionAttribute
+System.Security.Permissions.SecurityAttribute
+System.Security.Permissions.CodeAccessSecurityAttribute
+System.Security.Permissions.HostProtectionAttribute
+System.Security.Permissions.EnvironmentPermissionAttribute
+System.Security.Permissions.StrongNameIdentityPermissionAttribute
+
+System.Security.Policy.ApplicationTrust
+System.Security.Policy.CodeGroup
+System.Security.Policy.PolicyLevel
+System.Security.Policy.PolicyStatement
+System.Security.Policy.StrongNameMembershipCondition
+System.Security.Policy.IMembershipCondition
+// end of section
+
+System.Security.Policy.IIdentityPermissionFactory
+System.Security.Policy.StrongName
 
 System.Security.Policy.AllMembershipCondition
 System.Security.Policy.ApplicationDirectory

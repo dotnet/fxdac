@@ -50,6 +50,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                 new FxDependecny() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.IPermission" },
     };
 
     public static FxMember[] s_MethodsToRemove = new FxMember[] {
