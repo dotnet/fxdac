@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+/r:System.Collections.Specialized.dll
+
+
+System.Net.WebHeaderCollection
+System.Net.HttpRequestHeader
+System.Net.HttpResponseHeader

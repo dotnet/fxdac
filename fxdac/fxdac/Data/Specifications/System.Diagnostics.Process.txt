@@ -1,0 +1,26 @@
+﻿/r:System.Runtime.dll
+/r:System.IO.dll
+/r:System.ComponentModel.dll
+/r:System.ComponentModel.TypeConverter.dll
+/r:System.Collections.Specialized.dll
+/r:System.Diagnostics.FileVersionInfo.dll
+
+System.Diagnostics.DataReceivedEventArgs
+System.Diagnostics.DataReceivedEventHandler
+
+System.Diagnostics.ThreadPriorityLevel
+System.Diagnostics.ThreadState
+System.Diagnostics.ThreadWaitReason
+
+System.Diagnostics.Process
+System.Diagnostics.ProcessModule
+System.Diagnostics.ProcessModuleCollection
+System.Diagnostics.ProcessModuleCollectionBase
+System.Diagnostics.ProcessPriorityClass
+System.Diagnostics.ProcessStartInfo
+System.Diagnostics.ProcessThread
+System.Diagnostics.ProcessThreadCollection
+System.Diagnostics.ProcessThreadCollectionBase
+System.Diagnostics.ProcessWindowStyle
+
+ System.Diagnostics.MonitoringDescriptionAttribute

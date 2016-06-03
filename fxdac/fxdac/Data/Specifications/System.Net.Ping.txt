@@ -1,0 +1,13 @@
+﻿/r:System.Runtime.dll
+
+/r:System.ComponentModel.EventBasedAsync.dll
+/r:System.ComponentModel.TypeConverter.dll
+/r:System.Net.Primitives.dll
+
+System.Net.NetworkInformation.IPStatus
+System.Net.NetworkInformation.Ping
+System.Net.NetworkInformation.PingCompletedEventArgs
+System.Net.NetworkInformation.PingCompletedEventHandler
+System.Net.NetworkInformation.PingException
+System.Net.NetworkInformation.PingOptions
+System.Net.NetworkInformation.PingReply

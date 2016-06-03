@@ -1,0 +1,17 @@
+﻿/r:System.Runtime.dll
+/r:System.IO.UnmanagedMemoryStream.dll
+/r:System.Runtime.Handles.dll
+/r:System.Security.AccessControl.dll
+
+System.IO.MemoryMappedFiles.MemoryMappedFile
+System.IO.MemoryMappedFiles.MemoryMappedFileAccess
+System.IO.MemoryMappedFiles.MemoryMappedFileOptions
+System.IO.MemoryMappedFiles.MemoryMappedFileRights
+System.IO.MemoryMappedFiles.MemoryMappedFileSecurity
+System.IO.MemoryMappedFiles.MemoryMappedViewAccessor
+System.IO.MemoryMappedFiles.MemoryMappedViewStream
+Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle
+Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle
+
+
+

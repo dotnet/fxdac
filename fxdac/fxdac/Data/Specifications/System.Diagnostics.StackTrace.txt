@@ -1,0 +1,7 @@
+/r:System.Runtime.dll
+/r:System.Threading.Thread.dll
+
+System.Diagnostics.StackFrame
+System.Diagnostics.StackTrace
+
+

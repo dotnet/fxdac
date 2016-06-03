@@ -1,0 +1,10 @@
+/r:System.Runtime.dll
+
+System.Runtime.Versioning.CompatibilitySwitch
+System.Runtime.Versioning.ComponentGuaranteesAttribute
+System.Runtime.Versioning.ComponentGuaranteesOptions
+System.Runtime.Versioning.ResourceConsumptionAttribute
+System.Runtime.Versioning.ResourceExposureAttribute
+System.Runtime.Versioning.ResourceScope
+System.Runtime.Versioning.VersioningHelper
+

@@ -1,0 +1,13 @@
+/r:System.Runtime.dll
+
+System.Text.DecoderExceptionFallback
+System.Text.DecoderExceptionFallbackBuffer
+System.Text.DecoderFallbackException
+System.Text.DecoderReplacementFallback
+System.Text.DecoderReplacementFallbackBuffer
+System.Text.EncoderExceptionFallback
+System.Text.EncoderExceptionFallbackBuffer
+System.Text.EncoderFallbackException
+System.Text.EncoderReplacementFallback
+System.Text.EncoderReplacementFallbackBuffer
+

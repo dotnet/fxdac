@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+/r:System.IO.FileSystem.dll
+
+System.IO.DriveInfo
+System.IO.DriveNotFoundException
+System.IO.DriveType
+

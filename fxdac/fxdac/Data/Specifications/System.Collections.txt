@@ -1,0 +1,15 @@
+﻿/r:System.Runtime.dll
+
+System.Collections.BitArray
+System.Collections.CaseInsensitiveHashCodeProvider
+
+System.Collections.StructuralComparisons
+
+System.Collections.Generic.LinkedList`1
+System.Collections.Generic.LinkedListNode`1
+System.Collections.Generic.SortedDictionary`2
+System.Collections.Generic.SortedList`2
+System.Collections.Generic.SortedSet`1
+System.Collections.Generic.Stack`1
+System.Collections.Generic.Queue`1
+System.Collections.Generic.HashSet`1

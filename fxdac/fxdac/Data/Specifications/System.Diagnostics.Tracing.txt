@@ -1,0 +1,10 @@
+﻿/r:System.Runtime.dll
+
+System.Diagnostics.Tracing.EventAttribute
+System.Diagnostics.Tracing.EventCommand
+System.Diagnostics.Tracing.EventCommandEventArgs
+System.Diagnostics.Tracing.EventKeywords
+System.Diagnostics.Tracing.EventLevel
+System.Diagnostics.Tracing.EventSource
+System.Diagnostics.Tracing.EventSourceAttribute
+System.Diagnostics.Tracing.NonEventAttribute

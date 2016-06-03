@@ -1,0 +1,10 @@
+﻿/r:System.Runtime.dll
+
+System.Security.Claims.Claim
+System.Security.Claims.ClaimsIdentity
+System.Security.Claims.ClaimsPrincipal
+System.Security.Claims.ClaimTypes
+System.Security.Claims.ClaimValueTypes
+
+System.Security.Principal.GenericIdentity
+System.Security.Principal.GenericPrincipal

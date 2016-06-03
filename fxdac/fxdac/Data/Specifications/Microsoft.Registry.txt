@@ -1,0 +1,5 @@
+﻿/r:System.Runtime.dll
+
+Microsoft.Win32.RegistryOptions
+Microsoft.Win32.RegistryView
+

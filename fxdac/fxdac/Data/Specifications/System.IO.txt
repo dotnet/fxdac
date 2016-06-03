@@ -1,0 +1,15 @@
+﻿/r:System.Runtime.dll
+
+
+System.IO.InvalidDataException
+System.IO.BinaryReader
+System.IO.BinaryWriter
+System.IO.BufferedStream
+System.IO.MemoryStream
+System.IO.StreamReader
+System.IO.StreamWriter
+System.IO.StringReader
+System.IO.StringWriter
+System.IO.TextReader
+System.IO.TextWriter
+

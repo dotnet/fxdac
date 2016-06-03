@@ -1,0 +1,9 @@
+/r:System.Runtime.dll
+/r:System.Threading.dll
+
+System.Threading.Thread
+System.Threading.ParameterizedThreadStart
+System.Threading.ThreadStart
+System.Threading.ThreadStartException
+System.Threading.ThreadState
+System.Threading.ThreadStateException

@@ -1,0 +1,4 @@
+﻿/r:System.Runtime.dll
+
+System.Threading.Tasks.TaskExtensions
+System.Threading.CancellationTokenSource

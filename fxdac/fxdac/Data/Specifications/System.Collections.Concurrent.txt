@@ -1,0 +1,13 @@
+﻿/r:System.Runtime.dll
+
+System.Collections.Concurrent.ConcurrentDictionary`2
+System.Collections.Concurrent.ConcurrentQueue`1
+System.Collections.Concurrent.ConcurrentStack`1
+System.Collections.Concurrent.EnumerablePartitionerOptions
+System.Collections.Concurrent.IProducerConsumerCollection`1
+System.Collections.Concurrent.OrderablePartitioner`1
+System.Collections.Concurrent.Partitioner
+System.Collections.Concurrent.Partitioner`1
+
+System.Collections.Concurrent.BlockingCollection`1
+System.Collections.Concurrent.ConcurrentBag`1

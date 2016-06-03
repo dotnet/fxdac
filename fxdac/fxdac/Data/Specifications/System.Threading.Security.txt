@@ -1,0 +1,11 @@
+/r:System.Runtime.dll
+/r:System.Threading.dll
+
+/r:System.Security.AccessControl.dll
+
+System.Security.AccessControl.EventWaitHandleSecurity
+System.Threading.EventWaitHandle
+System.Threading.AutoResetEvent
+System.Threading.ManualResetEvent
+System.Threading.Mutex
+System.Threading.AbandonedMutexException

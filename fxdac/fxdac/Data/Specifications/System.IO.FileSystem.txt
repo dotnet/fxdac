@@ -1,0 +1,14 @@
+﻿/r:System.Runtime.dll
+/r:System.Security.AccessControl.dll
+/r:System.IO.dll
+/r:System.IO.FileSystem.Primitives.dll
+/r:System.IO.FileSystem.AccessControl.dll
+/r:System.Security.Permissions.dll
+
+System.IO.SearchOption
+System.IO.Directory
+System.IO.DirectoryInfo
+System.IO.File
+System.IO.FileInfo
+System.IO.FileSystemInfo
+System.Security.Permissions.FileIOPermissionAttribute

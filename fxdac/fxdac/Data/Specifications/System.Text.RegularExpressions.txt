@@ -1,0 +1,16 @@
+/r:System.Runtime.dll
+
+System.Text.RegularExpressions.Capture
+System.Text.RegularExpressions.CaptureCollection
+System.Text.RegularExpressions.Group
+System.Text.RegularExpressions.GroupCollection
+System.Text.RegularExpressions.Match
+System.Text.RegularExpressions.MatchCollection
+System.Text.RegularExpressions.MatchEvaluator
+System.Text.RegularExpressions.Regex
+System.Text.RegularExpressions.RegexCompilationInfo
+System.Text.RegularExpressions.RegexMatchTimeoutException
+System.Text.RegularExpressions.RegexOptions
+System.Text.RegularExpressions.RegexRunner
+System.Text.RegularExpressions.RegexRunnerFactory
+

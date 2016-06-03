@@ -1,0 +1,11 @@
+/r:System.Runtime.dll
+/r:System.Collections.Concurrent.dll
+/r:System.Linq.dll
+
+System.Linq.OrderedParallelQuery`1
+System.Linq.ParallelEnumerable
+System.Linq.ParallelExecutionMode
+System.Linq.ParallelMergeOptions
+System.Linq.ParallelQuery
+System.Linq.ParallelQuery`1
+

@@ -1,0 +1,16 @@
+﻿/r:System.Runtime.dll
+
+System.Security.Cryptography.AsymmetricAlgorithm 
+System.Security.Cryptography.CipherMode 
+System.Security.Cryptography.CryptographicException 
+System.Security.Cryptography.CryptoStream 
+System.Security.Cryptography.CryptoStreamMode 
+System.Security.Cryptography.HashAlgorithm 
+System.Security.Cryptography.HMAC 
+System.Security.Cryptography.ICryptoTransform 
+System.Security.Cryptography.KeyedHashAlgorithm 
+System.Security.Cryptography.KeySizes 
+System.Security.Cryptography.PaddingMode 
+
+System.Security.Cryptography.SymmetricAlgorithm 
+System.Security.Cryptography.CryptographicUnexpectedOperationException

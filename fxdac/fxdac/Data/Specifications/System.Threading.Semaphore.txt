@@ -1,0 +1,15 @@
+/r:System.Runtime.dll
+/r:System.Security.AccessControl.dll
+/r:System.Runtime.ConstrainedExecution.dll
+/r:System.Security.Permissions.dll
+
+System.Security.AccessControl.SemaphoreAccessRule
+System.Security.AccessControl.SemaphoreAuditRule
+System.Security.AccessControl.SemaphoreRights
+System.Security.AccessControl.SemaphoreSecurity
+System.Security.Permissions.TypeDescriptorPermission
+System.Security.Permissions.TypeDescriptorPermissionFlags
+System.Threading.Semaphore
+System.Threading.ThreadExceptionEventArgs
+System.Threading.ThreadExceptionEventHandler
+

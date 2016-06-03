@@ -1,0 +1,10 @@
+/r:System.Runtime.dll
+/r:System.Collections.Concurrent.dll
+
+
+System.Threading.Tasks.Parallel
+System.Threading.Tasks.ParallelLoopResult
+System.Threading.Tasks.ParallelLoopState
+System.Threading.Tasks.ParallelOptions
+
+

@@ -1,0 +1,6 @@
+/r:System.Runtime.dll
+
+System.Resources.IResourceWriter
+System.Resources.ResourceWriter
+
+

@@ -1,0 +1,10 @@
+/r:System.Runtime.dll
+/r:System.Linq.Expressions.dll
+/r:System.Linq.dll
+
+System.Linq.EnumerableExecutor
+System.Linq.EnumerableExecutor`1
+System.Linq.EnumerableQuery
+System.Linq.EnumerableQuery`1
+System.Linq.Queryable
+

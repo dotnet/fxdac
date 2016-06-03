@@ -1,0 +1,11 @@
+﻿/r:System.Runtime.dll
+/r:System.IO.dll
+
+System.Console
+System.ConsoleCancelEventArgs
+System.ConsoleCancelEventHandler
+System.ConsoleColor
+System.ConsoleKey
+System.ConsoleKeyInfo
+System.ConsoleModifiers
+System.ConsoleSpecialKey

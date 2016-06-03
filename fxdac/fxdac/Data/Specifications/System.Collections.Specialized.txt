@@ -1,0 +1,12 @@
+﻿/r:System.Runtime.dll
+
+System.Collections.Specialized.BitVector32
+System.Collections.Specialized.HybridDictionary
+System.Collections.Specialized.IOrderedDictionary
+System.Collections.Specialized.ListDictionary
+System.Collections.Specialized.NameObjectCollectionBase
+System.Collections.Specialized.NameValueCollection
+System.Collections.Specialized.OrderedDictionary
+System.Collections.Specialized.StringCollection
+System.Collections.Specialized.StringDictionary
+System.Collections.Specialized.StringEnumerator

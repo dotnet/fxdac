@@ -1,0 +1,6 @@
+/r:System.Runtime.dll
+
+System.Diagnostics.Debugger
+System.Diagnostics.DebuggerStepperBoundaryAttribute
+System.Diagnostics.DebuggerVisualizerAttribute
+

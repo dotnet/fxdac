@@ -1,0 +1,10 @@
+﻿/r:System.Runtime.dll
+/r:System.Collections.Specialized.dll
+
+
+System.Net.Mime.ContentDisposition
+System.Net.Mime.ContentType
+System.Net.Mime.DispositionTypeNames
+System.Net.Mime.MediaTypeNames
+System.Net.Mime.TransferEncoding
+

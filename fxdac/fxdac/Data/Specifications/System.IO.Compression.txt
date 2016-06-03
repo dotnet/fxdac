@@ -1,0 +1,6 @@
+﻿/r:System.Runtime.dll
+
+System.IO.Compression.CompressionLevel
+System.IO.Compression.CompressionMode
+System.IO.Compression.DeflateStream
+System.IO.Compression.GZipStream

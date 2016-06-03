@@ -1,0 +1,7 @@
+/r:System.Runtime.dll
+/r:System.Threading.Overlapped.dll
+
+System.Threading.ThreadPool
+System.Threading.WaitCallback
+System.Threading.RegisteredWaitHandle
+System.Threading.WaitOrTimerCallback

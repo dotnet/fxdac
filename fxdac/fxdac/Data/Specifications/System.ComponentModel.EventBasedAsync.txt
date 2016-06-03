@@ -1,0 +1,17 @@
+﻿/r:System.Runtime.dll
+/r:System.ComponentModel.dll
+/r:System.Threading.dll
+
+System.ComponentModel.CancelEventHandler
+System.ComponentModel.ProgressChangedEventArgs
+System.ComponentModel.ProgressChangedEventHandler
+System.ComponentModel.AsyncCompletedEventArgs
+System.ComponentModel.AsyncCompletedEventHandler
+
+System.ComponentModel.AsyncOperation
+System.ComponentModel.AsyncOperationManager
+System.ComponentModel.BackgroundWorker
+System.ComponentModel.DoWorkEventArgs
+System.ComponentModel.DoWorkEventHandler
+System.ComponentModel.RunWorkerCompletedEventArgs
+System.ComponentModel.RunWorkerCompletedEventHandler

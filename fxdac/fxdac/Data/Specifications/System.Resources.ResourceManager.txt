@@ -1,0 +1,12 @@
+/r:System.Runtime.dll
+/r:System.IO.UnmanagedMemoryStream.dll
+/r:System.Resources.Reader.dll
+
+System.Resources.MissingManifestResourceException
+System.Resources.MissingSatelliteAssemblyException
+System.Resources.NeutralResourcesLanguageAttribute
+System.Resources.ResourceManager
+System.Resources.ResourceSet
+System.Resources.SatelliteContractVersionAttribute
+System.Resources.UltimateResourceFallbackLocation
+

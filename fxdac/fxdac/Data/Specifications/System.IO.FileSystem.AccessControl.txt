@@ -1,0 +1,10 @@
+﻿/r:System.Runtime.dll
+/r:System.Security.AccessControl.dll
+
+System.Security.AccessControl.DirectoryObjectSecurity
+System.Security.AccessControl.DirectorySecurity
+System.Security.AccessControl.FileSecurity
+System.Security.AccessControl.FileSystemAccessRule
+System.Security.AccessControl.FileSystemAuditRule
+System.Security.AccessControl.FileSystemRights
+System.Security.AccessControl.FileSystemSecurity

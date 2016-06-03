@@ -1,0 +1,9 @@
+/r:System.Runtime.dll
+/r:System.ComponentModel.TypeConverter.dll
+/r:System.ComponentModel.dll
+
+System.Timers.ElapsedEventArgs
+System.Timers.ElapsedEventHandler
+System.Timers.Timer
+System.Timers.TimersDescriptionAttribute
+

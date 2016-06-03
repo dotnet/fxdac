@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+
+
+
+System.IO.UnmanagedMemoryAccessor
+System.IO.UnmanagedMemoryStream
+

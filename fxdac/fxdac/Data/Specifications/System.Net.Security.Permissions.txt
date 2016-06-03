@@ -1,0 +1,8 @@
+﻿/r:System.Runtime.dll
+
+/r:System.Text.RegularExpressions.dll
+/r:System.Net.dll
+/r:System.Security.Permissions.dll
+
+System.Net.WebPermission
+System.Net.WebPermissionAttribute
