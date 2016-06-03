@@ -8034,6 +8034,36 @@ namespace System.Security {
     public SecurityCriticalAttribute() { }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class SecurityException : System.SystemException {
+    public SecurityException() { }
+    protected SecurityException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+    public SecurityException(string message) { }
+    public SecurityException(string message, System.Exception inner) { }
+    public SecurityException(string message, System.Type type) { }
+    public SecurityException(string message, System.Type type, string state) { }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public System.Security.Permissions.SecurityAction Action { get { return default(System.Security.Permissions.SecurityAction); } set { } }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public object Demanded { get { return default(object); } set { } }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public object DenySetInstance { get { return default(object); } set { } }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public System.Reflection.AssemblyName FailedAssemblyInfo { get { return default(System.Reflection.AssemblyName); } set { } }
+    public string GrantedSet { get { return default(string); } set { } }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public System.Reflection.MethodInfo Method { get { return default(System.Reflection.MethodInfo); } set { } }
+    public string PermissionState { get { return default(string); } set { } }
+    public System.Type PermissionType { get { return default(System.Type); } set { } }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public object PermitOnlySetInstance { get { return default(object); } set { } }
+    public string RefusedSet { get { return default(string); } set { } }
+    public string Url { get { return default(string); } set { } }
+    public System.Security.SecurityZone Zone { get { return default(System.Security.SecurityZone); } set { } }
+    public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+    public override string ToString() { return default(string); }
+  }
+
   [System.AttributeUsageAttribute((System.AttributeTargets)(5500), AllowMultiple=false, Inherited=false)]
   public sealed partial class SecuritySafeCriticalAttribute : System.Attribute {
     public SecuritySafeCriticalAttribute() { }

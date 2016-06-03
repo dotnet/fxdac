@@ -627,3 +627,6 @@ System.IO.FileStream
 System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute 
 System.Threading.Tasks.TaskExtensions
 System.Threading.CancellationTokenSource
+
+// types that have to be in System.Runtime
+System.Security.SecurityException

@@ -8,7 +8,7 @@ System.Security.ISecurityPolicyEncodable
 System.Security.HostSecurityManager
 System.Security.ISecurityEncodable
 System.Security.IPermission
-System.Security.SecurityException
+
 System.Security.NamedPermissionSet
 System.Security.PermissionSet
 

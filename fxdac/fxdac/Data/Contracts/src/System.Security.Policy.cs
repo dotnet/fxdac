@@ -112,38 +112,6 @@ namespace System.Security {
     public override string ToString() { return default(string); }
   }
 
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial class SecurityException : System.SystemException {
-    public SecurityException() { }
-    protected SecurityException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public SecurityException(string message) { }
-    public SecurityException(string message, System.Exception inner) { }
-    public SecurityException(string message, object deny, object permitOnly, System.Reflection.MethodInfo method, object demanded, System.Security.IPermission permThatFailed) { }
-    public SecurityException(string message, System.Type type) { }
-    public SecurityException(string message, System.Type type, string state) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public System.Security.Permissions.SecurityAction Action { get { return default(System.Security.Permissions.SecurityAction); } set { } }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public object Demanded { get { return default(object); } set { } }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public object DenySetInstance { get { return default(object); } set { } }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public System.Reflection.AssemblyName FailedAssemblyInfo { get { return default(System.Reflection.AssemblyName); } set { } }
-    public System.Security.IPermission FirstPermissionThatFailed { get { return default(System.Security.IPermission); } set { } }
-    public string GrantedSet { get { return default(string); } set { } }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public System.Reflection.MethodInfo Method { get { return default(System.Reflection.MethodInfo); } set { } }
-    public string PermissionState { get { return default(string); } set { } }
-    public System.Type PermissionType { get { return default(System.Type); } set { } }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public object PermitOnlySetInstance { get { return default(object); } set { } }
-    public string RefusedSet { get { return default(string); } set { } }
-    public string Url { get { return default(string); } set { } }
-    public System.Security.SecurityZone Zone { get { return default(System.Security.SecurityZone); } set { } }
-    public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public override string ToString() { return default(string); }
-  }
-
 } // end of System.Security
 namespace System.Security.Permissions {
   [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple=true, Inherited=false)]
