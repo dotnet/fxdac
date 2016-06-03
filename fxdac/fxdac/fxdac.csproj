@@ -89,7 +89,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\Contracts\System.Runtime.cs" />
     <None Include="Data\Contracts\System.Leftover.cs" />
     <None Include="Data\Contracts\Microsoft.Registry.cs" />
     <None Include="Data\Contracts\Microsoft.Win32.SafeHandles.cs" />
@@ -169,7 +168,6 @@
     <None Include="Data\Contracts\System.Resources.Reader.cs" />
     <None Include="Data\Contracts\System.Resources.ResourceManager.cs" />
     <None Include="Data\Contracts\System.Resources.Writer.cs" />
-    <None Include="Data\Contracts\System.Runtime.ConstrainedExecution.cs" />
     <None Include="Data\Contracts\System.Runtime.Handles.cs" />
     <None Include="Data\Contracts\System.Runtime.Serialization.Primitives.cs" />
     <None Include="Data\Contracts\System.Security.AccessControl.cs" />
@@ -235,7 +233,6 @@
     <None Include="Data\Specifications\System.IO.txt" />
     <None Include="Data\Specifications\System.Net.Primitives.txt" />
     <None Include="Data\Specifications\System.Net.Security.Permissions.txt" />
-    <None Include="Data\Specifications\System.Runtime.ConstrainedExecution.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.AccessControl.txt" />
     <None Include="Data\Specifications\System.Security.Principal.txt" />
     <None Include="Data\Specifications\System.Security.Principal.Windows.txt" />
@@ -269,7 +266,6 @@
     <None Include="Data\Specifications\System.IO.MemoryMappedFiles.txt" />
     <None Include="Data\Specifications\System.Linq.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.txt" />
-    <None Include="Data\Specifications\System.Threading.Tasks.txt" />
     <None Include="Data\Specifications\System.Net.txt" />
     <None Include="Data\Specifications\System.Deployment.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.txt" />

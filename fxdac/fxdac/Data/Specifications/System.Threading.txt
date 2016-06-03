@@ -1,5 +1,4 @@
 /r:System.Runtime.dll
-/r:System.Runtime.ConstrainedExecution.dll
 
 System.Threading.SynchronizationContext
 System.Threading.SendOrPostCallback

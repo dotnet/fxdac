@@ -175,10 +175,10 @@
   <GENERAL_STATISTICS>
     <item text="Previous types 1221"/>
     <item text="Current types 2127"/>
-    <item text="Moved to System.Runtime 161"/>
+    <item text="Moved to System.Runtime 163"/>
     <item text="Moved to other locations 47"/>
   </GENERAL_STATISTICS>
-  <ADDED_CONTRACTS total="30">
+  <ADDED_CONTRACTS total="29">
     <item text="Microsoft.Registry"/>
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
@@ -197,7 +197,6 @@
     <item text="System.Net.WebSockets"/>
     <item text="System.Resources.Reader"/>
     <item text="System.Resources.Writer"/>
-    <item text="System.Runtime.ConstrainedExecution"/>
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
@@ -210,7 +209,7 @@
     <item text="System.Timer"/>
     <item text="System.Uri.Builder"/>
   </ADDED_CONTRACTS>
-  <REMOVED_CONTRACTS total="12">
+  <REMOVED_CONTRACTS total="13">
     <item text="	System.ComponentModel.Primitives"/>
     <item text="	System.Diagnostics.DiagnosticSource"/>
     <item text="	System.Diagnostics.TextWriterTraceListener"/>
@@ -222,9 +221,10 @@
     <item text="	System.Reflection.TypeExtensions"/>
     <item text="	System.Runtime.CompilerServices.VisualC"/>
     <item text="	System.Text.Encoding.CodePages"/>
+    <item text="	System.Threading.Tasks"/>
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="208" description="corefx types that changed their location">
+  <MOVED_TYPES total="210" description="corefx types that changed their location">
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IComponent moved from System.ComponentModel.Primitives"/>
@@ -407,6 +407,7 @@
     <item text="System.Runtime,System.Text.NormalizationForm moved from System.Globalization.Extensions"/>
     <item text="System.Runtime,System.Threading.CancellationToken moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.CancellationTokenRegistration moved from System.Threading.Tasks"/>
+    <item text="System.Runtime,System.Threading.CancellationTokenSource moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.ContextCallback moved from System.Threading"/>
     <item text="System.Runtime,System.Threading.Tasks.ConcurrentExclusiveSchedulerPair moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.Task moved from System.Threading.Tasks"/>
@@ -415,6 +416,7 @@
     <item text="System.Runtime,System.Threading.Tasks.TaskCompletionSource`1 moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.TaskContinuationOptions moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.TaskCreationOptions moved from System.Threading.Tasks"/>
+    <item text="System.Runtime,System.Threading.Tasks.TaskExtensions moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.TaskFactory moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.TaskFactory`1 moved from System.Threading.Tasks"/>
     <item text="System.Runtime,System.Threading.Tasks.TaskScheduler moved from System.Threading.Tasks"/>
@@ -890,6 +892,7 @@
     <item text="System.Runtime,System.Runtime.ConstrainedExecution.Cer"/>
     <item text="System.Runtime,System.Runtime.ConstrainedExecution.Consistency"/>
     <item text="System.Runtime,System.Runtime.ConstrainedExecution.CriticalFinalizerObject"/>
+    <item text="System.Runtime,System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute"/>
     <item text="System.Runtime,System.Runtime.ConstrainedExecution.ReliabilityContractAttribute"/>
     <item text="System.Runtime,System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs"/>
     <item text="System.Runtime,System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute"/>
@@ -965,7 +968,6 @@
     <item text="System.Runtime,System.UnhandledExceptionEventArgs"/>
     <item text="System.Runtime,System.UnhandledExceptionEventHandler"/>
     <item text="System.Runtime,System.UriPartial"/>
-    <item text="System.Runtime.ConstrainedExecution,System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._Attribute"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._MethodRental"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._SignatureHelper"/>

@@ -7678,6 +7678,11 @@ namespace System.Runtime.ConstrainedExecution {
     ~CriticalFinalizerObject() { }
   }
 
+  [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited=false)]
+  public sealed partial class PrePrepareMethodAttribute : System.Attribute {
+    public PrePrepareMethodAttribute() { }
+  }
+
   [System.AttributeUsageAttribute((System.AttributeTargets)(1133), Inherited=false)]
   public sealed partial class ReliabilityContractAttribute : System.Attribute {
     public ReliabilityContractAttribute(System.Runtime.ConstrainedExecution.Consistency consistencyGuarantee, System.Runtime.ConstrainedExecution.Cer cer) { }
@@ -9179,6 +9184,24 @@ namespace System.Threading {
     public static bool operator !=(System.Threading.CancellationTokenRegistration left, System.Threading.CancellationTokenRegistration right) { return default(bool); }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public partial class CancellationTokenSource : System.IDisposable {
+    [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+    public CancellationTokenSource() { }
+    public CancellationTokenSource(int millisecondsDelay) { }
+    public CancellationTokenSource(System.TimeSpan delay) { }
+    public bool IsCancellationRequested { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+    public System.Threading.CancellationToken Token { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Threading.CancellationToken); } }
+    public void Cancel() { }
+    public void Cancel(bool throwOnFirstException) { }
+    public void CancelAfter(int millisecondsDelay) { }
+    public void CancelAfter(System.TimeSpan delay) { }
+    public static System.Threading.CancellationTokenSource CreateLinkedTokenSource(System.Threading.CancellationToken token1, System.Threading.CancellationToken token2) { return default(System.Threading.CancellationTokenSource); }
+    public static System.Threading.CancellationTokenSource CreateLinkedTokenSource(params System.Threading.CancellationToken[] tokens) { return default(System.Threading.CancellationTokenSource); }
+    public void Dispose() { }
+    protected virtual void Dispose(bool disposing) { }
+  }
+
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public delegate void ContextCallback(object state);
 
@@ -9619,6 +9642,11 @@ namespace System.Threading.Tasks {
     public System.AggregateException Exception { get { return default(System.AggregateException); } }
     public bool Observed { get { return default(bool); } }
     public void SetObserved() { }
+  }
+
+  public static partial class TaskExtensions {
+    public static System.Threading.Tasks.Task Unwrap(this System.Threading.Tasks.Task<System.Threading.Tasks.Task> task) { return default(System.Threading.Tasks.Task); }
+    public static System.Threading.Tasks.Task<TResult> Unwrap<TResult>(this System.Threading.Tasks.Task<System.Threading.Tasks.Task<TResult>> task) { return default(System.Threading.Tasks.Task<TResult>); }
   }
 
 } // end of System.Threading.Tasks

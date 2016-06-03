@@ -1,6 +1,5 @@
 /r:System.Runtime.dll
 /r:System.Security.AccessControl.dll
-/r:System.Runtime.ConstrainedExecution.dll
 /r:System.Security.Permissions.dll
 
 System.Security.AccessControl.SemaphoreAccessRule
