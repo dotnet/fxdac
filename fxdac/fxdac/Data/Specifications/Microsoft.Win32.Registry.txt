@@ -2,4 +2,5 @@
 
 Microsoft.Win32.RegistryOptions
 Microsoft.Win32.RegistryView
+Microsoft.Win32.SafeHandles.SafeRegistryHandle
 

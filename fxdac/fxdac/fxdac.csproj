@@ -283,7 +283,7 @@
     <None Include="Data\Specifications\System.Runtime.InteropServices.txt" />
     <None Include="Data\Specifications\Microsoft.Win32.SafeHandles.txt" />
     <None Include="Data\Specifications\System.Runtime.Remoting.txt" />
-    <None Include="Data\Specifications\Microsoft.Registry.txt" />
+    <None Include="Data\Specifications\Microsoft.Win32.Registry.txt" />
     <None Include="Data\Specifications\System.Runtime.txt" />
     <None Include="Data\MasterAPIs\mscorlib.cs" />
     <Compile Include="ObjectModel.cs" />
