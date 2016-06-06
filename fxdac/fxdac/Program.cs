@@ -16,7 +16,7 @@ static class Program
 
     static string s_SpecificationFolder = @"..\..\Data\Specifications";
     static string s_ReportPath = @"..\..\Data\report.xml";
-    static string s_ExistingContracts = @"..\..\ExistingContracts";
+    static string s_ExistingContracts = @"\\cpvsbuild\drops\dev14\ProjectK\raw\current\binaries.x86ret\ref\ProjectK";
     static string s_MasterAPIFile = @"..\..\Data\MasterAPIs\XamariniOSAll.cs"; // master source is a file with all APIs this tool is trying to refactor
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
