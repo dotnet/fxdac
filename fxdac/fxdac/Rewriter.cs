@@ -64,6 +64,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependecny() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
 
         new FxDependecny() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
+
+        new FxDependecny() { From="System.Diagnostics.Debug", To ="System.Diagnostics.TraceListenerCollection" },
     };
 
     SemanticModel _model;

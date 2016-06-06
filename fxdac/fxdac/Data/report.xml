@@ -139,6 +139,7 @@
     <item text="Removed SecurityException.Zone"/>
     <item text="Removed Thread.GetDomain()"/>
     <item text="Removed Thread.CurrentContext"/>
+    <item text="Removed Debug.Listeners"/>
   </REMOVED>
   <TYPES_NOT_IN_ANY_ASSEMBLY total="15" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
@@ -183,7 +184,7 @@
     <item text="Previous types 1204"/>
     <item text="Current types 2127"/>
     <item text="Moved to System.Runtime 143"/>
-    <item text="Moved to other locations 41"/>
+    <item text="Moved to other locations 40"/>
   </GENERAL_STATISTICS>
   <ADDED_CONTRACTS total="26">
     <item text="Microsoft.Registry"/>
@@ -227,7 +228,7 @@
     <item text="	System.Threading.Tasks"/>
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="184" description="corefx types that changed their location">
+  <MOVED_TYPES total="183" description="corefx types that changed their location">
     <MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
       <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
@@ -236,7 +237,6 @@
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IContainer moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.INotifyDataErrorInfo moved from System.ObjectModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ISite moved from System.ComponentModel.Primitives"/>
-      <item text="System.Diagnostics.TraceSource,System.Diagnostics.Debug moved from System.Diagnostics.Debug"/>
       <item text="System.Linq.Expressions,System.Dynamic.BinaryOperationBinder moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.BindingRestrictions moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.CallInfo moved from System.Dynamic.Runtime"/>
