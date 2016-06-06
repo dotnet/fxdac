@@ -1,11 +1,4 @@
 [assembly:System.CLSCompliant(true)]
-namespace System.Net {
-  public abstract partial class TransportContext {
-    protected TransportContext() { }
-    public abstract System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding(System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind);
-  }
-
-} // end of System.Net
 namespace System.Net.Security {
   public abstract partial class AuthenticatedStream : System.IO.Stream {
     protected AuthenticatedStream(System.IO.Stream innerStream, bool leaveInnerStreamOpen) { }
