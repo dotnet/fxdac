@@ -229,7 +229,7 @@
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
   <MOVED_TYPES total="183" description="corefx types that changed their location">
-    <MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
+    <MOVED_NEEDS_REVIEW>
       <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
@@ -237,6 +237,14 @@
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IContainer moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.INotifyDataErrorInfo moved from System.ObjectModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ISite moved from System.ComponentModel.Primitives"/>
+      <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
+      <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
+      <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
+      <item text="System.Threading.Security,System.Threading.ManualResetEvent moved from System.Threading"/>
+      <item text="System.Threading.Security,System.Threading.Mutex moved from System.Threading"/>
+      <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
+    </MOVED_NEEDS_REVIEW>
+    <MOVED_VALID>
       <item text="System.Linq.Expressions,System.Dynamic.BinaryOperationBinder moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.BindingRestrictions moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.CallInfo moved from System.Dynamic.Runtime"/>
@@ -264,13 +272,7 @@
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.CallSiteBinder moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.CallSiteHelpers moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.DynamicAttribute moved from System.Dynamic.Runtime"/>
-      <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
-      <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
-      <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
-      <item text="System.Threading.Security,System.Threading.ManualResetEvent moved from System.Threading"/>
-      <item text="System.Threading.Security,System.Threading.Mutex moved from System.Threading"/>
-      <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
-    </MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
+    </MOVED_VALID>
     <MOVED_TO_SYSTEM_RUNTIME>
       <item text="System.Runtime,Microsoft.Win32.SafeHandles.SafeFileHandle moved from System.IO.FileSystem"/>
       <item text="System.Runtime,Microsoft.Win32.SafeHandles.SafeWaitHandle moved from System.Runtime.Handles"/>

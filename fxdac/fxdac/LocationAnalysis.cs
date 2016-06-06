@@ -5,6 +5,18 @@ using System.Reflection.PortableExecutable;
 using System.Linq;
 using System;
 
+struct Move
+{
+    public string From;
+    public string To;
+
+    public Move(string from, string to)
+    {
+        From = from;
+        To = to;
+    }
+}
+
 class ReportType
 {
     public string Name;
@@ -53,6 +65,10 @@ class ReportType
 
 class LocationAnalysis
 {
+    static List<Move> s_validMoves = new List<Move>() {
+        new Move("System.Dynamic.Runtime", "System.Linq.Expressions"),
+    };
+
     public static void CompareFactorings(string previous, string current, ReportWriter reportWriter)
     {
         var types = new List<ReportType>(3000);
@@ -67,6 +83,8 @@ class LocationAnalysis
         moved.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var movedToSystemRuntime = moved.Where((t) => t.CurrentAssembly == "System.Runtime").ToList();
         var movedToOtherThanSystemRuntime = moved.Where((t) => t.CurrentAssembly != "System.Runtime").ToList();
+        var validMoves = movedToOtherThanSystemRuntime.Where((t) => IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
+        var unknownMoves = movedToOtherThanSystemRuntime.Where((t) => !IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
 
         reportWriter.WriteListStart("GENERAL_STATISTICS");
         reportWriter.WriteListItem("Previous types {0}", types.Where((t) => t.PreviousAssembly != null).Count());
@@ -100,9 +118,10 @@ class LocationAnalysis
 
         if (moved.Count > 0) {
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
-            if(movedToOtherThanSystemRuntime.Count > 0) {
-                reportWriter.WriteListStart("MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME");
-                foreach (var movedType in movedToOtherThanSystemRuntime) {
+
+            if (unknownMoves.Count > 0) {
+                reportWriter.WriteListStart("MOVED_NEEDS_REVIEW");
+                foreach (var movedType in unknownMoves) {
                     reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                     if (movedType.PreviousAssembly == "System.Runtime") {
                         var tempColor = Console.ForegroundColor;
@@ -110,6 +129,14 @@ class LocationAnalysis
                         Console.WriteLine("{0} moved from System.Runtime", movedType.AssemblyQualifiedName);
                         Console.ForegroundColor = tempColor;
                     }
+                }
+                reportWriter.WriteListEnd();
+            }
+
+            if (validMoves.Count > 0) {
+                reportWriter.WriteListStart("MOVED_VALID");
+                foreach (var movedType in validMoves) {
+                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                 }
                 reportWriter.WriteListEnd();
             }
@@ -186,6 +213,12 @@ class LocationAnalysis
                 }
             }
         }
+    }
+
+    static bool IsValidMove(string from, string to)
+    {
+        var index = s_validMoves.FindIndex((move) => move.From == from && move.To == to);
+        return index >= 0;
     }
 }
 
