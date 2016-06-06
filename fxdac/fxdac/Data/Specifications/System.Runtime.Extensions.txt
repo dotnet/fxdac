@@ -1,6 +1,17 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
 
-System.Diagnostics.Stopwatch
 System.Net.WebUtility
+
+System.UriBuilder
+System.UriParser
+System.FileStyleUriParser
+System.FtpStyleUriParser
+System.GenericUriParser
+System.GenericUriParserOptions
+System.HttpStyleUriParser
+System.NetPipeStyleUriParser
+System.NetTcpStyleUriParser
+System.NewsStyleUriParser
+System.UriIdnScope
 

@@ -182,10 +182,10 @@
   <GENERAL_STATISTICS>
     <item text="Previous types 1204"/>
     <item text="Current types 2127"/>
-    <item text="Moved to System.Runtime 142"/>
-    <item text="Moved to other locations 47"/>
+    <item text="Moved to System.Runtime 143"/>
+    <item text="Moved to other locations 46"/>
   </GENERAL_STATISTICS>
-  <ADDED_CONTRACTS total="28">
+  <ADDED_CONTRACTS total="27">
     <item text="Microsoft.Registry"/>
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
@@ -213,7 +213,6 @@
     <item text="System.Threading.Security"/>
     <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
-    <item text="System.Uri.Builder"/>
   </ADDED_CONTRACTS>
   <REMOVED_CONTRACTS total="12">
     <item text="	System.ComponentModel.Primitives"/>
@@ -277,7 +276,6 @@
       <item text="System.Threading.Security,System.Threading.ManualResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.Mutex moved from System.Threading"/>
       <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
-      <item text="System.Uri.Builder,System.UriBuilder moved from System.Runtime.Extensions"/>
     </MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
     <MOVED_TO_SYSTEM_RUNTIME>
       <item text="System.Runtime,Microsoft.Win32.SafeHandles.SafeFileHandle moved from System.IO.FileSystem"/>
@@ -298,6 +296,7 @@
       <item text="System.Runtime,System.Diagnostics.DebuggerNonUserCodeAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerStepThroughAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerTypeProxyAttribute moved from System.Diagnostics.Debug"/>
+      <item text="System.Runtime,System.Diagnostics.Stopwatch moved from System.Runtime.Extensions"/>
       <item text="System.Runtime,System.Environment moved from System.Runtime.Extensions"/>
       <item text="System.Runtime,System.Globalization.Calendar moved from System.Globalization"/>
       <item text="System.Runtime,System.Globalization.CalendarWeekRule moved from System.Globalization"/>
@@ -931,6 +930,16 @@
     <item text="System.Runtime,System.UnhandledExceptionEventArgs"/>
     <item text="System.Runtime,System.UnhandledExceptionEventHandler"/>
     <item text="System.Runtime,System.UriPartial"/>
+    <item text="System.Runtime.Extensions,System.FileStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.FtpStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.GenericUriParser"/>
+    <item text="System.Runtime.Extensions,System.GenericUriParserOptions"/>
+    <item text="System.Runtime.Extensions,System.HttpStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.NetPipeStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.NetTcpStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.NewsStyleUriParser"/>
+    <item text="System.Runtime.Extensions,System.UriIdnScope"/>
+    <item text="System.Runtime.Extensions,System.UriParser"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._Attribute"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._MethodRental"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._SignatureHelper"/>
@@ -1426,16 +1435,6 @@
     <item text="System.Timer,System.Timers.ElapsedEventHandler"/>
     <item text="System.Timer,System.Timers.Timer"/>
     <item text="System.Timer,System.Timers.TimersDescriptionAttribute"/>
-    <item text="System.Uri.Builder,System.FileStyleUriParser"/>
-    <item text="System.Uri.Builder,System.FtpStyleUriParser"/>
-    <item text="System.Uri.Builder,System.GenericUriParser"/>
-    <item text="System.Uri.Builder,System.GenericUriParserOptions"/>
-    <item text="System.Uri.Builder,System.HttpStyleUriParser"/>
-    <item text="System.Uri.Builder,System.NetPipeStyleUriParser"/>
-    <item text="System.Uri.Builder,System.NetTcpStyleUriParser"/>
-    <item text="System.Uri.Builder,System.NewsStyleUriParser"/>
-    <item text="System.Uri.Builder,System.UriIdnScope"/>
-    <item text="System.Uri.Builder,System.UriParser"/>
   </TYPES_NOT_IN_CORFX>
   <TYPES_NOT_IN_MASTER_API total="88">
     <item text="System.Diagnostics.DiagnosticSource,System.Diagnostics.DiagnosticListener"/>

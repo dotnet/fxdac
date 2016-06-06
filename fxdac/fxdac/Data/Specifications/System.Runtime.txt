@@ -598,3 +598,5 @@ System.Security.VerificationException
 System.Security.SecurityTransparentAttribute
 System.Security.AllowPartiallyTrustedCallersAttribute
 System.Security.PartialTrustVisibilityLevel
+
+System.Diagnostics.Stopwatch

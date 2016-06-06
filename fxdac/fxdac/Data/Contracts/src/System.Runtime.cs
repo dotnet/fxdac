@@ -4991,6 +4991,22 @@ namespace System.Diagnostics {
     public string TargetTypeName { get { return default(string); } set { } }
   }
 
+  public partial class Stopwatch {
+    public static readonly long Frequency;
+    public static readonly bool IsHighResolution;
+    public Stopwatch() { }
+    public System.TimeSpan Elapsed { get { return default(System.TimeSpan); } }
+    public long ElapsedMilliseconds { get { return default(long); } }
+    public long ElapsedTicks { get { return default(long); } }
+    public bool IsRunning { get { return default(bool); } }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static long GetTimestamp() { return default(long); }
+    public void Reset() { }
+    public void Restart() { }
+    public void Start() { }
+    public static System.Diagnostics.Stopwatch StartNew() { return default(System.Diagnostics.Stopwatch); }
+    public void Stop() { }
+  }
+
 } // end of System.Diagnostics
 namespace System.Diagnostics.CodeAnalysis {
   [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited=false, AllowMultiple=true)]
