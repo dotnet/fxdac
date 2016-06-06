@@ -3,6 +3,8 @@ using System.IO;
 using System.Reflection.Metadata;
 using System.Reflection.PortableExecutable;
 using System.Linq;
+using System;
+
 class ReportType
 {
     public string Name;
@@ -99,6 +101,12 @@ class LocationAnalysis
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
             foreach (var movedType in moved) {
                 reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+                if(movedType.PreviousAssembly == "System.Runtime") {
+                    var tempColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("{0} moved from System.Runtime", movedType.AssemblyQualifiedName);
+                    Console.ForegroundColor = tempColor;
+                }
             }
             reportWriter.WriteListEnd();
         }
