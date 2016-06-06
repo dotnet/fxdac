@@ -1,5 +1,6 @@
 /r:System.Runtime.dll
 /r:System.Threading.dll
+/r:System.Security.Permissions.dll
 
 System.Threading.Thread
 System.Threading.ParameterizedThreadStart

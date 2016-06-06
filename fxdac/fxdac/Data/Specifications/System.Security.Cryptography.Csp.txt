@@ -4,7 +4,7 @@
 /r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Cryptography.Algorithms.dll
 /r:System.Security.Permissions.dll
-/r:System.Security.Policy.dll
+/r:System.Security.Permissions.dll
 
 System.Security.Cryptography.CspKeyContainerInfo
 System.Security.Cryptography.CspParameters

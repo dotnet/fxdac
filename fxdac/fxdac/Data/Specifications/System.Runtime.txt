@@ -245,27 +245,7 @@ System.Runtime.Serialization.SerializationInfoEnumerator
 System.Runtime.Serialization.StreamingContext
 System.Runtime.Serialization.StreamingContextStates
 System.Runtime.TargetedPatchingOptOutAttribute
-System.Security.Cryptography.X509Certificates.X509Certificate
-System.Security.Cryptography.X509Certificates.X509ContentType
-System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
 
-
-System.Security.IStackWalk
-
-
-System.Security.Permissions.HostProtectionResource
-System.Security.Permissions.PermissionState
-
-System.Security.Permissions.ReflectionPermissionFlag
-System.Security.Permissions.SecurityAction
-
-System.Security.Permissions.SecurityPermissionFlag
-
-
-System.Security.Policy
-System.Security.Policy.Evidence
-System.Security.SecureString
-System.Security.SecurityContextSource
 System.Text.Decoder
 System.Text.DecoderFallback
 System.Text.DecoderFallbackBuffer
@@ -415,10 +395,7 @@ System.Runtime.GCSettings
 System.Runtime.InteropServices.FieldOffsetAttribute
 System.Runtime.InteropServices.OutAttribute
 System.Runtime.Versioning.TargetFrameworkAttribute
-System.Security.AllowPartiallyTrustedCallersAttribute
 
-System.Security.SecurityTransparentAttribute
-System.Security.VerificationException
 System.Text.StringBuilder
 System.Threading.LazyThreadSafetyMode
 System.Threading.Timeout
@@ -459,27 +436,8 @@ System.ResolveEventHandler
 System.Runtime.CompilerServices.CompilationRelaxations
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 System.Runtime.Hosting.ActivationArguments
-System.Security.HostSecurityManagerOptions
 
 
-System.Security.PartialTrustVisibilityLevel
-System.Security.Permissions.StrongNamePublicKeyBlob
-
-System.Security.Policy.EvidenceBase
-
-
-
-System.Security.Policy.PolicyStatementAttribute
-
-System.Security.Policy.TrustManagerContext
-System.Security.Policy.TrustManagerUIContext
-System.Security.PolicyLevelType
-System.Security.Principal
-System.Security.Principal.IIdentity
-System.Security.Principal.IPrincipal
-System.Security.Principal.PrincipalPolicy
-System.Security.SecurityState
-System.Security.SecurityZone
 System.Threading.HostExecutionContext
 System.Threading.HostExecutionContextManager
 System.UnhandledExceptionEventArgs
@@ -573,9 +531,6 @@ System.Runtime.MemoryFailPoint
 System.Runtime.AssemblyTargetedPatchBandAttribute
 System.Configuration.Assemblies.AssemblyHash
 
-
-System.Security.Permissions.EnvironmentPermissionAccess
-
 // added because it seemed like the right thing to do:
 Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
 System.NonSerializedAttribute
@@ -634,3 +589,12 @@ System.Security.SecurityException
 // this one type was in System.Diagnstics.Tools, and so we decided to move it
 // it's unfortunate that the type is in CodeDom namespace
 System.CodeDom.Compiler.GeneratedCodeAttribute
+
+// Grouped security APIs
+System.Security.Policy.Evidence
+System.Security.Policy.EvidenceBase
+System.Security.SecureString
+System.Security.VerificationException
+System.Security.SecurityTransparentAttribute
+System.Security.AllowPartiallyTrustedCallersAttribute
+System.Security.PartialTrustVisibilityLevel

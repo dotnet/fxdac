@@ -8,6 +8,7 @@
 /r:System.Net.WebHeaderCollection.dll
 /r:System.Security.Claims.dll
 /r:System.Net.Security.dll
+/r:System.Security.Permissions.dll
 
 System.Net.AuthenticationSchemeSelector
 

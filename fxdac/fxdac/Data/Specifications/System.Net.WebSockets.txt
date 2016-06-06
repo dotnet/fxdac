@@ -1,9 +1,9 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.Specialized.dll
-
 /r:System.ComponentModel.TypeConverter.dll
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Net.Primitives.dll
+/r:System.Security.Permissions.dll
 
 System.Net.WebSockets.ClientWebSocket
 System.Net.WebSockets.ClientWebSocketOptions

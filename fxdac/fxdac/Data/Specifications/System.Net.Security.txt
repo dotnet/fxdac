@@ -1,9 +1,10 @@
 ﻿/r:System.Runtime.dll
-
+/r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Net.Primitives.dll
-/r:System.Security.Principal.dll
 /r:System.Collections.NonGeneric.dll
+/r:System.Security.Principal.dll
+/r:System.Security.Permissions.dll
 
 System.Security.Authentication.AuthenticationException
 System.Security.Authentication.InvalidCredentialException

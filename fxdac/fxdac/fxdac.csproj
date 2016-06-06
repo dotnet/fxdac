@@ -236,7 +236,6 @@
     <None Include="Data\Specifications\System.Security.Principal.txt" />
     <None Include="Data\Specifications\System.Security.Principal.Windows.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.Encoding.txt" />
-    <None Include="Data\Specifications\System.Security.Policy.txt" />
     <None Include="Data\Specifications\System.Security.Permissions.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.Algorithms.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.Primitives.txt" />
