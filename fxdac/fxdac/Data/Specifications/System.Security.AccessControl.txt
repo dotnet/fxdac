@@ -1,11 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.NonGeneric.dll
-
-System.Security.Principal.SecurityIdentifier
-System.Security.Principal.IdentityReference
-System.Security.Principal.WellKnownSidType
-System.Security.Principal.IdentityReferenceCollection
-System.Security.Principal.NTAccount
+/r:System.Security.Principal.Windows.dll
 
 System.Security.AccessControl.AccessRule`1
 System.Security.AccessControl.AuditRule`1

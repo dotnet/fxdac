@@ -2,6 +2,7 @@
 /r:System.Security.AccessControl.dll
 /r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll
+/r:System.Security.Principal.Windows.dll
 
 System.Security.AccessControl.SemaphoreAccessRule
 System.Security.AccessControl.SemaphoreAuditRule

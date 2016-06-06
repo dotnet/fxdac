@@ -1,5 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.AccessControl.dll
+/r:System.Security.Principal.Windows.dll
 
 System.Security.AccessControl.DirectoryObjectSecurity
 System.Security.AccessControl.DirectorySecurity

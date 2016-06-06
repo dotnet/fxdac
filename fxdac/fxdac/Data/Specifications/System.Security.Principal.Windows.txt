@@ -1,8 +1,12 @@
 ﻿/r:System.Runtime.dll
-/r:System.Security.AccessControl.dll
 /r:System.Security.Claims.dll
-/r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll 
+
+System.Security.Principal.SecurityIdentifier
+System.Security.Principal.IdentityReference
+System.Security.Principal.WellKnownSidType
+System.Security.Principal.IdentityReferenceCollection
+System.Security.Principal.NTAccount
 
 System.Security.Principal.WindowsAccountType
 System.Security.Principal.WindowsBuiltInRole
