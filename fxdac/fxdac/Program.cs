@@ -24,9 +24,25 @@ static class Program
 
     static void Main(string[] args)
     {
+        FxRedist redist;
         using (var reportWriter = new ReportWriter(s_ReportPath)) {
-            if (RefactorAssemblies(reportWriter)) {         
+            if (RefactorAssemblies(reportWriter, out redist)) {         
                 LocationAnalysis.CompareFactorings(s_ExistingContracts, s_OutputDlls, reportWriter);
+            }
+
+            // Orphaned types are types in the specifications that don't exist in master source.
+            PrintOrphanedTypes(redist, reportWriter);
+
+            if (redist.Leftover.Count > 0) {
+                reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files");
+
+                foreach (var ns in redist.Leftover) {
+                    var nsName = ns.Key;
+                    foreach (var type in ns.Value) {
+                        reportWriter.WriteListItem(type.Symbol.GetDocumentationCommentId().Substring(2));
+                    }
+                }
+                reportWriter.WriteListEnd();
             }
         }
 
@@ -34,7 +50,7 @@ static class Program
         Console.ReadLine();
     }
 
-    private static bool RefactorAssemblies(ReportWriter reportWriter)
+    private static bool RefactorAssemblies(ReportWriter reportWriter, out FxRedist redist)
     {
         var masterSource = CSharpSyntaxTree.ParseText(File.ReadAllText(s_MasterAPIFile));
 
@@ -47,7 +63,7 @@ static class Program
         SemanticModel semantic = compilation.GetSemanticModel(masterSource);
 
         // load files describing the desired factoring. verify consistency of these files.
-        var redist = new FxRedist();
+        redist = new FxRedist();
         if (!ProcessSpecifications(redist)) {
             Console.WriteLine("\nPress ENTER to exit ...");
             Console.ReadLine();
@@ -71,20 +87,7 @@ static class Program
             WriteMessage(ConsoleColor.Yellow, "\n{0} type[s] not assigned to an assembly", redist.Leftover.CountOfTypes);
         }
 
-        if (redist.Leftover.Count > 0) {
-            reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files");
-
-            foreach (var ns in redist.Leftover) {
-                var nsName = ns.Key;
-                foreach (var type in ns.Value) {
-                    reportWriter.WriteListItem(type.Symbol.GetDocumentationCommentId().Substring(2));
-                }
-            }
-            reportWriter.WriteListEnd();
-        }
-
-        // Orphaned types are types in the specifications that don't exist in master source.
-        PrintOrphanedTypes(redist, reportWriter);
+        
 
         return successfulBuild;
     }

@@ -86,35 +86,10 @@ class LocationAnalysis
         var validMoves = movedToOtherThanSystemRuntime.Where((t) => IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
         var unknownMoves = movedToOtherThanSystemRuntime.Where((t) => !IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
 
-        reportWriter.WriteListStart("GENERAL_STATISTICS");
-        reportWriter.WriteListItem("Previous types {0}", types.Where((t) => t.PreviousAssembly != null).Count());
-        reportWriter.WriteListItem("Current types {0}", types.Where((t) => t.CurrentAssembly != null).Count());
-        reportWriter.WriteListItem("Moved to System.Runtime {0}", movedToSystemRuntime.Count);
-        reportWriter.WriteListItem("Moved to other locations {0}", movedToOtherThanSystemRuntime.Count);
-        reportWriter.WriteListEnd();
-
         var previousContracts = types.Select((t) => t.PreviousAssembly).Where((a) => a != null).Distinct();
         var currentContracts = types.Select((t) => t.CurrentAssembly).Where((a) => a != null).Distinct();
         var addedContracts = currentContracts.Except(previousContracts).ToList();
         var removedContracts = previousContracts.Except(currentContracts).ToList();
-
-        addedContracts.Sort();
-        if (addedContracts.Count > 0) {
-            reportWriter.WriteListStart("ADDED_CONTRACTS", "total", addedContracts.Count);
-            foreach (var addedContract in addedContracts) {
-                reportWriter.WriteListItem("{0}", addedContract);
-            }
-            reportWriter.WriteListEnd();
-        }
-
-        removedContracts.Sort();
-        if (removedContracts.Count > 0) {
-            reportWriter.WriteListStart("REMOVED_CONTRACTS", "total", removedContracts.Count);
-            foreach (var removedContract in removedContracts) {
-                reportWriter.WriteListItem("\t{0}", removedContract);
-            }
-            reportWriter.WriteListEnd();
-        }
 
         if (moved.Count > 0) {
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
@@ -149,6 +124,24 @@ class LocationAnalysis
                 reportWriter.WriteListEnd();
             }
 
+            reportWriter.WriteListEnd();
+        }
+
+        if (addedContracts.Count > 0) {
+            addedContracts.Sort();
+            reportWriter.WriteListStart("ADDED_CONTRACTS", "total", addedContracts.Count);
+            foreach (var addedContract in addedContracts) {
+                reportWriter.WriteListItem("{0}", addedContract);
+            }
+            reportWriter.WriteListEnd();
+        }
+
+        if (removedContracts.Count > 0) {
+            removedContracts.Sort();
+            reportWriter.WriteListStart("MISSING_CONTRACTS", "total", removedContracts.Count);
+            foreach (var removedContract in removedContracts) {
+                reportWriter.WriteListItem("\t{0}", removedContract);
+            }
             reportWriter.WriteListEnd();
         }
 
