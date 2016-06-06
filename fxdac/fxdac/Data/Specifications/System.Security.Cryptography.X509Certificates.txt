@@ -4,6 +4,10 @@
 /r:System.Security.Cryptography.Algorithms.dll
 /r:System.Security.Cryptography.Encoding.dll
 
+System.Security.Cryptography.X509Certificates.X509Certificate
+System.Security.Cryptography.X509Certificates.X509ContentType
+System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
+
 System.Security.Cryptography.AesCryptoServiceProvider
 System.Security.Cryptography.AesManaged
 System.Security.Cryptography.X509Certificates.OpenFlags

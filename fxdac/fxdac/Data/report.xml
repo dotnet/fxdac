@@ -183,7 +183,7 @@
     <item text="Previous types 1204"/>
     <item text="Current types 2127"/>
     <item text="Moved to System.Runtime 142"/>
-    <item text="Moved to other locations 50"/>
+    <item text="Moved to other locations 47"/>
   </GENERAL_STATISTICS>
   <ADDED_CONTRACTS total="28">
     <item text="Microsoft.Registry"/>
@@ -229,7 +229,7 @@
     <item text="	System.Threading.Tasks"/>
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="192" description="corefx types that changed their location">
+  <MOVED_TYPES total="189" description="corefx types that changed their location">
     <MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
@@ -271,9 +271,6 @@
       <item text="System.Security.AccessControl,System.Security.Principal.NTAccount moved from System.Security.Principal.Windows"/>
       <item text="System.Security.AccessControl,System.Security.Principal.SecurityIdentifier moved from System.Security.Principal.Windows"/>
       <item text="System.Security.AccessControl,System.Security.Principal.WellKnownSidType moved from System.Security.Principal.Windows"/>
-      <item text="System.Security.Cryptography.Primitives,System.Security.Cryptography.X509Certificates.X509Certificate moved from System.Security.Cryptography.X509Certificates"/>
-      <item text="System.Security.Cryptography.Primitives,System.Security.Cryptography.X509Certificates.X509ContentType moved from System.Security.Cryptography.X509Certificates"/>
-      <item text="System.Security.Cryptography.Primitives,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags moved from System.Security.Cryptography.X509Certificates"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
@@ -1377,10 +1374,10 @@
     <item text="System.Security.Permissions,System.Security.Policy.ZoneMembershipCondition"/>
     <item text="System.Security.Permissions,System.Security.PolicyLevelType"/>
     <item text="System.Security.Permissions,System.Security.SecurityContextSource"/>
-    <item text="System.Security.Permissions,System.Security.SecurityElement"/>
     <item text="System.Security.Permissions,System.Security.SecurityState"/>
     <item text="System.Security.Permissions,System.Security.SecurityZone"/>
     <item text="System.Security.Principal,System.Security.Principal.PrincipalPolicy"/>
+    <item text="System.Security.Principal,System.Security.SecurityElement"/>
     <item text="System.Security.Principal.Windows,System.Security.Principal.WindowsAccountType"/>
     <item text="System.Security.Principal.Windows,System.Security.Principal.WindowsImpersonationContext"/>
     <item text="System.Security.TBD,System.Security.Cryptography.CryptoAPITransform"/>

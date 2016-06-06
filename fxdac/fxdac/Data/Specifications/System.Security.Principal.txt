@@ -1,4 +1,7 @@
 ﻿/r:System.Runtime.dll
+/r:System.Collections.NonGeneric.dll
+
+System.Security.SecurityElement
 
 System.Security.Principal.TokenImpersonationLevel
 System.Security.Principal.IPrincipal

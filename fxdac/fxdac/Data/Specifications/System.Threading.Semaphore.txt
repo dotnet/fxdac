@@ -1,7 +1,7 @@
 /r:System.Runtime.dll
 /r:System.Security.AccessControl.dll
 /r:System.Security.Permissions.dll
-/r:System.Security.Permissions.dll
+/r:System.Security.Principal.dll
 
 System.Security.AccessControl.SemaphoreAccessRule
 System.Security.AccessControl.SemaphoreAuditRule

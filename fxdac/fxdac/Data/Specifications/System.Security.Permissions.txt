@@ -1,7 +1,8 @@
 ﻿/r:System.Runtime.dll
-/r:System.Collections.NonGeneric.dll
 /r:System.Security.AccessControl.dll
 /r:System.Security.Cryptography.Primitives.dll
+/r:System.Security.Cryptography.X509Certificates.dll
+/r:System.Security.Principal.dll
 
 System.Security.ISecurityPolicyEncodable
 System.Security.PolicyLevelType
@@ -53,7 +54,7 @@ System.Security.IPermission
 System.Security.NamedPermissionSet
 System.Security.PermissionSet
 System.Security.ISecurityEncodable
-System.Security.SecurityElement
+
 System.Security.CodeAccessPermission
 System.Security.SecurityZone
 System.Security.HostSecurityManager
