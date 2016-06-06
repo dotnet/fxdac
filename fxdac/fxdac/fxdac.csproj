@@ -240,7 +240,6 @@
     <None Include="Data\Specifications\System.Security.Cryptography.Csp.txt" />
     <None Include="Data\Specifications\System.Security.Claims.txt" />
     <None Include="Data\Specifications\System.Security.AccessControl.txt" />
-    <None Include="Data\Specifications\System.Security.Authentication.ExtendedProtection.txt" />
     <None Include="Data\Specifications\System.Net.Security.txt" />
     <None Include="Data\Specifications\System.Runtime.Extensions.txt" />
     <None Include="Data\Specifications\System.ObjectModel.txt" />

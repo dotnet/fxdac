@@ -183,9 +183,9 @@
     <item text="Previous types 1204"/>
     <item text="Current types 2127"/>
     <item text="Moved to System.Runtime 143"/>
-    <item text="Moved to other locations 40"/>
+    <item text="Moved to other locations 41"/>
   </GENERAL_STATISTICS>
-  <ADDED_CONTRACTS total="27">
+  <ADDED_CONTRACTS total="26">
     <item text="Microsoft.Registry"/>
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
@@ -207,7 +207,6 @@
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
-    <item text="System.Security.Authentication.ExtendedProtection"/>
     <item text="System.Security.Permissions"/>
     <item text="System.Security.TBD"/>
     <item text="System.Threading.Security"/>
@@ -228,8 +227,9 @@
     <item text="	System.Threading.Tasks"/>
     <item text="	System.Threading.Tasks.Extensions"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="183" description="corefx types that changed their location">
+  <MOVED_TYPES total="184" description="corefx types that changed their location">
     <MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME>
+      <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IComponent moved from System.ComponentModel.Primitives"/>
@@ -620,7 +620,7 @@
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.TypeDescriptionProvider"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.TypeDescriptionProviderAttribute"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.WarningException"/>
-    <item text="System.ComponentModel.TypeConverter,System.ComponentModel.Win32Exception"/>
+    <item text="System.ComponentModel.TypeConverter,System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter"/>
     <item text="System.Deployment,System.Deployment.Internal.InternalActivationContextHelper"/>
     <item text="System.Deployment,System.Deployment.Internal.InternalApplicationIdentityHelper"/>
     <item text="System.Diagnostics.Contracts,System.Diagnostics.Contracts.Internal.ContractHelper"/>
@@ -934,6 +934,7 @@
     <item text="System.Runtime.Extensions,System.NewsStyleUriParser"/>
     <item text="System.Runtime.Extensions,System.UriIdnScope"/>
     <item text="System.Runtime.Extensions,System.UriParser"/>
+    <item text="System.Runtime.InteropServices,System.ComponentModel.Win32Exception"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._Attribute"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._MethodRental"/>
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices._SignatureHelper"/>
@@ -1236,7 +1237,6 @@
     <item text="System.Security.AccessControl,System.Security.AccessControl.RegistryAuditRule"/>
     <item text="System.Security.AccessControl,System.Security.AccessControl.RegistryRights"/>
     <item text="System.Security.AccessControl,System.Security.AccessControl.RegistrySecurity"/>
-    <item text="System.Security.Authentication.ExtendedProtection,System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.AsymmetricKeyExchangeDeformatter"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.AsymmetricKeyExchangeFormatter"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.AsymmetricSignatureDeformatter"/>

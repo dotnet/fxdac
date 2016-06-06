@@ -1787,17 +1787,6 @@ namespace System.ComponentModel {
     public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
   }
 
-  public partial class Win32Exception : System.Runtime.InteropServices.ExternalException, System.Runtime.Serialization.ISerializable {
-    public Win32Exception() { }
-    public Win32Exception(int error) { }
-    public Win32Exception(int error, string message) { }
-    protected Win32Exception(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public Win32Exception(string message) { }
-    public Win32Exception(string message, System.Exception innerException) { }
-    public int NativeErrorCode { get { return default(int); } }
-    public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-  }
-
 } // end of System.ComponentModel
 namespace System.ComponentModel.Design {
   public partial class ActiveDesignerEventArgs : System.EventArgs {
@@ -2523,3 +2512,11 @@ namespace System.ComponentModel.Design.Serialization {
   }
 
 } // end of System.ComponentModel.Design.Serialization
+namespace System.Security.Authentication.ExtendedProtection {
+  public partial class ExtendedProtectionPolicyTypeConverter : System.ComponentModel.TypeConverter {
+    public ExtendedProtectionPolicyTypeConverter() { }
+    public override bool CanConvertTo(System.ComponentModel.ITypeDescriptorContext context, System.Type destinationType) { return default(bool); }
+    public override object ConvertTo(System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, System.Type destinationType) { return default(object); }
+  }
+
+} // end of System.Security.Authentication.ExtendedProtection

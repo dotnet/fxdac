@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-/r:System.ComponentModel.TypeConverter.dll
+/r:System.Runtime.InteropServices.dll
 
 System.Net.TransportContext
 

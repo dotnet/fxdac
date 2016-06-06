@@ -2,6 +2,7 @@
 /r:System.ComponentModel.dll
 /r:System.Threading.dll
 
+System.ComponentModel.CancelEventArgs
 System.ComponentModel.CancelEventHandler
 System.ComponentModel.ProgressChangedEventArgs
 System.ComponentModel.ProgressChangedEventHandler

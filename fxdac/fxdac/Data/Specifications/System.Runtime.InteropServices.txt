@@ -1,5 +1,7 @@
 ﻿/r:System.Runtime.dll
 
+System.ComponentModel.Win32Exception
+
 System.Runtime.InteropServices.DefaultParameterValueAttribute
 System.Runtime.InteropServices.HandleCollector
 System.Security.SuppressUnmanagedCodeSecurityAttribute
