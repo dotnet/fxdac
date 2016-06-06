@@ -38,7 +38,17 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     });
 
     public static FxDependecny[] s_AssemblyToTypeDependenciesToRemove = new FxDependecny[] {
+
+        new FxDependecny() { From="System.Runtime", To ="System.AppDomain" },
+        new FxDependecny() { From="System.Runtime", To ="System.Runtime.Remoting.ObjectHandle" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.IPermission" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.Permissions.SecurityAction" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.Cryptography.X509Certificates.X509Certificate" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityZone" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
         new FxDependecny() { From="System.Runtime", To ="System.MarshalByRefObject" },
+
         new FxDependecny() { From="System.Threading", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.Threading.Timer", To ="System.MarshalByRefObject" },
@@ -47,28 +57,13 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependecny() { From="System.Diagnostics.TraceSource", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.TypeConverter", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.Net", To ="System.MarshalByRefObject" },
-                new FxDependecny() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
+        new FxDependecny() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
+
+        new FxDependecny() { From="System.Threading.Thread", To ="System.AppDomain" },
+        new FxDependecny() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
+
         new FxDependecny() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.IPermission" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Permissions.SecurityAction" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Cryptography.X509Certificates.X509Certificate" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityZone" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
-    };
-
-    public static FxMember[] s_MethodsToRemove = new FxMember[] {
-        new FxMember("System.Threading.Thread", "GetDomain")
-    };
-
-    public static FxMember[] s_PropertiesToRemove = new FxMember[] {
-        new FxMember("System.Threading.Thread", "CurrentContext")
-    };
-
-    public static FxDependecny[] s_TypeToTypeDependenciesToRemove = new FxDependecny[] {
-        new FxDependecny() { From="System.Activator", To ="System.AppDomain" },
-        new FxDependecny() { From="System.Activator", To ="System.Runtime.Remoting.ObjectHandle" }
     };
 
     SemanticModel _model;
@@ -135,66 +130,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                 }
             }
         }
-        // should remove any members?
-        {
-            foreach (var dependency in s_TypeToTypeDependenciesToRemove) {
-                if (symbol.ToString().StartsWith(dependency.From)) {
-                    var members = newNode.DescendantNodes().OfType<MethodDeclarationSyntax>().ToArray();
-                    bool removeMore = true;
-                    while (removeMore) {
-                        removeMore = false;
-                        members = newNode.DescendantNodes().OfType<MethodDeclarationSyntax>().ToArray();
-                        foreach (var member in members) {
-                            if (DoesMethodDependOn(member, dependency.To)) {
-                                removeMore = true;
-                                _reportWriter.WriteListItem("Removed {0}", FormatMethod(member));
-                                newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        {
-            foreach (var memberToRemove in s_MethodsToRemove) {
-                if (symbol.ToString().StartsWith(memberToRemove.TypeName)) {
-                    var members = newNode.DescendantNodes().OfType<MethodDeclarationSyntax>().ToArray();
-                    bool removeMore = true;
-                    while (removeMore) {
-                        removeMore = false;
-                        members = newNode.DescendantNodes().OfType<MethodDeclarationSyntax>().ToArray();
-                        foreach (var member in members) {
-                            if (member.Identifier.ToString() == memberToRemove.MemberName) {
-                                _reportWriter.WriteListItem("Removed {0}", FormatMethod(member));
-                                removeMore = true;
-                                newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        {
-            foreach (var memberToRemove in s_PropertiesToRemove) {
-                if (symbol.ToString().StartsWith(memberToRemove.TypeName)) {
-                    var members = newNode.DescendantNodes().OfType<PropertyDeclarationSyntax>().ToArray();
-                    bool removeMore = true;
-                    while (removeMore) {
-                        removeMore = false;
-                        members = newNode.DescendantNodes().OfType<PropertyDeclarationSyntax>().ToArray();
-                        foreach (var member in members) {
-                            if (member.Identifier.ToString() == memberToRemove.MemberName) {
-                                _reportWriter.WriteListItem("Removed {0}", FormatProperty(member));
-                                removeMore = true;
-                                newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
         return newNode;
     }
 
