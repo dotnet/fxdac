@@ -226,7 +226,6 @@
     <None Include="Data\Specifications\System.ComponentModel.TypeConverter.txt" />
     <None Include="Data\Specifications\System.CodeDom.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Contracts.txt" />
-    <None Include="Data\Specifications\System.Diagnostics.Tools.txt" />
     <None Include="Data\Specifications\System.Diagnostics.FileVersionInfo.txt" />
     <None Include="Data\Specifications\System.Globalization.Calendars.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.Watcher.txt" />

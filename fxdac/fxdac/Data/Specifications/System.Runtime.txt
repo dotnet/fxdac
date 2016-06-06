@@ -630,3 +630,7 @@ System.Threading.CancellationTokenSource
 
 // types that have to be in System.Runtime
 System.Security.SecurityException
+
+// this one type was in System.Diagnstics.Tools, and so we decided to move it
+// it's unfortunate that the type is in CodeDom namespace
+System.CodeDom.Compiler.GeneratedCodeAttribute
