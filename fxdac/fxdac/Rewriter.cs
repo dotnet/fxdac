@@ -117,16 +117,18 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         {
             var removeDependenciesTo = s_AssemblyToTypeDependenciesToRemove.Where(dep => dep.From == _assembly).Select(dep => dep.To);
             foreach (var dependency in removeDependenciesTo) {
-                var members = newNode.DescendantNodes().OfType<MemberDeclarationSyntax>().ToArray();
                 bool removeMore = true;
                 while (removeMore) {
                     removeMore = false;
-                    members = newNode.DescendantNodes().OfType<MemberDeclarationSyntax>().ToArray();
-                    foreach (var member in members) {
+                    var members = newNode.DescendantNodes().OfType<MemberDeclarationSyntax>().ToArray();
+                    if(members.Length < 1) { break; }
+                    
+                    foreach(var member in members) { 
                         if (DoesMemberDependOn(member, dependency)) {
                             removeMore = true;
-                            _reportWriter.WriteListItem("Removed {0}", FormatMember(member));
+                            _reportWriter.WriteListItem("Removed member {0}", FormatMember(member));
                             newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
+                            break;
                         }
                     }
                 }
@@ -197,12 +199,16 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
             foreach (var assemblyDependency in s_AssemblyToTypeDependenciesToRemove) {
                 if (_assembly == assemblyDependency.From) {
                     if (typeName == assemblyDependency.To) {
+                        var parent = (ClassDeclarationSyntax)node.Parent;
+                        _reportWriter.WriteListItem("Removed base {0} from type {1}", typeName, parent.Identifier);
                         return SyntaxFactory.BaseList(newNode.Types.Remove(type));
                     }
                 }
             }
 
             if (s_ShouldRemoveType(typeName)) {
+                var parent = (ClassDeclarationSyntax)node.Parent;
+                _reportWriter.WriteListItem("Removed base {0} from type {1}", typeName, parent.Identifier);
                 return SyntaxFactory.BaseList(newNode.Types.Remove(type));
             }
         }
@@ -214,7 +220,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     {
         if(node.ExplicitInterfaceSpecifier != null)
             if(s_ShouldRemoveType(node.ExplicitInterfaceSpecifier.Name.ToString())){
-                _reportWriter.WriteListItem("Removed {0}", FormatMethod(node));
+                _reportWriter.WriteListItem("Removed method {0}", FormatMethod(node));
                 return null;
             }
         return base.VisitMethodDeclaration(node);
@@ -224,7 +230,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     {
         if (node.ExplicitInterfaceSpecifier != null)
             if (s_ShouldRemoveType(node.ExplicitInterfaceSpecifier.Name.ToString())) {
-                _reportWriter.WriteListItem("Removed {0}", FormatProperty(node));
+                _reportWriter.WriteListItem("Removed property {0}", FormatProperty(node));
                 return null;
             }
         return base.VisitPropertyDeclaration(node);
