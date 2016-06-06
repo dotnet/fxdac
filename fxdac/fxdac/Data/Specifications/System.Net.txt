@@ -7,6 +7,8 @@
 /r:System.Net.Requests.dll
 /r:System.Net.Security.dll
 /r:System.Security.Permissions.dll
+/r:System.Security.Policy.dll
+/r:System.Collections.NonGeneric.dll
 
 System.Net.AuthenticationManager
 System.Net.Authorization

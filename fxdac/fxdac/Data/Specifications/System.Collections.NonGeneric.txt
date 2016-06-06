@@ -1,5 +1,8 @@
 ﻿/r:System.Runtime.dll
 
+System.Collections.Hashtable
+System.Collections.ArrayList
+
 System.Collections.CaseInsensitiveComparer
 System.Collections.CollectionBase
 System.Collections.Comparer

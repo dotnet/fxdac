@@ -202,8 +202,6 @@ System.Version
 // Xamarin
 Microsoft.Win32.SafeHandles.SafeFileHandle
 System.CharEnumerator
-System.Collections.ArrayList
-System.Collections.Hashtable
 System.Collections.IHashCodeProvider
 System.Configuration.Assemblies.AssemblyVersionCompatibility
 System.Converter`2
@@ -250,27 +248,24 @@ System.Runtime.TargetedPatchingOptOutAttribute
 System.Security.Cryptography.X509Certificates.X509Certificate
 System.Security.Cryptography.X509Certificates.X509ContentType
 System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
-System.Security.IPermission
-System.Security.ISecurityEncodable
+
+
 System.Security.IStackWalk
-System.Security.Permissions.CodeAccessSecurityAttribute
-System.Security.Permissions.HostProtectionAttribute
+
+
 System.Security.Permissions.HostProtectionResource
-System.Security.Permissions.PermissionSetAttribute
 System.Security.Permissions.PermissionState
-System.Security.Permissions.ReflectionPermissionAttribute
+
 System.Security.Permissions.ReflectionPermissionFlag
 System.Security.Permissions.SecurityAction
-System.Security.Permissions.SecurityAttribute
-System.Security.Permissions.SecurityPermissionAttribute
+
 System.Security.Permissions.SecurityPermissionFlag
-System.Security.Permissions.StrongNameIdentityPermissionAttribute
-System.Security.PermissionSet
+
+
 System.Security.Policy
 System.Security.Policy.Evidence
 System.Security.SecureString
 System.Security.SecurityContextSource
-System.Security.SecurityElement
 System.Text.Decoder
 System.Text.DecoderFallback
 System.Text.DecoderFallbackBuffer
@@ -421,7 +416,7 @@ System.Runtime.InteropServices.FieldOffsetAttribute
 System.Runtime.InteropServices.OutAttribute
 System.Runtime.Versioning.TargetFrameworkAttribute
 System.Security.AllowPartiallyTrustedCallersAttribute
-System.Security.SecurityException
+
 System.Security.SecurityTransparentAttribute
 System.Security.VerificationException
 System.Text.StringBuilder
@@ -464,22 +459,18 @@ System.ResolveEventHandler
 System.Runtime.CompilerServices.CompilationRelaxations
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 System.Runtime.Hosting.ActivationArguments
-System.Security.HostSecurityManager
 System.Security.HostSecurityManagerOptions
-System.Security.ISecurityPolicyEncodable
-System.Security.NamedPermissionSet
+
+
 System.Security.PartialTrustVisibilityLevel
 System.Security.Permissions.StrongNamePublicKeyBlob
-System.Security.Policy.ApplicationTrust
-System.Security.Policy.CodeGroup
+
 System.Security.Policy.EvidenceBase
-System.Security.Policy.IIdentityPermissionFactory
-System.Security.Policy.IMembershipCondition
-System.Security.Policy.PolicyLevel
-System.Security.Policy.PolicyStatement
+
+
+
 System.Security.Policy.PolicyStatementAttribute
-System.Security.Policy.StrongName
-System.Security.Policy.StrongNameMembershipCondition
+
 System.Security.Policy.TrustManagerContext
 System.Security.Policy.TrustManagerUIContext
 System.Security.PolicyLevelType
@@ -582,7 +573,7 @@ System.Runtime.MemoryFailPoint
 System.Runtime.AssemblyTargetedPatchBandAttribute
 System.Configuration.Assemblies.AssemblyHash
 
-System.Security.Permissions.EnvironmentPermissionAttribute
+
 System.Security.Permissions.EnvironmentPermissionAccess
 
 // added because it seemed like the right thing to do:
@@ -636,3 +627,6 @@ System.IO.FileStream
 System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute 
 System.Threading.Tasks.TaskExtensions
 System.Threading.CancellationTokenSource
+
+// types that have to be in System.Runtime
+System.Security.SecurityException

@@ -50,6 +50,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                 new FxDependecny() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
         new FxDependecny() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
+        new FxDependecny() { From="System.Runtime", To ="System.Security.IPermission" },
     };
 
     public static FxMember[] s_MethodsToRemove = new FxMember[] {
@@ -111,6 +113,24 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
             newNode = newNode.WithBaseList(null);
         }
 
+        {
+            var removeDependenciesTo = s_AssemblyToTypeDependenciesToRemove.Where(dep => dep.From == _assembly).Select(dep => dep.To);
+            foreach (var dependency in removeDependenciesTo) {
+                var members = newNode.DescendantNodes().OfType<MemberDeclarationSyntax>().ToArray();
+                bool removeMore = true;
+                while (removeMore) {
+                    removeMore = false;
+                    members = newNode.DescendantNodes().OfType<MemberDeclarationSyntax>().ToArray();
+                    foreach (var member in members) {
+                        if (DoesMemberDependOn(member, dependency)) {
+                            removeMore = true;
+                            _reportWriter.WriteListItem("Removed {0}", FormatMember(member));
+                            newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
+                        }
+                    }
+                }
+            }
+        }
         // should remove any members?
         {
             foreach (var dependency in s_TypeToTypeDependenciesToRemove) {
@@ -123,9 +143,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                         foreach (var member in members) {
                             if (DoesMethodDependOn(member, dependency.To)) {
                                 removeMore = true;
-                                _reportWriter.WriteListItem("Removed {0}", FormatMember(member));
+                                _reportWriter.WriteListItem("Removed {0}", FormatMethod(member));
                                 newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
-
                             }
                         }
                     }
@@ -143,7 +162,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                         members = newNode.DescendantNodes().OfType<MethodDeclarationSyntax>().ToArray();
                         foreach (var member in members) {
                             if (member.Identifier.ToString() == memberToRemove.MemberName) {
-                                _reportWriter.WriteListItem("Removed {0}", FormatMember(member));
+                                _reportWriter.WriteListItem("Removed {0}", FormatMethod(member));
                                 removeMore = true;
                                 newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
                             }
@@ -163,7 +182,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                         members = newNode.DescendantNodes().OfType<PropertyDeclarationSyntax>().ToArray();
                         foreach (var member in members) {
                             if (member.Identifier.ToString() == memberToRemove.MemberName) {
-                                _reportWriter.WriteListItem("Removed {0}", FormatMember(member));
+                                _reportWriter.WriteListItem("Removed {0}", FormatProperty(member));
                                 removeMore = true;
                                 newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
                             }
@@ -173,6 +192,40 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
             }
         }
         return newNode;
+    }
+
+
+    private bool DoesMemberDependOn(MemberDeclarationSyntax member, string dependency)
+    {
+        var method = member as MethodDeclarationSyntax;
+        if (method != null) {
+            return DoesMethodDependOn(method, dependency);
+        }
+
+        var property = member as PropertyDeclarationSyntax;
+        if (property != null) {
+            return property.Type.ToString() == dependency;
+        }
+
+        var ctor = member as ConstructorDeclarationSyntax;
+        if (ctor != null) {
+            return DoesCtorDependOn(ctor, dependency);
+        }
+
+        return false;
+    }
+
+    private bool DoesCtorDependOn(ConstructorDeclarationSyntax ctor, string dependency)
+    {
+        var parameters = ctor.ParameterList;
+        foreach (var parameter in parameters.Parameters) {
+            var parameterType = parameter.Type;
+            var parameterTypeName = parameterType != null ? parameter.Type.ToString() : "";
+            if (parameterTypeName == dependency) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public override SyntaxNode VisitInterfaceDeclaration(InterfaceDeclarationSyntax node)
@@ -219,7 +272,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     {
         if(node.ExplicitInterfaceSpecifier != null)
             if(s_ShouldRemoveType(node.ExplicitInterfaceSpecifier.Name.ToString())){
-                _reportWriter.WriteListItem("Removed {0}", FormatMember(node));
+                _reportWriter.WriteListItem("Removed {0}", FormatMethod(node));
                 return null;
             }
         return base.VisitMethodDeclaration(node);
@@ -229,7 +282,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     {
         if (node.ExplicitInterfaceSpecifier != null)
             if (s_ShouldRemoveType(node.ExplicitInterfaceSpecifier.Name.ToString())) {
-                _reportWriter.WriteListItem("Removed {0}", FormatMember(node));
+                _reportWriter.WriteListItem("Removed {0}", FormatProperty(node));
                 return null;
             }
         return base.VisitPropertyDeclaration(node);
@@ -244,7 +297,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
 
         var parameters = method.ParameterList;
         foreach (var parameter in parameters.Parameters) {
-            var parameterTypeName = parameter.Type.ToString();
+            var parameterType = parameter.Type;
+            var parameterTypeName = parameterType!=null?parameter.Type.ToString():"";
             if (parameterTypeName == dependecny) {
                 return true;
             }
@@ -252,7 +306,44 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return false;
     }
 
-    private string FormatMember(MethodDeclarationSyntax member)
+    private string FormatMember(MemberDeclarationSyntax member)
+    {
+        var method = member as MethodDeclarationSyntax;
+        if (method != null) {
+            return FormatMethod(method);
+        }
+
+        var property = member as PropertyDeclarationSyntax;
+        if (property != null) {
+            return FormatProperty(property);
+        }
+
+        var ctor = member as ConstructorDeclarationSyntax;
+        if (ctor != null) {
+            return FormatCtor(ctor);
+        }
+
+        return member.ToString();
+    }
+
+    private string FormatCtor(ConstructorDeclarationSyntax ctor)
+    {
+        var sb = new StringBuilder();
+        var type = (ClassDeclarationSyntax)ctor.Parent;
+        sb.Append(type.Identifier);
+        sb.Append('.');
+        sb.Append("ctor");
+        sb.Append('(');
+        bool first = true;
+        foreach (var parameter in ctor.ParameterList.Parameters) {
+            if (first) { first = false; } else sb.Append(", ");
+            sb.Append(parameter.Type);
+        }
+        sb.Append(')');
+        return sb.ToString();
+    }
+
+    private string FormatMethod(MethodDeclarationSyntax member)
     {
         var sb = new StringBuilder();
         var type = (ClassDeclarationSyntax)member.Parent;
@@ -270,7 +361,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return sb.ToString();
     }
 
-    private string FormatMember(PropertyDeclarationSyntax member)
+    private string FormatProperty(PropertyDeclarationSyntax member)
     {
         var sb = new StringBuilder();
         var type = (ClassDeclarationSyntax)member.Parent;

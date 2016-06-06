@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.NonGeneric.dll
 /r:System.Threading.dll
+/r:System.Security.Policy.dll
 
 System.AppDomain
 System.AppDomainInitializer

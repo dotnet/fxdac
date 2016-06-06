@@ -4,6 +4,7 @@
 /r:System.IO.FileSystem.Primitives.dll
 /r:System.IO.FileSystem.AccessControl.dll
 /r:System.Security.Permissions.dll
+/r:System.Security.Policy.dll
 
 System.IO.SearchOption
 System.IO.Directory

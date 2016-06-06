@@ -1,8 +1,10 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.AccessControl.dll
+/r:System.Security.Policy.dll
+
+System.Security.Permissions.SecurityPermissionAttribute
 
 System.Security.Policy.FileCodeGroup
-
 System.Security.CodeAccessPermission
 
 System.Security.Permissions.EnvironmentPermission
