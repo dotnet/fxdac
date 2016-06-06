@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.AccessControl.dll
 /r:System.Security.Claims.dll
+/r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll
 
 System.Security.Principal.WindowsAccountType
@@ -10,7 +11,5 @@ System.Security.Principal.WindowsImpersonationContext
 System.Security.Principal.WindowsPrincipal
 System.Security.Principal.IdentityNotMappedException
 System.Security.Principal.TokenAccessLevels
-
-
 
 

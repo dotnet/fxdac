@@ -5787,7 +5787,6 @@ namespace System.Reflection {
     public static System.Reflection.Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) { return default(System.Reflection.Assembly); }
     [System.ObsoleteAttribute]
     public static System.Reflection.Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, System.Security.Policy.Evidence securityEvidence) { return default(System.Reflection.Assembly); }
-    public static System.Reflection.Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, System.Security.SecurityContextSource securityContextSource) { return default(System.Reflection.Assembly); }
     public static System.Reflection.Assembly Load(System.Reflection.AssemblyName assemblyRef) { return default(System.Reflection.Assembly); }
     [System.ObsoleteAttribute]
     public static System.Reflection.Assembly Load(System.Reflection.AssemblyName assemblyRef, System.Security.Policy.Evidence assemblySecurity) { return default(System.Reflection.Assembly); }
@@ -6617,7 +6616,6 @@ namespace System.Reflection {
     public virtual System.Reflection.MethodInfo[] GetMethods(System.Reflection.BindingFlags bindingFlags) { return default(System.Reflection.MethodInfo[]); }
     public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public virtual void GetPEKind(out System.Reflection.PortableExecutableKinds peKind, out System.Reflection.ImageFileMachine machine) { peKind = default(System.Reflection.PortableExecutableKinds); machine = default(System.Reflection.ImageFileMachine); }
-    public virtual System.Security.Cryptography.X509Certificates.X509Certificate GetSignerCertificate() { return default(System.Security.Cryptography.X509Certificates.X509Certificate); }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public virtual System.Type GetType(string className) { return default(System.Type); }
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -7971,37 +7969,9 @@ namespace System.Security {
     public System.Security.PartialTrustVisibilityLevel PartialTrustVisibilityLevel { get { return default(System.Security.PartialTrustVisibilityLevel); } set { } }
   }
 
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum HostSecurityManagerOptions {
-    AllFlags = 31,
-    HostAppDomainEvidence = 1,
-    HostAssemblyEvidence = 4,
-    HostDetermineApplicationTrust = 8,
-    HostPolicyLevel = 2,
-    HostResolvePolicy = 16,
-    None = 0,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface IStackWalk {
-    void Assert();
-    void Demand();
-    void Deny();
-    void PermitOnly();
-  }
-
   public enum PartialTrustVisibilityLevel {
     NotVisibleByDefault = 1,
     VisibleToAllHosts = 0,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum PolicyLevelType {
-    AppDomain = 3,
-    Enterprise = 2,
-    Machine = 1,
-    User = 0,
   }
 
   public sealed partial class SecureString : System.IDisposable {
@@ -8024,11 +7994,6 @@ namespace System.Security {
     public void SetAt(int index, char c) { }
   }
 
-  public enum SecurityContextSource {
-    CurrentAppDomain = 0,
-    CurrentAssembly = 1,
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(5501), AllowMultiple=false, Inherited=false)]
   public sealed partial class SecurityCriticalAttribute : System.Attribute {
     public SecurityCriticalAttribute() { }
@@ -8042,8 +8007,6 @@ namespace System.Security {
     public SecurityException(string message, System.Exception inner) { }
     public SecurityException(string message, System.Type type) { }
     public SecurityException(string message, System.Type type, string state) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public System.Security.Permissions.SecurityAction Action { get { return default(System.Security.Permissions.SecurityAction); } set { } }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public object Demanded { get { return default(object); } set { } }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -8059,7 +8022,6 @@ namespace System.Security {
     public object PermitOnlySetInstance { get { return default(object); } set { } }
     public string RefusedSet { get { return default(string); } set { } }
     public string Url { get { return default(string); } set { } }
-    public System.Security.SecurityZone Zone { get { return default(System.Security.SecurityZone); } set { } }
     public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public override string ToString() { return default(string); }
   }
@@ -8069,25 +8031,9 @@ namespace System.Security {
     public SecuritySafeCriticalAttribute() { }
   }
 
-  public abstract partial class SecurityState {
-    protected SecurityState() { }
-    public abstract void EnsureState();
-    public bool IsStateAvailable() { return default(bool); }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple=false, Inherited=false)]
   public sealed partial class SecurityTransparentAttribute : System.Attribute {
     public SecurityTransparentAttribute() { }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum SecurityZone {
-    Internet = 3,
-    Intranet = 1,
-    MyComputer = 0,
-    NoZone = -1,
-    Trusted = 2,
-    Untrusted = 4,
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -8099,193 +8045,6 @@ namespace System.Security {
   }
 
 } // end of System.Security
-namespace System.Security.Cryptography.X509Certificates {
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial class X509Certificate : System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable {
-    public X509Certificate() { }
-    public X509Certificate(byte[] data) { }
-    public X509Certificate(byte[] rawData, System.Security.SecureString password) { }
-    public X509Certificate(byte[] rawData, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    public X509Certificate(byte[] rawData, string password) { }
-    public X509Certificate(byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    public X509Certificate(System.IntPtr handle) { }
-    public X509Certificate(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public X509Certificate(System.Security.Cryptography.X509Certificates.X509Certificate cert) { }
-    public X509Certificate(string fileName) { }
-    public X509Certificate(string fileName, System.Security.SecureString password) { }
-    public X509Certificate(string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    public X509Certificate(string fileName, string password) { }
-    public X509Certificate(string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public System.IntPtr Handle { get { return default(System.IntPtr); } }
-    public string Issuer { get { return default(string); } }
-    public string Subject { get { return default(string); } }
-    public static System.Security.Cryptography.X509Certificates.X509Certificate CreateFromCertFile(string filename) { return default(System.Security.Cryptography.X509Certificates.X509Certificate); }
-    public static System.Security.Cryptography.X509Certificates.X509Certificate CreateFromSignedFile(string filename) { return default(System.Security.Cryptography.X509Certificates.X509Certificate); }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public override bool Equals(object obj) { return default(bool); }
-    public virtual bool Equals(System.Security.Cryptography.X509Certificates.X509Certificate other) { return default(bool); }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType) { return default(byte[]); }
-    public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType, System.Security.SecureString password) { return default(byte[]); }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password) { return default(byte[]); }
-    protected static string FormatDate(System.DateTime date) { return default(string); }
-    public virtual byte[] GetCertHash() { return default(byte[]); }
-    public virtual string GetCertHashString() { return default(string); }
-    public virtual string GetEffectiveDateString() { return default(string); }
-    public virtual string GetExpirationDateString() { return default(string); }
-    public virtual string GetFormat() { return default(string); }
-    public override int GetHashCode() { return default(int); }
-    [System.ObsoleteAttribute("Use the Issuer property.")]
-    public virtual string GetIssuerName() { return default(string); }
-    public virtual string GetKeyAlgorithm() { return default(string); }
-    public virtual byte[] GetKeyAlgorithmParameters() { return default(byte[]); }
-    public virtual string GetKeyAlgorithmParametersString() { return default(string); }
-    [System.ObsoleteAttribute("Use the Subject property.")]
-    public virtual string GetName() { return default(string); }
-    public virtual byte[] GetPublicKey() { return default(byte[]); }
-    public virtual string GetPublicKeyString() { return default(string); }
-    public virtual byte[] GetRawCertData() { return default(byte[]); }
-    public virtual string GetRawCertDataString() { return default(string); }
-    public virtual byte[] GetSerialNumber() { return default(byte[]); }
-    public virtual string GetSerialNumberString() { return default(string); }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual void Import(byte[] rawData) { }
-    public virtual void Import(byte[] rawData, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual void Import(byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual void Import(string fileName) { }
-    public virtual void Import(string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual void Import(string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public virtual void Reset() { }
-    void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-    void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public override string ToString() { return default(string); }
-    public virtual string ToString(bool fVerbose) { return default(string); }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum X509ContentType {
-    Authenticode = 6,
-    Cert = 1,
-    Pfx = 3,
-    Pkcs12 = 3,
-    Pkcs7 = 5,
-    SerializedCert = 2,
-    SerializedStore = 4,
-    Unknown = 0,
-  }
-
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum X509KeyStorageFlags {
-    DefaultKeySet = 0,
-    Exportable = 4,
-    MachineKeySet = 2,
-    PersistKeySet = 16,
-    UserKeySet = 1,
-    UserProtected = 8,
-  }
-
-} // end of System.Security.Cryptography.X509Certificates
-namespace System.Security.Permissions {
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum EnvironmentPermissionAccess {
-    AllAccess = 3,
-    NoAccess = 0,
-    Read = 1,
-    Write = 2,
-  }
-
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum HostProtectionResource {
-    All = 511,
-    ExternalProcessMgmt = 4,
-    ExternalThreading = 16,
-    MayLeakOnAbort = 256,
-    None = 0,
-    SecurityInfrastructure = 64,
-    SelfAffectingProcessMgmt = 8,
-    SelfAffectingThreading = 32,
-    SharedState = 2,
-    Synchronization = 1,
-    UI = 128,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum PermissionState {
-    None = 0,
-    Unrestricted = 1,
-  }
-
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum ReflectionPermissionFlag {
-    [System.ObsoleteAttribute]
-    AllFlags = 7,
-    MemberAccess = 2,
-    NoFlags = 0,
-    [System.ObsoleteAttribute]
-    ReflectionEmit = 4,
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    RestrictedMemberAccess = 8,
-    [System.ObsoleteAttribute("not used anymore")]
-    TypeInformation = 1,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum SecurityAction {
-    Assert = 3,
-    Demand = 2,
-    [System.ObsoleteAttribute("This requests should not be used")]
-    Deny = 4,
-    InheritanceDemand = 7,
-    LinkDemand = 6,
-    PermitOnly = 5,
-    [System.ObsoleteAttribute("This requests should not be used")]
-    RequestMinimum = 8,
-    [System.ObsoleteAttribute("This requests should not be used")]
-    RequestOptional = 9,
-    [System.ObsoleteAttribute("This requests should not be used")]
-    RequestRefuse = 10,
-  }
-
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum SecurityPermissionFlag {
-    AllFlags = 16383,
-    Assertion = 1,
-    BindingRedirects = 8192,
-    ControlAppDomain = 1024,
-    ControlDomainPolicy = 256,
-    ControlEvidence = 32,
-    ControlPolicy = 64,
-    ControlPrincipal = 512,
-    ControlThread = 16,
-    Execution = 8,
-    Infrastructure = 4096,
-    NoFlags = 0,
-    RemotingConfiguration = 2048,
-    SerializationFormatter = 128,
-    SkipVerification = 4,
-    UnmanagedCode = 2,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public sealed partial class StrongNamePublicKeyBlob {
-    public StrongNamePublicKeyBlob(byte[] publicKey) { }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override string ToString() { return default(string); }
-  }
-
-} // end of System.Security.Permissions
 namespace System.Security.Policy {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public sealed partial class Evidence : System.Collections.ICollection, System.Collections.IEnumerable {
@@ -8323,57 +8082,7 @@ namespace System.Security.Policy {
     public virtual System.Security.Policy.EvidenceBase Clone() { return default(System.Security.Policy.EvidenceBase); }
   }
 
-  [System.FlagsAttribute]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum PolicyStatementAttribute {
-    All = 3,
-    Exclusive = 1,
-    LevelFinal = 2,
-    Nothing = 0,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial class TrustManagerContext {
-    public TrustManagerContext() { }
-    public TrustManagerContext(System.Security.Policy.TrustManagerUIContext uiContext) { }
-    public virtual bool IgnorePersistedDecision { get { return default(bool); } set { } }
-    public virtual bool KeepAlive { get { return default(bool); } set { } }
-    public virtual bool NoPrompt { get { return default(bool); } set { } }
-    public virtual bool Persist { get { return default(bool); } set { } }
-    public virtual System.ApplicationIdentity PreviousApplicationIdentity { get { return default(System.ApplicationIdentity); } set { } }
-    public virtual System.Security.Policy.TrustManagerUIContext UIContext { get { return default(System.Security.Policy.TrustManagerUIContext); } set { } }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum TrustManagerUIContext {
-    Install = 0,
-    Run = 2,
-    Upgrade = 1,
-  }
-
 } // end of System.Security.Policy
-namespace System.Security.Principal {
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface IIdentity {
-    string AuthenticationType { get; }
-    bool IsAuthenticated { get; }
-    string Name { get; }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface IPrincipal {
-    System.Security.Principal.IIdentity Identity { get; }
-    bool IsInRole(string role);
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum PrincipalPolicy {
-    NoPrincipal = 1,
-    UnauthenticatedPrincipal = 0,
-    WindowsPrincipal = 2,
-  }
-
-} // end of System.Security.Principal
 namespace System.Text {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public abstract partial class Decoder {
