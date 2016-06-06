@@ -2,6 +2,7 @@
 /r:System.Collections.NonGeneric.dll
 /r:System.Threading.dll
 /r:System.Security.Permissions.dll
+/r:System.Security.Principal.dll 
 
 System.AppDomain
 System.AppDomainInitializer

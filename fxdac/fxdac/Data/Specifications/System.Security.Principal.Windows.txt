@@ -2,7 +2,7 @@
 /r:System.Security.AccessControl.dll
 /r:System.Security.Claims.dll
 /r:System.Security.Permissions.dll
-/r:System.Security.Principal.dll
+/r:System.Security.Principal.dll 
 
 System.Security.Principal.WindowsAccountType
 System.Security.Principal.WindowsBuiltInRole
