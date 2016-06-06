@@ -66,12 +66,13 @@ class LocationAnalysis
         var moved = types.Where((t) => t.CurrentAssembly != t.PreviousAssembly && t.CurrentAssembly!=null && t.PreviousAssembly!=null).ToList();
         moved.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var movedToSystemRuntime = moved.Where((t) => t.CurrentAssembly == "System.Runtime").ToList();
+        var movedToOtherThanSystemRuntime = moved.Where((t) => t.CurrentAssembly != "System.Runtime").ToList();
 
         reportWriter.WriteListStart("GENERAL_STATISTICS");
         reportWriter.WriteListItem("Previous types {0}", types.Where((t) => t.PreviousAssembly != null).Count());
         reportWriter.WriteListItem("Current types {0}", types.Where((t) => t.CurrentAssembly != null).Count());
         reportWriter.WriteListItem("Moved to System.Runtime {0}", movedToSystemRuntime.Count);
-        reportWriter.WriteListItem("Moved to other locations {0}", moved.Count - movedToSystemRuntime.Count);
+        reportWriter.WriteListItem("Moved to other locations {0}", movedToOtherThanSystemRuntime.Count);
         reportWriter.WriteListEnd();
 
         var previousContracts = types.Select((t) => t.PreviousAssembly).Where((a) => a != null).Distinct();
@@ -99,15 +100,28 @@ class LocationAnalysis
 
         if (moved.Count > 0) {
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
-            foreach (var movedType in moved) {
-                reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
-                if(movedType.PreviousAssembly == "System.Runtime") {
-                    var tempColor = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("{0} moved from System.Runtime", movedType.AssemblyQualifiedName);
-                    Console.ForegroundColor = tempColor;
+            if(movedToOtherThanSystemRuntime.Count > 0) {
+                reportWriter.WriteListStart("MOVED_TO_OTHER_THAN_SYSTEM_RUNTIME");
+                foreach (var movedType in movedToOtherThanSystemRuntime) {
+                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+                    if (movedType.PreviousAssembly == "System.Runtime") {
+                        var tempColor = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("{0} moved from System.Runtime", movedType.AssemblyQualifiedName);
+                        Console.ForegroundColor = tempColor;
+                    }
                 }
+                reportWriter.WriteListEnd();
             }
+
+            if(movedToSystemRuntime.Count > 0) {
+                reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME");
+                foreach (var movedType in movedToSystemRuntime) {
+                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));                   
+                }
+                reportWriter.WriteListEnd();
+            }
+
             reportWriter.WriteListEnd();
         }
 

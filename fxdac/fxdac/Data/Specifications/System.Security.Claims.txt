@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-/r:System.Security.Permissions.dll
+/r:System.Security.Principal.dll 
 
 System.Security.Claims.Claim
 System.Security.Claims.ClaimsIdentity
