@@ -1,6 +1,8 @@
 ﻿/r:System.Runtime.dll
 /r:System.ComponentModel.TypeConverter.dll
 
+System.Net.TransportContext
+
 System.Net.AuthenticationSchemes
 System.Net.Cookie
 System.Net.CookieCollection

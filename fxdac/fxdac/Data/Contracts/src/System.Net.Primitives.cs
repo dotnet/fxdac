@@ -253,6 +253,11 @@ namespace System.Net {
     public override string ToString() { return default(string); }
   }
 
+  public abstract partial class TransportContext {
+    protected TransportContext() { }
+    public abstract System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding(System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind);
+  }
+
 } // end of System.Net
 namespace System.Net.NetworkInformation {
   public partial class IPAddressCollection : System.Collections.Generic.ICollection<System.Net.IPAddress>, System.Collections.Generic.IEnumerable<System.Net.IPAddress>, System.Collections.IEnumerable {

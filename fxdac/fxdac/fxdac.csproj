@@ -111,7 +111,6 @@
     <None Include="Data\Contracts\src\System.Diagnostics.Process.cs" />
     <None Include="Data\Contracts\src\System.Diagnostics.StackTrace.cs" />
     <None Include="Data\Contracts\src\System.Diagnostics.SymbolStore.cs" />
-    <None Include="Data\Contracts\src\System.Diagnostics.Tools.cs" />
     <None Include="Data\Contracts\src\System.Diagnostics.TraceSource.cs" />
     <None Include="Data\Contracts\src\System.Diagnostics.Tracing.cs" />
     <None Include="Data\Contracts\src\System.Dynamic.cs" />
@@ -171,7 +170,6 @@
     <None Include="Data\Contracts\src\System.Security.Cryptography.Primitives.cs" />
     <None Include="Data\Contracts\src\System.Security.Cryptography.X509Certificates.cs" />
     <None Include="Data\Contracts\src\System.Security.Permissions.cs" />
-    <None Include="Data\Contracts\src\System.Security.Policy.cs" />
     <None Include="Data\Contracts\src\System.Security.Principal.cs" />
     <None Include="Data\Contracts\src\System.Security.Principal.Windows.cs" />
     <None Include="Data\Contracts\src\System.Security.TBD.cs" />
@@ -187,7 +185,6 @@
     <None Include="Data\Contracts\src\System.Threading.ThreadPool.cs" />
     <None Include="Data\Contracts\src\System.Threading.Timer.cs" />
     <None Include="Data\Contracts\src\System.Timer.cs" />
-    <None Include="Data\Contracts\src\System.Uri.Builder.cs" />
     <None Include="Data\Contracts\src\System.Xml.XmlSerializer.cs" />
     <Compile Include="LocationAnalysis.cs" />
     <Compile Include="ReportWriter.cs" />
