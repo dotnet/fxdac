@@ -1,9 +1,5 @@
 ﻿/r:System.Runtime.dll
 
-System.Security.Cryptography.X509Certificates.X509Certificate
-System.Security.Cryptography.X509Certificates.X509ContentType
-System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
-
 System.Security.Cryptography.AsymmetricAlgorithm 
 System.Security.Cryptography.CipherMode 
 System.Security.Cryptography.CryptographicException 
