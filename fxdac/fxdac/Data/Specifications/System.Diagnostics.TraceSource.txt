@@ -4,7 +4,7 @@
 
 System.Diagnostics.BooleanSwitch
 System.Diagnostics.CorrelationManager
-System.Diagnostics.Debug
+
 System.Diagnostics.DefaultTraceListener
 System.Diagnostics.SourceLevels
 System.Diagnostics.SourceSwitch
