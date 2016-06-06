@@ -1,6 +1,0 @@
-﻿/r:System.Runtime.dll
-/r:System.ComponentModel.TypeConverter.dll
-
-System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter
-
-

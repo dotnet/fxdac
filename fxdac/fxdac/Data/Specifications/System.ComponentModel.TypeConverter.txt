@@ -252,5 +252,7 @@ System.ComponentModel.UInt16Converter
 System.ComponentModel.UInt32Converter
 System.ComponentModel.UInt64Converter
 System.ComponentModel.WarningException
-System.ComponentModel.Win32Exception
+
+System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter
+
 

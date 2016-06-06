@@ -1,12 +1,13 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.Specialized.dll
-/r:System.ComponentModel.TypeConverter.dll
-/r:System.Security.Cryptography.X509Certificates.dll
+/r:System.Runtime.InteropServices.dll
+
 /r:System.Net.Primitives.dll
 /r:System.Net.WebSockets.dll
 /r:System.Net.WebHeaderCollection.dll
+
+/r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Security.Claims.dll
-/r:System.Net.Security.dll
 /r:System.Security.Principal.dll 
 
 System.Net.AuthenticationSchemeSelector

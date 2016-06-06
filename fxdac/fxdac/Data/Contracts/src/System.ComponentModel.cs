@@ -12,12 +12,6 @@ namespace System.ComponentModel {
     public override bool IsDefaultAttribute() { return default(bool); }
   }
 
-  public partial class CancelEventArgs : System.EventArgs {
-    public CancelEventArgs() { }
-    public CancelEventArgs(bool cancel) { }
-    public bool Cancel { get { return default(bool); } set { } }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public sealed partial class DefaultEventAttribute : System.Attribute {
     public static readonly System.ComponentModel.DefaultEventAttribute Default;
