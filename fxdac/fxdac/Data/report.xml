@@ -184,10 +184,9 @@
     <item text="Previous types 1974"/>
     <item text="Current types 2127"/>
     <item text="Moved to System.Runtime 163"/>
-    <item text="Moved to other locations 82"/>
+    <item text="Moved to other locations 79"/>
   </GENERAL_STATISTICS>
-  <ADDED_CONTRACTS total="21">
-    <item text="Microsoft.Registry"/>
+  <ADDED_CONTRACTS total="20">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -209,11 +208,10 @@
     <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <REMOVED_CONTRACTS total="53">
+  <REMOVED_CONTRACTS total="52">
     <item text="	Microsoft.CSharp"/>
     <item text="	Microsoft.VisualBasic"/>
     <item text="	Microsoft.Win32.Primitives"/>
-    <item text="	Microsoft.Win32.Registry"/>
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.AppContext"/>
     <item text="	System.ComponentModel.Annotations"/>
@@ -264,11 +262,8 @@
     <item text="	System.Xml.XPath.XDocument"/>
     <item text="	System.Xml.XPath.XmlDocument"/>
   </REMOVED_CONTRACTS>
-  <MOVED_TYPES total="245" description="corefx types that changed their location">
+  <MOVED_TYPES total="242" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
-      <item text="Microsoft.Registry,Microsoft.Win32.RegistryOptions moved from Microsoft.Win32.Registry"/>
-      <item text="Microsoft.Registry,Microsoft.Win32.RegistryView moved from Microsoft.Win32.Registry"/>
-      <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.SafeRegistryHandle moved from Microsoft.Win32.Registry"/>
       <item text="System.ComponentModel,System.ComponentModel.BrowsableAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
       <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>

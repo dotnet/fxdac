@@ -3,4 +3,4 @@
 
 Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid
 Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid
-Microsoft.Win32.SafeHandles.SafeRegistryHandle
+
