@@ -1,4 +1,21 @@
 ﻿/r:System.Runtime.dll
 
+System.ComponentModel.EventHandlerList
 System.ComponentModel.BrowsableAttribute
 System.ComponentModel.DefaultEventAttribute
+System.ComponentModel.CategoryAttribute
+System.ComponentModel.DescriptionAttribute
+System.ComponentModel.DesignerCategoryAttribute
+System.ComponentModel.DesignerSerializationVisibility
+System.ComponentModel.DesignerSerializationVisibilityAttribute
+System.ComponentModel.DesignOnlyAttribute
+System.ComponentModel.DisplayNameAttribute
+System.ComponentModel.ImmutableObjectAttribute
+System.ComponentModel.InitializationEventAttribute
+System.ComponentModel.LocalizableAttribute
+System.ComponentModel.MergablePropertyAttribute
+System.ComponentModel.NotifyParentPropertyAttribute
+System.ComponentModel.ParenthesizePropertyNameAttribute
+System.ComponentModel.ReadOnlyAttribute
+System.ComponentModel.RefreshProperties
+System.ComponentModel.RefreshPropertiesAttribute
