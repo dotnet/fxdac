@@ -304,8 +304,7 @@
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="46">
-    <item text="	Microsoft.VisualBasic"/>
+  <MISSING_CONTRACTS total="45">
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.AppContext"/>
     <item text="	System.ComponentModel.Annotations"/>
@@ -1240,23 +1239,7 @@
     <item text="System.Timer,System.Timers.Timer"/>
     <item text="System.Timer,System.Timers.TimersDescriptionAttribute"/>
   </TYPES_NOT_IN_CORFX>
-  <TYPES_NOT_IN_MASTER_API total="723">
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CallType"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.Conversions"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.IncompleteInitialization"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.NewLateBinding"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.ObjectFlowControl"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.Operators"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.OptionTextAttribute"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.ProjectData"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.Utils"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.Constants"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.HideModuleNameAttribute"/>
-    <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.Strings"/>
+  <TYPES_NOT_IN_MASTER_API total="707">
     <item text="Microsoft.Win32.Registry,Microsoft.Win32.Registry"/>
     <item text="Microsoft.Win32.Registry,Microsoft.Win32.RegistryHive"/>
     <item text="Microsoft.Win32.Registry,Microsoft.Win32.RegistryKey"/>
@@ -1982,7 +1965,7 @@
     <item text="T:System.Security.Principal"/>
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
   </ORPHANED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="739" description="types that are not in specification files">
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="723" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
     <item text="System.ArgIterator"/>
     <item text="System.AppContext"/>
@@ -2013,22 +1996,6 @@
     <item text="System.Runtime.InteropServices.Architecture"/>
     <item text="System.Runtime.InteropServices.OSPlatform"/>
     <item text="System.Runtime.InteropServices.RuntimeInformation"/>
-    <item text="Microsoft.VisualBasic.CallType"/>
-    <item text="Microsoft.VisualBasic.Constants"/>
-    <item text="Microsoft.VisualBasic.HideModuleNameAttribute"/>
-    <item text="Microsoft.VisualBasic.Strings"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.Conversions"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.IncompleteInitialization"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.NewLateBinding"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.ObjectFlowControl"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.Operators"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.OptionTextAttribute"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.ProjectData"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag"/>
-    <item text="Microsoft.VisualBasic.CompilerServices.Utils"/>
     <item text="Microsoft.Win32.Registry"/>
     <item text="Microsoft.Win32.RegistryHive"/>
     <item text="Microsoft.Win32.RegistryKey"/>
