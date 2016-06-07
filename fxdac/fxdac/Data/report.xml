@@ -354,7 +354,7 @@
     <item text="	System.Xml.XPath.XDocument"/>
     <item text="	System.Xml.XPath.XmlDocument"/>
   </MISSING_CONTRACTS>
-  <TYPES_NOT_IN_CORFX total="887">
+  <TYPES_NOT_IN_CORFX total="886">
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid"/>
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid"/>
     <item text="System.CodeDom,System.CodeDom.Compiler.IndentedTextWriter"/>
@@ -1226,7 +1226,6 @@
     <item text="System.Text.Encoding,System.Text.EncoderReplacementFallbackBuffer"/>
     <item text="System.Text.RegularExpressions,System.Text.RegularExpressions.RegexCompilationInfo"/>
     <item text="System.Threading,System.LocalDataStoreSlot"/>
-    <item text="System.Threading,System.Runtime.InteropServices._Thread"/>
     <item text="System.Threading,System.Threading.ApartmentState"/>
     <item text="System.Threading,System.Threading.AsyncFlowControl"/>
     <item text="System.Threading,System.Threading.CompressedStack"/>
@@ -2001,7 +2000,7 @@
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
     <item text="T:System.Xml.Serialization.XmlIgnoreAttribute"/>
   </ORPHANED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="15" description="types that are not in specification files">
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="16" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
     <item text="System.ArgIterator"/>
     <item text="System.Runtime.InteropServices._Assembly"/>
@@ -2016,6 +2015,7 @@
     <item text="System.Runtime.InteropServices._Module"/>
     <item text="System.Runtime.InteropServices._ParameterInfo"/>
     <item text="System.Runtime.InteropServices._PropertyInfo"/>
+    <item text="System.Runtime.InteropServices._Thread"/>
     <item text="System.Runtime.InteropServices._Type"/>
   </TYPES_NOT_IN_ANY_ASSEMBLY>
 </report>

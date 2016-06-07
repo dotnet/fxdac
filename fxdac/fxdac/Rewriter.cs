@@ -38,35 +38,35 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.DesignerAttribute");
     });
 
-    public static FxDependecny[] s_AssemblyToTypeDependenciesToRemove = new FxDependecny[] {
+    public static FxDependency[] s_AssemblyToTypeDependenciesToRemove = new FxDependency[] {
 
-        new FxDependecny() { From="System.Runtime", To ="System.AppDomain" },
-        new FxDependecny() { From="System.Runtime", To ="System.Runtime.Remoting.ObjectHandle" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.IPermission" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Permissions.SecurityAction" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.Cryptography.X509Certificates.X509Certificate" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityZone" },
-        new FxDependecny() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
-        new FxDependecny() { From="System.Runtime", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime", To ="System.AppDomain" },
+        new FxDependency() { From="System.Runtime", To ="System.Runtime.Remoting.ObjectHandle" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.IPermission" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.Permissions.SecurityAction" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.Cryptography.X509Certificates.X509Certificate" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.SecurityZone" },
+        new FxDependency() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
+        new FxDependency() { From="System.Runtime", To ="System.MarshalByRefObject" },
 
-        new FxDependecny() { From="System.Threading", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Threading.Timer", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Threading.ThreadPool", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Runtime.IsolatedStorage", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Diagnostics.TraceSource", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.ComponentModel.TypeConverter", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Net", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
-        new FxDependecny() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.Timer", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.ThreadPool", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime.IsolatedStorage", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Diagnostics.TraceSource", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.ComponentModel.TypeConverter", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Net", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
 
-        new FxDependecny() { From="System.Threading.Thread", To ="System.AppDomain" },
-        new FxDependecny() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
+        new FxDependency() { From="System.Threading.Thread", To ="System.AppDomain" },
+        new FxDependency() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
 
-        new FxDependecny() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
+        new FxDependency() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
 
-        new FxDependecny() { From="System.Diagnostics.Debug", To ="System.Diagnostics.TraceListenerCollection" },
+        new FxDependency() { From="System.Diagnostics.Debug", To ="System.Diagnostics.TraceListenerCollection" },
     };
 
     SemanticModel _model;

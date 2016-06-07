@@ -116,7 +116,7 @@ struct FxMember
     }
 }
 
-struct FxDependecny
+struct FxDependency
 {
     public string From;
     public string To;

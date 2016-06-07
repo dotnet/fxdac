@@ -7,19 +7,6 @@ namespace System {
   }
 
 } // end of System
-namespace System.Runtime.InteropServices {
-  [System.CLSCompliantAttribute(false)]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  [System.Runtime.InteropServices.GuidAttribute("C281C7F1-4AA9-3517-961A-463CFED57E75")]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface _Thread {
-    void GetIDsOfNames(ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId);
-    void GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo);
-    void GetTypeInfoCount(out uint pcTInfo);
-    void Invoke(uint dispIdMember, ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr);
-  }
-
-} // end of System.Runtime.InteropServices
 namespace System.Threading {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public enum ApartmentState {
