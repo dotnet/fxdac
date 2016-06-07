@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System;
 
 class FxType
 {
@@ -45,7 +46,7 @@ class FxAssembly : Dictionary<string, List<FxType>>
         }
     }
 
-    bool HasEmitedType(string type)
+    public bool HasEmitedType(string type)
     {
         foreach(var ns in Values) {
             foreach(var t in ns) {

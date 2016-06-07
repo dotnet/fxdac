@@ -4386,6 +4386,28 @@ namespace System {
 
   public delegate TResult Func<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in T8, in T9, in T10, in T11, in T12, in T13, in T14, in T15, in T16, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16);
 
+  public abstract partial class FormattableString : System.IFormattable {
+    protected FormattableString() { }
+    public abstract int ArgumentCount { get; }
+    public abstract string Format { get; }
+    public abstract object GetArgument(int index);
+    public abstract object[] GetArguments();
+    public static string Invariant(System.FormattableString formattable) { return default(string); }
+    string System.IFormattable.ToString(string ignored, System.IFormatProvider formatProvider) { return default(string); }
+    public override string ToString() { return default(string); }
+    public abstract string ToString(System.IFormatProvider formatProvider);
+  }
+
+  public partial class Lazy<T, TMetadata> : System.Lazy<T> {
+    public Lazy(TMetadata metadata) { }
+    public Lazy(TMetadata metadata, bool isThreadSafe) { }
+    public Lazy(TMetadata metadata, System.Threading.LazyThreadSafetyMode mode) { }
+    public Lazy(System.Func<T> valueFactory, TMetadata metadata) { }
+    public Lazy(System.Func<T> valueFactory, TMetadata metadata, bool isThreadSafe) { }
+    public Lazy(System.Func<T> valueFactory, TMetadata metadata, System.Threading.LazyThreadSafetyMode mode) { }
+    public TMetadata Metadata { get { return default(TMetadata); } }
+  }
+
 } // end of System
 namespace System.Collections {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -7542,6 +7564,15 @@ namespace System.Runtime.CompilerServices {
     public StrongBox() { }
     public StrongBox(T value) { }
     object System.Runtime.CompilerServices.IStrongBox.Value { get { return default(object); } set { } }
+  }
+
+  [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple=false, Inherited=false)]
+  public sealed partial class DisablePrivateReflectionAttribute : System.Attribute {
+    public DisablePrivateReflectionAttribute() { }
+  }
+
+  public static partial class FormattableStringFactory {
+    public static System.FormattableString Create(string format, params object[] arguments) { return default(System.FormattableString); }
   }
 
 } // end of System.Runtime.CompilerServices

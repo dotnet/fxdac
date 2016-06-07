@@ -69,6 +69,7 @@ static class Program
         reportWriter.WriteListStart("REMOVED");
 
         AddSourcesToRedist(reportWriter, redist, s_MasterAPIFile);
+        AddSourcesToRedist(reportWriter, redist, s_CoreFxAPIFile);
 
         reportWriter.WriteListEnd();
 
@@ -393,9 +394,16 @@ static class Program
             return;
         }
 
+        ProcessType(redist, syntax, typeModel, currentNamespace, reportWriter);
+    }
+
+    private static void ProcessType(FxRedist redist, MemberDeclarationSyntax syntax, SemanticModel typeModel, string currentNamespace, ReportWriter reportWriter)
+    {
         ISymbol symbol = typeModel.GetDeclaredSymbol(syntax);
         string typeId = symbol.GetDocumentationCommentId();
         FxAssembly typeAssembly = redist.GetAssemblyForType(typeId);
+
+        if (typeAssembly.HasEmitedType(typeId)) return;
 
         // rewrite type
         var rewriter = new FxdacSyntaxRewriter(reportWriter, typeModel, typeAssembly.Name);
