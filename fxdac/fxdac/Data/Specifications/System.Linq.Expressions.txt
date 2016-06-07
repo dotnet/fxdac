@@ -1,6 +1,10 @@
 /r:System.Runtime.dll
 /r:System.ObjectModel.dll
 
+// from corfx
+System.Linq.Expressions.IArgumentProvider
+System.Linq.Expressions.IDynamicExpression
+
 // these should be in System.Dynamic.Runtime, but there is a dependency on Expression
 System.Runtime.CompilerServices.CallSiteBinder
 System.Runtime.CompilerServices.CallSite

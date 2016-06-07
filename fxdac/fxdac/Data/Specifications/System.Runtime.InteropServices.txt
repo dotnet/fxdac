@@ -1,5 +1,13 @@
 ﻿/r:System.Runtime.dll
 
+System.Runtime.InteropServices.ComEventsHelper
+System.Runtime.InteropServices.ComImportAttribute
+System.Runtime.InteropServices.CustomQueryInterfaceMode
+System.Runtime.InteropServices.CustomQueryInterfaceResult
+System.Runtime.InteropServices.DispatchWrapper
+System.Runtime.InteropServices.ErrorWrapper
+System.Runtime.InteropServices.ICustomQueryInterface
+
 System.Runtime.InteropServices.DefaultParameterValueAttribute
 System.Runtime.InteropServices.HandleCollector
 System.Security.SuppressUnmanagedCodeSecurityAttribute

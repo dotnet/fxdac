@@ -46,4 +46,25 @@ namespace System.Threading {
     public unsafe System.Threading.NativeOverlapped* UnsafePack(System.Threading.IOCompletionCallback iocb, object userData) { return default(System.Threading.NativeOverlapped*); }
   }
 
+  public sealed partial class PreAllocatedOverlapped : System.IDisposable {
+    [System.CLSCompliantAttribute(false)]
+    public PreAllocatedOverlapped(System.Threading.IOCompletionCallback callback, object state, object pinData) { }
+    public void Dispose() { }
+  }
+
+  public sealed partial class ThreadPoolBoundHandle : System.IDisposable {
+    internal ThreadPoolBoundHandle() { }
+    public System.Runtime.InteropServices.SafeHandle Handle { get { return default(System.Runtime.InteropServices.SafeHandle); } }
+    [System.CLSCompliantAttribute(false)]
+    public unsafe System.Threading.NativeOverlapped* AllocateNativeOverlapped(System.Threading.IOCompletionCallback callback, object state, object pinData) { return default(System.Threading.NativeOverlapped*); }
+    [System.CLSCompliantAttribute(false)]
+    public unsafe System.Threading.NativeOverlapped* AllocateNativeOverlapped(System.Threading.PreAllocatedOverlapped preAllocated) { return default(System.Threading.NativeOverlapped*); }
+    public static System.Threading.ThreadPoolBoundHandle BindHandle(System.Runtime.InteropServices.SafeHandle handle) { return default(System.Threading.ThreadPoolBoundHandle); }
+    public void Dispose() { }
+    [System.CLSCompliantAttribute(false)]
+    public unsafe void FreeNativeOverlapped(System.Threading.NativeOverlapped* overlapped) { }
+    [System.CLSCompliantAttribute(false)]
+    public unsafe static object GetNativeOverlappedState(System.Threading.NativeOverlapped* overlapped) { return default(object); }
+  }
+
 } // end of System.Threading

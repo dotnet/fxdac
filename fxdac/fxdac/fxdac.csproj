@@ -198,6 +198,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\System.Runtime.Loader.txt" />
+    <None Include="Data\Specifications\System.Security.SecureString.txt" />
+    <None Include="Data\Specifications\System.Text.Encoding.CodePages.txt" />
+    <None Include="Data\Specifications\System.Net.Http.txt" />
+    <None Include="Data\Specifications\System.Runtime.WindowsRuntime.txt" />
+    <None Include="Data\Specifications\System.IO.Compression.ZipFile.txt" />
+    <None Include="Data\Specifications\System.Security.Cryptography.Cng.txt" />
     <None Include="Data\Specifications\System.Numerics.txt" />
     <None Include="Data\Specifications\System.IO.Pipes.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TextWriterTraceListener.txt" />
