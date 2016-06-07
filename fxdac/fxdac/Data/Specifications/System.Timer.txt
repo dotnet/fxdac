@@ -1,6 +1,6 @@
 /r:System.Runtime.dll
 /r:System.ComponentModel.TypeConverter.dll
-/r:System.ComponentModel.dll
+/r:System.ComponentModel.Primitives.dll
 
 System.Timers.ElapsedEventArgs
 System.Timers.ElapsedEventHandler

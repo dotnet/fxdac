@@ -74,12 +74,8 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="240" description="corefx types that changed their location">
+  <MOVED_TYPES total="237" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
-      <item text="System.ComponentModel,System.ComponentModel.BrowsableAttribute moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
-      <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>
-      <item text="System.ComponentModel.EventBasedAsync,System.ComponentModel.CancelEventHandler moved from System.ComponentModel.TypeConverter"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.CategoryAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
@@ -103,7 +99,6 @@
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ReadOnlyAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.RefreshProperties moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.RefreshPropertiesAttribute moved from System.ComponentModel.Primitives"/>
-      <item text="System.Runtime.InteropServices,System.ComponentModel.Win32Exception moved from Microsoft.Win32.Primitives"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAccessRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAuditRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleRights moved from System.Threading.AccessControl"/>
@@ -128,6 +123,8 @@
       <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
     </MOVED_NEEDS_REVIEW>
     <MOVED_VALID>
+      <item text="System.ComponentModel,System.ComponentModel.CancelEventHandler moved from System.ComponentModel.TypeConverter"/>
+      <item text="System.ComponentModel.Primitives,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
       <item text="System.Linq.Expressions,System.Dynamic.BinaryOperationBinder moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.BindingRestrictions moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Dynamic.CallInfo moved from System.Dynamic.Runtime"/>
@@ -344,14 +341,12 @@
     <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="51">
+  <MISSING_CONTRACTS total="49">
     <item text="	Microsoft.CSharp"/>
     <item text="	Microsoft.VisualBasic"/>
-    <item text="	Microsoft.Win32.Primitives"/>
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.AppContext"/>
     <item text="	System.ComponentModel.Annotations"/>
-    <item text="	System.ComponentModel.Primitives"/>
     <item text="	System.Data.Common"/>
     <item text="	System.Data.SqlClient"/>
     <item text="	System.Diagnostics.TextWriterTraceListener"/>

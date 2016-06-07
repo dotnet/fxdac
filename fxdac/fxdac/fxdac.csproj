@@ -196,6 +196,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\Microsoft.Win32.Primitives.txt" />
+    <None Include="Data\Specifications\System.ComponentModel.Primitives.txt" />
     <None Include="Data\Specifications\System.Net.WebSockets.Client.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Debug.txt" />
     <None Include="Data\Specifications\System.Globalization.Extensions.txt" />

@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-/r:System.Runtime.InteropServices.dll
+/r:Microsoft.Win32.Primitives.dll
 
 System.Net.TransportContext
 
