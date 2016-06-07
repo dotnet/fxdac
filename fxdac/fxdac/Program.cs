@@ -18,6 +18,7 @@ static class Program
     static string s_ReportPath = @"..\..\Data\report.xml";
     static string s_ExistingContracts = @"\\cpvsbuild\drops\dev14\ProjectK\raw\current\binaries.x86ret\ref\ProjectK";
     static string s_MasterAPIFile = @"..\..\Data\MasterAPIs\XamariniOSAll.cs"; // master source is a file with all APIs this tool is trying to refactor
+    static string s_CoreFxAPIFile = @"..\..\Data\MasterAPIs\CoreFxAll.cs";
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
     static bool s_printOrphanedTypesToConsole = false; // Orphaned types are types in the specifications that don't exist in master source.
@@ -52,15 +53,9 @@ static class Program
 
     private static bool RefactorAssemblies(ReportWriter reportWriter, out FxRedist redist)
     {
-        var masterSource = CSharpSyntaxTree.ParseText(File.ReadAllText(s_MasterAPIFile));
-
         // prepare the right folders
         PrepareOutputFolder(s_OutputSources);
         PrepareOutputFolder(s_OutputDlls);
-
-        // compile master file 
-        var compilation = CSharpCompilation.Create("mscorlib", new SyntaxTree[] { masterSource });
-        SemanticModel semantic = compilation.GetSemanticModel(masterSource);
 
         // load files describing the desired factoring. verify consistency of these files.
         redist = new FxRedist();
@@ -70,26 +65,37 @@ static class Program
             return false;
         }
 
-        // assign roslyn syntax objects (types) to facored assemblies
-        var compilationUnit = masterSource.GetCompilationUnitRoot();
+        // compile master file 
         reportWriter.WriteListStart("REMOVED");
-        foreach (var memberSyntax in compilationUnit.Members) {
-            ProcessTypeOrNamespace(redist, memberSyntax, semantic, null, reportWriter);
-        }
+
+        AddSourcesToRedist(reportWriter, redist, s_MasterAPIFile);
+
         reportWriter.WriteListEnd();
 
         // generate and compile factored assemblies
         GenerateSources(redist);
-        var successfulBuild = CompileAssemblies(redist, semantic);
+        var successfulBuild = CompileAssemblies(redist);
 
         // warn about types that are not in any of the factored assemblies
         if (redist.Leftover.CountOfTypes > 0) {
             WriteMessage(ConsoleColor.Yellow, "\n{0} type[s] not assigned to an assembly", redist.Leftover.CountOfTypes);
         }
 
-        
-
         return successfulBuild;
+    }
+
+    private static void AddSourcesToRedist(ReportWriter reportWriter, FxRedist redist, string source)
+    {
+        var parsedSource = CSharpSyntaxTree.ParseText(File.ReadAllText(source));
+
+        var compilation = CSharpCompilation.Create("mscorlib", new SyntaxTree[] { parsedSource });
+        SemanticModel semantic = compilation.GetSemanticModel(parsedSource);
+
+        // assign roslyn syntax objects (types) to facored assemblies
+        var masterCompilationUnit = parsedSource.GetCompilationUnitRoot();
+        foreach (var memberSyntax in masterCompilationUnit.Members) {
+            ProcessTypeOrNamespace(redist, memberSyntax, semantic, null, reportWriter);
+        }
     }
 
     private static void PrepareOutputFolder(string folder)
@@ -228,7 +234,7 @@ static class Program
         }
     }
 
-    static bool CompileAssemblies(FxRedist redist, SemanticModel semantic)
+    static bool CompileAssemblies(FxRedist redist)
     {
         bool failed = false;
         Queue<FxAssembly> toCompile = new Queue<FxAssembly>(redist.Values);
