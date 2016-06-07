@@ -1,7 +1,5 @@
 /r:System.Runtime.dll
 
-
-
 System.Threading.SynchronizationContext
 System.Threading.SendOrPostCallback
 
@@ -18,8 +16,6 @@ System.Threading.ExecutionContext
 System.Threading.CompressedStack
 
 System.Security.DynamicSecurityMethodAttribute
-
-System.Runtime.InteropServices._Thread
 
 System.Threading.AsyncFlowControl
 
