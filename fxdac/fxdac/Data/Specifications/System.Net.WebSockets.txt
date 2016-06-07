@@ -1,12 +1,9 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.Specialized.dll
-/r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Net.Primitives.dll
 /r:System.Security.Principal.dll 
 /r:System.Runtime.InteropServices.dll
 
-System.Net.WebSockets.ClientWebSocket
-System.Net.WebSockets.ClientWebSocketOptions
 System.Net.WebSockets.HttpListenerWebSocketContext
 System.Net.WebSockets.WebSocket
 System.Net.WebSockets.WebSocketCloseStatus
