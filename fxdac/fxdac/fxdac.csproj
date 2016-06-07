@@ -198,6 +198,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\System.Numerics.txt" />
+    <None Include="Data\Specifications\System.IO.Pipes.txt" />
+    <None Include="Data\Specifications\System.Diagnostics.TextWriterTraceListener.txt" />
+    <None Include="Data\Specifications\System.Diagnostics.Events.txt" />
+    <None Include="Data\Specifications\System.ServiceProcess.txt" />
     <None Include="Data\Specifications\System.Serialization.DataContract.txt" />
     <None Include="Data\Specifications\System.ServiceModel.txt" />
     <None Include="Data\Specifications\System.Xml.txt" />

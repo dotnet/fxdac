@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+
+"System.Diagnostics.StackFrameExtensions"
+"System.Diagnostics.DelimitedListTraceListener"
+"System.Diagnostics.TextWriterTraceListener"
+"System.Diagnostics.EventTypeFilter"
+"System.Diagnostics.SourceFilter"
