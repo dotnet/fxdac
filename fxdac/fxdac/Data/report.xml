@@ -304,8 +304,7 @@
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="47">
-    <item text="	Microsoft.CSharp"/>
+  <MISSING_CONTRACTS total="46">
     <item text="	Microsoft.VisualBasic"/>
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.AppContext"/>
@@ -1241,13 +1240,7 @@
     <item text="System.Timer,System.Timers.Timer"/>
     <item text="System.Timer,System.Timers.TimersDescriptionAttribute"/>
   </TYPES_NOT_IN_CORFX>
-  <TYPES_NOT_IN_MASTER_API total="729">
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.Binder"/>
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo"/>
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags"/>
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags"/>
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"/>
-    <item text="Microsoft.CSharp,Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"/>
+  <TYPES_NOT_IN_MASTER_API total="723">
     <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CallType"/>
     <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.Conversions"/>
     <item text="Microsoft.VisualBasic,Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute"/>
@@ -1989,7 +1982,7 @@
     <item text="T:System.Security.Principal"/>
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
   </ORPHANED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="745" description="types that are not in specification files">
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="739" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
     <item text="System.ArgIterator"/>
     <item text="System.AppContext"/>
@@ -2020,12 +2013,6 @@
     <item text="System.Runtime.InteropServices.Architecture"/>
     <item text="System.Runtime.InteropServices.OSPlatform"/>
     <item text="System.Runtime.InteropServices.RuntimeInformation"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.Binder"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.RuntimeBinderException"/>
-    <item text="Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException"/>
     <item text="Microsoft.VisualBasic.CallType"/>
     <item text="Microsoft.VisualBasic.Constants"/>
     <item text="Microsoft.VisualBasic.HideModuleNameAttribute"/>
