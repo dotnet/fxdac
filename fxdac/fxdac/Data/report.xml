@@ -74,7 +74,7 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="242" description="corefx types that changed their location">
+  <MOVED_TYPES total="240" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="System.ComponentModel,System.ComponentModel.BrowsableAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
@@ -103,8 +103,6 @@
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ReadOnlyAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.RefreshProperties moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.RefreshPropertiesAttribute moved from System.ComponentModel.Primitives"/>
-      <item text="System.Net.WebSockets,System.Net.WebSockets.ClientWebSocket moved from System.Net.WebSockets.Client"/>
-      <item text="System.Net.WebSockets,System.Net.WebSockets.ClientWebSocketOptions moved from System.Net.WebSockets.Client"/>
       <item text="System.Runtime.InteropServices,System.ComponentModel.Win32Exception moved from Microsoft.Win32.Primitives"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAccessRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAuditRule moved from System.Threading.AccessControl"/>
@@ -346,7 +344,7 @@
     <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="52">
+  <MISSING_CONTRACTS total="51">
     <item text="	Microsoft.CSharp"/>
     <item text="	Microsoft.VisualBasic"/>
     <item text="	Microsoft.Win32.Primitives"/>
@@ -363,7 +361,6 @@
     <item text="	System.IO.Pipes"/>
     <item text="	System.Net.Http"/>
     <item text="	System.Net.Http.WinHttpHandler"/>
-    <item text="	System.Net.WebSockets.Client"/>
     <item text="	System.Numerics.Vectors"/>
     <item text="	System.Reflection"/>
     <item text="	System.Reflection.DispatchProxy"/>

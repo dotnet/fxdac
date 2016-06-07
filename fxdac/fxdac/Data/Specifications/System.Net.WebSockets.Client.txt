@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+/r:System.Security.Cryptography.X509Certificates.dll
+/r:System.Net.Primitives.dll
+/r:System.Net.WebSockets.dll
+
+System.Net.WebSockets.ClientWebSocket
+System.Net.WebSockets.ClientWebSocketOptions
