@@ -11,3 +11,8 @@ System.Security.AccessControl.MutexAccessRule
 System.Security.AccessControl.MutexAuditRule
 System.Security.AccessControl.MutexRights
 System.Security.AccessControl.MutexSecurity
+
+System.Security.AccessControl.SemaphoreAccessRule
+System.Security.AccessControl.SemaphoreAuditRule
+System.Security.AccessControl.SemaphoreRights
+System.Security.AccessControl.SemaphoreSecurity

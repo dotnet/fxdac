@@ -4,6 +4,9 @@
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Security.Principal.dll
 
+System.Security.Permissions.TypeDescriptorPermission
+System.Security.Permissions.TypeDescriptorPermissionFlags
+
 System.Security.ISecurityPolicyEncodable
 System.Security.PolicyLevelType
 System.Security.Policy
