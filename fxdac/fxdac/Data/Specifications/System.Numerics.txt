@@ -1,0 +1,14 @@
+﻿/r:System.Runtime.dll
+
+System.Numerics.Matrix3x2
+System.Numerics.Matrix4x4
+System.Numerics.Plane
+System.Numerics.Quaternion
+System.Numerics.Vector
+System.Numerics.Vector`1
+System.Numerics.Vector2
+System.Numerics.Vector3
+System.Numerics.Vector4
+System.Numerics.BigInteger
+System.Numerics.Complex
+

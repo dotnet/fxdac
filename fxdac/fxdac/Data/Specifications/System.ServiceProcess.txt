@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+
+System.ServiceProcess.ServiceController
+System.ServiceProcess.ServiceControllerStatus
+System.ServiceProcess.ServiceStartMode
+System.ServiceProcess.ServiceType
+System.ServiceProcess.TimeoutException

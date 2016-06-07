@@ -1,8 +1,6 @@
 /r:System.Runtime.dll
 /r:System.Threading.dll
 /r:System.Xml.dll
-/r:System.Security.Cryptography.Primitives.dll
-/r:System.Security.Cryptography.dll
 /r:System.Net.Primitives.dll
 /r:System.Security.Principal.dll
 /r:System.ComponentModel.EventBasedAsync.dll

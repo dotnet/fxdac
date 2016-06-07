@@ -1,0 +1,13 @@
+﻿/r:System.Runtime.dll
+/r:System.Security.Principal.dll
+/r:System.Runtime.Handles.dll
+
+Microsoft.Win32.SafeHandles.SafePipeHandle
+System.IO.Pipes.AnonymousPipeClientStream
+System.IO.Pipes.AnonymousPipeServerStream
+System.IO.Pipes.NamedPipeClientStream
+System.IO.Pipes.NamedPipeServerStream
+System.IO.Pipes.PipeDirection
+System.IO.Pipes.PipeOptions
+System.IO.Pipes.PipeStream
+System.IO.Pipes.PipeTransmissionMode
