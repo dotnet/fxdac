@@ -5,13 +5,10 @@
 /r:System.Resources.Reader.dll
 /r:System.Resources.Writer.dll
 
-System.ComponentModel.IComponent
-System.ComponentModel.IContainer
-System.ComponentModel.ISite
-System.ComponentModel.ComponentCollection
+
 
 System.ComponentModel.Component
-System.ComponentModel.DesignerAttribute
+
 
 System.ComponentModel.Design.ActiveDesignerEventArgs
 System.ComponentModel.Design.ActiveDesignerEventHandler

@@ -186,6 +186,7 @@
     <None Include="Data\Contracts\src\System.Threading.Timer.cs" />
     <None Include="Data\Contracts\src\System.Timer.cs" />
     <None Include="Data\Contracts\src\System.Xml.XmlSerializer.cs" />
+    <None Include="Data\Contracts\src\System.ComponentModel.Primitives.cs" />
     <Compile Include="LocationAnalysis.cs" />
     <Compile Include="ReportWriter.cs" />
     <Compile Include="Rewriter.cs" />

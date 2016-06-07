@@ -15,7 +15,6 @@ namespace System.Diagnostics {
 
   [System.ComponentModel.DefaultEventAttribute("Exited")]
   [System.ComponentModel.DefaultPropertyAttribute("StartInfo")]
-  [System.ComponentModel.DesignerAttribute("System.Diagnostics.Design.ProcessDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
   [System.Diagnostics.MonitoringDescriptionAttribute("Represents a system process")]
   public partial class Process : System.ComponentModel.Component {
     public Process() { }
@@ -196,7 +195,6 @@ namespace System.Diagnostics {
     public bool WaitForInputIdle(int milliseconds) { return default(bool); }
   }
 
-  [System.ComponentModel.DesignerAttribute("System.Diagnostics.Design.ProcessModuleDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
   public partial class ProcessModule : System.ComponentModel.Component {
     internal ProcessModule() { }
     [System.Diagnostics.MonitoringDescriptionAttribute("The base memory address of this module")]
@@ -303,7 +301,6 @@ namespace System.Diagnostics {
     public string WorkingDirectory { get { return default(string); } set { } }
   }
 
-  [System.ComponentModel.DesignerAttribute("System.Diagnostics.Design.ProcessThreadDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
   public partial class ProcessThread : System.ComponentModel.Component {
     internal ProcessThread() { }
     [System.Diagnostics.MonitoringDescriptionAttribute("The base priority of this thread.")]

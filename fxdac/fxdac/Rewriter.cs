@@ -34,7 +34,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttributeAttribute") ||
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") ||
-        attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute");
+        attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
+        attributeName.StartsWith("System.ComponentModel.DesignerAttribute");
     });
 
     public static FxDependecny[] s_AssemblyToTypeDependenciesToRemove = new FxDependecny[] {

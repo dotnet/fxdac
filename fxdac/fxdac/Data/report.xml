@@ -74,12 +74,8 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="217" description="corefx types that changed their location">
+  <MOVED_TYPES total="213" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IComponent moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IContainer moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ISite moved from System.ComponentModel.Primitives"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAccessRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAuditRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleRights moved from System.Threading.AccessControl"/>
@@ -377,6 +373,7 @@
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid"/>
     <item text="System.CodeDom,System.CodeDom.Compiler.IndentedTextWriter"/>
     <item text="System.Collections,System.Collections.CaseInsensitiveHashCodeProvider"/>
+    <item text="System.ComponentModel.Primitives,System.ComponentModel.DesignerAttribute"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.AddingNewEventArgs"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.AddingNewEventHandler"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.AmbientValueAttribute"/>
@@ -475,7 +472,6 @@
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.Design.StandardToolWindows"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.Design.TypeDescriptionProviderService"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.Design.ViewTechnology"/>
-    <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DesignerAttribute"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DesignTimeVisibleAttribute"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.EditorAttribute"/>
     <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ExpandableObjectConverter"/>
