@@ -1,6 +1,12 @@
 ﻿/r:System.Runtime.dll
+/r:System.Security.AccessControl.dll
+/r:System.Security.Principal.Windows.dll
 
 Microsoft.Win32.RegistryOptions
 Microsoft.Win32.RegistryView
 Microsoft.Win32.SafeHandles.SafeRegistryHandle
+System.Security.AccessControl.RegistryRights
+System.Security.AccessControl.RegistryAccessRule
+System.Security.AccessControl.RegistryAuditRule
+System.Security.AccessControl.RegistrySecurity
 

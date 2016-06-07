@@ -171,31 +171,6 @@ namespace System.ComponentModel {
     public ByteConverter() { }
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public partial class CategoryAttribute : System.Attribute {
-    public CategoryAttribute() { }
-    public CategoryAttribute(string category) { }
-    public static System.ComponentModel.CategoryAttribute Action { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Appearance { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Asynchronous { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Behavior { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public string Category { get { return default(string); } }
-    public static System.ComponentModel.CategoryAttribute Data { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Default { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Design { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute DragDrop { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Focus { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Format { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Key { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Layout { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute Mouse { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public static System.ComponentModel.CategoryAttribute WindowStyle { get { return default(System.ComponentModel.CategoryAttribute); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    protected virtual string GetLocalizedString(string value) { return default(string); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   public partial class CharConverter : System.ComponentModel.TypeConverter {
     public CharConverter() { }
     public override bool CanConvertFrom(System.ComponentModel.ITypeDescriptorContext context, System.Type sourceType) { return default(bool); }
@@ -335,11 +310,6 @@ namespace System.ComponentModel {
     public virtual object GetPropertyOwner(System.ComponentModel.PropertyDescriptor pd) { return default(object); }
   }
 
-  public partial class DataErrorsChangedEventArgs : System.EventArgs {
-    public DataErrorsChangedEventArgs(string propertyName) { }
-    public virtual string PropertyName { get { return default(string); } }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public sealed partial class DataObjectAttribute : System.Attribute {
     public static readonly System.ComponentModel.DataObjectAttribute DataObject;
@@ -427,18 +397,6 @@ namespace System.ComponentModel {
     public override int GetHashCode() { return default(int); }
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public partial class DescriptionAttribute : System.Attribute {
-    public static readonly System.ComponentModel.DescriptionAttribute Default;
-    public DescriptionAttribute() { }
-    public DescriptionAttribute(string description) { }
-    public virtual string Description { get { return default(string); } }
-    protected string DescriptionValue { get { return default(string); } set { } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple=true, Inherited=true)]
   public sealed partial class DesignerAttribute : System.Attribute {
     public DesignerAttribute(string designerTypeName) { }
@@ -453,53 +411,6 @@ namespace System.ComponentModel {
     public override int GetHashCode() { return default(int); }
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false, Inherited=true)]
-  public sealed partial class DesignerCategoryAttribute : System.Attribute {
-    public static readonly System.ComponentModel.DesignerCategoryAttribute Component;
-    public static readonly System.ComponentModel.DesignerCategoryAttribute Default;
-    public static readonly System.ComponentModel.DesignerCategoryAttribute Form;
-    public static readonly System.ComponentModel.DesignerCategoryAttribute Generic;
-    public DesignerCategoryAttribute() { }
-    public DesignerCategoryAttribute(string category) { }
-    public string Category { get { return default(string); } }
-    public override object TypeId { get { return default(object); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public enum DesignerSerializationVisibility {
-    Content = 2,
-    Hidden = 0,
-    Visible = 1,
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(960))]
-  public sealed partial class DesignerSerializationVisibilityAttribute : System.Attribute {
-    public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Content;
-    public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Default;
-    public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Hidden;
-    public static readonly System.ComponentModel.DesignerSerializationVisibilityAttribute Visible;
-    public DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility visibility) { }
-    public System.ComponentModel.DesignerSerializationVisibility Visibility { get { return default(System.ComponentModel.DesignerSerializationVisibility); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class DesignOnlyAttribute : System.Attribute {
-    public static readonly System.ComponentModel.DesignOnlyAttribute Default;
-    public static readonly System.ComponentModel.DesignOnlyAttribute No;
-    public static readonly System.ComponentModel.DesignOnlyAttribute Yes;
-    public DesignOnlyAttribute(bool isDesignOnly) { }
-    public bool IsDesignOnly { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(1028))]
   public sealed partial class DesignTimeVisibleAttribute : System.Attribute {
     public static readonly System.ComponentModel.DesignTimeVisibleAttribute Default;
@@ -508,18 +419,6 @@ namespace System.ComponentModel {
     public DesignTimeVisibleAttribute() { }
     public DesignTimeVisibleAttribute(bool visible) { }
     public bool Visible { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(708))]
-  public partial class DisplayNameAttribute : System.Attribute {
-    public static readonly System.ComponentModel.DisplayNameAttribute Default;
-    public DisplayNameAttribute() { }
-    public DisplayNameAttribute(string displayName) { }
-    public virtual string DisplayName { get { return default(string); } }
-    protected string DisplayNameValue { get { return default(string); } set { } }
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
     public override bool IsDefaultAttribute() { return default(bool); }
@@ -607,15 +506,6 @@ namespace System.ComponentModel {
     void System.Collections.IList.Insert(int index, object value) { }
     void System.Collections.IList.Remove(object value) { }
     void System.Collections.IList.RemoveAt(int index) { }
-  }
-
-  public sealed partial class EventHandlerList : System.IDisposable {
-    public EventHandlerList() { }
-    public System.Delegate this[object key] { get { return default(System.Delegate); } set { } }
-    public void AddHandler(object key, System.Delegate value) { }
-    public void AddHandlers(System.ComponentModel.EventHandlerList listToAddFrom) { }
-    public void Dispose() { }
-    public void RemoveHandler(object key, System.Delegate value) { }
   }
 
   public partial class ExpandableObjectConverter : System.ComponentModel.TypeConverter {
@@ -752,18 +642,6 @@ namespace System.ComponentModel {
     System.Collections.IList GetList();
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class ImmutableObjectAttribute : System.Attribute {
-    public static readonly System.ComponentModel.ImmutableObjectAttribute Default;
-    public static readonly System.ComponentModel.ImmutableObjectAttribute No;
-    public static readonly System.ComponentModel.ImmutableObjectAttribute Yes;
-    public ImmutableObjectAttribute(bool immutable) { }
-    public bool Immutable { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   public partial interface INestedContainer : System.ComponentModel.IContainer, System.IDisposable {
     System.ComponentModel.IComponent Owner { get; }
   }
@@ -791,18 +669,6 @@ namespace System.ComponentModel {
     Inherited = 1,
     InheritedReadOnly = 2,
     NotInherited = 3,
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
-  public sealed partial class InitializationEventAttribute : System.Attribute {
-    public InitializationEventAttribute(string eventName) { }
-    public string EventName { get { return default(string); } }
-  }
-
-  public partial interface INotifyDataErrorInfo {
-    bool HasErrors { get; }
-    event System.EventHandler<System.ComponentModel.DataErrorsChangedEventArgs> ErrorsChanged;
-    System.Collections.IEnumerable GetErrors(string propertyName);
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
@@ -1027,18 +893,6 @@ namespace System.ComponentModel {
     Descending = 1,
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class LocalizableAttribute : System.Attribute {
-    public static readonly System.ComponentModel.LocalizableAttribute Default;
-    public static readonly System.ComponentModel.LocalizableAttribute No;
-    public static readonly System.ComponentModel.LocalizableAttribute Yes;
-    public LocalizableAttribute(bool isLocalizable) { }
-    public bool IsLocalizable { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public sealed partial class LookupBindingPropertiesAttribute : System.Attribute {
     public static readonly System.ComponentModel.LookupBindingPropertiesAttribute Default;
@@ -1200,18 +1054,6 @@ namespace System.ComponentModel {
     protected static System.ComponentModel.ISite GetSite(object component) { return default(System.ComponentModel.ISite); }
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class MergablePropertyAttribute : System.Attribute {
-    public static readonly System.ComponentModel.MergablePropertyAttribute Default;
-    public static readonly System.ComponentModel.MergablePropertyAttribute No;
-    public static readonly System.ComponentModel.MergablePropertyAttribute Yes;
-    public MergablePropertyAttribute(bool allowMerge) { }
-    public bool AllowMerge { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   public partial class MultilineStringConverter : System.ComponentModel.TypeConverter {
     public MultilineStringConverter() { }
     public override object ConvertTo(System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, System.Type destinationType) { return default(object); }
@@ -1226,18 +1068,6 @@ namespace System.ComponentModel {
     protected override System.ComponentModel.ISite CreateSite(System.ComponentModel.IComponent component, string name) { return default(System.ComponentModel.ISite); }
     protected override void Dispose(bool disposing) { }
     protected override object GetService(System.Type service) { return default(object); }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(128))]
-  public sealed partial class NotifyParentPropertyAttribute : System.Attribute {
-    public static readonly System.ComponentModel.NotifyParentPropertyAttribute Default;
-    public static readonly System.ComponentModel.NotifyParentPropertyAttribute No;
-    public static readonly System.ComponentModel.NotifyParentPropertyAttribute Yes;
-    public NotifyParentPropertyAttribute(bool notifyParent) { }
-    public bool NotifyParent { get { return default(bool); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
   }
 
   public partial class NullableConverter : System.ComponentModel.TypeConverter {
@@ -1257,17 +1087,6 @@ namespace System.ComponentModel {
     public override bool GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext context) { return default(bool); }
     public override bool GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext context) { return default(bool); }
     public override bool IsValid(System.ComponentModel.ITypeDescriptorContext context, object value) { return default(bool); }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class ParenthesizePropertyNameAttribute : System.Attribute {
-    public static readonly System.ComponentModel.ParenthesizePropertyNameAttribute Default;
-    public ParenthesizePropertyNameAttribute() { }
-    public ParenthesizePropertyNameAttribute(bool needParenthesis) { }
-    public bool NeedParenthesis { get { return default(bool); } }
-    public override bool Equals(object o) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
@@ -1401,18 +1220,6 @@ namespace System.ComponentModel {
     public override int GetHashCode() { return default(int); }
   }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class ReadOnlyAttribute : System.Attribute {
-    public static readonly System.ComponentModel.ReadOnlyAttribute Default;
-    public static readonly System.ComponentModel.ReadOnlyAttribute No;
-    public static readonly System.ComponentModel.ReadOnlyAttribute Yes;
-    public ReadOnlyAttribute(bool isReadOnly) { }
-    public bool IsReadOnly { get { return default(bool); } }
-    public override bool Equals(object value) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(128))]
   [System.ObsoleteAttribute("Use System.ComponentModel.SettingsBindableAttribute instead to work with the new settings model.")]
   public partial class RecommendedAsConfigurableAttribute : System.Attribute {
@@ -1445,24 +1252,6 @@ namespace System.ComponentModel {
   }
 
   public delegate void RefreshEventHandler(System.ComponentModel.RefreshEventArgs e);
-
-  public enum RefreshProperties {
-    All = 1,
-    None = 0,
-    Repaint = 2,
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
-  public sealed partial class RefreshPropertiesAttribute : System.Attribute {
-    public static readonly System.ComponentModel.RefreshPropertiesAttribute All;
-    public static readonly System.ComponentModel.RefreshPropertiesAttribute Default;
-    public static readonly System.ComponentModel.RefreshPropertiesAttribute Repaint;
-    public RefreshPropertiesAttribute(System.ComponentModel.RefreshProperties refresh) { }
-    public System.ComponentModel.RefreshProperties RefreshProperties { get { return default(System.ComponentModel.RefreshProperties); } }
-    public override bool Equals(object value) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public override bool IsDefaultAttribute() { return default(bool); }
-  }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public partial class RunInstallerAttribute : System.Attribute {

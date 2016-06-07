@@ -163,6 +163,17 @@ namespace System.Collections.Specialized {
 
 } // end of System.Collections.Specialized
 namespace System.ComponentModel {
+  public partial class DataErrorsChangedEventArgs : System.EventArgs {
+    public DataErrorsChangedEventArgs(string propertyName) { }
+    public virtual string PropertyName { get { return default(string); } }
+  }
+
+  public partial interface INotifyDataErrorInfo {
+    bool HasErrors { get; }
+    event System.EventHandler<System.ComponentModel.DataErrorsChangedEventArgs> ErrorsChanged;
+    System.Collections.IEnumerable GetErrors(string propertyName);
+  }
+
   public partial interface INotifyPropertyChanged {
     event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
   }

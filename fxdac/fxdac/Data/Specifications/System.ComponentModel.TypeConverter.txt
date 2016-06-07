@@ -5,14 +5,13 @@
 /r:System.Resources.Reader.dll
 /r:System.Resources.Writer.dll
 
-System.ComponentModel.Component
 System.ComponentModel.IComponent
 System.ComponentModel.IContainer
-System.ComponentModel.ComponentCollection
-System.ComponentModel.EventHandlerList
-System.ComponentModel.DesignerAttribute
 System.ComponentModel.ISite
-System.ComponentModel.DesignerCategoryAttribute
+System.ComponentModel.ComponentCollection
+
+System.ComponentModel.Component
+System.ComponentModel.DesignerAttribute
 
 System.ComponentModel.Design.ActiveDesignerEventArgs
 System.ComponentModel.Design.ActiveDesignerEventHandler
@@ -111,7 +110,7 @@ System.ComponentModel.BindingList`1
 System.ComponentModel.BooleanConverter
 
 System.ComponentModel.ByteConverter
-System.ComponentModel.CategoryAttribute
+
 System.ComponentModel.CharConverter
 System.ComponentModel.CollectionChangeAction
 System.ComponentModel.CollectionChangeEventArgs
@@ -127,7 +126,6 @@ System.ComponentModel.Container
 System.ComponentModel.ContainerFilterService
 System.ComponentModel.CultureInfoConverter
 System.ComponentModel.CustomTypeDescriptor
-System.ComponentModel.DataErrorsChangedEventArgs
 System.ComponentModel.DataObjectAttribute
 System.ComponentModel.DataObjectFieldAttribute
 System.ComponentModel.DataObjectMethodAttribute
@@ -138,14 +136,12 @@ System.ComponentModel.DecimalConverter
 System.ComponentModel.DefaultBindingPropertyAttribute
 
 System.ComponentModel.DefaultPropertyAttribute
-System.ComponentModel.DescriptionAttribute
 
 
-System.ComponentModel.DesignerSerializationVisibility
-System.ComponentModel.DesignerSerializationVisibilityAttribute
-System.ComponentModel.DesignOnlyAttribute
+
+
 System.ComponentModel.DesignTimeVisibleAttribute
-System.ComponentModel.DisplayNameAttribute
+
 System.ComponentModel.DoubleConverter
 
 System.ComponentModel.EditorAttribute
@@ -168,13 +164,12 @@ System.ComponentModel.IDataErrorInfo
 System.ComponentModel.IExtenderProvider
 System.ComponentModel.IIntellisenseBuilder
 System.ComponentModel.IListSource
-System.ComponentModel.ImmutableObjectAttribute
+
 System.ComponentModel.INestedContainer
 System.ComponentModel.INestedSite
 System.ComponentModel.InheritanceAttribute
 System.ComponentModel.InheritanceLevel
-System.ComponentModel.InitializationEventAttribute
-System.ComponentModel.INotifyDataErrorInfo
+
 
 System.ComponentModel.InstallerTypeAttribute
 System.ComponentModel.InstanceCreationEditor
@@ -205,18 +200,18 @@ System.ComponentModel.ListChangedType
 System.ComponentModel.ListSortDescription
 System.ComponentModel.ListSortDescriptionCollection
 System.ComponentModel.ListSortDirection
-System.ComponentModel.LocalizableAttribute
+
 System.ComponentModel.LookupBindingPropertiesAttribute
 System.ComponentModel.MarshalByValueComponent
 System.ComponentModel.MaskedTextProvider
 System.ComponentModel.MaskedTextResultHint
 System.ComponentModel.MemberDescriptor
-System.ComponentModel.MergablePropertyAttribute
+
 System.ComponentModel.MultilineStringConverter
 System.ComponentModel.NestedContainer
-System.ComponentModel.NotifyParentPropertyAttribute
+
 System.ComponentModel.NullableConverter
-System.ComponentModel.ParenthesizePropertyNameAttribute
+
 System.ComponentModel.PasswordPropertyTextAttribute
 
 System.ComponentModel.PropertyDescriptor
@@ -224,13 +219,12 @@ System.ComponentModel.PropertyDescriptorCollection
 System.ComponentModel.PropertyTabAttribute
 System.ComponentModel.PropertyTabScope
 System.ComponentModel.ProvidePropertyAttribute
-System.ComponentModel.ReadOnlyAttribute
+
 System.ComponentModel.RecommendedAsConfigurableAttribute
 System.ComponentModel.ReferenceConverter
 System.ComponentModel.RefreshEventArgs
 System.ComponentModel.RefreshEventHandler
-System.ComponentModel.RefreshProperties
-System.ComponentModel.RefreshPropertiesAttribute
+
 System.ComponentModel.RunInstallerAttribute
 
 System.ComponentModel.SByteConverter
