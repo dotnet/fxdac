@@ -69,6 +69,7 @@ class LocationAnalysis
         new Move("System.Dynamic.Runtime", "System.Linq.Expressions"),
         new Move("System.ComponentModel.TypeConverter", "System.ComponentModel"),
         new Move("System.ComponentModel.TypeConverter", "System.ComponentModel.Primitives"),
+        new Move("Microsoft.Win32.Registry.AccessControl", "Microsoft.Win32.Registry"),
     };
 
     public static void CompareFactorings(string previous, string current, ReportWriter reportWriter)

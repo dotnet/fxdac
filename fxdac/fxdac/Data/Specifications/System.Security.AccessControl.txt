@@ -54,10 +54,6 @@ System.Security.AccessControl.PropagationFlags
 System.Security.AccessControl.QualifiedAce
 System.Security.AccessControl.RawAcl
 System.Security.AccessControl.RawSecurityDescriptor
-System.Security.AccessControl.RegistryAccessRule
-System.Security.AccessControl.RegistryAuditRule
-System.Security.AccessControl.RegistryRights
-System.Security.AccessControl.RegistrySecurity
 System.Security.AccessControl.ResourceType
 System.Security.AccessControl.SecurityInfos
 System.Security.AccessControl.SystemAcl

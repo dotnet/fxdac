@@ -127,7 +127,6 @@ System.ComponentModel.Container
 System.ComponentModel.ContainerFilterService
 System.ComponentModel.CultureInfoConverter
 System.ComponentModel.CustomTypeDescriptor
-System.ComponentModel.DataErrorsChangedEventArgs
 System.ComponentModel.DataObjectAttribute
 System.ComponentModel.DataObjectFieldAttribute
 System.ComponentModel.DataObjectMethodAttribute
@@ -174,7 +173,6 @@ System.ComponentModel.INestedSite
 System.ComponentModel.InheritanceAttribute
 System.ComponentModel.InheritanceLevel
 System.ComponentModel.InitializationEventAttribute
-System.ComponentModel.INotifyDataErrorInfo
 
 System.ComponentModel.InstallerTypeAttribute
 System.ComponentModel.InstanceCreationEditor

@@ -335,11 +335,6 @@ namespace System.ComponentModel {
     public virtual object GetPropertyOwner(System.ComponentModel.PropertyDescriptor pd) { return default(object); }
   }
 
-  public partial class DataErrorsChangedEventArgs : System.EventArgs {
-    public DataErrorsChangedEventArgs(string propertyName) { }
-    public virtual string PropertyName { get { return default(string); } }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public sealed partial class DataObjectAttribute : System.Attribute {
     public static readonly System.ComponentModel.DataObjectAttribute DataObject;
@@ -797,12 +792,6 @@ namespace System.ComponentModel {
   public sealed partial class InitializationEventAttribute : System.Attribute {
     public InitializationEventAttribute(string eventName) { }
     public string EventName { get { return default(string); } }
-  }
-
-  public partial interface INotifyDataErrorInfo {
-    bool HasErrors { get; }
-    event System.EventHandler<System.ComponentModel.DataErrorsChangedEventArgs> ErrorsChanged;
-    System.Collections.IEnumerable GetErrors(string propertyName);
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]

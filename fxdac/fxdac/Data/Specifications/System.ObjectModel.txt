@@ -6,6 +6,8 @@ System.ComponentModel.PropertyChangedEventHandler
 System.ComponentModel.PropertyChangingEventHandler
 System.ComponentModel.PropertyChangedEventArgs
 System.ComponentModel.PropertyChangingEventArgs
+System.ComponentModel.INotifyDataErrorInfo
+System.ComponentModel.DataErrorsChangedEventArgs
 
 System.Collections.Specialized.INotifyCollectionChanged
 System.Collections.Specialized.NotifyCollectionChangedEventHandler
@@ -18,3 +20,5 @@ System.Collections.ObjectModel.ObservableCollection`1
 System.Collections.ObjectModel.ReadOnlyObservableCollection`1
 
 System.Windows.Input.ICommand
+
+

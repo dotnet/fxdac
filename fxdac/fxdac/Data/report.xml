@@ -74,11 +74,10 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="237" description="corefx types that changed their location">
+  <MOVED_TYPES total="234" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.CategoryAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ComponentCollection moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DataErrorsChangedEventArgs moved from System.ObjectModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DescriptionAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DesignerCategoryAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.DesignerSerializationVisibility moved from System.ComponentModel.Primitives"/>
@@ -90,7 +89,6 @@
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.IContainer moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ImmutableObjectAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.InitializationEventAttribute moved from System.ComponentModel.Primitives"/>
-      <item text="System.ComponentModel.TypeConverter,System.ComponentModel.INotifyDataErrorInfo moved from System.ObjectModel"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.ISite moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.LocalizableAttribute moved from System.ComponentModel.Primitives"/>
       <item text="System.ComponentModel.TypeConverter,System.ComponentModel.MergablePropertyAttribute moved from System.ComponentModel.Primitives"/>
@@ -106,10 +104,6 @@
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexAuditRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexRights moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexSecurity moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.RegistryAccessRule moved from Microsoft.Win32.Registry.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.RegistryAuditRule moved from Microsoft.Win32.Registry.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.RegistryRights moved from Microsoft.Win32.Registry"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.RegistrySecurity moved from Microsoft.Win32.Registry.AccessControl"/>
       <item text="System.Threading.Security,System.Security.AccessControl.EventWaitHandleSecurity moved from System.Threading.AccessControl"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
@@ -123,6 +117,9 @@
       <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
     </MOVED_NEEDS_REVIEW>
     <MOVED_VALID>
+      <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistryAccessRule moved from Microsoft.Win32.Registry.AccessControl"/>
+      <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistryAuditRule moved from Microsoft.Win32.Registry.AccessControl"/>
+      <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistrySecurity moved from Microsoft.Win32.Registry.AccessControl"/>
       <item text="System.ComponentModel,System.ComponentModel.CancelEventHandler moved from System.ComponentModel.TypeConverter"/>
       <item text="System.ComponentModel.Primitives,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
       <item text="System.Linq.Expressions,System.Dynamic.BinaryOperationBinder moved from System.Dynamic.Runtime"/>
