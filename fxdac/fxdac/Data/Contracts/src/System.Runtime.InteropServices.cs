@@ -1092,6 +1092,58 @@ namespace System.Runtime.InteropServices {
     public void Remove() { }
   }
 
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("ComEventsHelper may be unavailable in future releases.")]
+  public static partial class ComEventsHelper {
+    [System.Security.SecurityCriticalAttribute]
+    public static void Combine(object rcw, System.Guid iid, int dispid, System.Delegate d) { }
+    [System.Security.SecurityCriticalAttribute]
+    public static System.Delegate Remove(object rcw, System.Guid iid, int dispid, System.Delegate d) { return default(System.Delegate); }
+  }
+
+  [System.AttributeUsageAttribute((System.AttributeTargets)(1028), Inherited=false)]
+  public sealed partial class ComImportAttribute : System.Attribute {
+    public ComImportAttribute() { }
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("CustomQueryInterfaceMode and support for ICustomQueryInterface may be unavailable in future releases.")]
+  public enum CustomQueryInterfaceMode {
+    Allow = 1,
+    Ignore = 0,
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("CustomQueryInterfaceResult and support for ICustomQueryInterface may be unavailable in future releases.")]
+  public enum CustomQueryInterfaceResult {
+    Failed = 2,
+    Handled = 0,
+    NotHandled = 1,
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("DispatchWrapper and support for marshalling to the VARIANT type may be unavailable in future releases.")]
+  public sealed partial class DispatchWrapper {
+    public DispatchWrapper(object obj) { }
+    public object WrappedObject { get { return default(object); } }
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("ErrorWrapper and support for marshalling to the VARIANT type may be unavailable in future releases.")]
+  public sealed partial class ErrorWrapper {
+    public ErrorWrapper(System.Exception e) { }
+    public ErrorWrapper(int errorCode) { }
+    public ErrorWrapper(object errorCode) { }
+    public int ErrorCode { get { return default(int); } }
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.ObsoleteAttribute("ICustomQueryInterface may be unavailable in future releases.")]
+  public partial interface ICustomQueryInterface {
+    [System.Security.SecurityCriticalAttribute]
+    System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface(ref System.Guid iid, out System.IntPtr ppv);
+  }
+
 } // end of System.Runtime.InteropServices
 namespace System.Runtime.InteropServices.ComTypes {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]

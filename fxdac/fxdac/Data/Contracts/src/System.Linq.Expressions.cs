@@ -1076,6 +1076,17 @@ namespace System.Linq.Expressions {
     public System.Linq.Expressions.UnaryExpression Update(System.Linq.Expressions.Expression operand) { return default(System.Linq.Expressions.UnaryExpression); }
   }
 
+  public partial interface IArgumentProvider {
+    int ArgumentCount { get; }
+    System.Linq.Expressions.Expression GetArgument(int index);
+  }
+
+  public partial interface IDynamicExpression : System.Linq.Expressions.IArgumentProvider {
+    System.Type DelegateType { get; }
+    object CreateCallSite();
+    System.Linq.Expressions.Expression Rewrite(System.Linq.Expressions.Expression[] args);
+  }
+
 } // end of System.Linq.Expressions
 namespace System.Runtime.CompilerServices {
   public partial class CallSite {

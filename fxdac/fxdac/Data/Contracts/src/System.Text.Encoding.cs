@@ -95,4 +95,12 @@ namespace System.Text {
     public override void Reset() { }
   }
 
+  public abstract partial class EncodingProvider {
+    public EncodingProvider() { }
+    public abstract System.Text.Encoding GetEncoding(int codepage);
+    public virtual System.Text.Encoding GetEncoding(int codepage, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback) { return default(System.Text.Encoding); }
+    public abstract System.Text.Encoding GetEncoding(string name);
+    public virtual System.Text.Encoding GetEncoding(string name, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback) { return default(System.Text.Encoding); }
+  }
+
 } // end of System.Text

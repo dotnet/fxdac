@@ -1,5 +1,8 @@
 /r:System.Runtime.dll
 
+// for corefx
+System.Text.EncodingProvider
+
 System.Text.DecoderExceptionFallback
 System.Text.DecoderExceptionFallbackBuffer
 System.Text.DecoderFallbackException

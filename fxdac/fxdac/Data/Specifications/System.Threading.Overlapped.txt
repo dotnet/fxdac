@@ -4,6 +4,7 @@ System.Threading.IOCompletionCallback
 System.Threading.NativeOverlapped
 System.Threading.Overlapped
 
-
+System.Threading.PreAllocatedOverlapped
+System.Threading.ThreadPoolBoundHandle
 
 
