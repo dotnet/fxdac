@@ -198,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\System.Xml.txt" />
+    <None Include="Data\Specifications\System.Data.txt" />
+    <None Include="Data\Specifications\System.ComponentModel.DataAnnotations.txt" />
     <None Include="Data\Specifications\Microsoft.VisualBasic.txt" />
     <None Include="Data\Specifications\Microsoft.CSharp.txt" />
     <None Include="Data\Specifications\System.Threading.AccessControl.txt" />
@@ -262,7 +265,6 @@
     <None Include="Data\Specifications\System.Xml.XmlSerializer.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Process.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TraceSource.txt" />
-    <None Include="Data\Specifications\System.Dynamic.txt" />
     <None Include="Data\Specifications\System.IO.Compression.txt" />
     <None Include="Data\Specifications\System.IO.MemoryMappedFiles.txt" />
     <None Include="Data\Specifications\System.Linq.txt" />
