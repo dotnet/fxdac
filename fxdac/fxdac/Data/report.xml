@@ -74,18 +74,14 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="205" description="corefx types that changed their location">
+  <MOVED_TYPES total="201" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.ManualResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.Mutex moved from System.Threading"/>
-      <item text="System.Threading.Semaphore,System.Security.AccessControl.SemaphoreAccessRule moved from System.Threading.AccessControl"/>
-      <item text="System.Threading.Semaphore,System.Security.AccessControl.SemaphoreAuditRule moved from System.Threading.AccessControl"/>
-      <item text="System.Threading.Semaphore,System.Security.AccessControl.SemaphoreRights moved from System.Threading.AccessControl"/>
-      <item text="System.Threading.Semaphore,System.Security.AccessControl.SemaphoreSecurity moved from System.Threading.AccessControl"/>
-      <item text="System.Threading.Semaphore,System.Threading.Semaphore moved from System.Threading"/>
+      <item text="System.Threading.Security,System.Threading.Semaphore moved from System.Threading"/>
     </MOVED_NEEDS_REVIEW>
     <MOVED_VALID>
       <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistryAccessRule moved from Microsoft.Win32.Registry.AccessControl"/>
@@ -287,7 +283,7 @@
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="20">
+  <ADDED_CONTRACTS total="19">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -306,7 +302,6 @@
     <item text="System.Security.Permissions"/>
     <item text="System.Security.TBD"/>
     <item text="System.Threading.Security"/>
-    <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
   <MISSING_CONTRACTS total="48">
@@ -1150,6 +1145,8 @@
     <item text="System.Security.Permissions,System.Security.Permissions.StrongNameIdentityPermission"/>
     <item text="System.Security.Permissions,System.Security.Permissions.StrongNameIdentityPermissionAttribute"/>
     <item text="System.Security.Permissions,System.Security.Permissions.StrongNamePublicKeyBlob"/>
+    <item text="System.Security.Permissions,System.Security.Permissions.TypeDescriptorPermission"/>
+    <item text="System.Security.Permissions,System.Security.Permissions.TypeDescriptorPermissionFlags"/>
     <item text="System.Security.Permissions,System.Security.Permissions.UIPermission"/>
     <item text="System.Security.Permissions,System.Security.Permissions.UIPermissionAttribute"/>
     <item text="System.Security.Permissions,System.Security.Permissions.UIPermissionClipboard"/>
@@ -1239,10 +1236,8 @@
     <item text="System.Threading,System.Threading.ThreadInterruptedException"/>
     <item text="System.Threading,System.Threading.ThreadPriority"/>
     <item text="System.Threading.Overlapped,System.Threading.Overlapped"/>
-    <item text="System.Threading.Semaphore,System.Security.Permissions.TypeDescriptorPermission"/>
-    <item text="System.Threading.Semaphore,System.Security.Permissions.TypeDescriptorPermissionFlags"/>
-    <item text="System.Threading.Semaphore,System.Threading.ThreadExceptionEventArgs"/>
-    <item text="System.Threading.Semaphore,System.Threading.ThreadExceptionEventHandler"/>
+    <item text="System.Threading.Security,System.Threading.ThreadExceptionEventArgs"/>
+    <item text="System.Threading.Security,System.Threading.ThreadExceptionEventHandler"/>
     <item text="System.Timer,System.Timers.ElapsedEventArgs"/>
     <item text="System.Timer,System.Timers.ElapsedEventHandler"/>
     <item text="System.Timer,System.Timers.Timer"/>

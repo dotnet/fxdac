@@ -2,8 +2,14 @@
 /r:System.Threading.dll
 /r:System.Threading.AccessControl.dll
 
+System.Threading.Mutex
+System.Threading.AbandonedMutexException
+
 System.Threading.EventWaitHandle
 System.Threading.AutoResetEvent
 System.Threading.ManualResetEvent
-System.Threading.Mutex
-System.Threading.AbandonedMutexException
+
+System.Threading.Semaphore
+
+System.Threading.ThreadExceptionEventArgs
+System.Threading.ThreadExceptionEventHandler

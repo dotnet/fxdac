@@ -85,4 +85,51 @@ namespace System.Security.AccessControl {
     public void SetAuditRule(System.Security.AccessControl.MutexAuditRule rule) { }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public sealed partial class SemaphoreAccessRule : System.Security.AccessControl.AccessRule {
+    public SemaphoreAccessRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.SemaphoreRights semaphoreRights, System.Security.AccessControl.AccessControlType type) : base (default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AccessControlType)) { }
+    public SemaphoreAccessRule(string identity, System.Security.AccessControl.SemaphoreRights semaphoreRights, System.Security.AccessControl.AccessControlType type) : base (default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AccessControlType)) { }
+    public System.Security.AccessControl.SemaphoreRights SemaphoreRights { get { return default(System.Security.AccessControl.SemaphoreRights); } }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public sealed partial class SemaphoreAuditRule : System.Security.AccessControl.AuditRule {
+    public SemaphoreAuditRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.SemaphoreRights semaphoreRights, System.Security.AccessControl.AuditFlags flags) : base (default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
+    public System.Security.AccessControl.SemaphoreRights SemaphoreRights { get { return default(System.Security.AccessControl.SemaphoreRights); } }
+  }
+
+  [System.FlagsAttribute]
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public enum SemaphoreRights {
+    ChangePermissions = 262144,
+    Delete = 65536,
+    FullControl = 2031619,
+    Modify = 2,
+    ReadPermissions = 131072,
+    Synchronize = 1048576,
+    TakeOwnership = 524288,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public sealed partial class SemaphoreSecurity : System.Security.AccessControl.NativeObjectSecurity {
+    public SemaphoreSecurity() : base (default(bool), default(System.Security.AccessControl.ResourceType)) { }
+    public SemaphoreSecurity(string name, System.Security.AccessControl.AccessControlSections includeSections) : base (default(bool), default(System.Security.AccessControl.ResourceType)) { }
+    public override System.Type AccessRightType { get { return default(System.Type); } }
+    public override System.Type AccessRuleType { get { return default(System.Type); } }
+    public override System.Type AuditRuleType { get { return default(System.Type); } }
+    public override System.Security.AccessControl.AccessRule AccessRuleFactory(System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type) { return default(System.Security.AccessControl.AccessRule); }
+    public void AddAccessRule(System.Security.AccessControl.SemaphoreAccessRule rule) { }
+    public void AddAuditRule(System.Security.AccessControl.SemaphoreAuditRule rule) { }
+    public override System.Security.AccessControl.AuditRule AuditRuleFactory(System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags) { return default(System.Security.AccessControl.AuditRule); }
+    public bool RemoveAccessRule(System.Security.AccessControl.SemaphoreAccessRule rule) { return default(bool); }
+    public void RemoveAccessRuleAll(System.Security.AccessControl.SemaphoreAccessRule rule) { }
+    public void RemoveAccessRuleSpecific(System.Security.AccessControl.SemaphoreAccessRule rule) { }
+    public bool RemoveAuditRule(System.Security.AccessControl.SemaphoreAuditRule rule) { return default(bool); }
+    public void RemoveAuditRuleAll(System.Security.AccessControl.SemaphoreAuditRule rule) { }
+    public void RemoveAuditRuleSpecific(System.Security.AccessControl.SemaphoreAuditRule rule) { }
+    public void ResetAccessRule(System.Security.AccessControl.SemaphoreAccessRule rule) { }
+    public void SetAccessRule(System.Security.AccessControl.SemaphoreAccessRule rule) { }
+    public void SetAuditRule(System.Security.AccessControl.SemaphoreAuditRule rule) { }
+  }
+
 } // end of System.Security.AccessControl

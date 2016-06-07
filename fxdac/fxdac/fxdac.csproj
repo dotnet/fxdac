@@ -256,7 +256,6 @@
     <None Include="Data\Specifications\System.Text.RegularExpressions.txt" />
     <None Include="Data\Specifications\System.Threading.Overlapped.txt" />
     <None Include="Data\Specifications\System.Threading.Thread.txt" />
-    <None Include="Data\Specifications\System.Threading.Semaphore.txt" />
     <None Include="Data\Specifications\System.Xml.XmlSerializer.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Process.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TraceSource.txt" />
