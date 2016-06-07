@@ -79,11 +79,11 @@
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAccessRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAuditRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleRights moved from System.Threading.AccessControl"/>
+      <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleSecurity moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexAccessRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexAuditRule moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexRights moved from System.Threading.AccessControl"/>
       <item text="System.Security.AccessControl,System.Security.AccessControl.MutexSecurity moved from System.Threading.AccessControl"/>
-      <item text="System.Threading.Security,System.Security.AccessControl.EventWaitHandleSecurity moved from System.Threading.AccessControl"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>

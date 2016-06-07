@@ -2,6 +2,8 @@
 /r:System.Collections.NonGeneric.dll
 /r:System.Security.Principal.Windows.dll
 
+System.Security.AccessControl.EventWaitHandleSecurity
+
 System.Security.AccessControl.AccessRule`1
 System.Security.AccessControl.AuditRule`1
 System.Security.AccessControl.ObjectSecurity`1
