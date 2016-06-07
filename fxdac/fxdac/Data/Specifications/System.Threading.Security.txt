@@ -3,7 +3,7 @@
 /r:System.Security.Principal.Windows.dll
 /r:System.Security.AccessControl.dll
 
-System.Security.AccessControl.EventWaitHandleSecurity
+
 System.Threading.EventWaitHandle
 System.Threading.AutoResetEvent
 System.Threading.ManualResetEvent
