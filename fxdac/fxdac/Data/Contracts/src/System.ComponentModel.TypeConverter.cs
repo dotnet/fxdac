@@ -234,14 +234,6 @@ namespace System.ComponentModel {
     public override string ToString() { return default(string); }
   }
 
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial class ComponentCollection : System.Collections.ReadOnlyCollectionBase {
-    public ComponentCollection(System.ComponentModel.IComponent[] components) { }
-    public virtual System.ComponentModel.IComponent this[int index] { get { return default(System.ComponentModel.IComponent); } }
-    public virtual System.ComponentModel.IComponent this[string name] { get { return default(System.ComponentModel.IComponent); } }
-    public void CopyTo(System.ComponentModel.IComponent[] array, int index) { }
-  }
-
   public partial class ComponentConverter : System.ComponentModel.ReferenceConverter {
     public ComponentConverter(System.Type type) : base (default(System.Type)) { }
     public override System.ComponentModel.PropertyDescriptorCollection GetProperties(System.ComponentModel.ITypeDescriptorContext context, object value, System.Attribute[] attributes) { return default(System.ComponentModel.PropertyDescriptorCollection); }
@@ -393,20 +385,6 @@ namespace System.ComponentModel {
     public static readonly System.ComponentModel.DefaultPropertyAttribute Default;
     public DefaultPropertyAttribute(string name) { }
     public string Name { get { return default(string); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple=true, Inherited=true)]
-  public sealed partial class DesignerAttribute : System.Attribute {
-    public DesignerAttribute(string designerTypeName) { }
-    public DesignerAttribute(string designerTypeName, string designerBaseTypeName) { }
-    public DesignerAttribute(string designerTypeName, System.Type designerBaseType) { }
-    public DesignerAttribute(System.Type designerType) { }
-    public DesignerAttribute(System.Type designerType, System.Type designerBaseType) { }
-    public string DesignerBaseTypeName { get { return default(string); } }
-    public string DesignerTypeName { get { return default(string); } }
-    public override object TypeId { get { return default(object); } }
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
   }
@@ -590,22 +568,6 @@ namespace System.ComponentModel {
     object GetPropertyValue(object component, string propertyName, ref bool success);
   }
 
-  [System.ComponentModel.DesignerAttribute("System.ComponentModel.Design.ComponentDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IDesigner))]
-  [System.ComponentModel.DesignerAttribute("System.Windows.Forms.Design.ComponentDocumentDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface IComponent : System.IDisposable {
-    System.ComponentModel.ISite Site { get; set; }
-    event System.EventHandler Disposed;
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface IContainer : System.IDisposable {
-    System.ComponentModel.ComponentCollection Components { get; }
-    void Add(System.ComponentModel.IComponent component);
-    void Add(System.ComponentModel.IComponent component, string name);
-    void Remove(System.ComponentModel.IComponent component);
-  }
-
   public partial interface ICustomTypeDescriptor {
     System.ComponentModel.AttributeCollection GetAttributes();
     string GetClassName();
@@ -715,14 +677,6 @@ namespace System.ComponentModel {
 
   public partial interface IRaiseItemChangedEvents {
     bool RaisesItemChangedEvents { get; }
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial interface ISite : System.IServiceProvider {
-    System.ComponentModel.IComponent Component { get; }
-    System.ComponentModel.IContainer Container { get; }
-    bool DesignMode { get; }
-    string Name { get; set; }
   }
 
   public partial interface ISupportInitialize {
@@ -906,7 +860,6 @@ namespace System.ComponentModel {
     public override int GetHashCode() { return default(int); }
   }
 
-  [System.ComponentModel.DesignerAttribute("System.Windows.Forms.Design.ComponentDocumentDesigner, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.ComponentModel.Design.IRootDesigner))]
   [System.ComponentModel.DesignerCategoryAttribute("Component")]
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class MarshalByValueComponent : System.ComponentModel.IComponent, System.IDisposable, System.IServiceProvider {

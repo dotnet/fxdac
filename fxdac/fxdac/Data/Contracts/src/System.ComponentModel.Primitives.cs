@@ -37,6 +37,14 @@ namespace System.ComponentModel {
     public override bool IsDefaultAttribute() { return default(bool); }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class ComponentCollection : System.Collections.ReadOnlyCollectionBase {
+    public ComponentCollection(System.ComponentModel.IComponent[] components) { }
+    public virtual System.ComponentModel.IComponent this[int index] { get { return default(System.ComponentModel.IComponent); } }
+    public virtual System.ComponentModel.IComponent this[string name] { get { return default(System.ComponentModel.IComponent); } }
+    public void CopyTo(System.ComponentModel.IComponent[] array, int index) { }
+  }
+
   [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
   public sealed partial class DefaultEventAttribute : System.Attribute {
     public static readonly System.ComponentModel.DefaultEventAttribute Default;
@@ -56,6 +64,20 @@ namespace System.ComponentModel {
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
     public override bool IsDefaultAttribute() { return default(bool); }
+  }
+
+  [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple=true, Inherited=true)]
+  public sealed partial class DesignerAttribute : System.Attribute {
+    public DesignerAttribute(string designerTypeName) { }
+    public DesignerAttribute(string designerTypeName, string designerBaseTypeName) { }
+    public DesignerAttribute(string designerTypeName, System.Type designerBaseType) { }
+    public DesignerAttribute(System.Type designerType) { }
+    public DesignerAttribute(System.Type designerType, System.Type designerBaseType) { }
+    public string DesignerBaseTypeName { get { return default(string); } }
+    public string DesignerTypeName { get { return default(string); } }
+    public override object TypeId { get { return default(object); } }
+    public override bool Equals(object obj) { return default(bool); }
+    public override int GetHashCode() { return default(int); }
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false, Inherited=true)]
@@ -126,6 +148,20 @@ namespace System.ComponentModel {
     public void RemoveHandler(object key, System.Delegate value) { }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial interface IComponent : System.IDisposable {
+    System.ComponentModel.ISite Site { get; set; }
+    event System.EventHandler Disposed;
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial interface IContainer : System.IDisposable {
+    System.ComponentModel.ComponentCollection Components { get; }
+    void Add(System.ComponentModel.IComponent component);
+    void Add(System.ComponentModel.IComponent component, string name);
+    void Remove(System.ComponentModel.IComponent component);
+  }
+
   [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
   public sealed partial class ImmutableObjectAttribute : System.Attribute {
     public static readonly System.ComponentModel.ImmutableObjectAttribute Default;
@@ -142,6 +178,14 @@ namespace System.ComponentModel {
   public sealed partial class InitializationEventAttribute : System.Attribute {
     public InitializationEventAttribute(string eventName) { }
     public string EventName { get { return default(string); } }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial interface ISite : System.IServiceProvider {
+    System.ComponentModel.IComponent Component { get; }
+    System.ComponentModel.IContainer Container { get; }
+    bool DesignMode { get; }
+    string Name { get; set; }
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]

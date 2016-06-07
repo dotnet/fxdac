@@ -1,4 +1,23 @@
 ﻿/r:System.Runtime.dll
+/r:System.Collections.NonGeneric.dll
+
+System.ComponentModel.IComponent
+System.ComponentModel.IContainer
+System.ComponentModel.ISite
+System.ComponentModel.ComponentCollection
+
+System.ComponentModel.DesignerAttribute
+
+
+
+
+
+
+
+
+
+
+
 
 System.ComponentModel.EventHandlerList
 System.ComponentModel.BrowsableAttribute
