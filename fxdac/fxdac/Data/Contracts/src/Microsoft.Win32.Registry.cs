@@ -12,6 +12,88 @@ namespace Microsoft.Win32 {
     Registry64 = 256,
   }
 
+  public static partial class Registry {
+    public static readonly Microsoft.Win32.RegistryKey ClassesRoot;
+    public static readonly Microsoft.Win32.RegistryKey CurrentConfig;
+    public static readonly Microsoft.Win32.RegistryKey CurrentUser;
+    public static readonly Microsoft.Win32.RegistryKey LocalMachine;
+    public static readonly Microsoft.Win32.RegistryKey PerformanceData;
+    public static readonly Microsoft.Win32.RegistryKey Users;
+    public static object GetValue(string keyName, string valueName, object defaultValue) { return default(object); }
+    public static void SetValue(string keyName, string valueName, object value) { }
+    public static void SetValue(string keyName, string valueName, object value, Microsoft.Win32.RegistryValueKind valueKind) { }
+  }
+
+  public enum RegistryHive {
+    ClassesRoot = -2147483648,
+    CurrentConfig = -2147483643,
+    CurrentUser = -2147483647,
+    LocalMachine = -2147483646,
+    PerformanceData = -2147483644,
+    Users = -2147483645,
+  }
+
+  public sealed partial class RegistryKey : System.IDisposable {
+    internal RegistryKey() { }
+    public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeRegistryHandle); } }
+    public string Name { get { return default(string); } }
+    public int SubKeyCount { get { return default(int); } }
+    public int ValueCount { get { return default(int); } }
+    public Microsoft.Win32.RegistryView View { get { return default(Microsoft.Win32.RegistryView); } }
+    public Microsoft.Win32.RegistryKey CreateSubKey(string subkey) { return default(Microsoft.Win32.RegistryKey); }
+    public Microsoft.Win32.RegistryKey CreateSubKey(string subkey, bool writable) { return default(Microsoft.Win32.RegistryKey); }
+    public Microsoft.Win32.RegistryKey CreateSubKey(string subkey, bool writable, Microsoft.Win32.RegistryOptions options) { return default(Microsoft.Win32.RegistryKey); }
+    public void DeleteSubKey(string subkey) { }
+    public void DeleteSubKey(string subkey, bool throwOnMissingSubKey) { }
+    public void DeleteSubKeyTree(string subkey) { }
+    public void DeleteSubKeyTree(string subkey, bool throwOnMissingSubKey) { }
+    public void DeleteValue(string name) { }
+    public void DeleteValue(string name, bool throwOnMissingValue) { }
+    public void Dispose() { }
+    public void Flush() { }
+    [System.Security.SecurityCriticalAttribute]
+    public static Microsoft.Win32.RegistryKey FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle handle) { return default(Microsoft.Win32.RegistryKey); }
+    [System.Security.SecurityCriticalAttribute]
+    public static Microsoft.Win32.RegistryKey FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle handle, Microsoft.Win32.RegistryView view) { return default(Microsoft.Win32.RegistryKey); }
+    public string[] GetSubKeyNames() { return default(string[]); }
+    public object GetValue(string name) { return default(object); }
+    public object GetValue(string name, object defaultValue) { return default(object); }
+    public object GetValue(string name, object defaultValue, Microsoft.Win32.RegistryValueOptions options) { return default(object); }
+    public Microsoft.Win32.RegistryValueKind GetValueKind(string name) { return default(Microsoft.Win32.RegistryValueKind); }
+    public string[] GetValueNames() { return default(string[]); }
+    public static Microsoft.Win32.RegistryKey OpenBaseKey(Microsoft.Win32.RegistryHive hKey, Microsoft.Win32.RegistryView view) { return default(Microsoft.Win32.RegistryKey); }
+    public Microsoft.Win32.RegistryKey OpenSubKey(string name) { return default(Microsoft.Win32.RegistryKey); }
+    public Microsoft.Win32.RegistryKey OpenSubKey(string name, bool writable) { return default(Microsoft.Win32.RegistryKey); }
+    public Microsoft.Win32.RegistryKey OpenSubKey(string name, System.Security.AccessControl.RegistryRights rights) { return default(Microsoft.Win32.RegistryKey); }
+    public void SetValue(string name, object value) { }
+    public void SetValue(string name, object value, Microsoft.Win32.RegistryValueKind valueKind) { }
+    public override string ToString() { return default(string); }
+  }
+
+  public enum RegistryValueKind {
+    Binary = 3,
+    DWord = 4,
+    ExpandString = 2,
+    MultiString = 7,
+    None = -1,
+    QWord = 11,
+    String = 1,
+    Unknown = 0,
+  }
+
+  [System.FlagsAttribute]
+  public enum RegistryValueOptions {
+    DoNotExpandEnvironmentNames = 1,
+    None = 0,
+  }
+
+  [System.Security.SecurityCriticalAttribute]
+  public static partial class RegistryAclExtensions {
+    public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key) { return default(System.Security.AccessControl.RegistrySecurity); }
+    public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.RegistrySecurity); }
+    public static void SetAccessControl(this Microsoft.Win32.RegistryKey key, System.Security.AccessControl.RegistrySecurity registrySecurity) { }
+  }
+
 } // end of Microsoft.Win32
 namespace Microsoft.Win32.SafeHandles {
   [System.Security.SecurityCriticalAttribute]
