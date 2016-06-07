@@ -2,8 +2,6 @@
 /r:System.Collections.NonGeneric.dll
 /r:System.Security.Principal.Windows.dll
 
-System.Security.AccessControl.EventWaitHandleSecurity
-
 System.Security.AccessControl.AccessRule`1
 System.Security.AccessControl.AuditRule`1
 System.Security.AccessControl.ObjectSecurity`1
@@ -33,18 +31,13 @@ System.Security.AccessControl.CryptoKeyRights
 System.Security.AccessControl.CryptoKeySecurity
 System.Security.AccessControl.CustomAce
 System.Security.AccessControl.DiscretionaryAcl
-System.Security.AccessControl.EventWaitHandleAccessRule
-System.Security.AccessControl.EventWaitHandleAuditRule
-System.Security.AccessControl.EventWaitHandleRights
+
 System.Security.AccessControl.GenericAce
 System.Security.AccessControl.GenericAcl
 System.Security.AccessControl.GenericSecurityDescriptor
 System.Security.AccessControl.InheritanceFlags
 System.Security.AccessControl.KnownAce
-System.Security.AccessControl.MutexAccessRule
-System.Security.AccessControl.MutexAuditRule
-System.Security.AccessControl.MutexRights
-System.Security.AccessControl.MutexSecurity
+
 System.Security.AccessControl.NativeObjectSecurity
 System.Security.AccessControl.ObjectAccessRule
 System.Security.AccessControl.ObjectAce

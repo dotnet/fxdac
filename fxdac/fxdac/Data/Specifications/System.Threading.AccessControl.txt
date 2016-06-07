@@ -1,0 +1,13 @@
+﻿/r:System.Runtime.dll
+/r:System.Security.Principal.Windows.dll
+/r:System.Security.AccessControl.dll
+
+System.Security.AccessControl.EventWaitHandleAccessRule
+System.Security.AccessControl.EventWaitHandleAuditRule
+System.Security.AccessControl.EventWaitHandleRights
+System.Security.AccessControl.EventWaitHandleSecurity
+
+System.Security.AccessControl.MutexAccessRule
+System.Security.AccessControl.MutexAuditRule
+System.Security.AccessControl.MutexRights
+System.Security.AccessControl.MutexSecurity

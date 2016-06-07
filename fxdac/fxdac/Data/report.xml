@@ -74,16 +74,8 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="213" description="corefx types that changed their location">
+  <MOVED_TYPES total="205" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAccessRule moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleAuditRule moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleRights moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.EventWaitHandleSecurity moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.MutexAccessRule moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.MutexAuditRule moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.MutexRights moved from System.Threading.AccessControl"/>
-      <item text="System.Security.AccessControl,System.Security.AccessControl.MutexSecurity moved from System.Threading.AccessControl"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
@@ -317,7 +309,7 @@
     <item text="System.Threading.Semaphore"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="49">
+  <MISSING_CONTRACTS total="48">
     <item text="	Microsoft.CSharp"/>
     <item text="	Microsoft.VisualBasic"/>
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
@@ -358,7 +350,6 @@
     <item text="	System.ServiceModel.Security"/>
     <item text="	System.ServiceProcess.ServiceController"/>
     <item text="	System.Text.Encoding.CodePages"/>
-    <item text="	System.Threading.AccessControl"/>
     <item text="	System.Threading.Tasks"/>
     <item text="	System.Xml.ReaderWriter"/>
     <item text="	System.Xml.XDocument"/>

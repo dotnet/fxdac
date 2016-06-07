@@ -1,8 +1,6 @@
 /r:System.Runtime.dll
 /r:System.Threading.dll
-/r:System.Security.Principal.Windows.dll
-/r:System.Security.AccessControl.dll
-
+/r:System.Threading.AccessControl.dll
 
 System.Threading.EventWaitHandle
 System.Threading.AutoResetEvent
