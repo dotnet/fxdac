@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\Microsoft.CSharp.txt" />
     <None Include="Data\Specifications\System.Threading.AccessControl.txt" />
     <None Include="Data\Specifications\Microsoft.Win32.Primitives.txt" />
     <None Include="Data\Specifications\System.ComponentModel.Primitives.txt" />
