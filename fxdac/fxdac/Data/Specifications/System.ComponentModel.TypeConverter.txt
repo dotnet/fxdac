@@ -1,6 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.NonGeneric.dll
-/r:System.ComponentModel.dll
+/r:System.ComponentModel.Primitives.dll
 /r:System.Resources.ResourceManager.dll
 /r:System.Resources.Reader.dll
 /r:System.Resources.Writer.dll

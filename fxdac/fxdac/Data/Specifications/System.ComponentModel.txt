@@ -1,10 +1,9 @@
 ﻿/r:System.Runtime.dll
 
-
-
 System.ComponentModel.IChangeTracking
 System.ComponentModel.IEditableObject
 System.ComponentModel.IRevertibleChangeTracking
 
-System.ComponentModel.BrowsableAttribute
-System.ComponentModel.DefaultEventAttribute
+System.ComponentModel.CancelEventArgs
+System.ComponentModel.CancelEventHandler
+

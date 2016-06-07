@@ -67,6 +67,8 @@ class LocationAnalysis
 {
     static List<Move> s_validMoves = new List<Move>() {
         new Move("System.Dynamic.Runtime", "System.Linq.Expressions"),
+        new Move("System.ComponentModel.TypeConverter", "System.ComponentModel"),
+        new Move("System.ComponentModel.TypeConverter", "System.ComponentModel.Primitives"),
     };
 
     public static void CompareFactorings(string previous, string current, ReportWriter reportWriter)

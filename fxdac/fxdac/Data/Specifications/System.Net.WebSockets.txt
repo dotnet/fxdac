@@ -2,7 +2,7 @@
 /r:System.Collections.Specialized.dll
 /r:System.Net.Primitives.dll
 /r:System.Security.Principal.dll 
-/r:System.Runtime.InteropServices.dll
+/r:Microsoft.Win32.Primitives.dll
 
 System.Net.WebSockets.HttpListenerWebSocketContext
 System.Net.WebSockets.WebSocket
