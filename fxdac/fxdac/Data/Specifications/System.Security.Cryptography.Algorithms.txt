@@ -67,3 +67,10 @@ System.Security.Cryptography.DSASignatureFormatter
 System.Security.Cryptography.RC2
 System.Security.Cryptography.RC2CryptoServiceProvider
 
+System.Security.Cryptography.IncrementalHash
+
+System.Security.Cryptography.RSAEncryptionPadding
+System.Security.Cryptography.RSAEncryptionPaddingMode
+System.Security.Cryptography.RSASignaturePadding
+System.Security.Cryptography.RSASignaturePaddingMode
+

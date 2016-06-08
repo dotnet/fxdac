@@ -16,4 +16,7 @@ System.Security.Principal.WindowsPrincipal
 System.Security.Principal.IdentityNotMappedException
 System.Security.Principal.TokenAccessLevels
 
+// from corefx
+Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+
 

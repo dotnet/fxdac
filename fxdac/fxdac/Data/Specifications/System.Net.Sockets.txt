@@ -28,3 +28,9 @@ System.Net.Sockets.TcpListener
 System.Net.Sockets.TransmitFileOptions
 System.Net.Sockets.UdpClient
 System.Net.Sockets.UdpReceiveResult
+
+// added from corfx
+System.Net.Sockets.IPProtectionLevel
+System.Net.Sockets.SocketReceiveFromResult
+System.Net.Sockets.SocketReceiveMessageFromResult
+System.Net.Sockets.SocketTaskExtensions

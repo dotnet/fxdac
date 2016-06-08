@@ -1,0 +1,5 @@
+﻿/r:System.Runtime.dll
+
+System.Runtime.InteropServices.Architecture
+System.Runtime.InteropServices.OSPlatform
+System.Runtime.InteropServices.RuntimeInformation

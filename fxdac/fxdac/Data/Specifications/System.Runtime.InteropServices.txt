@@ -164,3 +164,13 @@ System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal
 System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMetadata
 System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute
 
+System.Runtime.InteropServices.ComTypes.ADVF
+System.Runtime.InteropServices.ComTypes.DATADIR
+System.Runtime.InteropServices.ComTypes.DVASPECT
+System.Runtime.InteropServices.ComTypes.FORMATETC
+System.Runtime.InteropServices.ComTypes.IAdviseSink
+System.Runtime.InteropServices.ComTypes.IEnumFORMATETC
+System.Runtime.InteropServices.ComTypes.STATDATA
+System.Runtime.InteropServices.ComTypes.STGMEDIUM
+System.Runtime.InteropServices.ComTypes.TYMED
+

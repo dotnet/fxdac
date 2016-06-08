@@ -500,4 +500,18 @@ namespace System.Threading {
     public bool TryEnterWriteLock(System.TimeSpan timeout) { return default(bool); }
   }
 
+  public sealed partial class AsyncLocal<T> {
+    public AsyncLocal() { }
+    [System.Security.SecurityCriticalAttribute]
+    public AsyncLocal(System.Action<System.Threading.AsyncLocalValueChangedArgs<T>> valueChangedHandler) { }
+    public T Value { get { return default(T); } set { } }
+  }
+
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct AsyncLocalValueChangedArgs<T> {
+    public T CurrentValue { get { return default(T); } }
+    public T PreviousValue { get { return default(T); } }
+    public bool ThreadContextChanged { get { return default(bool); } }
+  }
+
 } // end of System.Threading

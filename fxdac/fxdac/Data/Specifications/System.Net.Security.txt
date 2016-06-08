@@ -20,4 +20,7 @@ System.Security.Authentication.ExtendedProtection.PolicyEnforcement
 System.Security.Authentication.ExtendedProtection.ProtectionScenario
 System.Security.Authentication.ExtendedProtection.ServiceNameCollection
 
+// from corefx
+System.Net.Security.EncryptionPolicy
+
 

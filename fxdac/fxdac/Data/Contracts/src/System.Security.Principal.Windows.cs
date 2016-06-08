@@ -245,3 +245,14 @@ namespace System.Security.Principal {
   }
 
 } // end of System.Security.Principal
+namespace Microsoft.Win32.SafeHandles {
+  [System.Security.SecurityCriticalAttribute]
+  public sealed partial class SafeAccessTokenHandle : System.Runtime.InteropServices.SafeHandle {
+    public SafeAccessTokenHandle(System.IntPtr handle) : base (default(System.IntPtr), default(bool)) { }
+    public static Microsoft.Win32.SafeHandles.SafeAccessTokenHandle InvalidHandle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
+    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+    [System.Security.SecurityCriticalAttribute]
+    protected override bool ReleaseHandle() { return default(bool); }
+  }
+
+} // end of Microsoft.Win32.SafeHandles

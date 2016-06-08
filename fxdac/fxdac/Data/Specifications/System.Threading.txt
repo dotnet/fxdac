@@ -42,6 +42,10 @@ System.Threading.LockCookie
 System.Threading.ReaderWriterLock
 System.Threading.ThreadInterruptedException
 
+// corefx
+System.Threading.AsyncLocal`1
+System.Threading.AsyncLocalValueChangedArgs`1
+
 
 
 

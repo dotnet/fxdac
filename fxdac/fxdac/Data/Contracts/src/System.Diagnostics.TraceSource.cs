@@ -315,4 +315,16 @@ namespace System.Diagnostics {
     protected override void OnValueChanged() { }
   }
 
+  public partial class EventTypeFilter : System.Diagnostics.TraceFilter {
+    public EventTypeFilter(System.Diagnostics.SourceLevels level) { }
+    public System.Diagnostics.SourceLevels EventType { get { return default(System.Diagnostics.SourceLevels); } set { } }
+    public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
+  }
+
+  public partial class SourceFilter : System.Diagnostics.TraceFilter {
+    public SourceFilter(string source) { }
+    public string Source { get { return default(string); } set { } }
+    public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
+  }
+
 } // end of System.Diagnostics

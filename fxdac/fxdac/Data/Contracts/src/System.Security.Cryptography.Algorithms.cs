@@ -464,4 +464,56 @@ namespace System.Security.Cryptography {
     public override void GenerateKey() { }
   }
 
+  public sealed partial class IncrementalHash : System.IDisposable {
+    internal IncrementalHash() { }
+    public System.Security.Cryptography.HashAlgorithmName AlgorithmName { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public void AppendData(byte[] data) { }
+    public void AppendData(byte[] data, int offset, int count) { }
+    public static System.Security.Cryptography.IncrementalHash CreateHash(System.Security.Cryptography.HashAlgorithmName hashAlgorithm) { return default(System.Security.Cryptography.IncrementalHash); }
+    public static System.Security.Cryptography.IncrementalHash CreateHMAC(System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] key) { return default(System.Security.Cryptography.IncrementalHash); }
+    public void Dispose() { }
+    public byte[] GetHashAndReset() { return default(byte[]); }
+  }
+
+  public sealed partial class RSAEncryptionPadding : System.IEquatable<System.Security.Cryptography.RSAEncryptionPadding> {
+    internal RSAEncryptionPadding() { }
+    public System.Security.Cryptography.RSAEncryptionPaddingMode Mode { get { return default(System.Security.Cryptography.RSAEncryptionPaddingMode); } }
+    public System.Security.Cryptography.HashAlgorithmName OaepHashAlgorithm { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA1 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA256 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA384 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA512 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding Pkcs1 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
+    public static System.Security.Cryptography.RSAEncryptionPadding CreateOaep(System.Security.Cryptography.HashAlgorithmName hashAlgorithm) { return default(System.Security.Cryptography.RSAEncryptionPadding); }
+    public override bool Equals(object obj) { return default(bool); }
+    public bool Equals(System.Security.Cryptography.RSAEncryptionPadding other) { return default(bool); }
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(System.Security.Cryptography.RSAEncryptionPadding left, System.Security.Cryptography.RSAEncryptionPadding right) { return default(bool); }
+    public static bool operator !=(System.Security.Cryptography.RSAEncryptionPadding left, System.Security.Cryptography.RSAEncryptionPadding right) { return default(bool); }
+    public override string ToString() { return default(string); }
+  }
+
+  public enum RSAEncryptionPaddingMode {
+    Oaep = 1,
+    Pkcs1 = 0,
+  }
+
+  public sealed partial class RSASignaturePadding : System.IEquatable<System.Security.Cryptography.RSASignaturePadding> {
+    internal RSASignaturePadding() { }
+    public System.Security.Cryptography.RSASignaturePaddingMode Mode { get { return default(System.Security.Cryptography.RSASignaturePaddingMode); } }
+    public static System.Security.Cryptography.RSASignaturePadding Pkcs1 { get { return default(System.Security.Cryptography.RSASignaturePadding); } }
+    public static System.Security.Cryptography.RSASignaturePadding Pss { get { return default(System.Security.Cryptography.RSASignaturePadding); } }
+    public override bool Equals(object obj) { return default(bool); }
+    public bool Equals(System.Security.Cryptography.RSASignaturePadding other) { return default(bool); }
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right) { return default(bool); }
+    public static bool operator !=(System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right) { return default(bool); }
+    public override string ToString() { return default(string); }
+  }
+
+  public enum RSASignaturePaddingMode {
+    Pkcs1 = 0,
+    Pss = 1,
+  }
+
 } // end of System.Security.Cryptography
