@@ -1,4 +1,13 @@
 [assembly:System.CLSCompliant(true)]
+namespace System.Xml {
+  public enum XmlNodeOrder {
+    After = 1,
+    Before = 0,
+    Same = 2,
+    Unknown = 3,
+  }
+
+} // end of System.Xml
 namespace System.Xml.XPath {
   public partial interface IXPathNavigable {
     System.Xml.XPath.XPathNavigator CreateNavigator();
@@ -218,32 +227,4 @@ namespace System.Xml.XPath {
     String = 1,
   }
 
-  public static partial class Extensions {
-    public static System.Xml.XPath.XPathNavigator CreateNavigator(this System.Xml.Linq.XNode node) { return default(System.Xml.XPath.XPathNavigator); }
-    public static System.Xml.XPath.XPathNavigator CreateNavigator(this System.Xml.Linq.XNode node, System.Xml.XmlNameTable nameTable) { return default(System.Xml.XPath.XPathNavigator); }
-    public static object XPathEvaluate(this System.Xml.Linq.XNode node, string expression) { return default(object); }
-    public static object XPathEvaluate(this System.Xml.Linq.XNode node, string expression, System.Xml.IXmlNamespaceResolver resolver) { return default(object); }
-    public static System.Xml.Linq.XElement XPathSelectElement(this System.Xml.Linq.XNode node, string expression) { return default(System.Xml.Linq.XElement); }
-    public static System.Xml.Linq.XElement XPathSelectElement(this System.Xml.Linq.XNode node, string expression, System.Xml.IXmlNamespaceResolver resolver) { return default(System.Xml.Linq.XElement); }
-    public static System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement> XPathSelectElements(this System.Xml.Linq.XNode node, string expression) { return default(System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>); }
-    public static System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement> XPathSelectElements(this System.Xml.Linq.XNode node, string expression, System.Xml.IXmlNamespaceResolver resolver) { return default(System.Collections.Generic.IEnumerable<System.Xml.Linq.XElement>); }
-  }
-
-  public static partial class XDocumentExtensions {
-    public static System.Xml.XPath.IXPathNavigable ToXPathNavigable(this System.Xml.Linq.XNode node) { return default(System.Xml.XPath.IXPathNavigable); }
-  }
-
 } // end of System.Xml.XPath
-namespace System.Xml {
-  public static partial class XmlDocumentXPathExtensions {
-    public static System.Xml.XPath.XPathNavigator CreateNavigator(this System.Xml.XmlDocument document) { return default(System.Xml.XPath.XPathNavigator); }
-    public static System.Xml.XPath.XPathNavigator CreateNavigator(this System.Xml.XmlDocument document, System.Xml.XmlNode node) { return default(System.Xml.XPath.XPathNavigator); }
-    public static System.Xml.XPath.XPathNavigator CreateNavigator(this System.Xml.XmlNode node) { return default(System.Xml.XPath.XPathNavigator); }
-    public static System.Xml.XmlNodeList SelectNodes(this System.Xml.XmlNode node, string xpath) { return default(System.Xml.XmlNodeList); }
-    public static System.Xml.XmlNodeList SelectNodes(this System.Xml.XmlNode node, string xpath, System.Xml.XmlNamespaceManager nsmgr) { return default(System.Xml.XmlNodeList); }
-    public static System.Xml.XmlNode SelectSingleNode(this System.Xml.XmlNode node, string xpath) { return default(System.Xml.XmlNode); }
-    public static System.Xml.XmlNode SelectSingleNode(this System.Xml.XmlNode node, string xpath, System.Xml.XmlNamespaceManager nsmgr) { return default(System.Xml.XmlNode); }
-    public static System.Xml.XPath.IXPathNavigable ToXPathNavigable(this System.Xml.XmlNode node) { return default(System.Xml.XPath.IXPathNavigable); }
-  }
-
-} // end of System.Xml

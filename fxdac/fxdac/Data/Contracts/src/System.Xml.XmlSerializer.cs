@@ -1,12 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Xml.Serialization {
-  [System.AttributeUsageAttribute((System.AttributeTargets)(1036))]
-  public sealed partial class XmlSchemaProviderAttribute : System.Attribute {
-    public XmlSchemaProviderAttribute(string methodName) { }
-    public bool IsAny { get { return default(bool); } set { } }
-    public string MethodName { get { return default(string); } }
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(10624), AllowMultiple=false)]
   public partial class XmlAnyAttributeAttribute : System.Attribute {
     public XmlAnyAttributeAttribute() { }

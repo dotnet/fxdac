@@ -4,7 +4,7 @@
 
 System.Xml.Serialization.XmlIgnoreAttribute
 
-System.Xml.Serialization.XmlSchemaProviderAttribute
+
 System.Xml.Serialization.XmlAnyAttributeAttribute
 System.Xml.Serialization.XmlAnyElementAttribute
 System.Xml.Serialization.XmlAnyElementAttributes

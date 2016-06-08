@@ -1,4 +1,12 @@
 [assembly:System.CLSCompliant(true)]
+namespace System.Reflection {
+  public static partial class AssemblyExtensions {
+    public static System.Type[] GetExportedTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
+    public static System.Reflection.Module[] GetModules(this System.Reflection.Assembly assembly) { return default(System.Reflection.Module[]); }
+    public static System.Type[] GetTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
+  }
+
+} // end of System.Reflection
 namespace System.Runtime.Loader {
   public abstract partial class AssemblyLoadContext {
     protected AssemblyLoadContext() { }

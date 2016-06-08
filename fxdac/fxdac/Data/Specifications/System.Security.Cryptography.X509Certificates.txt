@@ -4,6 +4,8 @@
 /r:System.Security.Cryptography.Algorithms.dll
 /r:System.Security.Cryptography.Encoding.dll
 
+Microsoft.Win32.SafeHandles.SafeX509ChainHandle
+
 System.Security.Cryptography.X509Certificates.X509Certificate
 System.Security.Cryptography.X509Certificates.X509ContentType
 System.Security.Cryptography.X509Certificates.X509KeyStorageFlags

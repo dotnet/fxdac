@@ -1,0 +1,8 @@
+﻿/r:System.Runtime.dll
+/r:System.Xml.ReaderWriter.dll
+/r:System.Xml.XDocument.dll
+/r:System.Xml.XPath.dll
+
+System.Xml.XPath.Extensions
+System.Xml.XPath.XDocumentExtensions
+

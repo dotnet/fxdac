@@ -4,7 +4,6 @@ Microsoft.Win32.SafeHandles.SafeNCryptHandle
 Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle
 Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle
 Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle
-Microsoft.Win32.SafeHandles.SafeX509ChainHandle
 
 System.Security.Cryptography.CngAlgorithm
 System.Security.Cryptography.CngAlgorithmGroup

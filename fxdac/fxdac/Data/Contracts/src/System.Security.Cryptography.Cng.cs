@@ -22,12 +22,6 @@ namespace Microsoft.Win32.SafeHandles {
     protected override bool ReleaseNativeHandle() { return default(bool); }
   }
 
-  public sealed partial class SafeX509ChainHandle : System.Runtime.InteropServices.SafeHandle {
-    internal SafeX509ChainHandle() : base (default(System.IntPtr), default(bool)) { }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
-    protected override bool ReleaseHandle() { return default(bool); }
-  }
-
 } // end of Microsoft.Win32.SafeHandles
 namespace System.Security.Cryptography {
   public sealed partial class CngAlgorithm : System.IEquatable<System.Security.Cryptography.CngAlgorithm> {

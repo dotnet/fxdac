@@ -74,11 +74,11 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="266" description="corefx types that changed their location">
+  <MOVED_TYPES total="206" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="System.IO.FileSystem,System.IO.FileSystemAclExtensions moved from System.IO.FileSystem.AccessControl"/>
       <item text="System.Reflection.TypeExtensions,System.Reflection.Metadata.AssemblyExtensions moved from System.Runtime.Loader"/>
-      <item text="System.Security.Cryptography.Cng,Microsoft.Win32.SafeHandles.SafeX509ChainHandle moved from System.Security.Cryptography.X509Certificates"/>
+      <item text="System.Runtime.Loader,System.Reflection.AssemblyExtensions moved from System.Reflection.TypeExtensions"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
@@ -86,66 +86,6 @@
       <item text="System.Threading.Security,System.Threading.Mutex moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.Semaphore moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.ThreadingAclExtensions moved from System.Threading.AccessControl"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.Extensions moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.LoadOptions moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.ReaderOptions moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.SaveOptions moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XAttribute moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XCData moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XComment moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XContainer moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XDeclaration moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XDocument moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XDocumentType moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XElement moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XName moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XNamespace moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XNode moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XNodeDocumentOrderComparer moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XNodeEqualityComparer moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XObject moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XObjectChange moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XObjectChangeEventArgs moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XProcessingInstruction moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XStreamingElement moved from System.Xml.XDocument"/>
-      <item text="System.Xml.Linq,System.Xml.Linq.XText moved from System.Xml.XDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.IXmlDictionary moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.OnXmlDictionaryReaderClose moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.UniqueId moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlAttribute moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlAttributeCollection moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlBinaryReaderSession moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlBinaryWriterSession moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlCDataSection moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlCharacterData moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlComment moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDeclaration moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionary moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionaryReader moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotas moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotaTypes moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionaryString moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDictionaryWriter moved from System.Runtime.Serialization.Xml"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDocument moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlDocumentFragment moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlElement moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlImplementation moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlLinkedNode moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNamedNodeMap moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNode moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNodeChangedAction moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNodeChangedEventArgs moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNodeChangedEventHandler moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNodeList moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlNodeOrder moved from System.Xml.XPath"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlProcessingInstruction moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlSignificantWhitespace moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlText moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.ReaderWriter,System.Xml.XmlWhitespace moved from System.Xml.XmlDocument"/>
-      <item text="System.Xml.XmlSerializer,System.Xml.Serialization.XmlSchemaProviderAttribute moved from System.Xml.ReaderWriter"/>
-      <item text="System.Xml.XPath,System.Xml.XmlDocumentXPathExtensions moved from System.Xml.XPath.XmlDocument"/>
-      <item text="System.Xml.XPath,System.Xml.XPath.Extensions moved from System.Xml.XPath.XDocument"/>
-      <item text="System.Xml.XPath,System.Xml.XPath.XDocumentExtensions moved from System.Xml.XPath.XDocument"/>
     </MOVED_NEEDS_REVIEW>
     <MOVED_VALID>
       <item text="Microsoft.Win32.Registry,Microsoft.Win32.RegistryAclExtensions moved from Microsoft.Win32.Registry.AccessControl"/>
@@ -348,7 +288,7 @@
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="20">
+  <ADDED_CONTRACTS total="19">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -368,9 +308,8 @@
     <item text="System.Security.TBD"/>
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>
-    <item text="System.Xml.Linq"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="16">
+  <MISSING_CONTRACTS total="11">
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.Diagnostics.Tools"/>
     <item text="	System.Dynamic.Runtime"/>
@@ -381,12 +320,7 @@
     <item text="	System.Reflection.Extensions"/>
     <item text="	System.Reflection.Primitives"/>
     <item text="	System.Runtime.CompilerServices.VisualC"/>
-    <item text="	System.Runtime.Serialization.Xml"/>
     <item text="	System.Threading.Tasks"/>
-    <item text="	System.Xml.XDocument"/>
-    <item text="	System.Xml.XmlDocument"/>
-    <item text="	System.Xml.XPath.XDocument"/>
-    <item text="	System.Xml.XPath.XmlDocument"/>
   </MISSING_CONTRACTS>
   <TYPES_NOT_IN_CORFX total="886">
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid"/>
@@ -1324,49 +1258,12 @@
     <item text="T:System.Runtime.Remoting.IConstructionCallMessage"/>
     <item text="T:System.Runtime.Remoting.IConstructionReturnMessage"/>
     <item text="T:System.Runtime.Remoting.UrlAttribute"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.IXmlDictionary moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.OnXmlDictionaryReaderClose moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.UniqueId moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlAttribute moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlAttributeCollection moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlBinaryReaderSession moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlBinaryWriterSession moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlCDataSection moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlCharacterData moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlComment moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDeclaration moved from System.Xml.XmlDocument"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionary moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionaryReader moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotas moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotaTypes moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionaryString moved from System.Runtime.Serialization.Xml"/>
-    <item text="T:System.Xml.ReaderWriter,System.Xml.XmlDictionaryWriter moved from System.Runtime.Serialization.Xml"/>
     <item text="T:System.IEquatable"/>
     <item text="T:System.Func"/>
     <item text="T:System.Runtime.ConstrainedExecution"/>
     <item text="T:System.ISerializable"/>
     <item text="T:System.Runtime.CompilerServices.TypeDependencyAttribute"/>
     <item text="T:System.Runtime.ForceTokenStabilizationAttribute"/>
-    <item text="T:Windows.Foundation.Point"/>
-    <item text="T:Windows.Foundation.Rect"/>
-    <item text="T:Windows.Foundation.Size"/>
-    <item text="T:Windows.UI.Color"/>
-    <item text="T:Windows.UI.Xaml.CornerRadius"/>
-    <item text="T:Windows.UI.Xaml.Duration"/>
-    <item text="T:Windows.UI.Xaml.DurationType"/>
-    <item text="T:Windows.UI.Xaml.GridLength"/>
-    <item text="T:Windows.UI.Xaml.GridUnitType"/>
-    <item text="T:Windows.UI.Xaml.LayoutCycleException"/>
-    <item text="T:Windows.UI.Xaml.Thickness"/>
-    <item text="T:Windows.UI.Xaml.Automation.ElementNotAvailableException"/>
-    <item text="T:Windows.UI.Xaml.Automation.ElementNotEnabledException"/>
-    <item text="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition"/>
-    <item text="T:Windows.UI.Xaml.Markup.XamlParseException"/>
-    <item text="T:Windows.UI.Xaml.Media.Animation.KeyTime"/>
-    <item text="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior"/>
-    <item text="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType"/>
-    <item text="T:Windows.UI.Xaml.Media.Media3D.Matrix3D"/>
-    <item text="T:Windows.UI.Xaml.Media.Matrix"/>
     <item text="T:System.Security.Policy"/>
     <item text="T:System.Security.Principal"/>
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>

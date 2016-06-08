@@ -1,9 +1,0 @@
-﻿/r:System.Runtime.dll
-
-Windows.Foundation.Point
-Windows.Foundation.Rect
-Windows.Foundation.Size
-
-Windows.UI.Color
-
-

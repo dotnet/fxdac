@@ -198,9 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
-    <Content Include="Data\Specifications\System.Xml.Linq.txt" />
+    <Content Include="Data\Specifications\System.Xml.XDocument.txt" />
+    <Content Include="Data\Specifications\System.Xml.XmlDocument.txt" />
     <Content Include="Data\Specifications\System.Xml.ReaderWriter.txt" />
     <Content Include="Data\Specifications\System.Xml.XPath.txt" />
+    <Content Include="Data\Specifications\System.Xml.XPath.XmlDocument.txt" />
+    <Content Include="Data\Specifications\System.Xml.XPath.XDocument.txt" />
     <None Include="Data\Specifications\System.Runtime.Serialization.Xml.txt" />
     <None Include="Data\Specifications\System.Data.SqlClient.txt" />
     <None Include="Data\Specifications\System.Reflection.TypeExtensions.txt" />

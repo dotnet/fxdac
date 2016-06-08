@@ -1,6 +1,5 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
-/r:System.Xml.XmlSerializer.dll
 /r:System.Xml.ReaderWriter.dll
 
 System.Xml.Linq.Extensions

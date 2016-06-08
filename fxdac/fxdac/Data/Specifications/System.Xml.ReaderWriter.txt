@@ -2,18 +2,8 @@
 /r:System.IO.dll
 
 System.Xml.Serialization.IXmlSerializable
+System.Xml.Serialization.XmlSchemaProviderAttribute
 
-System.Xml.IXmlDictionary
-System.Xml.OnXmlDictionaryReaderClose
-System.Xml.UniqueId
-System.Xml.XmlBinaryReaderSession
-System.Xml.XmlBinaryWriterSession
-System.Xml.XmlDictionary
-System.Xml.XmlDictionaryReader
-System.Xml.XmlDictionaryReaderQuotas
-System.Xml.XmlDictionaryReaderQuotaTypes
-System.Xml.XmlDictionaryString
-System.Xml.XmlDictionaryWriter
 System.Xml.ConformanceLevel
 System.Xml.DtdProcessing
 System.Xml.IXmlLineInfo
@@ -37,28 +27,6 @@ System.Xml.XmlReaderSettings
 System.Xml.XmlSpace
 System.Xml.XmlWriter
 System.Xml.XmlWriterSettings
-System.Xml.XmlAttribute
-System.Xml.XmlAttributeCollection
-System.Xml.XmlCDataSection
-System.Xml.XmlCharacterData
-System.Xml.XmlComment
-System.Xml.XmlDeclaration
-System.Xml.XmlDocument
-System.Xml.XmlDocumentFragment
-System.Xml.XmlElement
-System.Xml.XmlImplementation
-System.Xml.XmlLinkedNode
-System.Xml.XmlNamedNodeMap
-System.Xml.XmlNode
-System.Xml.XmlNodeChangedAction
-System.Xml.XmlNodeChangedEventArgs
-System.Xml.XmlNodeChangedEventHandler
-System.Xml.XmlNodeList
-System.Xml.XmlProcessingInstruction
-System.Xml.XmlSignificantWhitespace
-System.Xml.XmlText
-System.Xml.XmlWhitespace
-System.Xml.XmlNodeOrder
 
 System.Xml.Schema.XmlSchema
 System.Xml.Schema.XmlSchemaForm
