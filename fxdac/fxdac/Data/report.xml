@@ -74,50 +74,9 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="684" description="corefx types that changed their location">
+  <MOVED_TYPES total="620" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.SafeProcessHandle moved from System.Diagnostics.Process"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.AssociationAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.CompareAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.CreditCardAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.CustomValidationAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.DataType moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.DataTypeAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.DisplayAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.DisplayColumnAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.DisplayFormatAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.EditableAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.EmailAddressAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.EnumDataTypeAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.FileExtensionsAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.FilterUIHintAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.IValidatableObject moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.KeyAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.MaxLengthAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.MinLengthAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.PhoneAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.RangeAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.RegularExpressionAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.RequiredAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.ColumnAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.InversePropertyAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Schema.TableAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.StringLengthAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.TimestampAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.UIHintAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.UrlAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ValidationAttribute moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ValidationContext moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ValidationException moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.ValidationResult moved from System.ComponentModel.Annotations"/>
-      <item text="System.ComponentModel.DataAnnotations,System.ComponentModel.DataAnnotations.Validator moved from System.ComponentModel.Annotations"/>
       <item text="System.Data,Microsoft.SqlServer.Server.SqlDataRecord moved from System.Data.SqlClient"/>
       <item text="System.Data,Microsoft.SqlServer.Server.SqlMetaData moved from System.Data.SqlClient"/>
       <item text="System.Data,System.Data.CommandBehavior moved from System.Data.Common"/>
@@ -198,29 +157,6 @@
       <item text="System.Data,System.Data.StatementCompletedEventArgs moved from System.Data.SqlClient"/>
       <item text="System.Data,System.Data.StatementCompletedEventHandler moved from System.Data.SqlClient"/>
       <item text="System.Data,System.Data.UpdateRowSource moved from System.Data.Common"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventActivityOptions moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventChannel moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventCounter moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventDataAttribute moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventFieldAttribute moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventFieldFormat moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventFieldTags moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventIgnoreAttribute moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventListener moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventManifestOptions moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventOpcode moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventSourceException moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventSourceOptions moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventSourceSettings moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventTags moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventTask moved from System.Diagnostics.Tracing"/>
-      <item text="System.Diagnostics.Events,System.Diagnostics.Tracing.EventWrittenEventArgs moved from System.Diagnostics.Tracing"/>
-      <item text="System.IO.Compression.ZipFile,System.IO.Compression.ZipArchive moved from System.IO.Compression"/>
-      <item text="System.IO.Compression.ZipFile,System.IO.Compression.ZipArchiveEntry moved from System.IO.Compression"/>
-      <item text="System.IO.Compression.ZipFile,System.IO.Compression.ZipArchiveMode moved from System.IO.Compression"/>
-      <item text="System.Net.Http,System.Net.Http.CookieUsePolicy moved from System.Net.Http.WinHttpHandler"/>
-      <item text="System.Net.Http,System.Net.Http.WindowsProxyUsePolicy moved from System.Net.Http.WinHttpHandler"/>
-      <item text="System.Net.Http,System.Net.Http.WinHttpHandler moved from System.Net.Http.WinHttpHandler"/>
       <item text="System.Security.Cryptography.Cng,Microsoft.Win32.SafeHandles.SafeX509ChainHandle moved from System.Security.Cryptography.X509Certificates"/>
       <item text="System.Serialization.DataContract,System.Runtime.Serialization.CollectionDataContractAttribute moved from System.Runtime.Serialization.Primitives"/>
       <item text="System.Serialization.DataContract,System.Runtime.Serialization.ContractNamespaceAttribute moved from System.Runtime.Serialization.Primitives"/>
@@ -766,13 +702,11 @@
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="26">
+  <ADDED_CONTRACTS total="24">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
-    <item text="System.ComponentModel.DataAnnotations"/>
     <item text="System.Data"/>
     <item text="System.Deployment"/>
-    <item text="System.Diagnostics.Events"/>
     <item text="System.Diagnostics.SymbolStore"/>
     <item text="System.Net"/>
     <item text="System.Net.HttpListener"/>
@@ -794,15 +728,13 @@
     <item text="System.Timer"/>
     <item text="System.Xml"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="31">
+  <MISSING_CONTRACTS total="29">
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
-    <item text="	System.ComponentModel.Annotations"/>
     <item text="	System.Data.Common"/>
     <item text="	System.Data.SqlClient"/>
     <item text="	System.Diagnostics.TextWriterTraceListener"/>
     <item text="	System.Diagnostics.Tools"/>
     <item text="	System.Dynamic.Runtime"/>
-    <item text="	System.Net.Http.WinHttpHandler"/>
     <item text="	System.Reflection"/>
     <item text="	System.Reflection.Emit"/>
     <item text="	System.Reflection.Emit.ILGeneration"/>

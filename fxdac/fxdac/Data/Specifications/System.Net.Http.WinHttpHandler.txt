@@ -1,0 +1,8 @@
+﻿/r:System.Runtime.dll
+/r:System.Net.Primitives.dll
+/r:System.Security.Cryptography.X509Certificates.dll
+/r:System.Net.Http.dll
+
+System.Net.Http.CookieUsePolicy
+System.Net.Http.WindowsProxyUsePolicy
+System.Net.Http.WinHttpHandler

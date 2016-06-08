@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\System.Net.Http.WinHttpHandler.txt" />
     <None Include="Data\Specifications\System.Reflection.DispatchProxy.txt" />
     <None Include="Data\Specifications\System.Runtime.InteropServices.RuntimeInformation.txt" />
     <None Include="Data\Specifications\System.AppContext.txt" />
@@ -213,13 +214,12 @@
     <None Include="Data\Specifications\System.Runtime.Numerics.txt" />
     <None Include="Data\Specifications\System.IO.Pipes.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TextWriterTraceListener.txt" />
-    <None Include="Data\Specifications\System.Diagnostics.Events.txt" />
     <None Include="Data\Specifications\System.ServiceProcess.txt" />
     <None Include="Data\Specifications\System.Serialization.DataContract.txt" />
     <None Include="Data\Specifications\System.ServiceModel.txt" />
     <None Include="Data\Specifications\System.Xml.txt" />
     <None Include="Data\Specifications\System.Data.txt" />
-    <None Include="Data\Specifications\System.ComponentModel.DataAnnotations.txt" />
+    <None Include="Data\Specifications\System.ComponentModel.Annotations.txt" />
     <None Include="Data\Specifications\Microsoft.VisualBasic.txt" />
     <None Include="Data\Specifications\Microsoft.CSharp.txt" />
     <None Include="Data\Specifications\System.Threading.AccessControl.txt" />

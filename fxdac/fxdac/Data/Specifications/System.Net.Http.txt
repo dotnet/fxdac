@@ -22,9 +22,6 @@ System.Net.Http.MultipartContent
 System.Net.Http.MultipartFormDataContent
 System.Net.Http.StreamContent
 System.Net.Http.StringContent
-System.Net.Http.CookieUsePolicy
-System.Net.Http.WindowsProxyUsePolicy
-System.Net.Http.WinHttpHandler
 System.Net.Http.Headers.AuthenticationHeaderValue
 System.Net.Http.Headers.CacheControlHeaderValue
 System.Net.Http.Headers.ContentDispositionHeaderValue

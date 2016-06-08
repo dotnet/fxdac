@@ -1,8 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.Compression.dll
 
-System.IO.Compression.ZipArchive
-System.IO.Compression.ZipArchiveEntry
-System.IO.Compression.ZipArchiveMode
+
 System.IO.Compression.ZipFile
 System.IO.Compression.ZipFileExtensions
