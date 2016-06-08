@@ -304,17 +304,6 @@ namespace System.Runtime.Hosting {
 
 } // end of System.Runtime.Hosting
 namespace System.Runtime.InteropServices {
-  [System.CLSCompliantAttribute(false)]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  [System.Runtime.InteropServices.GuidAttribute("03973551-57A1-3900-A2B5-9083E3FF2943")]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface _Activator {
-    void GetIDsOfNames(ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId);
-    void GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo);
-    void GetTypeInfoCount(out uint pcTInfo);
-    void Invoke(uint dispIdMember, ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr);
-  }
-
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial interface ICustomFactory {
     System.MarshalByRefObject CreateInstance(System.Type serverType);

@@ -1,38 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Runtime.InteropServices {
-  [System.CLSCompliantAttribute(false)]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  [System.Runtime.InteropServices.GuidAttribute("917B14D0-2D9E-38B8-92A9-381ACF52F7C0")]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface _Attribute {
-    void GetIDsOfNames(ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId);
-    void GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo);
-    void GetTypeInfoCount(out uint pcTInfo);
-    void Invoke(uint dispIdMember, ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr);
-  }
-
-  [System.CLSCompliantAttribute(false)]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  [System.Runtime.InteropServices.GuidAttribute("C2323C25-F57F-3880-8A4D-12EBEA7A5852")]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface _MethodRental {
-    void GetIDsOfNames(ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId);
-    void GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo);
-    void GetTypeInfoCount(out uint pcTInfo);
-    void Invoke(uint dispIdMember, ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr);
-  }
-
-  [System.CLSCompliantAttribute(false)]
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  [System.Runtime.InteropServices.GuidAttribute("7D13DD37-5A04-393C-BBCA-A5FEA802893D")]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface _SignatureHelper {
-    void GetIDsOfNames(ref System.Guid riid, System.IntPtr rgszNames, uint cNames, uint lcid, System.IntPtr rgDispId);
-    void GetTypeInfo(uint iTInfo, uint lcid, System.IntPtr ppTInfo);
-    void GetTypeInfoCount(out uint pcTInfo);
-    void Invoke(uint dispIdMember, ref System.Guid riid, uint lcid, short wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr);
-  }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple=false, Inherited=false)]
   public sealed partial class AllowReversePInvokeCallsAttribute : System.Attribute {
     public AllowReversePInvokeCallsAttribute() { }
