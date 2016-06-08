@@ -24,3 +24,5 @@ System.Diagnostics.ProcessThreadCollectionBase
 System.Diagnostics.ProcessWindowStyle
 
  System.Diagnostics.MonitoringDescriptionAttribute
+
+ Microsoft.Win32.SafeHandles.SafeProcessHandle

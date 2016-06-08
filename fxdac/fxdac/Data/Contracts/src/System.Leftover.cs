@@ -22,33 +22,6 @@ namespace System {
     public int GetRemainingCount() { return default(int); }
   }
 
-  [System.CLSCompliantAttribute(false)]
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeSystemExtensions {
-    public static Windows.Foundation.IAsyncAction AsAsyncAction(this System.Threading.Tasks.Task source) { return default(Windows.Foundation.IAsyncAction); }
-    public static Windows.Foundation.IAsyncOperation<TResult> AsAsyncOperation<TResult>(this System.Threading.Tasks.Task<TResult> source) { return default(Windows.Foundation.IAsyncOperation<TResult>); }
-    public static System.Threading.Tasks.Task AsTask(this Windows.Foundation.IAsyncAction source) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task AsTask(this Windows.Foundation.IAsyncAction source, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task AsTask<TProgress>(this Windows.Foundation.IAsyncActionWithProgress<TProgress> source) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task AsTask<TProgress>(this Windows.Foundation.IAsyncActionWithProgress<TProgress> source, System.IProgress<TProgress> progress) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task AsTask<TProgress>(this Windows.Foundation.IAsyncActionWithProgress<TProgress> source, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task AsTask<TProgress>(this Windows.Foundation.IAsyncActionWithProgress<TProgress> source, System.Threading.CancellationToken cancellationToken, System.IProgress<TProgress> progress) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult>(this Windows.Foundation.IAsyncOperation<TResult> source) { return default(System.Threading.Tasks.Task<TResult>); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult>(this Windows.Foundation.IAsyncOperation<TResult> source, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<TResult>); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult, TProgress>(this Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> source) { return default(System.Threading.Tasks.Task<TResult>); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult, TProgress>(this Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> source, System.IProgress<TProgress> progress) { return default(System.Threading.Tasks.Task<TResult>); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult, TProgress>(this Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> source, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<TResult>); }
-    public static System.Threading.Tasks.Task<TResult> AsTask<TResult, TProgress>(this Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> source, System.Threading.CancellationToken cancellationToken, System.IProgress<TProgress> progress) { return default(System.Threading.Tasks.Task<TResult>); }
-    [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-    public static System.Runtime.CompilerServices.TaskAwaiter GetAwaiter(this Windows.Foundation.IAsyncAction source) { return default(System.Runtime.CompilerServices.TaskAwaiter); }
-    [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-    public static System.Runtime.CompilerServices.TaskAwaiter GetAwaiter<TProgress>(this Windows.Foundation.IAsyncActionWithProgress<TProgress> source) { return default(System.Runtime.CompilerServices.TaskAwaiter); }
-    [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-    public static System.Runtime.CompilerServices.TaskAwaiter<TResult> GetAwaiter<TResult>(this Windows.Foundation.IAsyncOperation<TResult> source) { return default(System.Runtime.CompilerServices.TaskAwaiter<TResult>); }
-    [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-    public static System.Runtime.CompilerServices.TaskAwaiter<TResult> GetAwaiter<TResult, TProgress>(this Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> source) { return default(System.Runtime.CompilerServices.TaskAwaiter<TResult>); }
-  }
-
 } // end of System
 namespace System.Runtime.InteropServices {
   [System.CLSCompliantAttribute(false)]
@@ -1345,98 +1318,6 @@ namespace System.Reflection.Emit {
   }
 
 } // end of System.Reflection.Emit
-namespace System.IO {
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeStorageExtensions {
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath, Windows.Storage.CreationCollisionOption creationCollisionOption) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeStreamExtensions {
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IInputStream AsInputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IInputStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IOutputStream AsOutputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IOutputStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IRandomAccessStream AsRandomAccessStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IRandomAccessStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-  }
-
-} // end of System.IO
-namespace System.Runtime.InteropServices.WindowsRuntime {
-  [System.CLSCompliantAttribute(false)]
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class AsyncInfo {
-    public static Windows.Foundation.IAsyncAction Run(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task> taskProvider) { return default(Windows.Foundation.IAsyncAction); }
-    public static Windows.Foundation.IAsyncActionWithProgress<TProgress> Run<TProgress>(System.Func<System.Threading.CancellationToken, System.IProgress<TProgress>, System.Threading.Tasks.Task> taskProvider) { return default(Windows.Foundation.IAsyncActionWithProgress<TProgress>); }
-    public static Windows.Foundation.IAsyncOperation<TResult> Run<TResult>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<TResult>> taskProvider) { return default(Windows.Foundation.IAsyncOperation<TResult>); }
-    public static Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress> Run<TResult, TProgress>(System.Func<System.Threading.CancellationToken, System.IProgress<TProgress>, System.Threading.Tasks.Task<TResult>> taskProvider) { return default(Windows.Foundation.IAsyncOperationWithProgress<TResult, TProgress>); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public sealed partial class WindowsRuntimeBuffer {
-    internal WindowsRuntimeBuffer() { }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer Create(byte[] data, int offset, int length, int capacity) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer Create(int capacity) { return default(Windows.Storage.Streams.IBuffer); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeBufferExtensions {
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer AsBuffer(this byte[] source) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer AsBuffer(this byte[] source, int offset, int length) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer AsBuffer(this byte[] source, int offset, int length, int capacity) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IBuffer source) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this byte[] source, int sourceIndex, Windows.Storage.Streams.IBuffer destination, uint destinationIndex, int count) { }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this byte[] source, Windows.Storage.Streams.IBuffer destination) { }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this Windows.Storage.Streams.IBuffer source, byte[] destination) { }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this Windows.Storage.Streams.IBuffer source, uint sourceIndex, byte[] destination, int destinationIndex, int count) { }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this Windows.Storage.Streams.IBuffer source, uint sourceIndex, Windows.Storage.Streams.IBuffer destination, uint destinationIndex, uint count) { }
-    [System.CLSCompliantAttribute(false)]
-    public static void CopyTo(this Windows.Storage.Streams.IBuffer source, Windows.Storage.Streams.IBuffer destination) { }
-    [System.CLSCompliantAttribute(false)]
-    public static byte GetByte(this Windows.Storage.Streams.IBuffer source, uint byteOffset) { return default(byte); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer GetWindowsRuntimeBuffer(this System.IO.MemoryStream underlyingStream) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IBuffer GetWindowsRuntimeBuffer(this System.IO.MemoryStream underlyingStream, int positionInStream, int length) { return default(Windows.Storage.Streams.IBuffer); }
-    [System.CLSCompliantAttribute(false)]
-    public static bool IsSameData(this Windows.Storage.Streams.IBuffer buffer, Windows.Storage.Streams.IBuffer otherBuffer) { return default(bool); }
-    [System.CLSCompliantAttribute(false)]
-    public static byte[] ToArray(this Windows.Storage.Streams.IBuffer source) { return default(byte[]); }
-    [System.CLSCompliantAttribute(false)]
-    public static byte[] ToArray(this Windows.Storage.Streams.IBuffer source, uint sourceIndex, int count) { return default(byte[]); }
-  }
-
-} // end of System.Runtime.InteropServices.WindowsRuntime
 namespace System.Security.Cryptography {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct ECCurve {

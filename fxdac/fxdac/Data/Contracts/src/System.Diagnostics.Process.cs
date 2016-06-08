@@ -391,3 +391,12 @@ namespace System.Diagnostics {
   }
 
 } // end of System.Diagnostics
+namespace Microsoft.Win32.SafeHandles {
+  [System.Security.SecurityCriticalAttribute]
+  public sealed partial class SafeProcessHandle : System.Runtime.InteropServices.SafeHandle {
+    public SafeProcessHandle(System.IntPtr existingHandle, bool ownsHandle) : base (default(System.IntPtr), default(bool)) { }
+    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+    protected override bool ReleaseHandle() { return default(bool); }
+  }
+
+} // end of Microsoft.Win32.SafeHandles

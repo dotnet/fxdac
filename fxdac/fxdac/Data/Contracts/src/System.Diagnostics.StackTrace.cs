@@ -39,4 +39,13 @@ namespace System.Diagnostics {
     public override string ToString() { return default(string); }
   }
 
+  public static partial class StackFrameExtensions {
+    public static System.IntPtr GetNativeImageBase(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
+    public static System.IntPtr GetNativeIP(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
+    public static bool HasILOffset(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
+    public static bool HasMethod(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
+    public static bool HasNativeImage(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
+    public static bool HasSource(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
+  }
+
 } // end of System.Diagnostics

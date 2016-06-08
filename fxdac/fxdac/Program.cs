@@ -58,8 +58,10 @@ static class Program
             }
         }
 
-        Console.WriteLine("\nPress ENTER to exit ...");
-        Console.ReadLine();
+        if (args.Length == 0) {
+            Console.WriteLine("\nPress ENTER to exit ...");
+            Console.ReadLine();
+        }
     }
 
     private static bool RefactorAssemblies(ReportWriter reportWriter, out FxRedist redist)
