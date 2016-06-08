@@ -8,3 +8,22 @@ System.Diagnostics.Tracing.EventLevel
 System.Diagnostics.Tracing.EventSource
 System.Diagnostics.Tracing.EventSourceAttribute
 System.Diagnostics.Tracing.NonEventAttribute
+
+// form corefx
+System.Diagnostics.Tracing.EventActivityOptions
+System.Diagnostics.Tracing.EventChannel
+System.Diagnostics.Tracing.EventCounter
+System.Diagnostics.Tracing.EventDataAttribute
+System.Diagnostics.Tracing.EventFieldAttribute
+System.Diagnostics.Tracing.EventFieldFormat
+System.Diagnostics.Tracing.EventFieldTags
+System.Diagnostics.Tracing.EventIgnoreAttribute
+System.Diagnostics.Tracing.EventListener
+System.Diagnostics.Tracing.EventManifestOptions
+System.Diagnostics.Tracing.EventOpcode
+System.Diagnostics.Tracing.EventSourceException
+System.Diagnostics.Tracing.EventSourceOptions
+System.Diagnostics.Tracing.EventSourceSettings
+System.Diagnostics.Tracing.EventTags
+System.Diagnostics.Tracing.EventTask
+System.Diagnostics.Tracing.EventWrittenEventArgs

@@ -4,3 +4,8 @@ System.IO.Compression.CompressionLevel
 System.IO.Compression.CompressionMode
 System.IO.Compression.DeflateStream
 System.IO.Compression.GZipStream
+
+// from corefx
+System.IO.Compression.ZipArchive
+System.IO.Compression.ZipArchiveEntry
+System.IO.Compression.ZipArchiveMode
