@@ -288,7 +288,7 @@
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="19">
+  <ADDED_CONTRACTS total="20">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -304,25 +304,22 @@
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
+    <item text="System.Security.Cryptography.Csp"/>
     <item text="System.Security.Permissions"/>
     <item text="System.Security.TBD"/>
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="11">
+  <MISSING_CONTRACTS total="7">
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.Diagnostics.Tools"/>
     <item text="	System.Dynamic.Runtime"/>
     <item text="	System.Reflection"/>
-    <item text="	System.Reflection.Emit"/>
-    <item text="	System.Reflection.Emit.ILGeneration"/>
-    <item text="	System.Reflection.Emit.Lightweight"/>
     <item text="	System.Reflection.Extensions"/>
-    <item text="	System.Reflection.Primitives"/>
     <item text="	System.Runtime.CompilerServices.VisualC"/>
     <item text="	System.Threading.Tasks"/>
   </MISSING_CONTRACTS>
-  <TYPES_NOT_IN_CORFX total="886">
+  <TYPES_NOT_IN_CORFX total="892">
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid"/>
     <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid"/>
     <item text="System.CodeDom,System.CodeDom.Compiler.IndentedTextWriter"/>
@@ -1056,9 +1053,15 @@
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.SHA512Managed"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.SignatureDescription"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.TripleDESCryptoServiceProvider"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.CspKeyContainerInfo"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.CspParameters"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.CspProviderFlags"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.DESCryptoServiceProvider"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.DSACryptoServiceProvider"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.ICspAsymmetricAlgorithm"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.KeyNumber"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.PasswordDeriveBytes"/>
+    <item text="System.Security.Cryptography.Csp,System.Security.Cryptography.RSACryptoServiceProvider"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Permissions.KeyContainerPermission"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Permissions.KeyContainerPermissionAccessEntry"/>
     <item text="System.Security.Cryptography.Csp,System.Security.Permissions.KeyContainerPermissionAccessEntryCollection"/>
@@ -1210,44 +1213,12 @@
     <item text="System.Timer,System.Timers.Timer"/>
     <item text="System.Timer,System.Timers.TimersDescriptionAttribute"/>
   </TYPES_NOT_IN_CORFX>
-  <TYPES_NOT_IN_MASTER_API total="39">
-    <item text="System.Reflection.Emit,System.Reflection.Emit.AssemblyBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.AssemblyBuilderAccess"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.ConstructorBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.EnumBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.EventBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.FieldBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.GenericTypeParameterBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.MethodBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.ModuleBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.PropertyBuilder"/>
-    <item text="System.Reflection.Emit,System.Reflection.Emit.TypeBuilder"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.CustomAttributeBuilder"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.ILGenerator"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.Label"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.LocalBuilder"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.ParameterBuilder"/>
-    <item text="System.Reflection.Emit.ILGeneration,System.Reflection.Emit.SignatureHelper"/>
-    <item text="System.Reflection.Emit.Lightweight,System.Reflection.Emit.DynamicMethod"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.FlowControl"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.OpCode"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.OpCodes"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.OpCodeType"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.OperandType"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.PackingSize"/>
-    <item text="System.Reflection.Primitives,System.Reflection.Emit.StackBehaviour"/>
+  <TYPES_NOT_IN_MASTER_API total="7">
     <item text="System.Runtime.InteropServices,System.Runtime.InteropServices.ComAwareEventInfo"/>
-    <item text="System.Runtime.Serialization.Xml,System.Runtime.Serialization.DataContractResolver"/>
-    <item text="System.Runtime.Serialization.Xml,System.Runtime.Serialization.DataContractSerializer"/>
-    <item text="System.Runtime.Serialization.Xml,System.Runtime.Serialization.DataContractSerializerExtensions"/>
-    <item text="System.Runtime.Serialization.Xml,System.Runtime.Serialization.DataContractSerializerSettings"/>
-    <item text="System.Runtime.Serialization.Xml,System.Runtime.Serialization.XmlObjectSerializer"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.ECCurve"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.ECDsa"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.ECParameters"/>
     <item text="System.Security.Cryptography.Algorithms,System.Security.Cryptography.ECPoint"/>
-    <item text="System.Security.Cryptography.Cng,System.Security.Cryptography.ECDsaCng"/>
-    <item text="System.Security.Cryptography.Cng,System.Security.Cryptography.RSACng"/>
     <item text="System.Security.Cryptography.X509Certificates,System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions"/>
     <item text="System.Security.Cryptography.X509Certificates,System.Security.Cryptography.X509Certificates.RSACertificateExtensions"/>
   </TYPES_NOT_IN_MASTER_API>
@@ -1264,11 +1235,9 @@
     <item text="T:System.ISerializable"/>
     <item text="T:System.Runtime.CompilerServices.TypeDependencyAttribute"/>
     <item text="T:System.Runtime.ForceTokenStabilizationAttribute"/>
-    <item text="T:System.Security.Policy"/>
-    <item text="T:System.Security.Principal"/>
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
   </ORPHANED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="55" description="types that are not in specification files">
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="23" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
     <item text="System.ArgIterator"/>
     <item text="System.Runtime.InteropServices._Assembly"/>
@@ -1286,42 +1255,10 @@
     <item text="System.Runtime.InteropServices._Thread"/>
     <item text="System.Runtime.InteropServices._Type"/>
     <item text="System.Runtime.InteropServices.ComAwareEventInfo"/>
-    <item text="System.Reflection.Emit.AssemblyBuilder"/>
-    <item text="System.Reflection.Emit.AssemblyBuilderAccess"/>
-    <item text="System.Reflection.Emit.ConstructorBuilder"/>
-    <item text="System.Reflection.Emit.EnumBuilder"/>
-    <item text="System.Reflection.Emit.EventBuilder"/>
-    <item text="System.Reflection.Emit.FieldBuilder"/>
-    <item text="System.Reflection.Emit.GenericTypeParameterBuilder"/>
-    <item text="System.Reflection.Emit.MethodBuilder"/>
-    <item text="System.Reflection.Emit.ModuleBuilder"/>
-    <item text="System.Reflection.Emit.PropertyBuilder"/>
-    <item text="System.Reflection.Emit.TypeBuilder"/>
-    <item text="System.Reflection.Emit.CustomAttributeBuilder"/>
-    <item text="System.Reflection.Emit.ILGenerator"/>
-    <item text="System.Reflection.Emit.Label"/>
-    <item text="System.Reflection.Emit.LocalBuilder"/>
-    <item text="System.Reflection.Emit.ParameterBuilder"/>
-    <item text="System.Reflection.Emit.SignatureHelper"/>
-    <item text="System.Reflection.Emit.DynamicMethod"/>
-    <item text="System.Reflection.Emit.FlowControl"/>
-    <item text="System.Reflection.Emit.OpCode"/>
-    <item text="System.Reflection.Emit.OpCodes"/>
-    <item text="System.Reflection.Emit.OpCodeType"/>
-    <item text="System.Reflection.Emit.OperandType"/>
-    <item text="System.Reflection.Emit.PackingSize"/>
-    <item text="System.Reflection.Emit.StackBehaviour"/>
-    <item text="System.Runtime.Serialization.DataContractResolver"/>
-    <item text="System.Runtime.Serialization.DataContractSerializer"/>
-    <item text="System.Runtime.Serialization.DataContractSerializerExtensions"/>
-    <item text="System.Runtime.Serialization.DataContractSerializerSettings"/>
-    <item text="System.Runtime.Serialization.XmlObjectSerializer"/>
     <item text="System.Security.Cryptography.ECCurve"/>
     <item text="System.Security.Cryptography.ECDsa"/>
     <item text="System.Security.Cryptography.ECParameters"/>
     <item text="System.Security.Cryptography.ECPoint"/>
-    <item text="System.Security.Cryptography.ECDsaCng"/>
-    <item text="System.Security.Cryptography.RSACng"/>
     <item text="System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions"/>
     <item text="System.Security.Cryptography.X509Certificates.RSACertificateExtensions"/>
   </TYPES_NOT_IN_ANY_ASSEMBLY>

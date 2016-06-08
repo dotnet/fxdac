@@ -9,7 +9,6 @@ System.Security.Permissions.TypeDescriptorPermissionFlags
 
 System.Security.ISecurityPolicyEncodable
 System.Security.PolicyLevelType
-System.Security.Policy
 
 System.Security.Policy.FileCodeGroup
 System.Security.Policy.ApplicationTrust

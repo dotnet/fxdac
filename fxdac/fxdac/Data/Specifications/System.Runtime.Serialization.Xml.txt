@@ -1,5 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.Xml.ReaderWriter.dll
+/r:System.Runtime.Serialization.Primitives.dll
 
 System.Xml.IXmlDictionary
 System.Xml.OnXmlDictionaryReaderClose
@@ -12,5 +13,11 @@ System.Xml.XmlDictionaryReaderQuotas
 System.Xml.XmlDictionaryReaderQuotaTypes
 System.Xml.XmlDictionaryString
 System.Xml.XmlDictionaryWriter
+
+System.Runtime.Serialization.DataContractResolver
+System.Runtime.Serialization.DataContractSerializer
+System.Runtime.Serialization.DataContractSerializerExtensions
+System.Runtime.Serialization.DataContractSerializerSettings
+System.Runtime.Serialization.XmlObjectSerializer
 
 
