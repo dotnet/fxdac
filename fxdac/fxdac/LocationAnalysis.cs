@@ -78,8 +78,8 @@ class LocationAnalysis
         GenerateDump(previous, types, false);
         GenerateDump(current, types, true);
 
-        var removed = types.Where((t) => t.CurrentAssembly == null).ToList();
-        removed.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
+        var missing = types.Where((t) => t.CurrentAssembly == null).ToList();
+        missing.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var added = types.Where((t) => t.PreviousAssembly == null).ToList();
         added.Sort((left, right)=> { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var moved = types.Where((t) => t.CurrentAssembly != t.PreviousAssembly && t.CurrentAssembly!=null && t.PreviousAssembly!=null).ToList();
@@ -92,7 +92,7 @@ class LocationAnalysis
         var previousContracts = types.Select((t) => t.PreviousAssembly).Where((a) => a != null).Distinct();
         var currentContracts = types.Select((t) => t.CurrentAssembly).Where((a) => a != null).Distinct();
         var addedContracts = currentContracts.Except(previousContracts).ToList();
-        var removedContracts = previousContracts.Except(currentContracts).ToList();
+        var missingContracts = previousContracts.Except(currentContracts).ToList();
 
         if (moved.Count > 0) {
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
@@ -111,26 +111,28 @@ class LocationAnalysis
                 reportWriter.WriteListEnd();
             }
 
-            if (validMoves.Count > 0) {
-                reportWriter.WriteListStart("MOVED_VALID");
-                foreach (var movedType in validMoves) {
-                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+            if (Program.s_logValidMoves) {
+                if (validMoves.Count > 0) {
+                    reportWriter.WriteListStart("MOVED_VALID");
+                    foreach (var movedType in validMoves) {
+                        reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+                    }
+                    reportWriter.WriteListEnd();
                 }
-                reportWriter.WriteListEnd();
-            }
 
-            if(movedToSystemRuntime.Count > 0) {
-                reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME");
-                foreach (var movedType in movedToSystemRuntime) {
-                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));                   
+                if (movedToSystemRuntime.Count > 0) {
+                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME");
+                    foreach (var movedType in movedToSystemRuntime) {
+                        reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+                    }
+                    reportWriter.WriteListEnd();
                 }
-                reportWriter.WriteListEnd();
             }
 
             reportWriter.WriteListEnd();
         }
 
-        if (addedContracts.Count > 0) {
+        if (Program.s_logAddedContracts && addedContracts.Count > 0) {
             addedContracts.Sort();
             reportWriter.WriteListStart("ADDED_CONTRACTS", "total", addedContracts.Count);
             foreach (var addedContract in addedContracts) {
@@ -139,16 +141,16 @@ class LocationAnalysis
             reportWriter.WriteListEnd();
         }
 
-        if (removedContracts.Count > 0) {
-            removedContracts.Sort();
-            reportWriter.WriteListStart("MISSING_CONTRACTS", "total", removedContracts.Count);
-            foreach (var removedContract in removedContracts) {
+        if (Program.s_logMissingContracts && missingContracts.Count > 0) {
+            missingContracts.Sort();
+            reportWriter.WriteListStart("MISSING_CONTRACTS", "total", missingContracts.Count);
+            foreach (var removedContract in missingContracts) {
                 reportWriter.WriteListItem("\t{0}", removedContract);
             }
             reportWriter.WriteListEnd();
         }
 
-        if (added.Count > 0) {
+        if (Program.s_logTypesNotInCoreFx && added.Count > 0) {
             reportWriter.WriteListStart("TYPES_NOT_IN_CORFX", "total", added.Count);
             foreach (var addedType in added) {
                 reportWriter.WriteListItem(addedType.AssemblyQualifiedName);
@@ -156,9 +158,10 @@ class LocationAnalysis
             reportWriter.WriteListEnd();
         }
 
-        if (removed.Count > 0) {
-            reportWriter.WriteListStart("TYPES_NOT_IN_MASTER_API", "total", removed.Count);
-            foreach (var removedType in removed) {
+
+        if (Program.s_logTypesNotInMasterSources && missing.Count > 0) {
+            reportWriter.WriteListStart("TYPES_NOT_IN_MASTER_API", "total", missing.Count);
+            foreach (var removedType in missing) {
                 reportWriter.WriteListItem(removedType.AssemblyQualifiedName);
             }
             reportWriter.WriteListEnd();
