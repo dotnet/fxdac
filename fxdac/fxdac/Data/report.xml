@@ -74,7 +74,7 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="620" description="corefx types that changed their location">
+  <MOVED_TYPES total="621" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
       <item text="Microsoft.Win32.SafeHandles,Microsoft.Win32.SafeHandles.SafeProcessHandle moved from System.Diagnostics.Process"/>
       <item text="System.Data,Microsoft.SqlServer.Server.SqlDataRecord moved from System.Data.SqlClient"/>
@@ -157,6 +157,7 @@
       <item text="System.Data,System.Data.StatementCompletedEventArgs moved from System.Data.SqlClient"/>
       <item text="System.Data,System.Data.StatementCompletedEventHandler moved from System.Data.SqlClient"/>
       <item text="System.Data,System.Data.UpdateRowSource moved from System.Data.Common"/>
+      <item text="System.Diagnostics.TextWriterTraceListener,System.Diagnostics.StackFrameExtensions moved from System.Diagnostics.StackTrace"/>
       <item text="System.Security.Cryptography.Cng,Microsoft.Win32.SafeHandles.SafeX509ChainHandle moved from System.Security.Cryptography.X509Certificates"/>
       <item text="System.Serialization.DataContract,System.Runtime.Serialization.CollectionDataContractAttribute moved from System.Runtime.Serialization.Primitives"/>
       <item text="System.Serialization.DataContract,System.Runtime.Serialization.ContractNamespaceAttribute moved from System.Runtime.Serialization.Primitives"/>
@@ -728,11 +729,10 @@
     <item text="System.Timer"/>
     <item text="System.Xml"/>
   </ADDED_CONTRACTS>
-  <MISSING_CONTRACTS total="29">
+  <MISSING_CONTRACTS total="28">
     <item text="	Microsoft.Win32.Registry.AccessControl"/>
     <item text="	System.Data.Common"/>
     <item text="	System.Data.SqlClient"/>
-    <item text="	System.Diagnostics.TextWriterTraceListener"/>
     <item text="	System.Diagnostics.Tools"/>
     <item text="	System.Dynamic.Runtime"/>
     <item text="	System.Reflection"/>
@@ -1647,10 +1647,7 @@
     <item text="System.Timer,System.Timers.Timer"/>
     <item text="System.Timer,System.Timers.TimersDescriptionAttribute"/>
   </TYPES_NOT_IN_CORFX>
-  <TYPES_NOT_IN_MASTER_API total="57">
-    <item text="System.Diagnostics.StackTrace,System.Diagnostics.StackFrameExtensions"/>
-    <item text="System.Diagnostics.TextWriterTraceListener,System.Diagnostics.DelimitedListTraceListener"/>
-    <item text="System.Diagnostics.TextWriterTraceListener,System.Diagnostics.TextWriterTraceListener"/>
+  <TYPES_NOT_IN_MASTER_API total="54">
     <item text="System.Globalization.Extensions,System.Globalization.GlobalizationExtensions"/>
     <item text="System.Globalization.Extensions,System.StringNormalizationExtensions"/>
     <item text="System.IO.FileSystem.AccessControl,System.IO.FileSystemAclExtensions"/>
@@ -1707,11 +1704,6 @@
     <item text="System.Threading.AccessControl,System.Threading.ThreadingAclExtensions"/>
   </TYPES_NOT_IN_MASTER_API>
   <ORPHANED_TYPES description="Orphaned types are types in the specifications that don't exist in master source.">
-    <item text="T:"System.Diagnostics.StackFrameExtensions"/>
-    <item text="T:"System.Diagnostics.DelimitedListTraceListener"/>
-    <item text="T:"System.Diagnostics.TextWriterTraceListener"/>
-    <item text="T:"System.Diagnostics.EventTypeFilter"/>
-    <item text="T:"System.Diagnostics.SourceFilter"/>
     <item text="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable"/>
     <item text="T:System.Runtime.Remoting.System.Runtime.Remoting.Activation"/>
     <item text="T:System.Runtime.Remoting.IActivator"/>
@@ -1728,7 +1720,7 @@
     <item text="T:System.Security.Principal"/>
     <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
   </ORPHANED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="73" description="types that are not in specification files">
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="70" description="types that are not in specification files">
     <item text="Mono.Runtime"/>
     <item text="System.ArgIterator"/>
     <item text="System.StringNormalizationExtensions"/>
@@ -1748,9 +1740,6 @@
     <item text="System.Runtime.InteropServices._Thread"/>
     <item text="System.Runtime.InteropServices._Type"/>
     <item text="System.Runtime.InteropServices.ComAwareEventInfo"/>
-    <item text="System.Diagnostics.StackFrameExtensions"/>
-    <item text="System.Diagnostics.DelimitedListTraceListener"/>
-    <item text="System.Diagnostics.TextWriterTraceListener"/>
     <item text="System.Globalization.GlobalizationExtensions"/>
     <item text="System.IO.FileSystemAclExtensions"/>
     <item text="System.IO.WindowsRuntimeStorageExtensions"/>
