@@ -1,7 +1,8 @@
 ﻿/r:System.Runtime.dll
+/r:System.Diagnostics.StackTrace.dll
+/r:System.IO.dll
+/r:System.Diagnostics.TraceSource.dll
 
-"System.Diagnostics.StackFrameExtensions
-"System.Diagnostics.DelimitedListTraceListener
-"System.Diagnostics.TextWriterTraceListener
-"System.Diagnostics.EventTypeFilter
-"System.Diagnostics.SourceFilter
+System.Diagnostics.StackFrameExtensions
+System.Diagnostics.DelimitedListTraceListener
+System.Diagnostics.TextWriterTraceListener

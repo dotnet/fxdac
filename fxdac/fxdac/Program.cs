@@ -287,7 +287,6 @@ static class Program
     static bool CompileAssembly(FxAssembly assembly) {
         if (assembly.Name == "System.Leftover") return true;
 
-        Console.WriteLine("\nCOMPILING {0}", assembly.Name);
         var assemblySyntaxTree = CSharpSyntaxTree.ParseText(File.ReadAllText(assembly.SourceFile));
 
         var references = new List<MetadataReference>();
