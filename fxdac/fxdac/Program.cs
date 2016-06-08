@@ -21,7 +21,12 @@ static class Program
     static string s_CoreFxAPIFile = @"..\..\Data\MasterAPIs\CoreFxAll.cs";
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
-    static bool s_printOrphanedTypesToConsole = false; // Orphaned types are types in the specifications that don't exist in master source.
+    internal static bool s_logOrphanedTypes = false; // Orphaned types are types in the specifications that don't exist in master source.
+    internal static bool s_logValidMoves = false;
+    internal static bool s_logTypesNotInCoreFx = false;
+    internal static bool s_logTypesNotInMasterSources = false;
+    internal static bool s_logMissingContracts = false;
+    internal static bool s_logAddedContracts = false;
 
     static void Main(string[] args)
     {
@@ -127,23 +132,20 @@ static class Program
 
     static void PrintOrphanedTypes(FxRedist redist, ReportWriter reportWriter)
     {
-        reportWriter.WriteListStart("ORPHANED_TYPES", "description", "Orphaned types are types in the specifications that don't exist in master source.");
-        foreach (var assembly in redist.Values) {
-            var orphanedTypes = assembly.OrphanedTypes;
-            if (orphanedTypes.Count > 0) {
-
-                if (s_printOrphanedTypesToConsole) {
+        if (s_logOrphanedTypes) {
+            reportWriter.WriteListStart("ORPHANED_TYPES", "description", "Orphaned types are types in the specifications that don't exist in master source.");
+            foreach (var assembly in redist.Values) {
+                var orphanedTypes = assembly.OrphanedTypes;
+                if (orphanedTypes.Count > 0) {
                     WriteMessage(ConsoleColor.Yellow, "Orphaned types in {0}", assembly.Name);
-                }
-                foreach (var type in orphanedTypes) {
-                    reportWriter.WriteListItem("{0}", type);
-                    if (s_printOrphanedTypesToConsole) {
-                        WriteMessage(ConsoleColor.Yellow, "\t{0}", type);
+
+                    foreach (var type in orphanedTypes) {
+                        reportWriter.WriteListItem("{0}", type);                         
                     }
                 }
             }
+            reportWriter.WriteListEnd();
         }
-        reportWriter.WriteListEnd();
     }
 
     static bool ProcessSpecifications(FxRedist redist)
