@@ -1,14 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Diagnostics {
-  public static partial class StackFrameExtensions {
-    public static System.IntPtr GetNativeImageBase(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
-    public static System.IntPtr GetNativeIP(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
-    public static bool HasILOffset(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
-    public static bool HasMethod(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
-    public static bool HasNativeImage(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
-    public static bool HasSource(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
-  }
-
   public partial class DelimitedListTraceListener : System.Diagnostics.TextWriterTraceListener {
     public DelimitedListTraceListener(System.IO.Stream stream) { }
     public DelimitedListTraceListener(System.IO.Stream stream, string name) { }

@@ -3,5 +3,6 @@
 
 System.Diagnostics.StackFrame
 System.Diagnostics.StackTrace
+System.Diagnostics.StackFrameExtensions
 
 

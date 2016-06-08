@@ -3,6 +3,6 @@
 /r:System.IO.dll
 /r:System.Diagnostics.TraceSource.dll
 
-System.Diagnostics.StackFrameExtensions
+
 System.Diagnostics.DelimitedListTraceListener
 System.Diagnostics.TextWriterTraceListener
