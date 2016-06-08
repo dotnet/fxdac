@@ -13,3 +13,5 @@ System.Threading.AutoResetEvent
 System.Threading.ManualResetEvent
 System.Threading.Semaphore
 
+System.Threading.ThreadingAclExtensions
+

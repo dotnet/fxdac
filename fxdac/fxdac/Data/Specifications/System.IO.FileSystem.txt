@@ -13,3 +13,5 @@ System.IO.File
 System.IO.FileInfo
 System.IO.FileSystemInfo
 System.Security.Permissions.FileIOPermissionAttribute
+
+System.IO.FileSystemAclExtensions

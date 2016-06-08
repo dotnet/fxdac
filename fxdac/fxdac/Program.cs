@@ -314,6 +314,7 @@ static class Program
         using (var ms = new FileStream(dllPath, FileMode.Create, FileAccess.Write, FileShare.None)) {
             EmitResult compilationResult = compilation.Emit(ms);
             if (!compilationResult.Success) {
+                Console.WriteLine("COMPILING {0}", assembly.Name);
                 ProcessCompilationErrors(compilationResult);
                 return false;
             } else {

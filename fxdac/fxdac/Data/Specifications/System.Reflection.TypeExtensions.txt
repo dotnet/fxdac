@@ -1,0 +1,12 @@
+﻿/r:System.Runtime.dll
+
+System.Reflection.Metadata.AssemblyExtensions
+System.Reflection.AssemblyExtensions
+System.Reflection.EventInfoExtensions
+System.Reflection.MemberInfoExtensions
+System.Reflection.MethodInfoExtensions
+System.Reflection.ModuleExtensions
+System.Reflection.PropertyInfoExtensions
+System.Reflection.TypeExtensions
+
+
