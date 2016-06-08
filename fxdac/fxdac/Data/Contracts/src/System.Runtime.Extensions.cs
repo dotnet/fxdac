@@ -99,3 +99,21 @@ namespace System.Net {
   }
 
 } // end of System.Net
+namespace System.Runtime.Versioning {
+  public sealed partial class FrameworkName : System.IEquatable<System.Runtime.Versioning.FrameworkName> {
+    public FrameworkName(string frameworkName) { }
+    public FrameworkName(string identifier, System.Version version) { }
+    public FrameworkName(string identifier, System.Version version, string profile) { }
+    public string FullName { get { return default(string); } }
+    public string Identifier { get { return default(string); } }
+    public string Profile { get { return default(string); } }
+    public System.Version Version { get { return default(System.Version); } }
+    public override bool Equals(object obj) { return default(bool); }
+    public bool Equals(System.Runtime.Versioning.FrameworkName other) { return default(bool); }
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right) { return default(bool); }
+    public static bool operator !=(System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right) { return default(bool); }
+    public override string ToString() { return default(string); }
+  }
+
+} // end of System.Runtime.Versioning

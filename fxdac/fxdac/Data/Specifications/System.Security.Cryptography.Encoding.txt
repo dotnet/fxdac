@@ -6,3 +6,4 @@ System.Security.Cryptography.AsnEncodedDataEnumerator
 System.Security.Cryptography.Oid
 System.Security.Cryptography.OidCollection
 System.Security.Cryptography.OidEnumerator
+System.Security.Cryptography.OidGroup

@@ -66,4 +66,18 @@ namespace System.Security.Cryptography {
     public void Reset() { }
   }
 
+  public enum OidGroup {
+    All = 0,
+    Attribute = 5,
+    EncryptionAlgorithm = 2,
+    EnhancedKeyUsage = 7,
+    ExtensionOrAttribute = 6,
+    HashAlgorithm = 1,
+    KeyDerivationFunction = 10,
+    Policy = 8,
+    PublicKeyAlgorithm = 3,
+    SignatureAlgorithm = 4,
+    Template = 9,
+  }
+
 } // end of System.Security.Cryptography

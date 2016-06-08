@@ -74,3 +74,27 @@ namespace Windows.Foundation {
   }
 
 } // end of Windows.Foundation
+namespace Windows.UI {
+  [System.Security.SecurityCriticalAttribute]
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct Color : System.IFormattable {
+    public byte A { get { return default(byte); } set { } }
+    public byte B { get { return default(byte); } set { } }
+    public byte G { get { return default(byte); } set { } }
+    public byte R { get { return default(byte); } set { } }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override bool Equals(object o) { return default(bool); }
+    public bool Equals(Windows.UI.Color color) { return default(bool); }
+    public static Windows.UI.Color FromArgb(byte a, byte r, byte g, byte b) { return default(Windows.UI.Color); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(Windows.UI.Color color1, Windows.UI.Color color2) { return default(bool); }
+    public static bool operator !=(Windows.UI.Color color1, Windows.UI.Color color2) { return default(bool); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override string ToString() { return default(string); }
+    public string ToString(System.IFormatProvider provider) { return default(string); }
+  }
+
+} // end of Windows.UI

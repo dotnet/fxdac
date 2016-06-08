@@ -21,3 +21,7 @@ System.Diagnostics.TraceListenerCollection
 System.Diagnostics.TraceOptions
 System.Diagnostics.TraceSource
 System.Diagnostics.TraceSwitch
+
+// from corfx
+System.Diagnostics.SourceFilter
+System.Diagnostics.EventTypeFilter

@@ -15,3 +15,6 @@ System.NetTcpStyleUriParser
 System.NewsStyleUriParser
 System.UriIdnScope
 
+// from corefx
+System.Runtime.Versioning.FrameworkName
+

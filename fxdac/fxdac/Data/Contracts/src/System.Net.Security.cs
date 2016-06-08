@@ -119,6 +119,12 @@ namespace System.Net.Security {
     public override void Write(byte[] buffer, int offset, int count) { }
   }
 
+  public enum EncryptionPolicy {
+    AllowNoEncryption = 1,
+    NoEncryption = 2,
+    RequireEncryption = 0,
+  }
+
 } // end of System.Net.Security
 namespace System.Security.Authentication {
   public partial class AuthenticationException : System.SystemException {

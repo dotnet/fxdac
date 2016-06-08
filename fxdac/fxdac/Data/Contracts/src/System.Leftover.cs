@@ -22,14 +22,6 @@ namespace System {
     public int GetRemainingCount() { return default(int); }
   }
 
-  public static partial class AppContext {
-    public static string BaseDirectory { get { return default(string); } }
-    public static string TargetFrameworkName { get { return default(string); } }
-    public static object GetData(string name) { return default(object); }
-    public static void SetSwitch(string switchName, bool isEnabled) { }
-    public static bool TryGetSwitch(string switchName, out bool isEnabled) { isEnabled = default(bool); return default(bool); }
-  }
-
   public static partial class StringNormalizationExtensions {
     public static bool IsNormalized(this string value) { return default(bool); }
     [System.Security.SecurityCriticalAttribute]
@@ -576,54 +568,7 @@ namespace System.Runtime.InteropServices {
     public override void RemoveEventHandler(object target, System.Delegate handler) { }
   }
 
-  public enum Architecture {
-    Arm = 2,
-    Arm64 = 3,
-    X64 = 1,
-    X86 = 0,
-  }
-
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct OSPlatform : System.IEquatable<System.Runtime.InteropServices.OSPlatform> {
-    public static System.Runtime.InteropServices.OSPlatform Linux { get { return default(System.Runtime.InteropServices.OSPlatform); } }
-    public static System.Runtime.InteropServices.OSPlatform OSX { get { return default(System.Runtime.InteropServices.OSPlatform); } }
-    public static System.Runtime.InteropServices.OSPlatform Windows { get { return default(System.Runtime.InteropServices.OSPlatform); } }
-    public static System.Runtime.InteropServices.OSPlatform Create(string osPlatform) { return default(System.Runtime.InteropServices.OSPlatform); }
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(System.Runtime.InteropServices.OSPlatform other) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(System.Runtime.InteropServices.OSPlatform left, System.Runtime.InteropServices.OSPlatform right) { return default(bool); }
-    public static bool operator !=(System.Runtime.InteropServices.OSPlatform left, System.Runtime.InteropServices.OSPlatform right) { return default(bool); }
-    public override string ToString() { return default(string); }
-  }
-
-  public static partial class RuntimeInformation {
-    public static string FrameworkDescription { get { return default(string); } }
-    public static System.Runtime.InteropServices.Architecture OSArchitecture { get { return default(System.Runtime.InteropServices.Architecture); } }
-    public static string OSDescription { get { return default(string); } }
-    public static System.Runtime.InteropServices.Architecture ProcessArchitecture { get { return default(System.Runtime.InteropServices.Architecture); } }
-    public static bool IsOSPlatform(System.Runtime.InteropServices.OSPlatform osPlatform) { return default(bool); }
-  }
-
 } // end of System.Runtime.InteropServices
-namespace Microsoft.Win32.SafeHandles {
-  [System.Security.SecurityCriticalAttribute]
-  public sealed partial class SafeProcessHandle : System.Runtime.InteropServices.SafeHandle {
-    public SafeProcessHandle(System.IntPtr existingHandle, bool ownsHandle) : base (default(System.IntPtr), default(bool)) { }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
-    protected override bool ReleaseHandle() { return default(bool); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public sealed partial class SafeAccessTokenHandle : System.Runtime.InteropServices.SafeHandle {
-    public SafeAccessTokenHandle(System.IntPtr handle) : base (default(System.IntPtr), default(bool)) { }
-    public static Microsoft.Win32.SafeHandles.SafeAccessTokenHandle InvalidHandle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
-    [System.Security.SecurityCriticalAttribute]
-    protected override bool ReleaseHandle() { return default(bool); }
-  }
-
-} // end of Microsoft.Win32.SafeHandles
 namespace System.Diagnostics {
   public static partial class StackFrameExtensions {
     public static System.IntPtr GetNativeImageBase(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
@@ -657,18 +602,6 @@ namespace System.Diagnostics {
     public override void Flush() { }
     public override void Write(string message) { }
     public override void WriteLine(string message) { }
-  }
-
-  public partial class EventTypeFilter : System.Diagnostics.TraceFilter {
-    public EventTypeFilter(System.Diagnostics.SourceLevels level) { }
-    public System.Diagnostics.SourceLevels EventType { get { return default(System.Diagnostics.SourceLevels); } set { } }
-    public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
-  }
-
-  public partial class SourceFilter : System.Diagnostics.TraceFilter {
-    public SourceFilter(string source) { }
-    public string Source { get { return default(string); } set { } }
-    public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
   }
 
 } // end of System.Diagnostics
@@ -726,135 +659,6 @@ namespace System.IO {
   }
 
 } // end of System.IO
-namespace System.Net.Security {
-  public enum EncryptionPolicy {
-    AllowNoEncryption = 1,
-    NoEncryption = 2,
-    RequireEncryption = 0,
-  }
-
-} // end of System.Net.Security
-namespace System.Net.Sockets {
-  public enum IPProtectionLevel {
-    EdgeRestricted = 20,
-    Restricted = 30,
-    Unrestricted = 10,
-    Unspecified = -1,
-  }
-
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct SocketReceiveFromResult {
-    public int ReceivedBytes;
-    public System.Net.EndPoint RemoteEndPoint;
-  }
-
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct SocketReceiveMessageFromResult {
-    public System.Net.Sockets.IPPacketInformation PacketInformation;
-    public int ReceivedBytes;
-    public System.Net.EndPoint RemoteEndPoint;
-    public System.Net.Sockets.SocketFlags SocketFlags;
-  }
-
-  public static partial class SocketTaskExtensions {
-    public static System.Threading.Tasks.Task<System.Net.Sockets.Socket> AcceptAsync(this System.Net.Sockets.Socket socket) { return default(System.Threading.Tasks.Task<System.Net.Sockets.Socket>); }
-    public static System.Threading.Tasks.Task<System.Net.Sockets.Socket> AcceptAsync(this System.Net.Sockets.Socket socket, System.Net.Sockets.Socket acceptSocket) { return default(System.Threading.Tasks.Task<System.Net.Sockets.Socket>); }
-    public static System.Threading.Tasks.Task ConnectAsync(this System.Net.Sockets.Socket socket, System.Net.EndPoint remoteEP) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task ConnectAsync(this System.Net.Sockets.Socket socket, System.Net.IPAddress address, int port) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task ConnectAsync(this System.Net.Sockets.Socket socket, System.Net.IPAddress[] addresses, int port) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task ConnectAsync(this System.Net.Sockets.Socket socket, string host, int port) { return default(System.Threading.Tasks.Task); }
-    public static System.Threading.Tasks.Task<int> ReceiveAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags) { return default(System.Threading.Tasks.Task<int>); }
-    public static System.Threading.Tasks.Task<int> ReceiveAsync(this System.Net.Sockets.Socket socket, System.Collections.Generic.IList<System.ArraySegment<byte>> buffers, System.Net.Sockets.SocketFlags socketFlags) { return default(System.Threading.Tasks.Task<int>); }
-    public static System.Threading.Tasks.Task<System.Net.Sockets.SocketReceiveFromResult> ReceiveFromAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags, System.Net.EndPoint remoteEndPoint) { return default(System.Threading.Tasks.Task<System.Net.Sockets.SocketReceiveFromResult>); }
-    public static System.Threading.Tasks.Task<System.Net.Sockets.SocketReceiveMessageFromResult> ReceiveMessageFromAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags, System.Net.EndPoint remoteEndPoint) { return default(System.Threading.Tasks.Task<System.Net.Sockets.SocketReceiveMessageFromResult>); }
-    public static System.Threading.Tasks.Task<int> SendAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags) { return default(System.Threading.Tasks.Task<int>); }
-    public static System.Threading.Tasks.Task<int> SendAsync(this System.Net.Sockets.Socket socket, System.Collections.Generic.IList<System.ArraySegment<byte>> buffers, System.Net.Sockets.SocketFlags socketFlags) { return default(System.Threading.Tasks.Task<int>); }
-    public static System.Threading.Tasks.Task<int> SendToAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags, System.Net.EndPoint remoteEP) { return default(System.Threading.Tasks.Task<int>); }
-  }
-
-} // end of System.Net.Sockets
-namespace System.Reflection {
-  public abstract partial class DispatchProxy {
-    protected DispatchProxy() { }
-    public static T Create<T, TProxy>() where TProxy : System.Reflection.DispatchProxy { return default(T); }
-    protected abstract object Invoke(System.Reflection.MethodInfo targetMethod, object[] args);
-  }
-
-  public static partial class AssemblyExtensions {
-    public static System.Type[] GetExportedTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
-    public static System.Reflection.Module[] GetModules(this System.Reflection.Assembly assembly) { return default(System.Reflection.Module[]); }
-    public static System.Type[] GetTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
-  }
-
-  public static partial class EventInfoExtensions {
-    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class MemberInfoExtensions {
-    public static int GetMetadataToken(this System.Reflection.MemberInfo member) { return default(int); }
-    public static bool HasMetadataToken(this System.Reflection.MemberInfo member) { return default(bool); }
-  }
-
-  public static partial class MethodInfoExtensions {
-    public static System.Reflection.MethodInfo GetBaseDefinition(this System.Reflection.MethodInfo method) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class ModuleExtensions {
-    public static System.Guid GetModuleVersionId(this System.Reflection.Module module) { return default(System.Guid); }
-    public static bool HasModuleVersionId(this System.Reflection.Module module) { return default(bool); }
-  }
-
-  public static partial class PropertyInfoExtensions {
-    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class TypeExtensions {
-    public static System.Reflection.ConstructorInfo GetConstructor(this System.Type type, System.Type[] types) { return default(System.Reflection.ConstructorInfo); }
-    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type) { return default(System.Reflection.ConstructorInfo[]); }
-    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.ConstructorInfo[]); }
-    public static System.Reflection.MemberInfo[] GetDefaultMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name) { return default(System.Reflection.EventInfo); }
-    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo); }
-    public static System.Reflection.EventInfo[] GetEvents(this System.Type type) { return default(System.Reflection.EventInfo[]); }
-    public static System.Reflection.EventInfo[] GetEvents(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo[]); }
-    public static System.Reflection.FieldInfo GetField(this System.Type type, string name) { return default(System.Reflection.FieldInfo); }
-    public static System.Reflection.FieldInfo GetField(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo); }
-    public static System.Reflection.FieldInfo[] GetFields(this System.Type type) { return default(System.Reflection.FieldInfo[]); }
-    public static System.Reflection.FieldInfo[] GetFields(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo[]); }
-    public static System.Type[] GetGenericArguments(this System.Type type) { return default(System.Type[]); }
-    public static System.Type[] GetInterfaces(this System.Type type) { return default(System.Type[]); }
-    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Type[] types) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Type GetNestedType(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Type); }
-    public static System.Type[] GetNestedTypes(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Type[]); }
-    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type) { return default(System.Reflection.PropertyInfo[]); }
-    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo[]); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType, System.Type[] types) { return default(System.Reflection.PropertyInfo); }
-    public static bool IsAssignableFrom(this System.Type type, System.Type c) { return default(bool); }
-    public static bool IsInstanceOfType(this System.Type type, object o) { return default(bool); }
-  }
-
-} // end of System.Reflection
 namespace System.Reflection.Emit {
   public sealed partial class AssemblyBuilder : System.Reflection.Assembly {
     internal AssemblyBuilder() { }
@@ -1640,44 +1444,88 @@ namespace System.Reflection.Emit {
   }
 
 } // end of System.Reflection.Emit
-namespace System.Runtime.Versioning {
-  public sealed partial class FrameworkName : System.IEquatable<System.Runtime.Versioning.FrameworkName> {
-    public FrameworkName(string frameworkName) { }
-    public FrameworkName(string identifier, System.Version version) { }
-    public FrameworkName(string identifier, System.Version version, string profile) { }
-    public string FullName { get { return default(string); } }
-    public string Identifier { get { return default(string); } }
-    public string Profile { get { return default(string); } }
-    public System.Version Version { get { return default(System.Version); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(System.Runtime.Versioning.FrameworkName other) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right) { return default(bool); }
-    public static bool operator !=(System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right) { return default(bool); }
-    public override string ToString() { return default(string); }
+namespace System.Reflection {
+  public static partial class AssemblyExtensions {
+    public static System.Type[] GetExportedTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
+    public static System.Reflection.Module[] GetModules(this System.Reflection.Assembly assembly) { return default(System.Reflection.Module[]); }
+    public static System.Type[] GetTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
   }
 
-} // end of System.Runtime.Versioning
+  public static partial class EventInfoExtensions {
+    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
+  }
+
+  public static partial class MemberInfoExtensions {
+    public static int GetMetadataToken(this System.Reflection.MemberInfo member) { return default(int); }
+    public static bool HasMetadataToken(this System.Reflection.MemberInfo member) { return default(bool); }
+  }
+
+  public static partial class MethodInfoExtensions {
+    public static System.Reflection.MethodInfo GetBaseDefinition(this System.Reflection.MethodInfo method) { return default(System.Reflection.MethodInfo); }
+  }
+
+  public static partial class ModuleExtensions {
+    public static System.Guid GetModuleVersionId(this System.Reflection.Module module) { return default(System.Guid); }
+    public static bool HasModuleVersionId(this System.Reflection.Module module) { return default(bool); }
+  }
+
+  public static partial class PropertyInfoExtensions {
+    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo[]); }
+    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo[]); }
+    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
+  }
+
+  public static partial class TypeExtensions {
+    public static System.Reflection.ConstructorInfo GetConstructor(this System.Type type, System.Type[] types) { return default(System.Reflection.ConstructorInfo); }
+    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type) { return default(System.Reflection.ConstructorInfo[]); }
+    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.ConstructorInfo[]); }
+    public static System.Reflection.MemberInfo[] GetDefaultMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
+    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name) { return default(System.Reflection.EventInfo); }
+    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo); }
+    public static System.Reflection.EventInfo[] GetEvents(this System.Type type) { return default(System.Reflection.EventInfo[]); }
+    public static System.Reflection.EventInfo[] GetEvents(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo[]); }
+    public static System.Reflection.FieldInfo GetField(this System.Type type, string name) { return default(System.Reflection.FieldInfo); }
+    public static System.Reflection.FieldInfo GetField(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo); }
+    public static System.Reflection.FieldInfo[] GetFields(this System.Type type) { return default(System.Reflection.FieldInfo[]); }
+    public static System.Reflection.FieldInfo[] GetFields(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo[]); }
+    public static System.Type[] GetGenericArguments(this System.Type type) { return default(System.Type[]); }
+    public static System.Type[] GetInterfaces(this System.Type type) { return default(System.Type[]); }
+    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name) { return default(System.Reflection.MemberInfo[]); }
+    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
+    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
+    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
+    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Type[] types) { return default(System.Reflection.MethodInfo); }
+    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type) { return default(System.Reflection.MethodInfo[]); }
+    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo[]); }
+    public static System.Type GetNestedType(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Type); }
+    public static System.Type[] GetNestedTypes(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Type[]); }
+    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type) { return default(System.Reflection.PropertyInfo[]); }
+    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo[]); }
+    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name) { return default(System.Reflection.PropertyInfo); }
+    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo); }
+    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType) { return default(System.Reflection.PropertyInfo); }
+    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType, System.Type[] types) { return default(System.Reflection.PropertyInfo); }
+    public static bool IsAssignableFrom(this System.Type type, System.Type c) { return default(bool); }
+    public static bool IsInstanceOfType(this System.Type type, object o) { return default(bool); }
+  }
+
+} // end of System.Reflection
 namespace System.Threading {
   public static partial class WaitHandleExtensions {
     [System.Security.SecurityCriticalAttribute]
     public static Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle(this System.Threading.WaitHandle waitHandle) { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); }
     [System.Security.SecurityCriticalAttribute]
     public static void SetSafeWaitHandle(this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value) { }
-  }
-
-  public sealed partial class AsyncLocal<T> {
-    public AsyncLocal() { }
-    [System.Security.SecurityCriticalAttribute]
-    public AsyncLocal(System.Action<System.Threading.AsyncLocalValueChangedArgs<T>> valueChangedHandler) { }
-    public T Value { get { return default(T); } set { } }
-  }
-
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct AsyncLocalValueChangedArgs<T> {
-    public T CurrentValue { get { return default(T); } }
-    public T PreviousValue { get { return default(T); } }
-    public bool ThreadContextChanged { get { return default(bool); } }
   }
 
   [System.Security.SecurityCriticalAttribute]
@@ -1691,94 +1539,6 @@ namespace System.Threading {
   }
 
 } // end of System.Threading
-namespace System.Runtime.InteropServices.ComTypes {
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.FlagsAttribute]
-  public enum ADVF {
-    ADVF_DATAONSTOP = 64,
-    ADVF_NODATA = 1,
-    ADVF_ONLYONCE = 4,
-    ADVF_PRIMEFIRST = 2,
-    ADVFCACHE_FORCEBUILTIN = 16,
-    ADVFCACHE_NOHANDLER = 8,
-    ADVFCACHE_ONSAVE = 32,
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  public enum DATADIR {
-    DATADIR_GET = 1,
-    DATADIR_SET = 2,
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.FlagsAttribute]
-  public enum DVASPECT {
-    DVASPECT_CONTENT = 1,
-    DVASPECT_DOCPRINT = 8,
-    DVASPECT_ICON = 4,
-    DVASPECT_THUMBNAIL = 2,
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct FORMATETC {
-    public short cfFormat;
-    public System.Runtime.InteropServices.ComTypes.DVASPECT dwAspect;
-    public int lindex;
-    public System.IntPtr ptd;
-    public System.Runtime.InteropServices.ComTypes.TYMED tymed;
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface IAdviseSink {
-    void OnClose();
-    void OnDataChange(ref System.Runtime.InteropServices.ComTypes.FORMATETC format, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM stgmedium);
-    void OnRename(System.Runtime.InteropServices.ComTypes.IMoniker moniker);
-    void OnSave();
-    void OnViewChange(int aspect, int index);
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
-  public partial interface IEnumFORMATETC {
-    void Clone(out System.Runtime.InteropServices.ComTypes.IEnumFORMATETC newEnum);
-    int Next(int celt, System.Runtime.InteropServices.ComTypes.FORMATETC[] rgelt, int[] pceltFetched);
-    int Reset();
-    int Skip(int celt);
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct STATDATA {
-    public System.Runtime.InteropServices.ComTypes.ADVF advf;
-    public System.Runtime.InteropServices.ComTypes.IAdviseSink advSink;
-    public int connection;
-    public System.Runtime.InteropServices.ComTypes.FORMATETC formatetc;
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct STGMEDIUM {
-    public object pUnkForRelease;
-    public System.Runtime.InteropServices.ComTypes.TYMED tymed;
-    public System.IntPtr unionmember;
-  }
-
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.FlagsAttribute]
-  public enum TYMED {
-    TYMED_ENHMF = 64,
-    TYMED_FILE = 2,
-    TYMED_GDI = 16,
-    TYMED_HGLOBAL = 1,
-    TYMED_ISTORAGE = 8,
-    TYMED_ISTREAM = 4,
-    TYMED_MFPICT = 32,
-    TYMED_NULL = 0,
-  }
-
-} // end of System.Runtime.InteropServices.ComTypes
 namespace System.Reflection.Metadata {
   public static partial class AssemblyExtensions {
     [System.CLSCompliantAttribute(false)]
@@ -1842,189 +1602,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
   }
 
 } // end of System.Runtime.InteropServices.WindowsRuntime
-namespace Windows.UI {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct Color : System.IFormattable {
-    public byte A { get { return default(byte); } set { } }
-    public byte B { get { return default(byte); } set { } }
-    public byte G { get { return default(byte); } set { } }
-    public byte R { get { return default(byte); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object o) { return default(bool); }
-    public bool Equals(Windows.UI.Color color) { return default(bool); }
-    public static Windows.UI.Color FromArgb(byte a, byte r, byte g, byte b) { return default(Windows.UI.Color); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Color color1, Windows.UI.Color color2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Color color1, Windows.UI.Color color2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-    public string ToString(System.IFormatProvider provider) { return default(string); }
-  }
-
-} // end of Windows.UI
-namespace Windows.UI.Xaml {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct CornerRadius {
-    public CornerRadius(double uniformRadius) { throw new System.NotImplementedException(); }
-    public CornerRadius(double topLeft, double topRight, double bottomRight, double bottomLeft) { throw new System.NotImplementedException(); }
-    public double BottomLeft { get { return default(double); } set { } }
-    public double BottomRight { get { return default(double); } set { } }
-    public double TopLeft { get { return default(double); } set { } }
-    public double TopRight { get { return default(double); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.CornerRadius cornerRadius) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.CornerRadius cr1, Windows.UI.Xaml.CornerRadius cr2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.CornerRadius cr1, Windows.UI.Xaml.CornerRadius cr2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct Duration {
-    public Duration(System.TimeSpan timeSpan) { throw new System.NotImplementedException(); }
-    public static Windows.UI.Xaml.Duration Automatic { get { return default(Windows.UI.Xaml.Duration); } }
-    public static Windows.UI.Xaml.Duration Forever { get { return default(Windows.UI.Xaml.Duration); } }
-    public bool HasTimeSpan { get { return default(bool); } }
-    public System.TimeSpan TimeSpan { get { return default(System.TimeSpan); } }
-    public Windows.UI.Xaml.Duration Add(Windows.UI.Xaml.Duration duration) { return default(Windows.UI.Xaml.Duration); }
-    public static int Compare(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(int); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object value) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Duration duration) { return default(bool); }
-    public static bool Equals(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static Windows.UI.Xaml.Duration operator +(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(Windows.UI.Xaml.Duration); }
-    public static bool operator ==(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static bool operator >(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static bool operator >=(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static implicit operator Windows.UI.Xaml.Duration (System.TimeSpan timeSpan) { return default(Windows.UI.Xaml.Duration); }
-    public static bool operator !=(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static bool operator <(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static bool operator <=(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(bool); }
-    public static Windows.UI.Xaml.Duration operator -(Windows.UI.Xaml.Duration t1, Windows.UI.Xaml.Duration t2) { return default(Windows.UI.Xaml.Duration); }
-    public static Windows.UI.Xaml.Duration operator +(Windows.UI.Xaml.Duration duration) { return default(Windows.UI.Xaml.Duration); }
-    public Windows.UI.Xaml.Duration Subtract(Windows.UI.Xaml.Duration duration) { return default(Windows.UI.Xaml.Duration); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public enum DurationType {
-    Automatic = 0,
-    Forever = 2,
-    TimeSpan = 1,
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct GridLength {
-    public GridLength(double pixels) { throw new System.NotImplementedException(); }
-    public GridLength(double value, Windows.UI.Xaml.GridUnitType type) { throw new System.NotImplementedException(); }
-    public static Windows.UI.Xaml.GridLength Auto { get { return default(Windows.UI.Xaml.GridLength); } }
-    public Windows.UI.Xaml.GridUnitType GridUnitType { get { return default(Windows.UI.Xaml.GridUnitType); } }
-    public bool IsAbsolute { get { return default(bool); } }
-    public bool IsAuto { get { return default(bool); } }
-    public bool IsStar { get { return default(bool); } }
-    public double Value { get { return default(double); } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object oCompare) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.GridLength gridLength) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.GridLength gl1, Windows.UI.Xaml.GridLength gl2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.GridLength gl1, Windows.UI.Xaml.GridLength gl2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public enum GridUnitType {
-    Auto = 0,
-    Pixel = 1,
-    Star = 2,
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public partial class LayoutCycleException : System.Exception {
-    public LayoutCycleException() { }
-    public LayoutCycleException(string message) { }
-    public LayoutCycleException(string message, System.Exception innerException) { }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct Thickness {
-    public Thickness(double uniformLength) { throw new System.NotImplementedException(); }
-    public Thickness(double left, double top, double right, double bottom) { throw new System.NotImplementedException(); }
-    public double Bottom { get { return default(double); } set { } }
-    public double Left { get { return default(double); } set { } }
-    public double Right { get { return default(double); } set { } }
-    public double Top { get { return default(double); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Thickness thickness) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.Thickness t1, Windows.UI.Xaml.Thickness t2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.Thickness t1, Windows.UI.Xaml.Thickness t2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-} // end of Windows.UI.Xaml
-namespace Windows.UI.Xaml.Automation {
-  [System.Security.SecurityCriticalAttribute]
-  public partial class ElementNotAvailableException : System.Exception {
-    public ElementNotAvailableException() { }
-    public ElementNotAvailableException(string message) { }
-    public ElementNotAvailableException(string message, System.Exception innerException) { }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public partial class ElementNotEnabledException : System.Exception {
-    public ElementNotEnabledException() { }
-    public ElementNotEnabledException(string message) { }
-    public ElementNotEnabledException(string message, System.Exception innerException) { }
-  }
-
-} // end of Windows.UI.Xaml.Automation
-namespace Windows.UI.Xaml.Controls.Primitives {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct GeneratorPosition {
-    public GeneratorPosition(int index, int offset) { throw new System.NotImplementedException(); }
-    public int Index { get { return default(int); } set { } }
-    public int Offset { get { return default(int); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object o) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition gp1, Windows.UI.Xaml.Controls.Primitives.GeneratorPosition gp2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition gp1, Windows.UI.Xaml.Controls.Primitives.GeneratorPosition gp2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-} // end of Windows.UI.Xaml.Controls.Primitives
-namespace Windows.UI.Xaml.Markup {
-  [System.Security.SecurityCriticalAttribute]
-  public partial class XamlParseException : System.Exception {
-    public XamlParseException() { }
-    public XamlParseException(string message) { }
-    public XamlParseException(string message, System.Exception innerException) { }
-  }
-
-} // end of Windows.UI.Xaml.Markup
 namespace Windows.UI.Xaml.Media {
   [System.Security.SecurityCriticalAttribute]
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -2054,100 +1631,6 @@ namespace Windows.UI.Xaml.Media {
   }
 
 } // end of Windows.UI.Xaml.Media
-namespace Windows.UI.Xaml.Media.Animation {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct KeyTime {
-    public System.TimeSpan TimeSpan { get { return default(System.TimeSpan); } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object value) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Media.Animation.KeyTime value) { return default(bool); }
-    public static bool Equals(Windows.UI.Xaml.Media.Animation.KeyTime keyTime1, Windows.UI.Xaml.Media.Animation.KeyTime keyTime2) { return default(bool); }
-    public static Windows.UI.Xaml.Media.Animation.KeyTime FromTimeSpan(System.TimeSpan timeSpan) { return default(Windows.UI.Xaml.Media.Animation.KeyTime); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.Media.Animation.KeyTime keyTime1, Windows.UI.Xaml.Media.Animation.KeyTime keyTime2) { return default(bool); }
-    public static implicit operator Windows.UI.Xaml.Media.Animation.KeyTime (System.TimeSpan timeSpan) { return default(Windows.UI.Xaml.Media.Animation.KeyTime); }
-    public static bool operator !=(Windows.UI.Xaml.Media.Animation.KeyTime keyTime1, Windows.UI.Xaml.Media.Animation.KeyTime keyTime2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct RepeatBehavior : System.IFormattable {
-    public RepeatBehavior(double count) { throw new System.NotImplementedException(); }
-    public RepeatBehavior(System.TimeSpan duration) { throw new System.NotImplementedException(); }
-    public double Count { get { return default(double); } set { } }
-    public System.TimeSpan Duration { get { return default(System.TimeSpan); } set { } }
-    public static Windows.UI.Xaml.Media.Animation.RepeatBehavior Forever { get { return default(Windows.UI.Xaml.Media.Animation.RepeatBehavior); } }
-    public bool HasCount { get { return default(bool); } }
-    public bool HasDuration { get { return default(bool); } }
-    public Windows.UI.Xaml.Media.Animation.RepeatBehaviorType Type { get { return default(Windows.UI.Xaml.Media.Animation.RepeatBehaviorType); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object value) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior) { return default(bool); }
-    public static bool Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior1, Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior1, Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior1, Windows.UI.Xaml.Media.Animation.RepeatBehavior repeatBehavior2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    string System.IFormattable.ToString(string format, System.IFormatProvider formatProvider) { return default(string); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-    public string ToString(System.IFormatProvider formatProvider) { return default(string); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public enum RepeatBehaviorType {
-    Count = 0,
-    Duration = 1,
-    Forever = 2,
-  }
-
-} // end of Windows.UI.Xaml.Media.Animation
-namespace Windows.UI.Xaml.Media.Media3D {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct Matrix3D : System.IFormattable {
-    public Matrix3D(double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double offsetX, double offsetY, double offsetZ, double m44) { throw new System.NotImplementedException(); }
-    public bool HasInverse { get { return default(bool); } }
-    public static Windows.UI.Xaml.Media.Media3D.Matrix3D Identity { get { return default(Windows.UI.Xaml.Media.Media3D.Matrix3D); } }
-    public bool IsIdentity { get { return default(bool); } }
-    public double M11 { get { return default(double); } set { } }
-    public double M12 { get { return default(double); } set { } }
-    public double M13 { get { return default(double); } set { } }
-    public double M14 { get { return default(double); } set { } }
-    public double M21 { get { return default(double); } set { } }
-    public double M22 { get { return default(double); } set { } }
-    public double M23 { get { return default(double); } set { } }
-    public double M24 { get { return default(double); } set { } }
-    public double M31 { get { return default(double); } set { } }
-    public double M32 { get { return default(double); } set { } }
-    public double M33 { get { return default(double); } set { } }
-    public double M34 { get { return default(double); } set { } }
-    public double M44 { get { return default(double); } set { } }
-    public double OffsetX { get { return default(double); } set { } }
-    public double OffsetY { get { return default(double); } set { } }
-    public double OffsetZ { get { return default(double); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object o) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Media.Media3D.Matrix3D value) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public void Invert() { }
-    public static bool operator ==(Windows.UI.Xaml.Media.Media3D.Matrix3D matrix1, Windows.UI.Xaml.Media.Media3D.Matrix3D matrix2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.Media.Media3D.Matrix3D matrix1, Windows.UI.Xaml.Media.Media3D.Matrix3D matrix2) { return default(bool); }
-    public static Windows.UI.Xaml.Media.Media3D.Matrix3D operator *(Windows.UI.Xaml.Media.Media3D.Matrix3D matrix1, Windows.UI.Xaml.Media.Media3D.Matrix3D matrix2) { return default(Windows.UI.Xaml.Media.Media3D.Matrix3D); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-    public string ToString(System.IFormatProvider provider) { return default(string); }
-  }
-
-} // end of Windows.UI.Xaml.Media.Media3D
 namespace System.Security.Cryptography {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct ECCurve {
@@ -2234,58 +1717,6 @@ namespace System.Security.Cryptography {
     public byte[] Y;
   }
 
-  public sealed partial class IncrementalHash : System.IDisposable {
-    internal IncrementalHash() { }
-    public System.Security.Cryptography.HashAlgorithmName AlgorithmName { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public void AppendData(byte[] data) { }
-    public void AppendData(byte[] data, int offset, int count) { }
-    public static System.Security.Cryptography.IncrementalHash CreateHash(System.Security.Cryptography.HashAlgorithmName hashAlgorithm) { return default(System.Security.Cryptography.IncrementalHash); }
-    public static System.Security.Cryptography.IncrementalHash CreateHMAC(System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] key) { return default(System.Security.Cryptography.IncrementalHash); }
-    public void Dispose() { }
-    public byte[] GetHashAndReset() { return default(byte[]); }
-  }
-
-  public sealed partial class RSAEncryptionPadding : System.IEquatable<System.Security.Cryptography.RSAEncryptionPadding> {
-    internal RSAEncryptionPadding() { }
-    public System.Security.Cryptography.RSAEncryptionPaddingMode Mode { get { return default(System.Security.Cryptography.RSAEncryptionPaddingMode); } }
-    public System.Security.Cryptography.HashAlgorithmName OaepHashAlgorithm { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA1 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA256 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA384 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding OaepSHA512 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding Pkcs1 { get { return default(System.Security.Cryptography.RSAEncryptionPadding); } }
-    public static System.Security.Cryptography.RSAEncryptionPadding CreateOaep(System.Security.Cryptography.HashAlgorithmName hashAlgorithm) { return default(System.Security.Cryptography.RSAEncryptionPadding); }
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(System.Security.Cryptography.RSAEncryptionPadding other) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(System.Security.Cryptography.RSAEncryptionPadding left, System.Security.Cryptography.RSAEncryptionPadding right) { return default(bool); }
-    public static bool operator !=(System.Security.Cryptography.RSAEncryptionPadding left, System.Security.Cryptography.RSAEncryptionPadding right) { return default(bool); }
-    public override string ToString() { return default(string); }
-  }
-
-  public enum RSAEncryptionPaddingMode {
-    Oaep = 1,
-    Pkcs1 = 0,
-  }
-
-  public sealed partial class RSASignaturePadding : System.IEquatable<System.Security.Cryptography.RSASignaturePadding> {
-    internal RSASignaturePadding() { }
-    public System.Security.Cryptography.RSASignaturePaddingMode Mode { get { return default(System.Security.Cryptography.RSASignaturePaddingMode); } }
-    public static System.Security.Cryptography.RSASignaturePadding Pkcs1 { get { return default(System.Security.Cryptography.RSASignaturePadding); } }
-    public static System.Security.Cryptography.RSASignaturePadding Pss { get { return default(System.Security.Cryptography.RSASignaturePadding); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(System.Security.Cryptography.RSASignaturePadding other) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right) { return default(bool); }
-    public static bool operator !=(System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right) { return default(bool); }
-    public override string ToString() { return default(string); }
-  }
-
-  public enum RSASignaturePaddingMode {
-    Pkcs1 = 0,
-    Pss = 1,
-  }
-
   public sealed partial class ECDsaCng : System.Security.Cryptography.ECDsa {
     public ECDsaCng() { }
     public ECDsaCng(int keySize) { }
@@ -2314,37 +1745,6 @@ namespace System.Security.Cryptography {
     public override void ImportParameters(System.Security.Cryptography.RSAParameters parameters) { }
     public override byte[] SignHash(byte[] hash, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding) { return default(byte[]); }
     public override bool VerifyHash(byte[] hash, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding) { return default(bool); }
-  }
-
-  public enum OidGroup {
-    All = 0,
-    Attribute = 5,
-    EncryptionAlgorithm = 2,
-    EnhancedKeyUsage = 7,
-    ExtensionOrAttribute = 6,
-    HashAlgorithm = 1,
-    KeyDerivationFunction = 10,
-    Policy = 8,
-    PublicKeyAlgorithm = 3,
-    SignatureAlgorithm = 4,
-    Template = 9,
-  }
-
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct HashAlgorithmName : System.IEquatable<System.Security.Cryptography.HashAlgorithmName> {
-    public HashAlgorithmName(string name) { throw new System.NotImplementedException(); }
-    public static System.Security.Cryptography.HashAlgorithmName MD5 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public string Name { get { return default(string); } }
-    public static System.Security.Cryptography.HashAlgorithmName SHA1 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public static System.Security.Cryptography.HashAlgorithmName SHA256 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public static System.Security.Cryptography.HashAlgorithmName SHA384 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public static System.Security.Cryptography.HashAlgorithmName SHA512 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
-    public override bool Equals(object obj) { return default(bool); }
-    public bool Equals(System.Security.Cryptography.HashAlgorithmName other) { return default(bool); }
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(System.Security.Cryptography.HashAlgorithmName left, System.Security.Cryptography.HashAlgorithmName right) { return default(bool); }
-    public static bool operator !=(System.Security.Cryptography.HashAlgorithmName left, System.Security.Cryptography.HashAlgorithmName right) { return default(bool); }
-    public override string ToString() { return default(string); }
   }
 
 } // end of System.Security.Cryptography

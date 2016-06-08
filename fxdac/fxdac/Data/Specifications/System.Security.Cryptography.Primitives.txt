@@ -14,3 +14,6 @@ System.Security.Cryptography.PaddingMode
 
 System.Security.Cryptography.SymmetricAlgorithm 
 System.Security.Cryptography.CryptographicUnexpectedOperationException
+
+// corefx
+System.Security.Cryptography.HashAlgorithmName

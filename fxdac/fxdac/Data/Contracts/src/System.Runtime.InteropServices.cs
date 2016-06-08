@@ -1710,6 +1710,92 @@ namespace System.Runtime.InteropServices.ComTypes {
     VAR_STATIC = 1,
   }
 
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.FlagsAttribute]
+  public enum ADVF {
+    ADVF_DATAONSTOP = 64,
+    ADVF_NODATA = 1,
+    ADVF_ONLYONCE = 4,
+    ADVF_PRIMEFIRST = 2,
+    ADVFCACHE_FORCEBUILTIN = 16,
+    ADVFCACHE_NOHANDLER = 8,
+    ADVFCACHE_ONSAVE = 32,
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  public enum DATADIR {
+    DATADIR_GET = 1,
+    DATADIR_SET = 2,
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.FlagsAttribute]
+  public enum DVASPECT {
+    DVASPECT_CONTENT = 1,
+    DVASPECT_DOCPRINT = 8,
+    DVASPECT_ICON = 4,
+    DVASPECT_THUMBNAIL = 2,
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct FORMATETC {
+    public short cfFormat;
+    public System.Runtime.InteropServices.ComTypes.DVASPECT dwAspect;
+    public int lindex;
+    public System.IntPtr ptd;
+    public System.Runtime.InteropServices.ComTypes.TYMED tymed;
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
+  public partial interface IAdviseSink {
+    void OnClose();
+    void OnDataChange(ref System.Runtime.InteropServices.ComTypes.FORMATETC format, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM stgmedium);
+    void OnRename(System.Runtime.InteropServices.ComTypes.IMoniker moniker);
+    void OnSave();
+    void OnViewChange(int aspect, int index);
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
+  public partial interface IEnumFORMATETC {
+    void Clone(out System.Runtime.InteropServices.ComTypes.IEnumFORMATETC newEnum);
+    int Next(int celt, System.Runtime.InteropServices.ComTypes.FORMATETC[] rgelt, int[] pceltFetched);
+    int Reset();
+    int Skip(int celt);
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct STATDATA {
+    public System.Runtime.InteropServices.ComTypes.ADVF advf;
+    public System.Runtime.InteropServices.ComTypes.IAdviseSink advSink;
+    public int connection;
+    public System.Runtime.InteropServices.ComTypes.FORMATETC formatetc;
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct STGMEDIUM {
+    public object pUnkForRelease;
+    public System.Runtime.InteropServices.ComTypes.TYMED tymed;
+    public System.IntPtr unionmember;
+  }
+
+  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+  [System.FlagsAttribute]
+  public enum TYMED {
+    TYMED_ENHMF = 64,
+    TYMED_FILE = 2,
+    TYMED_GDI = 16,
+    TYMED_HGLOBAL = 1,
+    TYMED_ISTORAGE = 8,
+    TYMED_ISTREAM = 4,
+    TYMED_MFPICT = 32,
+    TYMED_NULL = 0,
+  }
+
 } // end of System.Runtime.InteropServices.ComTypes
 namespace System.Runtime.InteropServices.Expando {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]

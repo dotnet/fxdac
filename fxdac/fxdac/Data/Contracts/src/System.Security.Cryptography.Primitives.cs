@@ -188,4 +188,21 @@ namespace System.Security.Cryptography {
     public bool ValidKeySize(int bitLength) { return default(bool); }
   }
 
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct HashAlgorithmName : System.IEquatable<System.Security.Cryptography.HashAlgorithmName> {
+    public HashAlgorithmName(string name) { throw new System.NotImplementedException(); }
+    public static System.Security.Cryptography.HashAlgorithmName MD5 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public string Name { get { return default(string); } }
+    public static System.Security.Cryptography.HashAlgorithmName SHA1 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public static System.Security.Cryptography.HashAlgorithmName SHA256 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public static System.Security.Cryptography.HashAlgorithmName SHA384 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public static System.Security.Cryptography.HashAlgorithmName SHA512 { get { return default(System.Security.Cryptography.HashAlgorithmName); } }
+    public override bool Equals(object obj) { return default(bool); }
+    public bool Equals(System.Security.Cryptography.HashAlgorithmName other) { return default(bool); }
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(System.Security.Cryptography.HashAlgorithmName left, System.Security.Cryptography.HashAlgorithmName right) { return default(bool); }
+    public static bool operator !=(System.Security.Cryptography.HashAlgorithmName left, System.Security.Cryptography.HashAlgorithmName right) { return default(bool); }
+    public override string ToString() { return default(string); }
+  }
+
 } // end of System.Security.Cryptography
