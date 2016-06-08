@@ -9,7 +9,8 @@ using System.Text;
 class FxdacSyntaxRewriter : CSharpSyntaxRewriter
 {
     public static Predicate<string> s_ShouldRemoveType = new Predicate<string>((typeName) => {
-        return typeName.StartsWith("System.Runtime.InteropServices._");
+        return typeName.StartsWith("System.Runtime.InteropServices._") ||
+        typeName.StartsWith("Mono.Runtime");
     });
 
     public static Predicate<string> s_ShouldRemoveAttributeApplication = new Predicate<string>((attributeName) => {

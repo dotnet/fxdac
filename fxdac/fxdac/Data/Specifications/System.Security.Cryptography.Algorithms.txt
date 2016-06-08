@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Principal.dll
+/r:System.Security.Cryptography.Encoding.dll
 
 System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
 System.Security.Cryptography.AsymmetricKeyExchangeFormatter
@@ -73,6 +74,11 @@ System.Security.Cryptography.RSAEncryptionPadding
 System.Security.Cryptography.RSAEncryptionPaddingMode
 System.Security.Cryptography.RSASignaturePadding
 System.Security.Cryptography.RSASignaturePaddingMode
+
+System.Security.Cryptography.ECCurve
+System.Security.Cryptography.ECDsa
+System.Security.Cryptography.ECParameters
+System.Security.Cryptography.ECPoint
 
 
 
