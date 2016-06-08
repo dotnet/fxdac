@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <None Include="Data\Specifications\System.Reflection.Primitives.txt" />
     <Content Include="Data\Specifications\System.Xml.XDocument.txt" />
     <Content Include="Data\Specifications\System.Xml.XmlDocument.txt" />
     <Content Include="Data\Specifications\System.Xml.ReaderWriter.txt" />
@@ -217,7 +218,6 @@
     <None Include="Data\Specifications\System.Text.Encoding.CodePages.txt" />
     <None Include="Data\Specifications\System.Net.Http.txt" />
     <None Include="Data\Specifications\System.IO.Compression.ZipFile.txt" />
-    <None Include="Data\Specifications\System.Security.Cryptography.Cng.txt" />
     <None Include="Data\Specifications\System.Runtime.Numerics.txt" />
     <None Include="Data\Specifications\System.IO.Pipes.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TextWriterTraceListener.txt" />

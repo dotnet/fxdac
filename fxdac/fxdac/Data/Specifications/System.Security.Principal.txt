@@ -6,5 +6,4 @@ System.Security.SecurityElement
 System.Security.Principal.TokenImpersonationLevel
 System.Security.Principal.IPrincipal
 System.Security.Principal.IIdentity
-System.Security.Principal
 System.Security.Principal.PrincipalPolicy
