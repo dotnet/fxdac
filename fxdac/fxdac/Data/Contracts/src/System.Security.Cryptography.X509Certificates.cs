@@ -511,6 +511,16 @@ namespace System.Security.Cryptography.X509Certificates {
     NoFlag = 0,
   }
 
+  public static partial class ECDsaCertificateExtensions {
+    public static System.Security.Cryptography.ECDsa GetECDsaPrivateKey(this System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) { return default(System.Security.Cryptography.ECDsa); }
+    public static System.Security.Cryptography.ECDsa GetECDsaPublicKey(this System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) { return default(System.Security.Cryptography.ECDsa); }
+  }
+
+  public static partial class RSACertificateExtensions {
+    public static System.Security.Cryptography.RSA GetRSAPrivateKey(this System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) { return default(System.Security.Cryptography.RSA); }
+    public static System.Security.Cryptography.RSA GetRSAPublicKey(this System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) { return default(System.Security.Cryptography.RSA); }
+  }
+
 } // end of System.Security.Cryptography.X509Certificates
 namespace System.Security.Cryptography {
   public sealed partial class AesCryptoServiceProvider : System.Security.Cryptography.Aes {

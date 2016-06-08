@@ -1,5 +1,6 @@
 <report>
   <REMOVED>
+    <item text="Removed type Runtime"/>
     <item text="Removed base System.Runtime.InteropServices._Activator from type Activator"/>
     <item text="Removed method Activator.GetIDsOfNames(System.Guid, System.IntPtr, uint, uint, System.IntPtr)"/>
     <item text="Removed method Activator.GetTypeInfo(uint, uint, System.IntPtr)"/>
@@ -106,15 +107,8 @@
       <item text="System.Threading.Security,System.Threading.ThreadingAclExtensions moved from System.Threading.AccessControl"/>
     </MOVED_NEEDS_REVIEW>
   </MOVED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="9" description="types that are not in specification files">
-    <item text="Mono.Runtime"/>
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="2" description="types that are not in specification files">
     <item text="System.ArgIterator"/>
     <item text="System.Runtime.InteropServices.ComAwareEventInfo"/>
-    <item text="System.Security.Cryptography.ECCurve"/>
-    <item text="System.Security.Cryptography.ECDsa"/>
-    <item text="System.Security.Cryptography.ECParameters"/>
-    <item text="System.Security.Cryptography.ECPoint"/>
-    <item text="System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions"/>
-    <item text="System.Security.Cryptography.X509Certificates.RSACertificateExtensions"/>
   </TYPES_NOT_IN_ANY_ASSEMBLY>
 </report>
