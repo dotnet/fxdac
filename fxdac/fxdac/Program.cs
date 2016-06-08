@@ -25,25 +25,36 @@ static class Program
 
     static void Main(string[] args)
     {
-        FxRedist redist;
-        using (var reportWriter = new ReportWriter(s_ReportPath)) {
-            if (RefactorAssemblies(reportWriter, out redist)) {         
-                LocationAnalysis.CompareFactorings(s_ExistingContracts, s_OutputDlls, reportWriter);
-            }
+        if(args.Length > 0) {
+            s_ExistingContracts = args[0];
+        }
 
-            // Orphaned types are types in the specifications that don't exist in master source.
-            PrintOrphanedTypes(redist, reportWriter);
+        if (!Directory.Exists(s_ExistingContracts)) {
+            WriteMessage(ConsoleColor.Red, "Existing contract folder {0} does not exist", s_ExistingContracts);
+        } else {
 
-            if (redist.Leftover.Count > 0) {
-                reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files");
-
-                foreach (var ns in redist.Leftover) {
-                    var nsName = ns.Key;
-                    foreach (var type in ns.Value) {
-                        reportWriter.WriteListItem(type.Symbol.GetDocumentationCommentId().Substring(2));
+            FxRedist redist;
+            using (var reportWriter = new ReportWriter(s_ReportPath)) {
+                if (RefactorAssemblies(reportWriter, out redist)) {
+                    if (s_ExistingContracts != null) {
+                        LocationAnalysis.CompareFactorings(s_ExistingContracts, s_OutputDlls, reportWriter);
                     }
                 }
-                reportWriter.WriteListEnd();
+
+                // Orphaned types are types in the specifications that don't exist in master source.
+                PrintOrphanedTypes(redist, reportWriter);
+
+                if (redist.Leftover.Count > 0) {
+                    reportWriter.WriteListStart("TYPES_NOT_IN_ANY_ASSEMBLY", "total", redist.Leftover.CountOfTypes, "description", "types that are not in specification files");
+
+                    foreach (var ns in redist.Leftover) {
+                        var nsName = ns.Key;
+                        foreach (var type in ns.Value) {
+                            reportWriter.WriteListItem(type.Symbol.GetDocumentationCommentId().Substring(2));
+                        }
+                    }
+                    reportWriter.WriteListEnd();
+                }
             }
         }
 

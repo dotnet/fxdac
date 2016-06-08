@@ -1707,11 +1707,11 @@
     <item text="System.Threading.AccessControl,System.Threading.ThreadingAclExtensions"/>
   </TYPES_NOT_IN_MASTER_API>
   <ORPHANED_TYPES description="Orphaned types are types in the specifications that don't exist in master source.">
-    <item text="T:"System.Diagnostics.StackFrameExtensions""/>
-    <item text="T:"System.Diagnostics.DelimitedListTraceListener""/>
-    <item text="T:"System.Diagnostics.TextWriterTraceListener""/>
-    <item text="T:"System.Diagnostics.EventTypeFilter""/>
-    <item text="T:"System.Diagnostics.SourceFilter""/>
+    <item text="T:"System.Diagnostics.StackFrameExtensions"/>
+    <item text="T:"System.Diagnostics.DelimitedListTraceListener"/>
+    <item text="T:"System.Diagnostics.TextWriterTraceListener"/>
+    <item text="T:"System.Diagnostics.EventTypeFilter"/>
+    <item text="T:"System.Diagnostics.SourceFilter"/>
     <item text="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable"/>
     <item text="T:System.Runtime.Remoting.System.Runtime.Remoting.Activation"/>
     <item text="T:System.Runtime.Remoting.IActivator"/>
