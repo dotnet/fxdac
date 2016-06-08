@@ -1,3 +1,17 @@
 ﻿/r:System.Runtime.dll
 
 System.Runtime.Serialization.SerializationException
+
+System.Runtime.Serialization.CollectionDataContractAttribute
+System.Runtime.Serialization.ContractNamespaceAttribute
+System.Runtime.Serialization.DataContractAttribute
+System.Runtime.Serialization.DataMemberAttribute
+System.Runtime.Serialization.EnumMemberAttribute
+System.Runtime.Serialization.IgnoreDataMemberAttribute
+System.Runtime.Serialization.InvalidDataContractException
+System.Runtime.Serialization.ISerializationSurrogateProvider
+System.Runtime.Serialization.KnownTypeAttribute
+
+
+
+

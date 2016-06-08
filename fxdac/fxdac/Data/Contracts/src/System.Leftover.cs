@@ -1318,6 +1318,77 @@ namespace System.Reflection.Emit {
   }
 
 } // end of System.Reflection.Emit
+namespace System.Runtime.Serialization {
+  public abstract partial class DataContractResolver {
+    protected DataContractResolver() { }
+    public abstract System.Type ResolveName(string typeName, string typeNamespace, System.Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver);
+    public abstract bool TryResolveType(System.Type type, System.Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver, out System.Xml.XmlDictionaryString typeName, out System.Xml.XmlDictionaryString typeNamespace);
+  }
+
+  public sealed partial class DataContractSerializer : System.Runtime.Serialization.XmlObjectSerializer {
+    public DataContractSerializer(System.Type type) { }
+    public DataContractSerializer(System.Type type, System.Collections.Generic.IEnumerable<System.Type> knownTypes) { }
+    public DataContractSerializer(System.Type type, System.Runtime.Serialization.DataContractSerializerSettings settings) { }
+    public DataContractSerializer(System.Type type, string rootName, string rootNamespace) { }
+    public DataContractSerializer(System.Type type, string rootName, string rootNamespace, System.Collections.Generic.IEnumerable<System.Type> knownTypes) { }
+    public DataContractSerializer(System.Type type, System.Xml.XmlDictionaryString rootName, System.Xml.XmlDictionaryString rootNamespace) { }
+    public DataContractSerializer(System.Type type, System.Xml.XmlDictionaryString rootName, System.Xml.XmlDictionaryString rootNamespace, System.Collections.Generic.IEnumerable<System.Type> knownTypes) { }
+    public bool IgnoreExtensionDataObject { get { return default(bool); } }
+    public System.Collections.ObjectModel.ReadOnlyCollection<System.Type> KnownTypes { get { return default(System.Collections.ObjectModel.ReadOnlyCollection<System.Type>); } }
+    public int MaxItemsInObjectGraph { get { return default(int); } }
+    public bool PreserveObjectReferences { get { return default(bool); } }
+    public bool SerializeReadOnlyTypes { get { return default(bool); } }
+    public override bool IsStartObject(System.Xml.XmlDictionaryReader reader) { return default(bool); }
+    public override bool IsStartObject(System.Xml.XmlReader reader) { return default(bool); }
+    public override object ReadObject(System.Xml.XmlDictionaryReader reader, bool verifyObjectName) { return default(object); }
+    public override object ReadObject(System.Xml.XmlReader reader) { return default(object); }
+    public override object ReadObject(System.Xml.XmlReader reader, bool verifyObjectName) { return default(object); }
+    public override void WriteEndObject(System.Xml.XmlDictionaryWriter writer) { }
+    public override void WriteEndObject(System.Xml.XmlWriter writer) { }
+    public override void WriteObject(System.Xml.XmlWriter writer, object graph) { }
+    public override void WriteObjectContent(System.Xml.XmlDictionaryWriter writer, object graph) { }
+    public override void WriteObjectContent(System.Xml.XmlWriter writer, object graph) { }
+    public override void WriteStartObject(System.Xml.XmlDictionaryWriter writer, object graph) { }
+    public override void WriteStartObject(System.Xml.XmlWriter writer, object graph) { }
+  }
+
+  public static partial class DataContractSerializerExtensions {
+    public static System.Runtime.Serialization.ISerializationSurrogateProvider GetSerializationSurrogateProvider(this System.Runtime.Serialization.DataContractSerializer serializer) { return default(System.Runtime.Serialization.ISerializationSurrogateProvider); }
+    public static void SetSerializationSurrogateProvider(this System.Runtime.Serialization.DataContractSerializer serializer, System.Runtime.Serialization.ISerializationSurrogateProvider provider) { }
+  }
+
+  public partial class DataContractSerializerSettings {
+    public DataContractSerializerSettings() { }
+    public System.Runtime.Serialization.DataContractResolver DataContractResolver { get { return default(System.Runtime.Serialization.DataContractResolver); } set { } }
+    public System.Collections.Generic.IEnumerable<System.Type> KnownTypes { get { return default(System.Collections.Generic.IEnumerable<System.Type>); } set { } }
+    public int MaxItemsInObjectGraph { get { return default(int); } set { } }
+    public bool PreserveObjectReferences { get { return default(bool); } set { } }
+    public System.Xml.XmlDictionaryString RootName { get { return default(System.Xml.XmlDictionaryString); } set { } }
+    public System.Xml.XmlDictionaryString RootNamespace { get { return default(System.Xml.XmlDictionaryString); } set { } }
+    public bool SerializeReadOnlyTypes { get { return default(bool); } set { } }
+  }
+
+  public abstract partial class XmlObjectSerializer {
+    protected XmlObjectSerializer() { }
+    public abstract bool IsStartObject(System.Xml.XmlDictionaryReader reader);
+    public virtual bool IsStartObject(System.Xml.XmlReader reader) { return default(bool); }
+    public virtual object ReadObject(System.IO.Stream stream) { return default(object); }
+    public virtual object ReadObject(System.Xml.XmlDictionaryReader reader) { return default(object); }
+    public abstract object ReadObject(System.Xml.XmlDictionaryReader reader, bool verifyObjectName);
+    public virtual object ReadObject(System.Xml.XmlReader reader) { return default(object); }
+    public virtual object ReadObject(System.Xml.XmlReader reader, bool verifyObjectName) { return default(object); }
+    public abstract void WriteEndObject(System.Xml.XmlDictionaryWriter writer);
+    public virtual void WriteEndObject(System.Xml.XmlWriter writer) { }
+    public virtual void WriteObject(System.IO.Stream stream, object graph) { }
+    public virtual void WriteObject(System.Xml.XmlDictionaryWriter writer, object graph) { }
+    public virtual void WriteObject(System.Xml.XmlWriter writer, object graph) { }
+    public abstract void WriteObjectContent(System.Xml.XmlDictionaryWriter writer, object graph);
+    public virtual void WriteObjectContent(System.Xml.XmlWriter writer, object graph) { }
+    public abstract void WriteStartObject(System.Xml.XmlDictionaryWriter writer, object graph);
+    public virtual void WriteStartObject(System.Xml.XmlWriter writer, object graph) { }
+  }
+
+} // end of System.Runtime.Serialization
 namespace System.Security.Cryptography {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct ECCurve {

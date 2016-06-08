@@ -1,8 +1,6 @@
 ﻿/r:System.Runtime.dll
-/r:System.Diagnostics.StackTrace.dll
 /r:System.IO.dll
 /r:System.Diagnostics.TraceSource.dll
-
 
 System.Diagnostics.DelimitedListTraceListener
 System.Diagnostics.TextWriterTraceListener

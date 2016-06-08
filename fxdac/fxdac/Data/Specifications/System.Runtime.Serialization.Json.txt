@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+
+System.Runtime.Serialization.Json.DataContractJsonSerializer
+System.Runtime.Serialization.Json.DataContractJsonSerializerSettings
+System.Runtime.Serialization.DateTimeFormat
+System.Runtime.Serialization.EmitTypeInformation
+

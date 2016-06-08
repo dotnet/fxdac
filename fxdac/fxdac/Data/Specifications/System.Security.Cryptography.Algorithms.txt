@@ -1,8 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Principal.dll
-/r:System.Security.Cryptography.Cng.dll
-/r:System.Security.Cryptography.Encoding.dll
 
 System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
 System.Security.Cryptography.AsymmetricKeyExchangeFormatter
