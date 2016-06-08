@@ -530,3 +530,11 @@ namespace System.Security.Cryptography {
   }
 
 } // end of System.Security.Cryptography
+namespace Microsoft.Win32.SafeHandles {
+  public sealed partial class SafeX509ChainHandle : System.Runtime.InteropServices.SafeHandle {
+    internal SafeX509ChainHandle() : base (default(System.IntPtr), default(bool)) { }
+    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+    protected override bool ReleaseHandle() { return default(bool); }
+  }
+
+} // end of Microsoft.Win32.SafeHandles

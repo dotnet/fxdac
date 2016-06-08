@@ -1,4 +1,5 @@
 /r:System.Runtime.dll
 
 System.Runtime.Loader.AssemblyLoadContext
+System.Reflection.AssemblyExtensions
 

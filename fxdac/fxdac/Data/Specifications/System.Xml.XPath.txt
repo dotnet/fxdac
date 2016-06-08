@@ -1,9 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
 /r:System.Xml.ReaderWriter.dll
-/r:System.Xml.Linq.dll
 
-System.Xml.XmlDocumentXPathExtensions
 
 System.Xml.XPath.IXPathNavigable
 System.Xml.XPath.XmlCaseOrder
@@ -18,6 +16,6 @@ System.Xml.XPath.XPathNavigator
 System.Xml.XPath.XPathNodeIterator
 System.Xml.XPath.XPathNodeType
 System.Xml.XPath.XPathResultType
-System.Xml.XPath.Extensions
-System.Xml.XPath.XDocumentExtensions
+
+System.Xml.XmlNodeOrder
 

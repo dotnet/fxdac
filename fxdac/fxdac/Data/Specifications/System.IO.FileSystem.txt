@@ -6,6 +6,8 @@
 /r:System.Security.Permissions.dll
 /r:System.Security.Permissions.dll
 
+System.IO.FileSystemAclExtensions
+
 System.IO.SearchOption
 System.IO.Directory
 System.IO.DirectoryInfo
@@ -14,4 +16,4 @@ System.IO.FileInfo
 System.IO.FileSystemInfo
 System.Security.Permissions.FileIOPermissionAttribute
 
-System.IO.FileSystemAclExtensions
+
