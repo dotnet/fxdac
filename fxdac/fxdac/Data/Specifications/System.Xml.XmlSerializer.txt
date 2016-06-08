@@ -1,4 +1,30 @@
 ﻿/r:System.Runtime.dll
+/r:System.Xml.ReaderWriter.dll
+/r:System.IO.dll
 
 System.Xml.Serialization.XmlIgnoreAttribute
+
+System.Xml.Serialization.XmlSchemaProviderAttribute
+System.Xml.Serialization.XmlAnyAttributeAttribute
+System.Xml.Serialization.XmlAnyElementAttribute
+System.Xml.Serialization.XmlAnyElementAttributes
+System.Xml.Serialization.XmlArrayAttribute
+System.Xml.Serialization.XmlArrayItemAttribute
+System.Xml.Serialization.XmlArrayItemAttributes
+System.Xml.Serialization.XmlAttributeAttribute
+System.Xml.Serialization.XmlAttributeOverrides
+System.Xml.Serialization.XmlAttributes
+System.Xml.Serialization.XmlChoiceIdentifierAttribute
+System.Xml.Serialization.XmlElementAttribute
+System.Xml.Serialization.XmlElementAttributes
+System.Xml.Serialization.XmlEnumAttribute
+System.Xml.Serialization.XmlIncludeAttribute
+System.Xml.Serialization.XmlNamespaceDeclarationsAttribute
+System.Xml.Serialization.XmlRootAttribute
+System.Xml.Serialization.XmlSerializer
+System.Xml.Serialization.XmlSerializerNamespaces
+System.Xml.Serialization.XmlTextAttribute
+System.Xml.Serialization.XmlTypeAttribute
+
+
 

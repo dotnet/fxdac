@@ -198,27 +198,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\report.xml" />
+    <Content Include="Data\Specifications\System.Xml.Linq.txt" />
+    <Content Include="Data\Specifications\System.Xml.ReaderWriter.txt" />
+    <Content Include="Data\Specifications\System.Xml.XPath.txt" />
+    <None Include="Data\Specifications\System.Runtime.Serialization.Xml.txt" />
     <None Include="Data\Specifications\System.Data.SqlClient.txt" />
     <None Include="Data\Specifications\System.Reflection.TypeExtensions.txt" />
     <None Include="Data\Specifications\System.Net.Http.WinHttpHandler.txt" />
     <None Include="Data\Specifications\System.Reflection.DispatchProxy.txt" />
     <None Include="Data\Specifications\System.Runtime.InteropServices.RuntimeInformation.txt" />
     <None Include="Data\Specifications\System.AppContext.txt" />
-    <None Include="Data\Specifications\System.Runtime.WindowsRuntime.UI.Xaml.txt" />
     <None Include="Data\Specifications\System.Numerics.Vectors.txt" />
     <None Include="Data\Specifications\System.Runtime.Loader.txt" />
     <None Include="Data\Specifications\System.Security.SecureString.txt" />
     <None Include="Data\Specifications\System.Text.Encoding.CodePages.txt" />
     <None Include="Data\Specifications\System.Net.Http.txt" />
-    <None Include="Data\Specifications\System.Runtime.WindowsRuntime.txt" />
     <None Include="Data\Specifications\System.IO.Compression.ZipFile.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.Cng.txt" />
     <None Include="Data\Specifications\System.Runtime.Numerics.txt" />
     <None Include="Data\Specifications\System.IO.Pipes.txt" />
     <None Include="Data\Specifications\System.Diagnostics.TextWriterTraceListener.txt" />
-    <None Include="Data\Specifications\System.ServiceProcess.txt" />
-    <None Include="Data\Specifications\System.Serialization.DataContract.txt" />
-    <None Include="Data\Specifications\System.Xml.txt" />
+    <None Include="Data\Specifications\System.ServiceProcess.ServiceController.txt" />
+    <None Include="Data\Specifications\System.Runtime.Serialization.Json.txt" />
     <None Include="Data\Specifications\System.Data.Common.txt" />
     <None Include="Data\Specifications\System.ComponentModel.Annotations.txt" />
     <None Include="Data\Specifications\Microsoft.VisualBasic.txt" />

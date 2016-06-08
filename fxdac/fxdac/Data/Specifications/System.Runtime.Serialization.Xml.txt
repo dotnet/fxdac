@@ -1,0 +1,22 @@
+﻿/r:System.Runtime.dll
+/r:System.Xml.ReaderWriter.dll
+
+System.Xml.ReaderWriter,System.Xml.IXmlDictionary moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.OnXmlDictionaryReaderClose moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.UniqueId moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlAttribute moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlAttributeCollection moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlBinaryReaderSession moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlBinaryWriterSession moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlCDataSection moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlCharacterData moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlComment moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlDeclaration moved from System.Xml.XmlDocument
+System.Xml.ReaderWriter,System.Xml.XmlDictionary moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlDictionaryReader moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotas moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlDictionaryReaderQuotaTypes moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlDictionaryString moved from System.Runtime.Serialization.Xml
+System.Xml.ReaderWriter,System.Xml.XmlDictionaryWriter moved from System.Runtime.Serialization.Xml
+
+

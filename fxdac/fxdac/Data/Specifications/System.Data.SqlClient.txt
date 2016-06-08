@@ -1,6 +1,6 @@
 /r:System.Runtime.dll
 /r:System.IO.dll
-/r:System.Xml.dll
+/r:System.Xml.ReaderWriter.dll
 /r:System.Data.Common.dll
 
 Microsoft.SqlServer.Server.SqlDataRecord
