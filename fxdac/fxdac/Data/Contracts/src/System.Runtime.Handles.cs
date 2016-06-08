@@ -29,3 +29,12 @@ namespace System.IO {
   }
 
 } // end of System.IO
+namespace System.Threading {
+  public static partial class WaitHandleExtensions {
+    [System.Security.SecurityCriticalAttribute]
+    public static Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle(this System.Threading.WaitHandle waitHandle) { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); }
+    [System.Security.SecurityCriticalAttribute]
+    public static void SetSafeWaitHandle(this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value) { }
+  }
+
+} // end of System.Threading

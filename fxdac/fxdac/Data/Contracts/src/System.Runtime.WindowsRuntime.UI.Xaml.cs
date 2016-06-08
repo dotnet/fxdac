@@ -158,6 +158,35 @@ namespace Windows.UI.Xaml.Markup {
   }
 
 } // end of Windows.UI.Xaml.Markup
+namespace Windows.UI.Xaml.Media {
+  [System.Security.SecurityCriticalAttribute]
+  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+  public partial struct Matrix : System.IFormattable {
+    public Matrix(double m11, double m12, double m21, double m22, double offsetX, double offsetY) { throw new System.NotImplementedException(); }
+    public static Windows.UI.Xaml.Media.Matrix Identity { get { return default(Windows.UI.Xaml.Media.Matrix); } }
+    public bool IsIdentity { get { return default(bool); } }
+    public double M11 { get { return default(double); } set { } }
+    public double M12 { get { return default(double); } set { } }
+    public double M21 { get { return default(double); } set { } }
+    public double M22 { get { return default(double); } set { } }
+    public double OffsetX { get { return default(double); } set { } }
+    public double OffsetY { get { return default(double); } set { } }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override bool Equals(object o) { return default(bool); }
+    public bool Equals(Windows.UI.Xaml.Media.Matrix value) { return default(bool); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override int GetHashCode() { return default(int); }
+    public static bool operator ==(Windows.UI.Xaml.Media.Matrix matrix1, Windows.UI.Xaml.Media.Matrix matrix2) { return default(bool); }
+    public static bool operator !=(Windows.UI.Xaml.Media.Matrix matrix1, Windows.UI.Xaml.Media.Matrix matrix2) { return default(bool); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
+    [System.Security.SecuritySafeCriticalAttribute]
+    public override string ToString() { return default(string); }
+    public string ToString(System.IFormatProvider provider) { return default(string); }
+    public Windows.Foundation.Point Transform(Windows.Foundation.Point point) { return default(Windows.Foundation.Point); }
+  }
+
+} // end of Windows.UI.Xaml.Media
 namespace Windows.UI.Xaml.Media.Animation {
   [System.Security.SecurityCriticalAttribute]
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]

@@ -1,5 +1,7 @@
 ﻿/r:System.Runtime.dll
 
 System.Globalization.IdnMapping
+System.StringNormalizationExtensions
+System.Globalization.GlobalizationExtensions
 
 

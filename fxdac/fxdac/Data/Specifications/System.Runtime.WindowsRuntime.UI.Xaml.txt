@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Runtime.WindowsRuntime.dll
 
 Windows.UI.Xaml.CornerRadius
 Windows.UI.Xaml.Duration
@@ -15,4 +16,6 @@ Windows.UI.Xaml.Media.Animation.KeyTime
 Windows.UI.Xaml.Media.Animation.RepeatBehavior
 Windows.UI.Xaml.Media.Animation.RepeatBehaviorType
 Windows.UI.Xaml.Media.Media3D.Matrix3D
+
+Windows.UI.Xaml.Media.Matrix
 

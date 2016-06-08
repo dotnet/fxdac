@@ -2,3 +2,5 @@
 
 System.Runtime.InteropServices.CriticalHandle
 System.IO.HandleInheritability
+System.Threading.WaitHandleExtensions
+

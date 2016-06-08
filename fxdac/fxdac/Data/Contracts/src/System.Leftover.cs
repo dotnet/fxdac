@@ -22,15 +22,6 @@ namespace System {
     public int GetRemainingCount() { return default(int); }
   }
 
-  public static partial class StringNormalizationExtensions {
-    public static bool IsNormalized(this string value) { return default(bool); }
-    [System.Security.SecurityCriticalAttribute]
-    public static bool IsNormalized(this string value, System.Text.NormalizationForm normalizationForm) { return default(bool); }
-    public static string Normalize(this string value) { return default(string); }
-    [System.Security.SecurityCriticalAttribute]
-    public static string Normalize(this string value, System.Text.NormalizationForm normalizationForm) { return default(string); }
-  }
-
   [System.CLSCompliantAttribute(false)]
   [System.Security.SecurityCriticalAttribute]
   public static partial class WindowsRuntimeSystemExtensions {
@@ -569,60 +560,6 @@ namespace System.Runtime.InteropServices {
   }
 
 } // end of System.Runtime.InteropServices
-namespace System.Globalization {
-  public static partial class GlobalizationExtensions {
-    public static System.StringComparer GetStringComparer(this System.Globalization.CompareInfo compareInfo, System.Globalization.CompareOptions options) { return default(System.StringComparer); }
-  }
-
-} // end of System.Globalization
-namespace System.IO {
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class FileSystemAclExtensions {
-    public static System.Security.AccessControl.DirectorySecurity GetAccessControl(this System.IO.DirectoryInfo directoryInfo) { return default(System.Security.AccessControl.DirectorySecurity); }
-    public static System.Security.AccessControl.DirectorySecurity GetAccessControl(this System.IO.DirectoryInfo directoryInfo, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.DirectorySecurity); }
-    public static System.Security.AccessControl.FileSecurity GetAccessControl(this System.IO.FileInfo fileInfo) { return default(System.Security.AccessControl.FileSecurity); }
-    public static System.Security.AccessControl.FileSecurity GetAccessControl(this System.IO.FileInfo fileInfo, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.FileSecurity); }
-    public static System.Security.AccessControl.FileSecurity GetAccessControl(this System.IO.FileStream fileStream) { return default(System.Security.AccessControl.FileSecurity); }
-    public static void SetAccessControl(this System.IO.DirectoryInfo directoryInfo, System.Security.AccessControl.DirectorySecurity directorySecurity) { }
-    public static void SetAccessControl(this System.IO.FileInfo fileInfo, System.Security.AccessControl.FileSecurity fileSecurity) { }
-    public static void SetAccessControl(this System.IO.FileStream fileStream, System.Security.AccessControl.FileSecurity fileSecurity) { }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeStorageExtensions {
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath, Windows.Storage.CreationCollisionOption creationCollisionOption) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-  }
-
-  [System.Security.SecurityCriticalAttribute]
-  public static partial class WindowsRuntimeStreamExtensions {
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IInputStream AsInputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IInputStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IOutputStream AsOutputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IOutputStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static Windows.Storage.Streams.IRandomAccessStream AsRandomAccessStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IRandomAccessStream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream) { return default(System.IO.Stream); }
-    [System.CLSCompliantAttribute(false)]
-    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
-  }
-
-} // end of System.IO
 namespace System.Reflection.Emit {
   public sealed partial class AssemblyBuilder : System.Reflection.Assembly {
     internal AssemblyBuilder() { }
@@ -1408,108 +1345,42 @@ namespace System.Reflection.Emit {
   }
 
 } // end of System.Reflection.Emit
-namespace System.Reflection {
-  public static partial class AssemblyExtensions {
-    public static System.Type[] GetExportedTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
-    public static System.Reflection.Module[] GetModules(this System.Reflection.Assembly assembly) { return default(System.Reflection.Module[]); }
-    public static System.Type[] GetTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
-  }
-
-  public static partial class EventInfoExtensions {
-    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRaiseMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class MemberInfoExtensions {
-    public static int GetMetadataToken(this System.Reflection.MemberInfo member) { return default(int); }
-    public static bool HasMetadataToken(this System.Reflection.MemberInfo member) { return default(bool); }
-  }
-
-  public static partial class MethodInfoExtensions {
-    public static System.Reflection.MethodInfo GetBaseDefinition(this System.Reflection.MethodInfo method) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class ModuleExtensions {
-    public static System.Guid GetModuleVersionId(this System.Reflection.Module module) { return default(System.Guid); }
-    public static bool HasModuleVersionId(this System.Reflection.Module module) { return default(bool); }
-  }
-
-  public static partial class PropertyInfoExtensions {
-    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetGetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
-  }
-
-  public static partial class TypeExtensions {
-    public static System.Reflection.ConstructorInfo GetConstructor(this System.Type type, System.Type[] types) { return default(System.Reflection.ConstructorInfo); }
-    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type) { return default(System.Reflection.ConstructorInfo[]); }
-    public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.ConstructorInfo[]); }
-    public static System.Reflection.MemberInfo[] GetDefaultMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name) { return default(System.Reflection.EventInfo); }
-    public static System.Reflection.EventInfo GetEvent(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo); }
-    public static System.Reflection.EventInfo[] GetEvents(this System.Type type) { return default(System.Reflection.EventInfo[]); }
-    public static System.Reflection.EventInfo[] GetEvents(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.EventInfo[]); }
-    public static System.Reflection.FieldInfo GetField(this System.Type type, string name) { return default(System.Reflection.FieldInfo); }
-    public static System.Reflection.FieldInfo GetField(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo); }
-    public static System.Reflection.FieldInfo[] GetFields(this System.Type type) { return default(System.Reflection.FieldInfo[]); }
-    public static System.Reflection.FieldInfo[] GetFields(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.FieldInfo[]); }
-    public static System.Type[] GetGenericArguments(this System.Type type) { return default(System.Type[]); }
-    public static System.Type[] GetInterfaces(this System.Type type) { return default(System.Type[]); }
-    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMember(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MemberInfo[] GetMembers(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MemberInfo[]); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo GetMethod(this System.Type type, string name, System.Type[] types) { return default(System.Reflection.MethodInfo); }
-    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Reflection.MethodInfo[] GetMethods(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.MethodInfo[]); }
-    public static System.Type GetNestedType(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Type); }
-    public static System.Type[] GetNestedTypes(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Type[]); }
-    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type) { return default(System.Reflection.PropertyInfo[]); }
-    public static System.Reflection.PropertyInfo[] GetProperties(this System.Type type, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo[]); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType) { return default(System.Reflection.PropertyInfo); }
-    public static System.Reflection.PropertyInfo GetProperty(this System.Type type, string name, System.Type returnType, System.Type[] types) { return default(System.Reflection.PropertyInfo); }
-    public static bool IsAssignableFrom(this System.Type type, System.Type c) { return default(bool); }
-    public static bool IsInstanceOfType(this System.Type type, object o) { return default(bool); }
-  }
-
-} // end of System.Reflection
-namespace System.Threading {
-  public static partial class WaitHandleExtensions {
-    [System.Security.SecurityCriticalAttribute]
-    public static Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle(this System.Threading.WaitHandle waitHandle) { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); }
-    [System.Security.SecurityCriticalAttribute]
-    public static void SetSafeWaitHandle(this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value) { }
+namespace System.IO {
+  [System.Security.SecurityCriticalAttribute]
+  public static partial class WindowsRuntimeStorageExtensions {
+    [System.CLSCompliantAttribute(false)]
+    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForReadAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFile windowsRuntimeFile) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.Threading.Tasks.Task<System.IO.Stream> OpenStreamForWriteAsync(this Windows.Storage.IStorageFolder rootDirectory, string relativePath, Windows.Storage.CreationCollisionOption creationCollisionOption) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
   }
 
   [System.Security.SecurityCriticalAttribute]
-  public static partial class ThreadingAclExtensions {
-    public static System.Security.AccessControl.EventWaitHandleSecurity GetAccessControl(this System.Threading.EventWaitHandle handle) { return default(System.Security.AccessControl.EventWaitHandleSecurity); }
-    public static System.Security.AccessControl.MutexSecurity GetAccessControl(this System.Threading.Mutex mutex) { return default(System.Security.AccessControl.MutexSecurity); }
-    public static System.Security.AccessControl.SemaphoreSecurity GetAccessControl(this System.Threading.Semaphore semaphore) { return default(System.Security.AccessControl.SemaphoreSecurity); }
-    public static void SetAccessControl(this System.Threading.EventWaitHandle handle, System.Security.AccessControl.EventWaitHandleSecurity eventSecurity) { }
-    public static void SetAccessControl(this System.Threading.Mutex mutex, System.Security.AccessControl.MutexSecurity mutexSecurity) { }
-    public static void SetAccessControl(this System.Threading.Semaphore semaphore, System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity) { }
-  }
-
-} // end of System.Threading
-namespace System.Reflection.Metadata {
-  public static partial class AssemblyExtensions {
+  public static partial class WindowsRuntimeStreamExtensions {
     [System.CLSCompliantAttribute(false)]
-    public unsafe static bool TryGetRawMetadata(this System.Reflection.Assembly assembly, out byte* blob, out int length) { blob = default(byte*); length = default(int); return default(bool); }
+    public static Windows.Storage.Streams.IInputStream AsInputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IInputStream); }
+    [System.CLSCompliantAttribute(false)]
+    public static Windows.Storage.Streams.IOutputStream AsOutputStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IOutputStream); }
+    [System.CLSCompliantAttribute(false)]
+    public static Windows.Storage.Streams.IRandomAccessStream AsRandomAccessStream(this System.IO.Stream stream) { return default(Windows.Storage.Streams.IRandomAccessStream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream) { return default(System.IO.Stream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStream(this Windows.Storage.Streams.IRandomAccessStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream) { return default(System.IO.Stream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStreamForRead(this Windows.Storage.Streams.IInputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream) { return default(System.IO.Stream); }
+    [System.CLSCompliantAttribute(false)]
+    public static System.IO.Stream AsStreamForWrite(this Windows.Storage.Streams.IOutputStream windowsRuntimeStream, int bufferSize) { return default(System.IO.Stream); }
   }
 
-} // end of System.Reflection.Metadata
+} // end of System.IO
 namespace System.Runtime.InteropServices.WindowsRuntime {
   [System.CLSCompliantAttribute(false)]
   [System.Security.SecurityCriticalAttribute]
@@ -1566,35 +1437,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
   }
 
 } // end of System.Runtime.InteropServices.WindowsRuntime
-namespace Windows.UI.Xaml.Media {
-  [System.Security.SecurityCriticalAttribute]
-  [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-  public partial struct Matrix : System.IFormattable {
-    public Matrix(double m11, double m12, double m21, double m22, double offsetX, double offsetY) { throw new System.NotImplementedException(); }
-    public static Windows.UI.Xaml.Media.Matrix Identity { get { return default(Windows.UI.Xaml.Media.Matrix); } }
-    public bool IsIdentity { get { return default(bool); } }
-    public double M11 { get { return default(double); } set { } }
-    public double M12 { get { return default(double); } set { } }
-    public double M21 { get { return default(double); } set { } }
-    public double M22 { get { return default(double); } set { } }
-    public double OffsetX { get { return default(double); } set { } }
-    public double OffsetY { get { return default(double); } set { } }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override bool Equals(object o) { return default(bool); }
-    public bool Equals(Windows.UI.Xaml.Media.Matrix value) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override int GetHashCode() { return default(int); }
-    public static bool operator ==(Windows.UI.Xaml.Media.Matrix matrix1, Windows.UI.Xaml.Media.Matrix matrix2) { return default(bool); }
-    public static bool operator !=(Windows.UI.Xaml.Media.Matrix matrix1, Windows.UI.Xaml.Media.Matrix matrix2) { return default(bool); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
-    [System.Security.SecuritySafeCriticalAttribute]
-    public override string ToString() { return default(string); }
-    public string ToString(System.IFormatProvider provider) { return default(string); }
-    public Windows.Foundation.Point Transform(Windows.Foundation.Point point) { return default(Windows.Foundation.Point); }
-  }
-
-} // end of Windows.UI.Xaml.Media
 namespace System.Security.Cryptography {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct ECCurve {
