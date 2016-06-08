@@ -289,7 +289,7 @@ static class Program
     }
 
     static bool CompileAssembly(FxAssembly assembly) {
-        if (assembly.Name == "System.Leftover") return true;
+        if (assembly.Name == s_LefroverTypesAssembly) return true;
 
         var assemblySyntaxTree = CSharpSyntaxTree.ParseText(File.ReadAllText(assembly.SourceFile));
 
@@ -416,6 +416,12 @@ static class Program
     {
         ISymbol symbol = typeModel.GetDeclaredSymbol(syntax);
         string typeId = symbol.GetDocumentationCommentId();
+
+        var typeName = typeId.Substring(2);
+        if (FxdacSyntaxRewriter.s_ShouldRemoveType(typeName)) {
+            reportWriter.WriteListItem("Removed type {0}", symbol.Name);
+            return;
+        }
         FxAssembly typeAssembly = redist.GetAssemblyForType(typeId);
 
         if (typeAssembly.HasEmitedType(typeId)) return;
