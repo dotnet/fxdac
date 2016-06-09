@@ -1,5 +1,7 @@
 ﻿/r:System.Runtime.dll
 
+System.Runtime.InteropServices.ComAwareEventInfo
+
 System.Runtime.InteropServices.ComEventsHelper
 System.Runtime.InteropServices.ComImportAttribute
 System.Runtime.InteropServices.CustomQueryInterfaceMode

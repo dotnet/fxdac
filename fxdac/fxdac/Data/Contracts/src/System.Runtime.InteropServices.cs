@@ -1059,6 +1059,55 @@ namespace System.Runtime.InteropServices {
     public void Remove() { }
   }
 
+
+    // this type was manually added as we don't have a compatible (with Xamarin) implementation in CoreFx
+    [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
+    [System.ObsoleteAttribute("ComAwareEventInfo may be unavailable in future releases.")]
+    public partial class ComAwareEventInfo : System.Reflection.EventInfo
+    {
+        public ComAwareEventInfo(System.Type type, string eventName) { }
+        public override System.Reflection.EventAttributes Attributes { get { return default(System.Reflection.EventAttributes); } }
+        public override System.Type DeclaringType { get { return default(System.Type); } }
+        public override string Name { get { return default(string); } }
+
+        public override Type ReflectedType
+        {
+            get {
+                throw new NotImplementedException();
+            }
+        }
+
+        public override System.Reflection.MethodInfo GetAddMethod(bool nonPublic)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object[] GetCustomAttributes(bool inherit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override System.Reflection.MethodInfo GetRaiseMethod(bool nonPublic)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override System.Reflection.MethodInfo GetRemoveMethod(bool nonPublic)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool IsDefined(Type attributeType, bool inherit)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ComEventsHelper may be unavailable in future releases.")]
   public static partial class ComEventsHelper {
