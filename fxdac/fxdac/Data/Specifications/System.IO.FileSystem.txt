@@ -1,12 +1,19 @@
 ﻿/r:System.Runtime.dll
-/r:System.Security.AccessControl.dll
 /r:System.IO.dll
 /r:System.IO.FileSystem.Primitives.dll
 /r:System.IO.FileSystem.AccessControl.dll
 /r:System.Security.Permissions.dll
-/r:System.Security.Permissions.dll
+/r:System.Security.AccessControl.dll
+/r:System.Security.Principal.Windows.dll
 
 System.IO.FileSystemAclExtensions
+System.Security.AccessControl.DirectoryObjectSecurity
+System.Security.AccessControl.DirectorySecurity
+System.Security.AccessControl.FileSecurity
+System.Security.AccessControl.FileSystemAccessRule
+System.Security.AccessControl.FileSystemAuditRule
+System.Security.AccessControl.FileSystemRights
+System.Security.AccessControl.FileSystemSecurity
 
 System.IO.SearchOption
 System.IO.Directory

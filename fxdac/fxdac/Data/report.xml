@@ -93,9 +93,8 @@
     <item text="Removed base System.MarshalByRefObject from type WebRequest"/>
     <item text="Removed base System.MarshalByRefObject from type WebResponse"/>
   </REMOVED>
-  <MOVED_TYPES total="204" description="corefx types that changed their location">
+  <MOVED_TYPES total="211" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW>
-      <item text="System.IO.FileSystem,System.IO.FileSystemAclExtensions moved from System.IO.FileSystem.AccessControl"/>
       <item text="System.Threading.Security,System.Threading.AbandonedMutexException moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.AutoResetEvent moved from System.Threading"/>
       <item text="System.Threading.Security,System.Threading.EventWaitHandle moved from System.Threading"/>
