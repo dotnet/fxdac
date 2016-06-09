@@ -199,6 +199,7 @@
   <ItemGroup>
     <Content Include="Data\report.xml" />
     <None Include="Data\Specifications\System.Reflection.Primitives.txt" />
+    <None Include="Data\Specifications\System.Runtime.ConstrainedExecution.txt" />
     <Content Include="Data\Specifications\System.Xml.XDocument.txt" />
     <Content Include="Data\Specifications\System.Xml.XmlDocument.txt" />
     <Content Include="Data\Specifications\System.Xml.ReaderWriter.txt" />

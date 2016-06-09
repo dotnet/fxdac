@@ -11872,7 +11872,7 @@ namespace System.Runtime.InteropServices {
     protected SafeHandle() { }
     [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     protected SafeHandle(System.IntPtr invalidHandleValue, bool ownsHandle) { }
-    public bool IsClosed { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2)), System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+    public bool IsClosed { get { return default(bool); } }
     public abstract bool IsInvalid { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get; }
     [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecurityCriticalAttribute]
@@ -19415,7 +19415,7 @@ namespace System.Threading {
     public static System.Security.Principal.IPrincipal CurrentPrincipal { get { return default(System.Security.Principal.IPrincipal); } set { } }
     public static System.Threading.Thread CurrentThread { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]get { return default(System.Threading.Thread); } }
     public System.Globalization.CultureInfo CurrentUICulture { get { return default(System.Globalization.CultureInfo); } set { } }
-    public System.Threading.ExecutionContext ExecutionContext { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1)), System.Security.SecuritySafeCriticalAttribute]get { return default(System.Threading.ExecutionContext); } }
+    public System.Threading.ExecutionContext ExecutionContext { get { return default(System.Threading.ExecutionContext); } }
     public bool IsAlive { get { return default(bool); } }
     public bool IsBackground { get { return default(bool); } set { } }
     public bool IsThreadPoolThread { get { return default(bool); } }

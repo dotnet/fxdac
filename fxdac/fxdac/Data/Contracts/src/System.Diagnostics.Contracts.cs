@@ -4,64 +4,42 @@ namespace System.Diagnostics.Contracts {
     public static event System.EventHandler<System.Diagnostics.Contracts.ContractFailedEventArgs> ContractFailed { add { } remove { } }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     [System.Diagnostics.ConditionalAttribute("DEBUG")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Assert(bool condition) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     [System.Diagnostics.ConditionalAttribute("DEBUG")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Assert(bool condition, string userMessage) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     [System.Diagnostics.ConditionalAttribute("DEBUG")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Assume(bool condition) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     [System.Diagnostics.ConditionalAttribute("DEBUG")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Assume(bool condition, string userMessage) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void EndContractBlock() { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Ensures(bool condition) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Ensures(bool condition, string userMessage) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void EnsuresOnThrow<TException>(bool condition) where TException : System.Exception { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void EnsuresOnThrow<TException>(bool condition, string userMessage) where TException : System.Exception { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static bool Exists(int fromInclusive, int toExclusive, System.Predicate<int> predicate) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static bool Exists<T>(System.Collections.Generic.IEnumerable<T> collection, System.Predicate<T> predicate) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static bool ForAll(int fromInclusive, int toExclusive, System.Predicate<int> predicate) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static bool ForAll<T>(System.Collections.Generic.IEnumerable<T> collection, System.Predicate<T> predicate) { return default(bool); }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Invariant(bool condition) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Invariant(bool condition, string userMessage) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static T OldValue<T>(T value) { return default(T); }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Requires(bool condition) { }
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Requires(bool condition, string userMessage) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Requires<TException>(bool condition) where TException : System.Exception { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Requires<TException>(bool condition, string userMessage) where TException : System.Exception { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static T Result<T>() { return default(T); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static T ValueAtReturn<T>(out T value) { value = default(T); return default(T); }
   }
 
@@ -93,7 +71,6 @@ namespace System.Diagnostics.Contracts {
   }
 
   public sealed partial class ContractFailedEventArgs : System.EventArgs {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public ContractFailedEventArgs(System.Diagnostics.Contracts.ContractFailureKind failureKind, string message, string condition, System.Exception originalException) { }
     public string Condition { get { return default(string); } }
     public System.Diagnostics.Contracts.ContractFailureKind FailureKind { get { return default(System.Diagnostics.Contracts.ContractFailureKind); } }
@@ -169,10 +146,8 @@ namespace System.Diagnostics.Contracts.Internal {
   [System.ObsoleteAttribute("Use the ContractHelper class in the System.Runtime.CompilerServices namespace instead.")]
   public static partial class ContractHelper {
     [System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static string RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind failureKind, string userMessage, string conditionText, System.Exception innerException) { return default(string); }
     [System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, System.Exception innerException) { }
   }
 
@@ -180,10 +155,8 @@ namespace System.Diagnostics.Contracts.Internal {
 namespace System.Runtime.CompilerServices {
   public static partial class ContractHelper {
     [System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static string RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind failureKind, string userMessage, string conditionText, System.Exception innerException) { return default(string); }
     [System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, System.Exception innerException) { }
   }
 
