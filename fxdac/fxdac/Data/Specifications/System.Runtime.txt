@@ -68,6 +68,11 @@ System.StringComparison
 System.StringSplitOptions
 System.TypeCode
 
+System.Security.SecurityRulesAttribute
+System.Security.SecurityRuleSet
+System.Security.SecurityTreatAsSafeAttribute
+System.Security.UnverifiableCodeAttribute
+
 // large mscorlib
 System.Action`1
 System.Collections.Generic.IReadOnlyCollection`1

@@ -3,6 +3,8 @@
 /r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Security.Principal.dll
+/r:System.Collections.NonGeneric.dll
+/r:System.Threading.dll
 
 System.Security.Permissions.TypeDescriptorPermission
 System.Security.Permissions.TypeDescriptorPermissionFlags
@@ -107,3 +109,12 @@ System.Security.Permissions.UrlIdentityPermission
 System.Security.Permissions.UrlIdentityPermissionAttribute
 System.Security.Permissions.ZoneIdentityPermission
 System.Security.Permissions.ZoneIdentityPermissionAttribute
+
+System.Security.HostProtectionException
+System.Security.IEvidenceFactory
+System.Security.SecurityContext
+System.Security.SecurityCriticalScope
+System.Security.SecurityManager
+
+System.Security.XmlSyntaxException
+

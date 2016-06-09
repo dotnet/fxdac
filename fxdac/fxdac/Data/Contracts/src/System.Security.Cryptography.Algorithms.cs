@@ -43,6 +43,32 @@ namespace System.Security.Cryptography {
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class CryptoAPITransform : System.IDisposable, System.Security.Cryptography.ICryptoTransform {
+    internal CryptoAPITransform() { }
+    public bool CanReuseTransform { get { return default(bool); } }
+    public bool CanTransformMultipleBlocks { get { return default(bool); } }
+    public int InputBlockSize { get { return default(int); } }
+    public System.IntPtr KeyHandle { get { return default(System.IntPtr); } }
+    public int OutputBlockSize { get { return default(int); } }
+    public void Clear() { }
+    public void Dispose() { }
+    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+    public void Reset() { }
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
+    public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class CryptoConfig {
+    public CryptoConfig() { }
+    public static bool AllowOnlyFipsAlgorithms { get { return default(bool); } }
+    public static object CreateFromName(string name) { return default(object); }
+    public static object CreateFromName(string name, params object[] args) { return default(object); }
+    public static byte[] EncodeOID(string str) { return default(byte[]); }
+    public static string MapNameToOID(string name) { return default(string); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public abstract partial class DeriveBytes : System.IDisposable {
     protected DeriveBytes() { }
     public void Dispose() { }
@@ -106,6 +132,28 @@ namespace System.Security.Cryptography {
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class FromBase64Transform : System.IDisposable, System.Security.Cryptography.ICryptoTransform {
+    public FromBase64Transform() { }
+    public FromBase64Transform(System.Security.Cryptography.FromBase64TransformMode whitespaces) { }
+    public virtual bool CanReuseTransform { get { return default(bool); } }
+    public bool CanTransformMultipleBlocks { get { return default(bool); } }
+    public int InputBlockSize { get { return default(int); } }
+    public int OutputBlockSize { get { return default(int); } }
+    public void Clear() { }
+    public void Dispose() { }
+    protected virtual void Dispose(bool disposing) { }
+    ~FromBase64Transform() { }
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
+    public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public enum FromBase64TransformMode {
+    DoNotIgnoreWhiteSpaces = 1,
+    IgnoreWhiteSpaces = 0,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class HMACMD5 : System.Security.Cryptography.HMAC {
     public HMACMD5() { }
     public HMACMD5(byte[] key) { }
@@ -160,6 +208,13 @@ namespace System.Security.Cryptography {
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public abstract partial class MaskGenerationMethod {
+    protected MaskGenerationMethod() { }
+    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+    public abstract byte[] GenerateMask(byte[] rgbSeed, int cbReturn);
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public abstract partial class MD5 : System.Security.Cryptography.HashAlgorithm {
     protected MD5() { }
     public static new System.Security.Cryptography.MD5 Create() { return default(System.Security.Cryptography.MD5); }
@@ -173,6 +228,13 @@ namespace System.Security.Cryptography {
     protected override void HashCore(byte[] data, int start, int length) { }
     protected override byte[] HashFinal() { return default(byte[]); }
     public override void Initialize() { }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class PKCS1MaskGenerationMethod : System.Security.Cryptography.MaskGenerationMethod {
+    public PKCS1MaskGenerationMethod() { }
+    public string HashName { get { return default(string); } set { } }
+    public override byte[] GenerateMask(byte[] rgbSeed, int cbReturn) { return default(byte[]); }
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -445,6 +507,21 @@ namespace System.Security.Cryptography {
     public virtual System.Security.Cryptography.AsymmetricSignatureDeformatter CreateDeformatter(System.Security.Cryptography.AsymmetricAlgorithm key) { return default(System.Security.Cryptography.AsymmetricSignatureDeformatter); }
     public virtual System.Security.Cryptography.HashAlgorithm CreateDigest() { return default(System.Security.Cryptography.HashAlgorithm); }
     public virtual System.Security.Cryptography.AsymmetricSignatureFormatter CreateFormatter(System.Security.Cryptography.AsymmetricAlgorithm key) { return default(System.Security.Cryptography.AsymmetricSignatureFormatter); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class ToBase64Transform : System.IDisposable, System.Security.Cryptography.ICryptoTransform {
+    public ToBase64Transform() { }
+    public virtual bool CanReuseTransform { get { return default(bool); } }
+    public bool CanTransformMultipleBlocks { get { return default(bool); } }
+    public int InputBlockSize { get { return default(int); } }
+    public int OutputBlockSize { get { return default(int); } }
+    public void Clear() { }
+    public void Dispose() { }
+    protected virtual void Dispose(bool disposing) { }
+    ~ToBase64Transform() { }
+    public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
+    public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
