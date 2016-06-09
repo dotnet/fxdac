@@ -4,6 +4,8 @@
 /r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll 
 
+System.Runtime.Hosting.ActivationArguments
+
 System.AppDomain
 System.AppDomainInitializer
 System.AppDomainManager

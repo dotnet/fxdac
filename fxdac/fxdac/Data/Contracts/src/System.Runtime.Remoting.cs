@@ -295,6 +295,17 @@ namespace System {
 } // end of System
 namespace System.Runtime.Hosting {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class ActivationArguments : System.Security.Policy.EvidenceBase {
+    public ActivationArguments(System.ActivationContext activationData) { }
+    public ActivationArguments(System.ActivationContext activationContext, string[] activationData) { }
+    public ActivationArguments(System.ApplicationIdentity applicationIdentity) { }
+    public ActivationArguments(System.ApplicationIdentity applicationIdentity, string[] activationData) { }
+    public System.ActivationContext ActivationContext { get { return default(System.ActivationContext); } }
+    public string[] ActivationData { get { return default(string[]); } }
+    public System.ApplicationIdentity ApplicationIdentity { get { return default(System.ApplicationIdentity); } }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class ApplicationActivator {
     public ApplicationActivator() { }
     public virtual System.Runtime.Remoting.ObjectHandle CreateInstance(System.ActivationContext activationContext) { return default(System.Runtime.Remoting.ObjectHandle); }
