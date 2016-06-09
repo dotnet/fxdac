@@ -7629,19 +7629,6 @@ namespace System.Runtime.ExceptionServices {
   }
 
 } // end of System.Runtime.ExceptionServices
-namespace System.Runtime.Hosting {
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public sealed partial class ActivationArguments : System.Security.Policy.EvidenceBase {
-    public ActivationArguments(System.ActivationContext activationData) { }
-    public ActivationArguments(System.ActivationContext activationContext, string[] activationData) { }
-    public ActivationArguments(System.ApplicationIdentity applicationIdentity) { }
-    public ActivationArguments(System.ApplicationIdentity applicationIdentity, string[] activationData) { }
-    public System.ActivationContext ActivationContext { get { return default(System.ActivationContext); } }
-    public string[] ActivationData { get { return default(string[]); } }
-    public System.ApplicationIdentity ApplicationIdentity { get { return default(System.ApplicationIdentity); } }
-  }
-
-} // end of System.Runtime.Hosting
 namespace System.Runtime.InteropServices {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public enum CharSet {

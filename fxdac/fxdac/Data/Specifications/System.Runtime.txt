@@ -440,7 +440,6 @@ System.LoaderOptimization
 System.ResolveEventHandler
 System.Runtime.CompilerServices.CompilationRelaxations
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
-System.Runtime.Hosting.ActivationArguments
 
 
 System.Threading.HostExecutionContext
