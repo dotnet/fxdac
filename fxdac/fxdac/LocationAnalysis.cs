@@ -74,6 +74,58 @@ class LocationAnalysis
         new Move(from:"System.IO.FileSystem.AccessControl", to:"System.IO.FileSystem"),
     };
 
+    public static void GenerateDump(string directory, List<ReportType> types, bool current)
+    {
+        var files = Directory.GetFiles(directory, "*.dll");
+        foreach (var file in files) {
+
+            var assembly = Path.GetFileNameWithoutExtension(file);
+
+            using (var stream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (var reader = new PEReader(stream)) {
+                var mr = reader.GetMetadataReader();
+                var loadedTypes = mr.TypeDefinitions;
+                foreach (var type in loadedTypes) {
+                    var etype = mr.GetTypeDefinition(type);
+                    var nameHandle = etype.Name;
+                    var name = mr.GetString(nameHandle);
+                    var namespaceHandle = etype.Namespace;
+                    var ns = mr.GetString(namespaceHandle);
+
+                    if (name == "<Module>") continue;
+                    if (string.IsNullOrEmpty(ns)) continue; // TODO: this needs to be removed and fixed
+
+                    var typeName = ns + "." + name;
+
+                    ReportType rt;
+                    var index = types.FindIndex((item) => { return item.FullName == typeName; });
+                    if (index >= 0) {
+                        rt = types[index];
+                    }
+                    else {
+                        rt = new ReportType();
+                        rt.Name = name;
+                        rt.Namespace = ns;
+                        types.Add(rt);
+                    }
+
+                    if (current) {
+                        rt.CurrentAssembly = assembly;
+                    }
+                    else {
+                        rt.PreviousAssembly = assembly;
+                    }
+                }
+            }
+        }
+    }
+
+    static bool IsValidMove(string from, string to)
+    {
+        var index = s_validMoves.FindIndex((move) => move.From == from && move.To == to);
+        return index >= 0;
+    }
+
     public static void CompareFactorings(string previous, string current, ReportWriter reportWriter)
     {
         var types = new List<ReportType>(3000);
@@ -100,7 +152,7 @@ class LocationAnalysis
             reportWriter.WriteListStart("MOVED_TYPES", "total", moved.Count, "description", "corefx types that changed their location");
 
             if (unknownMoves.Count > 0) {
-                reportWriter.WriteListStart("MOVED_NEEDS_REVIEW");
+                reportWriter.WriteListStart("MOVED_NEEDS_REVIEW", "total", unknownMoves.Count, "description", "unclear if the move is value, i.e. down in the dependency graph");
                 foreach (var movedType in unknownMoves) {
                     reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                     if (movedType.PreviousAssembly == "System.Runtime") {
@@ -113,26 +165,28 @@ class LocationAnalysis
                 reportWriter.WriteListEnd();
             }
 
-            if (Program.s_logValidMoves) {
-                if (validMoves.Count > 0) {
-                    reportWriter.WriteListStart("MOVED_VALID");
+            reportWriter.WriteListStart("MOVED_VALID", "total", validMoves.Count, "description", "moves that have been deemed ok (list hardcoded)");
+            if (validMoves.Count > 0) {
+                if (Program.s_logValidMoves) {
                     foreach (var movedType in validMoves) {
                         reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                     }
-                    reportWriter.WriteListEnd();
                 }
+            }
+            reportWriter.WriteListEnd();
 
-                if (movedToSystemRuntime.Count > 0) {
-                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME");
-                    foreach (var movedType in movedToSystemRuntime) {
-                        reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+            if (movedToSystemRuntime.Count > 0) {
+                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.runtime are OK");
+                    if (Program.s_logValidMoves) {
+                        foreach (var movedType in movedToSystemRuntime) {
+                            reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
+                        }
                     }
                     reportWriter.WriteListEnd();
                 }
             }
 
             reportWriter.WriteListEnd();
-        }
 
         if (Program.s_logAddedContracts && addedContracts.Count > 0) {
             addedContracts.Sort();
@@ -170,56 +224,6 @@ class LocationAnalysis
         }
     }
 
-    public static void GenerateDump(string directory, List<ReportType> types, bool current)
-    {
-        var files = Directory.GetFiles(directory, "*.dll");
-        foreach (var file in files) {
 
-            var assembly = Path.GetFileNameWithoutExtension(file);
-
-            using (var stream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read))
-            using (var reader = new PEReader(stream)) {
-                var mr = reader.GetMetadataReader();
-                var loadedTypes = mr.TypeDefinitions;
-                foreach (var type in loadedTypes) {
-                    var etype = mr.GetTypeDefinition(type);
-                    var nameHandle = etype.Name;
-                    var name = mr.GetString(nameHandle);
-                    var namespaceHandle = etype.Namespace;
-                    var ns = mr.GetString(namespaceHandle);
-
-                    if (name == "<Module>") continue;
-                    if (string.IsNullOrEmpty(ns)) continue; // TODO: this needs to be removed and fixed
-
-                    var typeName = ns + "." + name;
-
-                    ReportType rt;
-                    var index = types.FindIndex((item) => { return item.FullName == typeName; });
-                    if(index >= 0) {
-                        rt = types[index];
-                    }
-                    else {
-                        rt = new ReportType();
-                        rt.Name = name;
-                        rt.Namespace = ns;
-                        types.Add(rt);
-                    }
-
-                    if (current) {
-                        rt.CurrentAssembly = assembly;
-                    }
-                    else {
-                        rt.PreviousAssembly = assembly;
-                    }
-                }
-            }
-        }
-    }
-
-    static bool IsValidMove(string from, string to)
-    {
-        var index = s_validMoves.FindIndex((move) => move.From == from && move.To == to);
-        return index >= 0;
-    }
 }
 
