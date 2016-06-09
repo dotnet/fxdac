@@ -16,16 +16,3 @@ namespace System {
   }
 
 } // end of System
-namespace System.Runtime.InteropServices {
-  [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
-  [System.ObsoleteAttribute("ComAwareEventInfo may be unavailable in future releases.")]
-  public partial class ComAwareEventInfo : System.Reflection.EventInfo {
-    public ComAwareEventInfo(System.Type type, string eventName) { }
-    public override System.Reflection.EventAttributes Attributes { get { return default(System.Reflection.EventAttributes); } }
-    public override System.Type DeclaringType { get { return default(System.Type); } }
-    public override string Name { get { return default(string); } }
-    public override void AddEventHandler(object target, System.Delegate handler) { }
-    public override void RemoveEventHandler(object target, System.Delegate handler) { }
-  }
-
-} // end of System.Runtime.InteropServices
