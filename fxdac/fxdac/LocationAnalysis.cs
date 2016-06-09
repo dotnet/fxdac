@@ -63,13 +63,15 @@ class ReportType
     }
 }
 
+
 class LocationAnalysis
 {
     static List<Move> s_validMoves = new List<Move>() {
-        new Move("System.Dynamic.Runtime", "System.Linq.Expressions"),
-        new Move("System.ComponentModel.TypeConverter", "System.ComponentModel"),
-        new Move("System.ComponentModel.TypeConverter", "System.ComponentModel.Primitives"),
-        new Move("Microsoft.Win32.Registry.AccessControl", "Microsoft.Win32.Registry"),
+        new Move(from:"System.Dynamic.Runtime", to:"System.Linq.Expressions"),
+        new Move(from:"System.ComponentModel.TypeConverter", to:"System.ComponentModel"),
+        new Move(from:"System.ComponentModel.TypeConverter", to:"System.ComponentModel.Primitives"),
+        new Move(from:"Microsoft.Win32.Registry.AccessControl", to:"Microsoft.Win32.Registry"),
+        new Move(from:"System.IO.FileSystem.AccessControl", to:"System.IO.FileSystem"),
     };
 
     public static void CompareFactorings(string previous, string current, ReportWriter reportWriter)
