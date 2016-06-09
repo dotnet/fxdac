@@ -228,7 +228,6 @@
     <None Include="Data\Specifications\Microsoft.VisualBasic.txt" />
     <None Include="Data\Specifications\Microsoft.CSharp.txt" />
     <None Include="Data\Specifications\System.Threading.AccessControl.txt" />
-    <None Include="Data\Specifications\Microsoft.Win32.Primitives.txt" />
     <None Include="Data\Specifications\System.ComponentModel.Primitives.txt" />
     <None Include="Data\Specifications\System.Net.WebSockets.Client.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Debug.txt" />
@@ -264,7 +263,6 @@
     <None Include="Data\Specifications\System.IO.txt" />
     <None Include="Data\Specifications\System.Net.Primitives.txt" />
     <None Include="Data\Specifications\System.Net.Security.Permissions.txt" />
-    <None Include="Data\Specifications\System.IO.FileSystem.AccessControl.txt" />
     <None Include="Data\Specifications\System.Security.Principal.txt" />
     <None Include="Data\Specifications\System.Security.Principal.Windows.txt" />
     <None Include="Data\Specifications\System.Security.Cryptography.Encoding.txt" />

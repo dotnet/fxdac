@@ -1,7 +1,6 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
 /r:System.IO.FileSystem.Primitives.dll
-/r:System.IO.FileSystem.AccessControl.dll
 /r:System.Security.Permissions.dll
 /r:System.Security.AccessControl.dll
 /r:System.Security.Principal.Windows.dll

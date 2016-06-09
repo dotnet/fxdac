@@ -1,6 +1,5 @@
 ﻿/r:System.Runtime.dll
 /r:System.Collections.Specialized.dll
-/r:Microsoft.Win32.Primitives.dll
 
 /r:System.Net.Primitives.dll
 /r:System.Net.WebSockets.dll
