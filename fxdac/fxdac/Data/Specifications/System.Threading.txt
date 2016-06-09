@@ -1,5 +1,12 @@
 /r:System.Runtime.dll
 
+System.Threading.Mutex
+System.Threading.AbandonedMutexException
+System.Threading.EventWaitHandle
+System.Threading.AutoResetEvent
+System.Threading.ManualResetEvent
+System.Threading.Semaphore
+
 System.Threading.SynchronizationContext
 System.Threading.SendOrPostCallback
 
