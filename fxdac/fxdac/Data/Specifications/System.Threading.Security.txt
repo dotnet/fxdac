@@ -1,17 +1,10 @@
 /r:System.Runtime.dll
-/r:System.Threading.dll
-/r:System.Threading.AccessControl.dll
 
 System.Threading.ThreadExceptionEventArgs
 System.Threading.ThreadExceptionEventHandler
 
 // the following types used to be in System.Threading contract
-System.Threading.Mutex
-System.Threading.AbandonedMutexException
-System.Threading.EventWaitHandle
-System.Threading.AutoResetEvent
-System.Threading.ManualResetEvent
-System.Threading.Semaphore
 
-System.Threading.ThreadingAclExtensions
+
+
 

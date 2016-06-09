@@ -8,6 +8,19 @@ namespace System {
 
 } // end of System
 namespace System.Threading {
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public partial class AbandonedMutexException : System.SystemException {
+    public AbandonedMutexException() { }
+    public AbandonedMutexException(int location, System.Threading.WaitHandle handle) { }
+    protected AbandonedMutexException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+    public AbandonedMutexException(string message) { }
+    public AbandonedMutexException(string message, System.Exception inner) { }
+    public AbandonedMutexException(string message, System.Exception inner, int location, System.Threading.WaitHandle handle) { }
+    public AbandonedMutexException(string message, int location, System.Threading.WaitHandle handle) { }
+    public System.Threading.Mutex Mutex { get { return default(System.Threading.Mutex); } }
+    public int MutexIndex { get { return default(int); } }
+  }
+
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public enum ApartmentState {
     MTA = 1,
@@ -25,6 +38,11 @@ namespace System.Threading {
     public static bool operator !=(System.Threading.AsyncFlowControl a, System.Threading.AsyncFlowControl b) { return default(bool); }
     [System.Security.SecuritySafeCriticalAttribute]
     public void Undo() { }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class AutoResetEvent : System.Threading.EventWaitHandle {
+    public AutoResetEvent(bool initialState) : base (default(bool), default(System.Threading.EventResetMode)) { }
   }
 
   public sealed partial class CompressedStack : System.Runtime.Serialization.ISerializable {
@@ -70,6 +88,17 @@ namespace System.Threading {
   public enum EventResetMode {
     AutoReset = 0,
     ManualReset = 1,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class EventWaitHandle : System.Threading.WaitHandle {
+    public EventWaitHandle(bool initialState, System.Threading.EventResetMode mode) { }
+    public EventWaitHandle(bool initialState, System.Threading.EventResetMode mode, string name) { }
+    public EventWaitHandle(bool initialState, System.Threading.EventResetMode mode, string name, out bool createdNew) { createdNew = default(bool); }
+    public static System.Threading.EventWaitHandle OpenExisting(string name) { return default(System.Threading.EventWaitHandle); }
+    public bool Reset() { return default(bool); }
+    public bool Set() { return default(bool); }
+    public static bool TryOpenExisting(string name, out System.Threading.EventWaitHandle result) { result = default(System.Threading.EventWaitHandle); return default(bool); }
   }
 
   public sealed partial class ExecutionContext : System.IDisposable, System.Runtime.Serialization.ISerializable {
@@ -154,6 +183,11 @@ namespace System.Threading {
     public LockRecursionException(string message, System.Exception innerException) { }
   }
 
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class ManualResetEvent : System.Threading.EventWaitHandle {
+    public ManualResetEvent(bool initialState) : base (default(bool), default(System.Threading.EventResetMode)) { }
+  }
+
   [System.Diagnostics.DebuggerDisplayAttribute("Set = {IsSet}")]
   [System.Runtime.InteropServices.ComVisibleAttribute(false)]
   public partial class ManualResetEventSlim : System.IDisposable {
@@ -195,6 +229,20 @@ namespace System.Threading {
     public static bool Wait(object obj, int millisecondsTimeout, bool exitContext) { return default(bool); }
     public static bool Wait(object obj, System.TimeSpan timeout) { return default(bool); }
     public static bool Wait(object obj, System.TimeSpan timeout, bool exitContext) { return default(bool); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class Mutex : System.Threading.WaitHandle {
+    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
+    public Mutex() { }
+    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
+    public Mutex(bool initiallyOwned) { }
+    public Mutex(bool initiallyOwned, string name) { }
+    public Mutex(bool initiallyOwned, string name, out bool createdNew) { createdNew = default(bool); }
+    public static System.Threading.Mutex OpenExisting(string name) { return default(System.Threading.Mutex); }
+    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
+    public void ReleaseMutex() { }
+    public static bool TryOpenExisting(string name, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -464,6 +512,20 @@ namespace System.Threading {
     protected BarrierPostPhaseException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public BarrierPostPhaseException(string message) { }
     public BarrierPostPhaseException(string message, System.Exception innerException) { }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+  public sealed partial class Semaphore : System.Threading.WaitHandle {
+    public Semaphore(int initialCount, int maximumCount) { }
+    public Semaphore(int initialCount, int maximumCount, string name) { }
+    public Semaphore(int initialCount, int maximumCount, string name, out bool createdNew) { createdNew = default(bool); }
+    public static System.Threading.Semaphore OpenExisting(string name) { return default(System.Threading.Semaphore); }
+    [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
+    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
+    public int Release() { return default(int); }
+    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
+    public int Release(int releaseCount) { return default(int); }
+    public static bool TryOpenExisting(string name, out System.Threading.Semaphore result) { result = default(System.Threading.Semaphore); return default(bool); }
   }
 
   public enum LockRecursionPolicy {

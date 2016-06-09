@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Principal.Windows.dll
 /r:System.Security.AccessControl.dll
+/r:System.Threading.dll
 
 System.Security.AccessControl.EventWaitHandleAccessRule
 System.Security.AccessControl.EventWaitHandleAuditRule
@@ -16,4 +17,6 @@ System.Security.AccessControl.SemaphoreAccessRule
 System.Security.AccessControl.SemaphoreAuditRule
 System.Security.AccessControl.SemaphoreRights
 System.Security.AccessControl.SemaphoreSecurity
+
+System.Threading.ThreadingAclExtensions
 

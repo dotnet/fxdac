@@ -51,6 +51,13 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependency() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
         new FxDependency() { From="System.Runtime", To ="System.MarshalByRefObject" },
 
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.EventWaitHandleSecurity" },
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.EventWaitHandleRights" },
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.MutexSecurity" },
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.MutexRights" },
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.SemaphoreSecurity" },
+        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.SemaphoreRights" },
+
         new FxDependency() { From="System.Threading", To ="System.MarshalByRefObject" },
         new FxDependency() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
         new FxDependency() { From="System.Threading.Timer", To ="System.MarshalByRefObject" },
