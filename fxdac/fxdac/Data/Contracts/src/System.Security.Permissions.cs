@@ -25,6 +25,19 @@ namespace System.Security {
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial class HostProtectionException : System.SystemException {
+    public HostProtectionException() { }
+    protected HostProtectionException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+    public HostProtectionException(string message) { }
+    public HostProtectionException(string message, System.Exception e) { }
+    public HostProtectionException(string message, System.Security.Permissions.HostProtectionResource protectedResources, System.Security.Permissions.HostProtectionResource demandedResources) { }
+    public System.Security.Permissions.HostProtectionResource DemandedResources { get { return default(System.Security.Permissions.HostProtectionResource); } }
+    public System.Security.Permissions.HostProtectionResource ProtectedResources { get { return default(System.Security.Permissions.HostProtectionResource); } }
+    public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+    public override string ToString() { return default(string); }
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class HostSecurityManager {
     public HostSecurityManager() { }
     public virtual System.Security.Policy.PolicyLevel DomainPolicy { get { return default(System.Security.Policy.PolicyLevel); } }
@@ -45,6 +58,11 @@ namespace System.Security {
     HostPolicyLevel = 2,
     HostResolvePolicy = 16,
     None = 0,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public partial interface IEvidenceFactory {
+    System.Security.Policy.Evidence Evidence { get; }
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -139,9 +157,61 @@ namespace System.Security {
     User = 0,
   }
 
+  public sealed partial class SecurityContext : System.IDisposable {
+    internal SecurityContext() { }
+    public static System.Security.SecurityContext Capture() { return default(System.Security.SecurityContext); }
+    public System.Security.SecurityContext CreateCopy() { return default(System.Security.SecurityContext); }
+    public void Dispose() { }
+    public static bool IsFlowSuppressed() { return default(bool); }
+    public static bool IsWindowsIdentityFlowSuppressed() { return default(bool); }
+    public static void RestoreFlow() { }
+    public static void Run(System.Security.SecurityContext securityContext, System.Threading.ContextCallback callback, object state) { }
+    public static System.Threading.AsyncFlowControl SuppressFlow() { return default(System.Threading.AsyncFlowControl); }
+    public static System.Threading.AsyncFlowControl SuppressFlowWindowsIdentity() { return default(System.Threading.AsyncFlowControl); }
+  }
+
   public enum SecurityContextSource {
     CurrentAppDomain = 0,
     CurrentAssembly = 1,
+  }
+
+  [System.ObsoleteAttribute("SecurityCriticalScope is only used for .NET 2.0 transparency compatibility.")]
+  public enum SecurityCriticalScope {
+    Everything = 1,
+    Explicit = 0,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public static partial class SecurityManager {
+    [System.ObsoleteAttribute]
+    public static bool CheckExecutionRights { get { return default(bool); } set { } }
+    [System.ObsoleteAttribute("The security manager cannot be turned off on MS runtime")]
+    public static bool SecurityEnabled { get { return default(bool); } set { } }
+    public static bool CurrentThreadRequiresSecurityContextCapture() { return default(bool); }
+    public static System.Security.PermissionSet GetStandardSandbox(System.Security.Policy.Evidence evidence) { return default(System.Security.PermissionSet); }
+    public static void GetZoneAndOrigin(out System.Collections.ArrayList zone, out System.Collections.ArrayList origin) { zone = default(System.Collections.ArrayList); origin = default(System.Collections.ArrayList); }
+    [System.ObsoleteAttribute]
+    public static bool IsGranted(System.Security.IPermission perm) { return default(bool); }
+    [System.ObsoleteAttribute]
+    public static System.Security.Policy.PolicyLevel LoadPolicyLevelFromFile(string path, System.Security.PolicyLevelType type) { return default(System.Security.Policy.PolicyLevel); }
+    [System.ObsoleteAttribute]
+    public static System.Security.Policy.PolicyLevel LoadPolicyLevelFromString(string str, System.Security.PolicyLevelType type) { return default(System.Security.Policy.PolicyLevel); }
+    [System.ObsoleteAttribute]
+    public static System.Collections.IEnumerator PolicyHierarchy() { return default(System.Collections.IEnumerator); }
+    [System.ObsoleteAttribute]
+    public static System.Security.PermissionSet ResolvePolicy(System.Security.Policy.Evidence evidence) { return default(System.Security.PermissionSet); }
+    [System.ObsoleteAttribute]
+    public static System.Security.PermissionSet ResolvePolicy(System.Security.Policy.Evidence evidence, System.Security.PermissionSet reqdPset, System.Security.PermissionSet optPset, System.Security.PermissionSet denyPset, out System.Security.PermissionSet denied) { denied = default(System.Security.PermissionSet); return default(System.Security.PermissionSet); }
+    [System.ObsoleteAttribute]
+    public static System.Security.PermissionSet ResolvePolicy(System.Security.Policy.Evidence[] evidences) { return default(System.Security.PermissionSet); }
+    [System.ObsoleteAttribute]
+    public static System.Collections.IEnumerator ResolvePolicyGroups(System.Security.Policy.Evidence evidence) { return default(System.Collections.IEnumerator); }
+    [System.ObsoleteAttribute]
+    public static System.Security.PermissionSet ResolveSystemPolicy(System.Security.Policy.Evidence evidence) { return default(System.Security.PermissionSet); }
+    [System.ObsoleteAttribute]
+    public static void SavePolicy() { }
+    [System.ObsoleteAttribute]
+    public static void SavePolicyLevel(System.Security.Policy.PolicyLevel level) { }
   }
 
   public abstract partial class SecurityState {
@@ -158,6 +228,15 @@ namespace System.Security {
     NoZone = -1,
     Trusted = 2,
     Untrusted = 4,
+  }
+
+  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+  public sealed partial class XmlSyntaxException : System.SystemException {
+    public XmlSyntaxException() { }
+    public XmlSyntaxException(int lineNumber) { }
+    public XmlSyntaxException(int lineNumber, string message) { }
+    public XmlSyntaxException(string message) { }
+    public XmlSyntaxException(string message, System.Exception inner) { }
   }
 
 } // end of System.Security

@@ -3,6 +3,14 @@
 /r:System.Security.Principal.dll
 /r:System.Security.Cryptography.Encoding.dll
 
+System.Security.Cryptography.CryptoAPITransform
+System.Security.Cryptography.CryptoConfig
+System.Security.Cryptography.FromBase64Transform
+System.Security.Cryptography.FromBase64TransformMode
+System.Security.Cryptography.MaskGenerationMethod
+System.Security.Cryptography.PKCS1MaskGenerationMethod
+System.Security.Cryptography.ToBase64Transform
+
 System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
 System.Security.Cryptography.AsymmetricKeyExchangeFormatter
 System.Security.Cryptography.AsymmetricSignatureDeformatter
