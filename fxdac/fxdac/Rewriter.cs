@@ -306,6 +306,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         var type = (ClassDeclarationSyntax)member.Parent;
         sb.Append(type.Identifier);
         sb.Append('.');
+        var eis = member.ExplicitInterfaceSpecifier;
+        if (eis!=null) sb.Append(eis);
         sb.Append(member.Identifier);
         sb.Append('(');
         bool first = true;
@@ -314,7 +316,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
             else sb.Append(", ");
             sb.Append(parameter.Type);
         }
-        sb.Append(')');
+        sb.Append("):");
+        sb.Append(member.ReturnType);
         return sb.ToString();
     }
 
@@ -324,7 +327,11 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         var type = (ClassDeclarationSyntax)member.Parent;
         sb.Append(type.Identifier);
         sb.Append('.');
+        var eis = member.ExplicitInterfaceSpecifier;
+        if (eis != null) sb.Append(eis);
         sb.Append(member.Identifier);
+        sb.Append(":");
+        sb.Append(member.Type);
         return sb.ToString();
     }
 }
