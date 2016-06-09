@@ -58,6 +58,7 @@
     <item text="Removed method MethodBase.GetTypeInfoCount(uint)"/>
     <item text="Removed method MethodBase.Invoke(uint, System.Guid, uint, short, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr)"/>
     <item text="Removed member Module.GetSignerCertificate()"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type MemoryFailPoint"/>
     <item text="Removed type _Activator"/>
     <item text="Removed type _Assembly"/>
     <item text="Removed type _AssemblyName"/>
@@ -76,12 +77,16 @@
     <item text="Removed type _SignatureHelper"/>
     <item text="Removed type _Thread"/>
     <item text="Removed type _Type"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type CriticalHandle"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type SafeHandle"/>
     <item text="Removed member SecurityException.ctor(string, object, object, System.Reflection.MethodInfo, object, System.Security.IPermission)"/>
     <item text="Removed member SecurityException.FirstPermissionThatFailed"/>
     <item text="Removed member SecurityException.Action"/>
     <item text="Removed member SecurityException.Zone"/>
     <item text="Removed base System.Runtime.InteropServices._Exception from type PolicyException"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type ReaderWriterLock"/>
     <item text="Removed base System.MarshalByRefObject from type RegisteredWaitHandle"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type Thread"/>
     <item text="Removed member Thread.GetDomain()"/>
     <item text="Removed member Thread.CurrentContext"/>
     <item text="Removed base System.MarshalByRefObject from type Timer"/>

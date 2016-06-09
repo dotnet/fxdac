@@ -39,16 +39,13 @@ namespace System.Threading {
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public sealed partial class Mutex : System.Threading.WaitHandle {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public Mutex() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public Mutex(bool initiallyOwned) { }
     public Mutex(bool initiallyOwned, string name) { }
     public Mutex(bool initiallyOwned, string name, out bool createdNew) { createdNew = default(bool); }
     public Mutex(bool initiallyOwned, string name, out bool createdNew, System.Security.AccessControl.MutexSecurity mutexSecurity) { createdNew = default(bool); }
     public static System.Threading.Mutex OpenExisting(string name) { return default(System.Threading.Mutex); }
     public static System.Threading.Mutex OpenExisting(string name, System.Security.AccessControl.MutexRights rights) { return default(System.Threading.Mutex); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public void ReleaseMutex() { }
     public static bool TryOpenExisting(string name, System.Security.AccessControl.MutexRights rights, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
     public static bool TryOpenExisting(string name, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
@@ -63,10 +60,7 @@ namespace System.Threading {
     public System.Security.AccessControl.SemaphoreSecurity GetAccessControl() { return default(System.Security.AccessControl.SemaphoreSecurity); }
     public static System.Threading.Semaphore OpenExisting(string name) { return default(System.Threading.Semaphore); }
     public static System.Threading.Semaphore OpenExisting(string name, System.Security.AccessControl.SemaphoreRights rights) { return default(System.Threading.Semaphore); }
-    [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public int Release() { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public int Release(int releaseCount) { return default(int); }
     public void SetAccessControl(System.Security.AccessControl.SemaphoreSecurity semaphoreSecurity) { }
     public static bool TryOpenExisting(string name, System.Security.AccessControl.SemaphoreRights rights, out System.Threading.Semaphore result) { result = default(System.Threading.Semaphore); return default(bool); }

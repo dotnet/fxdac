@@ -36,6 +36,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") ||
         attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
+        attributeName.StartsWith("System.Runtime.ConstrainedExecution.ReliabilityContractAttribute") ||
+        attributeName.StartsWith("System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute") ||
         attributeName.StartsWith("System.ComponentModel.DesignerAttribute");
     });
 
@@ -50,6 +52,12 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependency() { From="System.Runtime", To ="System.Security.SecurityZone" },
         new FxDependency() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
         new FxDependency() { From="System.Runtime", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
+
+        new FxDependency() { From="System.Runtime.Handles", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
+
+        new FxDependency() { From="System.Threading", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
+        new FxDependency() { From="System.Threading.Thread", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
 
         new FxDependency() { From="System.Threading", To ="System.MarshalByRefObject" },
         new FxDependency() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
@@ -61,6 +69,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependency() { From="System.Net", To ="System.MarshalByRefObject" },
         new FxDependency() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
         new FxDependency() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
+
 
         new FxDependency() { From="System.Threading.Thread", To ="System.AppDomain" },
         new FxDependency() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
@@ -84,7 +93,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     public override SyntaxNode VisitAttributeList(AttributeListSyntax node)
     {
         var newNode = (AttributeListSyntax)base.VisitAttributeList(node);
-        if (newNode.Attributes.Count == 0) {
+        if (newNode == null || newNode.Attributes.Count == 0) {
             return null;
         }
         return newNode;

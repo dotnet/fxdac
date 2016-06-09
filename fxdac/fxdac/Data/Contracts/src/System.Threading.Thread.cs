@@ -5,7 +5,7 @@ namespace System.Threading {
 
   [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public sealed partial class Thread : System.Runtime.ConstrainedExecution.CriticalFinalizerObject {
+  public sealed partial class Thread {
     [System.Security.SecuritySafeCriticalAttribute]
     public Thread(System.Threading.ParameterizedThreadStart start) { }
     [System.Security.SecuritySafeCriticalAttribute]
@@ -18,13 +18,13 @@ namespace System.Threading {
     public System.Threading.ApartmentState ApartmentState { get { return default(System.Threading.ApartmentState); } set { } }
     public System.Globalization.CultureInfo CurrentCulture { get { return default(System.Globalization.CultureInfo); } set { } }
     public static System.Security.Principal.IPrincipal CurrentPrincipal { get { return default(System.Security.Principal.IPrincipal); } set { } }
-    public static System.Threading.Thread CurrentThread { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]get { return default(System.Threading.Thread); } }
+    public static System.Threading.Thread CurrentThread { get { return default(System.Threading.Thread); } }
     public System.Globalization.CultureInfo CurrentUICulture { get { return default(System.Globalization.CultureInfo); } set { } }
-    public System.Threading.ExecutionContext ExecutionContext { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1)), System.Security.SecuritySafeCriticalAttribute]get { return default(System.Threading.ExecutionContext); } }
+    public System.Threading.ExecutionContext ExecutionContext { get { return default(System.Threading.ExecutionContext); } }
     public bool IsAlive { get { return default(bool); } }
     public bool IsBackground { get { return default(bool); } set { } }
     public bool IsThreadPoolThread { get { return default(bool); } }
-    public int ManagedThreadId { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
+    public int ManagedThreadId { get { return default(int); } }
     public string Name { get { return default(string); } set { } }
     public System.Threading.ThreadPriority Priority { [System.Security.SecuritySafeCriticalAttribute]get { return default(System.Threading.ThreadPriority); } [System.Security.SecuritySafeCriticalAttribute]set { } }
     public System.Threading.ThreadState ThreadState { get { return default(System.Threading.ThreadState); } }
@@ -32,13 +32,9 @@ namespace System.Threading {
     public void Abort(object stateInfo) { }
     public static System.LocalDataStoreSlot AllocateDataSlot() { return default(System.LocalDataStoreSlot); }
     public static System.LocalDataStoreSlot AllocateNamedDataSlot(string name) { return default(System.LocalDataStoreSlot); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void BeginCriticalRegion() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void BeginThreadAffinity() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void EndCriticalRegion() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void EndThreadAffinity() { }
     ~Thread() { }
     public static void FreeNamedDataSlot(string name) { }
@@ -73,7 +69,6 @@ namespace System.Threading {
     [System.Security.SecuritySafeCriticalAttribute]
     public static void Sleep(int millisecondsTimeout) { }
     public static void Sleep(System.TimeSpan timeout) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void SpinWait(int iterations) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]    public void Start() { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]    public void Start(object parameter) { }
@@ -117,7 +112,6 @@ namespace System.Threading {
     public static void VolatileWrite(ref ulong address, ulong value) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.CLSCompliantAttribute(false)]
     public static void VolatileWrite(ref System.UIntPtr address, System.UIntPtr value) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecuritySafeCriticalAttribute]
     public static bool Yield() { return default(bool); }
   }

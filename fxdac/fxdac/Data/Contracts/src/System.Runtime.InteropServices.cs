@@ -492,10 +492,8 @@ namespace System.Runtime.InteropServices {
     public static readonly int SystemMaxDBCSCharSize;
     public static int AddRef(System.IntPtr pUnk) { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr AllocCoTaskMem(int cb) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static System.IntPtr AllocHGlobal(int cb) { return default(System.IntPtr); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-    public static System.IntPtr AllocHGlobal(System.IntPtr cb) { return default(System.IntPtr); }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static System.IntPtr AllocHGlobal(System.IntPtr cb) { return default(System.IntPtr); }
     public static object BindToMoniker(string monikerName) { return default(object); }
     public static void ChangeWrapperHandleStrength(object otp, bool fIsWeak) { }
     public static void Copy(byte[] source, int startIndex, System.IntPtr destination, int length) { }
@@ -521,16 +519,14 @@ namespace System.Runtime.InteropServices {
     public static void DestroyStructure<T>(System.IntPtr ptr) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static void FreeBSTR(System.IntPtr ptr) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static void FreeCoTaskMem(System.IntPtr ptr) { }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static void FreeHGlobal(System.IntPtr hglobal) { }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static void FreeHGlobal(System.IntPtr hglobal) { }
     public static System.Delegate GetDelegateForFunctionPointer(System.IntPtr ptr, System.Type t) { return default(System.Delegate); }
     public static TDelegate GetDelegateForFunctionPointer<TDelegate>(System.IntPtr ptr) { return default(TDelegate); }
     public static System.Exception GetExceptionForHR(int errorCode) { return default(System.Exception); }
     public static System.Exception GetExceptionForHR(int errorCode, System.IntPtr errorInfo) { return default(System.Exception); }
     public static System.IntPtr GetFunctionPointerForDelegate(System.Delegate d) { return default(System.IntPtr); }
     public static System.IntPtr GetFunctionPointerForDelegate<TDelegate>(TDelegate d) { return default(System.IntPtr); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static int GetLastWin32Error() { return default(int); }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static int GetLastWin32Error() { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr OffsetOf(System.Type t, string fieldName) { return default(System.IntPtr); }
     public static System.IntPtr OffsetOf<T>(string fieldName) { return default(System.IntPtr); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static void Prelink(System.Reflection.MethodInfo m) { }
@@ -555,26 +551,17 @@ namespace System.Runtime.InteropServices {
     public static short ReadInt16(System.IntPtr ptr) { return default(short); }
     public static short ReadInt16(System.IntPtr ptr, int ofs) { return default(short); }
     public static short ReadInt16(object ptr, int ofs) { return default(short); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int ReadInt32(System.IntPtr ptr) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int ReadInt32(System.IntPtr ptr, int ofs) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int ReadInt32(object ptr, int ofs) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static long ReadInt64(System.IntPtr ptr) { return default(long); }
     public static long ReadInt64(System.IntPtr ptr, int ofs) { return default(long); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static long ReadInt64(object ptr, int ofs) { return default(long); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static System.IntPtr ReadIntPtr(System.IntPtr ptr) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static System.IntPtr ReadIntPtr(System.IntPtr ptr, int ofs) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static System.IntPtr ReadIntPtr(object ptr, int ofs) { return default(System.IntPtr); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr ReAllocCoTaskMem(System.IntPtr pv, int cb) { return default(System.IntPtr); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr ReAllocHGlobal(System.IntPtr pv, System.IntPtr cb) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int Release(System.IntPtr pUnk) { return default(int); }
     public static System.IntPtr SecureStringToBSTR(System.Security.SecureString s) { return default(System.IntPtr); }
     public static System.IntPtr SecureStringToCoTaskMemAnsi(System.Security.SecureString s) { return default(System.IntPtr); }
@@ -593,8 +580,7 @@ namespace System.Runtime.InteropServices {
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr StringToHGlobalAnsi(string s) { return default(System.IntPtr); }
     public static System.IntPtr StringToHGlobalAuto(string s) { return default(System.IntPtr); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static System.IntPtr StringToHGlobalUni(string s) { return default(System.IntPtr); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static void StructureToPtr(object structure, System.IntPtr ptr, bool fDeleteOld) { }
     public static void StructureToPtr<T>(T structure, System.IntPtr ptr, bool fDeleteOld) { }
     public static void ThrowExceptionForHR(int errorCode) { }

@@ -79,7 +79,7 @@ namespace System {
     public string DynamicDirectory { get { return default(string); } }
     public System.Security.Policy.Evidence Evidence { get { return default(System.Security.Policy.Evidence); } }
     public string FriendlyName { get { return default(string); } }
-    public int Id { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
+    public int Id { get { return default(int); } }
     public bool IsFullyTrusted { get { return default(bool); } }
     public bool IsHomogenous { get { return default(bool); } }
     public static bool MonitoringIsEnabled { get { return default(bool); } set { } }
@@ -184,7 +184,6 @@ namespace System {
     public void SetShadowCopyPath(string path) { }
     public void SetThreadPrincipal(System.Security.Principal.IPrincipal principal) { }
     public override string ToString() { return default(string); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(1), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Unload(System.AppDomain domain) { }
   }
 
@@ -387,14 +386,13 @@ namespace System.Runtime.Remoting {
     public ObjRef() { }
     public ObjRef(System.MarshalByRefObject o, System.Type requestedType) { }
     protected ObjRef(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public virtual System.Runtime.Remoting.IChannelInfo ChannelInfo { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Runtime.Remoting.IChannelInfo); } set { } }
+    public virtual System.Runtime.Remoting.IChannelInfo ChannelInfo { get { return default(System.Runtime.Remoting.IChannelInfo); } set { } }
     public virtual System.Runtime.Remoting.IEnvoyInfo EnvoyInfo { get { return default(System.Runtime.Remoting.IEnvoyInfo); } set { } }
     public virtual System.Runtime.Remoting.IRemotingTypeInfo TypeInfo { get { return default(System.Runtime.Remoting.IRemotingTypeInfo); } set { } }
     public virtual string URI { get { return default(string); } set { } }
     public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public virtual object GetRealObject(System.Runtime.Serialization.StreamingContext context) { return default(object); }
     public bool IsFromThisAppDomain() { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public bool IsFromThisProcess() { return default(bool); }
   }
 
@@ -449,7 +447,6 @@ namespace System.Runtime.Remoting {
     public static void GetObjectData(object obj, System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public static string GetObjectUri(System.MarshalByRefObject obj) { return default(string); }
     public static System.Runtime.Remoting.ObjRef GetObjRefForProxy(System.MarshalByRefObject obj) { return default(System.Runtime.Remoting.ObjRef); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static System.Runtime.Remoting.Proxies.RealProxy GetRealProxy(object proxy) { return default(System.Runtime.Remoting.Proxies.RealProxy); }
     public static System.Type GetServerTypeForUri(string URI) { return default(System.Type); }
     public static string GetSessionIdForMethodMessage(System.Runtime.Remoting.Messaging.IMethodMessage msg) { return default(string); }

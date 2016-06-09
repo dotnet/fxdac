@@ -9,21 +9,18 @@ namespace Microsoft.Win32.SafeHandles {
 
   [System.Security.SecurityCriticalAttribute]
   public abstract partial class SafeHandleMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     protected SafeHandleMinusOneIsInvalid(bool ownsHandle) { }
     public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
   }
 
   [System.Security.SecurityCriticalAttribute]
   public abstract partial class SafeHandleZeroOrMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     protected SafeHandleZeroOrMinusOneIsInvalid(bool ownsHandle) { }
     public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
   }
 
   [System.Security.SecurityCriticalAttribute]
   public sealed partial class SafeWaitHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public SafeWaitHandle(System.IntPtr existingHandle, bool ownsHandle) : base (default(bool)) { }
     [System.Security.SecurityCriticalAttribute]
     protected override bool ReleaseHandle() { return default(bool); }
@@ -198,43 +195,29 @@ namespace System {
     public bool IsFixedSize { get { return default(bool); } }
     public bool IsReadOnly { get { return default(bool); } }
     public bool IsSynchronized { get { return default(bool); } }
-    public int Length { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
+    public int Length { get { return default(int); } }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-    public long LongLength { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(long); } }
-    public int Rank { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
+    public long LongLength { get { return default(long); } }
+    public int Rank { get { return default(int); } }
     public object SyncRoot { get { return default(object); } }
     int System.Collections.ICollection.Count { get { return default(int); } }
     object System.Collections.IList.this[int index] { get { return default(object); } set { } }
     public static System.Collections.ObjectModel.ReadOnlyCollection<T> AsReadOnly<T>(T[] array) { return default(System.Collections.ObjectModel.ReadOnlyCollection<T>); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch(System.Array array, int index, int length, object value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch(System.Array array, int index, int length, object value, System.Collections.IComparer comparer) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch(System.Array array, object value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch(System.Array array, object value, System.Collections.IComparer comparer) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch<T>(T[] array, T value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch<T>(T[] array, T value, System.Collections.Generic.IComparer<T> comparer) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch<T>(T[] array, int index, int length, T value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int BinarySearch<T>(T[] array, int index, int length, T value, System.Collections.Generic.IComparer<T> comparer) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void Clear(System.Array array, int index, int length) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public object Clone() { return default(object); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void ConstrainedCopy(System.Array sourceArray, int sourceIndex, System.Array destinationArray, int destinationIndex, int length) { }
     public static TOutput[] ConvertAll<TInput, TOutput>(TInput[] array, System.Converter<TInput, TOutput> converter) { return default(TOutput[]); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Copy(System.Array sourceArray, System.Array destinationArray, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Copy(System.Array sourceArray, System.Array destinationArray, long length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Copy(System.Array sourceArray, int sourceIndex, System.Array destinationArray, int destinationIndex, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Copy(System.Array sourceArray, long sourceIndex, System.Array destinationArray, long destinationIndex, long length) { }
     public void CopyTo(System.Array array, int index) { }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -260,9 +243,7 @@ namespace System {
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public int GetLength(int dimension) { return default(int); }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public long GetLongLength(int dimension) { return default(long); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public int GetLowerBound(int dimension) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public int GetLowerBound(int dimension) { return default(int); }
     public int GetUpperBound(int dimension) { return default(int); }
     public object GetValue(int index) { return default(object); }
     public object GetValue(int index1, int index2) { return default(object); }
@@ -276,30 +257,21 @@ namespace System {
     public object GetValue(long index1, long index2, long index3) { return default(object); }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public object GetValue(params long[] indices) { return default(object); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int IndexOf(System.Array array, object value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int IndexOf(System.Array array, object value, int startIndex) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int IndexOf(System.Array array, object value, int startIndex, int count) { return default(int); }
     public static int IndexOf<T>(T[] array, T value) { return default(int); }
     public static int IndexOf<T>(T[] array, T value, int startIndex) { return default(int); }
     public static int IndexOf<T>(T[] array, T value, int startIndex, int count) { return default(int); }
     public void Initialize() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int LastIndexOf(System.Array array, object value) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int LastIndexOf(System.Array array, object value, int startIndex) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int LastIndexOf(System.Array array, object value, int startIndex, int count) { return default(int); }
     public static int LastIndexOf<T>(T[] array, T value) { return default(int); }
     public static int LastIndexOf<T>(T[] array, T value, int startIndex) { return default(int); }
     public static int LastIndexOf<T>(T[] array, T value, int startIndex, int count) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Resize<T>(ref T[] array, int newSize) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Reverse(System.Array array) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Reverse(System.Array array, int index, int length) { }
     public void SetValue(object value, int index) { }
     public void SetValue(object value, int index1, int index2) { }
@@ -313,43 +285,26 @@ namespace System {
     public void SetValue(object value, long index1, long index2, long index3) { }
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public void SetValue(object value, params long[] indices) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array array) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array keys, System.Array items) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array keys, System.Array items, System.Collections.IComparer comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array keys, System.Array items, int index, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array keys, System.Array items, int index, int length, System.Collections.IComparer comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array array, System.Collections.IComparer comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array array, int index, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort(System.Array array, int index, int length, System.Collections.IComparer comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<T>(T[] array) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<T>(T[] array, System.Collections.Generic.IComparer<T> comparer) { }
     public static void Sort<T>(T[] array, System.Comparison<T> comparison) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<T>(T[] array, int index, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<T>(T[] array, int index, int length, System.Collections.Generic.IComparer<T> comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, System.Collections.Generic.IComparer<TKey> comparer) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, int index, int length) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, int index, int length, System.Collections.Generic.IComparer<TKey> comparer) { }
     int System.Collections.IList.Add(object value) { return default(int); }
     void System.Collections.IList.Clear() { }
     bool System.Collections.IList.Contains(object value) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     int System.Collections.IList.IndexOf(object value) { return default(int); }
     void System.Collections.IList.Insert(int index, object value) { }
     void System.Collections.IList.Remove(object value) { }
@@ -1488,7 +1443,6 @@ namespace System {
     [System.Security.SecuritySafeCriticalAttribute]
     public static decimal Add(decimal d1, decimal d2) { return default(decimal); }
     public static decimal Ceiling(decimal d) { return default(decimal); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecuritySafeCriticalAttribute]
     public static int Compare(decimal d1, decimal d2) { return default(int); }
     [System.Security.SecuritySafeCriticalAttribute]
@@ -1702,7 +1656,6 @@ namespace System {
     public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
     [System.Security.SecuritySafeCriticalAttribute]
     public static bool IsInfinity(double d) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecuritySafeCriticalAttribute]
     public static bool IsNaN(double d) { return default(bool); }
     public static bool IsNegativeInfinity(double d) { return default(bool); }
@@ -2034,18 +1987,15 @@ namespace System {
     public static void Collect(int generation) { }
     public static void Collect(int generation, System.GCCollectionMode mode) { }
     public static void Collect(int generation, System.GCCollectionMode mode, bool blocking) { }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static int CollectionCount(int generation) { return default(int); }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static int CollectionCount(int generation) { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static int GetGeneration(object obj) { return default(int); }
     public static int GetGeneration(System.WeakReference wo) { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static long GetTotalMemory(bool forceFullCollection) { return default(long); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static void KeepAlive(object obj) { }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static void KeepAlive(object obj) { }
     public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) { }
     public static void RemoveMemoryPressure(long bytesAllocated) { }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static void ReRegisterForFinalize(object obj) { }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static void SuppressFinalize(object obj) { }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static void SuppressFinalize(object obj) { }
     public static System.GCNotificationStatus WaitForFullGCApproach() { return default(System.GCNotificationStatus); }
     public static System.GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) { return default(System.GCNotificationStatus); }
     public static System.GCNotificationStatus WaitForFullGCComplete() { return default(System.GCNotificationStatus); }
@@ -2323,46 +2273,31 @@ namespace System {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct IntPtr : System.Runtime.Serialization.ISerializable {
     public static readonly System.IntPtr Zero;
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public IntPtr(int value) { throw new System.NotImplementedException(); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public IntPtr(long value) { throw new System.NotImplementedException(); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public unsafe IntPtr(void* value) { throw new System.NotImplementedException(); }
-    public static int Size { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
+    public static int Size { get { return default(int); } }
     public static System.IntPtr Add(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static System.IntPtr operator +(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static bool operator ==(System.IntPtr value1, System.IntPtr value2) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static explicit operator System.IntPtr (int value) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static explicit operator System.IntPtr (long value) { return default(System.IntPtr); }
     public static explicit operator int (System.IntPtr value) { return default(int); }
     public static explicit operator long (System.IntPtr value) { return default(long); }
     [System.CLSCompliantAttribute(false)]
     public unsafe static explicit operator void* (System.IntPtr value) { return default(void*); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public unsafe static explicit operator System.IntPtr (void* value) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static bool operator !=(System.IntPtr value1, System.IntPtr value2) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static System.IntPtr operator -(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static System.IntPtr Subtract(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
     void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public int ToInt32() { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public long ToInt64() { return default(long); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public unsafe void* ToPointer() { return default(void*); }
     public override string ToString() { return default(string); }
     public string ToString(string format) { return default(string); }
@@ -2482,57 +2417,35 @@ namespace System {
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Log(double d) { return default(double); }
     public static double Log(double a, double newBase) { return default(double); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Log10(double d) { return default(double); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static byte Max(byte val1, byte val2) { return default(byte); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static decimal Max(decimal val1, decimal val2) { return default(decimal); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static double Max(double val1, double val2) { return default(double); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static short Max(short val1, short val2) { return default(short); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int Max(int val1, int val2) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static long Max(long val1, long val2) { return default(long); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static sbyte Max(sbyte val1, sbyte val2) { return default(sbyte); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static float Max(float val1, float val2) { return default(float); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static ushort Max(ushort val1, ushort val2) { return default(ushort); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static uint Max(uint val1, uint val2) { return default(uint); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static ulong Max(ulong val1, ulong val2) { return default(ulong); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static byte Min(byte val1, byte val2) { return default(byte); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static decimal Min(decimal val1, decimal val2) { return default(decimal); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static double Min(double val1, double val2) { return default(double); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static short Min(short val1, short val2) { return default(short); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static int Min(int val1, int val2) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static long Min(long val1, long val2) { return default(long); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static sbyte Min(sbyte val1, sbyte val2) { return default(sbyte); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static float Min(float val1, float val2) { return default(float); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static ushort Min(ushort val1, ushort val2) { return default(ushort); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static uint Min(uint val1, uint val2) { return default(uint); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static ulong Min(ulong val1, ulong val2) { return default(ulong); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Pow(double x, double y) { return default(double); }
     public static decimal Round(decimal d) { return default(decimal); }
@@ -2553,8 +2466,7 @@ namespace System {
     public static int Sign(float value) { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Sin(double a) { return default(double); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Sinh(double value) { return default(double); }
-    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)][System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-    public static double Sqrt(double d) { return default(double); }
+    [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]    public static double Sqrt(double d) { return default(double); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Tan(double a) { return default(double); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static double Tanh(double value) { return default(double); }
     public static decimal Truncate(decimal d) { return default(decimal); }
@@ -2623,9 +2535,7 @@ namespace System {
   public partial struct ModuleHandle {
     public static readonly System.ModuleHandle EmptyHandle;
     public int MDStreamVersion { get { return default(int); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public bool Equals(System.ModuleHandle handle) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
     public System.RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int fieldToken) { return default(System.RuntimeFieldHandle); }
@@ -2741,7 +2651,6 @@ namespace System {
   [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(2))]
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class Object {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public Object() { }
     public virtual bool Equals(object obj) { return default(bool); }
     public static bool Equals(object objA, object objB) { return default(bool); }
@@ -2749,7 +2658,6 @@ namespace System {
     public virtual int GetHashCode() { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public System.Type GetType() { return default(System.Type); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]protected object MemberwiseClone() { return default(object); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static bool ReferenceEquals(object objA, object objB) { return default(bool); }
     public virtual string ToString() { return default(string); }
   }
@@ -2894,9 +2802,7 @@ namespace System {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct RuntimeFieldHandle : System.Runtime.Serialization.ISerializable {
     public System.IntPtr Value { get { return default(System.IntPtr); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public override bool Equals(object obj) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public bool Equals(System.RuntimeFieldHandle handle) { return default(bool); }
     public override int GetHashCode() { return default(int); }
     public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
@@ -2908,9 +2814,7 @@ namespace System {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct RuntimeMethodHandle : System.Runtime.Serialization.ISerializable {
     public System.IntPtr Value { get { return default(System.IntPtr); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public override bool Equals(object obj) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public bool Equals(System.RuntimeMethodHandle handle) { return default(bool); }
     public System.IntPtr GetFunctionPointer() { return default(System.IntPtr); }
     public override int GetHashCode() { return default(int); }
@@ -2923,13 +2827,10 @@ namespace System {
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct RuntimeTypeHandle : System.Runtime.Serialization.ISerializable {
     public System.IntPtr Value { get { return default(System.IntPtr); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public override bool Equals(object obj) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public bool Equals(System.RuntimeTypeHandle handle) { return default(bool); }
     public override int GetHashCode() { return default(int); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public System.ModuleHandle GetModuleHandle() { return default(System.ModuleHandle); }
     public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     public static bool operator ==(object left, System.RuntimeTypeHandle right) { return default(bool); }
@@ -3009,7 +2910,6 @@ namespace System {
     public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
     [System.Security.SecuritySafeCriticalAttribute]
     public static bool IsInfinity(float f) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecuritySafeCriticalAttribute]
     public static bool IsNaN(float f) { return default(bool); }
     [System.Security.SecuritySafeCriticalAttribute]
@@ -3147,9 +3047,7 @@ namespace System {
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     [System.Security.SecuritySafeCriticalAttribute]
     public bool EndsWith(string value, System.StringComparison comparisonType) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public override bool Equals(object obj) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
     public bool Equals(string value) { return default(bool); }
     [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
@@ -3164,7 +3062,6 @@ namespace System {
     public static string Format(string format, object arg0, object arg1, object arg2) { return default(string); }
     public static string Format(string format, params object[] args) { return default(string); }
     public System.CharEnumerator GetEnumerator() { return default(System.CharEnumerator); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     [System.Security.SecuritySafeCriticalAttribute]
     public override int GetHashCode() { return default(int); }
     [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
@@ -4138,8 +4035,8 @@ namespace System {
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
   public partial class UnhandledExceptionEventArgs : System.EventArgs {
     public UnhandledExceptionEventArgs(object exception, bool isTerminating) { }
-    public object ExceptionObject { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(object); } }
-    public bool IsTerminating { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
+    public object ExceptionObject { get { return default(object); } }
+    public bool IsTerminating { get { return default(bool); } }
   }
 
   [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -7063,11 +6960,11 @@ namespace System.Runtime {
 
   public static partial class GCSettings {
     public static bool IsServerGC { get { return default(bool); } }
-    public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute, System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Runtime.GCLargeObjectHeapCompactionMode); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute, System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
-    public static System.Runtime.GCLatencyMode LatencyMode { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Runtime.GCLatencyMode); } [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
+    public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute, ]get { return default(System.Runtime.GCLargeObjectHeapCompactionMode); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute, ]set { } }
+    public static System.Runtime.GCLatencyMode LatencyMode { get { return default(System.Runtime.GCLatencyMode); } set { } }
   }
 
-  public sealed partial class MemoryFailPoint : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable {
+  public sealed partial class MemoryFailPoint :System.IDisposable {
     public MemoryFailPoint(int sizeInMegabytes) { }
     public void Dispose() { }
     ~MemoryFailPoint() { }
@@ -7444,16 +7341,13 @@ namespace System.Runtime.CompilerServices {
 
   public static partial class RuntimeHelpers {
     public static int OffsetToStringData { [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]get { return default(int); } }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public static void EnsureSufficientExecutionStack() { }
     public static new bool Equals(object o1, object o2) { return default(bool); }
     public static void ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode code, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode backoutCode, object userData) { }
     public static int GetHashCode(object o) { return default(int); }
     [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]public static object GetObjectValue(object obj) { return default(object); }
     public static void InitializeArray(System.Array array, System.RuntimeFieldHandle fldHandle) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void PrepareConstrainedRegions() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void PrepareConstrainedRegionsNoOP() { }
     [System.Security.SecurityCriticalAttribute]
     public static void PrepareContractedDelegate(System.Delegate d) { }
@@ -7461,7 +7355,6 @@ namespace System.Runtime.CompilerServices {
     public static void PrepareDelegate(System.Delegate d) { }
     public static void PrepareMethod(System.RuntimeMethodHandle method) { }
     public static void PrepareMethod(System.RuntimeMethodHandle method, System.RuntimeTypeHandle[] instantiation) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static void ProbeForSufficientStack() { }
     public static void RunClassConstructor(System.RuntimeTypeHandle type) { }
     public static void RunModuleConstructor(System.ModuleHandle module) { }
@@ -7576,40 +7469,6 @@ namespace System.Runtime.CompilerServices {
   }
 
 } // end of System.Runtime.CompilerServices
-namespace System.Runtime.ConstrainedExecution {
-  public enum Cer {
-    MayFail = 1,
-    None = 0,
-    Success = 2,
-  }
-
-  public enum Consistency {
-    MayCorruptAppDomain = 1,
-    MayCorruptInstance = 2,
-    MayCorruptProcess = 0,
-    WillNotCorruptState = 3,
-  }
-
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public abstract partial class CriticalFinalizerObject {
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-    protected CriticalFinalizerObject() { }
-    ~CriticalFinalizerObject() { }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited=false)]
-  public sealed partial class PrePrepareMethodAttribute : System.Attribute {
-    public PrePrepareMethodAttribute() { }
-  }
-
-  [System.AttributeUsageAttribute((System.AttributeTargets)(1133), Inherited=false)]
-  public sealed partial class ReliabilityContractAttribute : System.Attribute {
-    public ReliabilityContractAttribute(System.Runtime.ConstrainedExecution.Consistency consistencyGuarantee, System.Runtime.ConstrainedExecution.Cer cer) { }
-    public System.Runtime.ConstrainedExecution.Cer Cer { get { return default(System.Runtime.ConstrainedExecution.Cer); } }
-    public System.Runtime.ConstrainedExecution.Consistency ConsistencyGuarantee { get { return default(System.Runtime.ConstrainedExecution.Consistency); } }
-  }
-
-} // end of System.Runtime.ConstrainedExecution
 namespace System.Runtime.ExceptionServices {
   public sealed partial class ExceptionDispatchInfo {
     internal ExceptionDispatchInfo() { }
@@ -7620,7 +7479,7 @@ namespace System.Runtime.ExceptionServices {
 
   public partial class FirstChanceExceptionEventArgs : System.EventArgs {
     public FirstChanceExceptionEventArgs(System.Exception exception) { }
-    public System.Exception Exception { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Exception); } }
+    public System.Exception Exception { get { return default(System.Exception); } }
   }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple=false, Inherited=false)]
@@ -7744,7 +7603,6 @@ namespace System.Runtime.InteropServices {
     [System.CLSCompliantAttribute(false)]
     public ulong ByteLength { get { return default(ulong); } }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public unsafe void AcquirePointer(ref byte* pointer) { }
     [System.CLSCompliantAttribute(false)]
     public void Initialize(uint numElements, uint sizeOfEachElement) { }
@@ -7753,52 +7611,37 @@ namespace System.Runtime.InteropServices {
     [System.CLSCompliantAttribute(false)]
     public void Initialize<T>(uint numElements) where T : struct { }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public T Read<T>(ulong byteOffset) where T : struct { return default(T); }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public void ReleasePointer() { }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public void Write<T>(ulong byteOffset, T value) where T : struct { }
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
   }
 
   [System.Security.SecurityCriticalAttribute]
-  public abstract partial class SafeHandle : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable {
+  public abstract partial class SafeHandle :System.IDisposable {
     protected System.IntPtr handle;
     protected SafeHandle() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     protected SafeHandle(System.IntPtr invalidHandleValue, bool ownsHandle) { }
-    public bool IsClosed { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2)), System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-    public abstract bool IsInvalid { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get; }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
+    public bool IsClosed { get { return default(bool); } }
+    public abstract bool IsInvalid { get; }
     [System.Security.SecurityCriticalAttribute]
     public void Close() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public void DangerousAddRef(ref bool success) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
     public System.IntPtr DangerousGetHandle() { return default(System.IntPtr); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public void DangerousRelease() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecuritySafeCriticalAttribute]
     public void Dispose() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Security.SecurityCriticalAttribute]
     protected virtual void Dispose(bool disposing) { }
     ~SafeHandle() { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     protected abstract bool ReleaseHandle();
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
     protected void SetHandle(System.IntPtr handle) { }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
     public void SetHandleAsInvalid() { }
   }
 
@@ -8493,7 +8336,6 @@ namespace System.Threading {
   public partial class HostExecutionContextManager {
     public HostExecutionContextManager() { }
     public virtual System.Threading.HostExecutionContext Capture() { return default(System.Threading.HostExecutionContext); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public virtual void Revert(object previousState) { }
     public virtual object SetHostExecutionContext(System.Threading.HostExecutionContext hostExecutionContext) { return default(object); }
   }
@@ -8518,7 +8360,7 @@ namespace System.Threading {
     protected WaitHandle() { }
     [System.ObsoleteAttribute("In the profiles > 2.x, use SafeHandle instead of Handle")]
     public virtual System.IntPtr Handle { get { return default(System.IntPtr); } set { } }
-    public Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]get { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); } [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
+    public Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle { get { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); } set { } }
     public virtual void Close() { }
     public void Dispose() { }
     protected virtual void Dispose(bool explicitDisposing) { }
@@ -8530,15 +8372,10 @@ namespace System.Threading {
     public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext) { return default(bool); }
     public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout) { return default(bool); }
     public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout, bool exitContext) { return default(bool); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int WaitAny(System.Threading.WaitHandle[] waitHandles) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int WaitAny(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int WaitAny(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int WaitAny(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout) { return default(int); }
-    [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
     public static int WaitAny(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout, bool exitContext) { return default(int); }
     public virtual bool WaitOne() { return default(bool); }
     public virtual bool WaitOne(int millisecondsTimeout) { return default(bool); }
