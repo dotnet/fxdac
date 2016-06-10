@@ -261,6 +261,7 @@ System.Text.Encoding
 System.Text.EncodingInfo
 System.Text.NormalizationForm
 System.TypedReference
+System.Text.EncodingProvider
 
 // Added because already exist in System.Runtime
 System.Action`10
