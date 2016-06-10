@@ -18,3 +18,15 @@ namespace System {
     }
 
 } // end of System
+namespace System.Runtime.InteropServices.WindowsRuntime {
+    public sealed partial class EventRegistrationTokenTable<T> where T : class
+    {
+        public EventRegistrationTokenTable() { }
+        public T InvocationList { get { return default(T); } set { } }
+        public System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken AddEventHandler(T handler) { return default(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken); }
+        public static System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T> GetOrCreateEventRegistrationTokenTable(ref System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T> refEventTable) { return default(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>); }
+        public void RemoveEventHandler(T handler) { }
+        public void RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token) { }
+    }
+
+} // end of System.Runtime.InteropServices.WindowsRuntime

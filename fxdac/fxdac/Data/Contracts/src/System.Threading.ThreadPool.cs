@@ -21,22 +21,16 @@ namespace System.Threading {
         public static void GetMaxThreads(out int workerThreads, out int completionPortThreads) { workerThreads = default(int); completionPortThreads = default(int); }
         [System.Security.SecuritySafeCriticalAttribute]
         public static void GetMinThreads(out int workerThreads, out int completionPortThreads) { workerThreads = default(int); completionPortThreads = default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static bool QueueUserWorkItem(System.Threading.WaitCallback callBack) { return default(bool); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static bool QueueUserWorkItem(System.Threading.WaitCallback callBack, object state) { return default(bool); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, int millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, long millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, System.TimeSpan timeout, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.CLSCompliantAttribute(false)]
         [System.Security.SecuritySafeCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle RegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, uint millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
@@ -47,19 +41,14 @@ namespace System.Threading {
         [System.CLSCompliantAttribute(false)]
         [System.Security.SecurityCriticalAttribute]
         public unsafe static bool UnsafeQueueNativeOverlapped(System.Threading.NativeOverlapped* overlapped) { return default(bool); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecurityCriticalAttribute]
         public static bool UnsafeQueueUserWorkItem(System.Threading.WaitCallback callBack, object state) { return default(bool); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecurityCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, int millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecurityCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, long millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecurityCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, System.TimeSpan timeout, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.CLSCompliantAttribute(false)]
         [System.Security.SecurityCriticalAttribute]
         public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, uint millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }

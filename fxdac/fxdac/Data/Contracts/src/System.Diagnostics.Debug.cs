@@ -8,10 +8,8 @@ namespace System.Diagnostics {
         public Debugger() { }
         public static bool IsAttached { get { return default(bool); } }
         public static void Break() { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static bool IsLogging() { return default(bool); }
         public static bool Launch() { return default(bool); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static void Log(int level, string category, string message) { }
         public static void NotifyOfCrossThreadDependency() { }
     }

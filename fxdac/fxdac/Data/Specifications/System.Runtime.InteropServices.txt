@@ -13,7 +13,6 @@ System.Runtime.InteropServices.ICustomQueryInterface
 System.Runtime.InteropServices.DefaultParameterValueAttribute
 System.Runtime.InteropServices.HandleCollector
 System.Security.SuppressUnmanagedCodeSecurityAttribute
-System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
 
 System.Runtime.InteropServices._Attribute
 System.Runtime.InteropServices._MethodRental

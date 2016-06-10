@@ -22,7 +22,7 @@ static class Program
     static string s_CoreFxAPIFile = @"..\..\Data\MasterAPIs\CoreFxAll.cs";
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
-    internal static bool s_logOrphanedTypes = false; // Orphaned types are types in the specifications that don't exist in master source.
+    internal static bool s_logOrphanedTypes = true; // Orphaned types are types in the specifications that don't exist in master source.
     internal static bool s_logValidMoves = false;
     internal static bool s_logTypesNotInCoreFx = false;
     internal static bool s_logTypesNotInMasterSources = false;

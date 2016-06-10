@@ -110,7 +110,29 @@
     <MOVED_TO_SYSTEM_RUNTIME total="165" description="all moves to System.runtime are OK">
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <TYPES_NOT_IN_ANY_ASSEMBLY total="1" description="types that are not in specification files">
+  <ORPHANED_TYPES description="Orphaned types are types in the specifications that don't exist in master source.">
+    <item text="T:System.Runtime.InteropServices._Attribute"/>
+    <item text="T:System.Runtime.InteropServices._MethodRental"/>
+    <item text="T:System.Runtime.InteropServices._SignatureHelper"/>
+    <item text="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable"/>
+    <item text="T:System.Runtime.InteropServices._Activator"/>
+    <item text="T:System.Runtime.Remoting.System.Runtime.Remoting.Activation"/>
+    <item text="T:System.Runtime.Remoting.IActivator"/>
+    <item text="T:System.Runtime.Remoting.IConstructionCallMessage"/>
+    <item text="T:System.Runtime.Remoting.IConstructionReturnMessage"/>
+    <item text="T:System.Runtime.Remoting.UrlAttribute"/>
+    <item text="T:System.IEquatable"/>
+    <item text="T:System.Func"/>
+    <item text="T:System.Reflection.TypeDelegator"/>
+    <item text="T:System.Runtime.ConstrainedExecution"/>
+    <item text="T:System.ISerializable"/>
+    <item text="T:System.Runtime.CompilerServices.TypeDependencyAttribute"/>
+    <item text="T:System.Runtime.ForceTokenStabilizationAttribute"/>
+    <item text="T:System.Security.Cryptography.RSACryptoServiceProvider"/>
+    <item text="T:System.Security.DynamicSecurityMethodAttribute"/>
+  </ORPHANED_TYPES>
+  <TYPES_NOT_IN_ANY_ASSEMBLY total="2" description="types that are not in specification files">
     <item text="System.ArgIterator"/>
+    <item text="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1"/>
   </TYPES_NOT_IN_ANY_ASSEMBLY>
 </report>

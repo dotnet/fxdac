@@ -224,9 +224,8 @@ namespace System
     [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
     [System.Runtime.InteropServices.ComDefaultInterfaceAttribute(typeof(System.Runtime.InteropServices._Activator))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-    public sealed partial class Activator : System.Runtime.InteropServices._Activator
+    public static partial class Activator : System.Runtime.InteropServices._Activator
     {
-        internal Activator() { }
         public static System.Runtime.Remoting.ObjectHandle CreateComInstanceFrom(string assemblyName, string typeName) { return default(System.Runtime.Remoting.ObjectHandle); }
         public static System.Runtime.Remoting.ObjectHandle CreateComInstanceFrom(string assemblyName, string typeName, byte[] hashValue, System.Configuration.Assemblies.AssemblyHashAlgorithm hashAlgorithm) { return default(System.Runtime.Remoting.ObjectHandle); }
         [System.Security.SecuritySafeCriticalAttribute]
