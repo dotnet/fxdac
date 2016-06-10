@@ -1,73 +1,153 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Diagnostics.Tracing {
-  [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-  public sealed partial class EventAttribute : System.Attribute {
-    public EventAttribute(int eventId) { }
-    public int EventId { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(int); } }
-  }
+    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
+    public sealed partial class EventAttribute : System.Attribute
+    {
+        public EventAttribute(int eventId) { }
+        public int EventId { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(int); } }
+        public System.Diagnostics.Tracing.EventActivityOptions ActivityOptions { get { return default(System.Diagnostics.Tracing.EventActivityOptions); } set { } }
+        public System.Diagnostics.Tracing.EventChannel Channel { get { return default(System.Diagnostics.Tracing.EventChannel); } set { } }
+        public System.Diagnostics.Tracing.EventKeywords Keywords { get { return default(System.Diagnostics.Tracing.EventKeywords); } set { } }
+        public System.Diagnostics.Tracing.EventLevel Level { get { return default(System.Diagnostics.Tracing.EventLevel); } set { } }
+        public string Message { get { return default(string); } set { } }
+        public System.Diagnostics.Tracing.EventOpcode Opcode { get { return default(System.Diagnostics.Tracing.EventOpcode); } set { } }
+        public System.Diagnostics.Tracing.EventTags Tags { get { return default(System.Diagnostics.Tracing.EventTags); } set { } }
+        public System.Diagnostics.Tracing.EventTask Task { get { return default(System.Diagnostics.Tracing.EventTask); } set { } }
+        public byte Version { get { return default(byte); } set { } }
+    }
 
-  public enum EventCommand {
-    Disable = -3,
-    Enable = -2,
-    SendManifest = -1,
-    Update = 0,
-  }
 
-  public partial class EventCommandEventArgs : System.EventArgs {
-    internal EventCommandEventArgs() { }
-    public System.Collections.Generic.IDictionary<string, string> Arguments { get { return default(System.Collections.Generic.IDictionary<string, string>); } }
-    public System.Diagnostics.Tracing.EventCommand Command { get { return default(System.Diagnostics.Tracing.EventCommand); } }
-    public bool DisableEvent(int eventId) { return default(bool); }
-    public bool EnableEvent(int eventId) { return default(bool); }
-  }
+    public enum EventCommand
+    {
+        Disable = -3,
+        Enable = -2,
+        SendManifest = -1,
+        Update = 0,
+    }
 
-  [System.FlagsAttribute]
-  public enum EventKeywords : long {
-    AuditFailure = (long)4503599627370496,
-    AuditSuccess = (long)9007199254740992,
-    CorrelationHint = (long)4503599627370496,
-    EventLogClassic = (long)36028797018963968,
-    None = (long)0,
-    Sqm = (long)2251799813685248,
-    WdiContext = (long)562949953421312,
-    WdiDiagnostic = (long)1125899906842624,
-  }
 
-  public enum EventLevel {
-    Critical = 1,
-    Error = 2,
-    Informational = 4,
-    LogAlways = 0,
-    Verbose = 5,
-    Warning = 3,
-  }
+    public partial class EventCommandEventArgs : System.EventArgs
+    {
+        internal EventCommandEventArgs() { }
+        public System.Collections.Generic.IDictionary<string, string> Arguments { get { return default(System.Collections.Generic.IDictionary<string, string>); } }
+        public System.Diagnostics.Tracing.EventCommand Command { get { return default(System.Diagnostics.Tracing.EventCommand); } }
+        public bool DisableEvent(int eventId) { return default(bool); }
+        public bool EnableEvent(int eventId) { return default(bool); }
+    }
 
-  public partial class EventSource : System.IDisposable {
-    protected EventSource() { }
-    protected EventSource(bool throwOnEventWriteErrors) { }
-    public void Dispose() { }
-    protected virtual void Dispose(bool disposing) { }
-    public bool IsEnabled() { return default(bool); }
-    public bool IsEnabled(System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords keywords) { return default(bool); }
-    protected virtual void OnEventCommand(System.Diagnostics.Tracing.EventCommandEventArgs command) { }
-    protected void WriteEvent(int eventId, int arg1, int arg2, int arg3) { }
-    protected void WriteEvent(int eventId, string arg1) { }
-    protected void WriteEvent(int eventId, string arg1, int arg2) { }
-    protected void WriteEvent(int eventId, string arg1, int arg2, int arg3) { }
-  }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
-  public sealed partial class EventSourceAttribute : System.Attribute {
-    public EventSourceAttribute() { }
-    public string Guid { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
-    public string LocalizationResources { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
-    public string Name { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
-  }
+    [System.FlagsAttribute]
+    public enum EventKeywords : long
+    {
+        AuditFailure = (long)4503599627370496,
+        AuditSuccess = (long)9007199254740992,
+        CorrelationHint = (long)4503599627370496,
+        EventLogClassic = (long)36028797018963968,
+        None = (long)0,
+        Sqm = (long)2251799813685248,
+        WdiContext = (long)562949953421312,
+        WdiDiagnostic = (long)1125899906842624,
+    }
 
-  [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-  public sealed partial class NonEventAttribute : System.Attribute {
-    public NonEventAttribute() { }
-  }
+
+    public enum EventLevel
+    {
+        Critical = 1,
+        Error = 2,
+        Informational = 4,
+        LogAlways = 0,
+        Verbose = 5,
+        Warning = 3,
+    }
+
+
+    public partial class EventSource : System.IDisposable
+    {
+        protected EventSource() { }
+        protected EventSource(bool throwOnEventWriteErrors) { }
+        public void Dispose() { }
+        protected virtual void Dispose(bool disposing) { }
+        public bool IsEnabled() { return default(bool); }
+        public bool IsEnabled(System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords keywords) { return default(bool); }
+        protected virtual void OnEventCommand(System.Diagnostics.Tracing.EventCommandEventArgs command) { }
+        protected void WriteEvent(int eventId, int arg1, int arg2, int arg3) { }
+        protected void WriteEvent(int eventId, string arg1) { }
+        protected void WriteEvent(int eventId, string arg1, int arg2) { }
+        protected void WriteEvent(int eventId, string arg1, int arg2, int arg3) { }
+        public event System.EventHandler<System.Diagnostics.Tracing.EventCommandEventArgs> EventCommandExecuted { add { } remove { } }
+        protected EventSource(System.Diagnostics.Tracing.EventSourceSettings settings) { }
+        protected EventSource(System.Diagnostics.Tracing.EventSourceSettings settings, params string[] traits) { }
+        public EventSource(string eventSourceName) { }
+        public EventSource(string eventSourceName, System.Diagnostics.Tracing.EventSourceSettings config) { }
+        public EventSource(string eventSourceName, System.Diagnostics.Tracing.EventSourceSettings config, params string[] traits) { }
+        ~EventSource() { }
+        public static string GenerateManifest(System.Type eventSourceType, string assemblyPathToIncludeInManifest) { return default(string); }
+        public static string GenerateManifest(System.Type eventSourceType, string assemblyPathToIncludeInManifest, System.Diagnostics.Tracing.EventManifestOptions flags) { return default(string); }
+        public static System.Guid GetGuid(System.Type eventSourceType) { return default(System.Guid); }
+        public static string GetName(System.Type eventSourceType) { return default(string); }
+        public static System.Collections.Generic.IEnumerable<System.Diagnostics.Tracing.EventSource> GetSources() { return default(System.Collections.Generic.IEnumerable<System.Diagnostics.Tracing.EventSource>); }
+        public string GetTrait(string key) { return default(string); }
+        public bool IsEnabled(System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords keywords, System.Diagnostics.Tracing.EventChannel channel) { return default(bool); }
+        public static void SendCommand(System.Diagnostics.Tracing.EventSource eventSource, System.Diagnostics.Tracing.EventCommand command, System.Collections.Generic.IDictionary<string, string> commandArguments) { }
+        public static void SetCurrentThreadActivityId(System.Guid activityId) { }
+        public static void SetCurrentThreadActivityId(System.Guid activityId, out System.Guid oldActivityThatWillContinue) { oldActivityThatWillContinue = default(System.Guid); }
+        public override string ToString() { return default(string); }
+        public void Write(string eventName) { }
+        public void Write(string eventName, System.Diagnostics.Tracing.EventSourceOptions options) { }
+        protected void WriteEvent(int eventId) { }
+        protected void WriteEvent(int eventId, byte[] arg1) { }
+        protected void WriteEvent(int eventId, int arg1) { }
+        protected void WriteEvent(int eventId, int arg1, int arg2) { }
+        protected void WriteEvent(int eventId, int arg1, string arg2) { }
+        protected void WriteEvent(int eventId, long arg1) { }
+        protected void WriteEvent(int eventId, long arg1, byte[] arg2) { }
+        protected void WriteEvent(int eventId, long arg1, long arg2) { }
+        protected void WriteEvent(int eventId, long arg1, long arg2, long arg3) { }
+        protected void WriteEvent(int eventId, long arg1, string arg2) { }
+        protected void WriteEvent(int eventId, params object[] args) { }
+        protected void WriteEvent(int eventId, string arg1, long arg2) { }
+        protected void WriteEvent(int eventId, string arg1, string arg2) { }
+        protected void WriteEvent(int eventId, string arg1, string arg2, string arg3) { }
+        [System.CLSCompliantAttribute(false)]
+        [System.Security.SecurityCriticalAttribute]
+        protected unsafe void WriteEventCore(int eventId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data) { }
+        protected void WriteEventWithRelatedActivityId(int eventId, System.Guid relatedActivityId, params object[] args) { }
+        [System.CLSCompliantAttribute(false)]
+        [System.Security.SecurityCriticalAttribute]
+        protected unsafe void WriteEventWithRelatedActivityIdCore(int eventId, System.Guid* relatedActivityId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data) { }
+        public void Write<T>(string eventName, System.Diagnostics.Tracing.EventSourceOptions options, T data) { }
+        public void Write<T>(string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref System.Guid activityId, ref System.Guid relatedActivityId, ref T data) { }
+        public void Write<T>(string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref T data) { }
+        public void Write<T>(string eventName, T data) { }
+        public System.Exception ConstructionException { get { return default(System.Exception); } }
+        public static System.Guid CurrentThreadActivityId { [System.Security.SecuritySafeCriticalAttribute]get { return default(System.Guid); } }
+        public System.Guid Guid { get { return default(System.Guid); } }
+        public string Name { get { return default(string); } }
+        public System.Diagnostics.Tracing.EventSourceSettings Settings { get { return default(System.Diagnostics.Tracing.EventSourceSettings); } }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        protected internal partial struct EventData
+        {
+            public System.IntPtr DataPointer { get { return default(System.IntPtr); } set { } }
+            public int Size { get { return default(int); } set { } }
+        }
+    }
+
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
+    public sealed partial class EventSourceAttribute : System.Attribute
+    {
+        public EventSourceAttribute() { }
+        public string Guid { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+        public string LocalizationResources { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+        public string Name { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+    }
+
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
+    public sealed partial class NonEventAttribute : System.Attribute
+    {
+        public NonEventAttribute() { }
+    }
 
   [System.FlagsAttribute]
   public enum EventActivityOptions {

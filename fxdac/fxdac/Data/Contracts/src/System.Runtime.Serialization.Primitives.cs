@@ -1,12 +1,14 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Runtime.Serialization {
-  [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-  public partial class SerializationException : System.SystemException {
-    public SerializationException() { }
-    protected SerializationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    public SerializationException(string message) { }
-    public SerializationException(string message, System.Exception innerException) { }
-  }
+
+    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
+    public partial class SerializationException : System.SystemException
+    {
+        public SerializationException() { }
+        protected SerializationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public SerializationException(string message) { }
+        public SerializationException(string message, System.Exception innerException) { }
+    }
 
   [System.AttributeUsageAttribute((System.AttributeTargets)(12), Inherited=false, AllowMultiple=false)]
   public sealed partial class CollectionDataContractAttribute : System.Attribute {

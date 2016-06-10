@@ -188,6 +188,7 @@
     <None Include="Data\Contracts\src\System.Xml.XmlSerializer.cs" />
     <None Include="Data\Contracts\src\System.ComponentModel.Primitives.cs" />
     <None Include="Data\MasterAPIs\CoreFxAll.cs" />
+    <None Include="Data\MasterAPIs\XamariniOSCoreFxMergedAll.cs" />
     <Compile Include="LocationAnalysis.cs" />
     <Compile Include="ReportWriter.cs" />
     <Compile Include="Rewriter.cs" />
