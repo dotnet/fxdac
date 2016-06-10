@@ -601,11 +601,9 @@ namespace System.Runtime.InteropServices {
         public static readonly int SystemDefaultCharSize;
         public static readonly int SystemMaxDBCSCharSize;
         public static int AddRef(System.IntPtr pUnk) { return default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr AllocCoTaskMem(int cb) { return default(System.IntPtr); }
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr AllocHGlobal(int cb) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr AllocHGlobal(System.IntPtr cb) { return default(System.IntPtr); }
         public static object BindToMoniker(string monikerName) { return default(object); }
@@ -628,15 +626,11 @@ namespace System.Runtime.InteropServices {
         public static void Copy(float[] source, int startIndex, System.IntPtr destination, int length) { }
         public static System.IntPtr CreateAggregatedObject(System.IntPtr pOuter, object o) { return default(System.IntPtr); }
         public static System.IntPtr CreateAggregatedObject<T>(System.IntPtr pOuter, T o) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void DestroyStructure(System.IntPtr ptr, System.Type structuretype) { }
         public static void DestroyStructure<T>(System.IntPtr ptr) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static void FreeBSTR(System.IntPtr ptr) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static void FreeCoTaskMem(System.IntPtr ptr) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void FreeHGlobal(System.IntPtr hglobal) { }
         public static System.Delegate GetDelegateForFunctionPointer(System.IntPtr ptr, System.Type t) { return default(System.Delegate); }
@@ -645,31 +639,21 @@ namespace System.Runtime.InteropServices {
         public static System.Exception GetExceptionForHR(int errorCode, System.IntPtr errorInfo) { return default(System.Exception); }
         public static System.IntPtr GetFunctionPointerForDelegate(System.Delegate d) { return default(System.IntPtr); }
         public static System.IntPtr GetFunctionPointerForDelegate<TDelegate>(TDelegate d) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int GetLastWin32Error() { return default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr OffsetOf(System.Type t, string fieldName) { return default(System.IntPtr); }
         public static System.IntPtr OffsetOf<T>(string fieldName) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static void Prelink(System.Reflection.MethodInfo m) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static void PrelinkAll(System.Type c) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static string PtrToStringAnsi(System.IntPtr ptr) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static string PtrToStringAnsi(System.IntPtr ptr, int len) { return default(string); }
         public static string PtrToStringAuto(System.IntPtr ptr) { return default(string); }
         public static string PtrToStringAuto(System.IntPtr ptr, int len) { return default(string); }
         public static string PtrToStringBSTR(System.IntPtr ptr) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static string PtrToStringUni(System.IntPtr ptr) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static string PtrToStringUni(System.IntPtr ptr, int len) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void PtrToStructure(System.IntPtr ptr, object structure) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static object PtrToStructure(System.IntPtr ptr, System.Type structureType) { return default(object); }
         public static T PtrToStructure<T>(System.IntPtr ptr) { return default(T); }
@@ -698,9 +682,7 @@ namespace System.Runtime.InteropServices {
         public static System.IntPtr ReadIntPtr(System.IntPtr ptr, int ofs) { return default(System.IntPtr); }
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr ReadIntPtr(object ptr, int ofs) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr ReAllocCoTaskMem(System.IntPtr pv, int cb) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr ReAllocHGlobal(System.IntPtr pv, System.IntPtr cb) { return default(System.IntPtr); }
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Release(System.IntPtr pUnk) { return default(int); }
@@ -711,28 +693,22 @@ namespace System.Runtime.InteropServices {
         public static System.IntPtr SecureStringToGlobalAllocUnicode(System.Security.SecureString s) { return default(System.IntPtr); }
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static int SizeOf(object structure) { return default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static int SizeOf(System.Type t) { return default(int); }
         public static int SizeOf<T>() { return default(int); }
         public static int SizeOf<T>(T structure) { return default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr StringToBSTR(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToCoTaskMemAnsi(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToCoTaskMemAuto(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToCoTaskMemUni(string s) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr StringToHGlobalAnsi(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToHGlobalAuto(string s) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr StringToHGlobalUni(string s) { return default(System.IntPtr); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void StructureToPtr(object structure, System.IntPtr ptr, bool fDeleteOld) { }
         public static void StructureToPtr<T>(T structure, System.IntPtr ptr, bool fDeleteOld) { }
         public static void ThrowExceptionForHR(int errorCode) { }
         public static void ThrowExceptionForHR(int errorCode, System.IntPtr errorInfo) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public static System.IntPtr UnsafeAddrOfPinnedArrayElement(System.Array arr, int index) { return default(System.IntPtr); }
         public static System.IntPtr UnsafeAddrOfPinnedArrayElement<T>(T[] arr, int index) { return default(System.IntPtr); }
         public static void WriteByte(System.IntPtr ptr, byte val) { }
@@ -1595,7 +1571,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void RegisterObjectParam(string pszKey, object punk);
         void ReleaseBoundObjects();
         void RevokeObjectBound(object punk);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int RevokeObjectParam(string pszKey);
         void SetBindOptions(ref System.Runtime.InteropServices.ComTypes.BIND_OPTS pbindopts);
     }
@@ -1646,10 +1621,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IEnumConnectionPoints
     {
         void Clone(out System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints ppenum);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Next(int celt, System.Runtime.InteropServices.ComTypes.IConnectionPoint[] rgelt, System.IntPtr pceltFetched);
         void Reset();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Skip(int celt);
     }
 
@@ -1659,10 +1632,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IEnumConnections
     {
         void Clone(out System.Runtime.InteropServices.ComTypes.IEnumConnections ppenum);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Next(int celt, System.Runtime.InteropServices.ComTypes.CONNECTDATA[] rgelt, System.IntPtr pceltFetched);
         void Reset();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Skip(int celt);
     }
 
@@ -1672,10 +1643,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IEnumMoniker
     {
         void Clone(out System.Runtime.InteropServices.ComTypes.IEnumMoniker ppenum);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Next(int celt, System.Runtime.InteropServices.ComTypes.IMoniker[] rgelt, System.IntPtr pceltFetched);
         void Reset();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Skip(int celt);
     }
 
@@ -1685,10 +1654,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IEnumString
     {
         void Clone(out System.Runtime.InteropServices.ComTypes.IEnumString ppenum);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Next(int celt, string[] rgelt, System.IntPtr pceltFetched);
         void Reset();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Skip(int celt);
     }
 
@@ -1698,11 +1665,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IEnumVARIANT
     {
         System.Runtime.InteropServices.ComTypes.IEnumVARIANT Clone();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Next(int celt, object[] rgVar, System.IntPtr pceltFetched);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Reset();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int Skip(int celt);
     }
 
@@ -1722,13 +1686,9 @@ namespace System.Runtime.InteropServices.ComTypes {
         void GetTimeOfLastChange(System.Runtime.InteropServices.ComTypes.IBindCtx pbc, System.Runtime.InteropServices.ComTypes.IMoniker pmkToLeft, out System.Runtime.InteropServices.ComTypes.FILETIME pFileTime);
         void Hash(out int pdwHash);
         void Inverse(out System.Runtime.InteropServices.ComTypes.IMoniker ppmk);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsDirty();
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsEqual(System.Runtime.InteropServices.ComTypes.IMoniker pmkOtherMoniker);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsRunning(System.Runtime.InteropServices.ComTypes.IBindCtx pbc, System.Runtime.InteropServices.ComTypes.IMoniker pmkToLeft, System.Runtime.InteropServices.ComTypes.IMoniker pmkNewlyRunning);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsSystemMoniker(out int pdwMksys);
         void Load(System.Runtime.InteropServices.ComTypes.IStream pStm);
         void ParseDisplayName(System.Runtime.InteropServices.ComTypes.IBindCtx pbc, System.Runtime.InteropServices.ComTypes.IMoniker pmkToLeft, string pszDisplayName, out int pchEaten, out System.Runtime.InteropServices.ComTypes.IMoniker ppmkOut);
@@ -1764,7 +1724,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     {
         void GetClassID(out System.Guid pClassID);
         void GetCurFile(out string ppszFileName);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsDirty();
         void Load(string pszFileName, int dwMode);
         void Save(string pszFileName, bool fRemember);
@@ -1777,11 +1736,8 @@ namespace System.Runtime.InteropServices.ComTypes {
     public partial interface IRunningObjectTable
     {
         void EnumRunning(out System.Runtime.InteropServices.ComTypes.IEnumMoniker ppenumMoniker);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int GetObject(System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, out object ppunkObject);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int GetTimeOfLastChange(System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, out System.Runtime.InteropServices.ComTypes.FILETIME pfiletime);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int IsRunning(System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);
         void NoteChangeTime(int dwRegister, ref System.Runtime.InteropServices.ComTypes.FILETIME pfiletime);
         int Register(int grfFlags, object punkObject, System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);
@@ -1836,11 +1792,8 @@ namespace System.Runtime.InteropServices.ComTypes {
         void GetTypeComp(out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);
         void GetVarDesc(int index, out System.IntPtr ppVarDesc);
         void Invoke(object pvInstance, int memid, short wFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, out int puArgErr);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         void ReleaseFuncDesc(System.IntPtr pFuncDesc);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         void ReleaseTypeAttr(System.IntPtr pTypeAttr);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
 
@@ -1881,11 +1834,8 @@ namespace System.Runtime.InteropServices.ComTypes {
         new void GetVarDesc(int index, out System.IntPtr ppVarDesc);
         void GetVarIndexOfMemId(int memid, out int pVarIndex);
         new void Invoke(object pvInstance, int memid, short wFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, out int puArgErr);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         new void ReleaseFuncDesc(System.IntPtr pFuncDesc);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         new void ReleaseTypeAttr(System.IntPtr pTypeAttr);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         new void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
 
@@ -1899,12 +1849,10 @@ namespace System.Runtime.InteropServices.ComTypes {
         void GetLibAttr(out System.IntPtr ppTLibAttr);
         void GetTypeComp(out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);
         void GetTypeInfo(int index, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTI);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         int GetTypeInfoCount();
         void GetTypeInfoOfGuid(ref System.Guid guid, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo);
         void GetTypeInfoType(int index, out System.Runtime.InteropServices.ComTypes.TYPEKIND pTKind);
         bool IsName(string szNameBuf, int lHashVal);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         void ReleaseTLibAttr(System.IntPtr pTLibAttr);
     }
 
@@ -1923,12 +1871,10 @@ namespace System.Runtime.InteropServices.ComTypes {
         void GetLibStatistics(System.IntPtr pcUniqueNames, out int pcchUniqueNames);
         new void GetTypeComp(out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);
         new void GetTypeInfo(int index, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTI);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         new int GetTypeInfoCount();
         new void GetTypeInfoOfGuid(ref System.Guid guid, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo);
         new void GetTypeInfoType(int index, out System.Runtime.InteropServices.ComTypes.TYPEKIND pTKind);
         new bool IsName(string szNameBuf, int lHashVal);
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.PreserveSig)]
         new void ReleaseTLibAttr(System.IntPtr pTLibAttr);
     }
 

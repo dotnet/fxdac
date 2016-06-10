@@ -35,6 +35,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttributeAttribute") ||
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") ||
+        attributeName.StartsWith("System.Runtime.CompilerServices.MethodImpl") || // wes said we don't add these to contracts
         attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
         attributeName.StartsWith("System.ComponentModel.DesignerAttribute");
     });

@@ -157,7 +157,6 @@ namespace System {
         public System.Reflection.Assembly[] GetAssemblies() { return default(System.Reflection.Assembly[]); }
         [System.ObsoleteAttribute("AppDomain.GetCurrentThreadId has been deprecated because it does not provide a stable Id when managed threads are running on fibers (aka lightweight threads). To get a stable identifier for a managed thread, use the ManagedThreadId property on Thread.'")]
         public static int GetCurrentThreadId() { return default(int); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public object GetData(string name) { return default(object); }
         public new System.Type GetType() { return default(System.Type); }
         public override object InitializeLifetimeService() { return default(object); }
@@ -179,7 +178,6 @@ namespace System {
         public void SetAppDomainPolicy(System.Security.Policy.PolicyLevel domainPolicy) { }
         [System.ObsoleteAttribute("Use AppDomainSetup.SetCachePath")]
         public void SetCachePath(string path) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.InternalCall)]
         public void SetData(string name, object data) { }
         public void SetData(string name, object data, System.Security.IPermission permission) { }
         public void SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy policy) { }

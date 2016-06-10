@@ -44,11 +44,8 @@ namespace System.Resources {
         [System.ObsoleteAttribute("call InternalGetResourceSet instead")]
         protected System.Collections.Hashtable ResourceSets;
         protected ResourceManager() { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         public ResourceManager(string baseName, System.Reflection.Assembly assembly) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         public ResourceManager(string baseName, System.Reflection.Assembly assembly, System.Type usingResourceSet) { }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         public ResourceManager(System.Type resourceSource) { }
         public virtual string BaseName { get { return default(string); } }
         protected System.Resources.UltimateResourceFallbackLocation FallbackLocation { get { return default(System.Resources.UltimateResourceFallbackLocation); } set { } }
@@ -60,7 +57,6 @@ namespace System.Resources {
         public virtual object GetObject(string name) { return default(object); }
         public virtual object GetObject(string name, System.Globalization.CultureInfo culture) { return default(object); }
         protected virtual string GetResourceFileName(System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         public virtual System.Resources.ResourceSet GetResourceSet(System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) { return default(System.Resources.ResourceSet); }
         protected static System.Version GetSatelliteContractVersion(System.Reflection.Assembly a) { return default(System.Version); }
@@ -70,7 +66,6 @@ namespace System.Resources {
         public System.IO.UnmanagedMemoryStream GetStream(string name, System.Globalization.CultureInfo culture) { return default(System.IO.UnmanagedMemoryStream); }
         public virtual string GetString(string name) { return default(string); }
         public virtual string GetString(string name, System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         [System.Security.SecuritySafeCriticalAttribute]
         protected virtual System.Resources.ResourceSet InternalGetResourceSet(System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) { return default(System.Resources.ResourceSet); }
         public virtual void ReleaseAllResources() { }
