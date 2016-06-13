@@ -22,8 +22,6 @@ System.Threading.ApartmentState
 System.Threading.ExecutionContext
 System.Threading.CompressedStack
 
-System.Security.DynamicSecurityMethodAttribute
-
 System.Threading.AsyncFlowControl
 
 System.Threading.Barrier

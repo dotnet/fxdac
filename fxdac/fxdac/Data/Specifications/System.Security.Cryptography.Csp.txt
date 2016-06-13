@@ -11,7 +11,6 @@ System.Security.Cryptography.CspParameters
 System.Security.Cryptography.CspProviderFlags
 System.Security.Cryptography.ICspAsymmetricAlgorithm
 System.Security.Cryptography.KeyNumber
-System.Security.Cryptography.RSACryptoServiceProvider
 
 System.Security.Cryptography.DESCryptoServiceProvider
 System.Security.Cryptography.DSACryptoServiceProvider

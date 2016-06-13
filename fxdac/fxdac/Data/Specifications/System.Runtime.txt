@@ -48,7 +48,6 @@ System.IComparable
 System.IComparable`1
 System.IConvertible
 System.IDisposable
-System.IEquatable
 System.IEquatable`1
 System.IFormatProvider
 System.IFormattable
@@ -123,7 +122,6 @@ System.Diagnostics.DebuggerHiddenAttribute
 System.Diagnostics.DebuggerStepThroughAttribute
 System.EventArgs
 System.EventHandler`1
-System.Func
 System.Func`1
 System.Func`2
 System.Func`3
@@ -174,7 +172,6 @@ System.Reflection.ResourceLocation
 System.Reflection.TypeAttributes
 System.Reflection.TypeFilter
 System.Reflection.TypeInfo
-System.Reflection.TypeDelegator
 System.Runtime.CompilerServices.ConfiguredTaskAwaitable
 System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1
 System.Runtime.CompilerServices.ICriticalNotifyCompletion
@@ -183,7 +180,6 @@ System.Runtime.CompilerServices.TaskAwaiter
 System.Runtime.CompilerServices.TaskAwaiter`1
 System.Runtime.CompilerServices.TypeForwardedFromAttribute
 System.Runtime.CompilerServices.YieldAwaitable
-System.Runtime.ConstrainedExecution
 System.Runtime.ConstrainedExecution.CriticalFinalizerObject
 System.Runtime.InteropServices.SafeHandle
 System.RuntimeFieldHandle
@@ -228,12 +224,10 @@ System.Reflection.ModuleResolveEventHandler
 System.Reflection.PortableExecutableKinds
 System.Reflection.StrongNameKeyPair
 System.ResolveEventArgs
-System.Runtime.CompilerServices.TypeDependencyAttribute
 System.Runtime.ConstrainedExecution.Cer
 System.Runtime.ConstrainedExecution.Consistency
 System.Runtime.ConstrainedExecution.ReliabilityContractAttribute
 System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
-System.Runtime.ForceTokenStabilizationAttribute
 System.Runtime.InteropServices.ComDefaultInterfaceAttribute
 System.Runtime.InteropServices.ComInterfaceType
 System.Runtime.InteropServices.InterfaceTypeAttribute

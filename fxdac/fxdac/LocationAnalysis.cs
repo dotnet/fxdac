@@ -176,7 +176,7 @@ class LocationAnalysis
             reportWriter.WriteListEnd();
 
             if (movedToSystemRuntime.Count > 0) {
-                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.runtime are OK");
+                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.Runtime are OK");
                     if (Program.s_logValidMoves) {
                         foreach (var movedType in movedToSystemRuntime) {
                             reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));

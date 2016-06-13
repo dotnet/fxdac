@@ -17,7 +17,6 @@ System.IAppDomainSetup
 System._AppDomain
 System.CannotUnloadAppDomainException
 System.Runtime.Hosting.ApplicationActivator
-System.Runtime.InteropServices._Activator
 
 System.Runtime.Remoting.IObjectHandle
 System.Runtime.Remoting.ObjectHandle
@@ -44,11 +43,6 @@ System.Runtime.Remoting.TypeEntry
 System.Runtime.Remoting.WellKnownClientTypeEntry
 System.Runtime.Remoting.WellKnownObjectMode
 System.Runtime.Remoting.WellKnownServiceTypeEntry
-System.Runtime.Remoting.System.Runtime.Remoting.Activation 
-System.Runtime.Remoting.IActivator 
-System.Runtime.Remoting.IConstructionCallMessage 
-System.Runtime.Remoting.IConstructionReturnMessage
-System.Runtime.Remoting.UrlAttribute
 System.Runtime.Remoting.Messaging.MethodCall
 System.Runtime.Remoting.Messaging.IMethodCallMessage
 System.Runtime.Remoting.Messaging.IMethodMessage

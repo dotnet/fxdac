@@ -2190,6 +2190,16 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public static bool operator !=(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right) { return default(bool); }
     }
 
+    public sealed partial class EventRegistrationTokenTable<T> where T : class
+    {
+        public EventRegistrationTokenTable() { }
+        public T InvocationList { get { return default(T); } set { } }
+        public System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken AddEventHandler(T handler) { return default(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken); }
+        public static System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T> GetOrCreateEventRegistrationTokenTable(ref System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T> refEventTable) { return default(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable<T>); }
+        public void RemoveEventHandler(T handler) { }
+        public void RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token) { }
+    }
+
 
     [System.Runtime.InteropServices.GuidAttribute("00000035-0000-0000-C000-000000000046")]
     public partial interface IActivationFactory

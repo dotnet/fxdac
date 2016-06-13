@@ -14,9 +14,6 @@ System.Runtime.InteropServices.DefaultParameterValueAttribute
 System.Runtime.InteropServices.HandleCollector
 System.Security.SuppressUnmanagedCodeSecurityAttribute
 
-System.Runtime.InteropServices._Attribute
-System.Runtime.InteropServices._MethodRental
-System.Runtime.InteropServices._SignatureHelper
 System.Runtime.InteropServices.AllowReversePInvokeCallsAttribute
 System.Runtime.InteropServices.ArrayWithOffset
 System.Runtime.InteropServices.AssemblyRegistrationFlags
@@ -155,7 +152,7 @@ System.Runtime.InteropServices.Expando.IExpando
 System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute
 System.Runtime.InteropServices.WindowsRuntime.DesignerNamespaceResolveEventArgs
 System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
-System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable
+System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1
 System.Runtime.InteropServices.WindowsRuntime.IActivationFactory
 System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute
 System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs
