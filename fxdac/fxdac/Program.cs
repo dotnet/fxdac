@@ -316,8 +316,10 @@ static class Program
 
         var dllPath = Path.Combine(s_OutputDlls, assembly.Name + ".dll");
 
+        var emitOptions = new EmitOptions (metadataOnly: true, runtimeMetadataVersion: "v12345");
+
         using (var ms = new FileStream(dllPath, FileMode.Create, FileAccess.Write, FileShare.None)) {
-            EmitResult compilationResult = compilation.Emit(ms);
+            EmitResult compilationResult = compilation.Emit(ms, options: emitOptions);
             if (!compilationResult.Success) {
                 Console.WriteLine("COMPILING {0}", assembly.Name);
                 ProcessCompilationErrors(compilationResult);

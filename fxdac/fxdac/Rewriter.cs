@@ -40,7 +40,6 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.DesignerSerializationVisibilityAttribute") ||
         attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
         attributeName.StartsWith("System.ComponentModel.DesignerAttribute") ||
-        attributeName.StartsWith("System.ComponentModel.SRCategoryAttributeAttribute") ||
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
         attributeName.StartsWith("System.SRDescriptionAttribute") ||
 
