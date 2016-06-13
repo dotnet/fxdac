@@ -212,7 +212,6 @@ System.Globalization.CultureTypes
 System.Globalization.DigitShapes
 System.Globalization.SortKey
 System.ICloneable
-System.ISerializable
 System.MidpointRounding
 System.ModuleHandle
 System.Reflection.ExceptionHandlingClause

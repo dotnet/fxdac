@@ -111,7 +111,6 @@
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
   <ORPHANED_TYPES description="Orphaned types are types in the specifications that don't exist in master source.">
-    <item text="T:System.ISerializable"/>
   </ORPHANED_TYPES>
   <TYPES_NOT_IN_ANY_ASSEMBLY total="1" description="types that are not in specification files">
     <item text="System.ArgIterator"/>
