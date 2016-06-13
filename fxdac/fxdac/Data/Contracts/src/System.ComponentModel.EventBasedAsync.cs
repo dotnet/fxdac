@@ -63,7 +63,6 @@ namespace System.ComponentModel {
         public DoWorkEventArgs(object argument) { }
         public object Argument { get { return default(object); } }
         public object Result { get { return default(object); } set { } }
-        public bool Cancel { get { return default(bool); } set { } }
     }
 
     public delegate void DoWorkEventHandler(object sender, System.ComponentModel.DoWorkEventArgs e);

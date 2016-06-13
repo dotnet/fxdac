@@ -17670,7 +17670,7 @@ namespace System.Security.AccessControl
         public void AddRule(System.Security.AccessControl.AuthorizationRule rule) { }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int Count { get { return default(int); } }
+        public override int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
@@ -21365,7 +21365,7 @@ namespace System.Security.Principal
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsIdentity : System.Security.Claims.ClaimsIdentity, System.IDisposable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable, System.Security.Principal.IIdentity
     {
-        public const string DefaultIssuer = "AD AUTHORITY";
+        public new const string DefaultIssuer = "AD AUTHORITY";
         [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, ControlPrincipal = true)]
         public WindowsIdentity(System.IntPtr userToken) { }
         [System.Security.Permissions.SecurityPermissionAttribute(System.Security.Permissions.SecurityAction.Demand, ControlPrincipal = true)]
@@ -25665,7 +25665,6 @@ namespace System.ComponentModel
         public object Argument { get { return default(object); } }
         [System.SRDescriptionAttribute("BackgroundWorker_DoWorkEventArgs_Result")]
         public object Result { get { return default(object); } set { } }
-        public bool Cancel { get { return default(bool); } set { } }
     }
 
     [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, SharedState = true)]
@@ -28490,7 +28489,6 @@ namespace System.Diagnostics
         public bool WaitForInputIdle() { return default(bool); }
         [System.MonoTODOAttribute]
         public bool WaitForInputIdle(int milliseconds) { return default(bool); }
-        public void Dispose() { }
         public Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle { get { return default(Microsoft.Win32.SafeHandles.SafeProcessHandle); } }
     }
 
@@ -28517,15 +28515,6 @@ namespace System.Diagnostics
     {
         protected ProcessModuleCollection() { }
         public ProcessModuleCollection(System.Diagnostics.ProcessModule[] processModules) { }
-        public bool Contains(System.Diagnostics.ProcessModule module) { return default(bool); }
-        public void CopyTo(System.Diagnostics.ProcessModule[] array, int index) { }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int IndexOf(System.Diagnostics.ProcessModule module) { return default(int); }
-        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
-        public System.Diagnostics.ProcessModule this[int index] { get { return default(System.Diagnostics.ProcessModule); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
     public partial class ProcessModuleCollectionBase : System.Collections.Generic.List<System.Diagnostics.ProcessModule>
@@ -28684,18 +28673,6 @@ namespace System.Diagnostics
     {
         protected ProcessThreadCollection() { }
         public ProcessThreadCollection(System.Diagnostics.ProcessThread[] processThreads) { }
-        public int Add(System.Diagnostics.ProcessThread thread) { return default(int); }
-        public bool Contains(System.Diagnostics.ProcessThread thread) { return default(bool); }
-        public void CopyTo(System.Diagnostics.ProcessThread[] array, int index) { }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int IndexOf(System.Diagnostics.ProcessThread thread) { return default(int); }
-        public void Insert(int index, System.Diagnostics.ProcessThread thread) { }
-        public void Remove(System.Diagnostics.ProcessThread thread) { }
-        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
-        public System.Diagnostics.ProcessThread this[int index] { get { return default(System.Diagnostics.ProcessThread); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
     public partial class ProcessThreadCollectionBase : System.Collections.Generic.List<System.Diagnostics.ProcessThread>
@@ -30526,7 +30503,6 @@ namespace System.Net
         public byte[] ToByteArray() { return default(byte[]); }
         public override string ToString() { return default(string); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public string this[string name] { get { return default(string); } set { } }
     }
 
     public sealed partial class WebPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
@@ -31601,8 +31577,7 @@ namespace System.Net.NetworkInformation
         public System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply> SendPingAsync(string hostNameOrAddress, int timeout, byte[] buffer) { return default(System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply>); }
         public System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply> SendPingAsync(string hostNameOrAddress, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options) { return default(System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply>); }
         void System.IDisposable.Dispose() { }
-        public void Dispose() { }
-        protected virtual void Dispose(bool disposing) { }
+        protected override void Dispose(bool disposing) { }
     }
 
     public partial class PingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
@@ -32821,7 +32796,7 @@ namespace System.Net.WebSockets
         public WebSocketException(string message) { }
         public WebSocketException(string message, System.Exception innerException) { }
         public System.Net.WebSockets.WebSocketError WebSocketErrorCode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Net.WebSockets.WebSocketError); } }
-        public int ErrorCode { get { return default(int); } }
+        public override int ErrorCode { get { return default(int); } }
     }
 
     public enum WebSocketMessageType
@@ -33061,9 +33036,9 @@ namespace System.Security.Authentication.ExtendedProtection
         public System.Security.Authentication.ExtendedProtection.ServiceNameCollection Merge(System.Collections.IEnumerable serviceNames) { return default(System.Security.Authentication.ExtendedProtection.ServiceNameCollection); }
         public System.Security.Authentication.ExtendedProtection.ServiceNameCollection Merge(string serviceName) { return default(System.Security.Authentication.ExtendedProtection.ServiceNameCollection); }
         public bool Contains(string searchServiceName) { return default(bool); }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public override System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
+        public override int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
@@ -33356,8 +33331,6 @@ namespace System.Security.Cryptography.X509Certificates
             bool System.Collections.IEnumerator.MoveNext() { return default(bool); }
             void System.Collections.IEnumerator.Reset() { }
         }
-        public void Clear() { }
-        public void RemoveAt(int index) { }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         int System.Collections.IList.Add(object value) { return default(int); }
@@ -33365,7 +33338,6 @@ namespace System.Security.Cryptography.X509Certificates
         int System.Collections.IList.IndexOf(object value) { return default(int); }
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
-        public int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
         bool System.Collections.IList.IsFixedSize { get { return default(bool); } }

@@ -200,7 +200,6 @@ namespace System.Diagnostics {
         public bool WaitForExit(int milliseconds) { return default(bool); }
         public bool WaitForInputIdle() { return default(bool); }
         public bool WaitForInputIdle(int milliseconds) { return default(bool); }
-        public void Dispose() { }
         public Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle { get { return default(Microsoft.Win32.SafeHandles.SafeProcessHandle); } }
     }
 
@@ -227,15 +226,6 @@ namespace System.Diagnostics {
     {
         protected ProcessModuleCollection() { }
         public ProcessModuleCollection(System.Diagnostics.ProcessModule[] processModules) { }
-        public bool Contains(System.Diagnostics.ProcessModule module) { return default(bool); }
-        public void CopyTo(System.Diagnostics.ProcessModule[] array, int index) { }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int IndexOf(System.Diagnostics.ProcessModule module) { return default(int); }
-        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
-        public System.Diagnostics.ProcessModule this[int index] { get { return default(System.Diagnostics.ProcessModule); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
 
@@ -375,18 +365,6 @@ namespace System.Diagnostics {
     {
         protected ProcessThreadCollection() { }
         public ProcessThreadCollection(System.Diagnostics.ProcessThread[] processThreads) { }
-        public int Add(System.Diagnostics.ProcessThread thread) { return default(int); }
-        public bool Contains(System.Diagnostics.ProcessThread thread) { return default(bool); }
-        public void CopyTo(System.Diagnostics.ProcessThread[] array, int index) { }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int IndexOf(System.Diagnostics.ProcessThread thread) { return default(int); }
-        public void Insert(int index, System.Diagnostics.ProcessThread thread) { }
-        public void Remove(System.Diagnostics.ProcessThread thread) { }
-        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
-        public System.Diagnostics.ProcessThread this[int index] { get { return default(System.Diagnostics.ProcessThread); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
 

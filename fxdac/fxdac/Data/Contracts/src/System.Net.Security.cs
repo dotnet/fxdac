@@ -202,9 +202,9 @@ namespace System.Security.Authentication.ExtendedProtection {
         public System.Security.Authentication.ExtendedProtection.ServiceNameCollection Merge(System.Collections.IEnumerable serviceNames) { return default(System.Security.Authentication.ExtendedProtection.ServiceNameCollection); }
         public System.Security.Authentication.ExtendedProtection.ServiceNameCollection Merge(string serviceName) { return default(System.Security.Authentication.ExtendedProtection.ServiceNameCollection); }
         public bool Contains(string searchServiceName) { return default(bool); }
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public override System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        public int Count { get { return default(int); } }
+        public override int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }

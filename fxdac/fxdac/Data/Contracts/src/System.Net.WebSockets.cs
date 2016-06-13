@@ -109,7 +109,7 @@ namespace System.Net.WebSockets {
         public WebSocketException(string message) { }
         public WebSocketException(string message, System.Exception innerException) { }
         public System.Net.WebSockets.WebSocketError WebSocketErrorCode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Net.WebSockets.WebSocketError); } }
-        public int ErrorCode { get { return default(int); } }
+        public override int ErrorCode { get { return default(int); } }
     }
 
 

@@ -289,8 +289,6 @@ namespace System.Security.Cryptography.X509Certificates {
             bool System.Collections.IEnumerator.MoveNext() { return default(bool); }
             void System.Collections.IEnumerator.Reset() { }
         }
-        public void Clear() { }
-        public void RemoveAt(int index) { }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         int System.Collections.IList.Add(object value) { return default(int); }
@@ -298,7 +296,6 @@ namespace System.Security.Cryptography.X509Certificates {
         int System.Collections.IList.IndexOf(object value) { return default(int); }
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
-        public int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
         bool System.Collections.IList.IsFixedSize { get { return default(bool); } }

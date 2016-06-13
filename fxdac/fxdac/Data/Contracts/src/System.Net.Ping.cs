@@ -60,8 +60,7 @@ namespace System.Net.NetworkInformation {
         public System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply> SendPingAsync(string hostNameOrAddress, int timeout, byte[] buffer) { return default(System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply>); }
         public System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply> SendPingAsync(string hostNameOrAddress, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options) { return default(System.Threading.Tasks.Task<System.Net.NetworkInformation.PingReply>); }
         void System.IDisposable.Dispose() { }
-        public void Dispose() { }
-        protected virtual void Dispose(bool disposing) { }
+        protected override void Dispose(bool disposing) { }
     }
 
 

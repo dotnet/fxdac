@@ -121,7 +121,6 @@ namespace System.Net {
         public byte[] ToByteArray() { return default(byte[]); }
         public override string ToString() { return default(string); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public string this[string name] { get { return default(string); } set { } }
     }
 
 } // end of System.Net

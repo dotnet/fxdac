@@ -159,7 +159,7 @@ namespace System.Security.AccessControl {
         public void AddRule(System.Security.AccessControl.AuthorizationRule rule) { }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public int Count { get { return default(int); } }
+        public override int Count { get { return default(int); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }

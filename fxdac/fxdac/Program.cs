@@ -331,6 +331,7 @@ static class Program
 
                     foreach(var warning in compilationResult.Diagnostics) {
                         if (warning.Id == "CS0618" || warning.Id == "CS0809") continue; // obsolete message
+                        if ((warning.Id == "CS0108" || warning.Id == "CS0114") && warning.ToString().Contains("TypeInfo.")) continue; // skip type info newslot warnings. // TODO: fix TypeInfo
                         WriteMessage(ConsoleColor.Yellow, "{0}", warning);
                     }
                 }
