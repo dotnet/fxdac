@@ -1,11 +1,3 @@
-The following types (in Threading.Security) should be in System.Threading. But they have a dependency on AccessControl
-
-System.Threading.EventWaitHandle
-System.Threading.AutoResetEvent
-System.Threading.ManualResetEvent
-System.Threading.AbandonedMutexException
-System.Threading.Mutex
-
 ArgIterator cannot be added as TypedReference cannot be returned
 
 

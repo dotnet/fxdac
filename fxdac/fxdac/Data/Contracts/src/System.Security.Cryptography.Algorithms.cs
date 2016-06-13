@@ -754,7 +754,7 @@ namespace System.Security.Cryptography {
 
   public abstract partial class ECDsa : System.Security.Cryptography.AsymmetricAlgorithm {
     protected ECDsa() { }
-    public static System.Security.Cryptography.ECDsa Create() { return default(System.Security.Cryptography.ECDsa); }
+    public new static System.Security.Cryptography.ECDsa Create() { return default(System.Security.Cryptography.ECDsa); }
     public static System.Security.Cryptography.ECDsa Create(System.Security.Cryptography.ECCurve curve) { return default(System.Security.Cryptography.ECDsa); }
     public static System.Security.Cryptography.ECDsa Create(System.Security.Cryptography.ECParameters parameters) { return default(System.Security.Cryptography.ECDsa); }
     public virtual System.Security.Cryptography.ECParameters ExportExplicitParameters(bool includePrivateParameters) { return default(System.Security.Cryptography.ECParameters); }

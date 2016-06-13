@@ -90,9 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\MasterAPIs\XamariniOSAll.cs" />
-    <None Include="Data\MasterAPIs\XamariniOSMscorlib.cs" />
-    <None Include="Data\MasterAPIs\XamariniOSSystem.cs" />
-    <None Include="Data\MasterAPIs\XamariniOSSystemCore.cs" />
     <None Include="Data\Contracts\src\Microsoft.Win32.SafeHandles.cs" />
     <None Include="Data\Contracts\src\System.CodeDom.cs" />
     <None Include="Data\Contracts\src\System.Collections.Concurrent.cs" />

@@ -28,6 +28,7 @@ static class Program
     internal static bool s_logTypesNotInMasterSources = false;
     internal static bool s_logMissingContracts = false;
     internal static bool s_logAddedContracts = false;
+    internal static bool s_logExcludedWarnings = false;
 
     static void Main(string[] args)
     {
@@ -332,8 +333,10 @@ static class Program
                     WriteMessage(ConsoleColor.Yellow, "{0} warning[s].", numberOfWarnings);
 
                     foreach(var warning in compilationResult.Diagnostics) {
-                        if (warning.Id == "CS0618" || warning.Id == "CS0809") continue; // obsolete message
-                        if ((warning.Id == "CS0108" || warning.Id == "CS0114") && warning.ToString().Contains("TypeInfo.")) continue; // skip type info newslot warnings. // TODO: fix TypeInfo
+                        if (!s_logExcludedWarnings) {
+                            if (warning.Id == "CS0618" || warning.Id == "CS0809") continue; // obsolete message
+                            if ((warning.Id == "CS0108" || warning.Id == "CS0114") && warning.ToString().Contains("TypeInfo.")) continue; // skip type info newslot warnings. // TODO: fix TypeInfo
+                        }
                         WriteMessage(ConsoleColor.Yellow, "{0}", warning);
                     }
                 }
