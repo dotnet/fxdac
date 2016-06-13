@@ -1,5 +1,4 @@
 /r:System.Runtime.dll
-/r:System.Text.Encoding.dll
 
 System.Text.CodePagesEncodingProvider
 
