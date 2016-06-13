@@ -9213,7 +9213,6 @@ namespace System.IO
         public virtual System.Threading.Tasks.Task<string> ReadLineAsync() { return default(System.Threading.Tasks.Task<string>); }
         public virtual string ReadToEnd() { return default(string); }
         [System.Diagnostics.DebuggerStepThroughAttribute]
-        [System.Runtime.CompilerServices.AsyncStateMachineAttribute(typeof(System.IO.TextReader.< ReadToEndAsync > c__async0))]
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         [System.Security.Permissions.HostProtectionAttribute(System.Security.Permissions.SecurityAction.LinkDemand, ExternalThreading = true)]
         public virtual System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
@@ -27357,7 +27356,6 @@ namespace System.ComponentModel.Design
         object System.ComponentModel.Design.IDesignerOptionService.GetOptionValue(string pageName, string valueName) { return default(object); }
         void System.ComponentModel.Design.IDesignerOptionService.SetOptionValue(string pageName, string valueName, object value) { }
         [System.ComponentModel.EditorAttribute("", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-        [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.Design.DesignerOptionService.DesignerOptionConverter))]
         public sealed partial class DesignerOptionCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
         {
             internal DesignerOptionCollection() { }
@@ -32676,13 +32674,10 @@ namespace System.Net.WebSockets
         [System.MonoTODOAttribute]
         public override void Abort() { }
         [System.Diagnostics.DebuggerStepThroughAttribute]
-        [System.Runtime.CompilerServices.AsyncStateMachineAttribute(typeof(System.Net.WebSockets.ClientWebSocket.< CloseAsync > c__async1))]
         public override System.Threading.Tasks.Task CloseAsync(System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         [System.Diagnostics.DebuggerStepThroughAttribute]
-        [System.Runtime.CompilerServices.AsyncStateMachineAttribute(typeof(System.Net.WebSockets.ClientWebSocket.< CloseOutputAsync > c__async2))]
         public override System.Threading.Tasks.Task CloseOutputAsync(System.Net.WebSockets.WebSocketCloseStatus closeStatus, string statusDescription, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         [System.Diagnostics.DebuggerStepThroughAttribute]
-        [System.Runtime.CompilerServices.AsyncStateMachineAttribute(typeof(System.Net.WebSockets.ClientWebSocket.< ConnectAsync > c__async0))]
         public System.Threading.Tasks.Task ConnectAsync(System.Uri uri, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         public override void Dispose() { }
         public override System.Threading.Tasks.Task<System.Net.WebSockets.WebSocketReceiveResult> ReceiveAsync(System.ArraySegment<byte> buffer, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.WebSockets.WebSocketReceiveResult>); }

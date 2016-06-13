@@ -256,6 +256,8 @@ namespace System.Diagnostics {
         RealTime = 256,
     }
 
+
+    [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.ExpandableObjectConverter))]
     public sealed partial class ProcessStartInfo
     {
         public ProcessStartInfo() { }
@@ -263,6 +265,7 @@ namespace System.Diagnostics {
         public ProcessStartInfo(string filename, string arguments) { }
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
+        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("Command line agruments for this process.")]
         public string Arguments { get { return default(string); } set { } }
         [System.ComponentModel.DefaultValueAttribute(false)]
@@ -285,6 +288,7 @@ namespace System.Diagnostics {
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.EditorAttribute("System.Diagnostics.Design.StartFileNameEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
+        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The name of the resource to start this process.")]
         public string FileName { get { return default(string); } set { } }
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
@@ -312,6 +316,7 @@ namespace System.Diagnostics {
         public bool UseShellExecute { get { return default(bool); } set { } }
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
+        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.VerbConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The verb to apply to a used document.")]
         public string Verb { get { return default(string); } set { } }
         [System.ComponentModel.BrowsableAttribute(false)]
@@ -323,6 +328,7 @@ namespace System.Diagnostics {
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.EditorAttribute("System.Diagnostics.Design.WorkingDirectoryEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
+        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The initial directory for this process.")]
         public string WorkingDirectory { get { return default(string); } set { } }
         [System.ComponentModel.DefaultValueAttribute(null)]

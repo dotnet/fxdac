@@ -682,6 +682,7 @@ namespace System.ComponentModel {
 
     [System.ComponentModel.EditorAttribute("System.Windows.Forms.Design.DataSourceListEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [System.ComponentModel.MergablePropertyAttribute(false)]
+    [System.ComponentModel.TypeConverterAttribute("System.Windows.Forms.Design.DataSourceConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     public partial interface IListSource
     {
         bool ContainsListCollection { get; }
@@ -993,6 +994,7 @@ namespace System.ComponentModel {
     }
 
     [System.ComponentModel.DesignerCategoryAttribute("Component")]
+    [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.ComponentConverter))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MarshalByValueComponent : System.ComponentModel.IComponent, System.IDisposable, System.IServiceProvider
     {

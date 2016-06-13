@@ -2,6 +2,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,80 +14,94 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         typeName.StartsWith("Mono.Runtime");
     });
 
-    public static Predicate<string> s_ShouldRemoveAttributeApplication = new Predicate<string>((attributeName) => {
-        return attributeName.StartsWith("System.Security.Permission") ||
-        attributeName.StartsWith("System.Runtime.CompilerServices.TypeDependencyAttribute") ||
-        attributeName.StartsWith("System.Diagnostics.DebuggerTypeProxyAttribute") ||
-        attributeName.StartsWith("System.Runtime.ForceTokenStabilizationAttribute") ||
-        attributeName.StartsWith("System.MonoLimitationAttribute") ||
-        attributeName.StartsWith("System.MonoTODOAttribute") ||
-        attributeName.StartsWith("System.MonoDocumentationNoteAttribute") ||
+    public static Predicate<string> s_IsInternalAttribute = new Predicate<string>((attributeName) => {
+        return
+        attributeName.StartsWith("System.Runtime.ForceTokenStabilizationAttribute") || 
+        attributeName.StartsWith("System.MonoLimitationAttribute") || 
+        attributeName.StartsWith("System.MonoTODOAttribute") || 
+        attributeName.StartsWith("System.MonoDocumentationNoteAttribute") || 
         attributeName.StartsWith("System.MonoNotSupportedAttribute") ||
         attributeName.StartsWith("System.Security.DynamicSecurityMethodAttribute") ||
-        attributeName.StartsWith("System.Runtime.CompilerServices.AsyncStateMachineAttribute") ||
-        attributeName.StartsWith("System.ComponentModel.TypeConverterAttribute") ||
+        attributeName.StartsWith("System.Runtime.CompilerServices.TypeDependencyAttribute");
+    });
+    public static Predicate<string> s_ShouldRemoveAttributeApplication = new Predicate<string>((attributeName) => {
+        return s_IsInternalAttribute(attributeName) ||
+
+        attributeName.StartsWith("System.Diagnostics.DebuggerTypeProxyAttribute") || // TODO: do we need this in reference assemblies?
+        attributeName.StartsWith("System.Xml.Serialization.XmlIgnoreAttribute") || // TODO: decide what to do here. Switch.Attributes property has it applied.
+
+        attributeName.StartsWith("System.Security.Permission") || // CAS
+        attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttributeAttribute") || // CAS
+        attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttribute") || // CAS
+        
+        attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") || // This attribute has been deprecated. Use DesignerSerializerAttribute instead.
+
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.DesignerSerializerAttribute") ||
         attributeName.StartsWith("System.ComponentModel.DesignerSerializationVisibilityAttribute") ||
-        attributeName.StartsWith("System.Xml.Serialization.XmlIgnoreAttribute") ||
-        attributeName.StartsWith("System.SRDescriptionAttribute") ||
-        attributeName.StartsWith("System.Runtime.InteropServices.ComDefaultInterfaceAttribute") ||
-        attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttributeAttribute") ||
-        attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttribute") ||
+        attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
+        attributeName.StartsWith("System.ComponentModel.DesignerAttribute") ||
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttributeAttribute") ||
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
-        attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") ||
-        attributeName.StartsWith("System.Runtime.CompilerServices.MethodImpl") || // wes said we don't add these to contracts
-        attributeName.StartsWith("System.ComponentModel.RecommendedAsConfigurableAttribute") ||
-        attributeName.StartsWith("System.ComponentModel.DesignerAttribute");
+        attributeName.StartsWith("System.SRDescriptionAttribute") ||
+
+        attributeName.StartsWith("System.Runtime.InteropServices.ComDefaultInterfaceAttribute") ||
+
+        attributeName.StartsWith("System.Runtime.CompilerServices.MethodImpl"); // wes said we don't add these to contracts
     });
 
     public static FxDependency[] s_AssemblyToTypeDependenciesToRemove = new FxDependency[] {
 
-        new FxDependency() { From="System.Runtime", To ="System.AppDomain" },
-        new FxDependency() { From="System.Runtime", To ="System.Runtime.Remoting.ObjectHandle" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.Policy.IIdentityPermissionFactory" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.IPermission" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.Permissions.SecurityAction" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.Cryptography.X509Certificates.X509Certificate" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.SecurityZone" },
-        new FxDependency() { From="System.Runtime", To ="System.Security.SecurityContextSource" },
-        new FxDependency() { From="System.Runtime", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime", To="System.AppDomain" },
+        new FxDependency() { From="System.Runtime", To="System.Runtime.Remoting.ObjectHandle" },
+        new FxDependency() { From="System.Runtime", To="System.Security.Policy.IIdentityPermissionFactory" },
+        new FxDependency() { From="System.Runtime", To="System.Security.IPermission" },
+        new FxDependency() { From="System.Runtime", To="System.Security.Permissions.SecurityAction" },
+        new FxDependency() { From="System.Runtime", To="System.Security.Cryptography.X509Certificates.X509Certificate" },
+        new FxDependency() { From="System.Runtime", To="System.Security.SecurityZone" },
+        new FxDependency() { From="System.Runtime", To="System.Security.SecurityContextSource" },
+        new FxDependency() { From="System.Runtime", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime", To="System.ComponentModel.TypeConverterAttribute" },
 
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.EventWaitHandleSecurity" },
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.EventWaitHandleRights" },
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.MutexSecurity" },
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.MutexRights" },
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.SemaphoreSecurity" },
-        new FxDependency() { From="System.Threading", To ="System.Security.AccessControl.SemaphoreRights" },
+        new FxDependency() { From="System.ComponentModel.Primitives", To="System.ComponentModel.TypeConverterAttribute" },
+        new FxDependency() { From="System.Net.Security", To="System.ComponentModel.TypeConverterAttribute" },
 
-        new FxDependency() { From="System.Threading", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Threading.Synchronization", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Threading.Timer", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Threading.ThreadPool", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Runtime.IsolatedStorage", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Diagnostics.TraceSource", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.ComponentModel.TypeConverter", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Net", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Net.Requests", To ="System.MarshalByRefObject" },
-        new FxDependency() { From="System.ComponentModel.Design", To ="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleSecurity" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleRights" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.MutexSecurity" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.MutexRights" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.SemaphoreSecurity" },
+        new FxDependency() { From="System.Threading", To="System.Security.AccessControl.SemaphoreRights" },
 
-        new FxDependency() { From="System.Threading.Thread", To ="System.AppDomain" },
-        new FxDependency() { From="System.Threading.Thread", To ="System.Runtime.Remoting.Contexts.Context" },
+        new FxDependency() { From="System.Threading", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.Synchronization", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.Timer", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Threading.ThreadPool", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Runtime.IsolatedStorage", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Diagnostics.TraceSource", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.ComponentModel.TypeConverter", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Net", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.Net.Requests", To="System.MarshalByRefObject" },
+        new FxDependency() { From="System.ComponentModel.Design", To="System.MarshalByRefObject" },
 
-        new FxDependency() { From="System.ComponentModel.EventBasedAsync", To ="System.ComponentModel.Component" },
+        new FxDependency() { From="System.Threading.Thread", To="System.AppDomain" },
+        new FxDependency() { From="System.Threading.Thread", To="System.Runtime.Remoting.Contexts.Context" },
 
-        new FxDependency() { From="System.Diagnostics.Debug", To ="System.Diagnostics.TraceListenerCollection" },
+        new FxDependency() { From="System.ComponentModel.EventBasedAsync", To="System.ComponentModel.Component" },
+
+        new FxDependency() { From="System.Diagnostics.Debug", To="System.Diagnostics.TraceListenerCollection" },
     };
 
     SemanticModel _model;
     string _assembly;
-    ReportWriter _reportWriter; 
+    ReportWriter _reportWriter;
+    List<string> _undesiredDependencies;
 
     public FxdacSyntaxRewriter(ReportWriter reportWriter, SemanticModel model, string assembly)
     {
         _model = model;
         _assembly = assembly;
         _reportWriter = reportWriter;
+        _undesiredDependencies = s_AssemblyToTypeDependenciesToRemove.Where(dep => dep.From == _assembly).Select(dep => dep.To).ToList();
     }
 
     public override SyntaxNode VisitAttributeList(AttributeListSyntax node)
@@ -100,11 +115,25 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
 
     public override SyntaxNode VisitAttribute(AttributeSyntax node)
     {
-        var attributeName = node.ToString();
-        if (s_ShouldRemoveAttributeApplication(attributeName)) {
+        var name = node.Name.ToString();
+
+        if (s_ShouldRemoveAttributeApplication(name)) {
             return null;
         }
+
+        if (IsUndesiredDependency(name)) {
+            return null;
+        }
+
         return node;
+    }
+
+    private bool IsUndesiredDependency(string dependencyTypeName)
+    {
+        foreach(var dependecny in _undesiredDependencies) {
+            if (dependecny.Equals(dependencyTypeName, StringComparison.Ordinal)) return true;
+        }
+        return false;
     }
 
     public override SyntaxNode VisitClassDeclaration(ClassDeclarationSyntax node)
@@ -125,8 +154,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         }
 
         {
-            var removeDependenciesTo = s_AssemblyToTypeDependenciesToRemove.Where(dep => dep.From == _assembly).Select(dep => dep.To);
-            foreach (var dependency in removeDependenciesTo) {
+            foreach (var dependency in _undesiredDependencies) {
                 bool removeMore = true;
                 while (removeMore) {
                     removeMore = false;
