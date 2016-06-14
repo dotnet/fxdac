@@ -22,7 +22,6 @@ namespace System.Runtime.InteropServices {
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void SetHandleAsInvalid() { }
     }
-
 } // end of System.Runtime.InteropServices
 namespace System.IO {
     public enum HandleInheritability
@@ -30,7 +29,6 @@ namespace System.IO {
         Inheritable = 1,
         None = 0,
     }
-
 } // end of System.IO
 namespace System.Threading {
   public static partial class WaitHandleExtensions {
@@ -39,5 +37,4 @@ namespace System.Threading {
     [System.Security.SecurityCriticalAttribute]
     public static void SetSafeWaitHandle(this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value) { }
   }
-
 } // end of System.Threading

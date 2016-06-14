@@ -11,7 +11,6 @@ namespace System.Resources {
         void Generate();
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ResourceWriter : System.IDisposable, System.Resources.IResourceWriter
     {
@@ -29,5 +28,4 @@ namespace System.Resources {
         [System.Security.SecuritySafeCriticalAttribute]
         public void Generate() { }
     }
-
 } // end of System.Resources

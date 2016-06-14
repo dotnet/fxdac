@@ -7,7 +7,6 @@ namespace System.Threading {
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public bool Unregister(System.Threading.WaitHandle waitObject) { return default(bool); }
     }
-
     public static partial class ThreadPool
     {
         [System.ObsoleteAttribute("ThreadPool.BindHandle(IntPtr) has been deprecated.  Please use ThreadPool.BindHandle(SafeHandle) instead.", false)]
@@ -54,12 +53,9 @@ namespace System.Threading {
         public static System.Threading.RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(System.Threading.WaitHandle waitObject, System.Threading.WaitOrTimerCallback callBack, object state, uint millisecondsTimeOutInterval, bool executeOnlyOnce) { return default(System.Threading.RegisteredWaitHandle); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void WaitCallback(object state);
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void WaitOrTimerCallback(object state, bool timedOut);
-
 } // end of System.Threading

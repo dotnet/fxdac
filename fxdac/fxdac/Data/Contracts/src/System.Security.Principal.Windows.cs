@@ -11,7 +11,6 @@ namespace System.Security.Principal {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public abstract partial class IdentityReference
     {
@@ -25,7 +24,6 @@ namespace System.Security.Principal {
         public abstract override string ToString();
         public abstract System.Security.Principal.IdentityReference Translate(System.Type targetType);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class IdentityReferenceCollection : System.Collections.Generic.ICollection<System.Security.Principal.IdentityReference>, System.Collections.Generic.IEnumerable<System.Security.Principal.IdentityReference>, System.Collections.IEnumerable
@@ -47,7 +45,6 @@ namespace System.Security.Principal {
         bool System.Collections.Generic.ICollection<System.Security.Principal.IdentityReference>.IsReadOnly { get { return default(bool); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class NTAccount : System.Security.Principal.IdentityReference
     {
@@ -62,7 +59,6 @@ namespace System.Security.Principal {
         public override string ToString() { return default(string); }
         public override System.Security.Principal.IdentityReference Translate(System.Type targetType) { return default(System.Security.Principal.IdentityReference); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class SecurityIdentifier : System.Security.Principal.IdentityReference, System.IComparable<System.Security.Principal.SecurityIdentifier>
@@ -91,7 +87,6 @@ namespace System.Security.Principal {
         public override System.Security.Principal.IdentityReference Translate(System.Type targetType) { return default(System.Security.Principal.IdentityReference); }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TokenAccessLevels
@@ -110,7 +105,6 @@ namespace System.Security.Principal {
         Read = 131080,
         Write = 131296,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum WellKnownSidType
@@ -179,7 +173,6 @@ namespace System.Security.Principal {
         WorldSid = 1,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum WindowsAccountType
     {
@@ -188,7 +181,6 @@ namespace System.Security.Principal {
         Normal = 0,
         System = 2,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum WindowsBuiltInRole
@@ -203,7 +195,6 @@ namespace System.Security.Principal {
         SystemOperator = 549,
         User = 545,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsIdentity : System.Security.Claims.ClaimsIdentity, System.IDisposable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable, System.Security.Principal.IIdentity
@@ -249,7 +240,6 @@ namespace System.Security.Principal {
         public override System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsImpersonationContext : System.IDisposable
     {
@@ -260,7 +250,6 @@ namespace System.Security.Principal {
         protected virtual void Dispose(bool disposing) { }
         public void Undo() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsPrincipal : System.Security.Claims.ClaimsPrincipal
@@ -273,7 +262,6 @@ namespace System.Security.Principal {
         public virtual bool IsInRole(System.Security.Principal.WindowsBuiltInRole role) { return default(bool); }
         public override bool IsInRole(string role) { return default(bool); }
     }
-
 } // end of System.Security.Principal
 namespace Microsoft.Win32.SafeHandles {
   [System.Security.SecurityCriticalAttribute]
@@ -284,5 +272,4 @@ namespace Microsoft.Win32.SafeHandles {
     [System.Security.SecurityCriticalAttribute]
     protected override bool ReleaseHandle() { return default(bool); }
   }
-
 } // end of Microsoft.Win32.SafeHandles

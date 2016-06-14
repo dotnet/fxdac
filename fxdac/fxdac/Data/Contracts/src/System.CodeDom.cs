@@ -44,5 +44,4 @@ namespace System.CodeDom.Compiler {
         public override void WriteLine(uint value) { }
         public void WriteLineNoTabs(string s) { }
     }
-
 } // end of System.CodeDom.Compiler

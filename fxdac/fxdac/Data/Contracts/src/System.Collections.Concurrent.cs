@@ -58,7 +58,6 @@ namespace System.Collections.Concurrent {
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ConcurrentQueue<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
@@ -80,7 +79,6 @@ namespace System.Collections.Concurrent {
         public bool TryDequeue(out T result) { result = default(T); return default(bool); }
         public bool TryPeek(out T result) { result = default(T); return default(bool); }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class ConcurrentStack<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
@@ -108,14 +106,12 @@ namespace System.Collections.Concurrent {
         public int TryPopRange(T[] items, int startIndex, int count) { return default(int); }
     }
 
-
     [System.FlagsAttribute]
     public enum EnumerablePartitionerOptions
     {
         NoBuffering = 1,
         None = 0,
     }
-
 
     public partial interface IProducerConsumerCollection<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -124,7 +120,6 @@ namespace System.Collections.Concurrent {
         bool TryAdd(T item);
         bool TryTake(out T item);
     }
-
     public abstract partial class OrderablePartitioner<TSource> : System.Collections.Concurrent.Partitioner<TSource>
     {
         protected OrderablePartitioner(bool keysOrderedInEachPartition, bool keysOrderedAcrossPartitions, bool keysNormalized) { }
@@ -136,7 +131,6 @@ namespace System.Collections.Concurrent {
         public abstract System.Collections.Generic.IList<System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<long, TSource>>> GetOrderablePartitions(int partitionCount);
         public override System.Collections.Generic.IList<System.Collections.Generic.IEnumerator<TSource>> GetPartitions(int partitionCount) { return default(System.Collections.Generic.IList<System.Collections.Generic.IEnumerator<TSource>>); }
     }
-
     public static partial class Partitioner
     {
         public static System.Collections.Concurrent.OrderablePartitioner<System.Tuple<int, int>> Create(int fromInclusive, int toExclusive) { return default(System.Collections.Concurrent.OrderablePartitioner<System.Tuple<int, int>>); }
@@ -148,7 +142,6 @@ namespace System.Collections.Concurrent {
         public static System.Collections.Concurrent.OrderablePartitioner<TSource> Create<TSource>(System.Collections.Generic.IEnumerable<TSource> source, System.Collections.Concurrent.EnumerablePartitionerOptions partitionerOptions) { return default(System.Collections.Concurrent.OrderablePartitioner<TSource>); }
         public static System.Collections.Concurrent.OrderablePartitioner<TSource> Create<TSource>(System.Collections.Generic.IList<TSource> list, bool loadBalance) { return default(System.Collections.Concurrent.OrderablePartitioner<TSource>); }
     }
-
     public abstract partial class Partitioner<TSource>
     {
         protected Partitioner() { }
@@ -156,7 +149,6 @@ namespace System.Collections.Concurrent {
         public virtual System.Collections.Generic.IEnumerable<TSource> GetDynamicPartitions() { return default(System.Collections.Generic.IEnumerable<TSource>); }
         public abstract System.Collections.Generic.IList<System.Collections.Generic.IEnumerator<TSource>> GetPartitions(int partitionCount);
     }
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}, Type = {m_collection}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class BlockingCollection<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.IDisposable
@@ -208,7 +200,6 @@ namespace System.Collections.Concurrent {
         public static int TryTakeFromAny(System.Collections.Concurrent.BlockingCollection<T>[] collections, out T item, System.TimeSpan timeout) { item = default(T); return default(int); }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ConcurrentBag<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
@@ -229,5 +220,4 @@ namespace System.Collections.Concurrent {
         public bool TryPeek(out T result) { result = default(T); return default(bool); }
         public bool TryTake(out T result) { result = default(T); return default(bool); }
     }
-
 } // end of System.Collections.Concurrent

@@ -18,7 +18,6 @@ namespace System.Net.WebSockets {
         public override System.Net.WebSockets.WebSocket WebSocket { get { return default(System.Net.WebSockets.WebSocket); } }
     }
 
-
     public abstract partial class WebSocket : System.IDisposable
     {
         protected WebSocket() { }
@@ -43,7 +42,6 @@ namespace System.Net.WebSockets {
         protected static void ThrowOnInvalidState(System.Net.WebSockets.WebSocketState state, params System.Net.WebSockets.WebSocketState[] validStates) { }
     }
 
-
     public enum WebSocketCloseStatus
     {
         Empty = 1004,
@@ -57,7 +55,6 @@ namespace System.Net.WebSockets {
         PolicyViolation = 1008,
         ProtocolError = 1002,
     }
-
 
     public abstract partial class WebSocketContext
     {
@@ -76,7 +73,6 @@ namespace System.Net.WebSockets {
         public abstract System.Net.WebSockets.WebSocket WebSocket { get; }
     }
 
-
     public enum WebSocketError
     {
         ConnectionClosedPrematurely = 8,
@@ -90,7 +86,6 @@ namespace System.Net.WebSockets {
         UnsupportedProtocol = 6,
         UnsupportedVersion = 5,
     }
-
 
     public sealed partial class WebSocketException : System.ComponentModel.Win32Exception
     {
@@ -112,14 +107,12 @@ namespace System.Net.WebSockets {
         public override int ErrorCode { get { return default(int); } }
     }
 
-
     public enum WebSocketMessageType
     {
         Binary = 1,
         Close = 2,
         Text = 0,
     }
-
 
     public partial class WebSocketReceiveResult
     {
@@ -132,7 +125,6 @@ namespace System.Net.WebSockets {
         public System.Net.WebSockets.WebSocketMessageType MessageType { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Net.WebSockets.WebSocketMessageType); } }
     }
 
-
     public enum WebSocketState
     {
         Aborted = 6,
@@ -143,5 +135,4 @@ namespace System.Net.WebSockets {
         None = 0,
         Open = 2,
     }
-
 } // end of System.Net.WebSockets

@@ -7,7 +7,6 @@ namespace System.Linq {
         public override System.Collections.Generic.IEnumerator<TSource> GetEnumerator() { return default(System.Collections.Generic.IEnumerator<TSource>); }
     }
 
-
     public static partial class ParallelEnumerable
     {
         public static TSource Aggregate<TSource>(this System.Linq.ParallelQuery<TSource> source, System.Func<TSource, TSource, TSource> func) { return default(TSource); }
@@ -229,13 +228,11 @@ namespace System.Linq {
         public static System.Linq.ParallelQuery<TResult> Zip<TFirst, TSecond, TResult>(this System.Linq.ParallelQuery<TFirst> first, System.Linq.ParallelQuery<TSecond> second, System.Func<TFirst, TSecond, TResult> resultSelector) { return default(System.Linq.ParallelQuery<TResult>); }
     }
 
-
     public enum ParallelExecutionMode
     {
         Default = 0,
         ForceParallelism = 1,
     }
-
 
     public enum ParallelMergeOptions
     {
@@ -245,18 +242,15 @@ namespace System.Linq {
         NotBuffered = 1,
     }
 
-
     public partial class ParallelQuery : System.Collections.IEnumerable
     {
         internal ParallelQuery() { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     public partial class ParallelQuery<TSource> : System.Linq.ParallelQuery, System.Collections.Generic.IEnumerable<TSource>, System.Collections.IEnumerable
     {
         internal ParallelQuery() { }
         public virtual System.Collections.Generic.IEnumerator<TSource> GetEnumerator() { return default(System.Collections.Generic.IEnumerator<TSource>); }
     }
-
 } // end of System.Linq

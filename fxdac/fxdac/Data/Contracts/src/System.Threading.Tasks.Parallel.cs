@@ -38,14 +38,12 @@ namespace System.Threading.Tasks {
         public static void Invoke(System.Threading.Tasks.ParallelOptions parallelOptions, params System.Action[] actions) { }
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ParallelLoopResult
     {
         public bool IsCompleted { get { return default(bool); } }
         public System.Nullable<long> LowestBreakIteration { get { return default(System.Nullable<long>); } }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("ShouldExitCurrentIteration = {ShouldExitCurrentIteration}")]
     public partial class ParallelLoopState
@@ -59,7 +57,6 @@ namespace System.Threading.Tasks {
         public void Stop() { }
     }
 
-
     public partial class ParallelOptions
     {
         public ParallelOptions() { }
@@ -67,5 +64,4 @@ namespace System.Threading.Tasks {
         public int MaxDegreeOfParallelism { get { return default(int); } set { } }
         public System.Threading.Tasks.TaskScheduler TaskScheduler { get { return default(System.Threading.Tasks.TaskScheduler); } set { } }
     }
-
 } // end of System.Threading.Tasks

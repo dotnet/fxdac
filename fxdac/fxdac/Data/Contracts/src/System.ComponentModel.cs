@@ -6,16 +6,13 @@ namespace System.ComponentModel {
         public CancelEventArgs(bool cancel) { }
         public bool Cancel { get { return default(bool); } set { } }
     }
-
     public delegate void CancelEventHandler(object sender, System.ComponentModel.CancelEventArgs e);
-
 
     public partial interface IChangeTracking
     {
         bool IsChanged { get; }
         void AcceptChanges();
     }
-
 
     public partial interface IEditableObject
     {
@@ -24,10 +21,8 @@ namespace System.ComponentModel {
         void EndEdit();
     }
 
-
     public partial interface IRevertibleChangeTracking : System.ComponentModel.IChangeTracking
     {
         void RejectChanges();
     }
-
 } // end of System.ComponentModel

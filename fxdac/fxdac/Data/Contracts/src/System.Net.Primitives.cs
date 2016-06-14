@@ -13,7 +13,6 @@ namespace System.Net {
         Ntlm = 4,
     }
 
-
     public sealed partial class Cookie
     {
         public Cookie() { }
@@ -39,7 +38,6 @@ namespace System.Net {
         public override string ToString() { return default(string); }
     }
 
-
     public partial class CookieCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         public CookieCollection() { }
@@ -58,7 +56,6 @@ namespace System.Net {
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
-
 
     public partial class CookieContainer
     {
@@ -81,7 +78,6 @@ namespace System.Net {
         public void SetCookies(System.Uri uri, string cookieHeader) { }
     }
 
-
     public partial class CookieException : System.FormatException, System.Runtime.Serialization.ISerializable
     {
         public CookieException() { }
@@ -89,7 +85,6 @@ namespace System.Net {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
-
 
     public partial class CredentialCache : System.Collections.IEnumerable, System.Net.ICredentials, System.Net.ICredentialsByHost
     {
@@ -105,7 +100,6 @@ namespace System.Net {
         public void Remove(System.Uri uriPrefix, string authType) { }
     }
 
-
     [System.FlagsAttribute]
     public enum DecompressionMethods
     {
@@ -113,7 +107,6 @@ namespace System.Net {
         GZip = 1,
         None = 0,
     }
-
 
     public sealed partial class DnsEndPoint : System.Net.EndPoint
     {
@@ -127,7 +120,6 @@ namespace System.Net {
         public override string ToString() { return default(string); }
     }
 
-
     public abstract partial class EndPoint
     {
         protected EndPoint() { }
@@ -135,7 +127,6 @@ namespace System.Net {
         public virtual System.Net.EndPoint Create(System.Net.SocketAddress socketAddress) { return default(System.Net.EndPoint); }
         public virtual System.Net.SocketAddress Serialize() { return default(System.Net.SocketAddress); }
     }
-
 
     public enum HttpStatusCode
     {
@@ -188,18 +179,15 @@ namespace System.Net {
         UseProxy = 305,
     }
 
-
     public partial interface ICredentials
     {
         System.Net.NetworkCredential GetCredential(System.Uri uri, string authType);
     }
 
-
     public partial interface ICredentialsByHost
     {
         System.Net.NetworkCredential GetCredential(string host, int port, string authenticationType);
     }
-
 
     public partial class IPAddress
     {
@@ -239,7 +227,6 @@ namespace System.Net {
         public bool IsIPv4MappedToIPv6 { get { return default(bool); } }
     }
 
-
     public partial class IPEndPoint : System.Net.EndPoint
     {
         public const int MaxPort = 65535;
@@ -256,14 +243,12 @@ namespace System.Net {
         public override string ToString() { return default(string); }
     }
 
-
     public partial interface IWebProxy
     {
         System.Net.ICredentials Credentials { get; set; }
         System.Uri GetProxy(System.Uri destination);
         bool IsBypassed(System.Uri host);
     }
-
 
     public partial class NetworkCredential : System.Net.ICredentials, System.Net.ICredentialsByHost
     {
@@ -280,7 +265,6 @@ namespace System.Net {
         public System.Net.NetworkCredential GetCredential(System.Uri uri, string authType) { return default(System.Net.NetworkCredential); }
     }
 
-
     public partial class SocketAddress
     {
         public SocketAddress(System.Net.Sockets.AddressFamily family) { }
@@ -293,13 +277,11 @@ namespace System.Net {
         public override string ToString() { return default(string); }
     }
 
-
     public abstract partial class TransportContext
     {
         protected TransportContext() { }
         public abstract System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding(System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind);
     }
-
 } // end of System.Net
 namespace System.Net.NetworkInformation {
 
@@ -317,7 +299,6 @@ namespace System.Net.NetworkInformation {
         public virtual bool Remove(System.Net.IPAddress address) { return default(bool); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 } // end of System.Net.NetworkInformation
 namespace System.Net.Security {
 
@@ -328,7 +309,6 @@ namespace System.Net.Security {
         None = 0,
     }
 
-
     [System.FlagsAttribute]
     public enum SslPolicyErrors
     {
@@ -337,7 +317,6 @@ namespace System.Net.Security {
         RemoteCertificateNameMismatch = 2,
         RemoteCertificateNotAvailable = 1,
     }
-
 } // end of System.Net.Security
 namespace System.Net.Sockets {
     public enum AddressFamily
@@ -374,7 +353,6 @@ namespace System.Net.Sockets {
         Unspecified = 0,
         VoiceView = 18,
     }
-
 
     public enum SocketError
     {
@@ -427,7 +405,6 @@ namespace System.Net.Sockets {
         WouldBlock = 10035,
     }
 
-
     public partial class SocketException : System.ComponentModel.Win32Exception
     {
         public SocketException() { }
@@ -437,7 +414,6 @@ namespace System.Net.Sockets {
         public override string Message { get { return default(string); } }
         public System.Net.Sockets.SocketError SocketErrorCode { get { return default(System.Net.Sockets.SocketError); } }
     }
-
 } // end of System.Net.Sockets
 namespace System.Security.Authentication {
 
@@ -455,7 +431,6 @@ namespace System.Security.Authentication {
         TripleDes = 26115,
     }
 
-
     public enum ExchangeAlgorithmType
     {
         DiffieHellman = 43522,
@@ -464,14 +439,12 @@ namespace System.Security.Authentication {
         RsaSign = 9216,
     }
 
-
     public enum HashAlgorithmType
     {
         Md5 = 32771,
         None = 0,
         Sha1 = 32772,
     }
-
 
     [System.FlagsAttribute]
     public enum SslProtocols
@@ -484,7 +457,6 @@ namespace System.Security.Authentication {
         Tls11 = 768,
         Tls12 = 3072,
     }
-
 } // end of System.Security.Authentication
 namespace System.Security.Authentication.ExtendedProtection {
     public abstract partial class ChannelBinding : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
@@ -494,12 +466,10 @@ namespace System.Security.Authentication.ExtendedProtection {
         public abstract int Size { get; }
     }
 
-
     public enum ChannelBindingKind
     {
         Endpoint = 2,
         Unique = 1,
         Unknown = 0,
     }
-
 } // end of System.Security.Authentication.ExtendedProtection

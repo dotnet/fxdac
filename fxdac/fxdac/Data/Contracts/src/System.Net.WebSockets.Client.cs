@@ -20,7 +20,6 @@ namespace System.Net.WebSockets {
         public override System.Threading.Tasks.Task SendAsync(System.ArraySegment<byte> buffer, System.Net.WebSockets.WebSocketMessageType messageType, bool endOfMessage, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public sealed partial class ClientWebSocketOptions
     {
         public ClientWebSocketOptions() { }
@@ -35,5 +34,4 @@ namespace System.Net.WebSockets {
         public void SetBuffer(int receiveBufferSize, int sendBufferSize, System.ArraySegment<byte> buffer) { }
         public void SetRequestHeader(string headerName, string headerValue) { }
     }
-
 } // end of System.Net.WebSockets

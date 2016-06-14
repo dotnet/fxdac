@@ -3,7 +3,6 @@ namespace System.Net {
 
     public delegate System.Net.AuthenticationSchemes AuthenticationSchemeSelector(System.Net.HttpListenerRequest httpRequest);
 
-
     public sealed partial class HttpListener : System.IDisposable
     {
         public HttpListener() { }
@@ -26,13 +25,11 @@ namespace System.Net {
         void System.IDisposable.Dispose() { }
     }
 
-
     public partial class HttpListenerBasicIdentity : System.Security.Principal.GenericIdentity
     {
         public HttpListenerBasicIdentity(string username, string password) : base(default(string)) { }
         public virtual string Password { get { return default(string); } }
     }
-
 
     public sealed partial class HttpListenerContext
     {
@@ -45,7 +42,6 @@ namespace System.Net {
         public System.Threading.Tasks.Task<System.Net.WebSockets.HttpListenerWebSocketContext> AcceptWebSocketAsync(string subProtocol, int receiveBufferSize, System.TimeSpan keepAliveInterval, System.ArraySegment<byte> internalBuffer) { return default(System.Threading.Tasks.Task<System.Net.WebSockets.HttpListenerWebSocketContext>); }
     }
 
-
     public partial class HttpListenerException : System.ComponentModel.Win32Exception
     {
         public HttpListenerException() { }
@@ -54,7 +50,6 @@ namespace System.Net {
         protected HttpListenerException(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
         public override int ErrorCode { get { return default(int); } }
     }
-
 
     public partial class HttpListenerPrefixCollection : System.Collections.Generic.ICollection<string>, System.Collections.Generic.IEnumerable<string>, System.Collections.IEnumerable
     {
@@ -71,7 +66,6 @@ namespace System.Net {
         public bool Remove(string uriPrefix) { return default(bool); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 
     public sealed partial class HttpListenerRequest
     {
@@ -111,7 +105,6 @@ namespace System.Net {
         public System.Threading.Tasks.Task<System.Security.Cryptography.X509Certificates.X509Certificate2> GetClientCertificateAsync() { return default(System.Threading.Tasks.Task<System.Security.Cryptography.X509Certificates.X509Certificate2>); }
     }
 
-
     public sealed partial class HttpListenerResponse : System.IDisposable
     {
         internal HttpListenerResponse() { }
@@ -138,5 +131,4 @@ namespace System.Net {
         public void SetCookie(System.Net.Cookie cookie) { }
         void System.IDisposable.Dispose() { }
     }
-
 } // end of System.Net

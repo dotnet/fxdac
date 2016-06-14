@@ -17,7 +17,6 @@ namespace System.Net.Mime {
         public override string ToString() { return default(string); }
     }
 
-
     public partial class ContentType
     {
         public ContentType() { }
@@ -32,13 +31,11 @@ namespace System.Net.Mime {
         public override string ToString() { return default(string); }
     }
 
-
     public static partial class DispositionTypeNames
     {
         public const string Attachment = "attachment";
         public const string Inline = "inline";
     }
-
 
     public static partial class MediaTypeNames
     {
@@ -65,7 +62,6 @@ namespace System.Net.Mime {
         }
     }
 
-
     public enum TransferEncoding
     {
         Base64 = 1,
@@ -73,5 +69,4 @@ namespace System.Net.Mime {
         SevenBit = 2,
         Unknown = -1,
     }
-
 } // end of System.Net.Mime

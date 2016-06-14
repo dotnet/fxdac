@@ -4,7 +4,6 @@ namespace System.Reflection.Metadata {
     [System.CLSCompliantAttribute(false)]
     public unsafe static bool TryGetRawMetadata(this System.Reflection.Assembly assembly, out byte* blob, out int length) { blob = default(byte*); length = default(int); return default(bool); }
   }
-
 } // end of System.Reflection.Metadata
 namespace System.Runtime.Loader {
   public abstract partial class AssemblyLoadContext {
@@ -25,5 +24,4 @@ namespace System.Runtime.Loader {
     public void SetProfileOptimizationRoot(string directoryPath) { }
     public void StartProfileOptimization(string profile) { }
   }
-
 } // end of System.Runtime.Loader

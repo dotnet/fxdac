@@ -9,7 +9,6 @@ namespace System.Text.RegularExpressions {
         public override string ToString() { return default(string); }
     }
 
-
     public partial class CaptureCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         internal CaptureCollection() { }
@@ -25,7 +24,6 @@ namespace System.Text.RegularExpressions {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public partial class Group : System.Text.RegularExpressions.Capture
     {
         internal Group() { }
@@ -33,7 +31,6 @@ namespace System.Text.RegularExpressions {
         public bool Success { get { return default(bool); } }
         public static System.Text.RegularExpressions.Group Synchronized(System.Text.RegularExpressions.Group inner) { return default(System.Text.RegularExpressions.Group); }
     }
-
 
     public partial class GroupCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -51,7 +48,6 @@ namespace System.Text.RegularExpressions {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public partial class Match : System.Text.RegularExpressions.Group
     {
         internal Match() { }
@@ -61,7 +57,6 @@ namespace System.Text.RegularExpressions {
         public virtual string Result(string replacement) { return default(string); }
         public static System.Text.RegularExpressions.Match Synchronized(System.Text.RegularExpressions.Match inner) { return default(System.Text.RegularExpressions.Match); }
     }
-
 
     public partial class MatchCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -78,9 +73,7 @@ namespace System.Text.RegularExpressions {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public delegate string MatchEvaluator(System.Text.RegularExpressions.Match match);
-
 
     public partial class Regex : System.Runtime.Serialization.ISerializable
     {
@@ -152,7 +145,6 @@ namespace System.Text.RegularExpressions {
         protected System.Collections.IDictionary Caps { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Collections.IDictionary); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
     }
 
-
     public partial class RegexCompilationInfo
     {
         public RegexCompilationInfo(string pattern, System.Text.RegularExpressions.RegexOptions options, string name, string fullnamespace, bool ispublic) { }
@@ -164,7 +156,6 @@ namespace System.Text.RegularExpressions {
         public System.Text.RegularExpressions.RegexOptions Options { get { return default(System.Text.RegularExpressions.RegexOptions); } set { } }
         public string Pattern { get { return default(string); } set { } }
     }
-
 
     public partial class RegexMatchTimeoutException : System.TimeoutException, System.Runtime.Serialization.ISerializable
     {
@@ -178,7 +169,6 @@ namespace System.Text.RegularExpressions {
         public string Pattern { get { return default(string); } }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     [System.FlagsAttribute]
     public enum RegexOptions
@@ -194,7 +184,6 @@ namespace System.Text.RegularExpressions {
         RightToLeft = 64,
         Singleline = 16,
     }
-
 
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     public abstract partial class RegexRunner
@@ -239,12 +228,10 @@ namespace System.Text.RegularExpressions {
         protected void Uncapture() { }
     }
 
-
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     public abstract partial class RegexRunnerFactory
     {
         protected RegexRunnerFactory() { }
         protected internal abstract System.Text.RegularExpressions.RegexRunner CreateInstance();
     }
-
 } // end of System.Text.RegularExpressions

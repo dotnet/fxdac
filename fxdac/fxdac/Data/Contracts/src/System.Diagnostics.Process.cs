@@ -7,9 +7,7 @@ namespace System.Diagnostics {
         public string Data { get { return default(string); } }
     }
 
-
     public delegate void DataReceivedEventHandler(object sender, System.Diagnostics.DataReceivedEventArgs e);
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public partial class MonitoringDescriptionAttribute : System.ComponentModel.DescriptionAttribute
@@ -17,7 +15,6 @@ namespace System.Diagnostics {
         public MonitoringDescriptionAttribute(string description) { }
         public override string Description { get { return default(string); } }
     }
-
 
     [System.ComponentModel.DefaultEventAttribute("Exited")]
     [System.ComponentModel.DefaultPropertyAttribute("StartInfo")]
@@ -202,7 +199,6 @@ namespace System.Diagnostics {
         public bool WaitForInputIdle(int milliseconds) { return default(bool); }
         public Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle { get { return default(Microsoft.Win32.SafeHandles.SafeProcessHandle); } }
     }
-
     public partial class ProcessModule : System.ComponentModel.Component
     {
         internal ProcessModule() { }
@@ -221,20 +217,17 @@ namespace System.Diagnostics {
         public override string ToString() { return default(string); }
     }
 
-
     public partial class ProcessModuleCollection : System.Diagnostics.ProcessModuleCollectionBase, System.Collections.ICollection
     {
         protected ProcessModuleCollection() { }
         public ProcessModuleCollection(System.Diagnostics.ProcessModule[] processModules) { }
     }
 
-
     public partial class ProcessModuleCollectionBase : System.Collections.Generic.List<System.Diagnostics.ProcessModule>
     {
         public ProcessModuleCollectionBase() { }
         protected System.Diagnostics.ProcessModuleCollectionBase InnerList { get { return default(System.Diagnostics.ProcessModuleCollectionBase); } }
     }
-
 
     public enum ProcessPriorityClass
     {
@@ -245,7 +238,6 @@ namespace System.Diagnostics {
         Normal = 32,
         RealTime = 256,
     }
-
 
     [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.ExpandableObjectConverter))]
     public sealed partial class ProcessStartInfo
@@ -325,7 +317,6 @@ namespace System.Diagnostics {
         public System.Collections.Generic.IDictionary<string, string> Environment { get { return default(System.Collections.Generic.IDictionary<string, string>); } }
         public string PasswordInClearText { get { return default(string); } set { } }
     }
-
     public partial class ProcessThread : System.ComponentModel.Component
     {
         internal ProcessThread() { }
@@ -360,13 +351,11 @@ namespace System.Diagnostics {
         public void ResetIdealProcessor() { }
     }
 
-
     public partial class ProcessThreadCollection : System.Diagnostics.ProcessThreadCollectionBase, System.Collections.ICollection
     {
         protected ProcessThreadCollection() { }
         public ProcessThreadCollection(System.Diagnostics.ProcessThread[] processThreads) { }
     }
-
 
     public partial class ProcessThreadCollectionBase : System.Collections.Generic.List<System.Diagnostics.ProcessThread>
     {
@@ -375,7 +364,6 @@ namespace System.Diagnostics {
         public new int Add(System.Diagnostics.ProcessThread thread) { return default(int); }
     }
 
-
     public enum ProcessWindowStyle
     {
         Hidden = 1,
@@ -383,7 +371,6 @@ namespace System.Diagnostics {
         Minimized = 2,
         Normal = 0,
     }
-
 
     public enum ThreadPriorityLevel
     {
@@ -396,7 +383,6 @@ namespace System.Diagnostics {
         TimeCritical = 15,
     }
 
-
     public enum ThreadState
     {
         Initialized = 0,
@@ -408,7 +394,6 @@ namespace System.Diagnostics {
         Unknown = 7,
         Wait = 5,
     }
-
 
     public enum ThreadWaitReason
     {
@@ -427,7 +412,6 @@ namespace System.Diagnostics {
         UserRequest = 6,
         VirtualMemory = 11,
     }
-
 } // end of System.Diagnostics
 namespace Microsoft.Win32.SafeHandles {
   [System.Security.SecurityCriticalAttribute]
@@ -436,5 +420,4 @@ namespace Microsoft.Win32.SafeHandles {
     public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
     protected override bool ReleaseHandle() { return default(bool); }
   }
-
 } // end of Microsoft.Win32.SafeHandles

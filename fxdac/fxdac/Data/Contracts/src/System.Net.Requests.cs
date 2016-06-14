@@ -3,9 +3,7 @@ namespace System.Net {
 
     public delegate System.Net.IPEndPoint BindIPEndPoint(System.Net.ServicePoint servicePoint, System.Net.IPEndPoint remoteEndPoint, int retryCount);
 
-
     public delegate void HttpContinueDelegate(int StatusCode, System.Net.WebHeaderCollection httpHeaders);
-
 
     public partial class HttpWebRequest : System.Net.WebRequest, System.Runtime.Serialization.ISerializable
     {
@@ -76,7 +74,6 @@ namespace System.Net {
         internal HttpWebRequest() { }
     }
 
-
     public partial class HttpWebResponse : System.Net.WebResponse, System.IDisposable, System.Runtime.Serialization.ISerializable
     {
         [System.ObsoleteAttribute("Serialization is obsoleted for this type", false)]
@@ -106,12 +103,10 @@ namespace System.Net {
         public override bool SupportsHeaders { get { return default(bool); } }
     }
 
-
     public partial interface IWebRequestCreate
     {
         System.Net.WebRequest Create(System.Uri uri);
     }
-
 
     public partial class ProtocolViolationException : System.InvalidOperationException, System.Runtime.Serialization.ISerializable
     {
@@ -121,7 +116,6 @@ namespace System.Net {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     public partial class ServicePoint
     {
@@ -145,7 +139,6 @@ namespace System.Net {
         public void SetTcpKeepAlive(bool enabled, int keepAliveTime, int keepAliveInterval) { }
     }
 
-
     public partial class WebException : System.InvalidOperationException, System.Runtime.Serialization.ISerializable
     {
         public WebException() { }
@@ -159,7 +152,6 @@ namespace System.Net {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     public enum WebExceptionStatus
     {
@@ -185,7 +177,6 @@ namespace System.Net {
         TrustFailure = 9,
         UnknownError = 16,
     }
-
 
     public abstract partial class WebRequest :System.Runtime.Serialization.ISerializable
     {
@@ -227,7 +218,6 @@ namespace System.Net {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
 
-
     public abstract partial class WebResponse :System.IDisposable, System.Runtime.Serialization.ISerializable
     {
         protected WebResponse() { }
@@ -246,7 +236,6 @@ namespace System.Net {
         public virtual System.IO.Stream GetResponseStream() { return default(System.IO.Stream); }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
-
 } // end of System.Net
 namespace System.Net.Cache {
 
@@ -261,7 +250,6 @@ namespace System.Net.Cache {
         Revalidate = 4,
     }
 
-
     public partial class RequestCachePolicy
     {
         public RequestCachePolicy() { }
@@ -269,5 +257,4 @@ namespace System.Net.Cache {
         public System.Net.Cache.RequestCacheLevel Level { get { return default(System.Net.Cache.RequestCacheLevel); } }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Net.Cache

@@ -7,7 +7,5 @@ namespace System.Threading {
         public System.Exception Exception { get { return default(System.Exception); } }
     }
 
-
     public delegate void ThreadExceptionEventHandler(object sender, System.Threading.ThreadExceptionEventArgs e);
-
 } // end of System.Threading

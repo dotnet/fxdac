@@ -7,9 +7,7 @@ namespace System.Net {
         public byte[] Result { get { return default(byte[]); } }
     }
 
-
     public delegate void DownloadDataCompletedEventHandler(object sender, System.Net.DownloadDataCompletedEventArgs e);
-
 
     public partial class DownloadProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs
     {
@@ -18,9 +16,7 @@ namespace System.Net {
         public long TotalBytesToReceive { get { return default(long); } }
     }
 
-
     public delegate void DownloadProgressChangedEventHandler(object sender, System.Net.DownloadProgressChangedEventArgs e);
-
 
     public partial class DownloadStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -28,9 +24,7 @@ namespace System.Net {
         public string Result { get { return default(string); } }
     }
 
-
     public delegate void DownloadStringCompletedEventHandler(object sender, System.Net.DownloadStringCompletedEventArgs e);
-
 
     public partial class OpenReadCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -38,9 +32,7 @@ namespace System.Net {
         public System.IO.Stream Result { get { return default(System.IO.Stream); } }
     }
 
-
     public delegate void OpenReadCompletedEventHandler(object sender, System.Net.OpenReadCompletedEventArgs e);
-
 
     public partial class OpenWriteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -48,9 +40,7 @@ namespace System.Net {
         public System.IO.Stream Result { get { return default(System.IO.Stream); } }
     }
 
-
     public delegate void OpenWriteCompletedEventHandler(object sender, System.Net.OpenWriteCompletedEventArgs e);
-
 
     public partial class UploadDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -58,9 +48,7 @@ namespace System.Net {
         public byte[] Result { get { return default(byte[]); } }
     }
 
-
     public delegate void UploadDataCompletedEventHandler(object sender, System.Net.UploadDataCompletedEventArgs e);
-
 
     public partial class UploadFileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -68,9 +56,7 @@ namespace System.Net {
         public byte[] Result { get { return default(byte[]); } }
     }
 
-
     public delegate void UploadFileCompletedEventHandler(object sender, System.Net.UploadFileCompletedEventArgs e);
-
 
     public partial class UploadProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs
     {
@@ -81,9 +67,7 @@ namespace System.Net {
         public long TotalBytesToSend { get { return default(long); } }
     }
 
-
     public delegate void UploadProgressChangedEventHandler(object sender, System.Net.UploadProgressChangedEventArgs e);
-
 
     public partial class UploadStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -91,9 +75,7 @@ namespace System.Net {
         public string Result { get { return default(string); } }
     }
 
-
     public delegate void UploadStringCompletedEventHandler(object sender, System.Net.UploadStringCompletedEventArgs e);
-
 
     public partial class UploadValuesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
@@ -101,9 +83,7 @@ namespace System.Net {
         public byte[] Result { get { return default(byte[]); } }
     }
 
-
     public delegate void UploadValuesCompletedEventHandler(object sender, System.Net.UploadValuesCompletedEventArgs e);
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WebClient : System.ComponentModel.Component
@@ -266,7 +246,6 @@ namespace System.Net {
         public System.Threading.Tasks.Task<byte[]> UploadValuesTaskAsync(System.Uri address, string method, System.Collections.Specialized.NameValueCollection data) { return default(System.Threading.Tasks.Task<byte[]>); }
     }
 
-
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     public partial class WriteStreamClosedEventArgs : System.EventArgs
     {
@@ -278,8 +257,6 @@ namespace System.Net {
         public System.Exception Error { get { return default(System.Exception); } }
     }
 
-
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     public delegate void WriteStreamClosedEventHandler(object sender, System.Net.WriteStreamClosedEventArgs e);
-
 } // end of System.Net

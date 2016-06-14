@@ -65,7 +65,6 @@ namespace System.Collections {
         public virtual void TrimToSize() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CaseInsensitiveComparer : System.Collections.IComparer
     {
@@ -75,7 +74,6 @@ namespace System.Collections {
         public static System.Collections.CaseInsensitiveComparer DefaultInvariant { get { return default(System.Collections.CaseInsensitiveComparer); } }
         public int Compare(object a, object b) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CollectionBase : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
@@ -112,7 +110,6 @@ namespace System.Collections {
         void System.Collections.IList.Remove(object value) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Comparer : System.Collections.IComparer, System.Runtime.Serialization.ISerializable
     {
@@ -123,7 +120,6 @@ namespace System.Collections {
         [System.Security.SecurityCriticalAttribute]
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DictionaryBase : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
@@ -157,7 +153,6 @@ namespace System.Collections {
         void System.Collections.IDictionary.Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -222,7 +217,6 @@ namespace System.Collections {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Queue : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
@@ -247,7 +241,6 @@ namespace System.Collections {
         public virtual void TrimToSize() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class ReadOnlyCollectionBase : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -259,7 +252,6 @@ namespace System.Collections {
         public virtual System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -302,7 +294,6 @@ namespace System.Collections {
         public virtual void TrimToSize() { }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Stack : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
@@ -324,7 +315,6 @@ namespace System.Collections {
         public static System.Collections.Stack Synchronized(System.Collections.Stack stack) { return default(System.Collections.Stack); }
         public virtual object[] ToArray() { return default(object[]); }
     }
-
 } // end of System.Collections
 namespace System.Collections.Specialized {
 
@@ -336,5 +326,4 @@ namespace System.Collections.Specialized {
         public static System.Collections.Hashtable CreateCaseInsensitiveHashtable(int capacity) { return default(System.Collections.Hashtable); }
         public static System.Collections.SortedList CreateCaseInsensitiveSortedList() { return default(System.Collections.SortedList); }
     }
-
 } // end of System.Collections.Specialized

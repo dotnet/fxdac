@@ -99,7 +99,6 @@ namespace System {
         public static int WindowWidth { get { return default(int); } set { } }
     }
 
-
     public sealed partial class ConsoleCancelEventArgs : System.EventArgs
     {
         internal ConsoleCancelEventArgs() { }
@@ -107,9 +106,7 @@ namespace System {
         public System.ConsoleSpecialKey SpecialKey { get { return default(System.ConsoleSpecialKey); } }
     }
 
-
     public delegate void ConsoleCancelEventHandler(object sender, System.ConsoleCancelEventArgs e);
-
 
     public enum ConsoleColor
     {
@@ -130,7 +127,6 @@ namespace System {
         White = 15,
         Yellow = 14,
     }
-
 
     public enum ConsoleKey
     {
@@ -280,7 +276,6 @@ namespace System {
         Zoom = 251,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ConsoleKeyInfo
     {
@@ -295,7 +290,6 @@ namespace System {
         public static bool operator !=(System.ConsoleKeyInfo a, System.ConsoleKeyInfo b) { return default(bool); }
     }
 
-
     [System.FlagsAttribute]
     public enum ConsoleModifiers
     {
@@ -304,11 +298,9 @@ namespace System {
         Shift = 2,
     }
 
-
     public enum ConsoleSpecialKey
     {
         ControlBreak = 1,
         ControlC = 0,
     }
-
 } // end of System

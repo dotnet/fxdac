@@ -26,7 +26,6 @@ namespace System.Security {
         public string SearchForTextOfTag(string tag) { return default(string); }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Security
 namespace System.Security.Principal {
 
@@ -38,14 +37,12 @@ namespace System.Security.Principal {
         string Name { get; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IPrincipal
     {
         System.Security.Principal.IIdentity Identity { get; }
         bool IsInRole(string role);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PrincipalPolicy
@@ -54,7 +51,6 @@ namespace System.Security.Principal {
         UnauthenticatedPrincipal = 0,
         WindowsPrincipal = 2,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TokenImpersonationLevel
@@ -65,5 +61,4 @@ namespace System.Security.Principal {
         Impersonation = 3,
         None = 0,
     }
-
 } // end of System.Security.Principal

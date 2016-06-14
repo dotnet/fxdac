@@ -26,7 +26,6 @@ namespace System.Security.Claims {
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ClaimsIdentity : System.Security.Principal.IIdentity
     {
@@ -80,7 +79,6 @@ namespace System.Security.Claims {
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ClaimsPrincipal : System.Security.Principal.IPrincipal
     {
@@ -116,7 +114,6 @@ namespace System.Security.Claims {
         protected virtual void WriteTo(System.IO.BinaryWriter writer, byte[] userData) { }
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public static partial class ClaimTypes
@@ -177,7 +174,6 @@ namespace System.Security.Claims {
         public const string X500DistinguishedName = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/x500distinguishedname";
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public static partial class ClaimValueTypes
     {
@@ -209,7 +205,6 @@ namespace System.Security.Claims {
         public const string X500Name = "urn:oasis:names:tc:xacml:1.0:data-type:x500Name";
         public const string YearMonthDuration = "http://www.w3.org/TR/2002/WD-xquery-operators-20020816#yearMonthDuration";
     }
-
 } // end of System.Security.Claims
 namespace System.Security.Principal {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -227,7 +222,6 @@ namespace System.Security.Principal {
         public override System.Security.Claims.ClaimsIdentity Clone() { return default(System.Security.Claims.ClaimsIdentity); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class GenericPrincipal : System.Security.Claims.ClaimsPrincipal
     {
@@ -235,5 +229,4 @@ namespace System.Security.Principal {
         public override System.Security.Principal.IIdentity Identity { get { return default(System.Security.Principal.IIdentity); } }
         public override bool IsInRole(string role) { return default(bool); }
     }
-
 } // end of System.Security.Principal

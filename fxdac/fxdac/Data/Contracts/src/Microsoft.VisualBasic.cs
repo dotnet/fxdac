@@ -6,7 +6,6 @@ namespace Microsoft.VisualBasic {
     Method = 1,
     Set = 8,
   }
-
   [Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute]
   public sealed partial class Constants {
     internal Constants() { }
@@ -22,12 +21,10 @@ namespace Microsoft.VisualBasic {
     public const string vbTab = "\t";
     public const string vbVerticalTab = "\v";
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false, Inherited=false)]
   public sealed partial class HideModuleNameAttribute : System.Attribute {
     public HideModuleNameAttribute() { }
   }
-
   [Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute]
   public sealed partial class Strings {
     internal Strings() { }
@@ -35,7 +32,6 @@ namespace Microsoft.VisualBasic {
     public static int AscW(string String) { return default(int); }
     public static char ChrW(int CharCode) { return default(char); }
   }
-
 } // end of Microsoft.VisualBasic
 namespace Microsoft.VisualBasic.CompilerServices {
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
@@ -98,18 +94,15 @@ namespace Microsoft.VisualBasic.CompilerServices {
     [System.CLSCompliantAttribute(false)]
     public static ushort ToUShort(string Value) { return default(ushort); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false, Inherited=false)]
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class DesignerGeneratedAttribute : System.Attribute {
     public DesignerGeneratedAttribute() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class IncompleteInitialization : System.Exception {
     public IncompleteInitialization() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class NewLateBinding {
     internal NewLateBinding() { }
@@ -122,7 +115,6 @@ namespace Microsoft.VisualBasic.CompilerServices {
     public static void LateSet(object Instance, System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase, Microsoft.VisualBasic.CallType CallType) { }
     public static void LateSetComplex(object Instance, System.Type Type, string MemberName, object[] Arguments, string[] ArgumentNames, System.Type[] TypeArguments, bool OptimisticSet, bool RValueBase) { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class ObjectFlowControl {
     internal ObjectFlowControl() { }
@@ -137,7 +129,6 @@ namespace Microsoft.VisualBasic.CompilerServices {
       public static bool ForNextCheckR8(double count, double limit, double StepValue) { return default(bool); }
     }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class Operators {
     internal Operators() { }
@@ -171,19 +162,16 @@ namespace Microsoft.VisualBasic.CompilerServices {
     public static object SubtractObject(object Left, object Right) { return default(object); }
     public static object XorObject(object Left, object Right) { return default(object); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited=false, AllowMultiple=false)]
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class OptionCompareAttribute : System.Attribute {
     public OptionCompareAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited=false, AllowMultiple=false)]
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class OptionTextAttribute : System.Attribute {
     public OptionTextAttribute() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class ProjectData {
     internal ProjectData() { }
@@ -194,23 +182,19 @@ namespace Microsoft.VisualBasic.CompilerServices {
     [System.Security.SecuritySafeCriticalAttribute]
     public static void SetProjectError(System.Exception ex, int lErl) { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited=false, AllowMultiple=false)]
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class StandardModuleAttribute : System.Attribute {
     public StandardModuleAttribute() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class StaticLocalInitFlag {
     public short State;
     public StaticLocalInitFlag() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class Utils {
     internal Utils() { }
     public static System.Array CopyArray(System.Array arySrc, System.Array aryDest) { return default(System.Array); }
   }
-
 } // end of Microsoft.VisualBasic.CompilerServices

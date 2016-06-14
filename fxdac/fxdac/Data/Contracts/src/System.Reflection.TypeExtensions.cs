@@ -5,7 +5,6 @@ namespace System.Reflection {
     public static System.Reflection.Module[] GetModules(this System.Reflection.Assembly assembly) { return default(System.Reflection.Module[]); }
     public static System.Type[] GetTypes(this System.Reflection.Assembly assembly) { return default(System.Type[]); }
   }
-
   public static partial class EventInfoExtensions {
     public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
     public static System.Reflection.MethodInfo GetAddMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
@@ -14,21 +13,17 @@ namespace System.Reflection {
     public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo) { return default(System.Reflection.MethodInfo); }
     public static System.Reflection.MethodInfo GetRemoveMethod(this System.Reflection.EventInfo eventInfo, bool nonPublic) { return default(System.Reflection.MethodInfo); }
   }
-
   public static partial class MemberInfoExtensions {
     public static int GetMetadataToken(this System.Reflection.MemberInfo member) { return default(int); }
     public static bool HasMetadataToken(this System.Reflection.MemberInfo member) { return default(bool); }
   }
-
   public static partial class MethodInfoExtensions {
     public static System.Reflection.MethodInfo GetBaseDefinition(this System.Reflection.MethodInfo method) { return default(System.Reflection.MethodInfo); }
   }
-
   public static partial class ModuleExtensions {
     public static System.Guid GetModuleVersionId(this System.Reflection.Module module) { return default(System.Guid); }
     public static bool HasModuleVersionId(this System.Reflection.Module module) { return default(bool); }
   }
-
   public static partial class PropertyInfoExtensions {
     public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo[]); }
     public static System.Reflection.MethodInfo[] GetAccessors(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo[]); }
@@ -37,7 +32,6 @@ namespace System.Reflection {
     public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property) { return default(System.Reflection.MethodInfo); }
     public static System.Reflection.MethodInfo GetSetMethod(this System.Reflection.PropertyInfo property, bool nonPublic) { return default(System.Reflection.MethodInfo); }
   }
-
   public static partial class TypeExtensions {
     public static System.Reflection.ConstructorInfo GetConstructor(this System.Type type, System.Type[] types) { return default(System.Reflection.ConstructorInfo); }
     public static System.Reflection.ConstructorInfo[] GetConstructors(this System.Type type) { return default(System.Reflection.ConstructorInfo[]); }
@@ -73,5 +67,4 @@ namespace System.Reflection {
     public static bool IsAssignableFrom(this System.Type type, System.Type c) { return default(bool); }
     public static bool IsInstanceOfType(this System.Type type, object o) { return default(bool); }
   }
-
 } // end of System.Reflection

@@ -33,7 +33,6 @@ namespace System.Net {
         public static System.Net.IPHostEntry Resolve(string hostName) { return default(System.Net.IPHostEntry); }
     }
 
-
     public partial class IPHostEntry
     {
         public IPHostEntry() { }
@@ -41,5 +40,4 @@ namespace System.Net {
         public string[] Aliases { get { return default(string[]); } set { } }
         public string HostName { get { return default(string); } set { } }
     }
-
 } // end of System.Net

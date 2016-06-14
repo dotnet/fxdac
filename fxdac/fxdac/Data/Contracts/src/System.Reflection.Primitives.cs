@@ -10,7 +10,6 @@ namespace System.Reflection.Emit {
     Return = 7,
     Throw = 8,
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct OpCode {
     public System.Reflection.Emit.FlowControl FlowControl { get { return default(System.Reflection.Emit.FlowControl); } }
@@ -28,7 +27,6 @@ namespace System.Reflection.Emit {
     public static bool operator !=(System.Reflection.Emit.OpCode a, System.Reflection.Emit.OpCode b) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
   public partial class OpCodes {
     internal OpCodes() { }
     public static readonly System.Reflection.Emit.OpCode Add;
@@ -259,7 +257,6 @@ namespace System.Reflection.Emit {
     public static readonly System.Reflection.Emit.OpCode Xor;
     public static bool TakesSingleByteArgument(System.Reflection.Emit.OpCode inst) { return default(bool); }
   }
-
   public enum OpCodeType {
     Macro = 1,
     Nternal = 2,
@@ -267,7 +264,6 @@ namespace System.Reflection.Emit {
     Prefix = 4,
     Primitive = 5,
   }
-
   public enum OperandType {
     InlineBrTarget = 0,
     InlineField = 1,
@@ -287,7 +283,6 @@ namespace System.Reflection.Emit {
     ShortInlineR = 17,
     ShortInlineVar = 18,
   }
-
   public enum PackingSize {
     Size1 = 1,
     Size128 = 128,
@@ -299,7 +294,6 @@ namespace System.Reflection.Emit {
     Size8 = 8,
     Unspecified = 0,
   }
-
   public enum StackBehaviour {
     Pop0 = 0,
     Pop1 = 1,
@@ -331,5 +325,4 @@ namespace System.Reflection.Emit {
     Varpop = 26,
     Varpush = 27,
   }
-
 } // end of System.Reflection.Emit

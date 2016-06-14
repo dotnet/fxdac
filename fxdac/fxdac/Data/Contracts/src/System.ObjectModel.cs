@@ -21,7 +21,6 @@ namespace System.Collections.ObjectModel {
         protected override void SetItem(int index, TItem item) { }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class ReadOnlyDictionary<TKey, TValue> : System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>, System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
@@ -96,7 +95,6 @@ namespace System.Collections.ObjectModel {
             System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         }
     }
-
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class ObservableCollection<T> : System.Collections.ObjectModel.Collection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
@@ -118,7 +116,6 @@ namespace System.Collections.ObjectModel {
         protected override void SetItem(int index, T item) { }
     }
 
-
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class ReadOnlyObservableCollection<T> : System.Collections.ObjectModel.ReadOnlyCollection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
@@ -130,7 +127,6 @@ namespace System.Collections.ObjectModel {
         protected virtual void OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs args) { }
         protected virtual void OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs args) { }
     }
-
 } // end of System.Collections.ObjectModel
 namespace System.Collections.Specialized {
 
@@ -139,7 +135,6 @@ namespace System.Collections.Specialized {
     {
         event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged;
     }
-
 
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public enum NotifyCollectionChangedAction
@@ -150,7 +145,6 @@ namespace System.Collections.Specialized {
         Replace = 2,
         Reset = 4,
     }
-
 
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class NotifyCollectionChangedEventArgs : System.EventArgs
@@ -173,10 +167,8 @@ namespace System.Collections.Specialized {
         public int OldStartingIndex { get { return default(int); } }
     }
 
-
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public delegate void NotifyCollectionChangedEventHandler(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
-
 } // end of System.Collections.Specialized
 namespace System.ComponentModel {
     public partial class DataErrorsChangedEventArgs : System.EventArgs
@@ -185,7 +177,6 @@ namespace System.ComponentModel {
         public virtual string PropertyName { get { return default(string); } }
     }
 
-
     public partial interface INotifyDataErrorInfo
     {
         bool HasErrors { get; }
@@ -193,34 +184,27 @@ namespace System.ComponentModel {
         System.Collections.IEnumerable GetErrors(string propertyName);
     }
 
-
     public partial interface INotifyPropertyChanged
     {
         event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
     }
 
-
     public partial interface INotifyPropertyChanging
     {
         event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
     }
-
     public partial class PropertyChangedEventArgs : System.EventArgs
     {
         public PropertyChangedEventArgs(string propertyName) { }
         public virtual string PropertyName { get { return default(string); } }
     }
-
     public delegate void PropertyChangedEventHandler(object sender, System.ComponentModel.PropertyChangedEventArgs e);
-
     public partial class PropertyChangingEventArgs : System.EventArgs
     {
         public PropertyChangingEventArgs(string propertyName) { }
         public virtual string PropertyName { get { return default(string); } }
     }
-
     public delegate void PropertyChangingEventHandler(object sender, System.ComponentModel.PropertyChangingEventArgs e);
-
 } // end of System.ComponentModel
 namespace System.Windows.Input {
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")]
@@ -230,5 +214,4 @@ namespace System.Windows.Input {
         bool CanExecute(object parameter);
         void Execute(object parameter);
     }
-
 } // end of System.Windows.Input

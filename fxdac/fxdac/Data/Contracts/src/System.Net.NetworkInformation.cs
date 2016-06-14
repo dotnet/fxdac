@@ -9,13 +9,11 @@ namespace System.Net.NetworkInformation {
         Tentative = 1,
     }
 
-
     public abstract partial class GatewayIPAddressInformation
     {
         protected GatewayIPAddressInformation() { }
         public abstract System.Net.IPAddress Address { get; }
     }
-
 
     public partial class GatewayIPAddressInformationCollection : System.Collections.Generic.ICollection<System.Net.NetworkInformation.GatewayIPAddressInformation>, System.Collections.Generic.IEnumerable<System.Net.NetworkInformation.GatewayIPAddressInformation>, System.Collections.IEnumerable
     {
@@ -31,7 +29,6 @@ namespace System.Net.NetworkInformation {
         public virtual bool Remove(System.Net.NetworkInformation.GatewayIPAddressInformation address) { return default(bool); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 
     public abstract partial class IcmpV4Statistics
     {
@@ -63,7 +60,6 @@ namespace System.Net.NetworkInformation {
         public abstract long TimestampRequestsReceived { get; }
         public abstract long TimestampRequestsSent { get; }
     }
-
 
     public abstract partial class IcmpV6Statistics
     {
@@ -102,7 +98,6 @@ namespace System.Net.NetworkInformation {
         public abstract long TimeExceededMessagesSent { get; }
     }
 
-
     public abstract partial class IPAddressInformation
     {
         protected IPAddressInformation() { }
@@ -110,7 +105,6 @@ namespace System.Net.NetworkInformation {
         public abstract bool IsDnsEligible { get; }
         public abstract bool IsTransient { get; }
     }
-
 
     public partial class IPAddressInformationCollection : System.Collections.Generic.ICollection<System.Net.NetworkInformation.IPAddressInformation>, System.Collections.Generic.IEnumerable<System.Net.NetworkInformation.IPAddressInformation>, System.Collections.IEnumerable
     {
@@ -126,7 +120,6 @@ namespace System.Net.NetworkInformation {
         public virtual bool Remove(System.Net.NetworkInformation.IPAddressInformation address) { return default(bool); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 
     public abstract partial class IPGlobalProperties
     {
@@ -150,7 +143,6 @@ namespace System.Net.NetworkInformation {
         public abstract System.Net.NetworkInformation.UdpStatistics GetUdpIPv6Statistics();
         public virtual System.Threading.Tasks.Task<System.Net.NetworkInformation.UnicastIPAddressInformationCollection> GetUnicastAddressesAsync() { return default(System.Threading.Tasks.Task<System.Net.NetworkInformation.UnicastIPAddressInformationCollection>); }
     }
-
 
     public abstract partial class IPGlobalStatistics
     {
@@ -179,7 +171,6 @@ namespace System.Net.NetworkInformation {
         public abstract long ReceivedPacketsWithUnknownProtocol { get; }
     }
 
-
     public abstract partial class IPInterfaceProperties
     {
         protected IPInterfaceProperties() { }
@@ -196,7 +187,6 @@ namespace System.Net.NetworkInformation {
         public abstract System.Net.NetworkInformation.IPv4InterfaceProperties GetIPv4Properties();
         public abstract System.Net.NetworkInformation.IPv6InterfaceProperties GetIPv6Properties();
     }
-
 
     public abstract partial class IPInterfaceStatistics
     {
@@ -215,7 +205,6 @@ namespace System.Net.NetworkInformation {
         public abstract long UnicastPacketsSent { get; }
     }
 
-
     public abstract partial class IPv4InterfaceProperties
     {
         protected IPv4InterfaceProperties() { }
@@ -227,7 +216,6 @@ namespace System.Net.NetworkInformation {
         public abstract int Mtu { get; }
         public abstract bool UsesWins { get; }
     }
-
 
     public abstract partial class IPv4InterfaceStatistics
     {
@@ -246,7 +234,6 @@ namespace System.Net.NetworkInformation {
         public abstract long UnicastPacketsSent { get; }
     }
 
-
     public abstract partial class IPv6InterfaceProperties
     {
         protected IPv6InterfaceProperties() { }
@@ -254,7 +241,6 @@ namespace System.Net.NetworkInformation {
         public abstract int Mtu { get; }
         public virtual long GetScopeId(System.Net.NetworkInformation.ScopeLevel scopeLevel) { return default(long); }
     }
-
 
     public abstract partial class MulticastIPAddressInformation : System.Net.NetworkInformation.IPAddressInformation
     {
@@ -266,7 +252,6 @@ namespace System.Net.NetworkInformation {
         public abstract System.Net.NetworkInformation.PrefixOrigin PrefixOrigin { get; }
         public abstract System.Net.NetworkInformation.SuffixOrigin SuffixOrigin { get; }
     }
-
 
     public partial class MulticastIPAddressInformationCollection : System.Collections.Generic.ICollection<System.Net.NetworkInformation.MulticastIPAddressInformation>, System.Collections.Generic.IEnumerable<System.Net.NetworkInformation.MulticastIPAddressInformation>, System.Collections.IEnumerable
     {
@@ -283,7 +268,6 @@ namespace System.Net.NetworkInformation {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     public enum NetBiosNodeType
     {
         Broadcast = 1,
@@ -293,12 +277,9 @@ namespace System.Net.NetworkInformation {
         Unknown = 0,
     }
 
-
     public delegate void NetworkAddressChangedEventHandler(object sender, System.EventArgs e);
 
-
     public delegate void NetworkAvailabilityChangedEventHandler(object sender, System.Net.NetworkInformation.NetworkAvailabilityEventArgs e);
-
 
     public partial class NetworkAvailabilityEventArgs : System.EventArgs
     {
@@ -306,14 +287,12 @@ namespace System.Net.NetworkInformation {
         public bool IsAvailable { get { return default(bool); } }
     }
 
-
     public sealed partial class NetworkChange
     {
         public NetworkChange() { }
         public static event System.Net.NetworkInformation.NetworkAddressChangedEventHandler NetworkAddressChanged { add { } remove { } }
         public static event System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler NetworkAvailabilityChanged { add { } remove { } }
     }
-
 
     [System.FlagsAttribute]
     public enum NetworkInformationAccess
@@ -323,14 +302,12 @@ namespace System.Net.NetworkInformation {
         Read = 1,
     }
 
-
     public partial class NetworkInformationException : System.Exception
     {
         public NetworkInformationException() { }
         public NetworkInformationException(int errorCode) { }
         public int ErrorCode { get { return default(int); } }
     }
-
 
     public abstract partial class NetworkInterface
     {
@@ -355,13 +332,11 @@ namespace System.Net.NetworkInformation {
         public static int IPv6LoopbackInterfaceIndex { get { return default(int); } }
     }
 
-
     public enum NetworkInterfaceComponent
     {
         IPv4 = 0,
         IPv6 = 1,
     }
-
 
     public enum NetworkInterfaceType
     {
@@ -392,7 +367,6 @@ namespace System.Net.NetworkInformation {
         Wireless80211 = 71,
     }
 
-
     public enum OperationalStatus
     {
         Dormant = 5,
@@ -403,7 +377,6 @@ namespace System.Net.NetworkInformation {
         Unknown = 4,
         Up = 1,
     }
-
 
     public partial class PhysicalAddress
     {
@@ -416,7 +389,6 @@ namespace System.Net.NetworkInformation {
         public override string ToString() { return default(string); }
     }
 
-
     public enum PrefixOrigin
     {
         Dhcp = 3,
@@ -425,7 +397,6 @@ namespace System.Net.NetworkInformation {
         RouterAdvertisement = 4,
         WellKnown = 2,
     }
-
 
     public enum ScopeLevel
     {
@@ -439,7 +410,6 @@ namespace System.Net.NetworkInformation {
         Subnet = 3,
     }
 
-
     public enum SuffixOrigin
     {
         LinkLayerAddress = 4,
@@ -450,7 +420,6 @@ namespace System.Net.NetworkInformation {
         WellKnown = 2,
     }
 
-
     public abstract partial class TcpConnectionInformation
     {
         protected TcpConnectionInformation() { }
@@ -458,7 +427,6 @@ namespace System.Net.NetworkInformation {
         public abstract System.Net.IPEndPoint RemoteEndPoint { get; }
         public abstract System.Net.NetworkInformation.TcpState State { get; }
     }
-
 
     public enum TcpState
     {
@@ -476,7 +444,6 @@ namespace System.Net.NetworkInformation {
         TimeWait = 11,
         Unknown = 0,
     }
-
 
     public abstract partial class TcpStatistics
     {
@@ -497,7 +464,6 @@ namespace System.Net.NetworkInformation {
         public abstract long SegmentsSent { get; }
     }
 
-
     public abstract partial class UdpStatistics
     {
         protected UdpStatistics() { }
@@ -507,7 +473,6 @@ namespace System.Net.NetworkInformation {
         public abstract long IncomingDatagramsWithErrors { get; }
         public abstract int UdpListeners { get; }
     }
-
 
     public abstract partial class UnicastIPAddressInformation : System.Net.NetworkInformation.IPAddressInformation
     {
@@ -521,7 +486,6 @@ namespace System.Net.NetworkInformation {
         public abstract System.Net.NetworkInformation.PrefixOrigin PrefixOrigin { get; }
         public abstract System.Net.NetworkInformation.SuffixOrigin SuffixOrigin { get; }
     }
-
 
     public partial class UnicastIPAddressInformationCollection : System.Collections.Generic.ICollection<System.Net.NetworkInformation.UnicastIPAddressInformation>, System.Collections.Generic.IEnumerable<System.Net.NetworkInformation.UnicastIPAddressInformation>, System.Collections.IEnumerable
     {
@@ -537,5 +501,4 @@ namespace System.Net.NetworkInformation {
         public virtual bool Remove(System.Net.NetworkInformation.UnicastIPAddressInformation address) { return default(bool); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 } // end of System.Net.NetworkInformation

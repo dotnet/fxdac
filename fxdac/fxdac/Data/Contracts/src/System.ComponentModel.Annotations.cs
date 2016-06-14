@@ -11,7 +11,6 @@ namespace System.ComponentModel.DataAnnotations {
     public string ThisKey { get { return default(string); } }
     public System.Collections.Generic.IEnumerable<string> ThisKeyMembers { get { return default(System.Collections.Generic.IEnumerable<string>); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(128), AllowMultiple=false)]
   public partial class CompareAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public CompareAttribute(string otherProperty) { }
@@ -21,18 +20,15 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext) { return default(System.ComponentModel.DataAnnotations.ValidationResult); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false, Inherited=true)]
   public sealed partial class ConcurrencyCheckAttribute : System.Attribute {
     public ConcurrencyCheckAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public sealed partial class CreditCardAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public CreditCardAttribute() : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2500), AllowMultiple=true)]
   public sealed partial class CustomValidationAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public CustomValidationAttribute(System.Type validatorType, string method) { }
@@ -41,7 +37,6 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     protected override System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext) { return default(System.ComponentModel.DataAnnotations.ValidationResult); }
   }
-
   public enum DataType {
     CreditCard = 14,
     Currency = 6,
@@ -61,7 +56,6 @@ namespace System.ComponentModel.DataAnnotations {
     Upload = 16,
     Url = 12,
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2496), AllowMultiple=false)]
   public partial class DataTypeAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public DataTypeAttribute(System.ComponentModel.DataAnnotations.DataType dataType) { }
@@ -72,7 +66,6 @@ namespace System.ComponentModel.DataAnnotations {
     public virtual string GetDataTypeName() { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2496), AllowMultiple=false)]
   public sealed partial class DisplayAttribute : System.Attribute {
     public DisplayAttribute() { }
@@ -94,7 +87,6 @@ namespace System.ComponentModel.DataAnnotations {
     public string GetPrompt() { return default(string); }
     public string GetShortName() { return default(string); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited=true, AllowMultiple=false)]
   public partial class DisplayColumnAttribute : System.Attribute {
     public DisplayColumnAttribute(string displayColumn) { }
@@ -104,7 +96,6 @@ namespace System.ComponentModel.DataAnnotations {
     public string SortColumn { get { return default(string); } }
     public bool SortDescending { get { return default(bool); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   public partial class DisplayFormatAttribute : System.Attribute {
     public DisplayFormatAttribute() { }
@@ -114,27 +105,23 @@ namespace System.ComponentModel.DataAnnotations {
     public bool HtmlEncode { get { return default(bool); } set { } }
     public string NullDisplayText { get { return default(string); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false, Inherited=true)]
   public sealed partial class EditableAttribute : System.Attribute {
     public EditableAttribute(bool allowEdit) { }
     public bool AllowEdit { get { return default(bool); } }
     public bool AllowInitialValue { get { return default(bool); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public sealed partial class EmailAddressAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public EmailAddressAttribute() : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2496), AllowMultiple=false)]
   public sealed partial class EnumDataTypeAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public EnumDataTypeAttribute(System.Type enumType) : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
     public System.Type EnumType { get { return default(System.Type); } }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public sealed partial class FileExtensionsAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public FileExtensionsAttribute() : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
@@ -142,7 +129,6 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   [System.ObsoleteAttribute("This attribute is no longer in use and will be ignored if applied.")]
   public sealed partial class FilterUIHintAttribute : System.Attribute {
@@ -155,16 +141,13 @@ namespace System.ComponentModel.DataAnnotations {
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
   }
-
   public partial interface IValidatableObject {
     System.Collections.Generic.IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(System.ComponentModel.DataAnnotations.ValidationContext validationContext);
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false, Inherited=true)]
   public sealed partial class KeyAttribute : System.Attribute {
     public KeyAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class MaxLengthAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public MaxLengthAttribute() { }
@@ -173,7 +156,6 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class MinLengthAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public MinLengthAttribute(int length) { }
@@ -181,13 +163,11 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public sealed partial class PhoneAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public PhoneAttribute() : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class RangeAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public RangeAttribute(double minimum, double maximum) { }
@@ -199,7 +179,6 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class RegularExpressionAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public RegularExpressionAttribute(string pattern) { }
@@ -208,20 +187,17 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class RequiredAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public RequiredAttribute() { }
     public bool AllowEmptyStrings { get { return default(bool); } set { } }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   public partial class ScaffoldColumnAttribute : System.Attribute {
     public ScaffoldColumnAttribute(bool scaffold) { }
     public bool Scaffold { get { return default(bool); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public partial class StringLengthAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute {
     public StringLengthAttribute(int maximumLength) { }
@@ -230,12 +206,10 @@ namespace System.ComponentModel.DataAnnotations {
     public override string FormatErrorMessage(string name) { return default(string); }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false, Inherited=true)]
   public sealed partial class TimestampAttribute : System.Attribute {
     public TimestampAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=true)]
   public partial class UIHintAttribute : System.Attribute {
     public UIHintAttribute(string uiHint) { }
@@ -247,13 +221,11 @@ namespace System.ComponentModel.DataAnnotations {
     public override bool Equals(object obj) { return default(bool); }
     public override int GetHashCode() { return default(int); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(2432), AllowMultiple=false)]
   public sealed partial class UrlAttribute : System.ComponentModel.DataAnnotations.DataTypeAttribute {
     public UrlAttribute() : base (default(System.ComponentModel.DataAnnotations.DataType)) { }
     public override bool IsValid(object value) { return default(bool); }
   }
-
   public abstract partial class ValidationAttribute : System.Attribute {
     protected ValidationAttribute() { }
     protected ValidationAttribute(System.Func<string> errorMessageAccessor) { }
@@ -270,7 +242,6 @@ namespace System.ComponentModel.DataAnnotations {
     public void Validate(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext) { }
     public void Validate(object value, string name) { }
   }
-
   public sealed partial class ValidationContext : System.IServiceProvider {
     public ValidationContext(object instance) { }
     public ValidationContext(object instance, System.Collections.Generic.IDictionary<object, object> items) { }
@@ -283,7 +254,6 @@ namespace System.ComponentModel.DataAnnotations {
     public object GetService(System.Type serviceType) { return default(object); }
     public void InitializeServiceProvider(System.Func<System.Type, object> serviceProvider) { }
   }
-
   public partial class ValidationException : System.Exception {
     public ValidationException() { }
     public ValidationException(System.ComponentModel.DataAnnotations.ValidationResult validationResult, System.ComponentModel.DataAnnotations.ValidationAttribute validatingAttribute, object value) { }
@@ -294,7 +264,6 @@ namespace System.ComponentModel.DataAnnotations {
     public System.ComponentModel.DataAnnotations.ValidationResult ValidationResult { get { return default(System.ComponentModel.DataAnnotations.ValidationResult); } }
     public object Value { get { return default(object); } }
   }
-
   public partial class ValidationResult {
     public static readonly System.ComponentModel.DataAnnotations.ValidationResult Success;
     protected ValidationResult(System.ComponentModel.DataAnnotations.ValidationResult validationResult) { }
@@ -304,7 +273,6 @@ namespace System.ComponentModel.DataAnnotations {
     public System.Collections.Generic.IEnumerable<string> MemberNames { get { return default(System.Collections.Generic.IEnumerable<string>); } }
     public override string ToString() { return default(string); }
   }
-
   public static partial class Validator {
     public static bool TryValidateObject(object instance, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.ICollection<System.ComponentModel.DataAnnotations.ValidationResult> validationResults) { return default(bool); }
     public static bool TryValidateObject(object instance, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.ICollection<System.ComponentModel.DataAnnotations.ValidationResult> validationResults, bool validateAllProperties) { return default(bool); }
@@ -315,7 +283,6 @@ namespace System.ComponentModel.DataAnnotations {
     public static void ValidateProperty(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext) { }
     public static void ValidateValue(object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext, System.Collections.Generic.IEnumerable<System.ComponentModel.DataAnnotations.ValidationAttribute> validationAttributes) { }
   }
-
 } // end of System.ComponentModel.DataAnnotations
 namespace System.ComponentModel.DataAnnotations.Schema {
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
@@ -326,46 +293,38 @@ namespace System.ComponentModel.DataAnnotations.Schema {
     public int Order { get { return default(int); } set { } }
     public string TypeName { get { return default(string); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false)]
   public partial class ComplexTypeAttribute : System.Attribute {
     public ComplexTypeAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   public partial class DatabaseGeneratedAttribute : System.Attribute {
     public DatabaseGeneratedAttribute(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption databaseGeneratedOption) { }
     public System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption DatabaseGeneratedOption { get { return default(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption); } }
   }
-
   public enum DatabaseGeneratedOption {
     Computed = 2,
     Identity = 1,
     None = 0,
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   public partial class ForeignKeyAttribute : System.Attribute {
     public ForeignKeyAttribute(string name) { }
     public string Name { get { return default(string); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple=false)]
   public partial class InversePropertyAttribute : System.Attribute {
     public InversePropertyAttribute(string property) { }
     public string Property { get { return default(string); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(388), AllowMultiple=false)]
   public partial class NotMappedAttribute : System.Attribute {
     public NotMappedAttribute() { }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple=false)]
   public partial class TableAttribute : System.Attribute {
     public TableAttribute(string name) { }
     public string Name { get { return default(string); } }
     public string Schema { get { return default(string); } set { } }
   }
-
 } // end of System.ComponentModel.DataAnnotations.Schema

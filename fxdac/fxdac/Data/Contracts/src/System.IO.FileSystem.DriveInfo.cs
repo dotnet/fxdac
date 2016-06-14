@@ -19,7 +19,6 @@ namespace System.IO {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DriveNotFoundException : System.IO.IOException
     {
@@ -28,7 +27,6 @@ namespace System.IO {
         public DriveNotFoundException(string message) { }
         public DriveNotFoundException(string message, System.Exception innerException) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DriveType
@@ -41,5 +39,4 @@ namespace System.IO {
         Removable = 2,
         Unknown = 0,
     }
-
 } // end of System.IO

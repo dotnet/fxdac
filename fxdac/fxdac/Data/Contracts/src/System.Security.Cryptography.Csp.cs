@@ -20,7 +20,6 @@ namespace System.Security.Cryptography {
         public string UniqueKeyContainerName { get { return default(string); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CspParameters
     {
@@ -40,7 +39,6 @@ namespace System.Security.Cryptography {
         public System.IntPtr ParentWindowHandle { get { return default(System.IntPtr); } set { } }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CspProviderFlags
@@ -56,7 +54,6 @@ namespace System.Security.Cryptography {
         UseUserProtectedKey = 32,
     }
 
-
     public sealed partial class DESCryptoServiceProvider : System.Security.Cryptography.DES
     {
         public DESCryptoServiceProvider() { }
@@ -65,7 +62,6 @@ namespace System.Security.Cryptography {
         public override void GenerateIV() { }
         public override void GenerateKey() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DSACryptoServiceProvider : System.Security.Cryptography.DSA, System.Security.Cryptography.ICspAsymmetricAlgorithm
@@ -101,7 +97,6 @@ namespace System.Security.Cryptography {
         public override bool VerifySignature(byte[] rgbHash, byte[] rgbSignature) { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICspAsymmetricAlgorithm
     {
@@ -110,14 +105,12 @@ namespace System.Security.Cryptography {
         void ImportCspBlob(byte[] rawData);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum KeyNumber
     {
         Exchange = 1,
         Signature = 2,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PasswordDeriveBytes : System.Security.Cryptography.DeriveBytes
@@ -142,7 +135,6 @@ namespace System.Security.Cryptography {
         public override byte[] GetBytes(int cb) { return default(byte[]); }
         public override void Reset() { }
     }
-
 } // end of System.Security.Cryptography
 namespace System.Security.Permissions {
 
@@ -163,7 +155,6 @@ namespace System.Security.Permissions {
         public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntry
     {
@@ -179,7 +170,6 @@ namespace System.Security.Permissions {
         public override bool Equals(object o) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntryCollection : System.Collections.ICollection, System.Collections.IEnumerable
@@ -199,7 +189,6 @@ namespace System.Security.Permissions {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntryEnumerator : System.Collections.IEnumerator
     {
@@ -209,7 +198,6 @@ namespace System.Security.Permissions {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -224,7 +212,6 @@ namespace System.Security.Permissions {
         public int ProviderType { get { return default(int); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
 
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -242,5 +229,4 @@ namespace System.Security.Permissions {
         Sign = 256,
         ViewAcl = 4096,
     }
-
 } // end of System.Security.Permissions

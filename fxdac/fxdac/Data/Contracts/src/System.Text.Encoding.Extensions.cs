@@ -44,7 +44,6 @@ namespace System.Text {
         public override string GetString(byte[] bytes, int byteIndex, int byteCount) { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class UnicodeEncoding : System.Text.Encoding
     {
@@ -93,7 +92,6 @@ namespace System.Text {
         public override string GetString(byte[] bytes, int index, int count) { return default(string); }
     }
 
-
     public sealed partial class UTF32Encoding : System.Text.Encoding
     {
         public UTF32Encoding() { }
@@ -133,7 +131,6 @@ namespace System.Text {
         [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class UTF7Encoding : System.Text.Encoding
@@ -183,7 +180,6 @@ namespace System.Text {
         public override string GetString(byte[] bytes, int index, int count) { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class UTF8Encoding : System.Text.Encoding
     {
@@ -229,5 +225,4 @@ namespace System.Text {
         [System.Security.SecuritySafeCriticalAttribute]
         public override string GetString(byte[] bytes, int index, int count) { return default(string); }
     }
-
 } // end of System.Text

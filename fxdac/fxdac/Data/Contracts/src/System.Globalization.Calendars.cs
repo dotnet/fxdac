@@ -16,7 +16,6 @@ namespace System.Globalization {
         public override int GetEra(System.DateTime time) { return default(int); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class EastAsianLunisolarCalendar : System.Globalization.Calendar
     {
@@ -43,7 +42,6 @@ namespace System.Globalization {
         public override System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) { return default(System.DateTime); }
         public override int ToFourDigitYear(int year) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class GregorianCalendar : System.Globalization.Calendar
@@ -80,7 +78,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum GregorianCalendarTypes
     {
@@ -91,7 +88,6 @@ namespace System.Globalization {
         TransliteratedFrench = 12,
         USEnglish = 2,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HebrewCalendar : System.Globalization.Calendar
@@ -121,7 +117,6 @@ namespace System.Globalization {
         public override System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) { return default(System.DateTime); }
         public override int ToFourDigitYear(int year) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HijriCalendar : System.Globalization.Calendar
@@ -158,7 +153,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class JapaneseCalendar : System.Globalization.Calendar
     {
@@ -193,7 +187,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     public partial class JapaneseLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar
     {
         public const int JapaneseEra = 1;
@@ -204,7 +197,6 @@ namespace System.Globalization {
         public override System.DateTime MinSupportedDateTime { get { return default(System.DateTime); } }
         public override int GetEra(System.DateTime time) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class JulianCalendar : System.Globalization.Calendar
@@ -238,7 +230,6 @@ namespace System.Globalization {
         public override System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) { return default(System.DateTime); }
         public override int ToFourDigitYear(int year) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class KoreanCalendar : System.Globalization.Calendar
@@ -275,7 +266,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     public partial class KoreanLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar
     {
         public const int GregorianEra = 1;
@@ -286,7 +276,6 @@ namespace System.Globalization {
         public override System.DateTime MinSupportedDateTime { get { return default(System.DateTime); } }
         public override int GetEra(System.DateTime time) { return default(int); }
     }
-
 
     public partial class PersianCalendar : System.Globalization.Calendar
     {
@@ -315,7 +304,6 @@ namespace System.Globalization {
         public override System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) { return default(System.DateTime); }
         public override int ToFourDigitYear(int year) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TaiwanCalendar : System.Globalization.Calendar
@@ -351,7 +339,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     public partial class TaiwanLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar
     {
         public TaiwanLunisolarCalendar() { }
@@ -361,7 +348,6 @@ namespace System.Globalization {
         public override System.DateTime MinSupportedDateTime { get { return default(System.DateTime); } }
         public override int GetEra(System.DateTime time) { return default(int); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ThaiBuddhistCalendar : System.Globalization.Calendar
@@ -398,7 +384,6 @@ namespace System.Globalization {
         public override int ToFourDigitYear(int year) { return default(int); }
     }
 
-
     public partial class UmAlQuraCalendar : System.Globalization.Calendar
     {
         public const int UmAlQuraEra = 1;
@@ -427,5 +412,4 @@ namespace System.Globalization {
         public override System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) { return default(System.DateTime); }
         public override int ToFourDigitYear(int year) { return default(int); }
     }
-
 } // end of System.Globalization

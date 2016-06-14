@@ -10,7 +10,6 @@ namespace System.Resources {
         public MissingManifestResourceException(string message, System.Exception inner) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingSatelliteAssemblyException : System.SystemException
     {
@@ -22,7 +21,6 @@ namespace System.Resources {
         public string CultureName { get { return default(string); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NeutralResourcesLanguageAttribute : System.Attribute
@@ -32,7 +30,6 @@ namespace System.Resources {
         public string CultureName { get { return default(string); } }
         public System.Resources.UltimateResourceFallbackLocation Location { get { return default(System.Resources.UltimateResourceFallbackLocation); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ResourceManager
@@ -71,7 +68,6 @@ namespace System.Resources {
         public virtual void ReleaseAllResources() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ResourceSet : System.Collections.IEnumerable, System.IDisposable
     {
@@ -97,7 +93,6 @@ namespace System.Resources {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SatelliteContractVersionAttribute : System.Attribute
@@ -106,12 +101,10 @@ namespace System.Resources {
         public string Version { get { return default(string); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UltimateResourceFallbackLocation
     {
         MainAssembly = 0,
         Satellite = 1,
     }
-
 } // end of System.Resources

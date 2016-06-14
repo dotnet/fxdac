@@ -20,7 +20,6 @@ namespace System.Net {
         public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
     public sealed partial class WebPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
@@ -31,5 +30,4 @@ namespace System.Net {
         public string ConnectPattern { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
 } // end of System.Net

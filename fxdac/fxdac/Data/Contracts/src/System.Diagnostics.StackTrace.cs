@@ -18,7 +18,6 @@ namespace System.Diagnostics {
         public virtual int GetNativeOffset() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StackTrace
     {
@@ -40,7 +39,6 @@ namespace System.Diagnostics {
         public virtual System.Diagnostics.StackFrame[] GetFrames() { return default(System.Diagnostics.StackFrame[]); }
         public override string ToString() { return default(string); }
     }
-
   public static partial class StackFrameExtensions {
     public static System.IntPtr GetNativeImageBase(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
     public static System.IntPtr GetNativeIP(this System.Diagnostics.StackFrame stackFrame) { return default(System.IntPtr); }
@@ -49,5 +47,4 @@ namespace System.Diagnostics {
     public static bool HasNativeImage(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
     public static bool HasSource(this System.Diagnostics.StackFrame stackFrame) { return default(bool); }
   }
-
 } // end of System.Diagnostics

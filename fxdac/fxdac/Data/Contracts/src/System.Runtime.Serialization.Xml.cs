@@ -5,7 +5,6 @@ namespace System.Runtime.Serialization {
     public abstract System.Type ResolveName(string typeName, string typeNamespace, System.Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver);
     public abstract bool TryResolveType(System.Type type, System.Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver, out System.Xml.XmlDictionaryString typeName, out System.Xml.XmlDictionaryString typeNamespace);
   }
-
   public sealed partial class DataContractSerializer : System.Runtime.Serialization.XmlObjectSerializer {
     public DataContractSerializer(System.Type type) { }
     public DataContractSerializer(System.Type type, System.Collections.Generic.IEnumerable<System.Type> knownTypes) { }
@@ -32,12 +31,10 @@ namespace System.Runtime.Serialization {
     public override void WriteStartObject(System.Xml.XmlDictionaryWriter writer, object graph) { }
     public override void WriteStartObject(System.Xml.XmlWriter writer, object graph) { }
   }
-
   public static partial class DataContractSerializerExtensions {
     public static System.Runtime.Serialization.ISerializationSurrogateProvider GetSerializationSurrogateProvider(this System.Runtime.Serialization.DataContractSerializer serializer) { return default(System.Runtime.Serialization.ISerializationSurrogateProvider); }
     public static void SetSerializationSurrogateProvider(this System.Runtime.Serialization.DataContractSerializer serializer, System.Runtime.Serialization.ISerializationSurrogateProvider provider) { }
   }
-
   public partial class DataContractSerializerSettings {
     public DataContractSerializerSettings() { }
     public System.Runtime.Serialization.DataContractResolver DataContractResolver { get { return default(System.Runtime.Serialization.DataContractResolver); } set { } }
@@ -48,7 +45,6 @@ namespace System.Runtime.Serialization {
     public System.Xml.XmlDictionaryString RootNamespace { get { return default(System.Xml.XmlDictionaryString); } set { } }
     public bool SerializeReadOnlyTypes { get { return default(bool); } set { } }
   }
-
   public abstract partial class XmlObjectSerializer {
     protected XmlObjectSerializer() { }
     public abstract bool IsStartObject(System.Xml.XmlDictionaryReader reader);
@@ -68,7 +64,6 @@ namespace System.Runtime.Serialization {
     public abstract void WriteStartObject(System.Xml.XmlDictionaryWriter writer, object graph);
     public virtual void WriteStartObject(System.Xml.XmlWriter writer, object graph) { }
   }
-
 } // end of System.Runtime.Serialization
 namespace System.Xml {
   public partial interface IXmlDictionary {
@@ -76,9 +71,7 @@ namespace System.Xml {
     bool TryLookup(string value, out System.Xml.XmlDictionaryString result);
     bool TryLookup(System.Xml.XmlDictionaryString value, out System.Xml.XmlDictionaryString result);
   }
-
   public delegate void OnXmlDictionaryReaderClose(System.Xml.XmlDictionaryReader reader);
-
   public partial class UniqueId {
     public UniqueId() { }
     public UniqueId(byte[] guid) { }
@@ -97,7 +90,6 @@ namespace System.Xml {
     public bool TryGetGuid(byte[] buffer, int offset) { return default(bool); }
     public bool TryGetGuid(out System.Guid guid) { guid = default(System.Guid); return default(bool); }
   }
-
   public partial class XmlBinaryReaderSession : System.Xml.IXmlDictionary {
     public XmlBinaryReaderSession() { }
     public System.Xml.XmlDictionaryString Add(int id, string value) { return default(System.Xml.XmlDictionaryString); }
@@ -106,13 +98,11 @@ namespace System.Xml {
     public bool TryLookup(string value, out System.Xml.XmlDictionaryString result) { result = default(System.Xml.XmlDictionaryString); return default(bool); }
     public bool TryLookup(System.Xml.XmlDictionaryString value, out System.Xml.XmlDictionaryString result) { result = default(System.Xml.XmlDictionaryString); return default(bool); }
   }
-
   public partial class XmlBinaryWriterSession {
     public XmlBinaryWriterSession() { }
     public void Reset() { }
     public virtual bool TryAdd(System.Xml.XmlDictionaryString value, out int key) { key = default(int); return default(bool); }
   }
-
   public partial class XmlDictionary : System.Xml.IXmlDictionary {
     public XmlDictionary() { }
     public XmlDictionary(int capacity) { }
@@ -122,7 +112,6 @@ namespace System.Xml {
     public virtual bool TryLookup(string value, out System.Xml.XmlDictionaryString result) { result = default(System.Xml.XmlDictionaryString); return default(bool); }
     public virtual bool TryLookup(System.Xml.XmlDictionaryString value, out System.Xml.XmlDictionaryString result) { result = default(System.Xml.XmlDictionaryString); return default(bool); }
   }
-
   public abstract partial class XmlDictionaryReader : System.Xml.XmlReader {
     protected XmlDictionaryReader() { }
     public virtual bool CanCanonicalize { get { return default(bool); } }
@@ -234,7 +223,6 @@ namespace System.Xml {
     public virtual bool TryGetNamespaceUriAsDictionaryString(out System.Xml.XmlDictionaryString namespaceUri) { namespaceUri = default(System.Xml.XmlDictionaryString); return default(bool); }
     public virtual bool TryGetValueAsDictionaryString(out System.Xml.XmlDictionaryString value) { value = default(System.Xml.XmlDictionaryString); return default(bool); }
   }
-
   public sealed partial class XmlDictionaryReaderQuotas {
     public XmlDictionaryReaderQuotas() { }
     public static System.Xml.XmlDictionaryReaderQuotas Max { get { return default(System.Xml.XmlDictionaryReaderQuotas); } }
@@ -251,7 +239,6 @@ namespace System.Xml {
     public System.Xml.XmlDictionaryReaderQuotaTypes ModifiedQuotas { get { return default(System.Xml.XmlDictionaryReaderQuotaTypes); } }
     public void CopyTo(System.Xml.XmlDictionaryReaderQuotas quotas) { }
   }
-
   [System.FlagsAttribute]
   public enum XmlDictionaryReaderQuotaTypes {
     MaxArrayLength = 4,
@@ -260,7 +247,6 @@ namespace System.Xml {
     MaxNameTableCharCount = 16,
     MaxStringContentLength = 2,
   }
-
   public partial class XmlDictionaryString {
     public XmlDictionaryString(System.Xml.IXmlDictionary dictionary, string value, int key) { }
     public System.Xml.IXmlDictionary Dictionary { get { return default(System.Xml.IXmlDictionary); } }
@@ -269,7 +255,6 @@ namespace System.Xml {
     public string Value { get { return default(string); } }
     public override string ToString() { return default(string); }
   }
-
   public abstract partial class XmlDictionaryWriter : System.Xml.XmlWriter {
     protected XmlDictionaryWriter() { }
     public virtual bool CanCanonicalize { get { return default(bool); } }
@@ -325,5 +310,4 @@ namespace System.Xml {
     public virtual void WriteXmlnsAttribute(string prefix, string namespaceUri) { }
     public virtual void WriteXmlnsAttribute(string prefix, System.Xml.XmlDictionaryString namespaceUri) { }
   }
-
 } // end of System.Xml

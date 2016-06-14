@@ -20,7 +20,6 @@ namespace System.Security.Cryptography {
         public abstract string ToXmlString(bool includePrivateParameters);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CipherMode
     {
@@ -30,7 +29,6 @@ namespace System.Security.Cryptography {
         ECB = 2,
         OFB = 3,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptographicException : System.SystemException
@@ -44,7 +42,6 @@ namespace System.Security.Cryptography {
         public CryptographicException(string format, string insert) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptographicUnexpectedOperationException : System.Security.Cryptography.CryptographicException
     {
@@ -54,7 +51,6 @@ namespace System.Security.Cryptography {
         public CryptographicUnexpectedOperationException(string message, System.Exception inner) { }
         public CryptographicUnexpectedOperationException(string format, string insert) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptoStream : System.IO.Stream, System.IDisposable
@@ -79,14 +75,12 @@ namespace System.Security.Cryptography {
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CryptoStreamMode
     {
         Read = 0,
         Write = 1,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class HashAlgorithm : System.IDisposable, System.Security.Cryptography.ICryptoTransform
@@ -116,7 +110,6 @@ namespace System.Security.Cryptography {
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class HMAC : System.Security.Cryptography.KeyedHashAlgorithm
     {
@@ -132,7 +125,6 @@ namespace System.Security.Cryptography {
         public override void Initialize() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICryptoTransform : System.IDisposable
     {
@@ -143,7 +135,6 @@ namespace System.Security.Cryptography {
         int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset);
         byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class KeyedHashAlgorithm : System.Security.Cryptography.HashAlgorithm
@@ -156,7 +147,6 @@ namespace System.Security.Cryptography {
         protected override void Dispose(bool disposing) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeySizes
     {
@@ -165,7 +155,6 @@ namespace System.Security.Cryptography {
         public int MinSize { get { return default(int); } }
         public int SkipSize { get { return default(int); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PaddingMode
@@ -176,7 +165,6 @@ namespace System.Security.Cryptography {
         PKCS7 = 2,
         Zeros = 3,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SymmetricAlgorithm : System.IDisposable
@@ -213,7 +201,6 @@ namespace System.Security.Cryptography {
         public abstract void GenerateKey();
         public bool ValidKeySize(int bitLength) { return default(bool); }
     }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct HashAlgorithmName : System.IEquatable<System.Security.Cryptography.HashAlgorithmName> {
     public HashAlgorithmName(string name) { throw new System.NotImplementedException(); }
@@ -230,5 +217,4 @@ namespace System.Security.Cryptography {
     public static bool operator !=(System.Security.Cryptography.HashAlgorithmName left, System.Security.Cryptography.HashAlgorithmName right) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
 } // end of System.Security.Cryptography

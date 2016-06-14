@@ -6,7 +6,6 @@ namespace System.Threading {
     [System.Security.SecurityCriticalAttribute]
     public unsafe delegate void IOCompletionCallback(uint errorCode, uint numBytes, System.Threading.NativeOverlapped* pOVERLAP);
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct NativeOverlapped
@@ -17,7 +16,6 @@ namespace System.Threading {
         public int OffsetHigh;
         public int OffsetLow;
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Overlapped
@@ -50,13 +48,11 @@ namespace System.Threading {
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public unsafe System.Threading.NativeOverlapped* UnsafePack(System.Threading.IOCompletionCallback iocb, object userData) { return default(System.Threading.NativeOverlapped*); }
     }
-
   public sealed partial class PreAllocatedOverlapped : System.IDisposable {
     [System.CLSCompliantAttribute(false)]
     public PreAllocatedOverlapped(System.Threading.IOCompletionCallback callback, object state, object pinData) { }
     public void Dispose() { }
   }
-
   public sealed partial class ThreadPoolBoundHandle : System.IDisposable {
     internal ThreadPoolBoundHandle() { }
     public System.Runtime.InteropServices.SafeHandle Handle { get { return default(System.Runtime.InteropServices.SafeHandle); } }
@@ -71,5 +67,4 @@ namespace System.Threading {
     [System.CLSCompliantAttribute(false)]
     public unsafe static object GetNativeOverlappedState(System.Threading.NativeOverlapped* overlapped) { return default(object); }
   }
-
 } // end of System.Threading

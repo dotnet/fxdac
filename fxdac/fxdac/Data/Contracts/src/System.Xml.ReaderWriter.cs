@@ -5,30 +5,25 @@ namespace System.Xml {
     Document = 2,
     Fragment = 1,
   }
-
   public enum DtdProcessing {
     Ignore = 1,
     Prohibit = 0,
   }
-
   public partial interface IXmlLineInfo {
     int LineNumber { get; }
     int LinePosition { get; }
     bool HasLineInfo();
   }
-
   public partial interface IXmlNamespaceResolver {
     System.Collections.Generic.IDictionary<string, string> GetNamespacesInScope(System.Xml.XmlNamespaceScope scope);
     string LookupNamespace(string prefix);
     string LookupPrefix(string namespaceName);
   }
-
   [System.FlagsAttribute]
   public enum NamespaceHandling {
     Default = 0,
     OmitDuplicates = 1,
   }
-
   public partial class NameTable : System.Xml.XmlNameTable {
     public NameTable() { }
     public override string Add(char[] key, int start, int len) { return default(string); }
@@ -36,13 +31,11 @@ namespace System.Xml {
     public override string Get(char[] key, int start, int len) { return default(string); }
     public override string Get(string value) { return default(string); }
   }
-
   public enum NewLineHandling {
     Entitize = 1,
     None = 2,
     Replace = 0,
   }
-
   public enum ReadState {
     Closed = 4,
     EndOfFile = 3,
@@ -50,7 +43,6 @@ namespace System.Xml {
     Initial = 0,
     Interactive = 1,
   }
-
   public enum WriteState {
     Attribute = 3,
     Closed = 5,
@@ -60,7 +52,6 @@ namespace System.Xml {
     Prolog = 1,
     Start = 0,
   }
-
   public static partial class XmlConvert {
     public static string DecodeName(string name) { return default(string); }
     public static string EncodeLocalName(string name) { return default(string); }
@@ -118,14 +109,12 @@ namespace System.Xml {
     public static string VerifyWhitespace(string content) { return default(string); }
     public static string VerifyXmlChars(string content) { return default(string); }
   }
-
   public enum XmlDateTimeSerializationMode {
     Local = 0,
     RoundtripKind = 3,
     Unspecified = 2,
     Utc = 1,
   }
-
   public partial class XmlException : System.Exception {
     public XmlException() { }
     public XmlException(string message) { }
@@ -135,7 +124,6 @@ namespace System.Xml {
     public int LinePosition { get { return default(int); } }
     public override string Message { get { return default(string); } }
   }
-
   public partial class XmlNamespaceManager : System.Collections.IEnumerable, System.Xml.IXmlNamespaceResolver {
     public XmlNamespaceManager(System.Xml.XmlNameTable nameTable) { }
     public virtual string DefaultNamespace { get { return default(string); } }
@@ -150,13 +138,11 @@ namespace System.Xml {
     public virtual void PushScope() { }
     public virtual void RemoveNamespace(string prefix, string uri) { }
   }
-
   public enum XmlNamespaceScope {
     All = 0,
     ExcludeXml = 1,
     Local = 2,
   }
-
   public abstract partial class XmlNameTable {
     protected XmlNameTable() { }
     public abstract string Add(char[] array, int offset, int length);
@@ -164,7 +150,6 @@ namespace System.Xml {
     public abstract string Get(char[] array, int offset, int length);
     public abstract string Get(string array);
   }
-
   public enum XmlNodeType {
     Attribute = 2,
     CDATA = 4,
@@ -185,7 +170,6 @@ namespace System.Xml {
     Whitespace = 13,
     XmlDeclaration = 17,
   }
-
   public partial class XmlParserContext {
     public XmlParserContext(System.Xml.XmlNameTable nt, System.Xml.XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, System.Xml.XmlSpace xmlSpace) { }
     public XmlParserContext(System.Xml.XmlNameTable nt, System.Xml.XmlNamespaceManager nsMgr, string docTypeName, string pubId, string sysId, string internalSubset, string baseURI, string xmlLang, System.Xml.XmlSpace xmlSpace, System.Text.Encoding enc) { }
@@ -202,7 +186,6 @@ namespace System.Xml {
     public string XmlLang { get { return default(string); } set { } }
     public System.Xml.XmlSpace XmlSpace { get { return default(System.Xml.XmlSpace); } set { } }
   }
-
   public partial class XmlQualifiedName {
     public static readonly System.Xml.XmlQualifiedName Empty;
     public XmlQualifiedName() { }
@@ -218,7 +201,6 @@ namespace System.Xml {
     public override string ToString() { return default(string); }
     public static string ToString(string name, string ns) { return default(string); }
   }
-
   public abstract partial class XmlReader : System.IDisposable {
     protected XmlReader() { }
     public abstract int AttributeCount { get; }
@@ -342,7 +324,6 @@ namespace System.Xml {
     public virtual void Skip() { }
     public virtual System.Threading.Tasks.Task SkipAsync() { return default(System.Threading.Tasks.Task); }
   }
-
   public sealed partial class XmlReaderSettings {
     public XmlReaderSettings() { }
     public bool Async { get { return default(bool); } set { } }
@@ -361,13 +342,11 @@ namespace System.Xml {
     public System.Xml.XmlReaderSettings Clone() { return default(System.Xml.XmlReaderSettings); }
     public void Reset() { }
   }
-
   public enum XmlSpace {
     Default = 1,
     None = 0,
     Preserve = 2,
   }
-
   public abstract partial class XmlWriter : System.IDisposable {
     protected XmlWriter() { }
     public virtual System.Xml.XmlWriterSettings Settings { get { return default(System.Xml.XmlWriterSettings); } }
@@ -464,7 +443,6 @@ namespace System.Xml {
     public abstract void WriteWhitespace(string ws);
     public virtual System.Threading.Tasks.Task WriteWhitespaceAsync(string ws) { return default(System.Threading.Tasks.Task); }
   }
-
   public sealed partial class XmlWriterSettings {
     public XmlWriterSettings() { }
     public bool Async { get { return default(bool); } set { } }
@@ -483,20 +461,17 @@ namespace System.Xml {
     public System.Xml.XmlWriterSettings Clone() { return default(System.Xml.XmlWriterSettings); }
     public void Reset() { }
   }
-
 } // end of System.Xml
 namespace System.Xml.Schema {
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public partial class XmlSchema {
     internal XmlSchema() { }
   }
-
   public enum XmlSchemaForm {
     None = 0,
     Qualified = 1,
     Unqualified = 2,
   }
-
 } // end of System.Xml.Schema
 namespace System.Xml.Serialization {
   public partial interface IXmlSerializable {
@@ -505,12 +480,10 @@ namespace System.Xml.Serialization {
     void ReadXml(System.Xml.XmlReader reader);
     void WriteXml(System.Xml.XmlWriter writer);
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(1036))]
   public sealed partial class XmlSchemaProviderAttribute : System.Attribute {
     public XmlSchemaProviderAttribute(string methodName) { }
     public bool IsAny { get { return default(bool); } set { } }
     public string MethodName { get { return default(string); } }
   }
-
 } // end of System.Xml.Serialization

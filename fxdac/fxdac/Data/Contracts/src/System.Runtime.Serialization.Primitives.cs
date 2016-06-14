@@ -9,7 +9,6 @@ namespace System.Runtime.Serialization {
         public SerializationException(string message) { }
         public SerializationException(string message, System.Exception innerException) { }
     }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(12), Inherited=false, AllowMultiple=false)]
   public sealed partial class CollectionDataContractAttribute : System.Attribute {
     public CollectionDataContractAttribute() { }
@@ -26,14 +25,12 @@ namespace System.Runtime.Serialization {
     public string Namespace { get { return default(string); } set { } }
     public string ValueName { get { return default(string); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(3), Inherited=false, AllowMultiple=true)]
   public sealed partial class ContractNamespaceAttribute : System.Attribute {
     public ContractNamespaceAttribute(string contractNamespace) { }
     public string ClrNamespace { get { return default(string); } set { } }
     public string ContractNamespace { get { return default(string); } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(28), Inherited=false, AllowMultiple=false)]
   public sealed partial class DataContractAttribute : System.Attribute {
     public DataContractAttribute() { }
@@ -44,7 +41,6 @@ namespace System.Runtime.Serialization {
     public string Name { get { return default(string); } set { } }
     public string Namespace { get { return default(string); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), Inherited=false, AllowMultiple=false)]
   public sealed partial class DataMemberAttribute : System.Attribute {
     public DataMemberAttribute() { }
@@ -54,31 +50,26 @@ namespace System.Runtime.Serialization {
     public string Name { get { return default(string); } set { } }
     public int Order { get { return default(int); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited=false, AllowMultiple=false)]
   public sealed partial class EnumMemberAttribute : System.Attribute {
     public EnumMemberAttribute() { }
     public bool IsValueSetExplicitly { get { return default(bool); } }
     public string Value { get { return default(string); } set { } }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(384), Inherited=false, AllowMultiple=false)]
   public sealed partial class IgnoreDataMemberAttribute : System.Attribute {
     public IgnoreDataMemberAttribute() { }
   }
-
   public partial class InvalidDataContractException : System.Exception {
     public InvalidDataContractException() { }
     public InvalidDataContractException(string message) { }
     public InvalidDataContractException(string message, System.Exception innerException) { }
   }
-
   public partial interface ISerializationSurrogateProvider {
     object GetDeserializedObject(object obj, System.Type targetType);
     object GetObjectToSerialize(object obj, System.Type targetType);
     System.Type GetSurrogateType(System.Type type);
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(12), Inherited=true, AllowMultiple=true)]
   public sealed partial class KnownTypeAttribute : System.Attribute {
     public KnownTypeAttribute(string methodName) { }
@@ -86,5 +77,4 @@ namespace System.Runtime.Serialization {
     public string MethodName { get { return default(string); } }
     public System.Type Type { get { return default(System.Type); } }
   }
-
 } // end of System.Runtime.Serialization

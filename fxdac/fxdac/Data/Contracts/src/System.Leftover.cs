@@ -16,5 +16,4 @@ namespace System {
         public System.RuntimeTypeHandle GetNextArgType() { return default(System.RuntimeTypeHandle); }
         public int GetRemainingCount() { return default(int); }
     }
-
 } // end of System

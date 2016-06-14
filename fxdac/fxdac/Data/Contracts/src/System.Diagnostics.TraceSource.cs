@@ -9,7 +9,6 @@ namespace System.Diagnostics {
         protected override void OnValueChanged() { }
     }
 
-
     public partial class CorrelationManager
     {
         internal CorrelationManager() { }
@@ -19,7 +18,6 @@ namespace System.Diagnostics {
         public void StartLogicalOperation(object operationId) { }
         public void StopLogicalOperation() { }
     }
-
 
     public partial class DefaultTraceListener : System.Diagnostics.TraceListener
     {
@@ -31,7 +29,6 @@ namespace System.Diagnostics {
         public override void Write(string message) { }
         public override void WriteLine(string message) { }
     }
-
 
     [System.FlagsAttribute]
     public enum SourceLevels
@@ -47,7 +44,6 @@ namespace System.Diagnostics {
         Warning = 7,
     }
 
-
     public partial class SourceSwitch : System.Diagnostics.Switch
     {
         public SourceSwitch(string name) : base(default(string), default(string)) { }
@@ -56,7 +52,6 @@ namespace System.Diagnostics {
         protected override void OnValueChanged() { }
         public bool ShouldTrace(System.Diagnostics.TraceEventType eventType) { return default(bool); }
     }
-
 
     public abstract partial class Switch
     {
@@ -72,7 +67,6 @@ namespace System.Diagnostics {
         protected virtual void OnValueChanged() { }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(741))]
     public sealed partial class SwitchAttribute : System.Attribute
     {
@@ -83,14 +77,12 @@ namespace System.Diagnostics {
         public static System.Diagnostics.SwitchAttribute[] GetAll(System.Reflection.Assembly assembly) { return default(System.Diagnostics.SwitchAttribute[]); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
     public sealed partial class SwitchLevelAttribute : System.Attribute
     {
         public SwitchLevelAttribute(System.Type switchLevelType) { }
         public System.Type SwitchLevelType { get { return default(System.Type); } set { } }
     }
-
 
     public sealed partial class Trace
     {
@@ -166,7 +158,6 @@ namespace System.Diagnostics {
         public static void WriteLineIf(bool condition, string message, string category) { }
     }
 
-
     public partial class TraceEventCache
     {
         public TraceEventCache() { }
@@ -177,7 +168,6 @@ namespace System.Diagnostics {
         public string ThreadId { get { return default(string); } }
         public long Timestamp { get { return default(long); } }
     }
-
 
     public enum TraceEventType
     {
@@ -198,13 +188,11 @@ namespace System.Diagnostics {
         Warning = 4,
     }
 
-
     public abstract partial class TraceFilter
     {
         protected TraceFilter() { }
         public abstract bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);
     }
-
 
     public enum TraceLevel
     {
@@ -214,7 +202,6 @@ namespace System.Diagnostics {
         Verbose = 4,
         Warning = 2,
     }
-
     public abstract partial class TraceListener :System.IDisposable
     {
         protected TraceListener() { }
@@ -259,7 +246,6 @@ namespace System.Diagnostics {
         public virtual void WriteLine(string message, string category) { }
     }
 
-
     public partial class TraceListenerCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         internal TraceListenerCollection() { }
@@ -291,7 +277,6 @@ namespace System.Diagnostics {
         void System.Collections.IList.Remove(object value) { }
     }
 
-
     [System.FlagsAttribute]
     public enum TraceOptions
     {
@@ -303,7 +288,6 @@ namespace System.Diagnostics {
         ThreadId = 16,
         Timestamp = 4,
     }
-
 
     public partial class TraceSource
     {
@@ -334,7 +318,6 @@ namespace System.Diagnostics {
         public void TraceTransfer(int id, string message, System.Guid relatedActivityId) { }
     }
 
-
     [System.Diagnostics.SwitchLevelAttribute(typeof(System.Diagnostics.TraceLevel))]
     public partial class TraceSwitch : System.Diagnostics.Switch
     {
@@ -348,17 +331,14 @@ namespace System.Diagnostics {
         protected override void OnSwitchSettingChanged() { }
         protected override void OnValueChanged() { }
     }
-
   public partial class EventTypeFilter : System.Diagnostics.TraceFilter {
     public EventTypeFilter(System.Diagnostics.SourceLevels level) { }
     public System.Diagnostics.SourceLevels EventType { get { return default(System.Diagnostics.SourceLevels); } set { } }
     public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
   }
-
   public partial class SourceFilter : System.Diagnostics.TraceFilter {
     public SourceFilter(string source) { }
     public string Source { get { return default(string); } set { } }
     public override bool ShouldTrace(System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data) { return default(bool); }
   }
-
 } // end of System.Diagnostics

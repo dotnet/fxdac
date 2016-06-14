@@ -16,7 +16,6 @@ namespace System {
         public virtual System.DateTime ToUniversalTime(System.DateTime time) { return default(System.DateTime); }
     }
 
-
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public partial class TimeZoneNotFoundException : System.Exception
     {
@@ -25,7 +24,6 @@ namespace System {
         public TimeZoneNotFoundException(string message) { }
         public TimeZoneNotFoundException(string message, System.Exception innerException) { }
     }
-
 } // end of System
 namespace System.Globalization {
 
@@ -41,7 +39,6 @@ namespace System.Globalization {
         public static System.Globalization.UnicodeCategory GetUnicodeCategory(string s, int index) { return default(System.Globalization.UnicodeCategory); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DaylightTime
     {
@@ -50,7 +47,6 @@ namespace System.Globalization {
         public System.DateTime End { get { return default(System.DateTime); } }
         public System.DateTime Start { get { return default(System.DateTime); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RegionInfo
@@ -80,7 +76,6 @@ namespace System.Globalization {
         public override string ToString() { return default(string); }
     }
 
-
     public sealed partial class SortVersion : System.IEquatable<System.Globalization.SortVersion>
     {
         public SortVersion(int fullVersion, System.Guid sortId) { }
@@ -92,7 +87,6 @@ namespace System.Globalization {
         public static bool operator ==(System.Globalization.SortVersion left, System.Globalization.SortVersion right) { return default(bool); }
         public static bool operator !=(System.Globalization.SortVersion left, System.Globalization.SortVersion right) { return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringInfo
@@ -114,7 +108,6 @@ namespace System.Globalization {
         public string SubstringByTextElements(int startingTextElement, int lengthInTextElements) { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TextElementEnumerator : System.Collections.IEnumerator
     {
@@ -125,5 +118,4 @@ namespace System.Globalization {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
 } // end of System.Globalization

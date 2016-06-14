@@ -10,5 +10,4 @@ namespace System.Xml {
     public static System.Xml.XmlNode SelectSingleNode(this System.Xml.XmlNode node, string xpath, System.Xml.XmlNamespaceManager nsmgr) { return default(System.Xml.XmlNode); }
     public static System.Xml.XPath.IXPathNavigable ToXPathNavigable(this System.Xml.XmlNode node) { return default(System.Xml.XPath.IXPathNavigable); }
   }
-
 } // end of System.Xml

@@ -13,7 +13,6 @@ namespace System.Security.Cryptography {
         public virtual string Format(bool multiLine) { return default(string); }
     }
 
-
     public sealed partial class AsnEncodedDataCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         public AsnEncodedDataCollection() { }
@@ -32,7 +31,6 @@ namespace System.Security.Cryptography {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public sealed partial class AsnEncodedDataEnumerator : System.Collections.IEnumerator
     {
         internal AsnEncodedDataEnumerator() { }
@@ -41,7 +39,6 @@ namespace System.Security.Cryptography {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
 
     public sealed partial class Oid
     {
@@ -54,7 +51,6 @@ namespace System.Security.Cryptography {
         public static System.Security.Cryptography.Oid FromFriendlyName(string friendlyName, System.Security.Cryptography.OidGroup group) { return default(System.Security.Cryptography.Oid); }
         public static System.Security.Cryptography.Oid FromOidValue(string oidValue, System.Security.Cryptography.OidGroup group) { return default(System.Security.Cryptography.Oid); }
     }
-
 
     public sealed partial class OidCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -73,7 +69,6 @@ namespace System.Security.Cryptography {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public sealed partial class OidEnumerator : System.Collections.IEnumerator
     {
         internal OidEnumerator() { }
@@ -82,7 +77,6 @@ namespace System.Security.Cryptography {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
   public enum OidGroup {
     All = 0,
     Attribute = 5,
@@ -96,5 +90,4 @@ namespace System.Security.Cryptography {
     SignatureAlgorithm = 4,
     Template = 9,
   }
-
 } // end of System.Security.Cryptography

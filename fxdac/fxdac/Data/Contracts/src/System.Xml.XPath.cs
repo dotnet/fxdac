@@ -6,29 +6,24 @@ namespace System.Xml {
     Same = 2,
     Unknown = 3,
   }
-
 } // end of System.Xml
 namespace System.Xml.XPath {
   public partial interface IXPathNavigable {
     System.Xml.XPath.XPathNavigator CreateNavigator();
   }
-
   public enum XmlCaseOrder {
     LowerFirst = 2,
     None = 0,
     UpperFirst = 1,
   }
-
   public enum XmlDataType {
     Number = 2,
     Text = 1,
   }
-
   public enum XmlSortOrder {
     Ascending = 1,
     Descending = 2,
   }
-
   public partial class XPathDocument : System.Xml.XPath.IXPathNavigable {
     public XPathDocument(System.IO.Stream stream) { }
     public XPathDocument(System.IO.TextReader textReader) { }
@@ -38,13 +33,11 @@ namespace System.Xml.XPath {
     public XPathDocument(System.Xml.XmlReader reader, System.Xml.XmlSpace space) { }
     public System.Xml.XPath.XPathNavigator CreateNavigator() { return default(System.Xml.XPath.XPathNavigator); }
   }
-
   public partial class XPathException : System.Exception {
     public XPathException() { }
     public XPathException(string message) { }
     public XPathException(string message, System.Exception innerException) { }
   }
-
   public abstract partial class XPathExpression {
     internal XPathExpression() { }
     public abstract string Expression { get; }
@@ -57,7 +50,6 @@ namespace System.Xml.XPath {
     public abstract void SetContext(System.Xml.IXmlNamespaceResolver nsResolver);
     public abstract void SetContext(System.Xml.XmlNamespaceManager nsManager);
   }
-
   public abstract partial class XPathItem {
     internal XPathItem() { }
     public abstract bool IsNode { get; }
@@ -72,13 +64,11 @@ namespace System.Xml.XPath {
     public virtual object ValueAs(System.Type returnType) { return default(object); }
     public abstract object ValueAs(System.Type returnType, System.Xml.IXmlNamespaceResolver nsResolver);
   }
-
   public enum XPathNamespaceScope {
     All = 0,
     ExcludeXml = 1,
     Local = 2,
   }
-
   public abstract partial class XPathNavigator : System.Xml.XPath.XPathItem, System.Xml.IXmlNamespaceResolver, System.Xml.XPath.IXPathNavigable {
     protected XPathNavigator() { }
     public abstract string BaseURI { get; }
@@ -193,7 +183,6 @@ namespace System.Xml.XPath {
     public override object ValueAs(System.Type returnType, System.Xml.IXmlNamespaceResolver nsResolver) { return default(object); }
     public virtual void WriteSubtree(System.Xml.XmlWriter writer) { }
   }
-
   public abstract partial class XPathNodeIterator : System.Collections.IEnumerable {
     protected XPathNodeIterator() { }
     public virtual int Count { get { return default(int); } }
@@ -203,7 +192,6 @@ namespace System.Xml.XPath {
     public virtual System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
     public abstract bool MoveNext();
   }
-
   public enum XPathNodeType {
     All = 9,
     Attribute = 2,
@@ -216,7 +204,6 @@ namespace System.Xml.XPath {
     Text = 4,
     Whitespace = 6,
   }
-
   public enum XPathResultType {
     Any = 5,
     Boolean = 2,
@@ -226,5 +213,4 @@ namespace System.Xml.XPath {
     Number = 0,
     String = 1,
   }
-
 } // end of System.Xml.XPath

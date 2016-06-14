@@ -19,8 +19,6 @@ namespace System.Threading {
         public bool Dispose(System.Threading.WaitHandle notifyObject) { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void TimerCallback(object state);
-
 } // end of System.Threading

@@ -13,9 +13,7 @@ namespace System.Net.Security {
         protected override void Dispose(bool disposing) { }
     }
 
-
     public delegate System.Security.Cryptography.X509Certificates.X509Certificate LocalCertificateSelectionCallback(object sender, string targetHost, System.Security.Cryptography.X509Certificates.X509CertificateCollection localCertificates, System.Security.Cryptography.X509Certificates.X509Certificate remoteCertificate, string[] acceptableIssuers);
-
 
     public partial class NegotiateStream : System.Net.Security.AuthenticatedStream
     {
@@ -69,7 +67,6 @@ namespace System.Net.Security {
         public virtual System.Threading.Tasks.Task AuthenticateAsServerAsync(System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy policy) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public enum ProtectionLevel
     {
         EncryptAndSign = 2,
@@ -77,9 +74,7 @@ namespace System.Net.Security {
         Sign = 1,
     }
 
-
     public delegate bool RemoteCertificateValidationCallback(object sender, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors);
-
     public partial class SslStream : System.Net.Security.AuthenticatedStream
     {
         public SslStream(System.IO.Stream innerStream) : base(default(System.IO.Stream), default(bool)) { }
@@ -137,13 +132,11 @@ namespace System.Net.Security {
         public SslStream(System.IO.Stream innerStream, bool leaveInnerStreamOpen, System.Net.Security.RemoteCertificateValidationCallback userCertificateValidationCallback, System.Net.Security.LocalCertificateSelectionCallback userCertificateSelectionCallback, System.Net.Security.EncryptionPolicy encryptionPolicy) : base(default(System.IO.Stream), default(bool)) { }
         public System.Net.TransportContext TransportContext { get { return default(System.Net.TransportContext); } }
     }
-
   public enum EncryptionPolicy {
     AllowNoEncryption = 1,
     NoEncryption = 2,
     RequireEncryption = 0,
   }
-
 } // end of System.Net.Security
 namespace System.Security.Authentication {
     public partial class AuthenticationException : System.SystemException
@@ -154,7 +147,6 @@ namespace System.Security.Authentication {
         public AuthenticationException(string message, System.Exception innerException) { }
     }
 
-
     public partial class InvalidCredentialException : System.Security.Authentication.AuthenticationException
     {
         public InvalidCredentialException() { }
@@ -162,7 +154,6 @@ namespace System.Security.Authentication {
         public InvalidCredentialException(string message) { }
         public InvalidCredentialException(string message, System.Exception innerException) { }
     }
-
 } // end of System.Security.Authentication
 namespace System.Security.Authentication.ExtendedProtection {
     public partial class ExtendedProtectionPolicy : System.Runtime.Serialization.ISerializable
@@ -181,7 +172,6 @@ namespace System.Security.Authentication.ExtendedProtection {
         public override string ToString() { return default(string); }
     }
 
-
     public enum PolicyEnforcement
     {
         Always = 2,
@@ -189,13 +179,11 @@ namespace System.Security.Authentication.ExtendedProtection {
         WhenSupported = 1,
     }
 
-
     public enum ProtectionScenario
     {
         TransportSelected = 0,
         TrustedProxy = 1,
     }
-
     public partial class ServiceNameCollection : System.Collections.ReadOnlyCollectionBase, System.Collections.ICollection
     {
         public ServiceNameCollection(System.Collections.ICollection items) { }
@@ -208,5 +196,4 @@ namespace System.Security.Authentication.ExtendedProtection {
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
-
 } // end of System.Security.Authentication.ExtendedProtection

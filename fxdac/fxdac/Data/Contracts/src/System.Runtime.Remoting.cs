@@ -68,7 +68,6 @@ namespace System {
         string ToString();
     }
 
-
     [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AppDomain : System.MarshalByRefObject
@@ -191,10 +190,8 @@ namespace System {
         public static void Unload(System.AppDomain domain) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void AppDomainInitializer(string[] args);
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AppDomainManager : System.MarshalByRefObject
@@ -211,7 +208,6 @@ namespace System {
         public virtual void InitializeNewDomain(System.AppDomainSetup appDomainInfo) { }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AppDomainManagerInitializationOptions
@@ -219,7 +215,6 @@ namespace System {
         None = 0,
         RegisterWithHost = 1,
     }
-
 
     [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -253,7 +248,6 @@ namespace System {
         public void SetConfigurationBytes(byte[] value) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AppDomainUnloadedException : System.SystemException
     {
@@ -262,7 +256,6 @@ namespace System {
         public AppDomainUnloadedException(string message) { }
         public AppDomainUnloadedException(string message, System.Exception innerException) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CannotUnloadAppDomainException : System.SystemException
@@ -273,17 +266,14 @@ namespace System {
         public CannotUnloadAppDomainException(string message, System.Exception innerException) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class ContextBoundObject
     {
         protected ContextBoundObject() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void CrossAppDomainDelegate();
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("27FFF232-A7A8-40dd-8D4A-734AD59FCD41")]
@@ -302,7 +292,6 @@ namespace System {
         string ShadowCopyFiles { get; set; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MarshalByRefObject
     {
@@ -312,7 +301,6 @@ namespace System {
         public virtual object InitializeLifetimeService() { return default(object); }
         protected System.MarshalByRefObject MemberwiseClone(bool cloneIdentity) { return default(System.MarshalByRefObject); }
     }
-
 } // end of System
 namespace System.Runtime.Hosting {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -326,7 +314,6 @@ namespace System.Runtime.Hosting {
         public string[] ActivationData { get { return default(string[]); } }
         public System.ApplicationIdentity ApplicationIdentity { get { return default(System.ApplicationIdentity); } }
     }
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ApplicationActivator
     {
@@ -335,7 +322,6 @@ namespace System.Runtime.Hosting {
         public virtual System.Runtime.Remoting.ObjectHandle CreateInstance(System.ActivationContext activationContext, string[] activationCustomData) { return default(System.Runtime.Remoting.ObjectHandle); }
         protected static System.Runtime.Remoting.ObjectHandle CreateInstanceHelper(System.AppDomainSetup adSetup) { return default(System.Runtime.Remoting.ObjectHandle); }
     }
-
 } // end of System.Runtime.Hosting
 namespace System.Runtime.InteropServices {
 
@@ -344,7 +330,6 @@ namespace System.Runtime.InteropServices {
     {
         System.MarshalByRefObject CreateInstance(System.Type serverType);
     }
-
 } // end of System.Runtime.InteropServices
 namespace System.Runtime.Remoting {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -358,7 +343,6 @@ namespace System.Runtime.Remoting {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ActivatedServiceTypeEntry : System.Runtime.Remoting.TypeEntry
     {
@@ -369,7 +353,6 @@ namespace System.Runtime.Remoting {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CustomErrorsModes
     {
@@ -378,20 +361,17 @@ namespace System.Runtime.Remoting {
         RemoteOnly = 2,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelInfo
     {
         object[] ChannelData { get; set; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IEnvoyInfo
     {
         System.Runtime.Remoting.Messaging.IMessageSink EnvoySinks { get; set; }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InternalRemotingServices
@@ -408,7 +388,6 @@ namespace System.Runtime.Remoting {
         public static void SetServerIdentity(System.Runtime.Remoting.Messaging.MethodCall m, object srvID) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("C460E2B4-E199-412a-8456-84DC3E4838C3")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -417,14 +396,12 @@ namespace System.Runtime.Remoting {
         object Unwrap();
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IRemotingTypeInfo
     {
         string TypeName { get; set; }
         bool CanCastTo(System.Type fromType, object o);
     }
-
 
     [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(2))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -434,7 +411,6 @@ namespace System.Runtime.Remoting {
         public override object InitializeLifetimeService() { return default(object); }
         public object Unwrap() { return default(object); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ObjRef : System.Runtime.Serialization.IObjectReference, System.Runtime.Serialization.ISerializable
@@ -452,7 +428,6 @@ namespace System.Runtime.Remoting {
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public bool IsFromThisProcess() { return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class RemotingConfiguration
@@ -484,7 +459,6 @@ namespace System.Runtime.Remoting {
         public static void RegisterWellKnownServiceType(System.Type type, string objectUri, System.Runtime.Remoting.WellKnownObjectMode mode) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RemotingException : System.SystemException
     {
@@ -493,7 +467,6 @@ namespace System.Runtime.Remoting {
         public RemotingException(string message) { }
         public RemotingException(string message, System.Exception InnerException) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class RemotingServices
@@ -530,7 +503,6 @@ namespace System.Runtime.Remoting {
         public static object Unmarshal(System.Runtime.Remoting.ObjRef objectRef, bool fRefine) { return default(object); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RemotingTimeoutException : System.Runtime.Remoting.RemotingException
     {
@@ -539,7 +511,6 @@ namespace System.Runtime.Remoting {
         public RemotingTimeoutException(string message, System.Exception InnerException) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ServerException : System.SystemException
     {
@@ -547,7 +518,6 @@ namespace System.Runtime.Remoting {
         public ServerException(string message) { }
         public ServerException(string message, System.Exception InnerException) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SoapServices
@@ -579,7 +549,6 @@ namespace System.Runtime.Remoting {
         public static void RegisterSoapActionForMethodBase(System.Reflection.MethodBase mb, string soapAction) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TypeEntry
     {
@@ -587,7 +556,6 @@ namespace System.Runtime.Remoting {
         public string AssemblyName { get { return default(string); } set { } }
         public string TypeName { get { return default(string); } set { } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WellKnownClientTypeEntry : System.Runtime.Remoting.TypeEntry
@@ -600,14 +568,12 @@ namespace System.Runtime.Remoting {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum WellKnownObjectMode
     {
         SingleCall = 2,
         Singleton = 1,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WellKnownServiceTypeEntry : System.Runtime.Remoting.TypeEntry
@@ -620,7 +586,6 @@ namespace System.Runtime.Remoting {
         public string ObjectUri { get { return default(string); } }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Runtime.Remoting
 namespace System.Runtime.Remoting.Activation {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -633,7 +598,6 @@ namespace System.Runtime.Remoting.Activation {
         Process = 16,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IActivator
     {
@@ -641,7 +605,6 @@ namespace System.Runtime.Remoting.Activation {
         System.Runtime.Remoting.Activation.IActivator NextActivator { get; set; }
         System.Runtime.Remoting.Activation.IConstructionReturnMessage Activate(System.Runtime.Remoting.Activation.IConstructionCallMessage msg);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IConstructionCallMessage : System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodCallMessage, System.Runtime.Remoting.Messaging.IMethodMessage
@@ -653,12 +616,10 @@ namespace System.Runtime.Remoting.Activation {
         System.Collections.IList ContextProperties { get; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IConstructionReturnMessage : System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage, System.Runtime.Remoting.Messaging.IMethodReturnMessage
     {
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UrlAttribute : System.Runtime.Remoting.Contexts.ContextAttribute
@@ -672,7 +633,6 @@ namespace System.Runtime.Remoting.Activation {
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override bool IsContextOK(System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg) { return default(bool); }
     }
-
 } // end of System.Runtime.Remoting.Activation
 namespace System.Runtime.Remoting.Channels {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -697,13 +657,11 @@ namespace System.Runtime.Remoting.Channels {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class BaseChannelSinkWithProperties : System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties
     {
         protected BaseChannelSinkWithProperties() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class BaseChannelWithProperties : System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties
@@ -713,7 +671,6 @@ namespace System.Runtime.Remoting.Channels {
         public override System.Collections.IDictionary Properties { get { return default(System.Collections.IDictionary); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ChannelDataStore : System.Runtime.Remoting.Channels.IChannelDataStore
     {
@@ -721,7 +678,6 @@ namespace System.Runtime.Remoting.Channels {
         public string[] ChannelUris { get { return default(string[]); } set { } }
         public object this[object key] { get { return default(object); } set { } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ChannelServices
@@ -741,7 +697,6 @@ namespace System.Runtime.Remoting.Channels {
         public static void UnregisterChannel(System.Runtime.Remoting.Channels.IChannel chnl) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ClientChannelSinkStack : System.Runtime.Remoting.Channels.IClientChannelSinkStack, System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack
     {
@@ -754,7 +709,6 @@ namespace System.Runtime.Remoting.Channels {
         public void Push(System.Runtime.Remoting.Channels.IClientChannelSink sink, object state) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannel
     {
@@ -763,14 +717,12 @@ namespace System.Runtime.Remoting.Channels {
         string Parse(string url, out string objectURI);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelDataStore
     {
         string[] ChannelUris { get; }
         object this[object key] { get; set; }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelReceiver : System.Runtime.Remoting.Channels.IChannel
@@ -781,7 +733,6 @@ namespace System.Runtime.Remoting.Channels {
         void StopListening(object data);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelReceiverHook
     {
@@ -791,20 +742,17 @@ namespace System.Runtime.Remoting.Channels {
         void AddHookChannelUri(string channelUri);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelSender : System.Runtime.Remoting.Channels.IChannel
     {
         System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, out string objectURI);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IChannelSinkBase
     {
         System.Collections.IDictionary Properties { get; }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientChannelSink : System.Runtime.Remoting.Channels.IChannelSinkBase
@@ -816,14 +764,12 @@ namespace System.Runtime.Remoting.Channels {
         void ProcessMessage(System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientChannelSinkProvider
     {
         System.Runtime.Remoting.Channels.IClientChannelSinkProvider Next { get; set; }
         System.Runtime.Remoting.Channels.IClientChannelSink CreateSink(System.Runtime.Remoting.Channels.IChannelSender channel, string url, object remoteChannelData);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientChannelSinkStack : System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack
@@ -832,18 +778,15 @@ namespace System.Runtime.Remoting.Channels {
         void Push(System.Runtime.Remoting.Channels.IClientChannelSink sink, object state);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientFormatterSink : System.Runtime.Remoting.Channels.IChannelSinkBase, System.Runtime.Remoting.Channels.IClientChannelSink, System.Runtime.Remoting.Messaging.IMessageSink
     {
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientFormatterSinkProvider : System.Runtime.Remoting.Channels.IClientChannelSinkProvider
     {
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IClientResponseChannelSinkStack
@@ -853,12 +796,10 @@ namespace System.Runtime.Remoting.Channels {
         void DispatchReplyMessage(System.Runtime.Remoting.Messaging.IMessage msg);
     }
 
-
     public partial interface ISecurableChannel
     {
         bool IsSecured { get; set; }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServerChannelSink : System.Runtime.Remoting.Channels.IChannelSinkBase
@@ -869,7 +810,6 @@ namespace System.Runtime.Remoting.Channels {
         System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage requestMsg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Messaging.IMessage responseMsg, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServerChannelSinkProvider
     {
@@ -877,7 +817,6 @@ namespace System.Runtime.Remoting.Channels {
         System.Runtime.Remoting.Channels.IServerChannelSink CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver channel);
         void GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore channelData);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServerChannelSinkStack : System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack
@@ -889,12 +828,10 @@ namespace System.Runtime.Remoting.Channels {
         void StoreAndDispatch(System.Runtime.Remoting.Channels.IServerChannelSink sink, object state);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServerFormatterSinkProvider : System.Runtime.Remoting.Channels.IServerChannelSinkProvider
     {
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServerResponseChannelSinkStack
@@ -903,14 +840,12 @@ namespace System.Runtime.Remoting.Channels {
         System.IO.Stream GetResponseStream(System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ITransportHeaders
     {
         object this[object key] { get; set; }
         System.Collections.IEnumerator GetEnumerator();
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ServerChannelSinkStack : System.Runtime.Remoting.Channels.IServerChannelSinkStack, System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack
@@ -925,7 +860,6 @@ namespace System.Runtime.Remoting.Channels {
         public void StoreAndDispatch(System.Runtime.Remoting.Channels.IServerChannelSink sink, object state) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ServerProcessing
     {
@@ -933,7 +867,6 @@ namespace System.Runtime.Remoting.Channels {
         Complete = 0,
         OneWay = 1,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SinkProviderData
@@ -943,7 +876,6 @@ namespace System.Runtime.Remoting.Channels {
         public string Name { get { return default(string); } }
         public System.Collections.IDictionary Properties { get { return default(System.Collections.IDictionary); } }
     }
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TransportHeaders : System.Runtime.Remoting.Channels.ITransportHeaders
     {
@@ -951,7 +883,6 @@ namespace System.Runtime.Remoting.Channels {
         public object this[object key] { get { return default(object); } set { } }
         public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 } // end of System.Runtime.Remoting.Channels
 namespace System.Runtime.Remoting.Contexts {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -977,7 +908,6 @@ namespace System.Runtime.Remoting.Contexts {
         public static bool UnregisterDynamicProperty(string name, System.ContextBoundObject obj, System.Runtime.Remoting.Contexts.Context ctx) { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ContextAttribute : System.Attribute, System.Runtime.Remoting.Contexts.IContextAttribute, System.Runtime.Remoting.Contexts.IContextProperty
@@ -993,7 +923,6 @@ namespace System.Runtime.Remoting.Contexts {
         public virtual bool IsNewContextOK(System.Runtime.Remoting.Contexts.Context newCtx) { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ContextProperty
     {
@@ -1002,10 +931,8 @@ namespace System.Runtime.Remoting.Contexts {
         public virtual object Property { get { return default(object); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void CrossContextDelegate();
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContextAttribute
@@ -1014,7 +941,6 @@ namespace System.Runtime.Remoting.Contexts {
         bool IsContextOK(System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContextProperty
     {
@@ -1022,7 +948,6 @@ namespace System.Runtime.Remoting.Contexts {
         void Freeze(System.Runtime.Remoting.Contexts.Context newContext);
         bool IsNewContextOK(System.Runtime.Remoting.Contexts.Context newCtx);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContextPropertyActivator
@@ -1034,13 +959,11 @@ namespace System.Runtime.Remoting.Contexts {
         bool IsOKToActivate(System.Runtime.Remoting.Activation.IConstructionCallMessage msg);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContributeClientContextSink
     {
         System.Runtime.Remoting.Messaging.IMessageSink GetClientContextSink(System.Runtime.Remoting.Messaging.IMessageSink nextSink);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContributeDynamicSink
@@ -1048,13 +971,11 @@ namespace System.Runtime.Remoting.Contexts {
         System.Runtime.Remoting.Contexts.IDynamicMessageSink GetDynamicSink();
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContributeEnvoySink
     {
         System.Runtime.Remoting.Messaging.IMessageSink GetEnvoySink(System.MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContributeObjectSink
@@ -1062,13 +983,11 @@ namespace System.Runtime.Remoting.Contexts {
         System.Runtime.Remoting.Messaging.IMessageSink GetObjectSink(System.MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContributeServerContextSink
     {
         System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink(System.Runtime.Remoting.Messaging.IMessageSink nextSink);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDynamicMessageSink
@@ -1077,13 +996,11 @@ namespace System.Runtime.Remoting.Contexts {
         void ProcessMessageStart(System.Runtime.Remoting.Messaging.IMessage reqMsg, bool bCliSide, bool bAsync);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDynamicProperty
     {
         string Name { get; }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1106,7 +1023,6 @@ namespace System.Runtime.Remoting.Contexts {
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override bool IsContextOK(System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg) { return default(bool); }
     }
-
 } // end of System.Runtime.Remoting.Contexts
 namespace System.Runtime.Remoting.Lifetime {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1123,7 +1039,6 @@ namespace System.Runtime.Remoting.Lifetime {
         public void Unregister(System.MarshalByRefObject obj) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ILease
     {
@@ -1138,13 +1053,11 @@ namespace System.Runtime.Remoting.Lifetime {
         void Unregister(System.Runtime.Remoting.Lifetime.ISponsor obj);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISponsor
     {
         System.TimeSpan Renewal(System.Runtime.Remoting.Lifetime.ILease lease);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum LeaseState
@@ -1156,7 +1069,6 @@ namespace System.Runtime.Remoting.Lifetime {
         Renewing = 3,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LifetimeServices
     {
@@ -1167,7 +1079,6 @@ namespace System.Runtime.Remoting.Lifetime {
         public static System.TimeSpan RenewOnCallTime { get { return default(System.TimeSpan); } set { } }
         public static System.TimeSpan SponsorshipTimeout { get { return default(System.TimeSpan); } set { } }
     }
-
 } // end of System.Runtime.Remoting.Lifetime
 namespace System.Runtime.Remoting.Messaging {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1186,7 +1097,6 @@ namespace System.Runtime.Remoting.Messaging {
         public virtual void SetMessageCtrl(System.Runtime.Remoting.Messaging.IMessageCtrl mc) { }
         public virtual System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage msg) { return default(System.Runtime.Remoting.Messaging.IMessage); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Security.SecurityCriticalAttribute]
@@ -1210,7 +1120,6 @@ namespace System.Runtime.Remoting.Messaging {
         public static void SetHeaders(System.Runtime.Remoting.Messaging.Header[] headers) { }
     }
 
-
     [System.CLSCompliantAttribute(false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ConstructionCall : System.Runtime.Remoting.Messaging.MethodCall, System.Runtime.Remoting.Activation.IConstructionCallMessage, System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodCallMessage, System.Runtime.Remoting.Messaging.IMethodMessage
@@ -1226,7 +1135,6 @@ namespace System.Runtime.Remoting.Messaging {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
-
     [System.CLSCompliantAttribute(false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ConstructionResponse : System.Runtime.Remoting.Messaging.MethodResponse, System.Runtime.Remoting.Activation.IConstructionReturnMessage, System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage, System.Runtime.Remoting.Messaging.IMethodReturnMessage
@@ -1234,7 +1142,6 @@ namespace System.Runtime.Remoting.Messaging {
         public ConstructionResponse(System.Runtime.Remoting.Messaging.Header[] h, System.Runtime.Remoting.Messaging.IMethodCallMessage mcm) : base(default(System.Runtime.Remoting.Messaging.Header[]), default(System.Runtime.Remoting.Messaging.IMethodCallMessage)) { }
         public override System.Collections.IDictionary Properties { get { return default(System.Collections.IDictionary); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Header
@@ -1248,16 +1155,13 @@ namespace System.Runtime.Remoting.Messaging {
         public Header(string _Name, object _Value, bool _MustUnderstand, string _HeaderNamespace) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate object HeaderHandler(System.Runtime.Remoting.Messaging.Header[] headers);
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ILogicalThreadAffinative
     {
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMessage
@@ -1265,13 +1169,11 @@ namespace System.Runtime.Remoting.Messaging {
         System.Collections.IDictionary Properties { get; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMessageCtrl
     {
         void Cancel(int msToCancel);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMessageSink
@@ -1281,7 +1183,6 @@ namespace System.Runtime.Remoting.Messaging {
         System.Runtime.Remoting.Messaging.IMessage SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage msg);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMethodCallMessage : System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage
     {
@@ -1290,7 +1191,6 @@ namespace System.Runtime.Remoting.Messaging {
         object GetInArg(int argNum);
         string GetInArgName(int index);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMethodMessage : System.Runtime.Remoting.Messaging.IMessage
@@ -1308,7 +1208,6 @@ namespace System.Runtime.Remoting.Messaging {
         string GetArgName(int index);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMethodReturnMessage : System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage
     {
@@ -1320,7 +1219,6 @@ namespace System.Runtime.Remoting.Messaging {
         string GetOutArgName(int index);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InternalMessageWrapper
     {
@@ -1328,14 +1226,12 @@ namespace System.Runtime.Remoting.Messaging {
         public InternalMessageWrapper(System.Runtime.Remoting.Messaging.IMessage msg) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IRemotingFormatter : System.Runtime.Serialization.IFormatter
     {
         object Deserialize(System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler);
         void Serialize(System.IO.Stream serializationStream, object graph, System.Runtime.Remoting.Messaging.Header[] headers);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Security.SecurityCriticalAttribute]
@@ -1355,10 +1251,8 @@ namespace System.Runtime.Remoting.Messaging {
         public void SetData(string name, object data) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate bool MessageSurrogateFilter(string key, object value);
-
 
     [System.CLSCompliantAttribute(false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1391,7 +1285,6 @@ namespace System.Runtime.Remoting.Messaging {
         public void RootSetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext ctx) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MethodCallMessageWrapper : System.Runtime.Remoting.Messaging.InternalMessageWrapper, System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodCallMessage, System.Runtime.Remoting.Messaging.IMethodMessage
     {
@@ -1413,7 +1306,6 @@ namespace System.Runtime.Remoting.Messaging {
         public virtual object GetInArg(int argNum) { return default(object); }
         public virtual string GetInArgName(int index) { return default(string); }
     }
-
 
     [System.CLSCompliantAttribute(false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1445,7 +1337,6 @@ namespace System.Runtime.Remoting.Messaging {
         public void RootSetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext ctx) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MethodReturnMessageWrapper : System.Runtime.Remoting.Messaging.InternalMessageWrapper, System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage, System.Runtime.Remoting.Messaging.IMethodReturnMessage
     {
@@ -1470,14 +1361,12 @@ namespace System.Runtime.Remoting.Messaging {
         public virtual string GetOutArgName(int index) { return default(string); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class OneWayAttribute : System.Attribute
     {
         public OneWayAttribute() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RemotingSurrogateSelector : System.Runtime.Serialization.ISurrogateSelector
@@ -1491,7 +1380,6 @@ namespace System.Runtime.Remoting.Messaging {
         public void SetRootObject(object obj) { }
         public virtual void UseSoapFormat() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ReturnMessage : System.Runtime.Remoting.Messaging.IMessage, System.Runtime.Remoting.Messaging.IMethodMessage, System.Runtime.Remoting.Messaging.IMethodReturnMessage
@@ -1517,7 +1405,6 @@ namespace System.Runtime.Remoting.Messaging {
         public object GetOutArg(int argNum) { return default(object); }
         public string GetOutArgName(int index) { return default(string); }
     }
-
 } // end of System.Runtime.Remoting.Messaging
 namespace System.Runtime.Remoting.Metadata {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1531,7 +1418,6 @@ namespace System.Runtime.Remoting.Metadata {
         public virtual string XmlNamespace { get { return default(string); } set { } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(256))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapFieldAttribute : System.Runtime.Remoting.Metadata.SoapAttribute
@@ -1541,7 +1427,6 @@ namespace System.Runtime.Remoting.Metadata {
         public string XmlElementName { get { return default(string); } set { } }
         public bool IsInteropXmlElement() { return default(bool); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1556,7 +1441,6 @@ namespace System.Runtime.Remoting.Metadata {
         public override string XmlNamespace { get { return default(string); } set { } }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SoapOption
@@ -1569,14 +1453,12 @@ namespace System.Runtime.Remoting.Metadata {
         XsdString = 2,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapParameterAttribute : System.Runtime.Remoting.Metadata.SoapAttribute
     {
         public SoapParameterAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1052))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1592,7 +1474,6 @@ namespace System.Runtime.Remoting.Metadata {
         public string XmlTypeNamespace { get { return default(string); } set { } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum XmlFieldOrderOption
     {
@@ -1600,7 +1481,6 @@ namespace System.Runtime.Remoting.Metadata {
         Choice = 2,
         Sequence = 1,
     }
-
 } // end of System.Runtime.Remoting.Metadata
 namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1608,7 +1488,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
     {
         string GetXsdType();
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapAnyUri : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1622,7 +1501,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapBase64Binary : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1634,7 +1512,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapBase64Binary); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapDate : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1650,7 +1527,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapDateTime
     {
@@ -1659,7 +1535,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.DateTime Parse(string value) { return default(System.DateTime); }
         public static string ToString(System.DateTime value) { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapDay : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1673,7 +1548,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapDuration
     {
@@ -1682,7 +1556,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.TimeSpan Parse(string value) { return default(System.TimeSpan); }
         public static string ToString(System.TimeSpan timeSpan) { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapEntities : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1696,7 +1569,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapEntity : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1708,7 +1580,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapEntity Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapEntity); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapHexBinary : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1722,7 +1593,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapId : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1734,7 +1604,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapId); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapIdref : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1748,7 +1617,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapIdrefs : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1760,7 +1628,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapIdrefs Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapIdrefs); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapInteger : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1774,7 +1641,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapLanguage : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1786,7 +1652,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapLanguage Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapLanguage); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapMonth : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1800,7 +1665,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapMonthDay : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1812,7 +1676,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapMonthDay Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapMonthDay); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapName : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1826,7 +1689,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNcName : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1838,7 +1700,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNcName Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNcName); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNegativeInteger : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1852,7 +1713,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNmtoken : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1864,7 +1724,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNmtoken Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNmtoken); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNmtokens : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1878,7 +1737,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNonNegativeInteger : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1890,7 +1748,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNonNegativeInteger); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNonPositiveInteger : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1904,7 +1761,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNormalizedString : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1916,7 +1772,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapNormalizedString); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapNotation : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1930,7 +1785,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapPositiveInteger : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1942,7 +1796,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapPositiveInteger); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapQName : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -1960,7 +1813,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapTime : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1973,7 +1825,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapToken : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -1985,7 +1836,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapToken Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapToken); }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapYear : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
@@ -2001,7 +1851,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SoapYearMonth : System.Runtime.Remoting.Metadata.W3cXsd2001.ISoapXsd
     {
@@ -2015,7 +1864,6 @@ namespace System.Runtime.Remoting.Metadata.W3cXsd2001 {
         public static System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth Parse(string value) { return default(System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth); }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Runtime.Remoting.Metadata.W3cXsd2001
 namespace System.Runtime.Remoting.Proxies {
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
@@ -2030,7 +1878,6 @@ namespace System.Runtime.Remoting.Proxies {
         [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public bool IsContextOK(System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg) { return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class RealProxy
@@ -2054,7 +1901,6 @@ namespace System.Runtime.Remoting.Proxies {
         public static void SetStubData(System.Runtime.Remoting.Proxies.RealProxy rp, object stubData) { }
         public virtual System.IntPtr SupportsInterface(ref System.Guid iid) { return default(System.IntPtr); }
     }
-
 } // end of System.Runtime.Remoting.Proxies
 namespace System.Runtime.Remoting.Services {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -2067,7 +1913,6 @@ namespace System.Runtime.Remoting.Services {
         public static object WrapIUnknownWithComObject(System.IntPtr punk) { return default(object); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ITrackingHandler
     {
@@ -2075,7 +1920,6 @@ namespace System.Runtime.Remoting.Services {
         void MarshaledObject(object obj, System.Runtime.Remoting.ObjRef or);
         void UnmarshaledObject(object obj, System.Runtime.Remoting.ObjRef or);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TrackingServices
@@ -2085,7 +1929,6 @@ namespace System.Runtime.Remoting.Services {
         public static void RegisterTrackingHandler(System.Runtime.Remoting.Services.ITrackingHandler handler) { }
         public static void UnregisterTrackingHandler(System.Runtime.Remoting.Services.ITrackingHandler handler) { }
     }
-
 } // end of System.Runtime.Remoting.Services
 namespace System.Runtime.Serialization {
     [System.CLSCompliantAttribute(false)]
@@ -2127,7 +1970,6 @@ namespace System.Runtime.Serialization {
         protected abstract void WriteValueType(object obj, string name, System.Type memberType);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FormatterConverter : System.Runtime.Serialization.IFormatterConverter
     {
@@ -2155,7 +1997,6 @@ namespace System.Runtime.Serialization {
         public ulong ToUInt64(object value) { return default(ulong); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class FormatterServices
     {
@@ -2179,7 +2020,6 @@ namespace System.Runtime.Serialization {
         public static object PopulateObjectMembers(object obj, System.Reflection.MemberInfo[] members, object[] data) { return default(object); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IFormatter
     {
@@ -2190,7 +2030,6 @@ namespace System.Runtime.Serialization {
         void Serialize(System.IO.Stream serializationStream, object graph);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISerializationSurrogate
     {
@@ -2199,7 +2038,6 @@ namespace System.Runtime.Serialization {
         [System.Security.SecurityCriticalAttribute]
         object SetObjectData(object obj, System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.ISurrogateSelector selector);
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISurrogateSelector
@@ -2212,7 +2050,6 @@ namespace System.Runtime.Serialization {
         System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(System.Type type, System.Runtime.Serialization.StreamingContext context, out System.Runtime.Serialization.ISurrogateSelector selector);
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ObjectIDGenerator
     {
@@ -2220,7 +2057,6 @@ namespace System.Runtime.Serialization {
         public virtual long GetId(object obj, out bool firstTime) { firstTime = default(bool); return default(long); }
         public virtual long HasId(object obj, out bool firstTime) { firstTime = default(bool); return default(long); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ObjectManager
@@ -2246,7 +2082,6 @@ namespace System.Runtime.Serialization {
         public void RegisterObject(object obj, long objectID, System.Runtime.Serialization.SerializationInfo info, long idOfContainingObj, System.Reflection.MemberInfo member, int[] arrayIndex) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SerializationBinder
     {
@@ -2255,7 +2090,6 @@ namespace System.Runtime.Serialization {
         public abstract System.Type BindToType(string assemblyName, string typeName);
     }
 
-
     public sealed partial class SerializationObjectManager
     {
         public SerializationObjectManager(System.Runtime.Serialization.StreamingContext context) { }
@@ -2263,7 +2097,6 @@ namespace System.Runtime.Serialization {
         [System.Security.SecurityCriticalAttribute]
         public void RegisterObject(object obj) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SurrogateSelector : System.Runtime.Serialization.ISurrogateSelector
@@ -2278,7 +2111,6 @@ namespace System.Runtime.Serialization {
         public virtual System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(System.Type type, System.Runtime.Serialization.StreamingContext context, out System.Runtime.Serialization.ISurrogateSelector selector) { selector = default(System.Runtime.Serialization.ISurrogateSelector); return default(System.Runtime.Serialization.ISerializationSurrogate); }
         public virtual void RemoveSurrogate(System.Type type, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 } // end of System.Runtime.Serialization
 namespace System.Runtime.Serialization.Formatters {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -2288,7 +2120,6 @@ namespace System.Runtime.Serialization.Formatters {
         Simple = 0,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FormatterTypeStyle
     {
@@ -2297,14 +2128,12 @@ namespace System.Runtime.Serialization.Formatters {
         XsdString = 2,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IFieldInfo
     {
         string[] FieldNames { [System.Security.SecurityCriticalAttribute]get; [System.Security.SecurityCriticalAttribute]set; }
         System.Type[] FieldTypes { [System.Security.SecurityCriticalAttribute]get; [System.Security.SecurityCriticalAttribute]set; }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Security.SecurityCriticalAttribute]
@@ -2315,7 +2144,6 @@ namespace System.Runtime.Serialization.Formatters {
         public static void InfoSoap(params object[] messages) { }
         public static bool SoapCheckEnabled() { return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Security.SecurityCriticalAttribute]
@@ -2333,7 +2161,6 @@ namespace System.Runtime.Serialization.Formatters {
         public static bool SoapCheckEnabled() { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISoapMessage
     {
@@ -2345,7 +2172,6 @@ namespace System.Runtime.Serialization.Formatters {
         string XmlNameSpace { get; set; }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.Remoting.Metadata.SoapTypeAttribute(Embedded = true)]
     public sealed partial class ServerFault
@@ -2355,7 +2181,6 @@ namespace System.Runtime.Serialization.Formatters {
         public string ExceptionType { get { return default(string); } set { } }
         public string StackTrace { get { return default(string); } set { } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.Remoting.Metadata.SoapTypeAttribute(Embedded = true)]
@@ -2371,7 +2196,6 @@ namespace System.Runtime.Serialization.Formatters {
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SoapMessage : System.Runtime.Serialization.Formatters.ISoapMessage
     {
@@ -2384,14 +2208,12 @@ namespace System.Runtime.Serialization.Formatters {
         public string XmlNameSpace { get { return default(string); } set { } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TypeFilterLevel
     {
         Full = 3,
         Low = 2,
     }
-
 } // end of System.Runtime.Serialization.Formatters
 namespace System.Runtime.Serialization.Formatters.Binary {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -2420,5 +2242,4 @@ namespace System.Runtime.Serialization.Formatters.Binary {
         [System.Security.SecurityCriticalAttribute]
         public object UnsafeDeserializeMethodResponse(System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) { return default(object); }
     }
-
 } // end of System.Runtime.Serialization.Formatters.Binary

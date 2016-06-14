@@ -13,7 +13,6 @@ namespace System.Net {
         public static void Unregister(string authenticationScheme) { }
     }
 
-
     public partial class Authorization
     {
         public Authorization(string token) { }
@@ -26,9 +25,7 @@ namespace System.Net {
         public string[] ProtectionRealm { get { return default(string[]); } set { } }
     }
 
-
     public delegate System.Collections.Generic.IEnumerable<string> CipherSuitesCallback(System.Net.SecurityProtocolType protocol, System.Collections.Generic.IEnumerable<string> allCiphers);
-
 
     public partial class EndpointPermission
     {
@@ -40,7 +37,6 @@ namespace System.Net {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
 
     public partial class FileWebRequest : System.Net.WebRequest, System.Runtime.Serialization.ISerializable
     {
@@ -68,7 +64,6 @@ namespace System.Net {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
 
-
     public partial class FileWebResponse : System.Net.WebResponse, System.IDisposable, System.Runtime.Serialization.ISerializable
     {
         [System.ObsoleteAttribute("Serialization is obsoleted for this type", false)]
@@ -85,7 +80,6 @@ namespace System.Net {
         void System.IDisposable.Dispose() { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
-
 
     public enum FtpStatusCode
     {
@@ -128,7 +122,6 @@ namespace System.Net {
         Undefined = 0,
     }
 
-
     public sealed partial class FtpWebRequest : System.Net.WebRequest
     {
         internal FtpWebRequest() { }
@@ -161,7 +154,6 @@ namespace System.Net {
         public override System.Net.WebResponse GetResponse() { return default(System.Net.WebResponse); }
     }
 
-
     public partial class FtpWebResponse : System.Net.WebResponse
     {
         internal FtpWebResponse() { }
@@ -178,7 +170,6 @@ namespace System.Net {
         public override System.IO.Stream GetResponseStream() { return default(System.IO.Stream); }
     }
 
-
     [System.ObsoleteAttribute("Use WebRequest.DefaultProxy instead")]
     public partial class GlobalProxySelection
     {
@@ -187,14 +178,12 @@ namespace System.Net {
         public static System.Net.IWebProxy GetEmptyWebProxy() { return default(System.Net.IWebProxy); }
     }
 
-
     public partial class HttpVersion
     {
         public static readonly System.Version Version10;
         public static readonly System.Version Version11;
         public HttpVersion() { }
     }
-
 
     public partial interface IAuthenticationModule
     {
@@ -204,18 +193,15 @@ namespace System.Net {
         System.Net.Authorization PreAuthenticate(System.Net.WebRequest request, System.Net.ICredentials credentials);
     }
 
-
     public partial interface ICertificatePolicy
     {
         bool CheckValidationResult(System.Net.ServicePoint srvPoint, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Net.WebRequest request, int certificateProblem);
     }
 
-
     public partial interface ICredentialPolicy
     {
         bool ShouldSendCredential(System.Uri challengeUri, System.Net.WebRequest request, System.Net.NetworkCredential credential, System.Net.IAuthenticationModule authenticationModule);
     }
-
 
     public partial interface IWebProxyScript
     {
@@ -224,7 +210,6 @@ namespace System.Net {
         string Run(string url, string host);
     }
 
-
     [System.FlagsAttribute]
     public enum NetworkAccess
     {
@@ -232,14 +217,12 @@ namespace System.Net {
         Connect = 64,
     }
 
-
     [System.FlagsAttribute]
     public enum SecurityProtocolType
     {
         Ssl3 = 48,
         Tls = 192,
     }
-
 
     public partial class ServicePointManager
     {
@@ -266,7 +249,6 @@ namespace System.Net {
         public static void SetTcpKeepAlive(bool enabled, int keepAliveTime, int keepAliveInterval) { }
     }
 
-
     public sealed partial class SocketPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public const int AllPorts = -1;
@@ -284,7 +266,6 @@ namespace System.Net {
         public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
     public sealed partial class SocketPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
@@ -296,7 +277,6 @@ namespace System.Net {
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
 
-
     public enum TransportType
     {
         All = 3,
@@ -305,7 +285,6 @@ namespace System.Net {
         Tcp = 2,
         Udp = 1,
     }
-
 
     public partial class WebProxy : System.Net.IWebProxy, System.Runtime.Serialization.ISerializable
     {
@@ -333,7 +312,6 @@ namespace System.Net {
         public bool IsBypassed(System.Uri host) { return default(bool); }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
-
 
     public static partial class WebRequestMethods
     {
@@ -368,7 +346,6 @@ namespace System.Net {
             public const string Put = "PUT";
         }
     }
-
 } // end of System.Net
 namespace System.Net.Cache {
     public enum HttpCacheAgeControl
@@ -380,7 +357,6 @@ namespace System.Net.Cache {
         MinFresh = 1,
         None = 0,
     }
-
 
     public enum HttpRequestCacheLevel
     {
@@ -394,7 +370,6 @@ namespace System.Net.Cache {
         Reload = 5,
         Revalidate = 4,
     }
-
 
     public partial class HttpRequestCachePolicy : System.Net.Cache.RequestCachePolicy
     {
@@ -411,5 +386,4 @@ namespace System.Net.Cache {
         public System.TimeSpan MinFresh { get { return default(System.TimeSpan); } }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Net.Cache

@@ -7,13 +7,11 @@ namespace System.Runtime.Serialization {
     public System.IFormatProvider FormatProvider { get { return default(System.IFormatProvider); } }
     public string FormatString { get { return default(string); } }
   }
-
   public enum EmitTypeInformation {
     Always = 1,
     AsNeeded = 0,
     Never = 2,
   }
-
 } // end of System.Runtime.Serialization
 namespace System.Runtime.Serialization.Json {
   public sealed partial class DataContractJsonSerializer {
@@ -28,7 +26,6 @@ namespace System.Runtime.Serialization.Json {
     public object ReadObject(System.IO.Stream stream) { return default(object); }
     public void WriteObject(System.IO.Stream stream, object graph) { }
   }
-
   public partial class DataContractJsonSerializerSettings {
     public DataContractJsonSerializerSettings() { }
     public System.Runtime.Serialization.DateTimeFormat DateTimeFormat { get { return default(System.Runtime.Serialization.DateTimeFormat); } set { } }
@@ -39,5 +36,4 @@ namespace System.Runtime.Serialization.Json {
     public bool SerializeReadOnlyTypes { get { return default(bool); } set { } }
     public bool UseSimpleDictionaryFormat { get { return default(bool); } set { } }
   }
-
 } // end of System.Runtime.Serialization.Json

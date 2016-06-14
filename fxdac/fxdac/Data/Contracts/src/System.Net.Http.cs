@@ -7,12 +7,10 @@ namespace System.Net.Http {
     protected override System.Threading.Tasks.Task SerializeToStreamAsync(System.IO.Stream stream, System.Net.TransportContext context) { return default(System.Threading.Tasks.Task); }
     protected internal override bool TryComputeLength(out long length) { length = default(long); return default(bool); }
   }
-
   public enum ClientCertificateOption {
     Automatic = 1,
     Manual = 0,
   }
-
   public abstract partial class DelegatingHandler : System.Net.Http.HttpMessageHandler {
     protected DelegatingHandler() { }
     protected DelegatingHandler(System.Net.Http.HttpMessageHandler innerHandler) { }
@@ -20,11 +18,9 @@ namespace System.Net.Http {
     protected override void Dispose(bool disposing) { }
     protected internal override System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
   public partial class FormUrlEncodedContent : System.Net.Http.ByteArrayContent {
     public FormUrlEncodedContent(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, string>> nameValueCollection) : base (default(byte[])) { }
   }
-
   public partial class HttpClient : System.Net.Http.HttpMessageInvoker {
     public HttpClient() : base (default(System.Net.Http.HttpMessageHandler)) { }
     public HttpClient(System.Net.Http.HttpMessageHandler handler) : base (default(System.Net.Http.HttpMessageHandler)) { }
@@ -66,7 +62,6 @@ namespace System.Net.Http {
     public System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Net.Http.HttpCompletionOption completionOption, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
     public override System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
   public partial class HttpClientHandler : System.Net.Http.HttpMessageHandler {
     public HttpClientHandler() { }
     public bool AllowAutoRedirect { get { return default(bool); } set { } }
@@ -95,12 +90,10 @@ namespace System.Net.Http {
     protected override void Dispose(bool disposing) { }
     protected internal override System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
   public enum HttpCompletionOption {
     ResponseContentRead = 0,
     ResponseHeadersRead = 1,
   }
-
   public abstract partial class HttpContent : System.IDisposable {
     protected HttpContent() { }
     public System.Net.Http.Headers.HttpContentHeaders Headers { get { return default(System.Net.Http.Headers.HttpContentHeaders); } }
@@ -117,14 +110,12 @@ namespace System.Net.Http {
     protected abstract System.Threading.Tasks.Task SerializeToStreamAsync(System.IO.Stream stream, System.Net.TransportContext context);
     protected internal abstract bool TryComputeLength(out long length);
   }
-
   public abstract partial class HttpMessageHandler : System.IDisposable {
     protected HttpMessageHandler() { }
     public void Dispose() { }
     protected virtual void Dispose(bool disposing) { }
     protected internal abstract System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);
   }
-
   public partial class HttpMessageInvoker : System.IDisposable {
     public HttpMessageInvoker(System.Net.Http.HttpMessageHandler handler) { }
     public HttpMessageInvoker(System.Net.Http.HttpMessageHandler handler, bool disposeHandler) { }
@@ -132,7 +123,6 @@ namespace System.Net.Http {
     protected virtual void Dispose(bool disposing) { }
     public virtual System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
   public partial class HttpMethod : System.IEquatable<System.Net.Http.HttpMethod> {
     public HttpMethod(string method) { }
     public static System.Net.Http.HttpMethod Delete { get { return default(System.Net.Http.HttpMethod); } }
@@ -150,13 +140,11 @@ namespace System.Net.Http {
     public static bool operator !=(System.Net.Http.HttpMethod left, System.Net.Http.HttpMethod right) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
   public partial class HttpRequestException : System.Exception {
     public HttpRequestException() { }
     public HttpRequestException(string message) { }
     public HttpRequestException(string message, System.Exception inner) { }
   }
-
   public partial class HttpRequestMessage : System.IDisposable {
     public HttpRequestMessage() { }
     public HttpRequestMessage(System.Net.Http.HttpMethod method, string requestUri) { }
@@ -171,7 +159,6 @@ namespace System.Net.Http {
     protected virtual void Dispose(bool disposing) { }
     public override string ToString() { return default(string); }
   }
-
   public partial class HttpResponseMessage : System.IDisposable {
     public HttpResponseMessage() { }
     public HttpResponseMessage(System.Net.HttpStatusCode statusCode) { }
@@ -187,7 +174,6 @@ namespace System.Net.Http {
     public System.Net.Http.HttpResponseMessage EnsureSuccessStatusCode() { return default(System.Net.Http.HttpResponseMessage); }
     public override string ToString() { return default(string); }
   }
-
   public abstract partial class MessageProcessingHandler : System.Net.Http.DelegatingHandler {
     protected MessageProcessingHandler() { }
     protected MessageProcessingHandler(System.Net.Http.HttpMessageHandler innerHandler) { }
@@ -195,7 +181,6 @@ namespace System.Net.Http {
     protected abstract System.Net.Http.HttpResponseMessage ProcessResponse(System.Net.Http.HttpResponseMessage response, System.Threading.CancellationToken cancellationToken);
     protected internal sealed override System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
   public partial class MultipartContent : System.Net.Http.HttpContent, System.Collections.Generic.IEnumerable<System.Net.Http.HttpContent>, System.Collections.IEnumerable {
     public MultipartContent() { }
     public MultipartContent(string subtype) { }
@@ -207,7 +192,6 @@ namespace System.Net.Http {
     System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     protected internal override bool TryComputeLength(out long length) { length = default(long); return default(bool); }
   }
-
   public partial class MultipartFormDataContent : System.Net.Http.MultipartContent {
     public MultipartFormDataContent() { }
     public MultipartFormDataContent(string boundary) { }
@@ -215,7 +199,6 @@ namespace System.Net.Http {
     public void Add(System.Net.Http.HttpContent content, string name) { }
     public void Add(System.Net.Http.HttpContent content, string name, string fileName) { }
   }
-
   public partial class StreamContent : System.Net.Http.HttpContent {
     public StreamContent(System.IO.Stream content) { }
     public StreamContent(System.IO.Stream content, int bufferSize) { }
@@ -224,13 +207,11 @@ namespace System.Net.Http {
     protected override System.Threading.Tasks.Task SerializeToStreamAsync(System.IO.Stream stream, System.Net.TransportContext context) { return default(System.Threading.Tasks.Task); }
     protected internal override bool TryComputeLength(out long length) { length = default(long); return default(bool); }
   }
-
   public partial class StringContent : System.Net.Http.ByteArrayContent {
     public StringContent(string content) : base (default(byte[])) { }
     public StringContent(string content, System.Text.Encoding encoding) : base (default(byte[])) { }
     public StringContent(string content, System.Text.Encoding encoding, string mediaType) : base (default(byte[])) { }
   }
-
 } // end of System.Net.Http
 namespace System.Net.Http.Headers {
   public partial class AuthenticationHeaderValue {
@@ -244,7 +225,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.AuthenticationHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.AuthenticationHeaderValue); return default(bool); }
   }
-
   public partial class CacheControlHeaderValue {
     public CacheControlHeaderValue() { }
     public System.Collections.Generic.ICollection<System.Net.Http.Headers.NameValueHeaderValue> Extensions { get { return default(System.Collections.Generic.ICollection<System.Net.Http.Headers.NameValueHeaderValue>); } }
@@ -269,7 +249,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.CacheControlHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.CacheControlHeaderValue); return default(bool); }
   }
-
   public partial class ContentDispositionHeaderValue {
     protected ContentDispositionHeaderValue(System.Net.Http.Headers.ContentDispositionHeaderValue source) { }
     public ContentDispositionHeaderValue(string dispositionType) { }
@@ -288,7 +267,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.ContentDispositionHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.ContentDispositionHeaderValue); return default(bool); }
   }
-
   public partial class ContentRangeHeaderValue {
     public ContentRangeHeaderValue(long length) { }
     public ContentRangeHeaderValue(long from, long to) { }
@@ -305,7 +283,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.ContentRangeHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.ContentRangeHeaderValue); return default(bool); }
   }
-
   public partial class EntityTagHeaderValue {
     public EntityTagHeaderValue(string tag) { }
     public EntityTagHeaderValue(string tag, bool isWeak) { }
@@ -318,7 +295,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.EntityTagHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.EntityTagHeaderValue); return default(bool); }
   }
-
   public sealed partial class HttpContentHeaders : System.Net.Http.Headers.HttpHeaders {
     internal HttpContentHeaders() { }
     public System.Collections.Generic.ICollection<string> Allow { get { return default(System.Collections.Generic.ICollection<string>); } }
@@ -333,7 +309,6 @@ namespace System.Net.Http.Headers {
     public System.Nullable<System.DateTimeOffset> Expires { get { return default(System.Nullable<System.DateTimeOffset>); } set { } }
     public System.Nullable<System.DateTimeOffset> LastModified { get { return default(System.Nullable<System.DateTimeOffset>); } set { } }
   }
-
   public abstract partial class HttpHeaders : System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, System.Collections.Generic.IEnumerable<string>>>, System.Collections.IEnumerable {
     protected HttpHeaders() { }
     public void Add(string name, System.Collections.Generic.IEnumerable<string> values) { }
@@ -349,7 +324,6 @@ namespace System.Net.Http.Headers {
     public bool TryAddWithoutValidation(string name, string value) { return default(bool); }
     public bool TryGetValues(string name, out System.Collections.Generic.IEnumerable<string> values) { values = default(System.Collections.Generic.IEnumerable<string>); return default(bool); }
   }
-
   public sealed partial class HttpHeaderValueCollection<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.IEnumerable where T : class {
     internal HttpHeaderValueCollection() { }
     public int Count { get { return default(int); } }
@@ -365,7 +339,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public bool TryParseAdd(string input) { return default(bool); }
   }
-
   public sealed partial class HttpRequestHeaders : System.Net.Http.Headers.HttpHeaders {
     internal HttpRequestHeaders() { }
     public System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.MediaTypeWithQualityHeaderValue> Accept { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.MediaTypeWithQualityHeaderValue>); } }
@@ -400,7 +373,6 @@ namespace System.Net.Http.Headers {
     public System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.ViaHeaderValue> Via { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.ViaHeaderValue>); } }
     public System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.WarningHeaderValue> Warning { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.WarningHeaderValue>); } }
   }
-
   public sealed partial class HttpResponseHeaders : System.Net.Http.Headers.HttpHeaders {
     internal HttpResponseHeaders() { }
     public System.Net.Http.Headers.HttpHeaderValueCollection<string> AcceptRanges { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<string>); } }
@@ -424,7 +396,6 @@ namespace System.Net.Http.Headers {
     public System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.WarningHeaderValue> Warning { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.WarningHeaderValue>); } }
     public System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.AuthenticationHeaderValue> WwwAuthenticate { get { return default(System.Net.Http.Headers.HttpHeaderValueCollection<System.Net.Http.Headers.AuthenticationHeaderValue>); } }
   }
-
   public partial class MediaTypeHeaderValue {
     protected MediaTypeHeaderValue(System.Net.Http.Headers.MediaTypeHeaderValue source) { }
     public MediaTypeHeaderValue(string mediaType) { }
@@ -437,7 +408,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.MediaTypeHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.MediaTypeHeaderValue); return default(bool); }
   }
-
   public sealed partial class MediaTypeWithQualityHeaderValue : System.Net.Http.Headers.MediaTypeHeaderValue {
     public MediaTypeWithQualityHeaderValue(string mediaType) : base (default(System.Net.Http.Headers.MediaTypeHeaderValue)) { }
     public MediaTypeWithQualityHeaderValue(string mediaType, double quality) : base (default(System.Net.Http.Headers.MediaTypeHeaderValue)) { }
@@ -445,7 +415,6 @@ namespace System.Net.Http.Headers {
     public static new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue Parse(string input) { return default(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue); }
     public static bool TryParse(string input, out System.Net.Http.Headers.MediaTypeWithQualityHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue); return default(bool); }
   }
-
   public partial class NameValueHeaderValue {
     protected NameValueHeaderValue(System.Net.Http.Headers.NameValueHeaderValue source) { }
     public NameValueHeaderValue(string name) { }
@@ -458,7 +427,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.NameValueHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.NameValueHeaderValue); return default(bool); }
   }
-
   public partial class NameValueWithParametersHeaderValue : System.Net.Http.Headers.NameValueHeaderValue {
     protected NameValueWithParametersHeaderValue(System.Net.Http.Headers.NameValueWithParametersHeaderValue source) : base (default(System.Net.Http.Headers.NameValueHeaderValue)) { }
     public NameValueWithParametersHeaderValue(string name) : base (default(System.Net.Http.Headers.NameValueHeaderValue)) { }
@@ -470,7 +438,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.NameValueWithParametersHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.NameValueWithParametersHeaderValue); return default(bool); }
   }
-
   public partial class ProductHeaderValue {
     public ProductHeaderValue(string name) { }
     public ProductHeaderValue(string name, string version) { }
@@ -482,7 +449,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.ProductHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.ProductHeaderValue); return default(bool); }
   }
-
   public partial class ProductInfoHeaderValue {
     public ProductInfoHeaderValue(System.Net.Http.Headers.ProductHeaderValue product) { }
     public ProductInfoHeaderValue(string comment) { }
@@ -495,7 +461,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.ProductInfoHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.ProductInfoHeaderValue); return default(bool); }
   }
-
   public partial class RangeConditionHeaderValue {
     public RangeConditionHeaderValue(System.DateTimeOffset date) { }
     public RangeConditionHeaderValue(System.Net.Http.Headers.EntityTagHeaderValue entityTag) { }
@@ -508,7 +473,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.RangeConditionHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.RangeConditionHeaderValue); return default(bool); }
   }
-
   public partial class RangeHeaderValue {
     public RangeHeaderValue() { }
     public RangeHeaderValue(System.Nullable<long> from, System.Nullable<long> to) { }
@@ -520,7 +484,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.RangeHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.RangeHeaderValue); return default(bool); }
   }
-
   public partial class RangeItemHeaderValue {
     public RangeItemHeaderValue(System.Nullable<long> from, System.Nullable<long> to) { }
     public System.Nullable<long> From { get { return default(System.Nullable<long>); } }
@@ -529,7 +492,6 @@ namespace System.Net.Http.Headers {
     public override int GetHashCode() { return default(int); }
     public override string ToString() { return default(string); }
   }
-
   public partial class RetryConditionHeaderValue {
     public RetryConditionHeaderValue(System.DateTimeOffset date) { }
     public RetryConditionHeaderValue(System.TimeSpan delta) { }
@@ -541,7 +503,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.RetryConditionHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.RetryConditionHeaderValue); return default(bool); }
   }
-
   public partial class StringWithQualityHeaderValue {
     public StringWithQualityHeaderValue(string value) { }
     public StringWithQualityHeaderValue(string value, double quality) { }
@@ -553,7 +514,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.StringWithQualityHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.StringWithQualityHeaderValue); return default(bool); }
   }
-
   public partial class TransferCodingHeaderValue {
     protected TransferCodingHeaderValue(System.Net.Http.Headers.TransferCodingHeaderValue source) { }
     public TransferCodingHeaderValue(string value) { }
@@ -565,7 +525,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.TransferCodingHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.TransferCodingHeaderValue); return default(bool); }
   }
-
   public sealed partial class TransferCodingWithQualityHeaderValue : System.Net.Http.Headers.TransferCodingHeaderValue {
     public TransferCodingWithQualityHeaderValue(string value) : base (default(System.Net.Http.Headers.TransferCodingHeaderValue)) { }
     public TransferCodingWithQualityHeaderValue(string value, double quality) : base (default(System.Net.Http.Headers.TransferCodingHeaderValue)) { }
@@ -573,7 +532,6 @@ namespace System.Net.Http.Headers {
     public static new System.Net.Http.Headers.TransferCodingWithQualityHeaderValue Parse(string input) { return default(System.Net.Http.Headers.TransferCodingWithQualityHeaderValue); }
     public static bool TryParse(string input, out System.Net.Http.Headers.TransferCodingWithQualityHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.TransferCodingWithQualityHeaderValue); return default(bool); }
   }
-
   public partial class ViaHeaderValue {
     public ViaHeaderValue(string protocolVersion, string receivedBy) { }
     public ViaHeaderValue(string protocolVersion, string receivedBy, string protocolName) { }
@@ -588,7 +546,6 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.ViaHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.ViaHeaderValue); return default(bool); }
   }
-
   public partial class WarningHeaderValue {
     public WarningHeaderValue(int code, string agent, string text) { }
     public WarningHeaderValue(int code, string agent, string text, System.DateTimeOffset date) { }
@@ -602,5 +559,4 @@ namespace System.Net.Http.Headers {
     public override string ToString() { return default(string); }
     public static bool TryParse(string input, out System.Net.Http.Headers.WarningHeaderValue parsedValue) { parsedValue = default(System.Net.Http.Headers.WarningHeaderValue); return default(bool); }
   }
-
 } // end of System.Net.Http.Headers

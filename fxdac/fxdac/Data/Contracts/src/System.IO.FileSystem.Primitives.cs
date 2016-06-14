@@ -22,5 +22,4 @@ namespace System.IO {
         System = 4,
         Temporary = 256,
     }
-
 } // end of System.IO

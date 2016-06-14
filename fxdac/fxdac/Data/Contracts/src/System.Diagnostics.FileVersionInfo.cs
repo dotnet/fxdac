@@ -33,5 +33,4 @@ namespace System.Diagnostics {
         public static System.Diagnostics.FileVersionInfo GetVersionInfo(string fileName) { return default(System.Diagnostics.FileVersionInfo); }
         public override string ToString() { return default(string); }
     }
-
 } // end of System.Diagnostics

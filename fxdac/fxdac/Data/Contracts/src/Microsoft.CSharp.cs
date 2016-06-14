@@ -14,13 +14,11 @@ namespace Microsoft.CSharp.RuntimeBinder {
     public static System.Runtime.CompilerServices.CallSiteBinder SetMember(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, System.Type context, System.Collections.Generic.IEnumerable<Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo> argumentInfo) { return default(System.Runtime.CompilerServices.CallSiteBinder); }
     public static System.Runtime.CompilerServices.CallSiteBinder UnaryOperation(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, System.Linq.Expressions.ExpressionType operation, System.Type context, System.Collections.Generic.IEnumerable<Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo> argumentInfo) { return default(System.Runtime.CompilerServices.CallSiteBinder); }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class CSharpArgumentInfo {
     internal CSharpArgumentInfo() { }
     public static Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo Create(Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags flags, string name) { return default(Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo); }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.FlagsAttribute]
   public enum CSharpArgumentInfoFlags {
@@ -32,7 +30,6 @@ namespace Microsoft.CSharp.RuntimeBinder {
     None = 0,
     UseCompileTimeType = 1,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.FlagsAttribute]
   public enum CSharpBinderFlags {
@@ -47,17 +44,14 @@ namespace Microsoft.CSharp.RuntimeBinder {
     ResultIndexed = 64,
     ValueFromCompoundAssignment = 128,
   }
-
   public partial class RuntimeBinderException : System.Exception {
     public RuntimeBinderException() { }
     public RuntimeBinderException(string message) { }
     public RuntimeBinderException(string message, System.Exception innerException) { }
   }
-
   public partial class RuntimeBinderInternalCompilerException : System.Exception {
     public RuntimeBinderInternalCompilerException() { }
     public RuntimeBinderInternalCompilerException(string message) { }
     public RuntimeBinderInternalCompilerException(string message, System.Exception innerException) { }
   }
-
 } // end of Microsoft.CSharp.RuntimeBinder

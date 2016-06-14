@@ -10,9 +10,7 @@ namespace System.ComponentModel {
         public object UserState { get { return default(object); } }
         protected void RaiseExceptionIfNecessary() { }
     }
-
     public delegate void AsyncCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-
     public sealed partial class AsyncOperation
     {
         internal AsyncOperation() { }
@@ -23,14 +21,12 @@ namespace System.ComponentModel {
         public void Post(System.Threading.SendOrPostCallback d, object arg) { }
         public void PostOperationCompleted(System.Threading.SendOrPostCallback d, object arg) { }
     }
-
     public static partial class AsyncOperationManager
     {
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(2))]
         public static System.Threading.SynchronizationContext SynchronizationContext { get { return default(System.Threading.SynchronizationContext); } set { } }
         public static System.ComponentModel.AsyncOperation CreateOperation(object userSuppliedState) { return default(System.ComponentModel.AsyncOperation); }
     }
-
 
     [System.ComponentModel.DefaultEventAttribute("DoWork")]
     public partial class BackgroundWorker     {
@@ -57,25 +53,20 @@ namespace System.ComponentModel {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
     }
-
     public partial class DoWorkEventArgs : System.ComponentModel.CancelEventArgs
     {
         public DoWorkEventArgs(object argument) { }
         public object Argument { get { return default(object); } }
         public object Result { get { return default(object); } set { } }
     }
-
     public delegate void DoWorkEventHandler(object sender, System.ComponentModel.DoWorkEventArgs e);
-
     public partial class ProgressChangedEventArgs : System.EventArgs
     {
         public ProgressChangedEventArgs(int progressPercentage, object userState) { }
         public int ProgressPercentage { get { return default(int); } }
         public object UserState { get { return default(object); } }
     }
-
     public delegate void ProgressChangedEventHandler(object sender, System.ComponentModel.ProgressChangedEventArgs e);
-
     public partial class RunWorkerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
         public RunWorkerCompletedEventArgs(object result, System.Exception error, bool cancelled) { }
@@ -84,7 +75,5 @@ namespace System.ComponentModel {
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         public new object UserState { get { return default(object); } }
     }
-
     public delegate void RunWorkerCompletedEventHandler(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e);
-
 } // end of System.ComponentModel

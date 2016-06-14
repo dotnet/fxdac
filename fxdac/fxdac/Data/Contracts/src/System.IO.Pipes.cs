@@ -5,7 +5,6 @@ namespace Microsoft.Win32.SafeHandles {
     public override bool IsInvalid { get { return default(bool); } }
     protected override bool ReleaseHandle() { return default(bool); }
   }
-
 } // end of Microsoft.Win32.SafeHandles
 namespace System.IO.Pipes {
   public sealed partial class AnonymousPipeClientStream : System.IO.Pipes.PipeStream {
@@ -16,7 +15,6 @@ namespace System.IO.Pipes {
     public override System.IO.Pipes.PipeTransmissionMode TransmissionMode { get { return default(System.IO.Pipes.PipeTransmissionMode); } }
     ~AnonymousPipeClientStream() { }
   }
-
   public sealed partial class AnonymousPipeServerStream : System.IO.Pipes.PipeStream {
     public AnonymousPipeServerStream() : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
     public AnonymousPipeServerStream(System.IO.Pipes.PipeDirection direction) : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
@@ -31,7 +29,6 @@ namespace System.IO.Pipes {
     ~AnonymousPipeServerStream() { }
     public string GetClientHandleAsString() { return default(string); }
   }
-
   public sealed partial class NamedPipeClientStream : System.IO.Pipes.PipeStream {
     public NamedPipeClientStream(System.IO.Pipes.PipeDirection direction, bool isAsync, bool isConnected, Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle) : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
     public NamedPipeClientStream(string pipeName) : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
@@ -48,7 +45,6 @@ namespace System.IO.Pipes {
     public System.Threading.Tasks.Task ConnectAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     ~NamedPipeClientStream() { }
   }
-
   public sealed partial class NamedPipeServerStream : System.IO.Pipes.PipeStream {
     public NamedPipeServerStream(System.IO.Pipes.PipeDirection direction, bool isAsync, bool isConnected, Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle) : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
     public NamedPipeServerStream(string pipeName) : base (default(System.IO.Pipes.PipeDirection), default(int)) { }
@@ -64,20 +60,17 @@ namespace System.IO.Pipes {
     public System.Threading.Tasks.Task WaitForConnectionAsync() { return default(System.Threading.Tasks.Task); }
     public System.Threading.Tasks.Task WaitForConnectionAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
   }
-
   public enum PipeDirection {
     In = 1,
     InOut = 3,
     Out = 2,
   }
-
   [System.FlagsAttribute]
   public enum PipeOptions {
     Asynchronous = 1073741824,
     None = 0,
     WriteThrough = -2147483648,
   }
-
   public abstract partial class PipeStream : System.IO.Stream {
     protected PipeStream(System.IO.Pipes.PipeDirection direction, int bufferSize) { }
     protected PipeStream(System.IO.Pipes.PipeDirection direction, System.IO.Pipes.PipeTransmissionMode transmissionMode, int outBufferSize) { }
@@ -106,10 +99,8 @@ namespace System.IO.Pipes {
     public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     public override void WriteByte(byte value) { }
   }
-
   public enum PipeTransmissionMode {
     Byte = 0,
     Message = 1,
   }
-
 } // end of System.IO.Pipes

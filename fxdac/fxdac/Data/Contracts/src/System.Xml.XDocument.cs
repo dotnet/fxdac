@@ -20,7 +20,6 @@ namespace System.Xml.Linq {
     public static void Remove(this System.Collections.Generic.IEnumerable<System.Xml.Linq.XAttribute> source) { }
     public static void Remove<T>(this System.Collections.Generic.IEnumerable<T> source) where T : System.Xml.Linq.XNode { }
   }
-
   [System.FlagsAttribute]
   public enum LoadOptions {
     None = 0,
@@ -28,20 +27,17 @@ namespace System.Xml.Linq {
     SetBaseUri = 2,
     SetLineInfo = 4,
   }
-
   [System.FlagsAttribute]
   public enum ReaderOptions {
     None = 0,
     OmitDuplicateNamespaces = 1,
   }
-
   [System.FlagsAttribute]
   public enum SaveOptions {
     DisableFormatting = 1,
     None = 0,
     OmitDuplicateNamespaces = 2,
   }
-
   public partial class XAttribute : System.Xml.Linq.XObject {
     public XAttribute(System.Xml.Linq.XAttribute other) { }
     public XAttribute(System.Xml.Linq.XName name, object value) { }
@@ -106,14 +102,12 @@ namespace System.Xml.Linq {
     public void SetValue(object value) { }
     public override string ToString() { return default(string); }
   }
-
   public partial class XCData : System.Xml.Linq.XText {
     public XCData(string value) : base (default(string)) { }
     public XCData(System.Xml.Linq.XCData other) : base (default(string)) { }
     public override System.Xml.XmlNodeType NodeType { get { return default(System.Xml.XmlNodeType); } }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public partial class XComment : System.Xml.Linq.XNode {
     public XComment(string value) { }
     public XComment(System.Xml.Linq.XComment other) { }
@@ -121,7 +115,6 @@ namespace System.Xml.Linq {
     public string Value { get { return default(string); } set { } }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public abstract partial class XContainer : System.Xml.Linq.XNode {
     internal XContainer() { }
     public System.Xml.Linq.XNode FirstNode { get { return default(System.Xml.Linq.XNode); } }
@@ -142,7 +135,6 @@ namespace System.Xml.Linq {
     public void ReplaceNodes(object content) { }
     public void ReplaceNodes(params object[] content) { }
   }
-
   public partial class XDeclaration {
     public XDeclaration(string version, string encoding, string standalone) { }
     public XDeclaration(System.Xml.Linq.XDeclaration other) { }
@@ -151,7 +143,6 @@ namespace System.Xml.Linq {
     public string Version { get { return default(string); } set { } }
     public override string ToString() { return default(string); }
   }
-
   public partial class XDocument : System.Xml.Linq.XContainer {
     public XDocument() { }
     public XDocument(params object[] content) { }
@@ -178,7 +169,6 @@ namespace System.Xml.Linq {
     public void Save(System.Xml.XmlWriter writer) { }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public partial class XDocumentType : System.Xml.Linq.XNode {
     public XDocumentType(string name, string publicId, string systemId, string internalSubset) { }
     public XDocumentType(System.Xml.Linq.XDocumentType other) { }
@@ -189,7 +179,6 @@ namespace System.Xml.Linq {
     public string SystemId { get { return default(string); } set { } }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public partial class XElement : System.Xml.Linq.XContainer, System.Xml.Serialization.IXmlSerializable {
     public XElement(System.Xml.Linq.XElement other) { }
     public XElement(System.Xml.Linq.XName name) { }
@@ -295,7 +284,6 @@ namespace System.Xml.Linq {
     void System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter writer) { }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public sealed partial class XName : System.IEquatable<System.Xml.Linq.XName> {
     internal XName() { }
     public string LocalName { get { return default(string); } }
@@ -312,7 +300,6 @@ namespace System.Xml.Linq {
     bool System.IEquatable<System.Xml.Linq.XName>.Equals(System.Xml.Linq.XName other) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class XNamespace {
     internal XNamespace() { }
     public string NamespaceName { get { return default(string); } }
@@ -330,7 +317,6 @@ namespace System.Xml.Linq {
     public static bool operator !=(System.Xml.Linq.XNamespace left, System.Xml.Linq.XNamespace right) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
   public abstract partial class XNode : System.Xml.Linq.XObject {
     internal XNode() { }
     public static System.Xml.Linq.XNodeDocumentOrderComparer DocumentOrderComparer { get { return default(System.Xml.Linq.XNodeDocumentOrderComparer); } }
@@ -363,13 +349,11 @@ namespace System.Xml.Linq {
     public string ToString(System.Xml.Linq.SaveOptions options) { return default(string); }
     public abstract void WriteTo(System.Xml.XmlWriter writer);
   }
-
   public sealed partial class XNodeDocumentOrderComparer : System.Collections.Generic.IComparer<System.Xml.Linq.XNode>, System.Collections.IComparer {
     public XNodeDocumentOrderComparer() { }
     public int Compare(System.Xml.Linq.XNode x, System.Xml.Linq.XNode y) { return default(int); }
     int System.Collections.IComparer.Compare(object x, object y) { return default(int); }
   }
-
   public sealed partial class XNodeEqualityComparer : System.Collections.Generic.IEqualityComparer<System.Xml.Linq.XNode>, System.Collections.IEqualityComparer {
     public XNodeEqualityComparer() { }
     public bool Equals(System.Xml.Linq.XNode x, System.Xml.Linq.XNode y) { return default(bool); }
@@ -377,7 +361,6 @@ namespace System.Xml.Linq {
     bool System.Collections.IEqualityComparer.Equals(object x, object y) { return default(bool); }
     int System.Collections.IEqualityComparer.GetHashCode(object obj) { return default(int); }
   }
-
   public abstract partial class XObject : System.Xml.IXmlLineInfo {
     internal XObject() { }
     public string BaseUri { get { return default(string); } }
@@ -397,14 +380,12 @@ namespace System.Xml.Linq {
     public void RemoveAnnotations<T>() where T : class { }
     bool System.Xml.IXmlLineInfo.HasLineInfo() { return default(bool); }
   }
-
   public enum XObjectChange {
     Add = 0,
     Name = 2,
     Remove = 1,
     Value = 3,
   }
-
   public partial class XObjectChangeEventArgs : System.EventArgs {
     public static readonly System.Xml.Linq.XObjectChangeEventArgs Add;
     public static readonly System.Xml.Linq.XObjectChangeEventArgs Name;
@@ -413,7 +394,6 @@ namespace System.Xml.Linq {
     public XObjectChangeEventArgs(System.Xml.Linq.XObjectChange objectChange) { }
     public System.Xml.Linq.XObjectChange ObjectChange { get { return default(System.Xml.Linq.XObjectChange); } }
   }
-
   public partial class XProcessingInstruction : System.Xml.Linq.XNode {
     public XProcessingInstruction(string target, string data) { }
     public XProcessingInstruction(System.Xml.Linq.XProcessingInstruction other) { }
@@ -422,7 +402,6 @@ namespace System.Xml.Linq {
     public string Target { get { return default(string); } set { } }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public partial class XStreamingElement {
     public XStreamingElement(System.Xml.Linq.XName name) { }
     public XStreamingElement(System.Xml.Linq.XName name, object content) { }
@@ -439,7 +418,6 @@ namespace System.Xml.Linq {
     public string ToString(System.Xml.Linq.SaveOptions options) { return default(string); }
     public void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
   public partial class XText : System.Xml.Linq.XNode {
     public XText(string value) { }
     public XText(System.Xml.Linq.XText other) { }
@@ -447,5 +425,4 @@ namespace System.Xml.Linq {
     public string Value { get { return default(string); } set { } }
     public override void WriteTo(System.Xml.XmlWriter writer) { }
   }
-
 } // end of System.Xml.Linq

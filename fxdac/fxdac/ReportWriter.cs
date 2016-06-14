@@ -49,5 +49,16 @@ class ReportWriter : IDisposable
         var name = _listStack.Pop();
         _writer.WriteLine("</{0}>", name);
     }
+
+    internal void WriteElement(string listName, params object[] keyValuePairs)
+    {
+        if (keyValuePairs.Length / 2 * 2 != keyValuePairs.Length) throw new Exception("key not matches with value");
+        WriteIndent();
+        _writer.Write("<{0}", listName);
+        for (var i = 0; i < keyValuePairs.Length; i += 2) {
+            _writer.Write(" {0}=\"{1}\"", keyValuePairs[i], keyValuePairs[i + 1]);
+        }
+        _writer.WriteLine("/>");
+    }
 }
 

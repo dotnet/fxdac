@@ -30,7 +30,6 @@ namespace System.ServiceProcess {
     public void WaitForStatus(System.ServiceProcess.ServiceControllerStatus desiredStatus) { }
     public void WaitForStatus(System.ServiceProcess.ServiceControllerStatus desiredStatus, System.TimeSpan timeout) { }
   }
-
   public enum ServiceControllerStatus {
     ContinuePending = 5,
     Paused = 7,
@@ -40,7 +39,6 @@ namespace System.ServiceProcess {
     Stopped = 1,
     StopPending = 3,
   }
-
   public enum ServiceStartMode {
     Automatic = 2,
     Boot = 0,
@@ -48,7 +46,6 @@ namespace System.ServiceProcess {
     Manual = 3,
     System = 1,
   }
-
   [System.FlagsAttribute]
   public enum ServiceType {
     Adapter = 4,
@@ -59,11 +56,9 @@ namespace System.ServiceProcess {
     Win32OwnProcess = 16,
     Win32ShareProcess = 32,
   }
-
   public partial class TimeoutException : System.Exception {
     public TimeoutException() { }
     public TimeoutException(string message) { }
     public TimeoutException(string message, System.Exception innerException) { }
   }
-
 } // end of System.ServiceProcess

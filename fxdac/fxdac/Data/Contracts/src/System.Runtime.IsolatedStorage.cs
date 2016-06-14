@@ -6,7 +6,6 @@ namespace System.IO.IsolatedStorage {
         object Normalize();
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class IsolatedStorage     {
         protected IsolatedStorage() { }
@@ -37,7 +36,6 @@ namespace System.IO.IsolatedStorage {
         public abstract void Remove();
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class IsolatedStorageException : System.Exception
     {
@@ -46,7 +44,6 @@ namespace System.IO.IsolatedStorage {
         public IsolatedStorageException(string message) { }
         public IsolatedStorageException(string message, System.Exception inner) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IsolatedStorageFile : System.IO.IsolatedStorage.IsolatedStorage, System.IDisposable
@@ -125,7 +122,6 @@ namespace System.IO.IsolatedStorage {
         public static void Remove(System.IO.IsolatedStorage.IsolatedStorageScope scope) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class IsolatedStorageFileStream : System.IO.FileStream
     {
@@ -161,7 +157,6 @@ namespace System.IO.IsolatedStorage {
         public override void WriteByte(byte value) { }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum IsolatedStorageScope
@@ -175,12 +170,10 @@ namespace System.IO.IsolatedStorage {
         User = 1,
     }
 
-
     public enum IsolatedStorageSecurityOptions
     {
         IncreaseQuotaForApplication = 4,
     }
-
 
     public partial class IsolatedStorageSecurityState : System.Security.SecurityState
     {
@@ -190,7 +183,6 @@ namespace System.IO.IsolatedStorage {
         public long UsedSize { get { return default(long); } }
         public override void EnsureState() { }
     }
-
 } // end of System.IO.IsolatedStorage
 namespace System.Security.Permissions {
 
@@ -211,7 +203,6 @@ namespace System.Security.Permissions {
         UnrestrictedIsolatedStorage = 240,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IsolatedStorageFilePermission : System.Security.Permissions.IsolatedStoragePermission
     {
@@ -224,7 +215,6 @@ namespace System.Security.Permissions {
         public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IsolatedStorageFilePermissionAttribute : System.Security.Permissions.IsolatedStoragePermissionAttribute
@@ -232,7 +222,6 @@ namespace System.Security.Permissions {
         public IsolatedStorageFilePermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class IsolatedStoragePermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
@@ -245,7 +234,6 @@ namespace System.Security.Permissions {
         public override System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class IsolatedStoragePermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
@@ -254,5 +242,4 @@ namespace System.Security.Permissions {
         public System.Security.Permissions.IsolatedStorageContainment UsageAllowed { get { return default(System.Security.Permissions.IsolatedStorageContainment); } set { } }
         public long UserQuota { get { return default(long); } set { } }
     }
-
 } // end of System.Security.Permissions

@@ -5,5 +5,4 @@ namespace System.Reflection {
     public static T Create<T, TProxy>() where TProxy : System.Reflection.DispatchProxy { return default(T); }
     protected abstract object Invoke(System.Reflection.MethodInfo targetMethod, object[] args);
   }
-
 } // end of System.Reflection

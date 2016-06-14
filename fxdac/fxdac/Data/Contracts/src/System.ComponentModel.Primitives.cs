@@ -14,7 +14,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public partial class CategoryAttribute : System.Attribute
     {
@@ -41,7 +40,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ComponentCollection : System.Collections.ReadOnlyCollectionBase
     {
@@ -52,7 +50,6 @@ namespace System.ComponentModel {
         internal ComponentCollection() { }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
     public sealed partial class DefaultEventAttribute : System.Attribute
     {
@@ -62,7 +59,6 @@ namespace System.ComponentModel {
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public partial class DescriptionAttribute : System.Attribute
@@ -76,7 +72,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple = true, Inherited = true)]
     public sealed partial class DesignerAttribute : System.Attribute
@@ -92,7 +87,6 @@ namespace System.ComponentModel {
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple = false, Inherited = true)]
     public sealed partial class DesignerCategoryAttribute : System.Attribute
@@ -110,7 +104,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DesignerSerializationVisibility
     {
@@ -118,7 +111,6 @@ namespace System.ComponentModel {
         Hidden = 0,
         Visible = 1,
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(960))]
     public sealed partial class DesignerSerializationVisibilityAttribute : System.Attribute
@@ -134,7 +126,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class DesignOnlyAttribute : System.Attribute
     {
@@ -148,7 +139,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(708))]
     public partial class DisplayNameAttribute : System.Attribute
     {
@@ -161,7 +151,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
     public sealed partial class EventHandlerList : System.IDisposable
     {
         public EventHandlerList() { }
@@ -171,14 +160,12 @@ namespace System.ComponentModel {
         public void Dispose() { }
         public void RemoveHandler(object key, System.Delegate value) { }
     }
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IComponent : System.IDisposable
     {
         System.ComponentModel.ISite Site { get; set; }
         event System.EventHandler Disposed;
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContainer : System.IDisposable
@@ -188,7 +175,6 @@ namespace System.ComponentModel {
         void Add(System.ComponentModel.IComponent component, string name);
         void Remove(System.ComponentModel.IComponent component);
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class ImmutableObjectAttribute : System.Attribute
@@ -203,14 +189,12 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
     public sealed partial class InitializationEventAttribute : System.Attribute
     {
         public InitializationEventAttribute(string eventName) { }
         public string EventName { get { return default(string); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISite : System.IServiceProvider
@@ -220,7 +204,6 @@ namespace System.ComponentModel {
         bool DesignMode { get; }
         string Name { get; set; }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class LocalizableAttribute : System.Attribute
@@ -235,7 +218,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class MergablePropertyAttribute : System.Attribute
     {
@@ -248,7 +230,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(128))]
     public sealed partial class NotifyParentPropertyAttribute : System.Attribute
@@ -263,7 +244,6 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class ParenthesizePropertyNameAttribute : System.Attribute
     {
@@ -275,7 +255,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class ReadOnlyAttribute : System.Attribute
@@ -290,14 +269,12 @@ namespace System.ComponentModel {
         public override bool IsDefaultAttribute() { return default(bool); }
     }
 
-
     public enum RefreshProperties
     {
         All = 1,
         None = 0,
         Repaint = 2,
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public sealed partial class RefreshPropertiesAttribute : System.Attribute
@@ -311,5 +288,4 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
 } // end of System.ComponentModel

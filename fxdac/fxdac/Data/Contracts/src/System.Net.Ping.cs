@@ -28,7 +28,6 @@ namespace System.Net.NetworkInformation {
         Unknown = -1,
         UnrecognizedNextHeader = 11043,
     }
-
     public partial class Ping : System.ComponentModel.Component, System.IDisposable
     {
         public Ping() { }
@@ -63,16 +62,13 @@ namespace System.Net.NetworkInformation {
         protected override void Dispose(bool disposing) { }
     }
 
-
     public partial class PingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
         internal PingCompletedEventArgs() { }
         public System.Net.NetworkInformation.PingReply Reply { get { return default(System.Net.NetworkInformation.PingReply); } }
     }
 
-
     public delegate void PingCompletedEventHandler(object sender, System.Net.NetworkInformation.PingCompletedEventArgs e);
-
 
     public partial class PingException : System.InvalidOperationException
     {
@@ -81,7 +77,6 @@ namespace System.Net.NetworkInformation {
         public PingException(string message, System.Exception innerException) { }
     }
 
-
     public partial class PingOptions
     {
         public PingOptions() { }
@@ -89,7 +84,6 @@ namespace System.Net.NetworkInformation {
         public bool DontFragment { get { return default(bool); } set { } }
         public int Ttl { get { return default(int); } set { } }
     }
-
 
     public partial class PingReply
     {
@@ -100,5 +94,4 @@ namespace System.Net.NetworkInformation {
         public long RoundtripTime { get { return default(long); } }
         public System.Net.NetworkInformation.IPStatus Status { get { return default(System.Net.NetworkInformation.IPStatus); } }
     }
-
 } // end of System.Net.NetworkInformation

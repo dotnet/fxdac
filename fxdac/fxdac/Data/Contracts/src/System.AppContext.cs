@@ -7,5 +7,4 @@ namespace System {
     public static void SetSwitch(string switchName, bool isEnabled) { }
     public static bool TryGetSwitch(string switchName, out bool isEnabled) { isEnabled = default(bool); return default(bool); }
   }
-
 } // end of System

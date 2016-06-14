@@ -6,7 +6,6 @@ namespace System.Runtime.InteropServices {
     X64 = 1,
     X86 = 0,
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct OSPlatform : System.IEquatable<System.Runtime.InteropServices.OSPlatform> {
     public static System.Runtime.InteropServices.OSPlatform Linux { get { return default(System.Runtime.InteropServices.OSPlatform); } }
@@ -20,7 +19,6 @@ namespace System.Runtime.InteropServices {
     public static bool operator !=(System.Runtime.InteropServices.OSPlatform left, System.Runtime.InteropServices.OSPlatform right) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
   public static partial class RuntimeInformation {
     public static string FrameworkDescription { get { return default(string); } }
     public static System.Runtime.InteropServices.Architecture OSArchitecture { get { return default(System.Runtime.InteropServices.Architecture); } }
@@ -28,5 +26,4 @@ namespace System.Runtime.InteropServices {
     public static System.Runtime.InteropServices.Architecture ProcessArchitecture { get { return default(System.Runtime.InteropServices.Architecture); } }
     public static bool IsOSPlatform(System.Runtime.InteropServices.OSPlatform osPlatform) { return default(bool); }
   }
-
 } // end of System.Runtime.InteropServices

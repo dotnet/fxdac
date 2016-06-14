@@ -14,14 +14,12 @@ namespace System.Diagnostics {
         public static void NotifyOfCrossThreadDependency() { }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerStepperBoundaryAttribute : System.Attribute
     {
         public DebuggerStepperBoundaryAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(13), AllowMultiple = true)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -39,7 +37,6 @@ namespace System.Diagnostics {
         public string VisualizerObjectSourceTypeName { get { return default(string); } }
         public string VisualizerTypeName { get { return default(string); } }
     }
-
 
     public static partial class Debug
     {
@@ -105,5 +102,4 @@ namespace System.Diagnostics {
         [System.Diagnostics.ConditionalAttribute("DEBUG")]
         public static void WriteLineIf(bool condition, string message, string category) { }
     }
-
 } // end of System.Diagnostics

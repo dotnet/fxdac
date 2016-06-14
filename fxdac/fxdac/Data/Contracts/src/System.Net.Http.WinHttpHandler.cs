@@ -5,14 +5,12 @@ namespace System.Net.Http {
     UseInternalCookieStoreOnly = 1,
     UseSpecifiedCookieContainer = 2,
   }
-
   public enum WindowsProxyUsePolicy {
     DoNotUseProxy = 0,
     UseCustomProxy = 3,
     UseWinHttpProxy = 1,
     UseWinInetProxy = 2,
   }
-
   public partial class WinHttpHandler : System.Net.Http.HttpMessageHandler {
     public WinHttpHandler() { }
     public System.Net.DecompressionMethods AutomaticDecompression { get { return default(System.Net.DecompressionMethods); } set { } }
@@ -40,5 +38,4 @@ namespace System.Net.Http {
     protected override void Dispose(bool disposing) { }
     protected override System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage> SendAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>); }
   }
-
 } // end of System.Net.Http

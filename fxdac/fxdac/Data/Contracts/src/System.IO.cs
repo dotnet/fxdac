@@ -46,7 +46,6 @@ namespace System.IO {
         public virtual ulong ReadUInt64() { return default(ulong); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class BinaryWriter : System.IDisposable
     {
@@ -93,7 +92,6 @@ namespace System.IO {
         protected void Write7BitEncodedInt(int value) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BufferedStream : System.IO.Stream
     {
@@ -120,7 +118,6 @@ namespace System.IO {
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         public override void WriteByte(byte value) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MemoryStream : System.IO.Stream
@@ -161,7 +158,6 @@ namespace System.IO {
         public virtual bool TryGetBuffer(out System.ArraySegment<byte> buffer) { buffer = default(System.ArraySegment<byte>); return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StreamReader : System.IO.TextReader
     {
@@ -199,7 +195,6 @@ namespace System.IO {
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StreamWriter : System.IO.TextWriter
@@ -242,7 +237,6 @@ namespace System.IO {
         public override System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringReader : System.IO.TextReader
     {
@@ -263,7 +257,6 @@ namespace System.IO {
         [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringWriter : System.IO.TextWriter
@@ -304,7 +297,6 @@ namespace System.IO {
         public override System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TextReader : System.IDisposable
     {
@@ -330,7 +322,6 @@ namespace System.IO {
         public virtual System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
         public static System.IO.TextReader Synchronized(System.IO.TextReader reader) { return default(System.IO.TextReader); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TextWriter : System.IDisposable
@@ -408,12 +399,10 @@ namespace System.IO {
         public virtual System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public sealed partial class InvalidDataException : System.SystemException
     {
         public InvalidDataException() { }
         public InvalidDataException(string message) { }
         public InvalidDataException(string message, System.Exception innerException) { }
     }
-
 } // end of System.IO

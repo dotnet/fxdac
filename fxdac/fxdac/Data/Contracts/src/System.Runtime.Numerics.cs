@@ -148,7 +148,6 @@ namespace System.Numerics {
     public static bool TryParse(string value, System.Globalization.NumberStyles style, System.IFormatProvider provider, out System.Numerics.BigInteger result) { result = default(System.Numerics.BigInteger); return default(bool); }
     public static bool TryParse(string value, out System.Numerics.BigInteger result) { result = default(System.Numerics.BigInteger); return default(bool); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Complex : System.IEquatable<System.Numerics.Complex>, System.IFormattable {
     public static readonly System.Numerics.Complex ImaginaryOne;
@@ -215,5 +214,4 @@ namespace System.Numerics {
     public string ToString(string format) { return default(string); }
     public string ToString(string format, System.IFormatProvider provider) { return default(string); }
   }
-
 } // end of System.Numerics

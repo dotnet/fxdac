@@ -16,7 +16,6 @@ namespace System.Net.Mail {
         protected override void Dispose(bool disposing) { }
     }
 
-
     public sealed partial class AlternateViewCollection : System.Collections.ObjectModel.Collection<System.Net.Mail.AlternateView>, System.IDisposable
     {
         internal AlternateViewCollection() { }
@@ -26,7 +25,6 @@ namespace System.Net.Mail {
         protected override void RemoveItem(int index) { }
         protected override void SetItem(int index, System.Net.Mail.AlternateView item) { }
     }
-
 
     public partial class Attachment : System.Net.Mail.AttachmentBase
     {
@@ -44,7 +42,6 @@ namespace System.Net.Mail {
         public static System.Net.Mail.Attachment CreateAttachmentFromString(string content, string name, System.Text.Encoding contentEncoding, string mediaType) { return default(System.Net.Mail.Attachment); }
     }
 
-
     public abstract partial class AttachmentBase : System.IDisposable
     {
         protected AttachmentBase(System.IO.Stream contentStream) { }
@@ -61,7 +58,6 @@ namespace System.Net.Mail {
         protected virtual void Dispose(bool disposing) { }
     }
 
-
     public sealed partial class AttachmentCollection : System.Collections.ObjectModel.Collection<System.Net.Mail.Attachment>, System.IDisposable
     {
         internal AttachmentCollection() { }
@@ -72,7 +68,6 @@ namespace System.Net.Mail {
         protected override void SetItem(int index, System.Net.Mail.Attachment item) { }
     }
 
-
     [System.FlagsAttribute]
     public enum DeliveryNotificationOptions
     {
@@ -82,7 +77,6 @@ namespace System.Net.Mail {
         OnFailure = 2,
         OnSuccess = 1,
     }
-
 
     public partial class LinkedResource : System.Net.Mail.AttachmentBase
     {
@@ -98,7 +92,6 @@ namespace System.Net.Mail {
         public static System.Net.Mail.LinkedResource CreateLinkedResourceFromString(string content, System.Text.Encoding contentEncoding, string mediaType) { return default(System.Net.Mail.LinkedResource); }
     }
 
-
     public sealed partial class LinkedResourceCollection : System.Collections.ObjectModel.Collection<System.Net.Mail.LinkedResource>, System.IDisposable
     {
         internal LinkedResourceCollection() { }
@@ -108,7 +101,6 @@ namespace System.Net.Mail {
         protected override void RemoveItem(int index) { }
         protected override void SetItem(int index, System.Net.Mail.LinkedResource item) { }
     }
-
 
     public partial class MailAddress
     {
@@ -124,7 +116,6 @@ namespace System.Net.Mail {
         public override string ToString() { return default(string); }
     }
 
-
     public partial class MailAddressCollection : System.Collections.ObjectModel.Collection<System.Net.Mail.MailAddress>
     {
         public MailAddressCollection() { }
@@ -133,7 +124,6 @@ namespace System.Net.Mail {
         protected override void SetItem(int index, System.Net.Mail.MailAddress item) { }
         public override string ToString() { return default(string); }
     }
-
 
     public partial class MailMessage : System.IDisposable
     {
@@ -164,7 +154,6 @@ namespace System.Net.Mail {
         protected virtual void Dispose(bool disposing) { }
     }
 
-
     public enum MailPriority
     {
         High = 2,
@@ -172,9 +161,7 @@ namespace System.Net.Mail {
         Normal = 0,
     }
 
-
     public delegate void SendCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-
 
     public enum SmtpAccess
     {
@@ -182,7 +169,6 @@ namespace System.Net.Mail {
         ConnectToUnrestrictedPort = 2,
         None = 0,
     }
-
 
     public partial class SmtpClient : System.IDisposable
     {
@@ -213,14 +199,12 @@ namespace System.Net.Mail {
         public System.Threading.Tasks.Task SendMailAsync(string from, string recipients, string subject, string body) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public enum SmtpDeliveryMethod
     {
         Network = 0,
         PickupDirectoryFromIis = 2,
         SpecifiedPickupDirectory = 1,
     }
-
 
     public partial class SmtpException : System.Exception, System.Runtime.Serialization.ISerializable
     {
@@ -234,7 +218,6 @@ namespace System.Net.Mail {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     public partial class SmtpFailedRecipientException : System.Net.Mail.SmtpException, System.Runtime.Serialization.ISerializable
     {
@@ -250,7 +233,6 @@ namespace System.Net.Mail {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
 
-
     public partial class SmtpFailedRecipientsException : System.Net.Mail.SmtpFailedRecipientException, System.Runtime.Serialization.ISerializable
     {
         public SmtpFailedRecipientsException() { }
@@ -262,7 +244,6 @@ namespace System.Net.Mail {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
 
     public enum SmtpStatusCode
     {
@@ -292,5 +273,4 @@ namespace System.Net.Mail {
         UserNotLocalTryAlternatePath = 551,
         UserNotLocalWillForward = 251,
     }
-
 } // end of System.Net.Mail

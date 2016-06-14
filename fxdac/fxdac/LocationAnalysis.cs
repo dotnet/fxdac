@@ -135,8 +135,8 @@ class LocationAnalysis
         var missing = types.Where((t) => t.CurrentAssembly == null).ToList();
         missing.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var added = types.Where((t) => t.PreviousAssembly == null).ToList();
-        added.Sort((left, right)=> { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
-        var moved = types.Where((t) => t.CurrentAssembly != t.PreviousAssembly && t.CurrentAssembly!=null && t.PreviousAssembly!=null).ToList();
+        added.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
+        var moved = types.Where((t) => t.CurrentAssembly != t.PreviousAssembly && t.CurrentAssembly != null && t.PreviousAssembly != null).ToList();
         moved.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var movedToSystemRuntime = moved.Where((t) => t.CurrentAssembly == "System.Runtime").ToList();
         var movedToOtherThanSystemRuntime = moved.Where((t) => t.CurrentAssembly != "System.Runtime").ToList();
@@ -165,65 +165,65 @@ class LocationAnalysis
                 reportWriter.WriteListEnd();
             }
 
-            reportWriter.WriteListStart("MOVED_VALID", "total", validMoves.Count, "description", "moves that have been deemed ok (list hardcoded)");
-            if (validMoves.Count > 0) {
-                if (Program.s_logValidMoves) {
-                    foreach (var movedType in validMoves) {
-                        reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
-                    }
+            if (Program.s_logValidMoves && validMoves.Count > 0) {
+                reportWriter.WriteListStart("MOVED_VALID", "total", validMoves.Count, "description", "moves that have been deemed ok (list hardcoded)");
+                foreach (var movedType in validMoves) {
+                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                 }
+                reportWriter.WriteListEnd();
             }
-            reportWriter.WriteListEnd();
+            else {
+                reportWriter.WriteElement("MOVED_VALID", "total", validMoves.Count, "description", "moves that have been deemed ok (list hardcoded)");
+            }
 
-            if (movedToSystemRuntime.Count > 0) {
-                    reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.Runtime are OK");
-                    if (Program.s_logValidMoves) {
-                        foreach (var movedType in movedToSystemRuntime) {
-                            reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
-                        }
-                    }
-                    reportWriter.WriteListEnd();
+            if (Program.s_logValidMoves && movedToSystemRuntime.Count > 0) {
+                reportWriter.WriteListStart("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.Runtime are OK");
+                foreach (var movedType in validMoves) {
+                    reportWriter.WriteListItem(string.Format("{0} moved from {1}", movedType.AssemblyQualifiedName, movedType.PreviousAssembly));
                 }
+                reportWriter.WriteListEnd();
+            }
+            else {
+                reportWriter.WriteElement("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.Runtime are OK"); ;
             }
 
             reportWriter.WriteListEnd();
 
-        if (Program.s_logAddedContracts && addedContracts.Count > 0) {
-            addedContracts.Sort();
-            reportWriter.WriteListStart("ADDED_CONTRACTS", "total", addedContracts.Count);
-            foreach (var addedContract in addedContracts) {
-                reportWriter.WriteListItem("{0}", addedContract);
+            if (Program.s_logAddedContracts && addedContracts.Count > 0) {
+                addedContracts.Sort();
+                reportWriter.WriteListStart("ADDED_CONTRACTS", "total", addedContracts.Count);
+                foreach (var addedContract in addedContracts) {
+                    reportWriter.WriteListItem("{0}", addedContract);
+                }
+                reportWriter.WriteListEnd();
             }
-            reportWriter.WriteListEnd();
-        }
 
-        if (Program.s_logMissingContracts && missingContracts.Count > 0) {
-            missingContracts.Sort();
-            reportWriter.WriteListStart("MISSING_CONTRACTS", "total", missingContracts.Count);
-            foreach (var removedContract in missingContracts) {
-                reportWriter.WriteListItem("\t{0}", removedContract);
+            if (Program.s_logMissingContracts && missingContracts.Count > 0) {
+                missingContracts.Sort();
+                reportWriter.WriteListStart("MISSING_CONTRACTS", "total", missingContracts.Count);
+                foreach (var removedContract in missingContracts) {
+                    reportWriter.WriteListItem("\t{0}", removedContract);
+                }
+                reportWriter.WriteListEnd();
             }
-            reportWriter.WriteListEnd();
-        }
 
-        if (Program.s_logTypesNotInCoreFx && added.Count > 0) {
-            reportWriter.WriteListStart("TYPES_NOT_IN_CORFX", "total", added.Count);
-            foreach (var addedType in added) {
-                reportWriter.WriteListItem(addedType.AssemblyQualifiedName);
+            if (Program.s_logTypesNotInCoreFx && added.Count > 0) {
+                reportWriter.WriteListStart("TYPES_NOT_IN_CORFX", "total", added.Count);
+                foreach (var addedType in added) {
+                    reportWriter.WriteListItem(addedType.AssemblyQualifiedName);
+                }
+                reportWriter.WriteListEnd();
             }
-            reportWriter.WriteListEnd();
-        }
 
 
-        if (Program.s_logTypesNotInMasterSources && missing.Count > 0) {
-            reportWriter.WriteListStart("TYPES_NOT_IN_MASTER_API", "total", missing.Count);
-            foreach (var removedType in missing) {
-                reportWriter.WriteListItem(removedType.AssemblyQualifiedName);
+            if (Program.s_logTypesNotInMasterSources && missing.Count > 0) {
+                reportWriter.WriteListStart("TYPES_NOT_IN_MASTER_API", "total", missing.Count);
+                foreach (var removedType in missing) {
+                    reportWriter.WriteListItem(removedType.AssemblyQualifiedName);
+                }
+                reportWriter.WriteListEnd();
             }
-            reportWriter.WriteListEnd();
         }
     }
-
-
 }
 

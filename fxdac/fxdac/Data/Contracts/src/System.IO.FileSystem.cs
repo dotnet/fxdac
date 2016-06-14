@@ -50,7 +50,6 @@ namespace System.IO {
         public static void SetLastWriteTimeUtc(string path, System.DateTime lastWriteTimeUtc) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DirectoryInfo : System.IO.FileSystemInfo
     {
@@ -89,7 +88,6 @@ namespace System.IO {
         public void SetAccessControl(System.Security.AccessControl.DirectorySecurity directorySecurity) { }
         public override string ToString() { return default(string); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class File
@@ -148,7 +146,6 @@ namespace System.IO {
         public static System.IO.FileStream Create(string path, int bufferSize, System.IO.FileOptions options) { return default(System.IO.FileStream); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileInfo : System.IO.FileSystemInfo
     {
@@ -179,7 +176,6 @@ namespace System.IO {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class FileSystemInfo
     {
@@ -205,14 +201,12 @@ namespace System.IO {
         public void Refresh() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SearchOption
     {
         AllDirectories = 1,
         TopDirectoryOnly = 0,
     }
-
   [System.Security.SecurityCriticalAttribute]
   public static partial class FileSystemAclExtensions {
     public static System.Security.AccessControl.DirectorySecurity GetAccessControl(this System.IO.DirectoryInfo directoryInfo) { return default(System.Security.AccessControl.DirectorySecurity); }
@@ -224,7 +218,6 @@ namespace System.IO {
     public static void SetAccessControl(this System.IO.FileInfo fileInfo, System.Security.AccessControl.FileSecurity fileSecurity) { }
     public static void SetAccessControl(this System.IO.FileStream fileStream, System.Security.AccessControl.FileSecurity fileSecurity) { }
   }
-
 } // end of System.IO
 namespace System.Security.AccessControl {
 
@@ -251,20 +244,17 @@ namespace System.Security.AccessControl {
         protected void SetAuditRule(System.Security.AccessControl.ObjectAuditRule rule) { }
     }
 
-
     public sealed partial class DirectorySecurity : System.Security.AccessControl.FileSystemSecurity
     {
         public DirectorySecurity() { }
         public DirectorySecurity(string name, System.Security.AccessControl.AccessControlSections includeSections) { }
     }
 
-
     public sealed partial class FileSecurity : System.Security.AccessControl.FileSystemSecurity
     {
         public FileSecurity() { }
         public FileSecurity(string fileName, System.Security.AccessControl.AccessControlSections includeSections) { }
     }
-
 
     public sealed partial class FileSystemAccessRule : System.Security.AccessControl.AccessRule
     {
@@ -275,7 +265,6 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.FileSystemRights FileSystemRights { get { return default(System.Security.AccessControl.FileSystemRights); } }
     }
 
-
     public sealed partial class FileSystemAuditRule : System.Security.AccessControl.AuditRule
     {
         public FileSystemAuditRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
@@ -284,7 +273,6 @@ namespace System.Security.AccessControl {
         public FileSystemAuditRule(string identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
         public System.Security.AccessControl.FileSystemRights FileSystemRights { get { return default(System.Security.AccessControl.FileSystemRights); } }
     }
-
 
     [System.FlagsAttribute]
     public enum FileSystemRights
@@ -314,7 +302,6 @@ namespace System.Security.AccessControl {
         WriteExtendedAttributes = 16,
     }
 
-
     public abstract partial class FileSystemSecurity : System.Security.AccessControl.NativeObjectSecurity
     {
         internal FileSystemSecurity() : base(default(bool), default(System.Security.AccessControl.ResourceType)) { }
@@ -335,7 +322,6 @@ namespace System.Security.AccessControl {
         public void SetAccessRule(System.Security.AccessControl.FileSystemAccessRule rule) { }
         public void SetAuditRule(System.Security.AccessControl.FileSystemAuditRule rule) { }
     }
-
 } // end of System.Security.AccessControl
 namespace System.Security.Permissions {
 
@@ -357,5 +343,4 @@ namespace System.Security.Permissions {
         public string Write { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
 } // end of System.Security.Permissions

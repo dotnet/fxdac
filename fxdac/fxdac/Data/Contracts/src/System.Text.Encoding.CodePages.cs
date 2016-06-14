@@ -5,5 +5,4 @@ namespace System.Text {
     internal CodePagesEncodingProvider() { }
     public static System.Text.EncodingProvider Instance { get { return default(System.Text.EncodingProvider); } }
   }
-
 } // end of System.Text

@@ -7,23 +7,18 @@ namespace System.IO {
         public InternalBufferOverflowException(string message) { }
         public InternalBufferOverflowException(string message, System.Exception inner) { }
     }
-
   public partial class ErrorEventArgs : System.EventArgs {
     public ErrorEventArgs(System.Exception exception) { }
     public virtual System.Exception GetException() { return default(System.Exception); }
   }
-
   public delegate void ErrorEventHandler(object sender, System.IO.ErrorEventArgs e);
-
   public partial class FileSystemEventArgs : System.EventArgs {
     public FileSystemEventArgs(System.IO.WatcherChangeTypes changeType, string directory, string name) { }
     public System.IO.WatcherChangeTypes ChangeType { get { return default(System.IO.WatcherChangeTypes); } }
     public string FullPath { get { return default(string); } }
     public string Name { get { return default(string); } }
   }
-
   public delegate void FileSystemEventHandler(object sender, System.IO.FileSystemEventArgs e);
-
   public partial class FileSystemWatcher : System.IDisposable {
     public FileSystemWatcher() { }
     public FileSystemWatcher(string path) { }
@@ -49,7 +44,6 @@ namespace System.IO {
     public System.IO.WaitForChangedResult WaitForChanged(System.IO.WatcherChangeTypes changeType) { return default(System.IO.WaitForChangedResult); }
     public System.IO.WaitForChangedResult WaitForChanged(System.IO.WatcherChangeTypes changeType, int timeout) { return default(System.IO.WaitForChangedResult); }
   }
-
   [System.FlagsAttribute]
   public enum NotifyFilters {
     Attributes = 4,
@@ -61,15 +55,12 @@ namespace System.IO {
     Security = 256,
     Size = 8,
   }
-
   public partial class RenamedEventArgs : System.IO.FileSystemEventArgs {
     public RenamedEventArgs(System.IO.WatcherChangeTypes changeType, string directory, string name, string oldName) : base (default(System.IO.WatcherChangeTypes), default(string), default(string)) { }
     public string OldFullPath { get { return default(string); } }
     public string OldName { get { return default(string); } }
   }
-
   public delegate void RenamedEventHandler(object sender, System.IO.RenamedEventArgs e);
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential, Size=1)]
   public partial struct WaitForChangedResult {
     public System.IO.WatcherChangeTypes ChangeType { get { return default(System.IO.WatcherChangeTypes); } set { } }
@@ -77,7 +68,6 @@ namespace System.IO {
     public string OldName { get { return default(string); } set { } }
     public bool TimedOut { get { return default(bool); } set { } }
   }
-
   [System.FlagsAttribute]
   public enum WatcherChangeTypes {
     All = 15,
@@ -86,5 +76,4 @@ namespace System.IO {
     Deleted = 2,
     Renamed = 8,
   }
-
 } // end of System.IO

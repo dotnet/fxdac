@@ -46,7 +46,6 @@ namespace System.Net {
         Warning = 9,
     }
 
-
     public enum HttpResponseHeader
     {
         AcceptRanges = 20,
@@ -80,7 +79,6 @@ namespace System.Net {
         Warning = 9,
         WwwAuthenticate = 29,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WebHeaderCollection :
@@ -122,5 +120,4 @@ namespace System.Net {
         public override string ToString() { return default(string); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 } // end of System.Net

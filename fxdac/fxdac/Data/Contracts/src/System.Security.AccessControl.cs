@@ -8,7 +8,6 @@ namespace System.Security.AccessControl {
         View = 1,
     }
 
-
     public enum AccessControlModification
     {
         Add = 0,
@@ -18,7 +17,6 @@ namespace System.Security.AccessControl {
         Reset = 2,
         Set = 1,
     }
-
 
     [System.FlagsAttribute]
     public enum AccessControlSections
@@ -31,20 +29,17 @@ namespace System.Security.AccessControl {
         Owner = 4,
     }
 
-
     public enum AccessControlType
     {
         Allow = 0,
         Deny = 1,
     }
 
-
     public abstract partial class AccessRule : System.Security.AccessControl.AuthorizationRule
     {
         protected AccessRule(System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags)) { }
         public System.Security.AccessControl.AccessControlType AccessControlType { get { return default(System.Security.AccessControl.AccessControlType); } }
     }
-
 
     public partial class AccessRule<T> : System.Security.AccessControl.AccessRule where T : struct
     {
@@ -55,7 +50,6 @@ namespace System.Security.AccessControl {
         public T Rights { get { return default(T); } }
     }
 
-
     public sealed partial class AceEnumerator : System.Collections.IEnumerator
     {
         internal AceEnumerator() { }
@@ -64,7 +58,6 @@ namespace System.Security.AccessControl {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
 
     [System.FlagsAttribute]
     public enum AceFlags : byte
@@ -81,7 +74,6 @@ namespace System.Security.AccessControl {
         SuccessfulAccess = (byte)64,
     }
 
-
     public enum AceQualifier
     {
         AccessAllowed = 0,
@@ -89,7 +81,6 @@ namespace System.Security.AccessControl {
         SystemAlarm = 3,
         SystemAudit = 2,
     }
-
 
     public enum AceType
     {
@@ -113,7 +104,6 @@ namespace System.Security.AccessControl {
         SystemAuditObject = 7,
     }
 
-
     [System.FlagsAttribute]
     public enum AuditFlags
     {
@@ -122,13 +112,11 @@ namespace System.Security.AccessControl {
         Success = 1,
     }
 
-
     public abstract partial class AuditRule : System.Security.AccessControl.AuthorizationRule
     {
         protected AuditRule(System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags auditFlags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags)) { }
         public System.Security.AccessControl.AuditFlags AuditFlags { get { return default(System.Security.AccessControl.AuditFlags); } }
     }
-
 
     public partial class AuditRule<T> : System.Security.AccessControl.AuditRule where T : struct
     {
@@ -139,7 +127,6 @@ namespace System.Security.AccessControl {
         public T Rights { get { return default(T); } }
     }
 
-
     public abstract partial class AuthorizationRule
     {
         protected internal AuthorizationRule(System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags) { }
@@ -149,7 +136,6 @@ namespace System.Security.AccessControl {
         public bool IsInherited { get { return default(bool); } }
         public System.Security.AccessControl.PropagationFlags PropagationFlags { get { return default(System.Security.AccessControl.PropagationFlags); } }
     }
-
 
     public sealed partial class AuthorizationRuleCollection : System.Collections.ReadOnlyCollectionBase, System.Collections.ICollection
     {
@@ -164,7 +150,6 @@ namespace System.Security.AccessControl {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     public sealed partial class CommonAce : System.Security.AccessControl.QualifiedAce
     {
         public CommonAce(System.Security.AccessControl.AceFlags flags, System.Security.AccessControl.AceQualifier qualifier, int accessMask, System.Security.Principal.SecurityIdentifier sid, bool isCallback, byte[] opaque) { }
@@ -172,7 +157,6 @@ namespace System.Security.AccessControl {
         public override void GetBinaryForm(byte[] binaryForm, int offset) { }
         public static int MaxOpaqueLength(bool isCallback) { return default(int); }
     }
-
 
     public abstract partial class CommonAcl : System.Security.AccessControl.GenericAcl
     {
@@ -188,7 +172,6 @@ namespace System.Security.AccessControl {
         public void Purge(System.Security.Principal.SecurityIdentifier sid) { }
         public void RemoveInheritedAces() { }
     }
-
 
     public abstract partial class CommonObjectSecurity : System.Security.AccessControl.ObjectSecurity
     {
@@ -209,7 +192,6 @@ namespace System.Security.AccessControl {
         protected void SetAccessRule(System.Security.AccessControl.AccessRule rule) { }
         protected void SetAuditRule(System.Security.AccessControl.AuditRule rule) { }
     }
-
 
     public sealed partial class CommonSecurityDescriptor : System.Security.AccessControl.GenericSecurityDescriptor
     {
@@ -234,7 +216,6 @@ namespace System.Security.AccessControl {
         public void AddSystemAcl(byte revision, int trusted) { }
     }
 
-
     public sealed partial class CompoundAce : System.Security.AccessControl.KnownAce
     {
         public CompoundAce(System.Security.AccessControl.AceFlags flags, int accessMask, System.Security.AccessControl.CompoundAceType compoundAceType, System.Security.Principal.SecurityIdentifier sid) { }
@@ -243,12 +224,10 @@ namespace System.Security.AccessControl {
         public override void GetBinaryForm(byte[] binaryForm, int offset) { }
     }
 
-
     public enum CompoundAceType
     {
         Impersonation = 1,
     }
-
 
     [System.FlagsAttribute]
     public enum ControlFlags
@@ -272,7 +251,6 @@ namespace System.Security.AccessControl {
         SystemAclProtected = 8192,
     }
 
-
     public sealed partial class CryptoKeyAccessRule : System.Security.AccessControl.AccessRule
     {
         public CryptoKeyAccessRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, System.Security.AccessControl.AccessControlType type) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AccessControlType)) { }
@@ -280,14 +258,12 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.CryptoKeyRights CryptoKeyRights { get { return default(System.Security.AccessControl.CryptoKeyRights); } }
     }
 
-
     public sealed partial class CryptoKeyAuditRule : System.Security.AccessControl.AuditRule
     {
         public CryptoKeyAuditRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
         public CryptoKeyAuditRule(string identity, System.Security.AccessControl.CryptoKeyRights cryptoKeyRights, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
         public System.Security.AccessControl.CryptoKeyRights CryptoKeyRights { get { return default(System.Security.AccessControl.CryptoKeyRights); } }
     }
-
 
     [System.FlagsAttribute]
     public enum CryptoKeyRights
@@ -309,7 +285,6 @@ namespace System.Security.AccessControl {
         WriteData = 2,
         WriteExtendedAttributes = 16,
     }
-
 
     public sealed partial class CryptoKeySecurity : System.Security.AccessControl.NativeObjectSecurity
     {
@@ -333,7 +308,6 @@ namespace System.Security.AccessControl {
         public void SetAuditRule(System.Security.AccessControl.CryptoKeyAuditRule rule) { }
     }
 
-
     public sealed partial class CustomAce : System.Security.AccessControl.GenericAce
     {
         public static readonly int MaxOpaqueLength;
@@ -344,7 +318,6 @@ namespace System.Security.AccessControl {
         public byte[] GetOpaque() { return default(byte[]); }
         public void SetOpaque(byte[] opaque) { }
     }
-
 
     public sealed partial class DiscretionaryAcl : System.Security.AccessControl.CommonAcl
     {
@@ -365,7 +338,6 @@ namespace System.Security.AccessControl {
         public void SetAccess(System.Security.AccessControl.AccessControlType accessType, System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAccessRule rule) { }
     }
 
-
     public abstract partial class GenericAce
     {
         internal GenericAce() { }
@@ -384,7 +356,6 @@ namespace System.Security.AccessControl {
         public static bool operator ==(System.Security.AccessControl.GenericAce left, System.Security.AccessControl.GenericAce right) { return default(bool); }
         public static bool operator !=(System.Security.AccessControl.GenericAce left, System.Security.AccessControl.GenericAce right) { return default(bool); }
     }
-
 
     public abstract partial class GenericAcl : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -405,7 +376,6 @@ namespace System.Security.AccessControl {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     public abstract partial class GenericSecurityDescriptor
     {
         protected GenericSecurityDescriptor() { }
@@ -419,7 +389,6 @@ namespace System.Security.AccessControl {
         public static bool IsSddlConversionSupported() { return default(bool); }
     }
 
-
     [System.FlagsAttribute]
     public enum InheritanceFlags
     {
@@ -428,14 +397,12 @@ namespace System.Security.AccessControl {
         ObjectInherit = 2,
     }
 
-
     public abstract partial class KnownAce : System.Security.AccessControl.GenericAce
     {
         internal KnownAce() { }
         public int AccessMask { get { return default(int); } set { } }
         public System.Security.Principal.SecurityIdentifier SecurityIdentifier { get { return default(System.Security.Principal.SecurityIdentifier); } set { } }
     }
-
 
     public abstract partial class NativeObjectSecurity : System.Security.AccessControl.CommonObjectSecurity
     {
@@ -452,7 +419,6 @@ namespace System.Security.AccessControl {
         protected internal delegate System.Exception ExceptionFromErrorCode(int errorCode, string name, System.Runtime.InteropServices.SafeHandle handle, object context);
     }
 
-
     public abstract partial class ObjectAccessRule : System.Security.AccessControl.AccessRule
     {
         protected ObjectAccessRule(System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Guid objectType, System.Guid inheritedObjectType, System.Security.AccessControl.AccessControlType type) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AccessControlType)) { }
@@ -460,7 +426,6 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.ObjectAceFlags ObjectFlags { get { return default(System.Security.AccessControl.ObjectAceFlags); } }
         public System.Guid ObjectType { get { return default(System.Guid); } }
     }
-
 
     public sealed partial class ObjectAce : System.Security.AccessControl.QualifiedAce
     {
@@ -473,7 +438,6 @@ namespace System.Security.AccessControl {
         public static int MaxOpaqueLength(bool isCallback) { return default(int); }
     }
 
-
     [System.FlagsAttribute]
     public enum ObjectAceFlags
     {
@@ -482,7 +446,6 @@ namespace System.Security.AccessControl {
         ObjectAceTypePresent = 1,
     }
 
-
     public abstract partial class ObjectAuditRule : System.Security.AccessControl.AuditRule
     {
         protected ObjectAuditRule(System.Security.Principal.IdentityReference identity, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Guid objectType, System.Guid inheritedObjectType, System.Security.AccessControl.AuditFlags auditFlags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
@@ -490,7 +453,6 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.ObjectAceFlags ObjectFlags { get { return default(System.Security.AccessControl.ObjectAceFlags); } }
         public System.Guid ObjectType { get { return default(System.Guid); } }
     }
-
 
     public abstract partial class ObjectSecurity
     {
@@ -541,7 +503,6 @@ namespace System.Security.AccessControl {
         protected ObjectSecurity(System.Security.AccessControl.CommonSecurityDescriptor securityDescriptor) { }
     }
 
-
     public abstract partial class ObjectSecurity<T> : System.Security.AccessControl.NativeObjectSecurity where T : struct
     {
         protected ObjectSecurity(bool isContainer, System.Security.AccessControl.ResourceType resourceType) : base(default(bool), default(System.Security.AccessControl.ResourceType)) { }
@@ -569,7 +530,6 @@ namespace System.Security.AccessControl {
         public virtual void SetAuditRule(System.Security.AccessControl.AuditRule<T> rule) { }
     }
 
-
     public sealed partial class PrivilegeNotHeldException : System.UnauthorizedAccessException, System.Runtime.Serialization.ISerializable
     {
         public PrivilegeNotHeldException() { }
@@ -579,7 +539,6 @@ namespace System.Security.AccessControl {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
-
     [System.FlagsAttribute]
     public enum PropagationFlags
     {
@@ -587,7 +546,6 @@ namespace System.Security.AccessControl {
         None = 0,
         NoPropagateInherit = 1,
     }
-
 
     public abstract partial class QualifiedAce : System.Security.AccessControl.KnownAce
     {
@@ -598,7 +556,6 @@ namespace System.Security.AccessControl {
         public byte[] GetOpaque() { return default(byte[]); }
         public void SetOpaque(byte[] opaque) { }
     }
-
 
     public sealed partial class RawAcl : System.Security.AccessControl.GenericAcl
     {
@@ -613,7 +570,6 @@ namespace System.Security.AccessControl {
         public void RemoveAce(int index) { }
     }
 
-
     public sealed partial class RawSecurityDescriptor : System.Security.AccessControl.GenericSecurityDescriptor
     {
         public RawSecurityDescriptor(byte[] binaryForm, int offset) { }
@@ -627,7 +583,6 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.RawAcl SystemAcl { get { return default(System.Security.AccessControl.RawAcl); } set { } }
         public void SetFlags(System.Security.AccessControl.ControlFlags flags) { }
     }
-
 
     public enum ResourceType
     {
@@ -646,7 +601,6 @@ namespace System.Security.AccessControl {
         WmiGuidObject = 11,
     }
 
-
     [System.FlagsAttribute]
     public enum SecurityInfos
     {
@@ -655,7 +609,6 @@ namespace System.Security.AccessControl {
         Owner = 1,
         SystemAcl = 8,
     }
-
 
     public sealed partial class SystemAcl : System.Security.AccessControl.CommonAcl
     {
@@ -675,5 +628,4 @@ namespace System.Security.AccessControl {
         public void RemoveAuditSpecific(System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAuditRule rule) { }
         public void SetAudit(System.Security.Principal.SecurityIdentifier sid, System.Security.AccessControl.ObjectAuditRule rule) { }
     }
-
 } // end of System.Security.AccessControl

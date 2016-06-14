@@ -10,7 +10,6 @@ namespace System.IO.Compression {
     public static System.IO.Compression.ZipArchive Open(string archiveFileName, System.IO.Compression.ZipArchiveMode mode, System.Text.Encoding entryNameEncoding) { return default(System.IO.Compression.ZipArchive); }
     public static System.IO.Compression.ZipArchive OpenRead(string archiveFileName) { return default(System.IO.Compression.ZipArchive); }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public static partial class ZipFileExtensions {
     public static System.IO.Compression.ZipArchiveEntry CreateEntryFromFile(this System.IO.Compression.ZipArchive destination, string sourceFileName, string entryName) { return default(System.IO.Compression.ZipArchiveEntry); }
@@ -19,5 +18,4 @@ namespace System.IO.Compression {
     public static void ExtractToFile(this System.IO.Compression.ZipArchiveEntry source, string destinationFileName) { }
     public static void ExtractToFile(this System.IO.Compression.ZipArchiveEntry source, string destinationFileName, bool overwrite) { }
   }
-
 } // end of System.IO.Compression

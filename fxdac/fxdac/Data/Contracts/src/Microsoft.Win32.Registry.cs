@@ -7,14 +7,12 @@ namespace Microsoft.Win32 {
         Volatile = 1,
     }
 
-
     public enum RegistryView
     {
         Default = 0,
         Registry32 = 512,
         Registry64 = 256,
     }
-
   public static partial class Registry {
     public static readonly Microsoft.Win32.RegistryKey ClassesRoot;
     public static readonly Microsoft.Win32.RegistryKey CurrentConfig;
@@ -26,7 +24,6 @@ namespace Microsoft.Win32 {
     public static void SetValue(string keyName, string valueName, object value) { }
     public static void SetValue(string keyName, string valueName, object value, Microsoft.Win32.RegistryValueKind valueKind) { }
   }
-
   public enum RegistryHive {
     ClassesRoot = -2147483648,
     CurrentConfig = -2147483643,
@@ -35,7 +32,6 @@ namespace Microsoft.Win32 {
     PerformanceData = -2147483644,
     Users = -2147483645,
   }
-
   public sealed partial class RegistryKey : System.IDisposable {
     internal RegistryKey() { }
     public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeRegistryHandle); } }
@@ -72,7 +68,6 @@ namespace Microsoft.Win32 {
     public void SetValue(string name, object value, Microsoft.Win32.RegistryValueKind valueKind) { }
     public override string ToString() { return default(string); }
   }
-
   public enum RegistryValueKind {
     Binary = 3,
     DWord = 4,
@@ -83,20 +78,17 @@ namespace Microsoft.Win32 {
     String = 1,
     Unknown = 0,
   }
-
   [System.FlagsAttribute]
   public enum RegistryValueOptions {
     DoNotExpandEnvironmentNames = 1,
     None = 0,
   }
-
   [System.Security.SecurityCriticalAttribute]
   public static partial class RegistryAclExtensions {
     public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key) { return default(System.Security.AccessControl.RegistrySecurity); }
     public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.RegistrySecurity); }
     public static void SetAccessControl(this Microsoft.Win32.RegistryKey key, System.Security.AccessControl.RegistrySecurity registrySecurity) { }
   }
-
 } // end of Microsoft.Win32
 namespace Microsoft.Win32.SafeHandles {
 
@@ -109,7 +101,6 @@ namespace Microsoft.Win32.SafeHandles {
         protected override bool ReleaseHandle() { return default(bool); }
         public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
     }
-
 } // end of Microsoft.Win32.SafeHandles
 namespace System.Security.AccessControl {
 
@@ -122,14 +113,12 @@ namespace System.Security.AccessControl {
         public System.Security.AccessControl.RegistryRights RegistryRights { get { return default(System.Security.AccessControl.RegistryRights); } }
     }
 
-
     public sealed partial class RegistryAuditRule : System.Security.AccessControl.AuditRule
     {
         public RegistryAuditRule(System.Security.Principal.IdentityReference identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
         public RegistryAuditRule(string identity, System.Security.AccessControl.RegistryRights registryRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags) : base(default(System.Security.Principal.IdentityReference), default(int), default(bool), default(System.Security.AccessControl.InheritanceFlags), default(System.Security.AccessControl.PropagationFlags), default(System.Security.AccessControl.AuditFlags)) { }
         public System.Security.AccessControl.RegistryRights RegistryRights { get { return default(System.Security.AccessControl.RegistryRights); } }
     }
-
 
     [System.FlagsAttribute]
     public enum RegistryRights
@@ -149,7 +138,6 @@ namespace System.Security.AccessControl {
         TakeOwnership = 524288,
         WriteKey = 131078,
     }
-
 
     public sealed partial class RegistrySecurity : System.Security.AccessControl.NativeObjectSecurity
     {
@@ -171,5 +159,4 @@ namespace System.Security.AccessControl {
         public void SetAccessRule(System.Security.AccessControl.RegistryAccessRule rule) { }
         public void SetAuditRule(System.Security.AccessControl.RegistryAuditRule rule) { }
     }
-
 } // end of System.Security.AccessControl

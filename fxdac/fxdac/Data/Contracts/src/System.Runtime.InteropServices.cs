@@ -7,7 +7,6 @@ namespace System.Runtime.InteropServices {
         public AllowReversePInvokeCallsAttribute() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ArrayWithOffset
@@ -22,7 +21,6 @@ namespace System.Runtime.InteropServices {
         public static bool operator !=(System.Runtime.InteropServices.ArrayWithOffset a, System.Runtime.InteropServices.ArrayWithOffset b) { return default(bool); }
     }
 
-
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AssemblyRegistrationFlags
@@ -31,7 +29,6 @@ namespace System.Runtime.InteropServices {
         SetCodeBase = 1,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1029), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AutomationProxyAttribute : System.Attribute
@@ -39,7 +36,6 @@ namespace System.Runtime.InteropServices {
         public AutomationProxyAttribute(bool val) { }
         public bool Value { get { return default(bool); } }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1037), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -50,7 +46,6 @@ namespace System.Runtime.InteropServices {
         public bool BestFitMapping { get { return default(bool); } }
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct BIND_OPTS
@@ -60,7 +55,6 @@ namespace System.Runtime.InteropServices {
         public int grfFlags;
         public int grfMode;
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Explicit)]
@@ -74,7 +68,6 @@ namespace System.Runtime.InteropServices {
         public System.IntPtr lpvardesc;
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BStrWrapper
     {
@@ -82,7 +75,6 @@ namespace System.Runtime.InteropServices {
         public BStrWrapper(string value) { }
         public string WrappedObject { get { return default(string); } }
     }
-
 
     [System.ObsoleteAttribute]
     public enum CALLCONV
@@ -99,7 +91,6 @@ namespace System.Runtime.InteropServices {
         CC_SYSCALL = 6,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CallingConvention
     {
@@ -110,7 +101,6 @@ namespace System.Runtime.InteropServices {
         Winapi = 1,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CoClassAttribute : System.Attribute
@@ -119,7 +109,6 @@ namespace System.Runtime.InteropServices {
         public System.Type CoClass { get { return default(System.Type); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(10624), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComAliasNameAttribute : System.Attribute
@@ -127,7 +116,6 @@ namespace System.Runtime.InteropServices {
         public ComAliasNameAttribute(string alias) { }
         public string Value { get { return default(string); } }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -140,14 +128,12 @@ namespace System.Runtime.InteropServices {
         public int RevisionNumber { get { return default(int); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComConversionLossAttribute : System.Attribute
     {
         public ComConversionLossAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -157,7 +143,6 @@ namespace System.Runtime.InteropServices {
         public System.Type EventProvider { get { return default(System.Type); } }
         public System.Type SourceInterface { get { return default(System.Type); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class COMException : System.Runtime.InteropServices.ExternalException
@@ -170,7 +155,6 @@ namespace System.Runtime.InteropServices {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ComMemberType
     {
@@ -179,14 +163,12 @@ namespace System.Runtime.InteropServices {
         PropSet = 2,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComRegisterFunctionAttribute : System.Attribute
     {
         public ComRegisterFunctionAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = true)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -200,14 +182,12 @@ namespace System.Runtime.InteropServices {
         public string Value { get { return default(string); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComUnregisterFunctionAttribute : System.Attribute
     {
         public ComUnregisterFunctionAttribute() { }
     }
-
 
     [System.ObsoleteAttribute("Use System.Runtime.InteropServices.ComTypes.CONNECTDATA instead. http://go.microsoft.com/fwlink/?linkid=14202", false)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -217,7 +197,6 @@ namespace System.Runtime.InteropServices {
         public object pUnk;
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CurrencyWrapper
     {
@@ -225,7 +204,6 @@ namespace System.Runtime.InteropServices {
         public CurrencyWrapper(object obj) { }
         public decimal WrappedObject { get { return default(decimal); } }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -235,7 +213,6 @@ namespace System.Runtime.InteropServices {
         public System.Runtime.InteropServices.CharSet CharSet { get { return default(System.Runtime.InteropServices.CharSet); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(65), AllowMultiple = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class DefaultDllImportSearchPathsAttribute : System.Attribute
@@ -243,7 +220,6 @@ namespace System.Runtime.InteropServices {
         public DefaultDllImportSearchPathsAttribute(System.Runtime.InteropServices.DllImportSearchPath paths) { }
         public System.Runtime.InteropServices.DllImportSearchPath Paths { get { return default(System.Runtime.InteropServices.DllImportSearchPath); } }
     }
-
 
     [System.ObsoleteAttribute]
     public enum DESCKIND
@@ -256,7 +232,6 @@ namespace System.Runtime.InteropServices {
         DESCKIND_VARDESC = 2,
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct DISPPARAMS
@@ -266,7 +241,6 @@ namespace System.Runtime.InteropServices {
         public System.IntPtr rgdispidNamedArgs;
         public System.IntPtr rgvarg;
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -284,7 +258,6 @@ namespace System.Runtime.InteropServices {
         public string Value { get { return default(string); } }
     }
 
-
     [System.FlagsAttribute]
     public enum DllImportSearchPath
     {
@@ -296,7 +269,6 @@ namespace System.Runtime.InteropServices {
         UseDllDirectoryForDependencies = 256,
         UserDirectories = 1024,
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -315,7 +287,6 @@ namespace System.Runtime.InteropServices {
         }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ExporterEventKind
     {
@@ -324,14 +295,12 @@ namespace System.Runtime.InteropServices {
         NOTIF_TYPECONVERTED = 0,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ExtensibleClassFactory
     {
         internal ExtensibleClassFactory() { }
         public static void RegisterObjectCreationCallback(System.Runtime.InteropServices.ObjectCreationDelegate callback) { }
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -340,7 +309,6 @@ namespace System.Runtime.InteropServices {
         public int dwHighDateTime;
         public int dwLowDateTime;
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -359,7 +327,6 @@ namespace System.Runtime.InteropServices {
         public short oVft;
         public short wFuncFlags;
     }
-
 
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
@@ -380,7 +347,6 @@ namespace System.Runtime.InteropServices {
         FUNCFLAG_FUSESGETLASTERROR = 128,
     }
 
-
     [System.ObsoleteAttribute]
     public enum FUNCKIND
     {
@@ -390,7 +356,6 @@ namespace System.Runtime.InteropServices {
         FUNC_STATIC = 3,
         FUNC_VIRTUAL = 0,
     }
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct GCHandle
@@ -411,7 +376,6 @@ namespace System.Runtime.InteropServices {
         public static System.IntPtr ToIntPtr(System.Runtime.InteropServices.GCHandle value) { return default(System.IntPtr); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum GCHandleType
     {
@@ -420,7 +384,6 @@ namespace System.Runtime.InteropServices {
         Weak = 0,
         WeakTrackResurrection = 1,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -433,13 +396,11 @@ namespace System.Runtime.InteropServices {
         public static System.IntPtr ToIntPtr(System.Runtime.InteropServices.HandleRef value) { return default(System.IntPtr); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomAdapter
     {
         object GetUnderlyingObject();
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomMarshaler
@@ -451,7 +412,6 @@ namespace System.Runtime.InteropServices {
         object MarshalNativeToManaged(System.IntPtr pNativeData);
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(5), Inherited = false)]
     [System.ObsoleteAttribute("This attribute is deprecated and will be removed in a future version.", false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -462,7 +422,6 @@ namespace System.Runtime.InteropServices {
         public System.Runtime.InteropServices.IDispatchImplType Value { get { return default(System.Runtime.InteropServices.IDispatchImplType); } }
     }
 
-
     [System.ObsoleteAttribute("The IDispatchImplAttribute is deprecated.", false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum IDispatchImplType
@@ -472,7 +431,6 @@ namespace System.Runtime.InteropServices {
         SystemDefinedImpl = 0,
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct IDLDESC
@@ -480,7 +438,6 @@ namespace System.Runtime.InteropServices {
         public int dwReserved;
         public System.Runtime.InteropServices.IDLFLAG wIDLFlags;
     }
-
 
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
@@ -493,7 +450,6 @@ namespace System.Runtime.InteropServices {
         IDLFLAG_NONE = 0,
     }
 
-
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
     public enum IMPLTYPEFLAGS
@@ -504,7 +460,6 @@ namespace System.Runtime.InteropServices {
         IMPLTYPEFLAG_FSOURCE = 2,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ImportedFromTypeLibAttribute : System.Attribute
@@ -512,7 +467,6 @@ namespace System.Runtime.InteropServices {
         public ImportedFromTypeLibAttribute(string tlbFile) { }
         public string Value { get { return default(string); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ImporterEventKind
@@ -522,14 +476,12 @@ namespace System.Runtime.InteropServices {
         NOTIF_TYPECONVERTED = 0,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class InAttribute : System.Attribute
     {
         public InAttribute() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidComObjectException : System.SystemException
@@ -540,7 +492,6 @@ namespace System.Runtime.InteropServices {
         public InvalidComObjectException(string message, System.Exception inner) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidOleVariantTypeException : System.SystemException
     {
@@ -550,7 +501,6 @@ namespace System.Runtime.InteropServices {
         public InvalidOleVariantTypeException(string message, System.Exception inner) { }
     }
 
-
     [System.ObsoleteAttribute]
     public enum INVOKEKIND
     {
@@ -559,7 +509,6 @@ namespace System.Runtime.InteropServices {
         INVOKE_PROPERTYPUT = 4,
         INVOKE_PROPERTYPUTREF = 8,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("CCBD682C-73A5-4568-B8B0-C7007E11ABA2")]
@@ -575,7 +524,6 @@ namespace System.Runtime.InteropServices {
         bool UnregisterAssembly(System.Reflection.Assembly assembly);
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LCIDConversionAttribute : System.Attribute
@@ -583,7 +531,6 @@ namespace System.Runtime.InteropServices {
         public LCIDConversionAttribute(int lcid) { }
         public int Value { get { return default(int); } }
     }
-
 
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
@@ -594,7 +541,6 @@ namespace System.Runtime.InteropServices {
         LIBFLAG_FHIDDEN = 4,
         LIBFLAG_FRESTRICTED = 1,
     }
-
 
     public static partial class Marshal
     {
@@ -802,7 +748,6 @@ namespace System.Runtime.InteropServices {
         public static int ReleaseComObject(object o) { return default(int); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(10496), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class MarshalAsAttribute : System.Attribute
@@ -823,7 +768,6 @@ namespace System.Runtime.InteropServices {
         public System.Runtime.InteropServices.UnmanagedType Value { get { return default(System.Runtime.InteropServices.UnmanagedType); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MarshalDirectiveException : System.SystemException
     {
@@ -833,10 +777,8 @@ namespace System.Runtime.InteropServices {
         public MarshalDirectiveException(string message, System.Exception inner) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate System.IntPtr ObjectCreationDelegate(System.IntPtr aggregator);
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -845,7 +787,6 @@ namespace System.Runtime.InteropServices {
         public OptionalAttribute() { }
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct PARAMDESC
@@ -853,7 +794,6 @@ namespace System.Runtime.InteropServices {
         public System.IntPtr lpVarValue;
         public System.Runtime.InteropServices.PARAMFLAG wParamFlags;
     }
-
 
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
@@ -869,14 +809,12 @@ namespace System.Runtime.InteropServices {
         PARAMFLAG_NONE = 0,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PreserveSigAttribute : System.Attribute
     {
         public PreserveSigAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false, AllowMultiple = true)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -887,7 +825,6 @@ namespace System.Runtime.InteropServices {
         public int MinorVersion { get { return default(int); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ProgIdAttribute : System.Attribute
@@ -895,7 +832,6 @@ namespace System.Runtime.InteropServices {
         public ProgIdAttribute(string progId) { }
         public string Value { get { return default(string); } }
     }
-
 
     [System.FlagsAttribute]
     public enum RegistrationClassContext
@@ -920,7 +856,6 @@ namespace System.Runtime.InteropServices {
         Reserved5 = 2048,
     }
 
-
     [System.FlagsAttribute]
     public enum RegistrationConnectionType
     {
@@ -930,7 +865,6 @@ namespace System.Runtime.InteropServices {
         Surrogate = 8,
         Suspended = 4,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RuntimeEnvironment
@@ -943,7 +877,6 @@ namespace System.Runtime.InteropServices {
         public static string GetSystemVersion() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SafeArrayRankMismatchException : System.SystemException
     {
@@ -953,7 +886,6 @@ namespace System.Runtime.InteropServices {
         public SafeArrayRankMismatchException(string message, System.Exception inner) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SafeArrayTypeMismatchException : System.SystemException
     {
@@ -962,7 +894,6 @@ namespace System.Runtime.InteropServices {
         public SafeArrayTypeMismatchException(string message) { }
         public SafeArrayTypeMismatchException(string message, System.Exception inner) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SEHException : System.Runtime.InteropServices.ExternalException
@@ -974,7 +905,6 @@ namespace System.Runtime.InteropServices {
         public virtual bool CanResume() { return default(bool); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
     [System.ObsoleteAttribute("This attribute has been deprecated.  Application Domains no longer respect Activation Context boundaries in IDispatch calls.", false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -982,7 +912,6 @@ namespace System.Runtime.InteropServices {
     {
         public SetWin32ContextInIDispatchAttribute() { }
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -1001,7 +930,6 @@ namespace System.Runtime.InteropServices {
         public int type;
     }
 
-
     [System.ObsoleteAttribute]
     public enum SYSKIND
     {
@@ -1009,7 +937,6 @@ namespace System.Runtime.InteropServices {
         SYS_WIN16 = 0,
         SYS_WIN32 = 1,
     }
-
 
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -1036,7 +963,6 @@ namespace System.Runtime.InteropServices {
         public System.Runtime.InteropServices.TYPEFLAGS wTypeFlags;
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TYPEDESC
@@ -1044,7 +970,6 @@ namespace System.Runtime.InteropServices {
         public System.IntPtr lpValue;
         public short vt;
     }
-
 
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
@@ -1067,7 +992,6 @@ namespace System.Runtime.InteropServices {
         TYPEFLAG_FREVERSEBIND = 8192,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(5144), AllowMultiple = false, Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class TypeIdentifierAttribute : System.Attribute
@@ -1077,7 +1001,6 @@ namespace System.Runtime.InteropServices {
         public string Identifier { get { return default(string); } }
         public string Scope { get { return default(string); } }
     }
-
 
     [System.ObsoleteAttribute]
     public enum TYPEKIND
@@ -1093,7 +1016,6 @@ namespace System.Runtime.InteropServices {
         TKIND_UNION = 7,
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TYPELIBATTR
@@ -1106,7 +1028,6 @@ namespace System.Runtime.InteropServices {
         public short wMinorVerNum;
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TypeLibImportClassAttribute : System.Attribute
@@ -1114,7 +1035,6 @@ namespace System.Runtime.InteropServices {
         public TypeLibImportClassAttribute(System.Type importClass) { }
         public string Value { get { return default(string); } }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1125,14 +1045,12 @@ namespace System.Runtime.InteropServices {
         public int MinorVersion { get { return default(int); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UnknownWrapper
     {
         public UnknownWrapper(object obj) { }
         public object WrappedObject { get { return default(object); } }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4096), AllowMultiple = false, Inherited = false)]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -1145,7 +1063,6 @@ namespace System.Runtime.InteropServices {
         public UnmanagedFunctionPointerAttribute(System.Runtime.InteropServices.CallingConvention callingConvention) { }
         public System.Runtime.InteropServices.CallingConvention CallingConvention { get { return default(System.Runtime.InteropServices.CallingConvention); } }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UnmanagedType
@@ -1187,7 +1104,6 @@ namespace System.Runtime.InteropServices {
         VBByRefStr = 34,
     }
 
-
     [System.ObsoleteAttribute]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct VARDESC
@@ -1207,7 +1123,6 @@ namespace System.Runtime.InteropServices {
             public int oInst;
         }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum VarEnum
@@ -1257,7 +1172,6 @@ namespace System.Runtime.InteropServices {
         VT_VOID = 24,
     }
 
-
     [System.FlagsAttribute]
     [System.ObsoleteAttribute]
     public enum VARFLAGS
@@ -1277,20 +1191,17 @@ namespace System.Runtime.InteropServices {
         VARFLAG_FUIDEFAULT = 512,
     }
 
-
     public sealed partial class VariantWrapper
     {
         public VariantWrapper(object obj) { }
         public object WrappedObject { get { return default(object); } }
     }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048))]
     public sealed partial class DefaultParameterValueAttribute : System.Attribute
     {
         public DefaultParameterValueAttribute(object value) { }
         public object Value { get { return default(object); } }
     }
-
 
     public sealed partial class HandleCollector
     {
@@ -1303,7 +1214,6 @@ namespace System.Runtime.InteropServices {
         public void Add() { }
         public void Remove() { }
     }
-
 
     // this type was manually added as we don't have a compatible (with Xamarin) implementation in CoreFx
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
@@ -1352,7 +1262,6 @@ namespace System.Runtime.InteropServices {
             throw new NotImplementedException();
         }
     }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ComEventsHelper may be unavailable in future releases.")]
   public static partial class ComEventsHelper {
@@ -1361,19 +1270,16 @@ namespace System.Runtime.InteropServices {
     [System.Security.SecurityCriticalAttribute]
     public static System.Delegate Remove(object rcw, System.Guid iid, int dispid, System.Delegate d) { return default(System.Delegate); }
   }
-
   [System.AttributeUsageAttribute((System.AttributeTargets)(1028), Inherited=false)]
   public sealed partial class ComImportAttribute : System.Attribute {
     public ComImportAttribute() { }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("CustomQueryInterfaceMode and support for ICustomQueryInterface may be unavailable in future releases.")]
   public enum CustomQueryInterfaceMode {
     Allow = 1,
     Ignore = 0,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("CustomQueryInterfaceResult and support for ICustomQueryInterface may be unavailable in future releases.")]
   public enum CustomQueryInterfaceResult {
@@ -1381,14 +1287,12 @@ namespace System.Runtime.InteropServices {
     Handled = 0,
     NotHandled = 1,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("DispatchWrapper and support for marshalling to the VARIANT type may be unavailable in future releases.")]
   public sealed partial class DispatchWrapper {
     public DispatchWrapper(object obj) { }
     public object WrappedObject { get { return default(object); } }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ErrorWrapper and support for marshalling to the VARIANT type may be unavailable in future releases.")]
   public sealed partial class ErrorWrapper {
@@ -1397,14 +1301,12 @@ namespace System.Runtime.InteropServices {
     public ErrorWrapper(object errorCode) { }
     public int ErrorCode { get { return default(int); } }
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ICustomQueryInterface may be unavailable in future releases.")]
   public partial interface ICustomQueryInterface {
     [System.Security.SecurityCriticalAttribute]
     System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface(ref System.Guid iid, out System.IntPtr ppv);
   }
-
 } // end of System.Runtime.InteropServices
 namespace System.Runtime.InteropServices.ComTypes {
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -1416,7 +1318,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         public int grfMode;
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Explicit)]
     public partial struct BINDPTR
     {
@@ -1427,7 +1328,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         [System.Runtime.InteropServices.FieldOffsetAttribute(0)]
         public System.IntPtr lpvardesc;
     }
-
 
     public enum CALLCONV
     {
@@ -1443,14 +1343,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         CC_SYSCALL = 6,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct CONNECTDATA
     {
         public int dwCookie;
         public object pUnk;
     }
-
 
     public enum DESCKIND
     {
@@ -1462,7 +1360,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         DESCKIND_VARDESC = 2,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct DISPPARAMS
     {
@@ -1471,7 +1368,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         public System.IntPtr rgdispidNamedArgs;
         public System.IntPtr rgvarg;
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ELEMDESC
@@ -1488,7 +1384,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         }
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct EXCEPINFO
     {
@@ -1503,14 +1398,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         public short wReserved;
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct FILETIME
     {
         public int dwHighDateTime;
         public int dwLowDateTime;
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct FUNCDESC
@@ -1528,7 +1421,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         public short oVft;
         public short wFuncFlags;
     }
-
 
     [System.FlagsAttribute]
     public enum FUNCFLAGS : short
@@ -1548,7 +1440,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         FUNCFLAG_FUSESGETLASTERROR = (short)128,
     }
 
-
     public enum FUNCKIND
     {
         FUNC_DISPATCH = 4,
@@ -1557,7 +1448,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         FUNC_STATIC = 3,
         FUNC_VIRTUAL = 0,
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("0000000e-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1575,7 +1465,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void SetBindOptions(ref System.Runtime.InteropServices.ComTypes.BIND_OPTS pbindopts);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("B196B286-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IConnectionPoint
@@ -1587,7 +1476,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Unadvise(int dwCookie);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("B196B284-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IConnectionPointContainer
@@ -1596,14 +1484,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         void FindConnectionPoint(ref System.Guid riid, out System.Runtime.InteropServices.ComTypes.IConnectionPoint ppCP);
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct IDLDESC
     {
         public System.IntPtr dwReserved;
         public System.Runtime.InteropServices.ComTypes.IDLFLAG wIDLFlags;
     }
-
 
     [System.FlagsAttribute]
     public enum IDLFLAG : short
@@ -1615,7 +1501,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         IDLFLAG_NONE = (short)0,
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("B196B285-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumConnectionPoints
@@ -1625,7 +1510,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("B196B287-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1637,7 +1521,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Skip(int celt);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00000102-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumMoniker
@@ -1647,7 +1530,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("00000101-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1659,7 +1541,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Skip(int celt);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00020404-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumVARIANT
@@ -1669,7 +1550,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Reset();
         int Skip(int celt);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("0000000f-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1697,7 +1577,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Save(System.Runtime.InteropServices.ComTypes.IStream pStm, bool fClearDirty);
     }
 
-
     [System.FlagsAttribute]
     public enum IMPLTYPEFLAGS
     {
@@ -1707,7 +1586,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         IMPLTYPEFLAG_FSOURCE = 2,
     }
 
-
     [System.FlagsAttribute]
     public enum INVOKEKIND
     {
@@ -1716,7 +1594,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         INVOKE_PROPERTYPUT = 4,
         INVOKE_PROPERTYPUTREF = 8,
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("0000010b-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1730,7 +1607,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void SaveCompleted(string pszFileName);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00000010-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IRunningObjectTable
@@ -1743,7 +1619,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Register(int grfFlags, object punkObject, System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);
         void Revoke(int dwRegister);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("0000000c-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1762,7 +1637,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Write(byte[] pv, int cb, System.IntPtr pcbWritten);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00020403-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeComp
@@ -1770,7 +1644,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Bind(string szName, int lHashVal, short wFlags, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.DESCKIND pDescKind, out System.Runtime.InteropServices.ComTypes.BINDPTR pBindPtr);
         void BindType(string szName, int lHashVal, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("00020401-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1796,7 +1669,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void ReleaseTypeAttr(System.IntPtr pTypeAttr);
         void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("00020412-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1839,7 +1711,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         new void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00020402-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeLib
@@ -1855,7 +1726,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         bool IsName(string szNameBuf, int lHashVal);
         void ReleaseTLibAttr(System.IntPtr pTLibAttr);
     }
-
 
     [System.Runtime.InteropServices.GuidAttribute("00020411-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
@@ -1878,7 +1748,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         new void ReleaseTLibAttr(System.IntPtr pTLibAttr);
     }
 
-
     [System.FlagsAttribute]
     public enum LIBFLAGS : short
     {
@@ -1888,14 +1757,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         LIBFLAG_FRESTRICTED = (short)1,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct PARAMDESC
     {
         public System.IntPtr lpVarValue;
         public System.Runtime.InteropServices.ComTypes.PARAMFLAG wParamFlags;
     }
-
 
     [System.FlagsAttribute]
     public enum PARAMFLAG : short
@@ -1909,7 +1776,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         PARAMFLAG_FRETVAL = (short)8,
         PARAMFLAG_NONE = (short)0,
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct STATSTG
@@ -1927,7 +1793,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         public int type;
     }
 
-
     public enum SYSKIND
     {
         SYS_MAC = 2,
@@ -1935,7 +1800,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         SYS_WIN32 = 1,
         SYS_WIN64 = 3,
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TYPEATTR
@@ -1961,14 +1825,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         public System.Runtime.InteropServices.ComTypes.TYPEFLAGS wTypeFlags;
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TYPEDESC
     {
         public System.IntPtr lpValue;
         public short vt;
     }
-
 
     [System.FlagsAttribute]
     public enum TYPEFLAGS : short
@@ -1990,7 +1852,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         TYPEFLAG_FREVERSEBIND = (short)8192,
     }
 
-
     public enum TYPEKIND
     {
         TKIND_ALIAS = 6,
@@ -2004,7 +1865,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         TKIND_UNION = 7,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TYPELIBATTR
     {
@@ -2015,7 +1875,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         public short wMajorVerNum;
         public short wMinorVerNum;
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct VARDESC
@@ -2036,7 +1895,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         }
     }
 
-
     [System.FlagsAttribute]
     public enum VARFLAGS : short
     {
@@ -2055,7 +1913,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         VARFLAG_FUIDEFAULT = (short)512,
     }
 
-
     public enum VARKIND
     {
         VAR_CONST = 2,
@@ -2063,7 +1920,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         VAR_PERINSTANCE = 0,
         VAR_STATIC = 1,
     }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.FlagsAttribute]
   public enum ADVF {
@@ -2075,13 +1931,11 @@ namespace System.Runtime.InteropServices.ComTypes {
     ADVFCACHE_NOHANDLER = 8,
     ADVFCACHE_ONSAVE = 32,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public enum DATADIR {
     DATADIR_GET = 1,
     DATADIR_SET = 2,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.FlagsAttribute]
   public enum DVASPECT {
@@ -2090,7 +1944,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     DVASPECT_ICON = 4,
     DVASPECT_THUMBNAIL = 2,
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct FORMATETC {
@@ -2100,7 +1953,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     public System.IntPtr ptd;
     public System.Runtime.InteropServices.ComTypes.TYMED tymed;
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
   public partial interface IAdviseSink {
@@ -2110,7 +1962,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     void OnSave();
     void OnViewChange(int aspect, int index);
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
   public partial interface IEnumFORMATETC {
@@ -2119,7 +1970,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     int Reset();
     int Skip(int celt);
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct STATDATA {
@@ -2128,7 +1978,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     public int connection;
     public System.Runtime.InteropServices.ComTypes.FORMATETC formatetc;
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct STGMEDIUM {
@@ -2136,7 +1985,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     public System.Runtime.InteropServices.ComTypes.TYMED tymed;
     public System.IntPtr unionmember;
   }
-
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.FlagsAttribute]
   public enum TYMED {
@@ -2149,7 +1997,6 @@ namespace System.Runtime.InteropServices.ComTypes {
     TYMED_MFPICT = 32,
     TYMED_NULL = 0,
   }
-
 } // end of System.Runtime.InteropServices.ComTypes
 namespace System.Runtime.InteropServices.Expando {
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -2161,7 +2008,6 @@ namespace System.Runtime.InteropServices.Expando {
         System.Reflection.PropertyInfo AddProperty(string name);
         void RemoveMember(System.Reflection.MemberInfo m);
     }
-
 } // end of System.Runtime.InteropServices.Expando
 namespace System.Runtime.InteropServices.WindowsRuntime {
     [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple = false, Inherited = false)]
@@ -2171,7 +2017,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public System.Type DefaultInterface { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Type); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class DesignerNamespaceResolveEventArgs : System.EventArgs
     {
@@ -2179,7 +2024,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public string NamespaceName { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } }
         public System.Collections.ObjectModel.Collection<string> ResolvedAssemblyFiles { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Collections.ObjectModel.Collection<string>); } }
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct EventRegistrationToken
@@ -2189,7 +2033,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public static bool operator ==(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right) { return default(bool); }
         public static bool operator !=(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken left, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken right) { return default(bool); }
     }
-
     public sealed partial class EventRegistrationTokenTable<T> where T : class
     {
         public EventRegistrationTokenTable() { }
@@ -2200,13 +2043,11 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public void RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token) { }
     }
 
-
     [System.Runtime.InteropServices.GuidAttribute("00000035-0000-0000-C000-000000000046")]
     public partial interface IActivationFactory
     {
         object ActivateInstance();
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1028), AllowMultiple = true, Inherited = false)]
     public sealed partial class InterfaceImplementedInVersionAttribute : System.Attribute
@@ -2219,7 +2060,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public byte RevisionVersion { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(byte); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class NamespaceResolveEventArgs : System.EventArgs
     {
@@ -2229,13 +2069,11 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public System.Collections.ObjectModel.Collection<System.Reflection.Assembly> ResolvedAssemblies { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Collections.ObjectModel.Collection<System.Reflection.Assembly>); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false, AllowMultiple = false)]
     public sealed partial class ReadOnlyArrayAttribute : System.Attribute
     {
         public ReadOnlyArrayAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(12288), AllowMultiple = false, Inherited = false)]
     public sealed partial class ReturnValueNameAttribute : System.Attribute
@@ -2243,7 +2081,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public ReturnValueNameAttribute(string name) { }
         public string Name { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } }
     }
-
     public static partial class WindowsRuntimeMarshal
     {
         public static void AddEventHandler<T>(System.Func<T, System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken> addMethod, System.Action<System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken> removeMethod, T handler) { }
@@ -2254,7 +2091,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public static void RemoveEventHandler<T>(System.Action<System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken> removeMethod, T handler) { }
         public static System.IntPtr StringToHString(string s) { return default(System.IntPtr); }
     }
-
     public static partial class WindowsRuntimeMetadata
     {
         public static event System.EventHandler<System.Runtime.InteropServices.WindowsRuntime.DesignerNamespaceResolveEventArgs> DesignerNamespaceResolve { add { } remove { } }
@@ -2263,13 +2099,11 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public static System.Collections.Generic.IEnumerable<string> ResolveNamespace(string namespaceName, string windowsSdkFilePath, System.Collections.Generic.IEnumerable<string> packageGraphFilePaths) { return default(System.Collections.Generic.IEnumerable<string>); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false, AllowMultiple = false)]
     public sealed partial class WriteOnlyArrayAttribute : System.Attribute
     {
         public WriteOnlyArrayAttribute() { }
     }
-
 } // end of System.Runtime.InteropServices.WindowsRuntime
 namespace System.Security {
 
@@ -2279,5 +2113,4 @@ namespace System.Security {
     {
         public SuppressUnmanagedCodeSecurityAttribute() { }
     }
-
 } // end of System.Security

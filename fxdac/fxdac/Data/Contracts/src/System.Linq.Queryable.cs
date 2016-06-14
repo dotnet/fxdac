@@ -6,18 +6,15 @@ namespace System.Linq {
         protected EnumerableExecutor() { }
     }
 
-
     public partial class EnumerableExecutor<T> : System.Linq.EnumerableExecutor
     {
         public EnumerableExecutor(System.Linq.Expressions.Expression expression) { }
     }
 
-
     public abstract partial class EnumerableQuery
     {
         protected EnumerableQuery() { }
     }
-
 
     public partial class EnumerableQuery<T> : System.Linq.EnumerableQuery, System.Collections.Generic.IEnumerable<T>, System.Collections.IEnumerable, System.Linq.IOrderedQueryable, System.Linq.IOrderedQueryable<T>, System.Linq.IQueryable, System.Linq.IQueryable<T>, System.Linq.IQueryProvider
     {
@@ -34,7 +31,6 @@ namespace System.Linq {
         S System.Linq.IQueryProvider.Execute<S>(System.Linq.Expressions.Expression expression) { return default(S); }
         public override string ToString() { return default(string); }
     }
-
 
     public static partial class Queryable
     {
@@ -162,5 +158,4 @@ namespace System.Linq {
         public static System.Linq.IQueryable<TSource> Where<TSource>(this System.Linq.IQueryable<TSource> source, System.Linq.Expressions.Expression<System.Func<TSource, int, bool>> predicate) { return default(System.Linq.IQueryable<TSource>); }
         public static System.Linq.IQueryable<TResult> Zip<TFirst, TSecond, TResult>(this System.Linq.IQueryable<TFirst> source1, System.Collections.Generic.IEnumerable<TSecond> source2, System.Linq.Expressions.Expression<System.Func<TFirst, TSecond, TResult>> resultSelector) { return default(System.Linq.IQueryable<TResult>); }
     }
-
 } // end of System.Linq

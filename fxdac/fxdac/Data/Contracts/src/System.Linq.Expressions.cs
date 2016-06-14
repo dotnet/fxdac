@@ -10,7 +10,6 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackBinaryOperation(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject arg, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("{DebugView}")]
     public abstract partial class BindingRestrictions
     {
@@ -24,7 +23,6 @@ namespace System.Dynamic {
         public System.Linq.Expressions.Expression ToExpression() { return default(System.Linq.Expressions.Expression); }
     }
 
-
     public sealed partial class CallInfo
     {
         public CallInfo(int argCount, System.Collections.Generic.IEnumerable<string> argNames) { }
@@ -34,7 +32,6 @@ namespace System.Dynamic {
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
 
     public abstract partial class ConvertBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -47,7 +44,6 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackConvert(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     public abstract partial class CreateInstanceBinder : System.Dynamic.DynamicMetaObjectBinder
     {
         protected CreateInstanceBinder(System.Dynamic.CallInfo callInfo) { }
@@ -57,7 +53,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackCreateInstance(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackCreateInstance(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 
     public abstract partial class DeleteIndexBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -69,7 +64,6 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackDeleteIndex(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     public abstract partial class DeleteMemberBinder : System.Dynamic.DynamicMetaObjectBinder
     {
         protected DeleteMemberBinder(string name, bool ignoreCase) { }
@@ -80,7 +74,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackDeleteMember(System.Dynamic.DynamicMetaObject target) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackDeleteMember(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 
     public partial class DynamicMetaObject
     {
@@ -109,7 +102,6 @@ namespace System.Dynamic {
         public virtual System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames() { return default(System.Collections.Generic.IEnumerable<string>); }
     }
 
-
     public abstract partial class DynamicMetaObjectBinder : System.Runtime.CompilerServices.CallSiteBinder
     {
         protected DynamicMetaObjectBinder() { }
@@ -120,7 +112,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject Defer(params System.Dynamic.DynamicMetaObject[] args) { return default(System.Dynamic.DynamicMetaObject); }
         public System.Linq.Expressions.Expression GetUpdateExpression(System.Type type) { return default(System.Linq.Expressions.Expression); }
     }
-
 
     public partial class DynamicObject : System.Dynamic.IDynamicMetaObjectProvider
     {
@@ -140,7 +131,6 @@ namespace System.Dynamic {
         public virtual bool TrySetMember(System.Dynamic.SetMemberBinder binder, object value) { return default(bool); }
         public virtual bool TryUnaryOperation(System.Dynamic.UnaryOperationBinder binder, out object result) { result = default(object); return default(bool); }
     }
-
 
     public sealed partial class ExpandoObject : System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<string, object>>, System.Collections.Generic.IDictionary<string, object>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, object>>, System.Collections.IEnumerable, System.ComponentModel.INotifyPropertyChanged, System.Dynamic.IDynamicMetaObjectProvider
     {
@@ -165,7 +155,6 @@ namespace System.Dynamic {
         System.Dynamic.DynamicMetaObject System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression parameter) { return default(System.Dynamic.DynamicMetaObject); }
     }
 
-
     public abstract partial class GetIndexBinder : System.Dynamic.DynamicMetaObjectBinder
     {
         protected GetIndexBinder(System.Dynamic.CallInfo callInfo) { }
@@ -175,7 +164,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackGetIndex(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackGetIndex(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 
     public abstract partial class GetMemberBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -188,18 +176,15 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackGetMember(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     public partial interface IDynamicMetaObjectProvider
     {
         System.Dynamic.DynamicMetaObject GetMetaObject(System.Linq.Expressions.Expression parameter);
     }
 
-
     public partial interface IInvokeOnGetBinder
     {
         bool InvokeOnGet { get; }
     }
-
 
     public abstract partial class InvokeBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -210,7 +195,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackInvoke(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackInvoke(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 
     public abstract partial class InvokeMemberBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -225,7 +209,6 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackInvokeMember(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     public abstract partial class SetIndexBinder : System.Dynamic.DynamicMetaObjectBinder
     {
         protected SetIndexBinder(System.Dynamic.CallInfo callInfo) { }
@@ -235,7 +218,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackSetIndex(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject value) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackSetIndex(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject value, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 
     public abstract partial class SetMemberBinder : System.Dynamic.DynamicMetaObjectBinder
     {
@@ -248,7 +230,6 @@ namespace System.Dynamic {
         public abstract System.Dynamic.DynamicMetaObject FallbackSetMember(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject value, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
 
-
     public abstract partial class UnaryOperationBinder : System.Dynamic.DynamicMetaObjectBinder
     {
         protected UnaryOperationBinder(System.Linq.Expressions.ExpressionType operation) { }
@@ -258,7 +239,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackUnaryOperation(System.Dynamic.DynamicMetaObject target) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackUnaryOperation(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
 } // end of System.Dynamic
 namespace System.Linq {
 
@@ -266,11 +246,9 @@ namespace System.Linq {
     {
     }
 
-
     public partial interface IOrderedQueryable<out T> : System.Collections.Generic.IEnumerable<T>, System.Collections.IEnumerable, System.Linq.IOrderedQueryable, System.Linq.IQueryable, System.Linq.IQueryable<T>
     {
     }
-
 
     public partial interface IQueryable : System.Collections.IEnumerable
     {
@@ -279,11 +257,9 @@ namespace System.Linq {
         System.Linq.IQueryProvider Provider { get; }
     }
 
-
     public partial interface IQueryable<out T> : System.Collections.Generic.IEnumerable<T>, System.Collections.IEnumerable, System.Linq.IQueryable
     {
     }
-
 
     public partial interface IQueryProvider
     {
@@ -292,7 +268,6 @@ namespace System.Linq {
         object Execute(System.Linq.Expressions.Expression expression);
         TResult Execute<TResult>(System.Linq.Expressions.Expression expression);
     }
-
 } // end of System.Linq
 namespace System.Linq.Expressions {
     public partial class BinaryExpression : System.Linq.Expressions.Expression
@@ -309,7 +284,6 @@ namespace System.Linq.Expressions {
         public override System.Linq.Expressions.Expression Reduce() { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.BinaryExpression Update(System.Linq.Expressions.Expression left, System.Linq.Expressions.LambdaExpression conversion, System.Linq.Expressions.Expression right) { return default(System.Linq.Expressions.BinaryExpression); }
     }
-
     public partial class BlockExpression : System.Linq.Expressions.Expression
     {
         internal BlockExpression() { }
@@ -321,7 +295,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.BlockExpression Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.ParameterExpression> variables, System.Collections.Generic.IEnumerable<System.Linq.Expressions.Expression> expressions) { return default(System.Linq.Expressions.BlockExpression); }
     }
-
     public sealed partial class CatchBlock
     {
         internal CatchBlock() { }
@@ -332,7 +305,6 @@ namespace System.Linq.Expressions {
         public override string ToString() { return default(string); }
         public System.Linq.Expressions.CatchBlock Update(System.Linq.Expressions.ParameterExpression variable, System.Linq.Expressions.Expression filter, System.Linq.Expressions.Expression body) { return default(System.Linq.Expressions.CatchBlock); }
     }
-
     public partial class ConditionalExpression : System.Linq.Expressions.Expression
     {
         internal ConditionalExpression() { }
@@ -344,7 +316,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.ConditionalExpression Update(System.Linq.Expressions.Expression test, System.Linq.Expressions.Expression ifTrue, System.Linq.Expressions.Expression ifFalse) { return default(System.Linq.Expressions.ConditionalExpression); }
     }
-
     public partial class ConstantExpression : System.Linq.Expressions.Expression
     {
         internal ConstantExpression() { }
@@ -353,7 +324,6 @@ namespace System.Linq.Expressions {
         public object Value { get { return default(object); } }
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
     }
-
     public partial class DebugInfoExpression : System.Linq.Expressions.Expression
     {
         internal DebugInfoExpression() { }
@@ -367,7 +337,6 @@ namespace System.Linq.Expressions {
         public sealed override System.Type Type { get { return default(System.Type); } }
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
     }
-
     public sealed partial class DefaultExpression : System.Linq.Expressions.Expression
     {
         internal DefaultExpression() { }
@@ -375,7 +344,6 @@ namespace System.Linq.Expressions {
         public sealed override System.Type Type { get { return default(System.Type); } }
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
     }
-
     public partial class DynamicExpression : System.Linq.Expressions.Expression, System.Linq.Expressions.IArgumentProvider, System.Linq.Expressions.IDynamicExpression
     {
         internal DynamicExpression() { }
@@ -404,13 +372,11 @@ namespace System.Linq.Expressions {
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
 
-
     public abstract partial class DynamicExpressionVisitor : System.Linq.Expressions.ExpressionVisitor
     {
         protected DynamicExpressionVisitor() { }
         protected internal override System.Linq.Expressions.Expression VisitDynamic(System.Linq.Expressions.DynamicExpression node) { return default(System.Linq.Expressions.Expression); }
     }
-
 
     public sealed partial class ElementInit : System.Linq.Expressions.IArgumentProvider
     {
@@ -422,7 +388,6 @@ namespace System.Linq.Expressions {
         System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int index) { return default(System.Linq.Expressions.Expression); }
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
-
 
     public abstract partial class Expression
     {
@@ -749,7 +714,6 @@ namespace System.Linq.Expressions {
         protected internal virtual System.Linq.Expressions.Expression VisitChildren(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
     }
 
-
     public sealed partial class Expression<TDelegate> : System.Linq.Expressions.LambdaExpression
     {
         internal Expression() { }
@@ -759,7 +723,6 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.Expression<TDelegate> Update(System.Linq.Expressions.Expression body, System.Collections.Generic.IEnumerable<System.Linq.Expressions.ParameterExpression> parameters) { return default(System.Linq.Expressions.Expression<TDelegate>); }
         public new TDelegate Compile(bool preferInterpretation) { return default(TDelegate); }
     }
-
 
     public enum ExpressionType
     {
@@ -850,7 +813,6 @@ namespace System.Linq.Expressions {
         Unbox = 62,
     }
 
-
     public abstract partial class ExpressionVisitor
     {
         protected ExpressionVisitor() { }
@@ -894,7 +856,6 @@ namespace System.Linq.Expressions {
         protected internal virtual System.Linq.Expressions.Expression VisitTypeBinary(System.Linq.Expressions.TypeBinaryExpression node) { return default(System.Linq.Expressions.Expression); }
         protected internal virtual System.Linq.Expressions.Expression VisitUnary(System.Linq.Expressions.UnaryExpression node) { return default(System.Linq.Expressions.Expression); }
     }
-
     public sealed partial class GotoExpression : System.Linq.Expressions.Expression
     {
         internal GotoExpression() { }
@@ -907,7 +868,6 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.GotoExpression Update(System.Linq.Expressions.LabelTarget target, System.Linq.Expressions.Expression value) { return default(System.Linq.Expressions.GotoExpression); }
     }
 
-
     public enum GotoExpressionKind
     {
         Break = 2,
@@ -915,7 +875,6 @@ namespace System.Linq.Expressions {
         Goto = 0,
         Return = 1,
     }
-
     public sealed partial class IndexExpression : System.Linq.Expressions.Expression, System.Linq.Expressions.IArgumentProvider
     {
         internal IndexExpression() { }
@@ -929,7 +888,6 @@ namespace System.Linq.Expressions {
         System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int index) { return default(System.Linq.Expressions.Expression); }
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
-
     public sealed partial class InvocationExpression : System.Linq.Expressions.Expression, System.Linq.Expressions.IArgumentProvider
     {
         internal InvocationExpression() { }
@@ -942,7 +900,6 @@ namespace System.Linq.Expressions {
         System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int index) { return default(System.Linq.Expressions.Expression); }
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
-
     public sealed partial class LabelExpression : System.Linq.Expressions.Expression
     {
         internal LabelExpression() { }
@@ -954,7 +911,6 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.LabelExpression Update(System.Linq.Expressions.LabelTarget target, System.Linq.Expressions.Expression defaultValue) { return default(System.Linq.Expressions.LabelExpression); }
     }
 
-
     public sealed partial class LabelTarget
     {
         internal LabelTarget() { }
@@ -962,7 +918,6 @@ namespace System.Linq.Expressions {
         public System.Type Type { get { return default(System.Type); } }
         public override string ToString() { return default(string); }
     }
-
     public abstract partial class LambdaExpression : System.Linq.Expressions.Expression
     {
         internal LambdaExpression() { }
@@ -977,7 +932,6 @@ namespace System.Linq.Expressions {
         public System.Delegate Compile(System.Runtime.CompilerServices.DebugInfoGenerator debugInfoGenerator) { return default(System.Delegate); }
         public System.Delegate Compile(bool preferInterpretation) { return default(System.Delegate); }
     }
-
     public sealed partial class ListInitExpression : System.Linq.Expressions.Expression
     {
         internal ListInitExpression() { }
@@ -990,7 +944,6 @@ namespace System.Linq.Expressions {
         public override System.Linq.Expressions.Expression Reduce() { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.ListInitExpression Update(System.Linq.Expressions.NewExpression newExpression, System.Collections.Generic.IEnumerable<System.Linq.Expressions.ElementInit> initializers) { return default(System.Linq.Expressions.ListInitExpression); }
     }
-
     public sealed partial class LoopExpression : System.Linq.Expressions.Expression
     {
         internal LoopExpression() { }
@@ -1003,14 +956,12 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.LoopExpression Update(System.Linq.Expressions.LabelTarget breakLabel, System.Linq.Expressions.LabelTarget continueLabel, System.Linq.Expressions.Expression body) { return default(System.Linq.Expressions.LoopExpression); }
     }
 
-
     public sealed partial class MemberAssignment : System.Linq.Expressions.MemberBinding
     {
         internal MemberAssignment() : base(default(System.Linq.Expressions.MemberBindingType), default(System.Reflection.MemberInfo)) { }
         public System.Linq.Expressions.Expression Expression { get { return default(System.Linq.Expressions.Expression); } }
         public System.Linq.Expressions.MemberAssignment Update(System.Linq.Expressions.Expression expression) { return default(System.Linq.Expressions.MemberAssignment); }
     }
-
 
     public abstract partial class MemberBinding
     {
@@ -1022,14 +973,12 @@ namespace System.Linq.Expressions {
         internal MemberBinding() { }
     }
 
-
     public enum MemberBindingType
     {
         Assignment = 0,
         ListBinding = 2,
         MemberBinding = 1,
     }
-
     public partial class MemberExpression : System.Linq.Expressions.Expression
     {
         internal MemberExpression() { }
@@ -1039,7 +988,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.MemberExpression Update(System.Linq.Expressions.Expression expression) { return default(System.Linq.Expressions.MemberExpression); }
     }
-
     public sealed partial class MemberInitExpression : System.Linq.Expressions.Expression
     {
         internal MemberInitExpression() { }
@@ -1053,7 +1001,6 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.MemberInitExpression Update(System.Linq.Expressions.NewExpression newExpression, System.Collections.Generic.IEnumerable<System.Linq.Expressions.MemberBinding> bindings) { return default(System.Linq.Expressions.MemberInitExpression); }
     }
 
-
     public sealed partial class MemberListBinding : System.Linq.Expressions.MemberBinding
     {
         internal MemberListBinding() : base(default(System.Linq.Expressions.MemberBindingType), default(System.Reflection.MemberInfo)) { }
@@ -1061,14 +1008,12 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.MemberListBinding Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.ElementInit> initializers) { return default(System.Linq.Expressions.MemberListBinding); }
     }
 
-
     public sealed partial class MemberMemberBinding : System.Linq.Expressions.MemberBinding
     {
         internal MemberMemberBinding() : base(default(System.Linq.Expressions.MemberBindingType), default(System.Reflection.MemberInfo)) { }
         public System.Collections.ObjectModel.ReadOnlyCollection<System.Linq.Expressions.MemberBinding> Bindings { get { return default(System.Collections.ObjectModel.ReadOnlyCollection<System.Linq.Expressions.MemberBinding>); } }
         public System.Linq.Expressions.MemberMemberBinding Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.MemberBinding> bindings) { return default(System.Linq.Expressions.MemberMemberBinding); }
     }
-
     public partial class MethodCallExpression : System.Linq.Expressions.Expression, System.Linq.Expressions.IArgumentProvider
     {
         internal MethodCallExpression() { }
@@ -1082,7 +1027,6 @@ namespace System.Linq.Expressions {
         System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int index) { return default(System.Linq.Expressions.Expression); }
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
-
     public partial class NewArrayExpression : System.Linq.Expressions.Expression
     {
         internal NewArrayExpression() { }
@@ -1091,7 +1035,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.NewArrayExpression Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.Expression> expressions) { return default(System.Linq.Expressions.NewArrayExpression); }
     }
-
     public partial class NewExpression : System.Linq.Expressions.Expression, System.Linq.Expressions.IArgumentProvider
     {
         internal NewExpression() { }
@@ -1105,7 +1048,6 @@ namespace System.Linq.Expressions {
         System.Linq.Expressions.Expression System.Linq.Expressions.IArgumentProvider.GetArgument(int index) { return default(System.Linq.Expressions.Expression); }
         int System.Linq.Expressions.IArgumentProvider.ArgumentCount { get { return default(int); } }
     }
-
     public partial class ParameterExpression : System.Linq.Expressions.Expression
     {
         internal ParameterExpression() { }
@@ -1115,7 +1057,6 @@ namespace System.Linq.Expressions {
         public override System.Type Type { get { return default(System.Type); } }
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
     }
-
     public sealed partial class RuntimeVariablesExpression : System.Linq.Expressions.Expression
     {
         internal RuntimeVariablesExpression() { }
@@ -1125,7 +1066,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.RuntimeVariablesExpression Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.ParameterExpression> variables) { return default(System.Linq.Expressions.RuntimeVariablesExpression); }
     }
-
     public sealed partial class SwitchCase
     {
         internal SwitchCase() { }
@@ -1134,7 +1074,6 @@ namespace System.Linq.Expressions {
         public override string ToString() { return default(string); }
         public System.Linq.Expressions.SwitchCase Update(System.Collections.Generic.IEnumerable<System.Linq.Expressions.Expression> testValues, System.Linq.Expressions.Expression body) { return default(System.Linq.Expressions.SwitchCase); }
     }
-
     public sealed partial class SwitchExpression : System.Linq.Expressions.Expression
     {
         internal SwitchExpression() { }
@@ -1148,7 +1087,6 @@ namespace System.Linq.Expressions {
         public System.Linq.Expressions.SwitchExpression Update(System.Linq.Expressions.Expression switchValue, System.Collections.Generic.IEnumerable<System.Linq.Expressions.SwitchCase> cases, System.Linq.Expressions.Expression defaultBody) { return default(System.Linq.Expressions.SwitchExpression); }
     }
 
-
     public partial class SymbolDocumentInfo
     {
         internal SymbolDocumentInfo() { }
@@ -1157,7 +1095,6 @@ namespace System.Linq.Expressions {
         public virtual System.Guid Language { get { return default(System.Guid); } }
         public virtual System.Guid LanguageVendor { get { return default(System.Guid); } }
     }
-
     public sealed partial class TryExpression : System.Linq.Expressions.Expression
     {
         internal TryExpression() { }
@@ -1170,7 +1107,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.TryExpression Update(System.Linq.Expressions.Expression body, System.Collections.Generic.IEnumerable<System.Linq.Expressions.CatchBlock> handlers, System.Linq.Expressions.Expression @finally, System.Linq.Expressions.Expression fault) { return default(System.Linq.Expressions.TryExpression); }
     }
-
     public sealed partial class TypeBinaryExpression : System.Linq.Expressions.Expression
     {
         internal TypeBinaryExpression() { }
@@ -1181,7 +1117,6 @@ namespace System.Linq.Expressions {
         protected internal override System.Linq.Expressions.Expression Accept(System.Linq.Expressions.ExpressionVisitor visitor) { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.TypeBinaryExpression Update(System.Linq.Expressions.Expression expression) { return default(System.Linq.Expressions.TypeBinaryExpression); }
     }
-
     public sealed partial class UnaryExpression : System.Linq.Expressions.Expression
     {
         internal UnaryExpression() { }
@@ -1196,18 +1131,15 @@ namespace System.Linq.Expressions {
         public override System.Linq.Expressions.Expression Reduce() { return default(System.Linq.Expressions.Expression); }
         public System.Linq.Expressions.UnaryExpression Update(System.Linq.Expressions.Expression operand) { return default(System.Linq.Expressions.UnaryExpression); }
     }
-
   public partial interface IArgumentProvider {
     int ArgumentCount { get; }
     System.Linq.Expressions.Expression GetArgument(int index);
   }
-
   public partial interface IDynamicExpression : System.Linq.Expressions.IArgumentProvider {
     System.Type DelegateType { get; }
     object CreateCallSite();
     System.Linq.Expressions.Expression Rewrite(System.Linq.Expressions.Expression[] args);
   }
-
 } // end of System.Linq.Expressions
 namespace System.Runtime.CompilerServices {
     public partial class CallSite
@@ -1217,7 +1149,6 @@ namespace System.Runtime.CompilerServices {
         public static System.Runtime.CompilerServices.CallSite Create(System.Type delegateType, System.Runtime.CompilerServices.CallSiteBinder binder) { return default(System.Runtime.CompilerServices.CallSite); }
     }
 
-
     public partial class CallSite<T> : System.Runtime.CompilerServices.CallSite where T : class
     {
         internal CallSite() { }
@@ -1225,7 +1156,6 @@ namespace System.Runtime.CompilerServices {
         public T Update { get { return default(T); } }
         public static System.Runtime.CompilerServices.CallSite<T> Create(System.Runtime.CompilerServices.CallSiteBinder binder) { return default(System.Runtime.CompilerServices.CallSite<T>); }
     }
-
 
     public abstract partial class CallSiteBinder
     {
@@ -1236,12 +1166,10 @@ namespace System.Runtime.CompilerServices {
         protected void CacheTarget<T>(T target) where T : class { }
     }
 
-
     public static partial class CallSiteHelpers
     {
         public static bool IsInternalFrame(System.Reflection.MethodBase mb) { return default(bool); }
     }
-
 
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     [System.Diagnostics.DebuggerStepThroughAttribute]
@@ -1282,13 +1210,11 @@ namespace System.Runtime.CompilerServices {
         public static void UpdateRules<T>(System.Runtime.CompilerServices.CallSite<T> @this, int matched) where T : class { }
     }
 
-
     public abstract partial class DebugInfoGenerator
     {
         protected DebugInfoGenerator() { }
         public abstract void MarkSequencePoint(System.Linq.Expressions.LambdaExpression method, int ilOffset, System.Linq.Expressions.DebugInfoExpression sequencePoint);
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(10636))]
     public sealed partial class DynamicAttribute : System.Attribute
@@ -1297,7 +1223,6 @@ namespace System.Runtime.CompilerServices {
         public DynamicAttribute(bool[] transformFlags) { }
         public System.Collections.Generic.IList<bool> TransformFlags { get { return default(System.Collections.Generic.IList<bool>); } }
     }
-
 
     [System.ObsoleteAttribute("do not use this type", true)]
     public partial class ExecutionScope
@@ -1311,13 +1236,11 @@ namespace System.Runtime.CompilerServices {
         public System.Linq.Expressions.Expression IsolateExpression(System.Linq.Expressions.Expression expression, object[] locals) { return default(System.Linq.Expressions.Expression); }
     }
 
-
     public partial interface IRuntimeVariables
     {
         int Count { get; }
         object this[int index] { get; set; }
     }
-
 
     public sealed partial class ReadOnlyCollectionBuilder<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IList<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
@@ -1355,14 +1278,12 @@ namespace System.Runtime.CompilerServices {
         public System.Collections.ObjectModel.ReadOnlyCollection<T> ToReadOnlyCollection() { return default(System.Collections.ObjectModel.ReadOnlyCollection<T>); }
     }
 
-
     [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
     [System.Diagnostics.DebuggerStepThroughAttribute]
     public partial class RuleCache<T> where T : class
     {
         internal RuleCache() { }
     }
-
 
     public static partial class RuntimeOps
     {
@@ -1382,5 +1303,4 @@ namespace System.Runtime.CompilerServices {
         [System.ObsoleteAttribute("do not use this method", true)]
         public static object ExpandoTrySetValue(System.Dynamic.ExpandoObject expando, object indexClass, int index, object value, string name, bool ignoreCase) { return default(object); }
     }
-
 } // end of System.Runtime.CompilerServices

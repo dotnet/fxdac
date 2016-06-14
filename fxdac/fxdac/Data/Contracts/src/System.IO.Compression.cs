@@ -7,13 +7,11 @@ namespace System.IO.Compression {
         Optimal = 0,
     }
 
-
     public enum CompressionMode
     {
         Compress = 1,
         Decompress = 0,
     }
-
 
     public partial class DeflateStream : System.IO.Stream
     {
@@ -41,7 +39,6 @@ namespace System.IO.Compression {
         public override System.Threading.Tasks.Task WriteAsync(byte[] array, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public partial class GZipStream : System.IO.Stream
     {
         public GZipStream(System.IO.Stream stream, System.IO.Compression.CompressionLevel compressionLevel) { }
@@ -67,7 +64,6 @@ namespace System.IO.Compression {
         public override System.Threading.Tasks.Task<int> ReadAsync(byte[] array, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<int>); }
         public override System.Threading.Tasks.Task WriteAsync(byte[] array, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
-
   public partial class ZipArchive : System.IDisposable {
     public ZipArchive(System.IO.Stream stream) { }
     public ZipArchive(System.IO.Stream stream, System.IO.Compression.ZipArchiveMode mode) { }
@@ -81,7 +77,6 @@ namespace System.IO.Compression {
     protected virtual void Dispose(bool disposing) { }
     public System.IO.Compression.ZipArchiveEntry GetEntry(string entryName) { return default(System.IO.Compression.ZipArchiveEntry); }
   }
-
   public partial class ZipArchiveEntry {
     internal ZipArchiveEntry() { }
     public System.IO.Compression.ZipArchive Archive { get { return default(System.IO.Compression.ZipArchive); } }
@@ -94,11 +89,9 @@ namespace System.IO.Compression {
     public System.IO.Stream Open() { return default(System.IO.Stream); }
     public override string ToString() { return default(string); }
   }
-
   public enum ZipArchiveMode {
     Create = 1,
     Read = 0,
     Update = 2,
   }
-
 } // end of System.IO.Compression

@@ -31,7 +31,6 @@ namespace System.Collections.Specialized {
         }
     }
 
-
     public partial class HybridDictionary : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
         public HybridDictionary() { }
@@ -55,7 +54,6 @@ namespace System.Collections.Specialized {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
 
-
     public partial interface IOrderedDictionary : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
         object this[int index] { get; set; }
@@ -63,7 +61,6 @@ namespace System.Collections.Specialized {
         void Insert(int index, object key, object value);
         void RemoveAt(int index);
     }
-
 
     public partial class ListDictionary : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
@@ -85,7 +82,6 @@ namespace System.Collections.Specialized {
         public void Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
 
     public abstract partial class NameObjectCollectionBase : System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
@@ -133,7 +129,6 @@ namespace System.Collections.Specialized {
         }
     }
 
-
     public partial class NameValueCollection : System.Collections.Specialized.NameObjectCollectionBase
     {
         public NameValueCollection() { }
@@ -164,7 +159,6 @@ namespace System.Collections.Specialized {
         public virtual void Remove(string name) { }
         public virtual void Set(string name, string value) { }
     }
-
 
     public partial class OrderedDictionary : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable, System.Collections.Specialized.IOrderedDictionary, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
@@ -197,7 +191,6 @@ namespace System.Collections.Specialized {
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
     }
 
-
     public partial class StringCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         public StringCollection() { }
@@ -227,7 +220,6 @@ namespace System.Collections.Specialized {
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
     }
-
     public partial class StringDictionary : System.Collections.IEnumerable
     {
         public StringDictionary() { }
@@ -246,7 +238,6 @@ namespace System.Collections.Specialized {
         public virtual void Remove(string key) { }
     }
 
-
     public partial class StringEnumerator
     {
         internal StringEnumerator() { }
@@ -254,5 +245,4 @@ namespace System.Collections.Specialized {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
 } // end of System.Collections.Specialized

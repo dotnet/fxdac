@@ -32,7 +32,6 @@ namespace System.Collections {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
     }
 
-
     [System.ObsoleteAttribute("Please use StringComparer instead.")]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CaseInsensitiveHashCodeProvider : System.Collections.IHashCodeProvider
@@ -44,13 +43,11 @@ namespace System.Collections {
         public int GetHashCode(object obj) { return default(int); }
     }
 
-
     public static partial class StructuralComparisons
     {
         public static System.Collections.IComparer StructuralComparer { get { return default(System.Collections.IComparer); } }
         public static System.Collections.IEqualityComparer StructuralEqualityComparer { get { return default(System.Collections.IEqualityComparer); } }
     }
-
 } // end of System.Collections
 namespace System.Collections.Generic {
 
@@ -104,7 +101,6 @@ namespace System.Collections.Generic {
         }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class LinkedListNode<T>
     {
@@ -114,7 +110,6 @@ namespace System.Collections.Generic {
         public System.Collections.Generic.LinkedListNode<T> Previous { get { return default(System.Collections.Generic.LinkedListNode<T>); } }
         public T Value { get { return default(T); } set { } }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -148,7 +143,6 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class SortedDictionary<TKey, TValue> : 
@@ -265,7 +259,6 @@ namespace System.Collections.Generic {
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class SortedList<TKey, TValue> : 
@@ -322,7 +315,6 @@ namespace System.Collections.Generic {
         System.Collections.Generic.IEnumerable<TKey> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys { get { return default(System.Collections.Generic.IEnumerable<TKey>); } }
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class SortedSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
@@ -388,7 +380,6 @@ namespace System.Collections.Generic {
         }
     }
 
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
@@ -421,7 +412,6 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-
     [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class HashSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
@@ -470,5 +460,4 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-
 } // end of System.Collections.Generic

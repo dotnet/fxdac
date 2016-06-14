@@ -8,13 +8,11 @@ namespace Microsoft.Win32.SafeHandles {
         public override bool IsInvalid { get { return default(bool); } }
     }
 
-
     public sealed partial class SafeMemoryMappedViewHandle : System.Runtime.InteropServices.SafeBuffer
     {
         internal SafeMemoryMappedViewHandle() : base(default(bool)) { }
         protected override bool ReleaseHandle() { return default(bool); }
     }
-
 } // end of Microsoft.Win32.SafeHandles
 namespace System.IO.MemoryMappedFiles {
     public partial class MemoryMappedFile : System.IDisposable
@@ -51,7 +49,6 @@ namespace System.IO.MemoryMappedFiles {
         public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.HandleInheritability inheritability) { return default(System.IO.MemoryMappedFiles.MemoryMappedFile); }
     }
 
-
     public enum MemoryMappedFileAccess
     {
         CopyOnWrite = 3,
@@ -62,14 +59,12 @@ namespace System.IO.MemoryMappedFiles {
         Write = 2,
     }
 
-
     [System.FlagsAttribute]
     public enum MemoryMappedFileOptions
     {
         DelayAllocatePages = 67108864,
         None = 0,
     }
-
 
     [System.FlagsAttribute]
     public enum MemoryMappedFileRights
@@ -89,12 +84,10 @@ namespace System.IO.MemoryMappedFiles {
         Write = 2,
     }
 
-
     public partial class MemoryMappedFileSecurity : System.Security.AccessControl.ObjectSecurity<System.IO.MemoryMappedFiles.MemoryMappedFileRights>
     {
         public MemoryMappedFileSecurity() : base(default(bool), default(System.Security.AccessControl.ResourceType)) { }
     }
-
 
     public sealed partial class MemoryMappedViewAccessor : System.IO.UnmanagedMemoryAccessor
     {
@@ -107,7 +100,6 @@ namespace System.IO.MemoryMappedFiles {
         public void Flush() { }
     }
 
-
     public sealed partial class MemoryMappedViewStream : System.IO.UnmanagedMemoryStream
     {
         internal MemoryMappedViewStream() { }
@@ -119,5 +111,4 @@ namespace System.IO.MemoryMappedFiles {
         public override void Flush() { }
         public override void SetLength(long value) { }
     }
-
 } // end of System.IO.MemoryMappedFiles

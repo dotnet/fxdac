@@ -5,18 +5,15 @@ namespace System {
         public FileStyleUriParser() { }
     }
 
-
     public partial class FtpStyleUriParser : System.UriParser
     {
         public FtpStyleUriParser() { }
     }
 
-
     public partial class GenericUriParser : System.UriParser
     {
         public GenericUriParser(System.GenericUriParserOptions options) { }
     }
-
 
     [System.FlagsAttribute]
     public enum GenericUriParserOptions
@@ -35,27 +32,22 @@ namespace System {
         NoUserInfo = 4,
     }
 
-
     public partial class HttpStyleUriParser : System.UriParser
     {
         public HttpStyleUriParser() { }
     }
-
     public partial class NetPipeStyleUriParser : System.UriParser
     {
         public NetPipeStyleUriParser() { }
     }
-
     public partial class NetTcpStyleUriParser : System.UriParser
     {
         public NetTcpStyleUriParser() { }
     }
-
     public partial class NewsStyleUriParser : System.UriParser
     {
         public NewsStyleUriParser() { }
     }
-
 
     public partial class UriBuilder
     {
@@ -80,14 +72,12 @@ namespace System {
         public override string ToString() { return default(string); }
     }
 
-
     public enum UriIdnScope
     {
         All = 2,
         AllExceptIntranet = 1,
         None = 0,
     }
-
 
     public abstract partial class UriParser
     {
@@ -102,7 +92,6 @@ namespace System {
         public static void Register(System.UriParser uriParser, string schemeName, int defaultPort) { }
         protected internal virtual string Resolve(System.Uri baseUri, System.Uri relativeUri, out System.UriFormatException parsingError) { parsingError = default(System.UriFormatException); return default(string); }
     }
-
 } // end of System
 namespace System.Net {
 
@@ -117,7 +106,6 @@ namespace System.Net {
         public static string UrlEncode(string value) { return default(string); }
         public static byte[] UrlEncodeToBytes(byte[] value, int offset, int count) { return default(byte[]); }
     }
-
 } // end of System.Net
 namespace System.Runtime.Versioning {
   public sealed partial class FrameworkName : System.IEquatable<System.Runtime.Versioning.FrameworkName> {
@@ -135,5 +123,4 @@ namespace System.Runtime.Versioning {
     public static bool operator !=(System.Runtime.Versioning.FrameworkName left, System.Runtime.Versioning.FrameworkName right) { return default(bool); }
     public override string ToString() { return default(string); }
   }
-
 } // end of System.Runtime.Versioning

@@ -44,7 +44,6 @@ namespace System.Numerics {
     public static System.Numerics.Matrix3x2 Subtract(System.Numerics.Matrix3x2 value1, System.Numerics.Matrix3x2 value2) { return default(System.Numerics.Matrix3x2); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Matrix4x4 : System.IEquatable<System.Numerics.Matrix4x4> {
     public float M11;
@@ -119,7 +118,6 @@ namespace System.Numerics {
     public static System.Numerics.Matrix4x4 Transform(System.Numerics.Matrix4x4 value, System.Numerics.Quaternion rotation) { return default(System.Numerics.Matrix4x4); }
     public static System.Numerics.Matrix4x4 Transpose(System.Numerics.Matrix4x4 matrix) { return default(System.Numerics.Matrix4x4); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Plane : System.IEquatable<System.Numerics.Plane> {
     public float D;
@@ -141,7 +139,6 @@ namespace System.Numerics {
     public static System.Numerics.Plane Transform(System.Numerics.Plane plane, System.Numerics.Matrix4x4 matrix) { return default(System.Numerics.Plane); }
     public static System.Numerics.Plane Transform(System.Numerics.Plane plane, System.Numerics.Quaternion rotation) { return default(System.Numerics.Plane); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Quaternion : System.IEquatable<System.Numerics.Quaternion> {
     public float W;
@@ -183,7 +180,6 @@ namespace System.Numerics {
     public static System.Numerics.Quaternion Subtract(System.Numerics.Quaternion value1, System.Numerics.Quaternion value2) { return default(System.Numerics.Quaternion); }
     public override string ToString() { return default(string); }
   }
-
   public static partial class Vector {
     public static bool IsHardwareAccelerated { get { return default(bool); } }
     public static System.Numerics.Vector<T> Abs<T>(System.Numerics.Vector<T> value) where T : struct { return default(System.Numerics.Vector<T>); }
@@ -256,7 +252,6 @@ namespace System.Numerics {
     public static System.Numerics.Vector<T> Subtract<T>(System.Numerics.Vector<T> left, System.Numerics.Vector<T> right) where T : struct { return default(System.Numerics.Vector<T>); }
     public static System.Numerics.Vector<T> Xor<T>(System.Numerics.Vector<T> left, System.Numerics.Vector<T> right) where T : struct { return default(System.Numerics.Vector<T>); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Vector<T> : System.IEquatable<System.Numerics.Vector<T>>, System.IFormattable where T : struct {
     public Vector(T value) { throw new System.NotImplementedException(); }
@@ -302,7 +297,6 @@ namespace System.Numerics {
     public string ToString(string format) { return default(string); }
     public string ToString(string format, System.IFormatProvider formatProvider) { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Vector2 : System.IEquatable<System.Numerics.Vector2>, System.IFormattable {
     public float X;
@@ -358,7 +352,6 @@ namespace System.Numerics {
     public static System.Numerics.Vector2 TransformNormal(System.Numerics.Vector2 normal, System.Numerics.Matrix3x2 matrix) { return default(System.Numerics.Vector2); }
     public static System.Numerics.Vector2 TransformNormal(System.Numerics.Vector2 normal, System.Numerics.Matrix4x4 matrix) { return default(System.Numerics.Vector2); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Vector3 : System.IEquatable<System.Numerics.Vector3>, System.IFormattable {
     public float X;
@@ -416,7 +409,6 @@ namespace System.Numerics {
     public static System.Numerics.Vector3 Transform(System.Numerics.Vector3 value, System.Numerics.Quaternion rotation) { return default(System.Numerics.Vector3); }
     public static System.Numerics.Vector3 TransformNormal(System.Numerics.Vector3 normal, System.Numerics.Matrix4x4 matrix) { return default(System.Numerics.Vector3); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct Vector4 : System.IEquatable<System.Numerics.Vector4>, System.IFormattable {
     public float W;
@@ -478,5 +470,4 @@ namespace System.Numerics {
     public static System.Numerics.Vector4 Transform(System.Numerics.Vector4 vector, System.Numerics.Matrix4x4 matrix) { return default(System.Numerics.Vector4); }
     public static System.Numerics.Vector4 Transform(System.Numerics.Vector4 value, System.Numerics.Quaternion rotation) { return default(System.Numerics.Vector4); }
   }
-
 } // end of System.Numerics

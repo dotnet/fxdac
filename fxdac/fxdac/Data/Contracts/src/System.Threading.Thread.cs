@@ -4,7 +4,6 @@ namespace System.Threading {
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public delegate void ParameterizedThreadStart(object obj);
 
-
     [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Thread : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
@@ -125,16 +124,13 @@ namespace System.Threading {
         public static bool Yield() { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ThreadStart();
-
 
     public sealed partial class ThreadStartException : System.SystemException
     {
         internal ThreadStartException() { }
     }
-
 
     [System.FlagsAttribute]
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
@@ -152,7 +148,6 @@ namespace System.Threading {
         WaitSleepJoin = 32,
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ThreadStateException : System.SystemException
     {
@@ -161,5 +156,4 @@ namespace System.Threading {
         public ThreadStateException(string message) { }
         public ThreadStateException(string message, System.Exception innerException) { }
     }
-
 } // end of System.Threading

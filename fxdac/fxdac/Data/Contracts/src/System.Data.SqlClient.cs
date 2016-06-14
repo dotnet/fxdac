@@ -84,7 +84,6 @@ namespace Microsoft.SqlServer.Server {
     public virtual void SetValue(int ordinal, object value) { }
     public virtual int SetValues(params object[] values) { return default(int); }
   }
-
   public sealed partial class SqlMetaData {
     public SqlMetaData(string name, System.Data.SqlDbType dbType) { }
     public SqlMetaData(string name, System.Data.SqlDbType dbType, bool useServerDefault, bool isUniqueKey, System.Data.SqlClient.SortOrder columnSortOrder, int sortOrdinal) { }
@@ -149,7 +148,6 @@ namespace Microsoft.SqlServer.Server {
     public System.TimeSpan Adjust(System.TimeSpan value) { return default(System.TimeSpan); }
     public static Microsoft.SqlServer.Server.SqlMetaData InferFromValue(object value, string name) { return default(Microsoft.SqlServer.Server.SqlMetaData); }
   }
-
 } // end of Microsoft.SqlServer.Server
 namespace System.Data {
   public enum SqlDbType {
@@ -185,27 +183,22 @@ namespace System.Data {
     Variant = 23,
     Xml = 25,
   }
-
   public sealed partial class StatementCompletedEventArgs : System.EventArgs {
     public StatementCompletedEventArgs(int recordCount) { }
     public int RecordCount { get { return default(int); } }
   }
-
   public delegate void StatementCompletedEventHandler(object sender, System.Data.StatementCompletedEventArgs e);
-
 } // end of System.Data
 namespace System.Data.SqlClient {
   public enum ApplicationIntent {
     ReadOnly = 1,
     ReadWrite = 0,
   }
-
   public enum SortOrder {
     Ascending = 0,
     Descending = 1,
     Unspecified = -1,
   }
-
   public sealed partial class SqlBulkCopy : System.IDisposable {
     public SqlBulkCopy(System.Data.SqlClient.SqlConnection connection) { }
     public SqlBulkCopy(System.Data.SqlClient.SqlConnection connection, System.Data.SqlClient.SqlBulkCopyOptions copyOptions, System.Data.SqlClient.SqlTransaction externalTransaction) { }
@@ -224,7 +217,6 @@ namespace System.Data.SqlClient {
     public System.Threading.Tasks.Task WriteToServerAsync(System.Data.Common.DbDataReader reader) { return default(System.Threading.Tasks.Task); }
     public System.Threading.Tasks.Task WriteToServerAsync(System.Data.Common.DbDataReader reader, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
   }
-
   public sealed partial class SqlBulkCopyColumnMapping {
     public SqlBulkCopyColumnMapping() { }
     public SqlBulkCopyColumnMapping(int sourceColumnOrdinal, int destinationOrdinal) { }
@@ -236,7 +228,6 @@ namespace System.Data.SqlClient {
     public string SourceColumn { get { return default(string); } set { } }
     public int SourceOrdinal { get { return default(int); } set { } }
   }
-
   public sealed partial class SqlBulkCopyColumnMappingCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList {
     internal SqlBulkCopyColumnMappingCollection() { }
     public int Count { get { return default(int); } }
@@ -266,7 +257,6 @@ namespace System.Data.SqlClient {
     void System.Collections.IList.Insert(int index, object value) { }
     void System.Collections.IList.Remove(object value) { }
   }
-
   [System.FlagsAttribute]
   public enum SqlBulkCopyOptions {
     CheckConstraints = 2,
@@ -277,7 +267,6 @@ namespace System.Data.SqlClient {
     TableLock = 4,
     UseInternalTransaction = 32,
   }
-
   public sealed partial class SqlClientFactory : System.Data.Common.DbProviderFactory {
     internal SqlClientFactory() { }
     public static readonly System.Data.SqlClient.SqlClientFactory Instance;
@@ -286,7 +275,6 @@ namespace System.Data.SqlClient {
     public override System.Data.Common.DbConnectionStringBuilder CreateConnectionStringBuilder() { return default(System.Data.Common.DbConnectionStringBuilder); }
     public override System.Data.Common.DbParameter CreateParameter() { return default(System.Data.Common.DbParameter); }
   }
-
   public sealed partial class SqlCommand : System.Data.Common.DbCommand {
     public SqlCommand() { }
     public SqlCommand(string cmdText) { }
@@ -325,7 +313,6 @@ namespace System.Data.SqlClient {
     public System.Threading.Tasks.Task<System.Xml.XmlReader> ExecuteXmlReaderAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<System.Xml.XmlReader>); }
     public override void Prepare() { }
   }
-
   public sealed partial class SqlConnection : System.Data.Common.DbConnection {
     public SqlConnection() { }
     public SqlConnection(string connectionString) { }
@@ -358,7 +345,6 @@ namespace System.Data.SqlClient {
     public void ResetStatistics() { }
     public System.Collections.IDictionary RetrieveStatistics() { return default(System.Collections.IDictionary); }
   }
-
   public sealed partial class SqlConnectionStringBuilder : System.Data.Common.DbConnectionStringBuilder {
     public SqlConnectionStringBuilder() { }
     public SqlConnectionStringBuilder(string connectionString) { }
@@ -398,7 +384,6 @@ namespace System.Data.SqlClient {
     public override bool ShouldSerialize(string keyword) { return default(bool); }
     public override bool TryGetValue(string keyword, out object value) { value = default(object); return default(bool); }
   }
-
   public partial class SqlDataReader : System.Data.Common.DbDataReader, System.IDisposable {
     internal SqlDataReader() { }
     protected System.Data.SqlClient.SqlConnection Connection { get { return default(System.Data.SqlClient.SqlConnection); } }
@@ -466,7 +451,6 @@ namespace System.Data.SqlClient {
     public override bool Read() { return default(bool); }
     public override System.Threading.Tasks.Task<bool> ReadAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<bool>); }
   }
-
   public sealed partial class SqlError {
     internal SqlError() { }
     public byte Class { get { return default(byte); } }
@@ -479,7 +463,6 @@ namespace System.Data.SqlClient {
     public byte State { get { return default(byte); } }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class SqlErrorCollection : System.Collections.ICollection, System.Collections.IEnumerable {
     internal SqlErrorCollection() { }
     public int Count { get { return default(int); } }
@@ -490,7 +473,6 @@ namespace System.Data.SqlClient {
     public void CopyTo(System.Data.SqlClient.SqlError[] array, int index) { }
     public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
   }
-
   public sealed partial class SqlException : System.Data.Common.DbException {
     internal SqlException() { }
     public byte Class { get { return default(byte); } }
@@ -504,7 +486,6 @@ namespace System.Data.SqlClient {
     public byte State { get { return default(byte); } }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class SqlInfoMessageEventArgs : System.EventArgs {
     internal SqlInfoMessageEventArgs() { }
     public System.Data.SqlClient.SqlErrorCollection Errors { get { return default(System.Data.SqlClient.SqlErrorCollection); } }
@@ -512,9 +493,7 @@ namespace System.Data.SqlClient {
     public string Source { get { return default(string); } }
     public override string ToString() { return default(string); }
   }
-
   public delegate void SqlInfoMessageEventHandler(object sender, System.Data.SqlClient.SqlInfoMessageEventArgs e);
-
   public sealed partial class SqlParameter : System.Data.Common.DbParameter {
     public SqlParameter() { }
     public SqlParameter(string parameterName, System.Data.SqlDbType dbType) { }
@@ -544,7 +523,6 @@ namespace System.Data.SqlClient {
     public void ResetSqlDbType() { }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class SqlParameterCollection : System.Data.Common.DbParameterCollection {
     internal SqlParameterCollection() { }
     public override int Count { get { return default(int); } }
@@ -579,15 +557,12 @@ namespace System.Data.SqlClient {
     protected override void SetParameter(int index, System.Data.Common.DbParameter value) { }
     protected override void SetParameter(string parameterName, System.Data.Common.DbParameter value) { }
   }
-
   public partial class SqlRowsCopiedEventArgs : System.EventArgs {
     public SqlRowsCopiedEventArgs(long rowsCopied) { }
     public bool Abort { get { return default(bool); } set { } }
     public long RowsCopied { get { return default(long); } }
   }
-
   public delegate void SqlRowsCopiedEventHandler(object sender, System.Data.SqlClient.SqlRowsCopiedEventArgs e);
-
   public sealed partial class SqlTransaction : System.Data.Common.DbTransaction {
     internal SqlTransaction() { }
     public new System.Data.SqlClient.SqlConnection Connection { get { return default(System.Data.SqlClient.SqlConnection); } }
@@ -599,13 +574,11 @@ namespace System.Data.SqlClient {
     public void Rollback(string transactionName) { }
     public void Save(string savePointName) { }
   }
-
 } // end of System.Data.SqlClient
 namespace System.Data.SqlTypes {
   public partial interface INullable {
     bool IsNull { get; }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlBinary : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlBinary Null;
@@ -639,7 +612,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlGuid ToSqlGuid() { return default(System.Data.SqlTypes.SqlGuid); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlBoolean : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlBoolean False;
@@ -704,7 +676,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlBoolean Xor(System.Data.SqlTypes.SqlBoolean x, System.Data.SqlTypes.SqlBoolean y) { return default(System.Data.SqlTypes.SqlBoolean); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlByte : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlByte MaxValue;
@@ -772,7 +743,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlByte Xor(System.Data.SqlTypes.SqlByte x, System.Data.SqlTypes.SqlByte y) { return default(System.Data.SqlTypes.SqlByte); }
   }
-
   public sealed partial class SqlBytes : System.Data.SqlTypes.INullable {
     public SqlBytes() { }
     public SqlBytes(byte[] buffer) { }
@@ -794,7 +764,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlBinary ToSqlBinary() { return default(System.Data.SqlTypes.SqlBinary); }
     public void Write(long offset, byte[] buffer, int offsetInBuffer, int count) { }
   }
-
   public sealed partial class SqlChars : System.Data.SqlTypes.INullable {
     public SqlChars() { }
     public SqlChars(char[] buffer) { }
@@ -814,7 +783,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public void Write(long offset, char[] buffer, int offsetInBuffer, int count) { }
   }
-
   [System.FlagsAttribute]
   public enum SqlCompareOptions {
     BinarySort = 32768,
@@ -825,7 +793,6 @@ namespace System.Data.SqlTypes {
     IgnoreWidth = 16,
     None = 0,
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlDateTime : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlDateTime MaxValue;
@@ -871,7 +838,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlDecimal : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly byte MaxPrecision;
@@ -952,7 +918,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlDecimal Truncate(System.Data.SqlTypes.SqlDecimal n, int position) { return default(System.Data.SqlTypes.SqlDecimal); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlDouble : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlDouble MaxValue;
@@ -1010,7 +975,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlGuid : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlGuid Null;
@@ -1046,7 +1010,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlInt16 : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlInt16 MaxValue;
@@ -1115,7 +1078,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlInt16 Xor(System.Data.SqlTypes.SqlInt16 x, System.Data.SqlTypes.SqlInt16 y) { return default(System.Data.SqlTypes.SqlInt16); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlInt32 : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlInt32 MaxValue;
@@ -1184,7 +1146,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlInt32 Xor(System.Data.SqlTypes.SqlInt32 x, System.Data.SqlTypes.SqlInt32 y) { return default(System.Data.SqlTypes.SqlInt32); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlInt64 : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlInt64 MaxValue;
@@ -1253,7 +1214,6 @@ namespace System.Data.SqlTypes {
     public override string ToString() { return default(string); }
     public static System.Data.SqlTypes.SqlInt64 Xor(System.Data.SqlTypes.SqlInt64 x, System.Data.SqlTypes.SqlInt64 y) { return default(System.Data.SqlTypes.SqlInt64); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlMoney : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlMoney MaxValue;
@@ -1320,13 +1280,11 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class SqlNullValueException : System.Data.SqlTypes.SqlTypeException {
     public SqlNullValueException() { }
     public SqlNullValueException(string message) { }
     public SqlNullValueException(string message, System.Exception e) { }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlSingle : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly System.Data.SqlTypes.SqlSingle MaxValue;
@@ -1385,7 +1343,6 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlString ToSqlString() { return default(System.Data.SqlTypes.SqlString); }
     public override string ToString() { return default(string); }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SqlString : System.Data.SqlTypes.INullable, System.IComparable {
     public static readonly int BinarySort;
@@ -1457,19 +1414,16 @@ namespace System.Data.SqlTypes {
     public System.Data.SqlTypes.SqlSingle ToSqlSingle() { return default(System.Data.SqlTypes.SqlSingle); }
     public override string ToString() { return default(string); }
   }
-
   public sealed partial class SqlTruncateException : System.Data.SqlTypes.SqlTypeException {
     public SqlTruncateException() { }
     public SqlTruncateException(string message) { }
     public SqlTruncateException(string message, System.Exception e) { }
   }
-
   public partial class SqlTypeException : System.Exception {
     public SqlTypeException() { }
     public SqlTypeException(string message) { }
     public SqlTypeException(string message, System.Exception e) { }
   }
-
   public sealed partial class SqlXml : System.Data.SqlTypes.INullable {
     public SqlXml() { }
     public SqlXml(System.IO.Stream value) { }
@@ -1479,5 +1433,4 @@ namespace System.Data.SqlTypes {
     public string Value { get { return default(string); } }
     public System.Xml.XmlReader CreateReader() { return default(System.Xml.XmlReader); }
   }
-
 } // end of System.Data.SqlTypes

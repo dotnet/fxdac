@@ -66,7 +66,6 @@ namespace System.Diagnostics.Contracts {
         public static T ValueAtReturn<T>(out T value) { value = default(T); return default(T); }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class ContractAbbreviatorAttribute : System.Attribute
@@ -74,14 +73,12 @@ namespace System.Diagnostics.Contracts {
         public ContractAbbreviatorAttribute() { }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class ContractArgumentValidatorAttribute : System.Attribute
     {
         public ContractArgumentValidatorAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5124), AllowMultiple = false, Inherited = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
@@ -92,7 +89,6 @@ namespace System.Diagnostics.Contracts {
         public System.Type TypeContainingContracts { get { return default(System.Type); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), AllowMultiple = false, Inherited = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class ContractClassForAttribute : System.Attribute
@@ -100,7 +96,6 @@ namespace System.Diagnostics.Contracts {
         public ContractClassForAttribute(System.Type typeContractsAreFor) { }
         public System.Type TypeContractsAreFor { get { return default(System.Type); } }
     }
-
 
     public sealed partial class ContractFailedEventArgs : System.EventArgs
     {
@@ -118,7 +113,6 @@ namespace System.Diagnostics.Contracts {
         public void SetUnwind() { }
     }
 
-
     public enum ContractFailureKind
     {
         Assert = 4,
@@ -129,14 +123,12 @@ namespace System.Diagnostics.Contracts {
         Precondition = 0,
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class ContractInvariantMethodAttribute : System.Attribute
     {
         public ContractInvariantMethodAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), AllowMultiple = true, Inherited = false)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
@@ -150,7 +142,6 @@ namespace System.Diagnostics.Contracts {
         public string Value { get { return default(string); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(256))]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class ContractPublicPropertyNameAttribute : System.Attribute
@@ -159,13 +150,11 @@ namespace System.Diagnostics.Contracts {
         public string Name { get { return default(string); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1))]
     public sealed partial class ContractReferenceAssemblyAttribute : System.Attribute
     {
         public ContractReferenceAssemblyAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(192), AllowMultiple = false, Inherited = true)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
@@ -173,7 +162,6 @@ namespace System.Diagnostics.Contracts {
     {
         public ContractRuntimeIgnoredAttribute() { }
     }
-
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(237))]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
@@ -183,14 +171,12 @@ namespace System.Diagnostics.Contracts {
         public bool Value { get { return default(bool); } }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(6884), AllowMultiple = false, Inherited = true)]
     [System.Diagnostics.ConditionalAttribute("CONTRACTS_FULL")]
     public sealed partial class PureAttribute : System.Attribute
     {
         public PureAttribute() { }
     }
-
 } // end of System.Diagnostics.Contracts
 namespace System.Diagnostics.Contracts.Internal {
     [System.ObsoleteAttribute("Use the ContractHelper class in the System.Runtime.CompilerServices namespace instead.")]
@@ -203,7 +189,6 @@ namespace System.Diagnostics.Contracts.Internal {
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, System.Exception innerException) { }
     }
-
 } // end of System.Diagnostics.Contracts.Internal
 namespace System.Runtime.CompilerServices {
 
@@ -216,5 +201,4 @@ namespace System.Runtime.CompilerServices {
         [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, System.Exception innerException) { }
     }
-
 } // end of System.Runtime.CompilerServices

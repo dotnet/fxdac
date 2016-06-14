@@ -11,7 +11,6 @@ namespace System.Diagnostics {
     public override void TraceEvent(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message) { }
     public override void TraceEvent(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args) { }
   }
-
   public partial class TextWriterTraceListener : System.Diagnostics.TraceListener {
     public TextWriterTraceListener() { }
     public TextWriterTraceListener(System.IO.Stream stream) { }
@@ -24,5 +23,4 @@ namespace System.Diagnostics {
     public override void Write(string message) { }
     public override void WriteLine(string message) { }
   }
-
 } // end of System.Diagnostics

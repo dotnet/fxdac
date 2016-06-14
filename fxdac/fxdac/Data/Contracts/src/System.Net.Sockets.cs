@@ -39,7 +39,6 @@ namespace System.Net.Sockets {
         UnicastInterface = (long)2550136838,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct IPPacketInformation
     {
@@ -51,7 +50,6 @@ namespace System.Net.Sockets {
         public static bool operator !=(System.Net.Sockets.IPPacketInformation p1, System.Net.Sockets.IPPacketInformation p2) { return default(bool); }
     }
 
-
     public partial class IPv6MulticastOption
     {
         public IPv6MulticastOption(System.Net.IPAddress group) { }
@@ -60,14 +58,12 @@ namespace System.Net.Sockets {
         public long InterfaceIndex { get { return default(long); } set { } }
     }
 
-
     public partial class LingerOption
     {
         public LingerOption(bool enable, int seconds) { }
         public bool Enabled { get { return default(bool); } set { } }
         public int LingerTime { get { return default(int); } set { } }
     }
-
 
     public partial class MulticastOption
     {
@@ -78,7 +74,6 @@ namespace System.Net.Sockets {
         public int InterfaceIndex { get { return default(int); } set { } }
         public System.Net.IPAddress LocalAddress { get { return default(System.Net.IPAddress); } set { } }
     }
-
 
     public partial class NetworkStream : System.IO.Stream, System.IDisposable
     {
@@ -115,7 +110,6 @@ namespace System.Net.Sockets {
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int size, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
 
-
     public enum ProtocolFamily
     {
         AppleTalk = 16,
@@ -151,7 +145,6 @@ namespace System.Net.Sockets {
         VoiceView = 18,
     }
 
-
     public enum ProtocolType
     {
         Ggp = 3,
@@ -181,14 +174,12 @@ namespace System.Net.Sockets {
         Unspecified = 0,
     }
 
-
     public enum SelectMode
     {
         SelectError = 2,
         SelectRead = 0,
         SelectWrite = 1,
     }
-
 
     public partial class SendPacketsElement
     {
@@ -204,7 +195,6 @@ namespace System.Net.Sockets {
         public string FilePath { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(string); } }
         public int Offset { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(int); } }
     }
-
 
     public partial class Socket : System.IDisposable
     {
@@ -344,7 +334,6 @@ namespace System.Net.Sockets {
         public static bool ConnectAsync(System.Net.Sockets.SocketType socketType, System.Net.Sockets.ProtocolType protocolType, System.Net.Sockets.SocketAsyncEventArgs e) { return default(bool); }
     }
 
-
     public partial class SocketAsyncEventArgs : System.EventArgs, System.IDisposable
     {
         public SocketAsyncEventArgs() { }
@@ -373,7 +362,6 @@ namespace System.Net.Sockets {
         public System.Net.Sockets.SendPacketsElement[] SendPacketsElements { get { return default(System.Net.Sockets.SendPacketsElement[]); } set { } }
     }
 
-
     public enum SocketAsyncOperation
     {
         Accept = 1,
@@ -387,7 +375,6 @@ namespace System.Net.Sockets {
         SendPackets = 8,
         SendTo = 9,
     }
-
 
     [System.FlagsAttribute]
     public enum SocketFlags
@@ -404,14 +391,12 @@ namespace System.Net.Sockets {
         Truncated = 256,
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SocketInformation
     {
         public System.Net.Sockets.SocketInformationOptions Options { get { return default(System.Net.Sockets.SocketInformationOptions); } set { } }
         public byte[] ProtocolInformation { get { return default(byte[]); } set { } }
     }
-
 
     [System.FlagsAttribute]
     public enum SocketInformationOptions
@@ -422,7 +407,6 @@ namespace System.Net.Sockets {
         UseOnlyOverlappedIO = 8,
     }
 
-
     public enum SocketOptionLevel
     {
         IP = 0,
@@ -431,7 +415,6 @@ namespace System.Net.Sockets {
         Tcp = 6,
         Udp = 17,
     }
-
 
     public enum SocketOptionName
     {
@@ -482,14 +465,12 @@ namespace System.Net.Sockets {
         UseLoopback = 64,
     }
 
-
     public enum SocketShutdown
     {
         Both = 2,
         Receive = 0,
         Send = 1,
     }
-
 
     public enum SocketType
     {
@@ -500,7 +481,6 @@ namespace System.Net.Sockets {
         Stream = 1,
         Unknown = -1,
     }
-
 
     public partial class TcpClient : System.IDisposable
     {
@@ -538,7 +518,6 @@ namespace System.Net.Sockets {
         public void Dispose() { }
     }
 
-
     public partial class TcpListener
     {
         [System.ObsoleteAttribute("Use TcpListener (IPAddress address, int port) instead")]
@@ -564,7 +543,6 @@ namespace System.Net.Sockets {
         public void Stop() { }
     }
 
-
     [System.FlagsAttribute]
     public enum TransmitFileOptions
     {
@@ -575,7 +553,6 @@ namespace System.Net.Sockets {
         UseSystemThread = 16,
         WriteBehind = 4,
     }
-
 
     public partial class UdpClient : System.IDisposable
     {
@@ -623,7 +600,6 @@ namespace System.Net.Sockets {
         public void Dispose() { }
     }
 
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential, Size = 1)]
     public partial struct UdpReceiveResult : System.IEquatable<System.Net.Sockets.UdpReceiveResult>
     {
@@ -636,20 +612,17 @@ namespace System.Net.Sockets {
         public static bool operator ==(System.Net.Sockets.UdpReceiveResult left, System.Net.Sockets.UdpReceiveResult right) { return default(bool); }
         public static bool operator !=(System.Net.Sockets.UdpReceiveResult left, System.Net.Sockets.UdpReceiveResult right) { return default(bool); }
     }
-
   public enum IPProtectionLevel {
     EdgeRestricted = 20,
     Restricted = 30,
     Unrestricted = 10,
     Unspecified = -1,
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SocketReceiveFromResult {
     public int ReceivedBytes;
     public System.Net.EndPoint RemoteEndPoint;
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct SocketReceiveMessageFromResult {
     public System.Net.Sockets.IPPacketInformation PacketInformation;
@@ -657,7 +630,6 @@ namespace System.Net.Sockets {
     public System.Net.EndPoint RemoteEndPoint;
     public System.Net.Sockets.SocketFlags SocketFlags;
   }
-
   public static partial class SocketTaskExtensions {
     public static System.Threading.Tasks.Task<System.Net.Sockets.Socket> AcceptAsync(this System.Net.Sockets.Socket socket) { return default(System.Threading.Tasks.Task<System.Net.Sockets.Socket>); }
     public static System.Threading.Tasks.Task<System.Net.Sockets.Socket> AcceptAsync(this System.Net.Sockets.Socket socket, System.Net.Sockets.Socket acceptSocket) { return default(System.Threading.Tasks.Task<System.Net.Sockets.Socket>); }
@@ -673,5 +645,4 @@ namespace System.Net.Sockets {
     public static System.Threading.Tasks.Task<int> SendAsync(this System.Net.Sockets.Socket socket, System.Collections.Generic.IList<System.ArraySegment<byte>> buffers, System.Net.Sockets.SocketFlags socketFlags) { return default(System.Threading.Tasks.Task<int>); }
     public static System.Threading.Tasks.Task<int> SendToAsync(this System.Net.Sockets.Socket socket, System.ArraySegment<byte> buffer, System.Net.Sockets.SocketFlags socketFlags, System.Net.EndPoint remoteEP) { return default(System.Threading.Tasks.Task<int>); }
   }
-
 } // end of System.Net.Sockets

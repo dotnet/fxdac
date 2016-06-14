@@ -82,7 +82,6 @@ namespace System.IO {
         public void WriteArray<T>(long position, T[] array, int offset, int count) where T : struct { }
     }
 
-
     public partial class UnmanagedMemoryStream : System.IO.Stream
     {
         [System.Security.SecuritySafeCriticalAttribute]
@@ -131,5 +130,4 @@ namespace System.IO {
         [System.Security.SecuritySafeCriticalAttribute]
         public override void WriteByte(byte value) { }
     }
-
 } // end of System.IO

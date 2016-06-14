@@ -6,9 +6,7 @@ namespace System.Timers {
         public System.DateTime SignalTime { get { return default(System.DateTime); } }
     }
 
-
     public delegate void ElapsedEventHandler(object sender, System.Timers.ElapsedEventArgs e);
-
 
     [System.ComponentModel.DefaultEventAttribute("Elapsed")]
     [System.ComponentModel.DefaultPropertyAttribute("Interval")]
@@ -45,12 +43,10 @@ namespace System.Timers {
         public void Stop() { }
     }
 
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public partial class TimersDescriptionAttribute : System.ComponentModel.DescriptionAttribute
     {
         public TimersDescriptionAttribute(string description) { }
         public override string Description { get { return default(string); } }
     }
-
 } // end of System.Timers

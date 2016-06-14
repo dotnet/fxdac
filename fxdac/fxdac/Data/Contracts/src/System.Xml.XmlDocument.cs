@@ -25,7 +25,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public sealed partial class XmlAttributeCollection : System.Xml.XmlNamedNodeMap, System.Collections.ICollection, System.Collections.IEnumerable {
     internal XmlAttributeCollection() { }
     [System.Runtime.CompilerServices.IndexerName("ItemOf")]
@@ -48,7 +47,6 @@ namespace System.Xml {
     public override System.Xml.XmlNode SetNamedItem(System.Xml.XmlNode node) { return default(System.Xml.XmlNode); }
     void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
   }
-
   public partial class XmlCDataSection : System.Xml.XmlCharacterData {
     protected internal XmlCDataSection(string data, System.Xml.XmlDocument doc) : base (default(string), default(System.Xml.XmlDocument)) { }
     public override string LocalName { get { return default(string); } }
@@ -60,7 +58,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public abstract partial class XmlCharacterData : System.Xml.XmlLinkedNode {
     protected internal XmlCharacterData(string data, System.Xml.XmlDocument doc) { }
     public virtual string Data { get { return default(string); } set { } }
@@ -72,7 +69,6 @@ namespace System.Xml {
     public virtual void ReplaceData(int offset, int count, string strData) { }
     public virtual string Substring(int offset, int count) { return default(string); }
   }
-
   public partial class XmlComment : System.Xml.XmlCharacterData {
     protected internal XmlComment(string comment, System.Xml.XmlDocument doc) : base (default(string), default(System.Xml.XmlDocument)) { }
     public override string LocalName { get { return default(string); } }
@@ -82,7 +78,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlDeclaration : System.Xml.XmlLinkedNode {
     protected internal XmlDeclaration(string version, string encoding, string standalone, System.Xml.XmlDocument doc) { }
     public string Encoding { get { return default(string); } set { } }
@@ -97,7 +92,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlDocument : System.Xml.XmlNode {
     public XmlDocument() { }
     protected internal XmlDocument(System.Xml.XmlImplementation imp) { }
@@ -153,7 +147,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter xw) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlDocumentFragment : System.Xml.XmlNode {
     protected internal XmlDocumentFragment(System.Xml.XmlDocument ownerDocument) { }
     public override string InnerXml { get { return default(string); } set { } }
@@ -166,7 +159,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlElement : System.Xml.XmlLinkedNode {
     protected internal XmlElement(string prefix, string localName, string namespaceURI, System.Xml.XmlDocument doc) { }
     public override System.Xml.XmlAttributeCollection Attributes { get { return default(System.Xml.XmlAttributeCollection); } }
@@ -205,20 +197,17 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlImplementation {
     public XmlImplementation() { }
     public XmlImplementation(System.Xml.XmlNameTable nt) { }
     public virtual System.Xml.XmlDocument CreateDocument() { return default(System.Xml.XmlDocument); }
     public bool HasFeature(string strFeature, string strVersion) { return default(bool); }
   }
-
   public abstract partial class XmlLinkedNode : System.Xml.XmlNode {
     internal XmlLinkedNode() { }
     public override System.Xml.XmlNode NextSibling { get { return default(System.Xml.XmlNode); } }
     public override System.Xml.XmlNode PreviousSibling { get { return default(System.Xml.XmlNode); } }
   }
-
   public partial class XmlNamedNodeMap : System.Collections.IEnumerable {
     internal XmlNamedNodeMap() { }
     public virtual int Count { get { return default(int); } }
@@ -230,7 +219,6 @@ namespace System.Xml {
     public virtual System.Xml.XmlNode RemoveNamedItem(string localName, string namespaceURI) { return default(System.Xml.XmlNode); }
     public virtual System.Xml.XmlNode SetNamedItem(System.Xml.XmlNode node) { return default(System.Xml.XmlNode); }
   }
-
   public abstract partial class XmlNode : System.Collections.IEnumerable {
     internal XmlNode() { }
     public virtual System.Xml.XmlAttributeCollection Attributes { get { return default(System.Xml.XmlAttributeCollection); } }
@@ -273,13 +261,11 @@ namespace System.Xml {
     public abstract void WriteContentTo(System.Xml.XmlWriter w);
     public abstract void WriteTo(System.Xml.XmlWriter w);
   }
-
   public enum XmlNodeChangedAction {
     Change = 2,
     Insert = 0,
     Remove = 1,
   }
-
   public partial class XmlNodeChangedEventArgs : System.EventArgs {
     public XmlNodeChangedEventArgs(System.Xml.XmlNode node, System.Xml.XmlNode oldParent, System.Xml.XmlNode newParent, string oldValue, string newValue, System.Xml.XmlNodeChangedAction action) { }
     public System.Xml.XmlNodeChangedAction Action { get { return default(System.Xml.XmlNodeChangedAction); } }
@@ -289,9 +275,7 @@ namespace System.Xml {
     public System.Xml.XmlNode OldParent { get { return default(System.Xml.XmlNode); } }
     public string OldValue { get { return default(string); } }
   }
-
   public delegate void XmlNodeChangedEventHandler(object sender, System.Xml.XmlNodeChangedEventArgs e);
-
   public abstract partial class XmlNodeList : System.Collections.IEnumerable, System.IDisposable {
     protected XmlNodeList() { }
     public abstract int Count { get; }
@@ -302,7 +286,6 @@ namespace System.Xml {
     protected virtual void PrivateDisposeNodeList() { }
     void System.IDisposable.Dispose() { }
   }
-
   public partial class XmlProcessingInstruction : System.Xml.XmlLinkedNode {
     protected internal XmlProcessingInstruction(string target, string data, System.Xml.XmlDocument doc) { }
     public string Data { get { return default(string); } set { } }
@@ -316,7 +299,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlSignificantWhitespace : System.Xml.XmlCharacterData {
     protected internal XmlSignificantWhitespace(string strData, System.Xml.XmlDocument doc) : base (default(string), default(System.Xml.XmlDocument)) { }
     public override string LocalName { get { return default(string); } }
@@ -329,7 +311,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlText : System.Xml.XmlCharacterData {
     protected internal XmlText(string strData, System.Xml.XmlDocument doc) : base (default(string), default(System.Xml.XmlDocument)) { }
     public override string LocalName { get { return default(string); } }
@@ -343,7 +324,6 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
   public partial class XmlWhitespace : System.Xml.XmlCharacterData {
     protected internal XmlWhitespace(string strData, System.Xml.XmlDocument doc) : base (default(string), default(System.Xml.XmlDocument)) { }
     public override string LocalName { get { return default(string); } }
@@ -356,5 +336,4 @@ namespace System.Xml {
     public override void WriteContentTo(System.Xml.XmlWriter w) { }
     public override void WriteTo(System.Xml.XmlWriter w) { }
   }
-
 } // end of System.Xml

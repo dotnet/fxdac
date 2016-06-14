@@ -7,7 +7,6 @@ namespace System {
         internal LocalDataStoreSlot() { }
         ~LocalDataStoreSlot() { }
     }
-
 } // end of System
 namespace System.Threading {
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -24,7 +23,6 @@ namespace System.Threading {
         public int MutexIndex { get { return default(int); } }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ApartmentState
     {
@@ -32,7 +30,6 @@ namespace System.Threading {
         STA = 0,
         Unknown = 2,
     }
-
 
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct AsyncFlowControl : System.IDisposable
@@ -47,13 +44,11 @@ namespace System.Threading {
         public void Undo() { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AutoResetEvent : System.Threading.EventWaitHandle
     {
         public AutoResetEvent(bool initialState) : base(default(bool), default(System.Threading.EventResetMode)) { }
     }
-
 
     public sealed partial class CompressedStack : System.Runtime.Serialization.ISerializable
     {
@@ -68,7 +63,6 @@ namespace System.Threading {
         [System.Security.SecurityCriticalAttribute]
         public static void Run(System.Threading.CompressedStack compressedStack, System.Threading.ContextCallback callback, object state) { }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Initial Count={InitialCount}, Current Count={CurrentCount}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -97,14 +91,12 @@ namespace System.Threading {
         public bool Wait(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum EventResetMode
     {
         AutoReset = 0,
         ManualReset = 1,
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EventWaitHandle : System.Threading.WaitHandle
@@ -117,7 +109,6 @@ namespace System.Threading {
         public bool Set() { return default(bool); }
         public static bool TryOpenExisting(string name, out System.Threading.EventWaitHandle result) { result = default(System.Threading.EventWaitHandle); return default(bool); }
     }
-
 
     public sealed partial class ExecutionContext : System.IDisposable, System.Runtime.Serialization.ISerializable
     {
@@ -137,7 +128,6 @@ namespace System.Threading {
         [System.Security.SecurityCriticalAttribute]
         public static System.Threading.AsyncFlowControl SuppressFlow() { return default(System.Threading.AsyncFlowControl); }
     }
-
 
     public static partial class Interlocked
     {
@@ -179,7 +169,6 @@ namespace System.Threading {
         public static void MemoryBarrier() { }
         public static long Read(ref long location) { return default(long); }
     }
-
     public static partial class LazyInitializer
     {
         public static T EnsureInitialized<T>(ref T target) where T : class { return default(T); }
@@ -187,7 +176,6 @@ namespace System.Threading {
         public static T EnsureInitialized<T>(ref T target, ref bool initialized, ref object syncLock, System.Func<T> valueFactory) { return default(T); }
         public static T EnsureInitialized<T>(ref T target, System.Func<T> valueFactory) where T : class { return default(T); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -199,7 +187,6 @@ namespace System.Threading {
         public static bool operator ==(System.Threading.LockCookie a, System.Threading.LockCookie b) { return default(bool); }
         public static bool operator !=(System.Threading.LockCookie a, System.Threading.LockCookie b) { return default(bool); }
     }
-
     public partial class LockRecursionException : System.Exception
     {
         public LockRecursionException() { }
@@ -208,13 +195,11 @@ namespace System.Threading {
         public LockRecursionException(string message, System.Exception innerException) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ManualResetEvent : System.Threading.EventWaitHandle
     {
         public ManualResetEvent(bool initialState) : base(default(bool), default(System.Threading.EventResetMode)) { }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Set = {IsSet}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -237,7 +222,6 @@ namespace System.Threading {
         public bool Wait(System.TimeSpan timeout) { return default(bool); }
         public bool Wait(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Monitor
@@ -262,7 +246,6 @@ namespace System.Threading {
         public static bool Wait(object obj, System.TimeSpan timeout, bool exitContext) { return default(bool); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Mutex : System.Threading.WaitHandle
     {
@@ -277,7 +260,6 @@ namespace System.Threading {
         public void ReleaseMutex() { }
         public static bool TryOpenExisting(string name, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReaderWriterLock : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
@@ -303,7 +285,6 @@ namespace System.Threading {
         public System.Threading.LockCookie UpgradeToWriterLock(System.TimeSpan timeout) { return default(System.Threading.LockCookie); }
     }
 
-
     [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class SemaphoreFullException : System.SystemException
@@ -313,7 +294,6 @@ namespace System.Threading {
         public SemaphoreFullException(string message) { }
         public SemaphoreFullException(string message, System.Exception innerException) { }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("Current Count = {m_currentCount}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -341,9 +321,7 @@ namespace System.Threading {
         public System.Threading.Tasks.Task<bool> WaitAsync(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<bool>); }
     }
 
-
     public delegate void SendOrPostCallback(object state);
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("IsHeld = {IsHeld}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
@@ -363,7 +341,6 @@ namespace System.Threading {
         public void TryEnter(int millisecondsTimeout, ref bool lockTaken) { }
         public void TryEnter(System.TimeSpan timeout, ref bool lockTaken) { }
     }
-
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SpinWait
     {
@@ -375,7 +352,6 @@ namespace System.Threading {
         public static bool SpinUntil(System.Func<bool> condition, int millisecondsTimeout) { return default(bool); }
         public static bool SpinUntil(System.Func<bool> condition, System.TimeSpan timeout) { return default(bool); }
     }
-
     public partial class SynchronizationContext
     {
         public SynchronizationContext() { }
@@ -404,7 +380,6 @@ namespace System.Threading {
         protected static int WaitHelper(System.IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout) { return default(int); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SynchronizationLockException : System.SystemException
     {
@@ -414,13 +389,11 @@ namespace System.Threading {
         public SynchronizationLockException(string message, System.Exception innerException) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ThreadAbortException : System.SystemException
     {
         internal ThreadAbortException() { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ThreadInterruptedException : System.SystemException
@@ -430,7 +403,6 @@ namespace System.Threading {
         public ThreadInterruptedException(string message) { }
         public ThreadInterruptedException(string message, System.Exception innerException) { }
     }
-
 
     [System.Diagnostics.DebuggerDisplayAttribute("IsValueCreated={IsValueCreated}, Value={ValueForDebugDisplay}, Count={ValuesCountForDebugDisplay}")]
     public partial class ThreadLocal<T> : System.IDisposable
@@ -449,7 +421,6 @@ namespace System.Threading {
         public override string ToString() { return default(string); }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ThreadPriority
     {
@@ -459,7 +430,6 @@ namespace System.Threading {
         Lowest = 0,
         Normal = 2,
     }
-
 
     public static partial class Volatile
     {
@@ -531,7 +501,6 @@ namespace System.Threading {
         public static void Write<T>(ref T location, T value) where T : class { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class WaitHandleCannotBeOpenedException : System.ApplicationException
     {
@@ -540,7 +509,6 @@ namespace System.Threading {
         public WaitHandleCannotBeOpenedException(string message) { }
         public WaitHandleCannotBeOpenedException(string message, System.Exception innerException) { }
     }
-
     [System.Diagnostics.DebuggerDisplayAttribute("Participant Count={ParticipantCount},Participants Remaining={ParticipantsRemaining}")]
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Barrier : System.IDisposable
@@ -564,7 +532,6 @@ namespace System.Threading {
         public bool SignalAndWait(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(bool); }
     }
 
-
     public partial class BarrierPostPhaseException : System.Exception
     {
         public BarrierPostPhaseException() { }
@@ -574,7 +541,6 @@ namespace System.Threading {
         public BarrierPostPhaseException(string message) { }
         public BarrierPostPhaseException(string message, System.Exception innerException) { }
     }
-
 
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class Semaphore : System.Threading.WaitHandle
@@ -590,13 +556,11 @@ namespace System.Threading {
         public int Release(int releaseCount) { return default(int); }
         public static bool TryOpenExisting(string name, out System.Threading.Semaphore result) { result = default(System.Threading.Semaphore); return default(bool); }
     }
-
     public enum LockRecursionPolicy
     {
         NoRecursion = 0,
         SupportsRecursion = 1,
     }
-
     public partial class ReaderWriterLockSlim : System.IDisposable
     {
         public ReaderWriterLockSlim() { }
@@ -626,19 +590,16 @@ namespace System.Threading {
         public bool TryEnterWriteLock(int millisecondsTimeout) { return default(bool); }
         public bool TryEnterWriteLock(System.TimeSpan timeout) { return default(bool); }
     }
-
   public sealed partial class AsyncLocal<T> {
     public AsyncLocal() { }
     [System.Security.SecurityCriticalAttribute]
     public AsyncLocal(System.Action<System.Threading.AsyncLocalValueChangedArgs<T>> valueChangedHandler) { }
     public T Value { get { return default(T); } set { } }
   }
-
   [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
   public partial struct AsyncLocalValueChangedArgs<T> {
     public T CurrentValue { get { return default(T); } }
     public T PreviousValue { get { return default(T); } }
     public bool ThreadContextChanged { get { return default(bool); } }
   }
-
 } // end of System.Threading

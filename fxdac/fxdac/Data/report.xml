@@ -105,13 +105,9 @@
     <item text="Removed member Semaphore.TryOpenExisting(string, System.Security.AccessControl.SemaphoreRights, System.Threading.Semaphore):bool"/>
   </REMOVED>
   <MOVED_TYPES total="206" description="corefx types that changed their location">
-    <MOVED_VALID total="41" description="moves that have been deemed ok (list hardcoded)">
-    </MOVED_VALID>
-    <MOVED_TO_SYSTEM_RUNTIME total="165" description="all moves to System.Runtime are OK">
-    </MOVED_TO_SYSTEM_RUNTIME>
+  <MOVED_VALID total="41" description="moves that have been deemed ok (list hardcoded)"/>
+  <MOVED_TO_SYSTEM_RUNTIME total="165" description="all moves to System.Runtime are OK"/>
   </MOVED_TYPES>
-  <ORPHANED_TYPES description="Orphaned types are types in the specifications that don't exist in master source.">
-  </ORPHANED_TYPES>
   <TYPES_NOT_IN_ANY_ASSEMBLY total="1" description="types that are not in specification files">
     <item text="System.ArgIterator"/>
   </TYPES_NOT_IN_ANY_ASSEMBLY>

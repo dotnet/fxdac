@@ -12,11 +12,9 @@ namespace System.Deployment.Internal {
         public static void PrepareForExecution(System.ActivationContext appInfo) { }
     }
 
-
     [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public static partial class InternalApplicationIdentityHelper
     {
         public static object GetInternalAppId(System.ApplicationIdentity id) { return default(object); }
     }
-
 } // end of System.Deployment.Internal

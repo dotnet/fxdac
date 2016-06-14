@@ -134,17 +134,16 @@ static class Program
 
     static void PrintOrphanedTypes(FxRedist redist, ReportWriter reportWriter)
     {
-        if (s_logOrphanedTypes) {
+        var assembliesWithOrphanedTypes = redist.Where((a) => a.Value.OrphanedTypes.Count != 0).Select((a) => a.Value).ToList();
+        if (s_logOrphanedTypes && assembliesWithOrphanedTypes.Count != 0) {
             reportWriter.WriteListStart("ORPHANED_TYPES", "description", "Orphaned types are types in the specifications that don't exist in master source.");
-            foreach (var assembly in redist.Values) {
+            foreach (var assembly in assembliesWithOrphanedTypes) {
                 var orphanedTypes = assembly.OrphanedTypes;
-                if (orphanedTypes.Count > 0) {
-                    WriteMessage(ConsoleColor.Yellow, "Orphaned types in {0}", assembly.Name);
+                WriteMessage(ConsoleColor.Yellow, "Orphaned types in {0}", assembly.Name);
 
-                    foreach (var type in orphanedTypes) {
-                        reportWriter.WriteListItem("{0}", type);                         
-                    }
-                }
+                foreach (var type in orphanedTypes) {
+                    reportWriter.WriteListItem("{0}", type);                         
+                }               
             }
             reportWriter.WriteListEnd();
         }
@@ -243,7 +242,7 @@ static class Program
                 sw.WriteLine("namespace {0} {{", ns.Key);
                 foreach (var type in ns.Value) {
                     if (type.Declaration != null) {
-                        sw.WriteLine(type.Declaration.ToFullString());
+                        sw.Write(type.Declaration.ToFullString());
                     }
                 }
                 sw.WriteLine("}} // end of {0}", ns.Key);
