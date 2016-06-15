@@ -4,6 +4,7 @@
 /r:System.ComponentModel.TypeConverter.dll
 /r:System.Collections.Specialized.dll
 /r:System.Diagnostics.FileVersionInfo.dll
+/r:System.Security.SecureString.dll
 
 System.Diagnostics.DataReceivedEventArgs
 System.Diagnostics.DataReceivedEventHandler
