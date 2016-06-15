@@ -13,6 +13,11 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return typeName.StartsWith("System.Runtime.InteropServices._") ||
         typeName.StartsWith("Mono.Runtime");
     });
+    public static string[] s_MembersToRemove = new string[] {
+        "RuntimeHelpers.Prepare*",
+        "RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup*",
+        "RuntimeHelpers.ProbeForSufficientStack*"
+    };
 
     public static Predicate<string> s_IsInternalAttribute = new Predicate<string>((attributeName) => {
         return
@@ -164,7 +169,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
                     if(members.Length < 1) { break; }
                     
                     foreach(var member in members) { 
-                        if (DoesMemberDependOn(member, dependency)) {
+                        if (DoesMemberDependOn(member, dependency) || ShouldRemoveMember(member)) {
                             removeMore = true;
                             _reportWriter.WriteListItem("Removed member {0}", FormatMember(member));
                             newNode = newNode.RemoveNode(member, SyntaxRemoveOptions.KeepNoTrivia);
@@ -178,6 +183,21 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return newNode;
     }
 
+    private bool ShouldRemoveMember(MemberDeclarationSyntax member)
+    {
+        var name = FormatMember(member);
+        foreach (var memberToRemove in s_MembersToRemove) {
+            if (memberToRemove.EndsWith("*")) {
+                if (name.StartsWith(memberToRemove.TrimEnd('*'), StringComparison.Ordinal)) {
+                    return true;
+                }
+            }
+            if(string.Equals(name, memberToRemove, StringComparison.Ordinal)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     private bool DoesMemberDependOn(MemberDeclarationSyntax member, string dependency)
     {
@@ -317,8 +337,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     private string FormatCtor(ConstructorDeclarationSyntax ctor)
     {
         var sb = new StringBuilder();
-        var type = (ClassDeclarationSyntax)ctor.Parent;
-        sb.Append(type.Identifier);
+        var typeName = GetIdentifier(ctor.Parent);
+        sb.Append(typeName);
         sb.Append('.');
         sb.Append("ctor");
         sb.Append('(');
@@ -334,8 +354,8 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
     private string FormatMethod(MethodDeclarationSyntax member)
     {
         var sb = new StringBuilder();
-        var type = (ClassDeclarationSyntax)member.Parent;
-        sb.Append(type.Identifier);
+        var typeName = GetIdentifier(member.Parent);
+        sb.Append(typeName);
         sb.Append('.');
         var eis = member.ExplicitInterfaceSpecifier;
         if (eis!=null) sb.Append(eis);
@@ -352,11 +372,18 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return sb.ToString();
     }
 
+
+    string GetIdentifier(SyntaxNode typeNode)
+    {
+        var ct = typeNode as TypeDeclarationSyntax;
+        if (ct != null) return ct.Identifier.ToString();
+        return "<n/a>";
+    }
     private string FormatProperty(PropertyDeclarationSyntax member)
     {
         var sb = new StringBuilder();
-        var type = (ClassDeclarationSyntax)member.Parent;
-        sb.Append(type.Identifier);
+        var typeName = GetIdentifier(member.Parent);
+        sb.Append(typeName);
         sb.Append('.');
         var eis = member.ExplicitInterfaceSpecifier;
         if (eis != null) sb.Append(eis);
