@@ -1,6 +1,8 @@
 /r:System.Runtime.dll
 /r:System.IO.dll
 
+System.DBNull
+
 System.Data.CommandBehavior
 System.Data.CommandType
 System.Data.ConnectionState
