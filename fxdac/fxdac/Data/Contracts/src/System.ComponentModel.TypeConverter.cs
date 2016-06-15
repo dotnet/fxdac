@@ -44,8 +44,6 @@ namespace System.ComponentModel {
         public override System.ComponentModel.PropertyDescriptorCollection GetProperties(System.ComponentModel.ITypeDescriptorContext context, object value, System.Attribute[] attributes) { return default(System.ComponentModel.PropertyDescriptorCollection); }
         public override bool GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext context) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AttributeCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         public static readonly System.ComponentModel.AttributeCollection Empty;
@@ -220,8 +218,6 @@ namespace System.ComponentModel {
     }
 
     [System.ComponentModel.DesignerCategoryAttribute("Component")]
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(1))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Component :System.ComponentModel.IComponent, System.IDisposable
     {
         public Component() { }
@@ -450,8 +446,6 @@ namespace System.ComponentModel {
         public override bool GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext context) { return default(bool); }
         public override bool IsValid(System.ComponentModel.ITypeDescriptorContext context, object value) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class EventDescriptor : System.ComponentModel.MemberDescriptor
     {
         protected EventDescriptor(System.ComponentModel.MemberDescriptor descr) : base(default(string)) { }
@@ -463,8 +457,6 @@ namespace System.ComponentModel {
         public abstract void AddEventHandler(object component, System.Delegate value);
         public abstract void RemoveEventHandler(object component, System.Delegate value);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EventDescriptorCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         public static readonly System.ComponentModel.EventDescriptorCollection Empty;
@@ -626,7 +618,6 @@ namespace System.ComponentModel {
 
     [System.ComponentModel.EditorAttribute("System.Windows.Forms.Design.DataSourceListEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [System.ComponentModel.MergablePropertyAttribute(false)]
-    [System.ComponentModel.TypeConverterAttribute("System.Windows.Forms.Design.DataSourceConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     public partial interface IListSource
     {
         bool ContainsListCollection { get; }
@@ -732,8 +723,6 @@ namespace System.ComponentModel {
         object EndInvoke(System.IAsyncResult result);
         object Invoke(System.Delegate method, object[] args);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ITypeDescriptorContext : System.IServiceProvider
     {
         System.ComponentModel.IContainer Container { get; }
@@ -904,8 +893,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
     }
     [System.ComponentModel.DesignerCategoryAttribute("Component")]
-    [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.ComponentConverter))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MarshalByValueComponent : System.ComponentModel.IComponent, System.IDisposable, System.IServiceProvider
     {
         public MarshalByValueComponent() { }
@@ -1025,8 +1012,6 @@ namespace System.ComponentModel {
         UnavailableEditPosition = -53,
         Unknown = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MemberDescriptor
     {
         protected MemberDescriptor(System.ComponentModel.MemberDescriptor descr) { }
@@ -1102,8 +1087,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class PropertyDescriptor : System.ComponentModel.MemberDescriptor
     {
         protected PropertyDescriptor(System.ComponentModel.MemberDescriptor descr) : base(default(string)) { }
@@ -1346,8 +1329,6 @@ namespace System.ComponentModel {
         Prevent = 2,
         Require = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TypeConverter
     {
         public TypeConverter() { }
@@ -1608,8 +1589,6 @@ namespace System.ComponentModel.Design {
         public CheckoutException(string message, System.Exception innerException) { }
         public CheckoutException(string message, int errorCode) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CommandID
     {
         public CommandID(System.Guid menuGroup, int commandID) { }
@@ -1619,8 +1598,6 @@ namespace System.ComponentModel.Design {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComponentChangedEventArgs : System.EventArgs
     {
         public ComponentChangedEventArgs(object component, System.ComponentModel.MemberDescriptor member, object oldValue, object newValue) { }
@@ -1629,32 +1606,20 @@ namespace System.ComponentModel.Design {
         public object NewValue { get { return default(object); } }
         public object OldValue { get { return default(object); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ComponentChangedEventHandler(object sender, System.ComponentModel.Design.ComponentChangedEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComponentChangingEventArgs : System.EventArgs
     {
         public ComponentChangingEventArgs(object component, System.ComponentModel.MemberDescriptor member) { }
         public object Component { get { return default(object); } }
         public System.ComponentModel.MemberDescriptor Member { get { return default(System.ComponentModel.MemberDescriptor); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ComponentChangingEventHandler(object sender, System.ComponentModel.Design.ComponentChangingEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ComponentEventArgs : System.EventArgs
     {
         public ComponentEventArgs(System.ComponentModel.IComponent component) { }
         public virtual System.ComponentModel.IComponent Component { get { return default(System.ComponentModel.IComponent); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ComponentEventHandler(object sender, System.ComponentModel.Design.ComponentEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ComponentRenameEventArgs : System.EventArgs
     {
         public ComponentRenameEventArgs(object component, string oldName, string newName) { }
@@ -1662,8 +1627,6 @@ namespace System.ComponentModel.Design {
         public virtual string NewName { get { return default(string); } }
         public virtual string OldName { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ComponentRenameEventHandler(object sender, System.ComponentModel.Design.ComponentRenameEventArgs e);
     public partial class DesignerCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
@@ -1736,8 +1699,6 @@ namespace System.ComponentModel.Design {
         protected abstract void OnCommit();
         void System.IDisposable.Dispose() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DesignerTransactionCloseEventArgs : System.EventArgs
     {
         [System.ObsoleteAttribute("This constructor is obsolete. Use DesignerTransactionCloseEventArgs(bool, bool) instead.  http://go.microsoft.com/fwlink/?linkid=14202")]
@@ -1746,11 +1707,7 @@ namespace System.ComponentModel.Design {
         public bool LastTransaction { get { return default(bool); } }
         public bool TransactionCommitted { get { return default(bool); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void DesignerTransactionCloseEventHandler(object sender, System.ComponentModel.Design.DesignerTransactionCloseEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DesignerVerb : System.ComponentModel.Design.MenuCommand
     {
         public DesignerVerb(string text, System.EventHandler handler) : base(default(System.EventHandler), default(System.ComponentModel.Design.CommandID)) { }
@@ -1759,8 +1716,6 @@ namespace System.ComponentModel.Design {
         public string Text { get { return default(string); } }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DesignerVerbCollection : System.Collections.CollectionBase
     {
         public DesignerVerbCollection() { }
@@ -1820,8 +1775,6 @@ namespace System.ComponentModel.Design {
         FilterKeyword = 2,
         GeneralKeyword = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IComponentChangeService
     {
         event System.ComponentModel.Design.ComponentEventHandler ComponentAdded;
@@ -1845,8 +1798,6 @@ namespace System.ComponentModel.Design {
         void InitializeExistingComponent(System.Collections.IDictionary defaultValues);
         void InitializeNewComponent(System.Collections.IDictionary defaultValues);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDesigner : System.IDisposable
     {
         System.ComponentModel.IComponent Component { get; }
@@ -1874,8 +1825,6 @@ namespace System.ComponentModel.Design {
         void PreFilterEvents(System.Collections.IDictionary events);
         void PreFilterProperties(System.Collections.IDictionary properties);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDesignerHost : System.ComponentModel.Design.IServiceContainer, System.IServiceProvider
     {
         System.ComponentModel.IContainer Container { get; }
@@ -1918,8 +1867,6 @@ namespace System.ComponentModel.Design {
         object GetValue(object key);
         void SetValue(object key, object value);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IEventBindingService
     {
         string CreateUniqueMethodName(System.ComponentModel.IComponent component, System.ComponentModel.EventDescriptor e);
@@ -1959,8 +1906,6 @@ namespace System.ComponentModel.Design {
         void AddInheritedComponents(System.ComponentModel.IComponent component, System.ComponentModel.IContainer container);
         System.ComponentModel.InheritanceAttribute GetInheritanceAttribute(System.ComponentModel.IComponent component);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMenuCommandService
     {
         System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }
@@ -1987,15 +1932,11 @@ namespace System.ComponentModel.Design {
         System.Resources.IResourceReader GetResourceReader(System.Globalization.CultureInfo info);
         System.Resources.IResourceWriter GetResourceWriter(System.Globalization.CultureInfo info);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IRootDesigner : System.ComponentModel.Design.IDesigner, System.IDisposable
     {
         System.ComponentModel.Design.ViewTechnology[] SupportedTechnologies { get; }
         object GetView(System.ComponentModel.Design.ViewTechnology technology);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISelectionService
     {
         object PrimarySelection { get; }
@@ -2007,8 +1948,6 @@ namespace System.ComponentModel.Design {
         void SetSelectedComponents(System.Collections.ICollection components);
         void SetSelectedComponents(System.Collections.ICollection components, System.ComponentModel.Design.SelectionTypes selectionType);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IServiceContainer : System.IServiceProvider
     {
         void AddService(System.Type serviceType, System.ComponentModel.Design.ServiceCreatorCallback callback);
@@ -2047,8 +1986,6 @@ namespace System.ComponentModel.Design {
         System.Type GetType(string name, bool throwOnError, bool ignoreCase);
         void ReferenceAssembly(System.Reflection.AssemblyName name);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MenuCommand
     {
         public MenuCommand(System.EventHandler handler, System.ComponentModel.Design.CommandID command) { }
@@ -2067,7 +2004,6 @@ namespace System.ComponentModel.Design {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SelectionTypes
     {
         Add = 64,
@@ -2102,8 +2038,6 @@ namespace System.ComponentModel.Design {
         public void RemoveService(System.Type serviceType) { }
         public virtual void RemoveService(System.Type serviceType, bool promote) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate object ServiceCreatorCallback(System.ComponentModel.Design.IServiceContainer container, System.Type serviceType);
     public partial class StandardCommands
     {
@@ -2183,8 +2117,6 @@ namespace System.ComponentModel.Design {
         public abstract System.ComponentModel.TypeDescriptionProvider GetProvider(object instance);
         public abstract System.ComponentModel.TypeDescriptionProvider GetProvider(System.Type type);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ViewTechnology
     {
         Default = 2,
@@ -2228,8 +2160,6 @@ namespace System.ComponentModel.Design.Serialization {
         public DefaultSerializationProviderAttribute(System.Type providerType) { }
         public string ProviderTypeName { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DesignerLoader
     {
         protected DesignerLoader() { }

@@ -1,9 +1,7 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.IO {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class BinaryReader : System.IDisposable
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public BinaryReader(System.IO.Stream input) { }
         public BinaryReader(System.IO.Stream input, System.Text.Encoding encoding) { }
         public BinaryReader(System.IO.Stream input, System.Text.Encoding encoding, bool leaveOpen) { }
@@ -15,27 +13,20 @@ namespace System.IO {
         public virtual int PeekChar() { return default(int); }
         public virtual int Read() { return default(int); }
         public virtual int Read(byte[] buffer, int index, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int Read(char[] buffer, int index, int count) { return default(int); }
         protected internal int Read7BitEncodedInt() { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual bool ReadBoolean() { return default(bool); }
         public virtual byte ReadByte() { return default(byte); }
         public virtual byte[] ReadBytes(int count) { return default(byte[]); }
         public virtual char ReadChar() { return default(char); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual char[] ReadChars(int count) { return default(char[]); }
         public virtual decimal ReadDecimal() { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual double ReadDouble() { return default(double); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual short ReadInt16() { return default(short); }
         public virtual int ReadInt32() { return default(int); }
         public virtual long ReadInt64() { return default(long); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual sbyte ReadSByte() { return default(sbyte); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual float ReadSingle() { return default(float); }
         public virtual string ReadString() { return default(string); }
         [System.CLSCompliantAttribute(false)]
@@ -45,14 +36,11 @@ namespace System.IO {
         [System.CLSCompliantAttribute(false)]
         public virtual ulong ReadUInt64() { return default(ulong); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class BinaryWriter : System.IDisposable
     {
         public static readonly System.IO.BinaryWriter Null;
         protected System.IO.Stream OutStream;
         protected BinaryWriter() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public BinaryWriter(System.IO.Stream output) { }
         public BinaryWriter(System.IO.Stream output, System.Text.Encoding encoding) { }
         public BinaryWriter(System.IO.Stream output, System.Text.Encoding encoding, bool leaveOpen) { }
@@ -63,25 +51,20 @@ namespace System.IO {
         public virtual void Flush() { }
         public virtual long Seek(int offset, System.IO.SeekOrigin origin) { return default(long); }
         public virtual void Write(bool value) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual void Write(byte value) { }
         public virtual void Write(byte[] buffer) { }
         public virtual void Write(byte[] buffer, int index, int count) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual void Write(char ch) { }
         public virtual void Write(char[] chars) { }
         public virtual void Write(char[] chars, int index, int count) { }
         public virtual void Write(decimal value) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual void Write(double value) { }
         public virtual void Write(short value) { }
         public virtual void Write(int value) { }
         public virtual void Write(long value) { }
         [System.CLSCompliantAttribute(false)]
         public virtual void Write(sbyte value) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual void Write(float value) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual void Write(string value) { }
         [System.CLSCompliantAttribute(false)]
         public virtual void Write(ushort value) { }
@@ -91,8 +74,6 @@ namespace System.IO {
         public virtual void Write(ulong value) { }
         protected void Write7BitEncodedInt(int value) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BufferedStream : System.IO.Stream
     {
         public BufferedStream(System.IO.Stream stream) { }
@@ -118,12 +99,9 @@ namespace System.IO {
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         public override void WriteByte(byte value) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MemoryStream : System.IO.Stream
     {
         public MemoryStream() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public MemoryStream(byte[] buffer) { }
         public MemoryStream(byte[] buffer, bool writable) { }
         public MemoryStream(byte[] buffer, int index, int count) { }
@@ -134,31 +112,25 @@ namespace System.IO {
         public override bool CanSeek { get { return default(bool); } }
         public override bool CanWrite { get { return default(bool); } }
         public virtual int Capacity { get { return default(int); } set { } }
-        public override long Length { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(long); } }
-        public override long Position { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(long); } set { } }
+        public override long Length { get { return default(long); } }
+        public override long Position { get { return default(long); } set { } }
         public override System.Threading.Tasks.Task CopyToAsync(System.IO.Stream destination, int bufferSize, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         protected override void Dispose(bool disposing) { }
         public override void Flush() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task FlushAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual byte[] GetBuffer() { return default(byte[]); }
         public override int Read(byte[] buffer, int offset, int count) { buffer = default(byte[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<int> ReadAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<int>); }
         public override int ReadByte() { return default(int); }
         public override long Seek(long offset, System.IO.SeekOrigin loc) { return default(long); }
         public override void SetLength(long value) { }
         public virtual byte[] ToArray() { return default(byte[]); }
         public override void Write(byte[] buffer, int offset, int count) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         public override void WriteByte(byte value) { }
         public virtual void WriteTo(System.IO.Stream stream) { }
         public virtual bool TryGetBuffer(out System.ArraySegment<byte> buffer) { buffer = default(System.ArraySegment<byte>); return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StreamReader : System.IO.TextReader
     {
         public static readonly new System.IO.StreamReader Null;
@@ -172,7 +144,6 @@ namespace System.IO {
         public StreamReader(string path, bool detectEncodingFromByteOrderMarks) { }
         public StreamReader(string path, System.Text.Encoding encoding) { }
         public StreamReader(string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public StreamReader(string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks, int bufferSize) { }
         public virtual System.IO.Stream BaseStream { get { return default(System.IO.Stream); } }
         public virtual System.Text.Encoding CurrentEncoding { get { return default(System.Text.Encoding); } }
@@ -183,20 +154,14 @@ namespace System.IO {
         public override int Peek() { return default(int); }
         public override int Read() { return default(int); }
         public override int Read(char[] buffer, int index, int count) { buffer = default(char[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<int> ReadAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
         public override int ReadBlock(char[] buffer, int index, int count) { buffer = default(char[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<int> ReadBlockAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
         public override string ReadLine() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadLineAsync() { return default(System.Threading.Tasks.Task<string>); }
         public override string ReadToEnd() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StreamWriter : System.IO.TextWriter
     {
         public static readonly new System.IO.StreamWriter Null;
@@ -207,7 +172,6 @@ namespace System.IO {
         public StreamWriter(string path) { }
         public StreamWriter(string path, bool append) { }
         public StreamWriter(string path, bool append, System.Text.Encoding encoding) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public StreamWriter(string path, bool append, System.Text.Encoding encoding, int bufferSize) { }
         public virtual bool AutoFlush { get { return default(bool); } set { } }
         public virtual System.IO.Stream BaseStream { get { return default(System.IO.Stream); } }
@@ -215,29 +179,19 @@ namespace System.IO {
         public override void Close() { }
         protected override void Dispose(bool disposing) { }
         public override void Flush() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task FlushAsync() { return default(System.Threading.Tasks.Task); }
         public override void Write(char value) { }
         public override void Write(char[] buffer) { }
         public override void Write(char[] buffer, int index, int count) { }
         public override void Write(string value) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(string value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync() { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringReader : System.IO.TextReader
     {
         public StringReader(string s) { }
@@ -246,58 +200,35 @@ namespace System.IO {
         public override int Peek() { return default(int); }
         public override int Read() { return default(int); }
         public override int Read(char[] buffer, int index, int count) { buffer = default(char[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<int> ReadAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<int> ReadBlockAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
         public override string ReadLine() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadLineAsync() { return default(System.Threading.Tasks.Task<string>); }
         public override string ReadToEnd() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringWriter : System.IO.TextWriter
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringWriter() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringWriter(System.IFormatProvider formatProvider) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringWriter(System.Text.StringBuilder sb) { }
         public StringWriter(System.Text.StringBuilder sb, System.IFormatProvider formatProvider) { }
-        public override System.Text.Encoding Encoding { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Text.Encoding); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        public override System.Text.Encoding Encoding { get { return default(System.Text.Encoding); } }
         public override void Close() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected override void Dispose(bool disposing) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task FlushAsync() { return default(System.Threading.Tasks.Task); }
         public virtual System.Text.StringBuilder GetStringBuilder() { return default(System.Text.StringBuilder); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override string ToString() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override void Write(char value) { }
         public override void Write(char[] buffer, int index, int count) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override void Write(string value) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteAsync(string value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TextReader : System.IDisposable
     {
         public static readonly System.IO.TextReader Null;
@@ -308,22 +239,16 @@ namespace System.IO {
         public virtual int Peek() { return default(int); }
         public virtual int Read() { return default(int); }
         public virtual int Read(char[] buffer, int index, int count) { buffer = default(char[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task<int> ReadAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
         public virtual int ReadBlock(char[] buffer, int index, int count) { buffer = default(char[]); return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task<int> ReadBlockAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task<int>); }
         public virtual string ReadLine() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task<string> ReadLineAsync() { return default(System.Threading.Tasks.Task<string>); }
         public virtual string ReadToEnd() { return default(string); }
         [System.Diagnostics.DebuggerStepThroughAttribute]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task<string> ReadToEndAsync() { return default(System.Threading.Tasks.Task<string>); }
         public static System.IO.TextReader Synchronized(System.IO.TextReader reader) { return default(System.IO.TextReader); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TextWriter : System.IDisposable
     {
         protected char[] CoreNewLine;
@@ -337,7 +262,6 @@ namespace System.IO {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
         public virtual void Flush() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task FlushAsync() { return default(System.Threading.Tasks.Task); }
         public static System.IO.TextWriter Synchronized(System.IO.TextWriter writer) { return default(System.IO.TextWriter); }
         public virtual void Write(bool value) { }
@@ -359,13 +283,9 @@ namespace System.IO {
         public virtual void Write(uint value) { }
         [System.CLSCompliantAttribute(false)]
         public virtual void Write(ulong value) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task WriteAsync(char[] buffer) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteAsync(string value) { return default(System.Threading.Tasks.Task); }
         public virtual void WriteLine() { }
         public virtual void WriteLine(bool value) { }
@@ -387,15 +307,10 @@ namespace System.IO {
         public virtual void WriteLine(uint value) { }
         [System.CLSCompliantAttribute(false)]
         public virtual void WriteLine(ulong value) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteLineAsync() { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteLineAsync(char value) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task WriteLineAsync(char[] buffer) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int index, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteLineAsync(string value) { return default(System.Threading.Tasks.Task); }
     }
 

@@ -47,7 +47,6 @@ namespace System.Text {
         public override bool Fallback(byte[] bytesUnknown, int index) { return default(bool); }
         public override char GetNextChar() { return default(char); }
         public override bool MovePrevious() { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override void Reset() { }
     }
 
@@ -87,9 +86,8 @@ namespace System.Text {
         public EncoderReplacementFallback() { }
         public EncoderReplacementFallback(string replacement) { }
         public string DefaultString { get { return default(string); } }
-        public override int MaxCharCount { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
+        public override int MaxCharCount { get { return default(int); } }
         public override System.Text.EncoderFallbackBuffer CreateFallbackBuffer() { return default(System.Text.EncoderFallbackBuffer); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override bool Equals(object value) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
@@ -102,7 +100,6 @@ namespace System.Text {
         public override bool Fallback(char charUnknown, int index) { return default(bool); }
         public override char GetNextChar() { return default(char); }
         public override bool MovePrevious() { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override void Reset() { }
     }
 } // end of System.Text

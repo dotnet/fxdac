@@ -1,6 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Diagnostics {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StackFrame
     {
         public const int OFFSET_UNKNOWN = -1;
@@ -18,7 +17,6 @@ namespace System.Diagnostics {
         public virtual int GetNativeOffset() { return default(int); }
         public override string ToString() { return default(string); }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StackTrace
     {
         public const int METHODS_TO_SKIP = 0;
@@ -35,7 +33,6 @@ namespace System.Diagnostics {
         public StackTrace(System.Threading.Thread targetThread, bool needFileInfo) { }
         public virtual int FrameCount { get { return default(int); } }
         public virtual System.Diagnostics.StackFrame GetFrame(int index) { return default(System.Diagnostics.StackFrame); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Diagnostics.StackFrame[] GetFrames() { return default(System.Diagnostics.StackFrame[]); }
         public override string ToString() { return default(string); }
     }

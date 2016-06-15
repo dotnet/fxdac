@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Threading {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Timer :System.IDisposable
     {
         public Timer(System.Threading.TimerCallback callback) { }
@@ -18,7 +16,5 @@ namespace System.Threading {
         public void Dispose() { }
         public bool Dispose(System.Threading.WaitHandle notifyObject) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void TimerCallback(object state);
 } // end of System.Threading

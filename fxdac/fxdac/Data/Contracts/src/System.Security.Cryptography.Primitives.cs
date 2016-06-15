@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security.Cryptography {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class AsymmetricAlgorithm : System.IDisposable
     {
         protected int KeySizeValue;
@@ -19,8 +17,6 @@ namespace System.Security.Cryptography {
         public abstract void FromXmlString(string xmlString);
         public abstract string ToXmlString(bool includePrivateParameters);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CipherMode
     {
         CBC = 1,
@@ -29,20 +25,15 @@ namespace System.Security.Cryptography {
         ECB = 2,
         OFB = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptographicException : System.SystemException
     {
         public CryptographicException() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public CryptographicException(int hr) { }
         protected CryptographicException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public CryptographicException(string message) { }
         public CryptographicException(string message, System.Exception inner) { }
         public CryptographicException(string format, string insert) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptographicUnexpectedOperationException : System.Security.Cryptography.CryptographicException
     {
         public CryptographicUnexpectedOperationException() { }
@@ -51,8 +42,6 @@ namespace System.Security.Cryptography {
         public CryptographicUnexpectedOperationException(string message, System.Exception inner) { }
         public CryptographicUnexpectedOperationException(string format, string insert) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptoStream : System.IO.Stream, System.IDisposable
     {
         public CryptoStream(System.IO.Stream stream, System.Security.Cryptography.ICryptoTransform transform, System.Security.Cryptography.CryptoStreamMode mode) { }
@@ -74,15 +63,11 @@ namespace System.Security.Cryptography {
         public override void Write(byte[] buffer, int offset, int count) { }
         public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CryptoStreamMode
     {
         Read = 0,
         Write = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class HashAlgorithm : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         protected int HashSizeValue;
@@ -109,8 +94,6 @@ namespace System.Security.Cryptography {
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class HMAC : System.Security.Cryptography.KeyedHashAlgorithm
     {
         protected HMAC() { }
@@ -124,8 +107,6 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICryptoTransform : System.IDisposable
     {
         bool CanReuseTransform { get; }
@@ -135,8 +116,6 @@ namespace System.Security.Cryptography {
         int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset);
         byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class KeyedHashAlgorithm : System.Security.Cryptography.HashAlgorithm
     {
         protected byte[] KeyValue;
@@ -146,8 +125,6 @@ namespace System.Security.Cryptography {
         public static new System.Security.Cryptography.KeyedHashAlgorithm Create(string algName) { return default(System.Security.Cryptography.KeyedHashAlgorithm); }
         protected override void Dispose(bool disposing) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeySizes
     {
         public KeySizes(int minSize, int maxSize, int skipSize) { }
@@ -155,8 +132,6 @@ namespace System.Security.Cryptography {
         public int MinSize { get { return default(int); } }
         public int SkipSize { get { return default(int); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PaddingMode
     {
         ANSIX923 = 4,
@@ -165,8 +140,6 @@ namespace System.Security.Cryptography {
         PKCS7 = 2,
         Zeros = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SymmetricAlgorithm : System.IDisposable
     {
         protected int BlockSizeValue;

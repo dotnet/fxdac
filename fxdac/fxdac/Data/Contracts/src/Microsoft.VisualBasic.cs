@@ -175,11 +175,8 @@ namespace Microsoft.VisualBasic.CompilerServices {
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   public sealed partial class ProjectData {
     internal ProjectData() { }
-    [System.Security.SecuritySafeCriticalAttribute]
     public static void ClearProjectError() { }
-    [System.Security.SecuritySafeCriticalAttribute]
     public static void SetProjectError(System.Exception ex) { }
-    [System.Security.SecuritySafeCriticalAttribute]
     public static void SetProjectError(System.Exception ex, int lErl) { }
   }
   [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited=false, AllowMultiple=false)]

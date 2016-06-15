@@ -6,8 +6,6 @@ namespace System.Runtime.InteropServices {
     {
         public AllowReversePInvokeCallsAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ArrayWithOffset
     {
@@ -22,7 +20,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AssemblyRegistrationFlags
     {
         None = 0,
@@ -30,7 +27,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1029), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AutomationProxyAttribute : System.Attribute
     {
         public AutomationProxyAttribute(bool val) { }
@@ -38,7 +34,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1037), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BestFitMappingAttribute : System.Attribute
     {
         public bool ThrowOnUnmappableChar;
@@ -67,8 +62,6 @@ namespace System.Runtime.InteropServices {
         [System.Runtime.InteropServices.FieldOffsetAttribute(0)]
         public System.IntPtr lpvardesc;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BStrWrapper
     {
         public BStrWrapper(object value) { }
@@ -90,8 +83,6 @@ namespace System.Runtime.InteropServices {
         CC_STDCALL = 4,
         CC_SYSCALL = 6,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CallingConvention
     {
         Cdecl = 2,
@@ -102,7 +93,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CoClassAttribute : System.Attribute
     {
         public CoClassAttribute(System.Type coClass) { }
@@ -110,7 +100,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(10624), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComAliasNameAttribute : System.Attribute
     {
         public ComAliasNameAttribute(string alias) { }
@@ -118,7 +107,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComCompatibleVersionAttribute : System.Attribute
     {
         public ComCompatibleVersionAttribute(int major, int minor, int build, int revision) { }
@@ -129,22 +117,18 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComConversionLossAttribute : System.Attribute
     {
         public ComConversionLossAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComEventInterfaceAttribute : System.Attribute
     {
         public ComEventInterfaceAttribute(System.Type SourceInterface, System.Type EventProvider) { }
         public System.Type EventProvider { get { return default(System.Type); } }
         public System.Type SourceInterface { get { return default(System.Type); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class COMException : System.Runtime.InteropServices.ExternalException
     {
         public COMException() { }
@@ -154,8 +138,6 @@ namespace System.Runtime.InteropServices {
         public COMException(string message, int errorCode) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ComMemberType
     {
         Method = 0,
@@ -164,14 +146,12 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComRegisterFunctionAttribute : System.Attribute
     {
         public ComRegisterFunctionAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComSourceInterfacesAttribute : System.Attribute
     {
         public ComSourceInterfacesAttribute(string sourceInterfaces) { }
@@ -183,7 +163,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComUnregisterFunctionAttribute : System.Attribute
     {
         public ComUnregisterFunctionAttribute() { }
@@ -196,8 +175,6 @@ namespace System.Runtime.InteropServices {
         public int dwCookie;
         public object pUnk;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CurrencyWrapper
     {
         public CurrencyWrapper(decimal obj) { }
@@ -206,7 +183,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DefaultCharSetAttribute : System.Attribute
     {
         public DefaultCharSetAttribute(System.Runtime.InteropServices.CharSet charSet) { }
@@ -214,7 +190,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(65), AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class DefaultDllImportSearchPathsAttribute : System.Attribute
     {
         public DefaultDllImportSearchPathsAttribute(System.Runtime.InteropServices.DllImportSearchPath paths) { }
@@ -243,7 +218,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DllImportAttribute : System.Attribute
     {
         public bool BestFitMapping;
@@ -276,7 +250,6 @@ namespace System.Runtime.InteropServices {
     {
         public System.Runtime.InteropServices.ELEMDESC.DESCUNION desc;
         public System.Runtime.InteropServices.TYPEDESC tdesc;
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Explicit)]
         public partial struct DESCUNION
         {
@@ -286,16 +259,12 @@ namespace System.Runtime.InteropServices {
             public System.Runtime.InteropServices.PARAMDESC paramdesc;
         }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ExporterEventKind
     {
         ERROR_REFTOINVALIDASSEMBLY = 2,
         NOTIF_CONVERTWARNING = 1,
         NOTIF_TYPECONVERTED = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ExtensibleClassFactory
     {
         internal ExtensibleClassFactory() { }
@@ -356,7 +325,6 @@ namespace System.Runtime.InteropServices {
         FUNC_STATIC = 3,
         FUNC_VIRTUAL = 0,
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct GCHandle
     {
@@ -375,8 +343,6 @@ namespace System.Runtime.InteropServices {
         public static bool operator !=(System.Runtime.InteropServices.GCHandle a, System.Runtime.InteropServices.GCHandle b) { return default(bool); }
         public static System.IntPtr ToIntPtr(System.Runtime.InteropServices.GCHandle value) { return default(System.IntPtr); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum GCHandleType
     {
         Normal = 2,
@@ -384,8 +350,6 @@ namespace System.Runtime.InteropServices {
         Weak = 0,
         WeakTrackResurrection = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct HandleRef
     {
@@ -395,14 +359,10 @@ namespace System.Runtime.InteropServices {
         public static explicit operator System.IntPtr(System.Runtime.InteropServices.HandleRef value) { return default(System.IntPtr); }
         public static System.IntPtr ToIntPtr(System.Runtime.InteropServices.HandleRef value) { return default(System.IntPtr); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomAdapter
     {
         object GetUnderlyingObject();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomMarshaler
     {
         void CleanUpManagedData(object ManagedObj);
@@ -414,7 +374,6 @@ namespace System.Runtime.InteropServices {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5), Inherited = false)]
     [System.ObsoleteAttribute("This attribute is deprecated and will be removed in a future version.", false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IDispatchImplAttribute : System.Attribute
     {
         public IDispatchImplAttribute(short implType) { }
@@ -423,7 +382,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.ObsoleteAttribute("The IDispatchImplAttribute is deprecated.", false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum IDispatchImplType
     {
         CompatibleImpl = 2,
@@ -461,14 +419,11 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ImportedFromTypeLibAttribute : System.Attribute
     {
         public ImportedFromTypeLibAttribute(string tlbFile) { }
         public string Value { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ImporterEventKind
     {
         ERROR_REFTOINVALIDTYPELIB = 2,
@@ -477,13 +432,10 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class InAttribute : System.Attribute
     {
         public InAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidComObjectException : System.SystemException
     {
         public InvalidComObjectException() { }
@@ -491,8 +443,6 @@ namespace System.Runtime.InteropServices {
         public InvalidComObjectException(string message) { }
         public InvalidComObjectException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidOleVariantTypeException : System.SystemException
     {
         public InvalidOleVariantTypeException() { }
@@ -509,8 +459,6 @@ namespace System.Runtime.InteropServices {
         INVOKE_PROPERTYPUT = 4,
         INVOKE_PROPERTYPUTREF = 8,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("CCBD682C-73A5-4568-B8B0-C7007E11ABA2")]
     public partial interface IRegistrationServices
     {
@@ -525,7 +473,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LCIDConversionAttribute : System.Attribute
     {
         public LCIDConversionAttribute(int lcid) { }
@@ -548,9 +495,7 @@ namespace System.Runtime.InteropServices {
         public static readonly int SystemMaxDBCSCharSize;
         public static int AddRef(System.IntPtr pUnk) { return default(int); }
         public static System.IntPtr AllocCoTaskMem(int cb) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr AllocHGlobal(int cb) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr AllocHGlobal(System.IntPtr cb) { return default(System.IntPtr); }
         public static object BindToMoniker(string monikerName) { return default(object); }
         public static void ChangeWrapperHandleStrength(object otp, bool fIsWeak) { }
@@ -572,12 +517,10 @@ namespace System.Runtime.InteropServices {
         public static void Copy(float[] source, int startIndex, System.IntPtr destination, int length) { }
         public static System.IntPtr CreateAggregatedObject(System.IntPtr pOuter, object o) { return default(System.IntPtr); }
         public static System.IntPtr CreateAggregatedObject<T>(System.IntPtr pOuter, T o) { return default(System.IntPtr); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void DestroyStructure(System.IntPtr ptr, System.Type structuretype) { }
         public static void DestroyStructure<T>(System.IntPtr ptr) { }
         public static void FreeBSTR(System.IntPtr ptr) { }
         public static void FreeCoTaskMem(System.IntPtr ptr) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void FreeHGlobal(System.IntPtr hglobal) { }
         public static System.Delegate GetDelegateForFunctionPointer(System.IntPtr ptr, System.Type t) { return default(System.Delegate); }
         public static TDelegate GetDelegateForFunctionPointer<TDelegate>(System.IntPtr ptr) { return default(TDelegate); }
@@ -585,7 +528,6 @@ namespace System.Runtime.InteropServices {
         public static System.Exception GetExceptionForHR(int errorCode, System.IntPtr errorInfo) { return default(System.Exception); }
         public static System.IntPtr GetFunctionPointerForDelegate(System.Delegate d) { return default(System.IntPtr); }
         public static System.IntPtr GetFunctionPointerForDelegate<TDelegate>(TDelegate d) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int GetLastWin32Error() { return default(int); }
         public static System.IntPtr OffsetOf(System.Type t, string fieldName) { return default(System.IntPtr); }
         public static System.IntPtr OffsetOf<T>(string fieldName) { return default(System.IntPtr); }
@@ -598,9 +540,7 @@ namespace System.Runtime.InteropServices {
         public static string PtrToStringBSTR(System.IntPtr ptr) { return default(string); }
         public static string PtrToStringUni(System.IntPtr ptr) { return default(string); }
         public static string PtrToStringUni(System.IntPtr ptr, int len) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void PtrToStructure(System.IntPtr ptr, object structure) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static object PtrToStructure(System.IntPtr ptr, System.Type structureType) { return default(object); }
         public static T PtrToStructure<T>(System.IntPtr ptr) { return default(T); }
         public static void PtrToStructure<T>(System.IntPtr ptr, T structure) { }
@@ -611,33 +551,23 @@ namespace System.Runtime.InteropServices {
         public static short ReadInt16(System.IntPtr ptr) { return default(short); }
         public static short ReadInt16(System.IntPtr ptr, int ofs) { return default(short); }
         public static short ReadInt16(object ptr, int ofs) { return default(short); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int ReadInt32(System.IntPtr ptr) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int ReadInt32(System.IntPtr ptr, int ofs) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int ReadInt32(object ptr, int ofs) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long ReadInt64(System.IntPtr ptr) { return default(long); }
         public static long ReadInt64(System.IntPtr ptr, int ofs) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long ReadInt64(object ptr, int ofs) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr ReadIntPtr(System.IntPtr ptr) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr ReadIntPtr(System.IntPtr ptr, int ofs) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr ReadIntPtr(object ptr, int ofs) { return default(System.IntPtr); }
         public static System.IntPtr ReAllocCoTaskMem(System.IntPtr pv, int cb) { return default(System.IntPtr); }
         public static System.IntPtr ReAllocHGlobal(System.IntPtr pv, System.IntPtr cb) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Release(System.IntPtr pUnk) { return default(int); }
         public static System.IntPtr SecureStringToBSTR(System.Security.SecureString s) { return default(System.IntPtr); }
         public static System.IntPtr SecureStringToCoTaskMemAnsi(System.Security.SecureString s) { return default(System.IntPtr); }
         public static System.IntPtr SecureStringToCoTaskMemUnicode(System.Security.SecureString s) { return default(System.IntPtr); }
         public static System.IntPtr SecureStringToGlobalAllocAnsi(System.Security.SecureString s) { return default(System.IntPtr); }
         public static System.IntPtr SecureStringToGlobalAllocUnicode(System.Security.SecureString s) { return default(System.IntPtr); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static int SizeOf(object structure) { return default(int); }
         public static int SizeOf(System.Type t) { return default(int); }
         public static int SizeOf<T>() { return default(int); }
@@ -649,8 +579,6 @@ namespace System.Runtime.InteropServices {
         public static System.IntPtr StringToHGlobalAnsi(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToHGlobalAuto(string s) { return default(System.IntPtr); }
         public static System.IntPtr StringToHGlobalUni(string s) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static void StructureToPtr(object structure, System.IntPtr ptr, bool fDeleteOld) { }
         public static void StructureToPtr<T>(T structure, System.IntPtr ptr, bool fDeleteOld) { }
         public static void ThrowExceptionForHR(int errorCode) { }
@@ -680,84 +608,59 @@ namespace System.Runtime.InteropServices {
         public static void ZeroFreeCoTaskMemUnicode(System.IntPtr s) { }
         public static void ZeroFreeGlobalAllocAnsi(System.IntPtr s) { }
         public static void ZeroFreeGlobalAllocUnicode(System.IntPtr s) { }
-        [System.Security.SecurityCriticalAttribute]
         public static bool AreComObjectsAvailableForCleanup() { return default(bool); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("CreateWrapperOfType(Object, Type) may be unavailable in future releases. Instead, use CreateWrapperOfType<T,T2>(T). For more info, go to http://go.microsoft.com/fwlink/?LinkID=296519")]
-        [System.Security.SecurityCriticalAttribute]
         public static object CreateWrapperOfType(object o, System.Type t) { return default(object); }
-        [System.Security.SecurityCriticalAttribute]
         public static TWrapper CreateWrapperOfType<T, TWrapper>(T o) { return default(TWrapper); }
-        [System.Security.SecurityCriticalAttribute]
         public static int FinalReleaseComObject(object o) { return default(int); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetComInterfaceForObject(Object, Type) may be unavailable in future releases. Instead, use GetComInterfaceForObject<T,T2>(T). For more info, go to http://go.microsoft.com/fwlink/?LinkID=296509")]
-        [System.Security.SecurityCriticalAttribute]
         public static System.IntPtr GetComInterfaceForObject(object o, System.Type T) { return default(System.IntPtr); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetComInterfaceForObject(Object, Type, CustomQueryInterfaceMode) and support for ICustomQueryInterface may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static System.IntPtr GetComInterfaceForObject(object o, System.Type T, System.Runtime.InteropServices.CustomQueryInterfaceMode mode) { return default(System.IntPtr); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.IntPtr GetComInterfaceForObject<T, TInterface>(T o) { return default(System.IntPtr); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetExceptionCode() may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static int GetExceptionCode() { return default(int); }
-        [System.Security.SecurityCriticalAttribute]
         public static int GetHRForException(System.Exception e) { return default(int); }
-        [System.Security.SecurityCriticalAttribute]
         public static int GetHRForLastWin32Error() { return default(int); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.IntPtr GetIUnknownForObject(object o) { return default(System.IntPtr); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetNativeVariantForObject(Object, IntPtr) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static void GetNativeVariantForObject(object obj, System.IntPtr pDstNativeVariant) { }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetNativeVariantForObject<T>(T, IntPtr) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static void GetNativeVariantForObject<T>(T obj, System.IntPtr pDstNativeVariant) { }
-        [System.Security.SecurityCriticalAttribute]
         public static object GetObjectForIUnknown(System.IntPtr pUnk) { return default(object); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetObjectForNativeVariant(IntPtr) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static object GetObjectForNativeVariant(System.IntPtr pSrcNativeVariant) { return default(object); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetObjectForNativeVariant<T>(IntPtr) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static T GetObjectForNativeVariant<T>(System.IntPtr pSrcNativeVariant) { return default(T); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetObjectsForNativeVariants(IntPtr, Int32) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static object[] GetObjectsForNativeVariants(System.IntPtr aSrcNativeVariant, int cVars) { return default(object[]); }
         [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
         [System.ObsoleteAttribute("GetObjectsForNativeVariants<T>(IntPtr, Int32) may be unavailable in future releases.")]
-        [System.Security.SecurityCriticalAttribute]
         public static T[] GetObjectsForNativeVariants<T>(System.IntPtr aSrcNativeVariant, int cVars) { return default(T[]); }
-        [System.Security.SecurityCriticalAttribute]
         public static int GetStartComSlot(System.Type t) { return default(int); }
         public static System.Type GetTypeFromCLSID(System.Guid clsid) { return default(System.Type); }
-        [System.Security.SecurityCriticalAttribute]
         public static string GetTypeInfoName(System.Runtime.InteropServices.ComTypes.ITypeInfo typeInfo) { return default(string); }
-        [System.Security.SecurityCriticalAttribute]
         public static object GetUniqueObjectForIUnknown(System.IntPtr unknown) { return default(object); }
         public static bool IsComObject(object o) { return default(bool); }
-        [System.Security.SecurityCriticalAttribute]
         public static int ReleaseComObject(object o) { return default(int); }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(10496), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class MarshalAsAttribute : System.Attribute
     {
         public System.Runtime.InteropServices.UnmanagedType ArraySubType;
         public int IidParameterIndex;
         public string MarshalCookie;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public string MarshalType;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Type MarshalTypeRef;
         public System.Runtime.InteropServices.VarEnum SafeArraySubType;
         public System.Type SafeArrayUserDefinedSubType;
@@ -767,8 +670,6 @@ namespace System.Runtime.InteropServices {
         public MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType unmanagedType) { }
         public System.Runtime.InteropServices.UnmanagedType Value { get { return default(System.Runtime.InteropServices.UnmanagedType); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MarshalDirectiveException : System.SystemException
     {
         public MarshalDirectiveException() { }
@@ -776,12 +677,9 @@ namespace System.Runtime.InteropServices {
         public MarshalDirectiveException(string message) { }
         public MarshalDirectiveException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate System.IntPtr ObjectCreationDelegate(System.IntPtr aggregator);
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OptionalAttribute : System.Attribute
     {
         public OptionalAttribute() { }
@@ -810,14 +708,12 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PreserveSigAttribute : System.Attribute
     {
         public PreserveSigAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false, AllowMultiple = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PrimaryInteropAssemblyAttribute : System.Attribute
     {
         public PrimaryInteropAssemblyAttribute(int major, int minor) { }
@@ -826,7 +722,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ProgIdAttribute : System.Attribute
     {
         public ProgIdAttribute(string progId) { }
@@ -865,19 +760,14 @@ namespace System.Runtime.InteropServices {
         Surrogate = 8,
         Suspended = 4,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RuntimeEnvironment
     {
         public RuntimeEnvironment() { }
         public static string SystemConfigurationFile { get { return default(string); } }
         public static bool FromGlobalAccessCache(System.Reflection.Assembly a) { return default(bool); }
         public static string GetRuntimeDirectory() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string GetSystemVersion() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SafeArrayRankMismatchException : System.SystemException
     {
         public SafeArrayRankMismatchException() { }
@@ -885,8 +775,6 @@ namespace System.Runtime.InteropServices {
         public SafeArrayRankMismatchException(string message) { }
         public SafeArrayRankMismatchException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SafeArrayTypeMismatchException : System.SystemException
     {
         public SafeArrayTypeMismatchException() { }
@@ -894,8 +782,6 @@ namespace System.Runtime.InteropServices {
         public SafeArrayTypeMismatchException(string message) { }
         public SafeArrayTypeMismatchException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SEHException : System.Runtime.InteropServices.ExternalException
     {
         public SEHException() { }
@@ -907,7 +793,6 @@ namespace System.Runtime.InteropServices {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
     [System.ObsoleteAttribute("This attribute has been deprecated.  Application Domains no longer respect Activation Context boundaries in IDispatch calls.", false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SetWin32ContextInIDispatchAttribute : System.Attribute
     {
         public SetWin32ContextInIDispatchAttribute() { }
@@ -993,7 +878,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5144), AllowMultiple = false, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class TypeIdentifierAttribute : System.Attribute
     {
         public TypeIdentifierAttribute() { }
@@ -1029,7 +913,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TypeLibImportClassAttribute : System.Attribute
     {
         public TypeLibImportClassAttribute(System.Type importClass) { }
@@ -1037,15 +920,12 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TypeLibVersionAttribute : System.Attribute
     {
         public TypeLibVersionAttribute(int major, int minor) { }
         public int MajorVersion { get { return default(int); } }
         public int MinorVersion { get { return default(int); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UnknownWrapper
     {
         public UnknownWrapper(object obj) { }
@@ -1053,7 +933,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4096), AllowMultiple = false, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UnmanagedFunctionPointerAttribute : System.Attribute
     {
         public bool BestFitMapping;
@@ -1063,8 +942,6 @@ namespace System.Runtime.InteropServices {
         public UnmanagedFunctionPointerAttribute(System.Runtime.InteropServices.CallingConvention callingConvention) { }
         public System.Runtime.InteropServices.CallingConvention CallingConvention { get { return default(System.Runtime.InteropServices.CallingConvention); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UnmanagedType
     {
         AnsiBStr = 35,
@@ -1113,7 +990,6 @@ namespace System.Runtime.InteropServices {
         public int memid;
         public System.Runtime.InteropServices.VarEnum varkind;
         public short wVarFlags;
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Explicit)]
         public partial struct DESCUNION
         {
@@ -1123,8 +999,6 @@ namespace System.Runtime.InteropServices {
             public int oInst;
         }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum VarEnum
     {
         VT_ARRAY = 8192,
@@ -1265,9 +1139,7 @@ namespace System.Runtime.InteropServices {
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ComEventsHelper may be unavailable in future releases.")]
   public static partial class ComEventsHelper {
-    [System.Security.SecurityCriticalAttribute]
     public static void Combine(object rcw, System.Guid iid, int dispid, System.Delegate d) { }
-    [System.Security.SecurityCriticalAttribute]
     public static System.Delegate Remove(object rcw, System.Guid iid, int dispid, System.Delegate d) { return default(System.Delegate); }
   }
   [System.AttributeUsageAttribute((System.AttributeTargets)(1028), Inherited=false)]
@@ -1304,7 +1176,6 @@ namespace System.Runtime.InteropServices {
   [System.ComponentModel.EditorBrowsableAttribute((System.ComponentModel.EditorBrowsableState)(1))]
   [System.ObsoleteAttribute("ICustomQueryInterface may be unavailable in future releases.")]
   public partial interface ICustomQueryInterface {
-    [System.Security.SecurityCriticalAttribute]
     System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface(ref System.Guid iid, out System.IntPtr ppv);
   }
 } // end of System.Runtime.InteropServices
@@ -1999,7 +1870,6 @@ namespace System.Runtime.InteropServices.ComTypes {
   }
 } // end of System.Runtime.InteropServices.ComTypes
 namespace System.Runtime.InteropServices.Expando {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("AFBF15E6-C37C-11d2-B88E-00A0C9B471B8")]
     public partial interface IExpando : System.Reflection.IReflect
     {
@@ -2016,8 +1886,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public DefaultInterfaceAttribute(System.Type defaultInterface) { }
         public System.Type DefaultInterface { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Type); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class DesignerNamespaceResolveEventArgs : System.EventArgs
     {
         public DesignerNamespaceResolveEventArgs(string namespaceName) { }
@@ -2059,8 +1927,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public byte MinorVersion { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(byte); } }
         public byte RevisionVersion { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(byte); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class NamespaceResolveEventArgs : System.EventArgs
     {
         public NamespaceResolveEventArgs(string namespaceName, System.Reflection.Assembly requestingAssembly) { }
@@ -2108,7 +1974,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
 namespace System.Security {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5188), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SuppressUnmanagedCodeSecurityAttribute : System.Attribute
     {
         public SuppressUnmanagedCodeSecurityAttribute() { }

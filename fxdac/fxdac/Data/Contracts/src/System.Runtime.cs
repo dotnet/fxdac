@@ -1,44 +1,29 @@
 [assembly:System.CLSCompliant(true)]
 namespace Microsoft.Win32.SafeHandles {
-
-    [System.Security.SecurityCriticalAttribute]
     public sealed partial class SafeFileHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
     {
         public SafeFileHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
-        [System.Security.SecurityCriticalAttribute]
         protected override bool ReleaseHandle() { return default(bool); }
-        public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+        public override bool IsInvalid { get { return default(bool); } }
     }
-
-    [System.Security.SecurityCriticalAttribute]
     public abstract partial class SafeHandleMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         protected SafeHandleMinusOneIsInvalid(bool ownsHandle) { }
-        public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+        public override bool IsInvalid { get { return default(bool); } }
     }
-
-    [System.Security.SecurityCriticalAttribute]
     public abstract partial class SafeHandleZeroOrMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         protected SafeHandleZeroOrMinusOneIsInvalid(bool ownsHandle) { }
-        public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+        public override bool IsInvalid { get { return default(bool); } }
     }
-
-    [System.Security.SecurityCriticalAttribute]
     public sealed partial class SafeWaitHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public SafeWaitHandle(System.IntPtr existingHandle, bool ownsHandle) : base(default(bool)) { }
-        [System.Security.SecurityCriticalAttribute]
         protected override bool ReleaseHandle() { return default(bool); }
-        public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+        public override bool IsInvalid { get { return default(bool); } }
     }
 } // end of Microsoft.Win32.SafeHandles
 namespace System {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AccessViolationException : System.SystemException
     {
         public AccessViolationException() { }
@@ -46,19 +31,11 @@ namespace System {
         public AccessViolationException(string message) { }
         public AccessViolationException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate void Action();
 
     public delegate void Action<in T>(T obj);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate void Action<in T1, in T2, in T3>(T1 arg1, T2 arg2, T3 arg3);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate void Action<in T1, in T2, in T3, in T4>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
 
     public delegate void Action<in T1, in T2, in T3, in T4, in T5>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
@@ -68,8 +45,6 @@ namespace System {
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
 
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in T8>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
     {
         internal ActivationContext() { }
@@ -86,31 +61,22 @@ namespace System {
             StoreBounded = 1,
         }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Activator     {
         public static object CreateInstance(System.Type type) { return default(object); }
         public static object CreateInstance(System.Type type, bool nonPublic) { return default(object); }
         public static object CreateInstance(System.Type type, params object[] args) { return default(object); }
         public static object CreateInstance(System.Type type, object[] args, object[] activationAttributes) { return default(object); }
         public static object CreateInstance(System.Type type, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, object[] args, System.Globalization.CultureInfo culture) { return default(object); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object CreateInstance(System.Type type, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, object[] args, System.Globalization.CultureInfo culture, object[] activationAttributes) { return default(object); }
         public static T CreateInstance<T>() { return default(T); }
-        [System.Security.SecurityCriticalAttribute]
         public static object GetObject(System.Type type, string url) { return default(object); }
-        [System.Security.SecurityCriticalAttribute]
         public static object GetObject(System.Type type, string url, object state) { return default(object); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {InnerExceptionCount}")]
     public partial class AggregateException : System.Exception
     {
         public AggregateException() { }
         public AggregateException(System.Collections.Generic.IEnumerable<System.Exception> innerExceptions) { }
         public AggregateException(params System.Exception[] innerExceptions) { }
-        [System.Security.SecurityCriticalAttribute]
         protected AggregateException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public AggregateException(string message) { }
         public AggregateException(string message, System.Collections.Generic.IEnumerable<System.Exception> innerExceptions) { }
@@ -119,13 +85,10 @@ namespace System {
         public System.Collections.ObjectModel.ReadOnlyCollection<System.Exception> InnerExceptions { get { return default(System.Collections.ObjectModel.ReadOnlyCollection<System.Exception>); } }
         public System.AggregateException Flatten() { return default(System.AggregateException); }
         public override System.Exception GetBaseException() { return default(System.Exception); }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public void Handle(System.Func<System.Exception, bool> predicate) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ApplicationException : System.Exception
     {
         public ApplicationException() { }
@@ -133,8 +96,6 @@ namespace System {
         public ApplicationException(string message) { }
         public ApplicationException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationId
     {
         public ApplicationId(byte[] publicKeyToken, string name, System.Version version, string processorArchitecture, string culture) { }
@@ -148,8 +109,6 @@ namespace System {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
     {
         public ApplicationIdentity(string applicationIdentityFullName) { }
@@ -158,8 +117,6 @@ namespace System {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArgumentException : System.SystemException, System.Runtime.Serialization.ISerializable
     {
         public ArgumentException() { }
@@ -170,22 +127,16 @@ namespace System {
         public ArgumentException(string message, string paramName, System.Exception innerException) { }
         public override string Message { get { return default(string); } }
         public virtual string ParamName { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArgumentNullException : System.ArgumentException
     {
         public ArgumentNullException() { }
-        [System.Security.SecurityCriticalAttribute]
         protected ArgumentNullException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public ArgumentNullException(string paramName) { }
         public ArgumentNullException(string message, System.Exception innerException) { }
         public ArgumentNullException(string paramName, string message) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArgumentOutOfRangeException : System.ArgumentException, System.Runtime.Serialization.ISerializable
     {
         public ArgumentOutOfRangeException() { }
@@ -196,11 +147,8 @@ namespace System {
         public ArgumentOutOfRangeException(string paramName, string message) { }
         public virtual object ActualValue { get { return default(object); } }
         public override string Message { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArithmeticException : System.SystemException
     {
         public ArithmeticException() { }
@@ -208,54 +156,36 @@ namespace System {
         public ArithmeticException(string message) { }
         public ArithmeticException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Array : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList, System.Collections.IStructuralComparable, System.Collections.IStructuralEquatable, System.ICloneable
     {
         internal Array() { }
         public bool IsFixedSize { get { return default(bool); } }
         public bool IsReadOnly { get { return default(bool); } }
         public bool IsSynchronized { get { return default(bool); } }
-        public int Length { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        public long LongLength { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(long); } }
-        public int Rank { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
+        public int Length { get { return default(int); } }
+        public long LongLength { get { return default(long); } }
+        public int Rank { get { return default(int); } }
         public object SyncRoot { get { return default(object); } }
         int System.Collections.ICollection.Count { get { return default(int); } }
         object System.Collections.IList.this[int index] { get { return default(object); } set { } }
         public static System.Collections.ObjectModel.ReadOnlyCollection<T> AsReadOnly<T>(T[] array) { return default(System.Collections.ObjectModel.ReadOnlyCollection<T>); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch(System.Array array, int index, int length, object value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch(System.Array array, int index, int length, object value, System.Collections.IComparer comparer) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch(System.Array array, object value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch(System.Array array, object value, System.Collections.IComparer comparer) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch<T>(T[] array, T value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch<T>(T[] array, T value, System.Collections.Generic.IComparer<T> comparer) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch<T>(T[] array, int index, int length, T value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int BinarySearch<T>(T[] array, int index, int length, T value, System.Collections.Generic.IComparer<T> comparer) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Clear(System.Array array, int index, int length) { }
         public object Clone() { return default(object); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void ConstrainedCopy(System.Array sourceArray, int sourceIndex, System.Array destinationArray, int destinationIndex, int length) { }
         public static TOutput[] ConvertAll<TInput, TOutput>(TInput[] array, System.Converter<TInput, TOutput> converter) { return default(TOutput[]); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Copy(System.Array sourceArray, System.Array destinationArray, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Copy(System.Array sourceArray, System.Array destinationArray, long length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Copy(System.Array sourceArray, int sourceIndex, System.Array destinationArray, int destinationIndex, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Copy(System.Array sourceArray, long sourceIndex, System.Array destinationArray, long destinationIndex, long length) { }
         public void CopyTo(System.Array array, int index) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void CopyTo(System.Array array, long index) { }
         public static System.Array CreateInstance(System.Type elementType, int length) { return default(System.Array); }
         public static System.Array CreateInstance(System.Type elementType, int length1, int length2) { return default(System.Array); }
@@ -276,98 +206,61 @@ namespace System {
         public static void ForEach<T>(T[] array, System.Action<T> action) { }
         public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         public int GetLength(int dimension) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long GetLongLength(int dimension) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public int GetLowerBound(int dimension) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public int GetUpperBound(int dimension) { return default(int); }
         public object GetValue(int index) { return default(object); }
         public object GetValue(int index1, int index2) { return default(object); }
         public object GetValue(int index1, int index2, int index3) { return default(object); }
         public object GetValue(params int[] indices) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object GetValue(long index) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object GetValue(long index1, long index2) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object GetValue(long index1, long index2, long index3) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object GetValue(params long[] indices) { return default(object); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int IndexOf(System.Array array, object value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int IndexOf(System.Array array, object value, int startIndex) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int IndexOf(System.Array array, object value, int startIndex, int count) { return default(int); }
         public static int IndexOf<T>(T[] array, T value) { return default(int); }
         public static int IndexOf<T>(T[] array, T value, int startIndex) { return default(int); }
         public static int IndexOf<T>(T[] array, T value, int startIndex, int count) { return default(int); }
         public void Initialize() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int LastIndexOf(System.Array array, object value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int LastIndexOf(System.Array array, object value, int startIndex) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int LastIndexOf(System.Array array, object value, int startIndex, int count) { return default(int); }
         public static int LastIndexOf<T>(T[] array, T value) { return default(int); }
         public static int LastIndexOf<T>(T[] array, T value, int startIndex) { return default(int); }
         public static int LastIndexOf<T>(T[] array, T value, int startIndex, int count) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Resize<T>(ref T[] array, int newSize) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Reverse(System.Array array) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Reverse(System.Array array, int index, int length) { }
         public void SetValue(object value, int index) { }
         public void SetValue(object value, int index1, int index2) { }
         public void SetValue(object value, int index1, int index2, int index3) { }
         public void SetValue(object value, params int[] indices) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void SetValue(object value, long index) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void SetValue(object value, long index1, long index2) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void SetValue(object value, long index1, long index2, long index3) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void SetValue(object value, params long[] indices) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array array) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array keys, System.Array items) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array keys, System.Array items, System.Collections.IComparer comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array keys, System.Array items, int index, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array keys, System.Array items, int index, int length, System.Collections.IComparer comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array array, System.Collections.IComparer comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array array, int index, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort(System.Array array, int index, int length, System.Collections.IComparer comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<T>(T[] array) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<T>(T[] array, System.Collections.Generic.IComparer<T> comparer) { }
         public static void Sort<T>(T[] array, System.Comparison<T> comparison) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<T>(T[] array, int index, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<T>(T[] array, int index, int length, System.Collections.Generic.IComparer<T> comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, System.Collections.Generic.IComparer<TKey> comparer) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, int index, int length) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void Sort<TKey, TValue>(TKey[] keys, TValue[] items, int index, int length, System.Collections.Generic.IComparer<TKey> comparer) { }
         int System.Collections.IList.Add(object value) { return default(int); }
         void System.Collections.IList.Clear() { }
         bool System.Collections.IList.Contains(object value) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         int System.Collections.IList.IndexOf(object value) { return default(int); }
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
@@ -410,8 +303,6 @@ namespace System {
         void System.Collections.Generic.IList<T>.RemoveAt(int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArrayTypeMismatchException : System.SystemException
     {
         public ArrayTypeMismatchException() { }
@@ -419,18 +310,12 @@ namespace System {
         public ArrayTypeMismatchException(string message) { }
         public ArrayTypeMismatchException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AssemblyLoadEventArgs : System.EventArgs
     {
         public AssemblyLoadEventArgs(System.Reflection.Assembly loadedAssembly) { }
         public System.Reflection.Assembly LoadedAssembly { get { return default(System.Reflection.Assembly); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void AssemblyLoadEventHandler(object sender, System.AssemblyLoadEventArgs args);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void AsyncCallback(System.IAsyncResult ar);
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited = true, AllowMultiple = false)]
@@ -438,7 +323,6 @@ namespace System {
     {
         protected Attribute() { }
         public virtual object TypeId { get { return default(object); } }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override bool Equals(object obj) { return default(bool); }
         public static System.Attribute GetCustomAttribute(System.Reflection.Assembly element, System.Type attributeType) { return default(System.Attribute); }
         public static System.Attribute GetCustomAttribute(System.Reflection.Assembly element, System.Type attributeType, bool inherit) { return default(System.Attribute); }
@@ -464,7 +348,6 @@ namespace System {
         public static System.Attribute[] GetCustomAttributes(System.Reflection.ParameterInfo element, bool inherit) { return default(System.Attribute[]); }
         public static System.Attribute[] GetCustomAttributes(System.Reflection.ParameterInfo element, System.Type attributeType) { return default(System.Attribute[]); }
         public static System.Attribute[] GetCustomAttributes(System.Reflection.ParameterInfo element, System.Type attributeType, bool inherit) { return default(System.Attribute[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
         public virtual bool IsDefaultAttribute() { return default(bool); }
         public static bool IsDefined(System.Reflection.Assembly element, System.Type attributeType) { return default(bool); }
@@ -479,7 +362,6 @@ namespace System {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AttributeTargets
     {
         All = 32767,
@@ -501,7 +383,6 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AttributeUsageAttribute : System.Attribute
     {
         public AttributeUsageAttribute(System.AttributeTargets validOn) { }
@@ -509,8 +390,6 @@ namespace System {
         public bool Inherited { get { return default(bool); } set { } }
         public System.AttributeTargets ValidOn { get { return default(System.AttributeTargets); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class BadImageFormatException : System.SystemException
     {
         public BadImageFormatException() { }
@@ -520,9 +399,8 @@ namespace System {
         public BadImageFormatException(string message, string fileName) { }
         public BadImageFormatException(string message, string fileName, System.Exception inner) { }
         public string FileName { get { return default(string); } }
-        public string FusionLog { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public string FusionLog { get { return default(string); } }
         public override string Message { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
@@ -537,19 +415,13 @@ namespace System {
     public static partial class BitConverter
     {
         public static readonly bool IsLittleEndian;
-        [System.Security.SecuritySafeCriticalAttribute]
         public static long DoubleToInt64Bits(double value) { return default(long); }
         public static byte[] GetBytes(bool value) { return default(byte[]); }
         public static byte[] GetBytes(char value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] GetBytes(double value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] GetBytes(short value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] GetBytes(int value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] GetBytes(long value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] GetBytes(float value) { return default(byte[]); }
         [System.CLSCompliantAttribute(false)]
         public static byte[] GetBytes(ushort value) { return default(byte[]); }
@@ -557,19 +429,13 @@ namespace System {
         public static byte[] GetBytes(uint value) { return default(byte[]); }
         [System.CLSCompliantAttribute(false)]
         public static byte[] GetBytes(ulong value) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static double Int64BitsToDouble(long value) { return default(double); }
         public static bool ToBoolean(byte[] value, int startIndex) { return default(bool); }
         public static char ToChar(byte[] value, int startIndex) { return default(char); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static double ToDouble(byte[] value, int startIndex) { return default(double); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static short ToInt16(byte[] value, int startIndex) { return default(short); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int ToInt32(byte[] value, int startIndex) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static long ToInt64(byte[] value, int startIndex) { return default(long); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static float ToSingle(byte[] value, int startIndex) { return default(float); }
         public static string ToString(byte[] value) { return default(string); }
         public static string ToString(byte[] value, int startIndex) { return default(string); }
@@ -581,8 +447,6 @@ namespace System {
         [System.CLSCompliantAttribute(false)]
         public static ulong ToUInt64(byte[] value, int startIndex) { return default(ulong); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Boolean : System.IComparable, System.IComparable<bool>, System.IConvertible, System.IEquatable<bool>
     {
@@ -617,8 +481,6 @@ namespace System {
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
         string System.IConvertible.ToString(System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Buffer
     {
         public static void BlockCopy(System.Array src, int srcOffset, System.Array dst, int dstOffset, int count) { }
@@ -626,14 +488,10 @@ namespace System {
         public static byte GetByte(System.Array array, int index) { return default(byte); }
         public static void SetByte(System.Array array, int index, byte value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe static void MemoryCopy(void* source, void* destination, long destinationSizeInBytes, long sourceBytesToCopy) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe static void MemoryCopy(void* source, void* destination, ulong destinationSizeInBytes, ulong sourceBytesToCopy) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Byte : System.IComparable, System.IComparable<byte>, System.IConvertible, System.IEquatable<byte>, System.IFormattable
     {
@@ -664,21 +522,15 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         public static bool TryParse(string s, out byte result) { result = default(byte); return default(bool); }
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out byte result) { result = default(byte); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Char : System.IComparable, System.IComparable<char>, System.IConvertible, System.IEquatable<char>
     {
@@ -695,7 +547,6 @@ namespace System {
         public static double GetNumericValue(char c) { return default(double); }
         public static double GetNumericValue(string s, int index) { return default(double); }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static System.Globalization.UnicodeCategory GetUnicodeCategory(char c) { return default(System.Globalization.UnicodeCategory); }
         public static System.Globalization.UnicodeCategory GetUnicodeCategory(string s, int index) { return default(System.Globalization.UnicodeCategory); }
         public static bool IsControl(char c) { return default(bool); }
@@ -706,7 +557,6 @@ namespace System {
         public static bool IsHighSurrogate(string s, int index) { return default(bool); }
         public static bool IsLetter(char c) { return default(bool); }
         public static bool IsLetter(string s, int index) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool IsLetterOrDigit(char c) { return default(bool); }
         public static bool IsLetterOrDigit(string s, int index) { return default(bool); }
         public static bool IsLower(char c) { return default(bool); }
@@ -727,7 +577,6 @@ namespace System {
         public static bool IsSymbol(string s, int index) { return default(bool); }
         public static bool IsUpper(char c) { return default(bool); }
         public static bool IsUpper(string s, int index) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool IsWhiteSpace(char c) { return default(bool); }
         public static bool IsWhiteSpace(string s, int index) { return default(bool); }
         public static char Parse(string s) { return default(char); }
@@ -747,26 +596,19 @@ namespace System {
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
         public static char ToLower(char c) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static char ToLower(char c, System.Globalization.CultureInfo culture) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static char ToLowerInvariant(char c) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override string ToString() { return default(string); }
         public static string ToString(char c) { return default(string); }
         public string ToString(System.IFormatProvider provider) { return default(string); }
         public static char ToUpper(char c) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static char ToUpper(char c, System.Globalization.CultureInfo culture) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static char ToUpperInvariant(char c) { return default(char); }
         public static bool TryParse(string s, out char result) { result = default(char); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
         string System.IConvertible.ToString(System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CharEnumerator : System.Collections.Generic.IEnumerator<char>, System.Collections.IEnumerator, System.ICloneable, System.IDisposable
     {
         internal CharEnumerator() { }
@@ -779,7 +621,6 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited = true, AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CLSCompliantAttribute : System.Attribute
     {
         public CLSCompliantAttribute(bool isCompliant) { }
@@ -787,8 +628,6 @@ namespace System {
     }
 
     public delegate int Comparison<in T>(T x, T y);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ContextMarshalException : System.SystemException
     {
         public ContextMarshalException() { }
@@ -798,7 +637,6 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ContextStaticAttribute : System.Attribute
     {
         public ContextStaticAttribute() { }
@@ -811,22 +649,15 @@ namespace System {
         public static object ChangeType(object value, System.Type conversionType, System.IFormatProvider provider) { return default(object); }
         public static object ChangeType(object value, System.TypeCode typeCode) { return default(object); }
         public static object ChangeType(object value, System.TypeCode typeCode, System.IFormatProvider provider) { return default(object); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] FromBase64CharArray(char[] inArray, int offset, int length) { return default(byte[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static byte[] FromBase64String(string s) { return default(byte[]); }
         public static System.TypeCode GetTypeCode(object value) { return default(System.TypeCode); }
         public static bool IsDBNull(object value) { return default(bool); }
         public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, System.Base64FormattingOptions options) { return default(int); }
         public static string ToBase64String(byte[] inArray) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string ToBase64String(byte[] inArray, System.Base64FormattingOptions options) { return default(string); }
         public static string ToBase64String(byte[] inArray, int offset, int length) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string ToBase64String(byte[] inArray, int offset, int length, System.Base64FormattingOptions options) { return default(string); }
         public static bool ToBoolean(bool value) { return default(bool); }
         public static bool ToBoolean(byte value) { return default(bool); }
@@ -988,7 +819,6 @@ namespace System {
         public static int ToInt32(byte value) { return default(int); }
         public static int ToInt32(char value) { return default(int); }
         public static int ToInt32(System.DateTime value) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int ToInt32(decimal value) { return default(int); }
         public static int ToInt32(double value) { return default(int); }
         public static int ToInt32(short value) { return default(int); }
@@ -1095,7 +925,6 @@ namespace System {
         public static string ToString(bool value, System.IFormatProvider provider) { return default(string); }
         public static string ToString(byte value) { return default(string); }
         public static string ToString(byte value, System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string ToString(byte value, int toBase) { return default(string); }
         public static string ToString(char value) { return default(string); }
         public static string ToString(char value, System.IFormatProvider provider) { return default(string); }
@@ -1107,15 +936,12 @@ namespace System {
         public static string ToString(double value, System.IFormatProvider provider) { return default(string); }
         public static string ToString(short value) { return default(string); }
         public static string ToString(short value, System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string ToString(short value, int toBase) { return default(string); }
         public static string ToString(int value) { return default(string); }
         public static string ToString(int value, System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string ToString(int value, int toBase) { return default(string); }
         public static string ToString(long value) { return default(string); }
         public static string ToString(long value, System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string ToString(long value, int toBase) { return default(string); }
         public static string ToString(object value) { return default(string); }
         public static string ToString(object value, System.IFormatProvider provider) { return default(string); }
@@ -1256,8 +1082,6 @@ namespace System {
     }
 
     public delegate TOutput Converter<in TInput, out TOutput>(TInput input);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DataMisalignedException : System.SystemException
     {
         public DataMisalignedException() { }
@@ -1280,21 +1104,21 @@ namespace System {
         public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, System.Globalization.Calendar calendar, System.DateTimeKind kind) { throw new System.NotImplementedException(); }
         public DateTime(long ticks) { throw new System.NotImplementedException(); }
         public DateTime(long ticks, System.DateTimeKind kind) { throw new System.NotImplementedException(); }
-        public System.DateTime Date { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.DateTime); } }
+        public System.DateTime Date { get { return default(System.DateTime); } }
         public int Day { get { return default(int); } }
-        public System.DayOfWeek DayOfWeek { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.DayOfWeek); } }
+        public System.DayOfWeek DayOfWeek { get { return default(System.DayOfWeek); } }
         public int DayOfYear { get { return default(int); } }
-        public int Hour { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
-        public System.DateTimeKind Kind { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.DateTimeKind); } }
-        public int Millisecond { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
-        public int Minute { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
+        public int Hour { get { return default(int); } }
+        public System.DateTimeKind Kind { get { return default(System.DateTimeKind); } }
+        public int Millisecond { get { return default(int); } }
+        public int Minute { get { return default(int); } }
         public int Month { get { return default(int); } }
         public static System.DateTime Now { get { return default(System.DateTime); } }
-        public int Second { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
+        public int Second { get { return default(int); } }
         public long Ticks { get { return default(long); } }
-        public System.TimeSpan TimeOfDay { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.TimeSpan); } }
-        public static System.DateTime Today { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.DateTime); } }
-        public static System.DateTime UtcNow { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries"), System.Security.SecuritySafeCriticalAttribute]get { return default(System.DateTime); } }
+        public System.TimeSpan TimeOfDay { get { return default(System.TimeSpan); } }
+        public static System.DateTime Today { get { return default(System.DateTime); } }
+        public static System.DateTime UtcNow { get { return default(System.DateTime); } }
         public int Year { get { return default(int); } }
         public System.DateTime Add(System.TimeSpan value) { return default(System.DateTime); }
         public System.DateTime AddDays(double value) { return default(System.DateTime); }
@@ -1320,26 +1144,17 @@ namespace System {
         public string[] GetDateTimeFormats(char format) { return default(string[]); }
         public string[] GetDateTimeFormats(char format, System.IFormatProvider provider) { return default(string[]); }
         public string[] GetDateTimeFormats(System.IFormatProvider provider) { return default(string[]); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
         public bool IsDaylightSavingTime() { return default(bool); }
         public static bool IsLeapYear(int year) { return default(bool); }
         public static System.DateTime operator +(System.DateTime d, System.TimeSpan t) { return default(System.DateTime); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator ==(System.DateTime d1, System.DateTime d2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator >(System.DateTime t1, System.DateTime t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator >=(System.DateTime t1, System.DateTime t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator !=(System.DateTime d1, System.DateTime d2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator <(System.DateTime t1, System.DateTime t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator <=(System.DateTime t1, System.DateTime t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static System.TimeSpan operator -(System.DateTime d1, System.DateTime d2) { return default(System.TimeSpan); }
         public static System.DateTime operator -(System.DateTime d, System.TimeSpan t) { return default(System.DateTime); }
         public static System.DateTime Parse(string s) { return default(System.DateTime); }
@@ -1348,15 +1163,12 @@ namespace System {
         public static System.DateTime ParseExact(string s, string format, System.IFormatProvider provider) { return default(System.DateTime); }
         public static System.DateTime ParseExact(string s, string format, System.IFormatProvider provider, System.Globalization.DateTimeStyles style) { return default(System.DateTime); }
         public static System.DateTime ParseExact(string s, string[] formats, System.IFormatProvider provider, System.Globalization.DateTimeStyles style) { return default(System.DateTime); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static System.DateTime SpecifyKind(System.DateTime value, System.DateTimeKind kind) { return default(System.DateTime); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.TimeSpan Subtract(System.DateTime value) { return default(System.TimeSpan); }
         public System.DateTime Subtract(System.TimeSpan value) { return default(System.DateTime); }
         bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
         byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
         char System.IConvertible.ToChar(System.IFormatProvider provider) { return default(char); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider provider) { return default(System.DateTime); }
         decimal System.IConvertible.ToDecimal(System.IFormatProvider provider) { return default(decimal); }
         double System.IConvertible.ToDouble(System.IFormatProvider provider) { return default(double); }
@@ -1369,7 +1181,6 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public long ToBinary() { return default(long); }
         public long ToFileTime() { return default(long); }
@@ -1381,7 +1192,6 @@ namespace System {
         public string ToShortDateString() { return default(string); }
         public string ToShortTimeString() { return default(string); }
         public override string ToString() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToString(System.IFormatProvider provider) { return default(string); }
         public string ToString(string format) { return default(string); }
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
@@ -1393,8 +1203,6 @@ namespace System {
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DateTimeKind
     {
         Local = 2,
@@ -1468,7 +1276,6 @@ namespace System {
         public System.DateTimeOffset Subtract(System.TimeSpan value) { return default(System.DateTimeOffset); }
         int System.IComparable.CompareTo(object obj) { return default(int); }
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public long ToFileTime() { return default(long); }
         public System.DateTimeOffset ToLocalTime() { return default(System.DateTimeOffset); }
@@ -1487,8 +1294,6 @@ namespace System {
         public long ToUnixTimeMilliseconds() { return default(long); }
         public long ToUnixTimeSeconds() { return default(long); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DayOfWeek
     {
         Friday = 5,
@@ -1499,13 +1304,10 @@ namespace System {
         Tuesday = 2,
         Wednesday = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DBNull : System.IConvertible, System.Runtime.Serialization.ISerializable
     {
         internal DBNull() { }
         public static readonly System.DBNull Value;
-        [System.Security.SecurityCriticalAttribute]
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
         bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
@@ -1526,8 +1328,6 @@ namespace System {
         public override string ToString() { return default(string); }
         public string ToString(System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Decimal : System.IComparable, System.IComparable<decimal>, System.IConvertible, System.IEquatable<decimal>, System.IFormattable, System.Runtime.Serialization.IDeserializationCallback
     {
@@ -1541,52 +1341,35 @@ namespace System {
         public static readonly decimal One;
         [System.Runtime.CompilerServices.DecimalConstantAttribute((byte)0, (byte)0, (uint)0, (uint)0, (uint)0)]
         public static readonly decimal Zero;
-        [System.Security.SecuritySafeCriticalAttribute]
         public Decimal(double value) { throw new System.NotImplementedException(); }
         public Decimal(int value) { throw new System.NotImplementedException(); }
         public Decimal(int lo, int mid, int hi, bool isNegative, byte scale) { throw new System.NotImplementedException(); }
         public Decimal(int[] bits) { throw new System.NotImplementedException(); }
         public Decimal(long value) { throw new System.NotImplementedException(); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public Decimal(float value) { throw new System.NotImplementedException(); }
         [System.CLSCompliantAttribute(false)]
         public Decimal(uint value) { throw new System.NotImplementedException(); }
         [System.CLSCompliantAttribute(false)]
         public Decimal(ulong value) { throw new System.NotImplementedException(); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Add(decimal d1, decimal d2) { return default(decimal); }
         public static decimal Ceiling(decimal d) { return default(decimal); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int Compare(decimal d1, decimal d2) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public int CompareTo(decimal value) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public int CompareTo(object value) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Divide(decimal d1, decimal d2) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool Equals(decimal value) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool Equals(decimal d1, decimal d2) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override bool Equals(object value) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Floor(decimal d) { return default(decimal); }
         public static decimal FromOACurrency(long cy) { return default(decimal); }
         public static int[] GetBits(decimal d) { return default(int[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Multiply(decimal d1, decimal d2) { return default(decimal); }
         public static decimal Negate(decimal d) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal operator +(decimal d1, decimal d2) { return default(decimal); }
         public static decimal operator --(decimal d) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal operator /(decimal d1, decimal d2) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator ==(decimal d1, decimal d2) { return default(bool); }
         public static explicit operator byte(decimal value) { return default(byte); }
         public static explicit operator char(decimal value) { return default(char); }
@@ -1605,9 +1388,7 @@ namespace System {
         public static explicit operator ulong(decimal value) { return default(ulong); }
         public static explicit operator decimal(double value) { return default(decimal); }
         public static explicit operator decimal(float value) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator >(decimal d1, decimal d2) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator >=(decimal d1, decimal d2) { return default(bool); }
         public static implicit operator decimal(byte value) { return default(decimal); }
         public static implicit operator decimal(char value) { return default(decimal); }
@@ -1623,16 +1404,11 @@ namespace System {
         [System.CLSCompliantAttribute(false)]
         public static implicit operator decimal(ulong value) { return default(decimal); }
         public static decimal operator ++(decimal d) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator !=(decimal d1, decimal d2) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator <(decimal d1, decimal d2) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool operator <=(decimal d1, decimal d2) { return default(bool); }
         public static decimal operator %(decimal d1, decimal d2) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal operator *(decimal d1, decimal d2) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal operator -(decimal d1, decimal d2) { return default(decimal); }
         public static decimal operator -(decimal d) { return default(decimal); }
         public static decimal operator +(decimal d) { return default(decimal); }
@@ -1642,12 +1418,9 @@ namespace System {
         public static decimal Parse(string s, System.IFormatProvider provider) { return default(decimal); }
         public static decimal Remainder(decimal d1, decimal d2) { return default(decimal); }
         public static decimal Round(decimal d) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Round(decimal d, int decimals) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Round(decimal d, int decimals, System.MidpointRounding mode) { return default(decimal); }
         public static decimal Round(decimal d, System.MidpointRounding mode) { return default(decimal); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Subtract(decimal d1, decimal d2) { return default(decimal); }
         bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
         byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
@@ -1666,44 +1439,30 @@ namespace System {
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
         public static byte ToByte(decimal value) { return default(byte); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static double ToDouble(decimal d) { return default(double); }
         public static short ToInt16(decimal value) { return default(short); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int ToInt32(decimal d) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static long ToInt64(decimal d) { return default(long); }
         public static long ToOACurrency(decimal value) { return default(long); }
         [System.CLSCompliantAttribute(false)]
         public static sbyte ToSByte(decimal value) { return default(sbyte); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static float ToSingle(decimal d) { return default(float); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         [System.CLSCompliantAttribute(false)]
         public static ushort ToUInt16(decimal value) { return default(ushort); }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static uint ToUInt32(decimal d) { return default(uint); }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static ulong ToUInt64(decimal d) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static decimal Truncate(decimal d) { return default(decimal); }
         public static bool TryParse(string s, out decimal result) { result = default(decimal); return default(bool); }
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out decimal result) { result = default(decimal); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(2))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Delegate : System.ICloneable, System.Runtime.Serialization.ISerializable
     {
         protected Delegate(object target, string method) { }
@@ -1712,7 +1471,6 @@ namespace System {
         public object Target { get { return default(object); } }
         public virtual object Clone() { return default(object); }
         public static System.Delegate Combine(System.Delegate a, System.Delegate b) { return default(System.Delegate); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static System.Delegate Combine(params System.Delegate[] delegates) { return default(System.Delegate); }
         protected virtual System.Delegate CombineImpl(System.Delegate d) { return default(System.Delegate); }
         public static System.Delegate CreateDelegate(System.Type type, object firstArgument, System.Reflection.MethodInfo method) { return default(System.Delegate); }
@@ -1739,8 +1497,6 @@ namespace System {
         protected virtual System.Delegate RemoveImpl(System.Delegate d) { return default(System.Delegate); }
         internal Delegate() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DivideByZeroException : System.ArithmeticException
     {
         public DivideByZeroException() { }
@@ -1748,8 +1504,6 @@ namespace System {
         public DivideByZeroException(string message) { }
         public DivideByZeroException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DllNotFoundException : System.TypeLoadException
     {
         public DllNotFoundException() { }
@@ -1757,8 +1511,6 @@ namespace System {
         public DllNotFoundException(string message) { }
         public DllNotFoundException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Double : System.IComparable, System.IComparable<double>, System.IConvertible, System.IEquatable<double>, System.IFormattable
     {
@@ -1772,13 +1524,9 @@ namespace System {
         public int CompareTo(object value) { return default(int); }
         public bool Equals(double obj) { return default(bool); }
         public override bool Equals(object obj) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsInfinity(double d) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsNaN(double d) { return default(bool); }
         public static bool IsNegativeInfinity(double d) { return default(bool); }
         public static bool IsPositiveInfinity(double d) { return default(bool); }
@@ -1807,21 +1555,15 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         public static bool TryParse(string s, out double result) { result = default(double); return default(bool); }
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out double result) { result = default(double); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DuplicateWaitObjectException : System.ArgumentException
     {
         public DuplicateWaitObjectException() { }
@@ -1830,8 +1572,6 @@ namespace System {
         public DuplicateWaitObjectException(string message, System.Exception innerException) { }
         public DuplicateWaitObjectException(string parameterName, string message) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EntryPointNotFoundException : System.TypeLoadException
     {
         public EntryPointNotFoundException() { }
@@ -1839,34 +1579,21 @@ namespace System {
         public EntryPointNotFoundException(string message) { }
         public EntryPointNotFoundException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Enum : System.ValueType, System.IComparable, System.IConvertible, System.IFormattable
     {
         protected Enum() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public int CompareTo(object target) { return default(int); }
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static string Format(System.Type enumType, object value, string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static string GetName(System.Type enumType, object value) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static string[] GetNames(System.Type enumType) { return default(string[]); }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static System.Type GetUnderlyingType(System.Type enumType) { return default(System.Type); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static System.Array GetValues(System.Type enumType) { return default(System.Array); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool HasFlag(System.Enum flag) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static bool IsDefined(System.Type enumType, object value) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static object Parse(System.Type enumType, string value) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static object Parse(System.Type enumType, string value, bool ignoreCase) { return default(object); }
         bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
         byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
@@ -1883,35 +1610,18 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, byte value) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, short value) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, int value) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, long value) { return default(object); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static object ToObject(System.Type enumType, object value) { return default(object); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, sbyte value) { return default(object); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, ushort value) { return default(object); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, uint value) { return default(object); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.Type enumType, ulong value) { return default(object); }
         public override string ToString() { return default(string); }
         [System.ObsoleteAttribute("The provider argument is not used. Please use ToString().")]
@@ -1927,8 +1637,6 @@ namespace System {
         [System.ObsoleteAttribute("The provider argument is not used. Please use ToString(String).")]
         string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Environment
     {
         public static string CommandLine { get { return default(string); } }
@@ -1953,7 +1661,6 @@ namespace System {
         public static void Exit(int exitCode) { }
         public static string ExpandEnvironmentVariables(string name) { return default(string); }
         public static void FailFast(string message) { }
-        [System.Security.SecurityCriticalAttribute]
         public static void FailFast(string message, System.Exception exception) { }
         public static string[] GetCommandLineArgs() { return default(string[]); }
         public static string GetEnvironmentVariable(string variable) { return default(string); }
@@ -1962,7 +1669,6 @@ namespace System {
         public static string GetFolderPath(System.Environment.SpecialFolder folder, System.Environment.SpecialFolderOption option) { return default(string); }
         public static string[] GetLogicalDrives() { return default(string[]); }
         public static void SetEnvironmentVariable(string variable, string value) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public enum SpecialFolder
         {
             AdminTools = 48,
@@ -2020,29 +1726,20 @@ namespace System {
             None = 0,
         }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum EnvironmentVariableTarget
     {
         Machine = 2,
         Process = 0,
         User = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EventArgs
     {
         public static readonly System.EventArgs Empty;
         public EventArgs() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void EventHandler(object sender, System.EventArgs e);
 
     public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e);
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Exception : System.Runtime.Serialization.ISerializable
     {
         public Exception() { }
@@ -2065,15 +1762,12 @@ namespace System {
     }
 
     [System.ObsoleteAttribute("This type previously indicated an unspecified fatal error in the runtime. The runtime no longer raises this exception so this type is obsolete.")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ExecutionEngineException : System.SystemException
     {
         public ExecutionEngineException() { }
         public ExecutionEngineException(string message) { }
         public ExecutionEngineException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FieldAccessException : System.MemberAccessException
     {
         public FieldAccessException() { }
@@ -2083,13 +1777,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(16), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FlagsAttribute : System.Attribute
     {
         public FlagsAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FormatException : System.SystemException
     {
         public FormatException() { }
@@ -2097,20 +1788,10 @@ namespace System {
         public FormatException(string message) { }
         public FormatException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate TResult Func<out TResult>();
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate TResult Func<in T, out TResult>(T arg);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate TResult Func<in T1, in T2, in T3, out TResult>(T1 arg1, T2 arg2, T3 arg3);
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public delegate TResult Func<in T1, in T2, in T3, in T4, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
 
     public delegate TResult Func<in T1, in T2, in T3, in T4, in T5, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5);
@@ -2130,17 +1811,14 @@ namespace System {
         public static void Collect(int generation) { }
         public static void Collect(int generation, System.GCCollectionMode mode) { }
         public static void Collect(int generation, System.GCCollectionMode mode, bool blocking) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int CollectionCount(int generation) { return default(int); }
         public static int GetGeneration(object obj) { return default(int); }
         public static int GetGeneration(System.WeakReference wo) { return default(int); }
         public static long GetTotalMemory(bool forceFullCollection) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void KeepAlive(object obj) { }
         public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) { }
         public static void RemoveMemoryPressure(long bytesAllocated) { }
         public static void ReRegisterForFinalize(object obj) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void SuppressFinalize(object obj) { }
         public static System.GCNotificationStatus WaitForFullGCApproach() { return default(System.GCNotificationStatus); }
         public static System.GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) { return default(System.GCNotificationStatus); }
@@ -2164,8 +1842,6 @@ namespace System {
         Succeeded = 0,
         Timeout = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Guid : System.IComparable, System.IComparable<System.Guid>, System.IEquatable<System.Guid>, System.IFormattable
     {
@@ -2195,8 +1871,6 @@ namespace System {
         int System.IComparable.CompareTo(object value) { return default(int); }
         string System.IFormattable.ToString(string format, System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IAsyncResult
     {
         object AsyncState { get; }
@@ -2204,14 +1878,10 @@ namespace System {
         bool CompletedSynchronously { get; }
         bool IsCompleted { get; }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICloneable
     {
         object Clone();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IComparable
     {
         int CompareTo(object obj);
@@ -2223,7 +1893,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IConvertible
     {
         System.TypeCode GetTypeCode();
@@ -2244,14 +1913,10 @@ namespace System {
         uint ToUInt32(System.IFormatProvider provider);
         ulong ToUInt64(System.IFormatProvider provider);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomFormatter
     {
         string Format(string format, object arg, System.IFormatProvider formatProvider);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDisposable
     {
         void Dispose();
@@ -2261,20 +1926,14 @@ namespace System {
     {
         bool Equals(T other);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IFormatProvider
     {
         object GetFormat(System.Type formatType);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IFormattable
     {
         string ToString(string format, System.IFormatProvider formatProvider);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IndexOutOfRangeException : System.SystemException
     {
         public IndexOutOfRangeException() { }
@@ -2295,8 +1954,6 @@ namespace System {
         public InsufficientMemoryException(string message) { }
         public InsufficientMemoryException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Int16 : System.IComparable, System.IComparable<short>, System.IConvertible, System.IEquatable<short>, System.IFormattable
     {
@@ -2327,9 +1984,7 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
         public string ToString(string format) { return default(string); }
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
@@ -2338,29 +1993,20 @@ namespace System {
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Int32 : System.IComparable, System.IComparable<int>, System.IConvertible, System.IEquatable<int>, System.IFormattable
     {
         public const int MaxValue = 2147483647;
         public const int MinValue = -2147483648;
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int CompareTo(int value) { return default(int); }
         public int CompareTo(object value) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool Equals(int obj) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
         public static int Parse(string s) { return default(int); }
         public static int Parse(string s, System.Globalization.NumberStyles style) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Parse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Parse(string s, System.IFormatProvider provider) { return default(int); }
         bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
         byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
@@ -2369,9 +2015,7 @@ namespace System {
         decimal System.IConvertible.ToDecimal(System.IFormatProvider provider) { return default(decimal); }
         double System.IConvertible.ToDouble(System.IFormatProvider provider) { return default(double); }
         short System.IConvertible.ToInt16(System.IFormatProvider provider) { return default(short); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         int System.IConvertible.ToInt32(System.IFormatProvider provider) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         long System.IConvertible.ToInt64(System.IFormatProvider provider) { return default(long); }
         sbyte System.IConvertible.ToSByte(System.IFormatProvider provider) { return default(sbyte); }
         float System.IConvertible.ToSingle(System.IFormatProvider provider) { return default(float); }
@@ -2379,25 +2023,15 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out int result) { result = default(int); return default(bool); }
         public static bool TryParse(string s, out int result) { result = default(int); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Int64 : System.IComparable, System.IComparable<long>, System.IConvertible, System.IEquatable<long>, System.IFormattable
     {
@@ -2428,71 +2062,48 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out long result) { result = default(long); return default(bool); }
         public static bool TryParse(string s, out long result) { result = default(long); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct IntPtr : System.Runtime.Serialization.ISerializable
     {
         public static readonly System.IntPtr Zero;
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public IntPtr(int value) { throw new System.NotImplementedException(); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public IntPtr(long value) { throw new System.NotImplementedException(); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public unsafe IntPtr(void* value) { throw new System.NotImplementedException(); }
-        public static int Size { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(int); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
+        public static int Size { get { return default(int); } }
         public static System.IntPtr Add(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr operator +(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static bool operator ==(System.IntPtr value1, System.IntPtr value2) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static explicit operator System.IntPtr(int value) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static explicit operator System.IntPtr(long value) { return default(System.IntPtr); }
         public static explicit operator int(System.IntPtr value) { return default(int); }
         public static explicit operator long(System.IntPtr value) { return default(long); }
         [System.CLSCompliantAttribute(false)]
         public unsafe static explicit operator void* (System.IntPtr value) { return default(void*); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public unsafe static explicit operator System.IntPtr(void* value) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static bool operator !=(System.IntPtr value1, System.IntPtr value2) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr operator -(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(2), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static System.IntPtr Subtract(System.IntPtr pointer, int offset) { return default(System.IntPtr); }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public int ToInt32() { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public long ToInt64() { return default(long); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public unsafe void* ToPointer() { return default(void*); }
         public override string ToString() { return default(string); }
         public string ToString(string format) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidCastException : System.SystemException
     {
         public InvalidCastException() { }
@@ -2501,8 +2112,6 @@ namespace System {
         public InvalidCastException(string message, System.Exception innerException) { }
         public InvalidCastException(string message, int errorCode) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidOperationException : System.SystemException
     {
         public InvalidOperationException() { }
@@ -2510,16 +2119,12 @@ namespace System {
         public InvalidOperationException(string message) { }
         public InvalidOperationException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class InvalidProgramException : System.SystemException
     {
         public InvalidProgramException() { }
         public InvalidProgramException(string message) { }
         public InvalidProgramException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public partial class InvalidTimeZoneException : System.Exception
     {
         public InvalidTimeZoneException() { }
@@ -2549,9 +2154,6 @@ namespace System {
     {
         object GetService(System.Type serviceType);
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("ThreadSafetyMode={Mode}, IsValueCreated={IsValueCreated}, IsValueFaulted={IsValueFaulted}, Value={ValueForDebugDisplay}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Lazy<T>
     {
         public Lazy() { }
@@ -2560,13 +2162,11 @@ namespace System {
         public Lazy(System.Func<T> valueFactory, bool isThreadSafe) { }
         public Lazy(System.Func<T> valueFactory, System.Threading.LazyThreadSafetyMode mode) { }
         public Lazy(System.Threading.LazyThreadSafetyMode mode) { }
-        public bool IsValueCreated { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsValueCreated { get { return default(bool); } }
         [System.Diagnostics.DebuggerBrowsableAttribute((System.Diagnostics.DebuggerBrowsableState)(0))]
         public T Value { get { return default(T); } }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum LoaderOptimization
     {
         [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
@@ -2580,7 +2180,6 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LoaderOptimizationAttribute : System.Attribute
     {
         public LoaderOptimizationAttribute(byte value) { }
@@ -2618,57 +2217,35 @@ namespace System {
         public static double Log(double d) { return default(double); }
         public static double Log(double a, double newBase) { return default(double); }
         public static double Log10(double d) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static byte Max(byte val1, byte val2) { return default(byte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static decimal Max(decimal val1, decimal val2) { return default(decimal); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static double Max(double val1, double val2) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static short Max(short val1, short val2) { return default(short); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Max(int val1, int val2) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long Max(long val1, long val2) { return default(long); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static sbyte Max(sbyte val1, sbyte val2) { return default(sbyte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static float Max(float val1, float val2) { return default(float); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ushort Max(ushort val1, ushort val2) { return default(ushort); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static uint Max(uint val1, uint val2) { return default(uint); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ulong Max(ulong val1, ulong val2) { return default(ulong); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static byte Min(byte val1, byte val2) { return default(byte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static decimal Min(decimal val1, decimal val2) { return default(decimal); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static double Min(double val1, double val2) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static short Min(short val1, short val2) { return default(short); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Min(int val1, int val2) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long Min(long val1, long val2) { return default(long); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static sbyte Min(sbyte val1, sbyte val2) { return default(sbyte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static float Min(float val1, float val2) { return default(float); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ushort Min(ushort val1, ushort val2) { return default(ushort); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static uint Min(uint val1, uint val2) { return default(uint); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ulong Min(ulong val1, ulong val2) { return default(ulong); }
         public static double Pow(double x, double y) { return default(double); }
         public static decimal Round(decimal d) { return default(decimal); }
@@ -2689,15 +2266,12 @@ namespace System {
         public static int Sign(float value) { return default(int); }
         public static double Sin(double a) { return default(double); }
         public static double Sinh(double value) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static double Sqrt(double d) { return default(double); }
         public static double Tan(double a) { return default(double); }
         public static double Tanh(double value) { return default(double); }
         public static decimal Truncate(decimal d) { return default(decimal); }
         public static double Truncate(double d) { return default(double); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MemberAccessException : System.SystemException
     {
         public MemberAccessException() { }
@@ -2705,8 +2279,6 @@ namespace System {
         public MemberAccessException(string message) { }
         public MemberAccessException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MethodAccessException : System.MemberAccessException
     {
         public MethodAccessException() { }
@@ -2714,15 +2286,11 @@ namespace System {
         public MethodAccessException(string message) { }
         public MethodAccessException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MidpointRounding
     {
         AwayFromZero = 1,
         ToEven = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingFieldException : System.MissingMemberException, System.Runtime.Serialization.ISerializable
     {
         public MissingFieldException() { }
@@ -2730,10 +2298,8 @@ namespace System {
         public MissingFieldException(string message) { }
         public MissingFieldException(string message, System.Exception inner) { }
         public MissingFieldException(string className, string fieldName) { }
-        public override string Message { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public override string Message { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingMemberException : System.MemberAccessException, System.Runtime.Serialization.ISerializable
     {
         protected string ClassName;
@@ -2744,12 +2310,9 @@ namespace System {
         public MissingMemberException(string message) { }
         public MissingMemberException(string message, System.Exception inner) { }
         public MissingMemberException(string className, string memberName) { }
-        public override string Message { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
+        public override string Message { get { return default(string); } }
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingMethodException : System.MissingMemberException, System.Runtime.Serialization.ISerializable
     {
         public MissingMethodException() { }
@@ -2757,18 +2320,14 @@ namespace System {
         public MissingMethodException(string message) { }
         public MissingMethodException(string message, System.Exception inner) { }
         public MissingMethodException(string className, string methodName) { }
-        public override string Message { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public override string Message { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ModuleHandle
     {
         public static readonly System.ModuleHandle EmptyHandle;
         public int MDStreamVersion { get { return default(int); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public bool Equals(System.ModuleHandle handle) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
         public System.RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int fieldToken) { return default(System.RuntimeFieldHandle); }
@@ -2785,13 +2344,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class MTAThreadAttribute : System.Attribute
     {
         public MTAThreadAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MulticastDelegate : System.Delegate
     {
         protected MulticastDelegate(object target, string method) : base(default(object), default(string)) { }
@@ -2808,8 +2364,6 @@ namespace System {
         protected sealed override System.Delegate RemoveImpl(System.Delegate value) { return default(System.Delegate); }
         internal MulticastDelegate() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class MulticastNotSupportedException : System.SystemException
     {
         public MulticastNotSupportedException() { }
@@ -2818,13 +2372,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NonSerializedAttribute : System.Attribute
     {
         public NonSerializedAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class NotFiniteNumberException : System.ArithmeticException
     {
         public NotFiniteNumberException() { }
@@ -2835,11 +2386,8 @@ namespace System {
         public NotFiniteNumberException(string message, double offendingNumber, System.Exception innerException) { }
         public NotFiniteNumberException(string message, System.Exception innerException) { }
         public double OffendingNumber { get { return default(double); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class NotImplementedException : System.SystemException
     {
         public NotImplementedException() { }
@@ -2847,8 +2395,6 @@ namespace System {
         public NotImplementedException(string message) { }
         public NotImplementedException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class NotSupportedException : System.SystemException
     {
         public NotSupportedException() { }
@@ -2856,13 +2402,9 @@ namespace System {
         public NotSupportedException(string message) { }
         public NotSupportedException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Nullable
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static int Compare<T>(System.Nullable<T> n1, System.Nullable<T> n2) where T : struct { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static bool Equals<T>(System.Nullable<T> n1, System.Nullable<T> n2) where T : struct { return default(bool); }
         public static System.Type GetUnderlyingType(System.Type nullableType) { return default(System.Type); }
     }
@@ -2882,8 +2424,6 @@ namespace System {
         public static implicit operator System.Nullable<T>(T value) { return default(System.Nullable<T>); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class NullReferenceException : System.SystemException
     {
         public NullReferenceException() { }
@@ -2891,12 +2431,8 @@ namespace System {
         public NullReferenceException(string message) { }
         public NullReferenceException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(2))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Object
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public Object() { }
         public virtual bool Equals(object obj) { return default(bool); }
         public static bool Equals(object objA, object objB) { return default(bool); }
@@ -2904,12 +2440,9 @@ namespace System {
         public virtual int GetHashCode() { return default(int); }
         public System.Type GetType() { return default(System.Type); }
         protected object MemberwiseClone() { return default(object); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static bool ReferenceEquals(object objA, object objB) { return default(bool); }
         public virtual string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ObjectDisposedException : System.InvalidOperationException
     {
         protected ObjectDisposedException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
@@ -2918,12 +2451,10 @@ namespace System {
         public ObjectDisposedException(string objectName, string message) { }
         public override string Message { get { return default(string); } }
         public string ObjectName { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(6140), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ObsoleteAttribute : System.Attribute
     {
         public ObsoleteAttribute() { }
@@ -2932,8 +2463,6 @@ namespace System {
         public bool IsError { get { return default(bool); } }
         public string Message { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OperatingSystem : System.ICloneable, System.Runtime.Serialization.ISerializable
     {
         public OperatingSystem(System.PlatformID platform, System.Version version) { }
@@ -2945,8 +2474,6 @@ namespace System {
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class OperationCanceledException : System.SystemException
     {
         public OperationCanceledException() { }
@@ -2958,8 +2485,6 @@ namespace System {
         public OperationCanceledException(System.Threading.CancellationToken token) { }
         public System.Threading.CancellationToken CancellationToken { get { return default(System.Threading.CancellationToken); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class OutOfMemoryException : System.SystemException
     {
         public OutOfMemoryException() { }
@@ -2967,8 +2492,6 @@ namespace System {
         public OutOfMemoryException(string message) { }
         public OutOfMemoryException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class OverflowException : System.ArithmeticException
     {
         public OverflowException() { }
@@ -2978,13 +2501,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = true, AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ParamArrayAttribute : System.Attribute
     {
         public ParamArrayAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PlatformID
     {
         MacOSX = 6,
@@ -2995,8 +2515,6 @@ namespace System {
         WinCE = 3,
         Xbox = 5,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PlatformNotSupportedException : System.NotSupportedException
     {
         public PlatformNotSupportedException() { }
@@ -3015,24 +2533,17 @@ namespace System {
         protected virtual void OnReport(T value) { }
         void System.IProgress<T>.Report(T value) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Random
     {
         public Random() { }
         public Random(int Seed) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual int Next() { return default(int); }
         public virtual int Next(int maxValue) { return default(int); }
         public virtual int Next(int minValue, int maxValue) { return default(int); }
         public virtual void NextBytes(byte[] buffer) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual double NextDouble() { return default(double); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual double Sample() { return default(double); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RankException : System.SystemException
     {
         public RankException() { }
@@ -3040,8 +2551,6 @@ namespace System {
         public RankException(string message) { }
         public RankException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ResolveEventArgs : System.EventArgs
     {
         public ResolveEventArgs(string name) { }
@@ -3049,39 +2558,27 @@ namespace System {
         public string Name { get { return default(string); } }
         public System.Reflection.Assembly RequestingAssembly { get { return default(System.Reflection.Assembly); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate System.Reflection.Assembly ResolveEventHandler(object sender, System.ResolveEventArgs args);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct RuntimeArgumentHandle
     {
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct RuntimeFieldHandle : System.Runtime.Serialization.ISerializable
     {
         public System.IntPtr Value { get { return default(System.IntPtr); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public bool Equals(System.RuntimeFieldHandle handle) { return default(bool); }
         public override int GetHashCode() { return default(int); }
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public static bool operator ==(System.RuntimeFieldHandle left, System.RuntimeFieldHandle right) { return default(bool); }
         public static bool operator !=(System.RuntimeFieldHandle left, System.RuntimeFieldHandle right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct RuntimeMethodHandle : System.Runtime.Serialization.ISerializable
     {
         public System.IntPtr Value { get { return default(System.IntPtr); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public bool Equals(System.RuntimeMethodHandle handle) { return default(bool); }
         public System.IntPtr GetFunctionPointer() { return default(System.IntPtr); }
         public override int GetHashCode() { return default(int); }
@@ -3089,19 +2586,14 @@ namespace System {
         public static bool operator ==(System.RuntimeMethodHandle left, System.RuntimeMethodHandle right) { return default(bool); }
         public static bool operator !=(System.RuntimeMethodHandle left, System.RuntimeMethodHandle right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct RuntimeTypeHandle : System.Runtime.Serialization.ISerializable
     {
         public System.IntPtr Value { get { return default(System.IntPtr); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public bool Equals(System.RuntimeTypeHandle handle) { return default(bool); }
         public override int GetHashCode() { return default(int); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public System.ModuleHandle GetModuleHandle() { return default(System.ModuleHandle); }
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public static bool operator ==(object left, System.RuntimeTypeHandle right) { return default(bool); }
@@ -3111,7 +2603,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SByte : System.IComparable, System.IComparable<sbyte>, System.IConvertible, System.IEquatable<sbyte>, System.IFormattable
     {
@@ -3146,9 +2637,7 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
         public string ToString(string format) { return default(string); }
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
@@ -3161,13 +2650,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4124), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SerializableAttribute : System.Attribute
     {
         public SerializableAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Single : System.IComparable, System.IComparable<float>, System.IConvertible, System.IEquatable<float>, System.IFormattable
     {
@@ -3181,17 +2667,11 @@ namespace System {
         public int CompareTo(float value) { return default(int); }
         public override bool Equals(object obj) { return default(bool); }
         public bool Equals(float obj) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsInfinity(float f) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsNaN(float f) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsNegativeInfinity(float f) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsPositiveInfinity(float f) { return default(bool); }
         public static bool operator ==(float left, float right) { return default(bool); }
         public static bool operator >(float left, float right) { return default(bool); }
@@ -3218,21 +2698,15 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out float result) { result = default(float); return default(bool); }
         public static bool TryParse(string s, out float result) { result = default(float); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StackOverflowException : System.SystemException
     {
         public StackOverflowException() { }
@@ -3241,36 +2715,25 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class STAThreadAttribute : System.Attribute
     {
         public STAThreadAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class String : System.Collections.Generic.IEnumerable<char>, System.Collections.IEnumerable, System.ICloneable, System.IComparable, System.IComparable<string>, System.IConvertible, System.IEquatable<string>
     {
         public static readonly string Empty;
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe String(char* value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe String(char* value, int startIndex, int length) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public String(char c, int count) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public String(char[] value) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public String(char[] value, int startIndex, int length) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe String(sbyte* value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe String(sbyte* value, int startIndex, int length) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe String(sbyte* value, int startIndex, int length, System.Text.Encoding enc) { }
         [System.Runtime.CompilerServices.IndexerName("Chars")]
         public char this[int index] { get { return default(char); } }
@@ -3280,28 +2743,16 @@ namespace System {
         public static int Compare(string strA, int indexA, string strB, int indexB, int length, bool ignoreCase) { return default(int); }
         public static int Compare(string strA, int indexA, string strB, int indexB, int length, bool ignoreCase, System.Globalization.CultureInfo culture) { return default(int); }
         public static int Compare(string strA, int indexA, string strB, int indexB, int length, System.Globalization.CultureInfo culture, System.Globalization.CompareOptions options) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int Compare(string strA, int indexA, string strB, int indexB, int length, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Compare(string strA, string strB) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Compare(string strA, string strB, bool ignoreCase) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Compare(string strA, string strB, bool ignoreCase, System.Globalization.CultureInfo culture) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int Compare(string strA, string strB, System.Globalization.CultureInfo culture, System.Globalization.CompareOptions options) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int Compare(string strA, string strB, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static int CompareOrdinal(string strA, int indexA, string strB, int indexB, int length) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static int CompareOrdinal(string strA, string strB) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int CompareTo(object value) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int CompareTo(string strB) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string Concat(System.Collections.Generic.IEnumerable<string> values) { return default(string); }
         public static string Concat(object arg0) { return default(string); }
         public static string Concat(object arg0, object arg1) { return default(string); }
@@ -3309,36 +2760,21 @@ namespace System {
         [System.CLSCompliantAttribute(false)]
         public static string Concat(object arg0, object arg1, object arg2, object arg3, __arglist) { return default(string); }
         public static string Concat(params object[] args) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Concat(string str0, string str1) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Concat(string str0, string str1, string str2) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Concat(string str0, string str1, string str2, string str3) { return default(string); }
         public static string Concat(params string[] values) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string Concat<T>(System.Collections.Generic.IEnumerable<T> values) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool Contains(string value) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Copy(string str) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count) { }
         public bool EndsWith(string value) { return default(bool); }
         public bool EndsWith(string value, bool ignoreCase, System.Globalization.CultureInfo culture) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool EndsWith(string value, System.StringComparison comparisonType) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public override bool Equals(object obj) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool Equals(string value) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool Equals(string a, string b) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool Equals(string a, string b, System.StringComparison comparisonType) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool Equals(string value, System.StringComparison comparisonType) { return default(bool); }
         public static string Format(System.IFormatProvider provider, string format, params object[] args) { return default(string); }
         public static string Format(string format, object arg0) { return default(string); }
@@ -3346,103 +2782,66 @@ namespace System {
         public static string Format(string format, object arg0, object arg1, object arg2) { return default(string); }
         public static string Format(string format, params object[] args) { return default(string); }
         public System.CharEnumerator GetEnumerator() { return default(System.CharEnumerator); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(char value) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(char value, int startIndex) { return default(int); }
         public int IndexOf(char value, int startIndex, int count) { return default(int); }
         public int IndexOf(string value) { return default(int); }
         public int IndexOf(string value, int startIndex) { return default(int); }
         public int IndexOf(string value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public int IndexOf(string value, int startIndex, int count, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(string value, int startIndex, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(string value, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOfAny(char[] anyOf) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOfAny(char[] anyOf, int startIndex) { return default(int); }
         public int IndexOfAny(char[] anyOf, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string Insert(int startIndex, string value) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Intern(string str) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string IsInterned(string str) { return default(string); }
         public bool IsNormalized() { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool IsNormalized(System.Text.NormalizationForm normalizationForm) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool IsNullOrEmpty(string value) { return default(bool); }
         public static bool IsNullOrWhiteSpace(string value) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string Join(string separator, System.Collections.Generic.IEnumerable<string> values) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string Join(string separator, params object[] values) { return default(string); }
         public static string Join(string separator, params string[] value) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string Join(string separator, string[] value, int startIndex, int count) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static string Join<T>(string separator, System.Collections.Generic.IEnumerable<T> values) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int LastIndexOf(char value) { return default(int); }
         public int LastIndexOf(char value, int startIndex) { return default(int); }
         public int LastIndexOf(char value, int startIndex, int count) { return default(int); }
         public int LastIndexOf(string value) { return default(int); }
         public int LastIndexOf(string value, int startIndex) { return default(int); }
         public int LastIndexOf(string value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public int LastIndexOf(string value, int startIndex, int count, System.StringComparison comparisonType) { return default(int); }
         public int LastIndexOf(string value, int startIndex, System.StringComparison comparisonType) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int LastIndexOf(string value, System.StringComparison comparisonType) { return default(int); }
         public int LastIndexOfAny(char[] anyOf) { return default(int); }
         public int LastIndexOfAny(char[] anyOf, int startIndex) { return default(int); }
         public int LastIndexOfAny(char[] anyOf, int startIndex, int count) { return default(int); }
         public string Normalize() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string Normalize(System.Text.NormalizationForm normalizationForm) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator ==(string a, string b) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator !=(string a, string b) { return default(bool); }
         public string PadLeft(int totalWidth) { return default(string); }
         public string PadLeft(int totalWidth, char paddingChar) { return default(string); }
         public string PadRight(int totalWidth) { return default(string); }
         public string PadRight(int totalWidth, char paddingChar) { return default(string); }
         public string Remove(int startIndex) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string Remove(int startIndex, int count) { return default(string); }
         public string Replace(char oldChar, char newChar) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string Replace(string oldValue, string newValue) { return default(string); }
         public string[] Split(params char[] separator) { return default(string[]); }
         public string[] Split(char[] separator, int count) { return default(string[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] Split(char[] separator, int count, System.StringSplitOptions options) { return default(string[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] Split(char[] separator, System.StringSplitOptions options) { return default(string[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] Split(string[] separator, int count, System.StringSplitOptions options) { return default(string[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] Split(string[] separator, System.StringSplitOptions options) { return default(string[]); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool StartsWith(string value) { return default(bool); }
         public bool StartsWith(string value, bool ignoreCase, System.Globalization.CultureInfo culture) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool StartsWith(string value, System.StringComparison comparisonType) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string Substring(int startIndex) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string Substring(int startIndex, int length) { return default(string); }
         System.Collections.Generic.IEnumerator<char> System.Collections.Generic.IEnumerable<char>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<char>); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
@@ -3461,30 +2860,19 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public char[] ToCharArray() { return default(char[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public char[] ToCharArray(int startIndex, int length) { return default(char[]); }
         public string ToLower() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToLower(System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToLowerInvariant() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override string ToString() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToString(System.IFormatProvider provider) { return default(string); }
         public string ToUpper() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToUpper(System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string ToUpperInvariant() { return default(string); }
         public string Trim() { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string Trim(params char[] trimChars) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string TrimEnd(params char[] trimChars) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public string TrimStart(params char[] trimChars) { return default(string); }
         public static string Format(System.IFormatProvider provider, string format, object arg0) { return default(string); }
         public static string Format(System.IFormatProvider provider, string format, object arg0, object arg1) { return default(string); }
@@ -3493,8 +2881,6 @@ namespace System {
         System.TypeCode System.IConvertible.GetTypeCode() { return default(System.TypeCode); }
         string System.IConvertible.ToString(System.IFormatProvider provider) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class StringComparer : System.Collections.Generic.IComparer<string>, System.Collections.Generic.IEqualityComparer<string>, System.Collections.IComparer, System.Collections.IEqualityComparer
     {
         protected StringComparer() { }
@@ -3515,8 +2901,6 @@ namespace System {
         bool System.Collections.IEqualityComparer.Equals(object x, object y) { return default(bool); }
         int System.Collections.IEqualityComparer.GetHashCode(object obj) { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum StringComparison
     {
         CurrentCulture = 0,
@@ -3528,14 +2912,11 @@ namespace System {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum StringSplitOptions
     {
         None = 0,
         RemoveEmptyEntries = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SystemException : System.Exception
     {
         public SystemException() { }
@@ -3545,13 +2926,10 @@ namespace System {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ThreadStaticAttribute : System.Attribute
     {
         public ThreadStaticAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TimeoutException : System.SystemException
     {
         public TimeoutException() { }
@@ -3559,8 +2937,6 @@ namespace System {
         public TimeoutException(string message) { }
         public TimeoutException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TimeSpan : System.IComparable, System.IComparable<System.TimeSpan>, System.IEquatable<System.TimeSpan>, System.IFormattable
     {
@@ -3572,7 +2948,6 @@ namespace System {
         public const long TicksPerMinute = (long)600000000;
         public const long TicksPerSecond = (long)10000000;
         public static readonly System.TimeSpan Zero;
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public TimeSpan(int hours, int minutes, int seconds) { throw new System.NotImplementedException(); }
         public TimeSpan(int days, int hours, int minutes, int seconds) { throw new System.NotImplementedException(); }
         public TimeSpan(int days, int hours, int minutes, int seconds, int milliseconds) { throw new System.NotImplementedException(); }
@@ -3587,7 +2962,7 @@ namespace System {
         public double TotalHours { get { return default(double); } }
         public double TotalMilliseconds { get { return default(double); } }
         public double TotalMinutes { get { return default(double); } }
-        public double TotalSeconds { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(double); } }
+        public double TotalSeconds { get { return default(double); } }
         public System.TimeSpan Add(System.TimeSpan ts) { return default(System.TimeSpan); }
         public static int Compare(System.TimeSpan t1, System.TimeSpan t2) { return default(int); }
         public int CompareTo(object value) { return default(int); }
@@ -3601,24 +2976,16 @@ namespace System {
         public static System.TimeSpan FromMilliseconds(double value) { return default(System.TimeSpan); }
         public static System.TimeSpan FromMinutes(double value) { return default(System.TimeSpan); }
         public static System.TimeSpan FromSeconds(double value) { return default(System.TimeSpan); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static System.TimeSpan FromTicks(long value) { return default(System.TimeSpan); }
         public override int GetHashCode() { return default(int); }
         public System.TimeSpan Negate() { return default(System.TimeSpan); }
         public static System.TimeSpan operator +(System.TimeSpan t1, System.TimeSpan t2) { return default(System.TimeSpan); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator ==(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator >(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator >=(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator !=(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator <(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator <=(System.TimeSpan t1, System.TimeSpan t2) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static System.TimeSpan operator -(System.TimeSpan t1, System.TimeSpan t2) { return default(System.TimeSpan); }
         public static System.TimeSpan operator -(System.TimeSpan t) { return default(System.TimeSpan); }
         public static System.TimeSpan operator +(System.TimeSpan t) { return default(System.TimeSpan); }
@@ -3640,8 +3007,6 @@ namespace System {
         public static bool TryParseExact(string input, string[] formats, System.IFormatProvider formatProvider, out System.TimeSpan result) { result = default(System.TimeSpan); return default(bool); }
         int System.IComparable.CompareTo(object value) { return default(int); }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public sealed partial class TimeZoneInfo : System.IEquatable<System.TimeZoneInfo>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         internal TimeZoneInfo() { }
@@ -3687,7 +3052,6 @@ namespace System {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public string ToSerializedString() { return default(string); }
         public override string ToString() { return default(string); }
-        [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
         public sealed partial class AdjustmentRule : System.IEquatable<System.TimeZoneInfo.AdjustmentRule>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
         {
             internal AdjustmentRule() { }
@@ -3700,10 +3064,8 @@ namespace System {
             public bool Equals(System.TimeZoneInfo.AdjustmentRule other) { return default(bool); }
             public override int GetHashCode() { return default(int); }
             void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-            [System.Security.SecurityCriticalAttribute]
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
-        [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public partial struct TransitionTime : System.IEquatable<System.TimeZoneInfo.TransitionTime>, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
         {
@@ -3721,7 +3083,6 @@ namespace System {
             public static bool operator ==(System.TimeZoneInfo.TransitionTime t1, System.TimeZoneInfo.TransitionTime t2) { return default(bool); }
             public static bool operator !=(System.TimeZoneInfo.TransitionTime t1, System.TimeZoneInfo.TransitionTime t2) { return default(bool); }
             void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-            [System.Security.SecurityCriticalAttribute]
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
@@ -3869,9 +3230,6 @@ namespace System {
         int System.IComparable.CompareTo(object obj) { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Type :System.Reflection.MemberInfo, System.Reflection.IReflect    {
         public static readonly char Delimiter;
         public static readonly System.Type[] EmptyTypes;
@@ -3887,14 +3245,14 @@ namespace System {
         public virtual bool ContainsGenericParameters { get { return default(bool); } }
         public virtual System.Reflection.MethodBase DeclaringMethod { get { return default(System.Reflection.MethodBase); } }
         public override System.Type DeclaringType { get { return default(System.Type); } }
-        public static System.Reflection.Binder DefaultBinder { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Reflection.Binder); } }
+        public static System.Reflection.Binder DefaultBinder { get { return default(System.Reflection.Binder); } }
         public abstract string FullName { get; }
         public virtual System.Reflection.GenericParameterAttributes GenericParameterAttributes { get { return default(System.Reflection.GenericParameterAttributes); } }
         public virtual int GenericParameterPosition { get { return default(int); } }
         public virtual System.Type[] GenericTypeArguments { get { return default(System.Type[]); } }
         public abstract System.Guid GUID { get; }
         public bool HasElementType { get { return default(bool); } }
-        public bool IsAbstract { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsAbstract { get { return default(bool); } }
         public bool IsAnsiClass { get { return default(bool); } }
         public bool IsArray { get { return default(bool); } }
         public bool IsAutoClass { get { return default(bool); } }
@@ -3904,26 +3262,26 @@ namespace System {
         public bool IsCOMObject { get { return default(bool); } }
         public virtual bool IsConstructedGenericType { get { return default(bool); } }
         public bool IsContextful { get { return default(bool); } }
-        public virtual bool IsEnum { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public virtual bool IsEnum { get { return default(bool); } }
         public bool IsExplicitLayout { get { return default(bool); } }
         public virtual bool IsGenericParameter { get { return default(bool); } }
         public virtual bool IsGenericType { get { return default(bool); } }
         public virtual bool IsGenericTypeDefinition { get { return default(bool); } }
         public bool IsImport { get { return default(bool); } }
-        public bool IsInterface { [System.Security.SecuritySafeCriticalAttribute]get { return default(bool); } }
+        public bool IsInterface { get { return default(bool); } }
         public bool IsLayoutSequential { get { return default(bool); } }
         public bool IsMarshalByRef { get { return default(bool); } }
-        public bool IsNested { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsNested { get { return default(bool); } }
         public bool IsNestedAssembly { get { return default(bool); } }
         public bool IsNestedFamANDAssem { get { return default(bool); } }
         public bool IsNestedFamily { get { return default(bool); } }
         public bool IsNestedFamORAssem { get { return default(bool); } }
         public bool IsNestedPrivate { get { return default(bool); } }
-        public bool IsNestedPublic { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsNestedPublic { get { return default(bool); } }
         public bool IsNotPublic { get { return default(bool); } }
         public bool IsPointer { get { return default(bool); } }
         public bool IsPrimitive { get { return default(bool); } }
-        public bool IsPublic { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsPublic { get { return default(bool); } }
         public bool IsSealed { get { return default(bool); } }
         public virtual bool IsSecurityCritical { get { return default(bool); } }
         public virtual bool IsSecuritySafeCritical { get { return default(bool); } }
@@ -3939,26 +3297,19 @@ namespace System {
         public override System.Type ReflectedType { get { return default(System.Type); } }
         public virtual System.Runtime.InteropServices.StructLayoutAttribute StructLayoutAttribute { get { return default(System.Runtime.InteropServices.StructLayoutAttribute); } }
         public virtual System.RuntimeTypeHandle TypeHandle { get { return default(System.RuntimeTypeHandle); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.ConstructorInfo TypeInitializer { get { return default(System.Reflection.ConstructorInfo); } }
         public abstract System.Type UnderlyingSystemType { get; }
         public override bool Equals(object o) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual bool Equals(System.Type o) { return default(bool); }
         public virtual System.Type[] FindInterfaces(System.Reflection.TypeFilter filter, object filterCriteria) { return default(System.Type[]); }
         public virtual System.Reflection.MemberInfo[] FindMembers(System.Reflection.MemberTypes memberType, System.Reflection.BindingFlags bindingAttr, System.Reflection.MemberFilter filter, object filterCriteria) { return default(System.Reflection.MemberInfo[]); }
         public virtual int GetArrayRank() { return default(int); }
         protected abstract System.Reflection.TypeAttributes GetAttributeFlagsImpl();
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.ConstructorInfo GetConstructor(System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) { return default(System.Reflection.ConstructorInfo); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.ConstructorInfo GetConstructor(System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) { return default(System.Reflection.ConstructorInfo); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.ConstructorInfo GetConstructor(System.Type[] types) { return default(System.Reflection.ConstructorInfo); }
         protected abstract System.Reflection.ConstructorInfo GetConstructorImpl(System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, System.Type[] types, System.Reflection.ParameterModifier[] modifiers);
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.ConstructorInfo[] GetConstructors() { return default(System.Reflection.ConstructorInfo[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public abstract System.Reflection.ConstructorInfo[] GetConstructors(System.Reflection.BindingFlags bindingAttr);
         public virtual System.Reflection.MemberInfo[] GetDefaultMembers() { return default(System.Reflection.MemberInfo[]); }
         public abstract System.Type GetElementType();
@@ -3977,11 +3328,9 @@ namespace System {
         public virtual System.Type[] GetGenericArguments() { return default(System.Type[]); }
         public virtual System.Type[] GetGenericParameterConstraints() { return default(System.Type[]); }
         public virtual System.Type GetGenericTypeDefinition() { return default(System.Type); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override int GetHashCode() { return default(int); }
         public System.Type GetInterface(string name) { return default(System.Type); }
         public abstract System.Type GetInterface(string name, bool ignoreCase);
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Reflection.InterfaceMapping GetInterfaceMap(System.Type interfaceType) { return default(System.Reflection.InterfaceMapping); }
         public abstract System.Type[] GetInterfaces();
         public System.Reflection.MemberInfo[] GetMember(string name) { return default(System.Reflection.MemberInfo[]); }
@@ -4004,9 +3353,7 @@ namespace System {
         public abstract System.Type[] GetNestedTypes(System.Reflection.BindingFlags bindingAttr);
         public System.Reflection.PropertyInfo[] GetProperties() { return default(System.Reflection.PropertyInfo[]); }
         public abstract System.Reflection.PropertyInfo[] GetProperties(System.Reflection.BindingFlags bindingAttr);
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Reflection.PropertyInfo GetProperty(string name) { return default(System.Reflection.PropertyInfo); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Reflection.PropertyInfo GetProperty(string name, System.Reflection.BindingFlags bindingAttr) { return default(System.Reflection.PropertyInfo); }
         public System.Reflection.PropertyInfo GetProperty(string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Type returnType, System.Type[] types, System.Reflection.ParameterModifier[] modifiers) { return default(System.Reflection.PropertyInfo); }
         public System.Reflection.PropertyInfo GetProperty(string name, System.Type returnType) { return default(System.Reflection.PropertyInfo); }
@@ -4024,22 +3371,14 @@ namespace System {
         public static System.Type[] GetTypeArray(object[] args) { return default(System.Type[]); }
         public static System.TypeCode GetTypeCode(System.Type type) { return default(System.TypeCode); }
         protected virtual System.TypeCode GetTypeCodeImpl() { return default(System.TypeCode); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Type GetTypeFromCLSID(System.Guid clsid) { return default(System.Type); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Type GetTypeFromCLSID(System.Guid clsid, bool throwOnError) { return default(System.Type); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Type GetTypeFromCLSID(System.Guid clsid, string server) { return default(System.Type); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Type GetTypeFromCLSID(System.Guid clsid, string server, bool throwOnError) { return default(System.Type); }
         public static System.Type GetTypeFromHandle(System.RuntimeTypeHandle handle) { return default(System.Type); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Type GetTypeFromProgID(string progID) { return default(System.Type); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Type GetTypeFromProgID(string progID, bool throwOnError) { return default(System.Type); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Type GetTypeFromProgID(string progID, string server) { return default(System.Type); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Type GetTypeFromProgID(string progID, string server, bool throwOnError) { return default(System.Type); }
         public static System.RuntimeTypeHandle GetTypeHandle(object o) { return default(System.RuntimeTypeHandle); }
         protected abstract bool HasElementTypeImpl();
@@ -4061,9 +3400,7 @@ namespace System {
         protected virtual bool IsMarshalByRefImpl() { return default(bool); }
         protected abstract bool IsPointerImpl();
         protected abstract bool IsPrimitiveImpl();
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual bool IsSubclassOf(System.Type c) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual bool IsValueTypeImpl() { return default(bool); }
         public virtual System.Type MakeArrayType() { return default(System.Type); }
         public virtual System.Type MakeArrayType(int rank) { return default(System.Type); }
@@ -4084,8 +3421,6 @@ namespace System {
         public TypeAccessException(string message) { }
         public TypeAccessException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TypeCode
     {
         Boolean = 3,
@@ -4109,7 +3444,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TypedReference
     {
@@ -4117,39 +3451,28 @@ namespace System {
         public override int GetHashCode() { return default(int); }
         public static System.Type GetTargetType(System.TypedReference value) { return default(System.Type); }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public static System.TypedReference MakeTypedReference(object target, System.Reflection.FieldInfo[] flds) { return default(System.TypedReference); }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static void SetTypedReference(System.TypedReference target, object value) { }
         public static System.RuntimeTypeHandle TargetTypeToken(System.TypedReference value) { return default(System.RuntimeTypeHandle); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static object ToObject(System.TypedReference value) { return default(object); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TypeInitializationException : System.SystemException
     {
         public TypeInitializationException(string fullTypeName, System.Exception innerException) { }
         public string TypeName { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TypeLoadException : System.SystemException, System.Runtime.Serialization.ISerializable
     {
         public TypeLoadException() { }
         protected TypeLoadException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public TypeLoadException(string message) { }
         public TypeLoadException(string message, System.Exception inner) { }
-        public override string Message { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public override string Message { get { return default(string); } }
         public string TypeName { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TypeUnloadedException : System.SystemException
     {
         public TypeUnloadedException() { }
@@ -4159,7 +3482,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct UInt16 : System.IComparable, System.IComparable<ushort>, System.IConvertible, System.IEquatable<ushort>, System.IFormattable
     {
@@ -4194,13 +3516,9 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         [System.CLSCompliantAttribute(false)]
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out ushort result) { result = default(ushort); return default(bool); }
@@ -4211,7 +3529,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct UInt32 : System.IComparable, System.IComparable<uint>, System.IConvertible, System.IEquatable<uint>, System.IFormattable
     {
@@ -4219,12 +3536,9 @@ namespace System {
         public const uint MinValue = (uint)0;
         public int CompareTo(object value) { return default(int); }
         public int CompareTo(uint value) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override bool Equals(object obj) { return default(bool); }
         public bool Equals(uint obj) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
         [System.CLSCompliantAttribute(false)]
         public static uint Parse(string s) { return default(uint); }
@@ -4248,17 +3562,10 @@ namespace System {
         object System.IConvertible.ToType(System.Type type, System.IFormatProvider provider) { return default(object); }
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         [System.CLSCompliantAttribute(false)]
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out uint result) { result = default(uint); return default(bool); }
@@ -4269,7 +3576,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct UInt64 : System.IComparable, System.IComparable<ulong>, System.IConvertible, System.IEquatable<ulong>, System.IFormattable
     {
@@ -4304,13 +3610,9 @@ namespace System {
         ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
         uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
         ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(System.IFormatProvider provider) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(string format, System.IFormatProvider provider) { return default(string); }
         [System.CLSCompliantAttribute(false)]
         public static bool TryParse(string s, System.Globalization.NumberStyles style, System.IFormatProvider provider, out ulong result) { result = default(ulong); return default(bool); }
@@ -4321,7 +3623,6 @@ namespace System {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct UIntPtr : System.Runtime.Serialization.ISerializable
     {
@@ -4354,8 +3655,6 @@ namespace System {
         public uint ToUInt32() { return default(uint); }
         public ulong ToUInt64() { return default(ulong); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class UnauthorizedAccessException : System.SystemException
     {
         public UnauthorizedAccessException() { }
@@ -4363,19 +3662,13 @@ namespace System {
         public UnauthorizedAccessException(string message) { }
         public UnauthorizedAccessException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class UnhandledExceptionEventArgs : System.EventArgs
     {
         public UnhandledExceptionEventArgs(object exception, bool isTerminating) { }
-        public object ExceptionObject { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(object); } }
-        public bool IsTerminating { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
+        public object ExceptionObject { get { return default(object); } }
+        public bool IsTerminating { get { return default(bool); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void UnhandledExceptionEventHandler(object sender, System.UnhandledExceptionEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class ValueType
     {
         protected ValueType() { }
@@ -4383,8 +3676,6 @@ namespace System {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Version : System.ICloneable, System.IComparable, System.IComparable<System.Version>, System.IEquatable<System.Version>
     {
         public Version() { }
@@ -4416,14 +3707,10 @@ namespace System {
         public static bool TryParse(string input, out System.Version result) { result = default(System.Version); return default(bool); }
         int System.IComparable.CompareTo(object version) { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential, Size = 1)]
     public partial struct Void
     {
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WeakReference : System.Runtime.Serialization.ISerializable
     {
         protected WeakReference() { }
@@ -4649,8 +3936,6 @@ namespace System {
   }
 } // end of System
 namespace System.Collections {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct DictionaryEntry
     {
@@ -4658,8 +3943,6 @@ namespace System.Collections {
         public object Key { get { return default(object); } set { } }
         public object Value { get { return default(object); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICollection : System.Collections.IEnumerable
     {
         int Count { get; }
@@ -4667,14 +3950,10 @@ namespace System.Collections {
         object SyncRoot { get; }
         void CopyTo(System.Array array, int index);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IComparer
     {
         int Compare(object x, object y);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDictionary : System.Collections.ICollection, System.Collections.IEnumerable
     {
         bool IsFixedSize { get; }
@@ -4688,24 +3967,18 @@ namespace System.Collections {
         new System.Collections.IDictionaryEnumerator GetEnumerator();
         void Remove(object key);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDictionaryEnumerator : System.Collections.IEnumerator
     {
         System.Collections.DictionaryEntry Entry { get; }
         object Key { get; }
         object Value { get; }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("496B0ABE-CDEE-11d3-88E8-00902754C43A")]
     public partial interface IEnumerable
     {
         [System.Runtime.InteropServices.DispIdAttribute(-4)]
         System.Collections.IEnumerator GetEnumerator();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("496B0ABF-CDEE-11d3-88E8-00902754C43A")]
     public partial interface IEnumerator
     {
@@ -4713,8 +3986,6 @@ namespace System.Collections {
         bool MoveNext();
         void Reset();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IEqualityComparer
     {
         bool Equals(object x, object y);
@@ -4722,13 +3993,10 @@ namespace System.Collections {
     }
 
     [System.ObsoleteAttribute("Please use IEqualityComparer instead.")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IHashCodeProvider
     {
         int GetHashCode(object obj);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IList : System.Collections.ICollection, System.Collections.IEnumerable
     {
         bool IsFixedSize { get; }
@@ -4763,9 +4031,6 @@ namespace System.Collections.Generic {
         public static System.Collections.Generic.Comparer<T> Create(System.Comparison<T> comparison) { return default(System.Collections.Generic.Comparer<T>); }
         int System.Collections.IComparer.Compare(object x, object y) { return default(int); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Dictionary<TKey, TValue> : System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>, System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public Dictionary() { }
@@ -4797,7 +4062,6 @@ namespace System.Collections.Generic {
         public bool ContainsKey(TKey key) { return default(bool); }
         public bool ContainsValue(TValue value) { return default(bool); }
         public System.Collections.Generic.Dictionary<TKey, TValue>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Dictionary<TKey, TValue>.Enumerator); }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual void OnDeserialization(object sender) { }
         public bool Remove(TKey key) { return default(bool); }
@@ -4825,7 +4089,6 @@ namespace System.Collections.Generic {
             public bool MoveNext() { return default(bool); }
             void System.Collections.IEnumerator.Reset() { }
         }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class KeyCollection : System.Collections.Generic.ICollection<TKey>, System.Collections.Generic.IEnumerable<TKey>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             public KeyCollection(System.Collections.Generic.Dictionary<TKey, TValue> dictionary) { }
@@ -4852,7 +4115,6 @@ namespace System.Collections.Generic {
                 void System.Collections.IEnumerator.Reset() { }
             }
         }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class ValueCollection : System.Collections.Generic.ICollection<TValue>, System.Collections.Generic.IEnumerable<TValue>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             public ValueCollection(System.Collections.Generic.Dictionary<TKey, TValue> dictionary) { }
@@ -4883,7 +4145,7 @@ namespace System.Collections.Generic {
     public abstract partial class EqualityComparer<T> : System.Collections.Generic.IEqualityComparer<T>, System.Collections.IEqualityComparer
     {
         protected EqualityComparer() { }
-        public static System.Collections.Generic.EqualityComparer<T> Default { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Collections.Generic.EqualityComparer<T>); } }
+        public static System.Collections.Generic.EqualityComparer<T> Default { get { return default(System.Collections.Generic.EqualityComparer<T>); } }
         public abstract bool Equals(T x, T y);
         public abstract int GetHashCode(T obj);
         bool System.Collections.IEqualityComparer.Equals(object x, object y) { return default(bool); }
@@ -4954,8 +4216,6 @@ namespace System.Collections.Generic {
     {
         T this[int index] { get; }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class KeyNotFoundException : System.SystemException, System.Runtime.Serialization.ISerializable
     {
         public KeyNotFoundException() { }
@@ -4972,23 +4232,19 @@ namespace System.Collections.Generic {
         public TValue Value { get { return default(TValue); } }
         public override string ToString() { return default(string); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class List<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IList<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.Generic.IReadOnlyList<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public List() { }
         public List(System.Collections.Generic.IEnumerable<T> collection) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public List(int capacity) { }
-        public int Capacity { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } set { } }
+        public int Capacity { get { return default(int); } set { } }
         public int Count { get { return default(int); } }
-        public T this[int index] { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(T); } [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]set { } }
-        bool System.Collections.Generic.ICollection<T>.IsReadOnly { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public T this[int index] { get { return default(T); } set { } }
+        bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
         bool System.Collections.IList.IsFixedSize { get { return default(bool); } }
-        bool System.Collections.IList.IsReadOnly { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        bool System.Collections.IList.IsReadOnly { get { return default(bool); } }
         object System.Collections.IList.this[int index] { get { return default(object); } set { } }
         public void Add(T item) { }
         public void AddRange(System.Collections.Generic.IEnumerable<T> collection) { }
@@ -4999,7 +4255,6 @@ namespace System.Collections.Generic {
         public void Clear() { }
         public bool Contains(T item) { return default(bool); }
         public System.Collections.Generic.List<TOutput> ConvertAll<TOutput>(System.Converter<T, TOutput> converter) { return default(System.Collections.Generic.List<TOutput>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public void CopyTo(T[] array) { }
         public void CopyTo(T[] array, int arrayIndex) { }
         public void CopyTo(int index, T[] array, int arrayIndex, int count) { }
@@ -5014,10 +4269,8 @@ namespace System.Collections.Generic {
         public int FindLastIndex(int startIndex, System.Predicate<T> match) { return default(int); }
         public int FindLastIndex(System.Predicate<T> match) { return default(int); }
         public void ForEach(System.Action<T> action) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Collections.Generic.List<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.List<T>.Enumerator); }
         public System.Collections.Generic.List<T> GetRange(int index, int count) { return default(System.Collections.Generic.List<T>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(T item) { return default(int); }
         public int IndexOf(T item, int index) { return default(int); }
         public int IndexOf(T item, int index, int count) { return default(int); }
@@ -5026,7 +4279,6 @@ namespace System.Collections.Generic {
         public int LastIndexOf(T item) { return default(int); }
         public int LastIndexOf(T item, int index) { return default(int); }
         public int LastIndexOf(T item, int index, int count) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool Remove(T item) { return default(bool); }
         public int RemoveAll(System.Predicate<T> match) { return default(int); }
         public void RemoveAt(int index) { }
@@ -5037,15 +4289,11 @@ namespace System.Collections.Generic {
         public void Sort(System.Collections.Generic.IComparer<T> comparer) { }
         public void Sort(System.Comparison<T> comparison) { }
         public void Sort(int index, int count, System.Collections.Generic.IComparer<T> comparer) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         void System.Collections.ICollection.CopyTo(System.Array array, int arrayIndex) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         int System.Collections.IList.Add(object item) { return default(int); }
         bool System.Collections.IList.Contains(object item) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         int System.Collections.IList.IndexOf(object item) { return default(int); }
         void System.Collections.IList.Insert(int index, object item) { }
         void System.Collections.IList.Remove(object item) { }
@@ -5057,7 +4305,6 @@ namespace System.Collections.Generic {
         {
             public T Current { get { return default(T); } }
             object System.Collections.IEnumerator.Current { get { return default(object); } }
-            [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
             public void Dispose() { }
             public bool MoveNext() { return default(bool); }
             void System.Collections.IEnumerator.Reset() { }
@@ -5079,15 +4326,12 @@ namespace System.Collections.Generic {
     }
 } // end of System.Collections.Generic
 namespace System.Collections.ObjectModel {
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Collection<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IList<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.Generic.IReadOnlyList<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public Collection() { }
         public Collection(System.Collections.Generic.IList<T> list) { }
-        public int Count { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
-        public T this[int index] { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(T); } set { } }
+        public int Count { get { return default(int); } }
+        public T this[int index] { get { return default(T); } set { } }
         protected System.Collections.Generic.IList<T> Items { get { return default(System.Collections.Generic.IList<T>); } }
         bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
         bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
@@ -5096,23 +4340,16 @@ namespace System.Collections.ObjectModel {
         bool System.Collections.IList.IsReadOnly { get { return default(bool); } }
         object System.Collections.IList.this[int index] { get { return default(object); } set { } }
         public void Add(T item) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public void Clear() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual void ClearItems() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public bool Contains(T item) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public void CopyTo(T[] array, int index) { }
         public System.Collections.Generic.IEnumerator<T> GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(T item) { return default(int); }
         public void Insert(int index, T item) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual void InsertItem(int index, T item) { }
         public bool Remove(T item) { return default(bool); }
         public void RemoveAt(int index) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual void RemoveItem(int index) { }
         protected virtual void SetItem(int index, T item) { }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
@@ -5123,14 +4360,11 @@ namespace System.Collections.ObjectModel {
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ReadOnlyCollection<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IList<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.Generic.IReadOnlyList<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         public ReadOnlyCollection(System.Collections.Generic.IList<T> list) { }
-        public int Count { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } }
-        public T this[int index] { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(T); } }
+        public int Count { get { return default(int); } }
+        public T this[int index] { get { return default(T); } }
         protected System.Collections.Generic.IList<T> Items { get { return default(System.Collections.Generic.IList<T>); } }
         bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
         T System.Collections.Generic.IList<T>.this[int index] { get { return default(T); } set { } }
@@ -5138,11 +4372,9 @@ namespace System.Collections.ObjectModel {
         object System.Collections.ICollection.SyncRoot { get { return default(object); } }
         bool System.Collections.IList.IsFixedSize { get { return default(bool); } }
         bool System.Collections.IList.IsReadOnly { get { return default(bool); } }
-        object System.Collections.IList.this[int index] { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(object); } set { } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        object System.Collections.IList.this[int index] { get { return default(object); } set { } }
         public bool Contains(T value) { return default(bool); }
         public void CopyTo(T[] array, int index) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Collections.Generic.IEnumerator<T> GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
         public int IndexOf(T value) { return default(int); }
         void System.Collections.Generic.ICollection<T>.Add(T value) { }
@@ -5163,7 +4395,6 @@ namespace System.Collections.ObjectModel {
 } // end of System.Collections.ObjectModel
 namespace System.Configuration.Assemblies {
     [System.ObsoleteAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct AssemblyHash : System.ICloneable
     {
@@ -5182,8 +4413,6 @@ namespace System.Configuration.Assemblies {
         [System.ObsoleteAttribute]
         public void SetValue(byte[] value) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AssemblyHashAlgorithm
     {
         MD5 = 32771,
@@ -5193,8 +4422,6 @@ namespace System.Configuration.Assemblies {
         SHA384 = 32781,
         SHA512 = 32782,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AssemblyVersionCompatibility
     {
         SameDomain = 3,
@@ -5204,7 +4431,6 @@ namespace System.Configuration.Assemblies {
 } // end of System.Configuration.Assemblies
 namespace System.Diagnostics {
     [System.AttributeUsageAttribute((System.AttributeTargets)(68), AllowMultiple = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ConditionalAttribute : System.Attribute
     {
         public ConditionalAttribute(string conditionString) { }
@@ -5212,7 +4438,6 @@ namespace System.Diagnostics {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(3), AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggableAttribute : System.Attribute
     {
         public DebuggableAttribute(bool isJITTrackingEnabled, bool isJITOptimizerDisabled) { }
@@ -5221,7 +4446,6 @@ namespace System.Diagnostics {
         public bool IsJITOptimizerDisabled { get { return default(bool); } }
         public bool IsJITTrackingEnabled { get { return default(bool); } }
         [System.FlagsAttribute]
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public enum DebuggingModes
         {
             Default = 1,
@@ -5233,14 +4457,11 @@ namespace System.Diagnostics {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(384), AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerBrowsableAttribute : System.Attribute
     {
         public DebuggerBrowsableAttribute(System.Diagnostics.DebuggerBrowsableState state) { }
         public System.Diagnostics.DebuggerBrowsableState State { get { return default(System.Diagnostics.DebuggerBrowsableState); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DebuggerBrowsableState
     {
         Collapsed = 2,
@@ -5249,7 +4470,6 @@ namespace System.Diagnostics {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4509), AllowMultiple = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerDisplayAttribute : System.Attribute
     {
         public DebuggerDisplayAttribute(string value) { }
@@ -5261,28 +4481,24 @@ namespace System.Diagnostics {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(224), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerHiddenAttribute : System.Attribute
     {
         public DebuggerHiddenAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(236), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerNonUserCodeAttribute : System.Attribute
     {
         public DebuggerNonUserCodeAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(108), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerStepThroughAttribute : System.Attribute
     {
         public DebuggerStepThroughAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(13), AllowMultiple = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerTypeProxyAttribute : System.Attribute
     {
         public DebuggerTypeProxyAttribute(string typeName) { }
@@ -5324,20 +4540,15 @@ namespace System.Diagnostics.CodeAnalysis {
     }
 } // end of System.Diagnostics.CodeAnalysis
 namespace System.Globalization {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Calendar : System.ICloneable
     {
         public const int CurrentEra = 0;
         protected Calendar() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Globalization.CalendarAlgorithmType AlgorithmType { get { return default(System.Globalization.CalendarAlgorithmType); } }
         protected virtual int DaysInYearBeforeMinSupportedYear { get { return default(int); } }
         public abstract int[] Eras { get; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool IsReadOnly { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.DateTime MaxSupportedDateTime { get { return default(System.DateTime); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.DateTime MinSupportedDateTime { get { return default(System.DateTime); } }
         public virtual int TwoDigitYearMax { get { return default(int); } set { } }
         public virtual System.DateTime AddDays(System.DateTime time, int days) { return default(System.DateTime); }
@@ -5348,7 +4559,6 @@ namespace System.Globalization {
         public virtual System.DateTime AddSeconds(System.DateTime time, int seconds) { return default(System.DateTime); }
         public virtual System.DateTime AddWeeks(System.DateTime time, int weeks) { return default(System.DateTime); }
         public abstract System.DateTime AddYears(System.DateTime time, int years);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual object Clone() { return default(object); }
         public abstract int GetDayOfMonth(System.DateTime time);
         public abstract System.DayOfWeek GetDayOfWeek(System.DateTime time);
@@ -5359,9 +4569,7 @@ namespace System.Globalization {
         public abstract int GetDaysInYear(int year, int era);
         public abstract int GetEra(System.DateTime time);
         public virtual int GetHour(System.DateTime time) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int GetLeapMonth(int year) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int GetLeapMonth(int year, int era) { return default(int); }
         public virtual double GetMilliseconds(System.DateTime time) { return default(double); }
         public virtual int GetMinute(System.DateTime time) { return default(int); }
@@ -5377,14 +4585,11 @@ namespace System.Globalization {
         public abstract bool IsLeapMonth(int year, int month, int era);
         public virtual bool IsLeapYear(int year) { return default(bool); }
         public abstract bool IsLeapYear(int year, int era);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static System.Globalization.Calendar ReadOnly(System.Globalization.Calendar calendar) { return default(System.Globalization.Calendar); }
         public virtual System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) { return default(System.DateTime); }
         public abstract System.DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era);
         public virtual int ToFourDigitYear(int year) { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CalendarAlgorithmType
     {
         LunarCalendar = 2,
@@ -5392,29 +4597,22 @@ namespace System.Globalization {
         SolarCalendar = 1,
         Unknown = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CalendarWeekRule
     {
         FirstDay = 0,
         FirstFourDayWeek = 2,
         FirstFullWeek = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CompareInfo : System.Runtime.Serialization.IDeserializationCallback
     {
         internal CompareInfo() { }
         public int LCID { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual string Name { get { return default(string); } }
         public virtual int Compare(string string1, int offset1, int length1, string string2, int offset2, int length2) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int Compare(string string1, int offset1, int length1, string string2, int offset2, int length2, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int Compare(string string1, int offset1, string string2, int offset2) { return default(int); }
         public virtual int Compare(string string1, int offset1, string string2, int offset2, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int Compare(string string1, string string2) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int Compare(string string1, string string2, System.Globalization.CompareOptions options) { return default(int); }
         public override bool Equals(object value) { return default(bool); }
         public static System.Globalization.CompareInfo GetCompareInfo(int culture) { return default(System.Globalization.CompareInfo); }
@@ -5429,39 +4627,30 @@ namespace System.Globalization {
         public virtual int IndexOf(string source, char value, int startIndex) { return default(int); }
         public virtual int IndexOf(string source, char value, int startIndex, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int IndexOf(string source, char value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int IndexOf(string source, char value, int startIndex, int count, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int IndexOf(string source, string value) { return default(int); }
         public virtual int IndexOf(string source, string value, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int IndexOf(string source, string value, int startIndex) { return default(int); }
         public virtual int IndexOf(string source, string value, int startIndex, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int IndexOf(string source, string value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int IndexOf(string source, string value, int startIndex, int count, System.Globalization.CompareOptions options) { return default(int); }
         public virtual bool IsPrefix(string source, string prefix) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual bool IsPrefix(string source, string prefix, System.Globalization.CompareOptions options) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static bool IsSortable(char ch) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public static bool IsSortable(string text) { return default(bool); }
         public virtual bool IsSuffix(string source, string suffix) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual bool IsSuffix(string source, string suffix, System.Globalization.CompareOptions options) { return default(bool); }
         public virtual int LastIndexOf(string source, char value) { return default(int); }
         public virtual int LastIndexOf(string source, char value, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int LastIndexOf(string source, char value, int startIndex) { return default(int); }
         public virtual int LastIndexOf(string source, char value, int startIndex, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int LastIndexOf(string source, char value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int LastIndexOf(string source, char value, int startIndex, int count, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int LastIndexOf(string source, string value) { return default(int); }
         public virtual int LastIndexOf(string source, string value, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int LastIndexOf(string source, string value, int startIndex) { return default(int); }
         public virtual int LastIndexOf(string source, string value, int startIndex, System.Globalization.CompareOptions options) { return default(int); }
         public virtual int LastIndexOf(string source, string value, int startIndex, int count) { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual int LastIndexOf(string source, string value, int startIndex, int count, System.Globalization.CompareOptions options) { return default(int); }
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
         public override string ToString() { return default(string); }
@@ -5469,7 +4658,6 @@ namespace System.Globalization {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CompareOptions
     {
         IgnoreCase = 1,
@@ -5482,8 +4670,6 @@ namespace System.Globalization {
         OrdinalIgnoreCase = 268435456,
         StringSort = 536870912,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CultureInfo : System.ICloneable, System.IFormatProvider
     {
         public CultureInfo(int culture) { }
@@ -5528,8 +4714,6 @@ namespace System.Globalization {
         public static System.Globalization.CultureInfo ReadOnly(System.Globalization.CultureInfo ci) { return default(System.Globalization.CultureInfo); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CultureNotFoundException : System.ArgumentException, System.Runtime.Serialization.ISerializable
     {
         public CultureNotFoundException() { }
@@ -5544,12 +4728,10 @@ namespace System.Globalization {
         public virtual System.Nullable<int> InvalidCultureId { get { return default(System.Nullable<int>); } }
         public virtual string InvalidCultureName { get { return default(string); } }
         public override string Message { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CultureTypes
     {
         AllCultures = 7,
@@ -5563,13 +4745,10 @@ namespace System.Globalization {
         [System.ObsoleteAttribute("This value has been deprecated.  Please use other values in CultureTypes.")]
         WindowsOnlyCultures = 32,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DateTimeFormatInfo : System.ICloneable, System.IFormatProvider
     {
         public DateTimeFormatInfo() { }
         public string[] AbbreviatedDayNames { get { return default(string[]); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] AbbreviatedMonthGenitiveNames { get { return default(string[]); } set { } }
         public string[] AbbreviatedMonthNames { get { return default(string[]); } set { } }
         public string AMDesignator { get { return default(string); } set { } }
@@ -5585,15 +4764,12 @@ namespace System.Globalization {
         public string LongDatePattern { get { return default(string); } set { } }
         public string LongTimePattern { get { return default(string); } set { } }
         public string MonthDayPattern { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] MonthGenitiveNames { get { return default(string[]); } set { } }
         public string[] MonthNames { get { return default(string[]); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string NativeCalendarName { get { return default(string); } }
         public string PMDesignator { get { return default(string); } set { } }
         public string RFC1123Pattern { get { return default(string); } }
         public string ShortDatePattern { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] ShortestDayNames { get { return default(string[]); } set { } }
         public string ShortTimePattern { get { return default(string); } set { } }
         public string SortableDateTimePattern { get { return default(string); } }
@@ -5612,15 +4788,12 @@ namespace System.Globalization {
         public object GetFormat(System.Type formatType) { return default(object); }
         public static System.Globalization.DateTimeFormatInfo GetInstance(System.IFormatProvider provider) { return default(System.Globalization.DateTimeFormatInfo); }
         public string GetMonthName(int month) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string GetShortestDayName(System.DayOfWeek dayOfWeek) { return default(string); }
         public static System.Globalization.DateTimeFormatInfo ReadOnly(System.Globalization.DateTimeFormatInfo dtfi) { return default(System.Globalization.DateTimeFormatInfo); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void SetAllDateTimePatterns(string[] patterns, char format) { }
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DateTimeStyles
     {
         AdjustToUniversal = 16,
@@ -5634,16 +4807,12 @@ namespace System.Globalization {
         None = 0,
         RoundtripKind = 128,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DigitShapes
     {
         Context = 0,
         NativeNational = 2,
         None = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NumberFormatInfo : System.ICloneable, System.IFormatProvider
     {
         public NumberFormatInfo() { }
@@ -5655,12 +4824,10 @@ namespace System.Globalization {
         public int CurrencyPositivePattern { get { return default(int); } set { } }
         public string CurrencySymbol { get { return default(string); } set { } }
         public static System.Globalization.NumberFormatInfo CurrentInfo { get { return default(System.Globalization.NumberFormatInfo); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Globalization.DigitShapes DigitSubstitution { get { return default(System.Globalization.DigitShapes); } set { } }
         public static System.Globalization.NumberFormatInfo InvariantInfo { get { return default(System.Globalization.NumberFormatInfo); } }
         public bool IsReadOnly { get { return default(bool); } }
         public string NaNSymbol { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string[] NativeDigits { get { return default(string[]); } set { } }
         public string NegativeInfinitySymbol { get { return default(string); } set { } }
         public string NegativeSign { get { return default(string); } set { } }
@@ -5686,7 +4853,6 @@ namespace System.Globalization {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum NumberStyles
     {
         AllowCurrencySymbol = 256,
@@ -5707,8 +4873,6 @@ namespace System.Globalization {
         None = 0,
         Number = 111,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SortKey
     {
         internal SortKey() { }
@@ -5719,42 +4883,28 @@ namespace System.Globalization {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TextInfo : System.ICloneable, System.Runtime.Serialization.IDeserializationCallback
     {
         internal TextInfo() { }
         public virtual int ANSICodePage { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public string CultureName { get { return default(string); } }
         public virtual int EBCDICCodePage { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool IsReadOnly { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        public bool IsRightToLeft { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+        public bool IsRightToLeft { get { return default(bool); } }
         public int LCID { get { return default(int); } }
-        public virtual string ListSeparator { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } [System.Runtime.InteropServices.ComVisibleAttribute(false)]set { } }
+        public virtual string ListSeparator { get { return default(string); } set { } }
         public virtual int MacCodePage { get { return default(int); } }
         public virtual int OEMCodePage { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual object Clone() { return default(object); }
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static System.Globalization.TextInfo ReadOnly(System.Globalization.TextInfo textInfo) { return default(System.Globalization.TextInfo); }
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual char ToLower(char c) { return default(char); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual string ToLower(string str) { return default(string); }
         public override string ToString() { return default(string); }
         public string ToTitleCase(string str) { return default(string); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual char ToUpper(char c) { return default(char); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual string ToUpper(string str) { return default(string); }
     }
 
@@ -5764,8 +4914,6 @@ namespace System.Globalization {
         AssumeNegative = 1,
         None = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UnicodeCategory
     {
         ClosePunctuation = 21,
@@ -5801,8 +4949,6 @@ namespace System.Globalization {
     }
 } // end of System.Globalization
 namespace System.IO {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DirectoryNotFoundException : System.IO.IOException
     {
         public DirectoryNotFoundException() { }
@@ -5810,8 +4956,6 @@ namespace System.IO {
         public DirectoryNotFoundException(string message) { }
         public DirectoryNotFoundException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EndOfStreamException : System.IO.IOException
     {
         public EndOfStreamException() { }
@@ -5821,15 +4965,12 @@ namespace System.IO {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileAccess
     {
         Read = 1,
         ReadWrite = 3,
         Write = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FileLoadException : System.IO.IOException
     {
         public FileLoadException() { }
@@ -5839,14 +4980,11 @@ namespace System.IO {
         public FileLoadException(string message, string fileName) { }
         public FileLoadException(string message, string fileName, System.Exception inner) { }
         public string FileName { get { return default(string); } }
-        public string FusionLog { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public string FusionLog { get { return default(string); } }
         public override string Message { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileMode
     {
         Append = 6,
@@ -5856,8 +4994,6 @@ namespace System.IO {
         OpenOrCreate = 4,
         Truncate = 5,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FileNotFoundException : System.IO.IOException
     {
         public FileNotFoundException() { }
@@ -5867,15 +5003,13 @@ namespace System.IO {
         public FileNotFoundException(string message, string fileName) { }
         public FileNotFoundException(string message, string fileName, System.Exception innerException) { }
         public string FileName { get { return default(string); } }
-        public string FusionLog { [System.Security.SecuritySafeCriticalAttribute]get { return default(string); } }
+        public string FusionLog { get { return default(string); } }
         public override string Message { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileOptions
     {
         Asynchronous = 1073741824,
@@ -5888,7 +5022,6 @@ namespace System.IO {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileShare
     {
         Delete = 4,
@@ -5898,8 +5031,6 @@ namespace System.IO {
         ReadWrite = 3,
         Write = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FileStream : System.IO.Stream
     {
         [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]
@@ -5949,8 +5080,6 @@ namespace System.IO {
         public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) { }
         public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize, bool isAsync) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class IOException : System.SystemException
     {
         public IOException() { }
@@ -5959,8 +5088,6 @@ namespace System.IO {
         public IOException(string message, System.Exception innerException) { }
         public IOException(string message, int hresult) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Path
     {
         public static readonly char AltDirectorySeparatorChar;
@@ -5988,8 +5115,6 @@ namespace System.IO {
         public static bool HasExtension(string path) { return default(bool); }
         public static bool IsPathRooted(string path) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PathTooLongException : System.IO.IOException
     {
         public PathTooLongException() { }
@@ -5997,41 +5122,31 @@ namespace System.IO {
         public PathTooLongException(string message) { }
         public PathTooLongException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SeekOrigin
     {
         Begin = 0,
         Current = 1,
         End = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Stream : System.IDisposable
     {
         public static readonly System.IO.Stream Null;
         protected Stream() { }
         public abstract bool CanRead { get; }
         public abstract bool CanSeek { get; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool CanTimeout { get { return default(bool); } }
         public abstract bool CanWrite { get; }
         public abstract long Length { get; }
         public abstract long Position { get; set; }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int ReadTimeout { get { return default(int); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int WriteTimeout { get { return default(int); } set { } }
         public virtual System.IAsyncResult BeginRead(byte[] buffer, int offset, int count, System.AsyncCallback callback, object state) { return default(System.IAsyncResult); }
         public virtual System.IAsyncResult BeginWrite(byte[] buffer, int offset, int count, System.AsyncCallback callback, object state) { return default(System.IAsyncResult); }
         public virtual void Close() { }
         public void CopyTo(System.IO.Stream destination) { }
         public void CopyTo(System.IO.Stream destination, int bufferSize) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task CopyToAsync(System.IO.Stream destination) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task CopyToAsync(System.IO.Stream destination, int bufferSize) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task CopyToAsync(System.IO.Stream destination, int bufferSize, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         [System.ObsoleteAttribute("CreateWaitHandle will be removed eventually.  Please use \"new ManualResetEvent(false)\" instead.")]
         protected virtual System.Threading.WaitHandle CreateWaitHandle() { return default(System.Threading.WaitHandle); }
@@ -6040,41 +5155,30 @@ namespace System.IO {
         public virtual int EndRead(System.IAsyncResult asyncResult) { return default(int); }
         public virtual void EndWrite(System.IAsyncResult asyncResult) { }
         public abstract void Flush();
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task FlushAsync() { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task FlushAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         [System.ObsoleteAttribute("Do not call or override this method.")]
         protected virtual void ObjectInvariant() { }
         public abstract int Read(byte[] buffer, int offset, int count);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<int> ReadAsync(byte[] buffer, int offset, int count) { return default(System.Threading.Tasks.Task<int>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task<int> ReadAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<int>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual int ReadByte() { return default(int); }
         public abstract long Seek(long offset, System.IO.SeekOrigin origin);
         public abstract void SetLength(long value);
         public static System.IO.Stream Synchronized(System.IO.Stream stream) { return default(System.IO.Stream); }
         public abstract void Write(byte[] buffer, int offset, int count);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
         public virtual void WriteByte(byte value) { }
     }
 } // end of System.IO
 namespace System.Reflection {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AmbiguousMatchException : System.SystemException
     {
         public AmbiguousMatchException() { }
         public AmbiguousMatchException(string message) { }
         public AmbiguousMatchException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Assembly : System.Reflection.ICustomAttributeProvider
     {
         protected Assembly() { }
@@ -6087,16 +5191,13 @@ namespace System.Reflection {
         public virtual System.Collections.Generic.IEnumerable<System.Type> ExportedTypes { get { return default(System.Collections.Generic.IEnumerable<System.Type>); } }
         public virtual string FullName { get { return default(string); } }
         public virtual bool GlobalAssemblyCache { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual long HostContext { get { return default(long); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual string ImageRuntimeVersion { get { return default(string); } }
         public virtual bool IsDynamic { get { return default(bool); } }
         public bool IsFullyTrusted { get { return default(bool); } }
         public virtual string Location { get { return default(string); } }
         public virtual System.Reflection.Module ManifestModule { get { return default(System.Reflection.Module); } }
         public virtual System.Collections.Generic.IEnumerable<System.Reflection.Module> Modules { get { return default(System.Collections.Generic.IEnumerable<System.Reflection.Module>); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool ReflectionOnly { get { return default(bool); } }
         public event System.Reflection.ModuleResolveEventHandler ModuleResolve { add { } remove { } }
         public object CreateInstance(string typeName) { return default(object); }
@@ -6174,7 +5275,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyAlgorithmIdAttribute : System.Attribute
     {
         public AssemblyAlgorithmIdAttribute(System.Configuration.Assemblies.AssemblyHashAlgorithm algorithmId) { }
@@ -6185,7 +5285,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyCompanyAttribute : System.Attribute
     {
         public AssemblyCompanyAttribute(string company) { }
@@ -6193,14 +5292,11 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyConfigurationAttribute : System.Attribute
     {
         public AssemblyConfigurationAttribute(string configuration) { }
         public string Configuration { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum AssemblyContentType
     {
         Default = 0,
@@ -6208,7 +5304,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyCopyrightAttribute : System.Attribute
     {
         public AssemblyCopyrightAttribute(string copyright) { }
@@ -6216,7 +5311,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyCultureAttribute : System.Attribute
     {
         public AssemblyCultureAttribute(string culture) { }
@@ -6224,7 +5318,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyDefaultAliasAttribute : System.Attribute
     {
         public AssemblyDefaultAliasAttribute(string defaultAlias) { }
@@ -6232,7 +5325,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyDelaySignAttribute : System.Attribute
     {
         public AssemblyDelaySignAttribute(bool delaySign) { }
@@ -6240,7 +5332,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyDescriptionAttribute : System.Attribute
     {
         public AssemblyDescriptionAttribute(string description) { }
@@ -6248,7 +5339,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyFileVersionAttribute : System.Attribute
     {
         public AssemblyFileVersionAttribute(string version) { }
@@ -6256,7 +5346,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyFlagsAttribute : System.Attribute
     {
         [System.ObsoleteAttribute("This constructor has been deprecated. Please use AssemblyFlagsAttribute(AssemblyNameFlags) instead. http://go.microsoft.com/fwlink/?linkid=14202")]
@@ -6272,7 +5361,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyInformationalVersionAttribute : System.Attribute
     {
         public AssemblyInformationalVersionAttribute(string informationalVersion) { }
@@ -6280,7 +5368,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyKeyFileAttribute : System.Attribute
     {
         public AssemblyKeyFileAttribute(string keyFile) { }
@@ -6288,7 +5375,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyKeyNameAttribute : System.Attribute
     {
         public AssemblyKeyNameAttribute(string keyName) { }
@@ -6302,15 +5388,11 @@ namespace System.Reflection {
         public string Key { get { return default(string); } }
         public string Value { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyName : System.ICloneable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public AssemblyName() { }
         public AssemblyName(string assemblyName) { }
         public string CodeBase { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Reflection.AssemblyContentType ContentType { get { return default(System.Reflection.AssemblyContentType); } set { } }
         public System.Globalization.CultureInfo CultureInfo { get { return default(System.Globalization.CultureInfo); } set { } }
         public string CultureName { get { return default(string); } }
@@ -6336,7 +5418,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum AssemblyNameFlags
     {
         EnableJITcompileOptimizer = 16384,
@@ -6345,15 +5426,12 @@ namespace System.Reflection {
         PublicKey = 1,
         Retargetable = 256,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class AssemblyNameProxy     {
         public AssemblyNameProxy() { }
         public System.Reflection.AssemblyName GetAssemblyName(string assemblyFile) { return default(System.Reflection.AssemblyName); }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyProductAttribute : System.Attribute
     {
         public AssemblyProductAttribute(string product) { }
@@ -6369,7 +5447,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyTitleAttribute : System.Attribute
     {
         public AssemblyTitleAttribute(string title) { }
@@ -6377,7 +5454,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyTrademarkAttribute : System.Attribute
     {
         public AssemblyTrademarkAttribute(string trademark) { }
@@ -6385,15 +5461,11 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AssemblyVersionAttribute : System.Attribute
     {
         public AssemblyVersionAttribute(string version) { }
         public string Version { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(2))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Binder
     {
         protected Binder() { }
@@ -6407,7 +5479,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum BindingFlags
     {
         CreateInstance = 512,
@@ -6433,7 +5504,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CallingConventions
     {
         Any = 3,
@@ -6442,17 +5512,11 @@ namespace System.Reflection {
         Standard = 1,
         VarArgs = 2,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class ConstructorInfo : System.Reflection.MethodBase
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static readonly string ConstructorName;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public static readonly string TypeConstructorName;
         protected ConstructorInfo() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override System.Reflection.MemberTypes MemberType { get { return default(System.Reflection.MemberTypes); } }
         public override bool Equals(object obj) { return default(bool); }
         public override int GetHashCode() { return default(int); }
@@ -6463,15 +5527,11 @@ namespace System.Reflection {
         public static bool operator ==(System.Reflection.ConstructorInfo left, System.Reflection.ConstructorInfo right) { return default(bool); }
         public static bool operator !=(System.Reflection.ConstructorInfo left, System.Reflection.ConstructorInfo right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CustomAttributeData
     {
         protected CustomAttributeData() { }
         public System.Type AttributeType { get { return default(System.Type); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Reflection.ConstructorInfo Constructor { get { return default(System.Reflection.ConstructorInfo); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Collections.Generic.IList<System.Reflection.CustomAttributeTypedArgument> ConstructorArguments { get { return default(System.Collections.Generic.IList<System.Reflection.CustomAttributeTypedArgument>); } }
         public virtual System.Collections.Generic.IList<System.Reflection.CustomAttributeNamedArgument> NamedArguments { get { return default(System.Collections.Generic.IList<System.Reflection.CustomAttributeNamedArgument>); } }
         public override bool Equals(object obj) { return default(bool); }
@@ -6522,8 +5582,6 @@ namespace System.Reflection {
         public static bool IsDefined(this System.Reflection.ParameterInfo element, System.Type attributeType) { return default(bool); }
         public static bool IsDefined(this System.Reflection.ParameterInfo element, System.Type attributeType, bool inherit) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CustomAttributeFormatException : System.FormatException
     {
         public CustomAttributeFormatException() { }
@@ -6531,8 +5589,6 @@ namespace System.Reflection {
         public CustomAttributeFormatException(string message) { }
         public CustomAttributeFormatException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct CustomAttributeNamedArgument
     {
@@ -6548,8 +5604,6 @@ namespace System.Reflection {
         public static bool operator !=(System.Reflection.CustomAttributeNamedArgument left, System.Reflection.CustomAttributeNamedArgument right) { return default(bool); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct CustomAttributeTypedArgument
     {
@@ -6565,7 +5619,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1036))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DefaultMemberAttribute : System.Attribute
     {
         public DefaultMemberAttribute(string memberName) { }
@@ -6573,7 +5626,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum EventAttributes
     {
         None = 0,
@@ -6581,9 +5633,6 @@ namespace System.Reflection {
         RTSpecialName = 1024,
         SpecialName = 512,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class EventInfo : System.Reflection.MemberInfo
     {
         protected EventInfo() { }
@@ -6614,8 +5663,6 @@ namespace System.Reflection {
         [System.Diagnostics.DebuggerStepThroughAttribute]
         public virtual void RemoveEventHandler(object target, System.Delegate handler) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ExceptionHandlingClause
     {
         protected ExceptionHandlingClause() { }
@@ -6630,7 +5677,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ExceptionHandlingClauseOptions
     {
         Clause = 0,
@@ -6640,7 +5686,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FieldAttributes
     {
         Assembly = 3,
@@ -6663,9 +5708,6 @@ namespace System.Reflection {
         SpecialName = 512,
         Static = 16,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class FieldInfo : System.Reflection.MemberInfo
     {
         protected FieldInfo() { }
@@ -6690,7 +5732,6 @@ namespace System.Reflection {
         public override System.Reflection.MemberTypes MemberType { get { return default(System.Reflection.MemberTypes); } }
         public override bool Equals(object obj) { return default(bool); }
         public static System.Reflection.FieldInfo GetFieldFromHandle(System.RuntimeFieldHandle handle) { return default(System.Reflection.FieldInfo); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static System.Reflection.FieldInfo GetFieldFromHandle(System.RuntimeFieldHandle handle, System.RuntimeTypeHandle declaringType) { return default(System.Reflection.FieldInfo); }
         public override int GetHashCode() { return default(int); }
         public virtual System.Type[] GetOptionalCustomModifiers() { return default(System.Type[]); }
@@ -6721,16 +5762,12 @@ namespace System.Reflection {
         SpecialConstraintMask = 28,
         VarianceMask = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICustomAttributeProvider
     {
         object[] GetCustomAttributes(bool inherit);
         object[] GetCustomAttributes(System.Type attributeType, bool inherit);
         bool IsDefined(System.Type attributeType, bool inherit);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ImageFileMachine
     {
         AMD64 = 34404,
@@ -6738,18 +5775,12 @@ namespace System.Reflection {
         I386 = 332,
         IA64 = 512,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct InterfaceMapping
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.MethodInfo[] InterfaceMethods;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Type InterfaceType;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Reflection.MethodInfo[] TargetMethods;
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public System.Type TargetType;
     }
 
@@ -6757,8 +5788,6 @@ namespace System.Reflection {
     {
         public static System.Reflection.TypeInfo GetTypeInfo(this System.Type type) { return default(System.Reflection.TypeInfo); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class InvalidFilterCriteriaException : System.ApplicationException
     {
         public InvalidFilterCriteriaException() { }
@@ -6766,8 +5795,6 @@ namespace System.Reflection {
         public InvalidFilterCriteriaException(string message) { }
         public InvalidFilterCriteriaException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.GuidAttribute("AFBF15E5-C37C-11d2-B88E-00A0C9B471B8")]
     public partial interface IReflect
     {
@@ -6789,8 +5816,6 @@ namespace System.Reflection {
     {
         System.Reflection.TypeInfo GetTypeInfo();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class LocalVariableInfo
     {
         protected LocalVariableInfo() { }
@@ -6799,8 +5824,6 @@ namespace System.Reflection {
         public virtual System.Type LocalType { get { return default(System.Type); } }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ManifestResourceInfo
     {
         public ManifestResourceInfo(System.Reflection.Assembly containingAssembly, string containingFileName, System.Reflection.ResourceLocation resourceLocation) { }
@@ -6808,12 +5831,7 @@ namespace System.Reflection {
         public virtual System.Reflection.Assembly ReferencedAssembly { get { return default(System.Reflection.Assembly); } }
         public virtual System.Reflection.ResourceLocation ResourceLocation { get { return default(System.Reflection.ResourceLocation); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate bool MemberFilter(System.Reflection.MemberInfo m, object filterCriteria);
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MemberInfo :System.Reflection.ICustomAttributeProvider    {
         protected MemberInfo() { }
         public virtual System.Collections.Generic.IEnumerable<System.Reflection.CustomAttributeData> CustomAttributes { get { return default(System.Collections.Generic.IEnumerable<System.Reflection.CustomAttributeData>); } }
@@ -6830,7 +5848,6 @@ namespace System.Reflection {
         public override int GetHashCode() { return default(int); }
         public abstract bool IsDefined(System.Type attributeType, bool inherit);
         public static bool operator ==(System.Reflection.MemberInfo left, System.Reflection.MemberInfo right) { return default(bool); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public static bool operator !=(System.Reflection.MemberInfo left, System.Reflection.MemberInfo right) { return default(bool); }
         object[] System.Reflection.ICustomAttributeProvider.GetCustomAttributes(bool inherit) { return default(object[]); }
         object[] System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Type attributeType, bool inherit) { return default(object[]); }
@@ -6838,7 +5855,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MemberTypes
     {
         All = 191,
@@ -6853,7 +5869,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MethodAttributes
     {
         Abstract = 1024,
@@ -6881,9 +5896,6 @@ namespace System.Reflection {
         Virtual = 64,
         VtableLayoutMask = 256,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MethodBase :System.Reflection.MemberInfo    {
         protected MethodBase() { }
         public abstract System.Reflection.MethodAttributes Attributes { get; }
@@ -6891,7 +5903,6 @@ namespace System.Reflection {
         public virtual bool ContainsGenericParameters { get { return default(bool); } }
         public bool IsAbstract { get { return default(bool); } }
         public bool IsAssembly { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public bool IsConstructor { get { return default(bool); } }
         public bool IsFamily { get { return default(bool); } }
         public bool IsFamilyAndAssembly { get { return default(bool); } }
@@ -6912,13 +5923,10 @@ namespace System.Reflection {
         public virtual System.Reflection.MethodImplAttributes MethodImplementationFlags { get { return default(System.Reflection.MethodImplAttributes); } }
         public override bool Equals(object obj) { return default(bool); }
         public static System.Reflection.MethodBase GetCurrentMethod() { return default(System.Reflection.MethodBase); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type[] GetGenericArguments() { return default(System.Type[]); }
         public override int GetHashCode() { return default(int); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual System.Reflection.MethodBody GetMethodBody() { return default(System.Reflection.MethodBody); }
         public static System.Reflection.MethodBase GetMethodFromHandle(System.RuntimeMethodHandle handle) { return default(System.Reflection.MethodBase); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static System.Reflection.MethodBase GetMethodFromHandle(System.RuntimeMethodHandle handle, System.RuntimeTypeHandle declaringType) { return default(System.Reflection.MethodBase); }
         public abstract System.Reflection.MethodImplAttributes GetMethodImplementationFlags();
         public abstract System.Reflection.ParameterInfo[] GetParameters();
@@ -6929,8 +5937,6 @@ namespace System.Reflection {
         public static bool operator ==(System.Reflection.MethodBase left, System.Reflection.MethodBase right) { return default(bool); }
         public static bool operator !=(System.Reflection.MethodBase left, System.Reflection.MethodBase right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MethodBody
     {
         protected MethodBody() { }
@@ -6941,11 +5947,8 @@ namespace System.Reflection {
         public virtual int MaxStackSize { get { return default(int); } }
         public virtual byte[] GetILAsByteArray() { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MethodImplAttributes
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         AggressiveInlining = 256,
         CodeTypeMask = 3,
         ForwardRef = 16,
@@ -6963,9 +5966,6 @@ namespace System.Reflection {
         Synchronized = 32,
         Unmanaged = 4,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MethodInfo : System.Reflection.MethodBase
     {
         protected MethodInfo() { }
@@ -6977,27 +5977,19 @@ namespace System.Reflection {
         public virtual System.Delegate CreateDelegate(System.Type delegateType, object target) { return default(System.Delegate); }
         public override bool Equals(object obj) { return default(bool); }
         public abstract System.Reflection.MethodInfo GetBaseDefinition();
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public override System.Type[] GetGenericArguments() { return default(System.Type[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Reflection.MethodInfo GetGenericMethodDefinition() { return default(System.Reflection.MethodInfo); }
         public override int GetHashCode() { return default(int); }
         public virtual System.Reflection.MethodInfo MakeGenericMethod(params System.Type[] typeArguments) { return default(System.Reflection.MethodInfo); }
         public static bool operator ==(System.Reflection.MethodInfo left, System.Reflection.MethodInfo right) { return default(bool); }
         public static bool operator !=(System.Reflection.MethodInfo left, System.Reflection.MethodInfo right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Missing : System.Runtime.Serialization.ISerializable
     {
         internal Missing() { }
         public static readonly System.Reflection.Missing Value;
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Module : System.Reflection.ICustomAttributeProvider, System.Runtime.Serialization.ISerializable
     {
         public static readonly System.Reflection.TypeFilter FilterTypeName;
@@ -7030,11 +6022,8 @@ namespace System.Reflection {
         public virtual System.Reflection.MethodInfo[] GetMethods(System.Reflection.BindingFlags bindingFlags) { return default(System.Reflection.MethodInfo[]); }
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual void GetPEKind(out System.Reflection.PortableExecutableKinds peKind, out System.Reflection.ImageFileMachine machine) { peKind = default(System.Reflection.PortableExecutableKinds); machine = default(System.Reflection.ImageFileMachine); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className) { return default(System.Type); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className, bool ignoreCase) { return default(System.Type); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public virtual System.Type GetType(string className, bool throwOnError, bool ignoreCase) { return default(System.Type); }
         public virtual System.Type[] GetTypes() { return default(System.Type[]); }
         public virtual bool IsDefined(System.Type attributeType, bool inherit) { return default(bool); }
@@ -7056,12 +6045,9 @@ namespace System.Reflection {
         object[] System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Type attributeType, bool inherit) { return default(object[]); }
         bool System.Reflection.ICustomAttributeProvider.IsDefined(System.Type attributeType, bool inherit) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate System.Reflection.Module ModuleResolveEventHandler(object sender, System.ResolveEventArgs e);
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ObfuscateAssemblyAttribute : System.Attribute
     {
         public ObfuscateAssemblyAttribute(bool assemblyIsPrivate) { }
@@ -7070,7 +6056,6 @@ namespace System.Reflection {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(8157), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ObfuscationAttribute : System.Attribute
     {
         public ObfuscationAttribute() { }
@@ -7081,7 +6066,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ParameterAttributes
     {
         HasDefault = 4096,
@@ -7096,9 +6080,6 @@ namespace System.Reflection {
         ReservedMask = 61440,
         Retval = 8,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ParameterInfo : System.Reflection.ICustomAttributeProvider, System.Runtime.Serialization.IObjectReference
     {
         protected System.Reflection.ParameterAttributes AttrsImpl;
@@ -7135,8 +6116,6 @@ namespace System.Reflection {
         object[] System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Type attributeType, bool inherit) { return default(object[]); }
         bool System.Reflection.ICustomAttributeProvider.IsDefined(System.Type attributeType, bool inherit) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ParameterModifier
     {
@@ -7145,20 +6124,15 @@ namespace System.Reflection {
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Pointer : System.Runtime.Serialization.ISerializable
     {
         internal Pointer() { }
-        [System.Security.SecurityCriticalAttribute]
         public unsafe static object Box(void* ptr, System.Type type) { return default(object); }
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        [System.Security.SecurityCriticalAttribute]
         public unsafe static void* Unbox(object ptr) { return default(void*); }
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PortableExecutableKinds
     {
         ILOnly = 1,
@@ -7168,8 +6142,6 @@ namespace System.Reflection {
         Required32Bit = 2,
         Unmanaged32Bit = 8,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ProcessorArchitecture
     {
         Amd64 = 4,
@@ -7181,7 +6153,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PropertyAttributes
     {
         HasDefault = 4096,
@@ -7193,9 +6164,6 @@ namespace System.Reflection {
         RTSpecialName = 1024,
         SpecialName = 512,
     }
-
-    [System.Runtime.InteropServices.ClassInterfaceAttribute((System.Runtime.InteropServices.ClassInterfaceType)(0))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class PropertyInfo : System.Reflection.MemberInfo
     {
         protected PropertyInfo() { }
@@ -7245,8 +6213,6 @@ namespace System.Reflection {
         public abstract System.Reflection.Assembly MapAssembly(System.Reflection.Assembly assembly);
         public abstract System.Reflection.TypeInfo MapType(System.Reflection.TypeInfo type);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReflectionTypeLoadException : System.SystemException
     {
         public ReflectionTypeLoadException(System.Type[] classes, System.Exception[] exceptions) { }
@@ -7257,7 +6223,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ResourceAttributes
     {
         Private = 2,
@@ -7265,7 +6230,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ResourceLocation
     {
         ContainedInAnotherAssembly = 2,
@@ -7287,8 +6251,6 @@ namespace System.Reflection {
         public static System.Collections.Generic.IEnumerable<System.Reflection.PropertyInfo> GetRuntimeProperties(this System.Type type) { return default(System.Collections.Generic.IEnumerable<System.Reflection.PropertyInfo>); }
         public static System.Reflection.PropertyInfo GetRuntimeProperty(this System.Type type, string name) { return default(System.Reflection.PropertyInfo); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StrongNameKeyPair : System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public StrongNameKeyPair(byte[] keyPairArray) { }
@@ -7299,8 +6261,6 @@ namespace System.Reflection {
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TargetException : System.Exception
     {
         public TargetException() { }
@@ -7308,15 +6268,11 @@ namespace System.Reflection {
         public TargetException(string message) { }
         public TargetException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TargetInvocationException : System.Exception
     {
         public TargetInvocationException(System.Exception inner) { }
         public TargetInvocationException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class TargetParameterCountException : System.Exception
     {
         public TargetParameterCountException() { }
@@ -7325,7 +6281,6 @@ namespace System.Reflection {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TypeAttributes
     {
         Abstract = 128,
@@ -7359,16 +6314,9 @@ namespace System.Reflection {
         StringFormatMask = 196608,
         UnicodeClass = 65536,
         VisibilityMask = 7,
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         WindowsRuntime = 16384,
     }
-
-
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate bool TypeFilter(System.Type m, object filterCriteria);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TypeInfo : System.Type, System.Reflection.IReflectableType
     {
         internal TypeInfo() { }
@@ -7528,8 +6476,8 @@ namespace System.Runtime {
     public static partial class GCSettings
     {
         public static bool IsServerGC { get { return default(bool); } }
-        public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute, System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Runtime.GCLargeObjectHeapCompactionMode); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute, System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
-        public static System.Runtime.GCLatencyMode LatencyMode { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Runtime.GCLatencyMode); } [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
+        public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Runtime.GCLargeObjectHeapCompactionMode); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+        public static System.Runtime.GCLatencyMode LatencyMode { get { return default(System.Runtime.GCLatencyMode); } set { } }
     }
 
     public sealed partial class MemoryFailPoint : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable
@@ -7548,7 +6496,6 @@ namespace System.Runtime {
 } // end of System.Runtime
 namespace System.Runtime.CompilerServices {
     [System.AttributeUsageAttribute((System.AttributeTargets)(256))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AccessedThroughPropertyAttribute : System.Attribute
     {
         public AccessedThroughPropertyAttribute(string propertyName) { }
@@ -7578,7 +6525,6 @@ namespace System.Runtime.CompilerServices {
     {
         public System.Threading.Tasks.Task<TResult> Task { get { return default(System.Threading.Tasks.Task<TResult>); } }
         public void AwaitOnCompleted<TAwaiter, TStateMachine>(ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.INotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void AwaitUnsafeOnCompleted<TAwaiter, TStateMachine>(ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
         public static System.Runtime.CompilerServices.AsyncTaskMethodBuilder<TResult> Create() { return default(System.Runtime.CompilerServices.AsyncTaskMethodBuilder<TResult>); }
         public void SetException(System.Exception exception) { }
@@ -7591,7 +6537,6 @@ namespace System.Runtime.CompilerServices {
     public partial struct AsyncVoidMethodBuilder
     {
         public void AwaitOnCompleted<TAwaiter, TStateMachine>(ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.INotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void AwaitUnsafeOnCompleted<TAwaiter, TStateMachine>(ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
         public static System.Runtime.CompilerServices.AsyncVoidMethodBuilder Create() { return default(System.Runtime.CompilerServices.AsyncVoidMethodBuilder); }
         public void SetException(System.Exception exception) { }
@@ -7600,26 +6545,18 @@ namespace System.Runtime.CompilerServices {
         [System.Diagnostics.DebuggerStepThroughAttribute]
         public void Start<TStateMachine>(ref TStateMachine stateMachine) where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CallConvCdecl
     {
         public CallConvCdecl() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CallConvFastcall
     {
         public CallConvFastcall() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CallConvStdcall
     {
         public CallConvStdcall() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CallConvThiscall
     {
         public CallConvThiscall() { }
@@ -7644,14 +6581,12 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CompilationRelaxations
     {
         NoStringInterning = 8,
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(71))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CompilationRelaxationsAttribute : System.Attribute
     {
         public CompilationRelaxationsAttribute(int relaxations) { }
@@ -7666,7 +6601,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4))]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CompilerGlobalScopeAttribute : System.Attribute
     {
         public CompilerGlobalScopeAttribute() { }
@@ -7691,17 +6625,13 @@ namespace System.Runtime.CompilerServices {
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ConfiguredTaskAwaitable
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter GetAwaiter() { return default(System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter); }
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public partial struct ConfiguredTaskAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Runtime.CompilerServices.INotifyCompletion
         {
-            public bool IsCompleted { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-            [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+            public bool IsCompleted { get { return default(bool); } }
             public void GetResult() { }
-            [System.Security.SecuritySafeCriticalAttribute]
             public void OnCompleted(System.Action continuation) { }
-            [System.Security.SecurityCriticalAttribute]
             public void UnsafeOnCompleted(System.Action continuation) { }
         }
     }
@@ -7709,23 +6639,18 @@ namespace System.Runtime.CompilerServices {
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct ConfiguredTaskAwaitable<TResult>
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter GetAwaiter() { return default(System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>.ConfiguredTaskAwaiter); }
         [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
         public partial struct ConfiguredTaskAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Runtime.CompilerServices.INotifyCompletion
         {
-            public bool IsCompleted { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-            [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+            public bool IsCompleted { get { return default(bool); } }
             public TResult GetResult() { return default(TResult); }
-            [System.Security.SecuritySafeCriticalAttribute]
             public void OnCompleted(System.Action continuation) { }
-            [System.Security.SecurityCriticalAttribute]
             public void UnsafeOnCompleted(System.Action continuation) { }
         }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CustomConstantAttribute : System.Attribute
     {
         protected CustomConstantAttribute() { }
@@ -7733,7 +6658,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DateTimeConstantAttribute : System.Runtime.CompilerServices.CustomConstantAttribute
     {
         public DateTimeConstantAttribute(long ticks) { }
@@ -7741,7 +6665,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DecimalConstantAttribute : System.Attribute
     {
         public DecimalConstantAttribute(byte scale, byte sign, int hi, int mid, int low) { }
@@ -7764,8 +6687,6 @@ namespace System.Runtime.CompilerServices {
         public string DependentAssembly { get { return default(string); } }
         public System.Runtime.CompilerServices.LoadHint LoadHint { get { return default(System.Runtime.CompilerServices.LoadHint); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DiscardableAttribute : System.Attribute
     {
         public DiscardableAttribute() { }
@@ -7805,12 +6726,10 @@ namespace System.Runtime.CompilerServices {
 
     public partial interface ICriticalNotifyCompletion : System.Runtime.CompilerServices.INotifyCompletion
     {
-        [System.Security.SecurityCriticalAttribute]
         void UnsafeOnCompleted(System.Action continuation);
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(128), Inherited = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IndexerNameAttribute : System.Attribute
     {
         public IndexerNameAttribute(string indexerName) { }
@@ -7840,8 +6759,6 @@ namespace System.Runtime.CompilerServices {
     public static partial class IsConst
     {
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class IsCopyConstructed
     {
     }
@@ -7873,8 +6790,6 @@ namespace System.Runtime.CompilerServices {
     public static partial class IsUdtReturn
     {
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class IsVolatile
     {
     }
@@ -7886,7 +6801,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class IUnknownConstantAttribute : System.Runtime.CompilerServices.CustomConstantAttribute
     {
         public IUnknownConstantAttribute() { }
@@ -7899,8 +6813,6 @@ namespace System.Runtime.CompilerServices {
         Default = 0,
         Sometimes = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MethodCodeType
     {
         IL = 0,
@@ -7910,7 +6822,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class MethodImplAttribute : System.Attribute
     {
         public System.Runtime.CompilerServices.MethodCodeType MethodCodeType;
@@ -7921,10 +6832,8 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum MethodImplOptions
     {
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         AggressiveInlining = 256,
         ForwardRef = 16,
         InternalCall = 4096,
@@ -7936,7 +6845,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(8), Inherited = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NativeCppClassAttribute : System.Attribute
     {
         public NativeCppClassAttribute() { }
@@ -7951,7 +6859,6 @@ namespace System.Runtime.CompilerServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1052), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class RequiredAttributeAttribute : System.Attribute
     {
         public RequiredAttributeAttribute(System.Type requiredContract) { }
@@ -7968,24 +6875,18 @@ namespace System.Runtime.CompilerServices {
     public static partial class RuntimeHelpers
     {
         public static int OffsetToStringData { get { return default(int); } }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void EnsureSufficientExecutionStack() { }
         public static new bool Equals(object o1, object o2) { return default(bool); }
         public static void ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode code, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode backoutCode, object userData) { }
         public static int GetHashCode(object o) { return default(int); }
         public static object GetObjectValue(object obj) { return default(object); }
         public static void InitializeArray(System.Array array, System.RuntimeFieldHandle fldHandle) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void PrepareConstrainedRegions() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void PrepareConstrainedRegionsNoOP() { }
-        [System.Security.SecurityCriticalAttribute]
         public static void PrepareContractedDelegate(System.Delegate d) { }
-        [System.Security.SecurityCriticalAttribute]
         public static void PrepareDelegate(System.Delegate d) { }
         public static void PrepareMethod(System.RuntimeMethodHandle method) { }
         public static void PrepareMethod(System.RuntimeMethodHandle method, System.RuntimeTypeHandle[] instantiation) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static void ProbeForSufficientStack() { }
         public static void RunClassConstructor(System.RuntimeTypeHandle type) { }
         public static void RunModuleConstructor(System.ModuleHandle module) { }
@@ -7997,7 +6898,6 @@ namespace System.Runtime.CompilerServices {
     {
         internal RuntimeWrappedException() { }
         public object WrappedException { get { return default(object); } }
-        [System.Security.SecurityCriticalAttribute]
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
@@ -8034,23 +6934,17 @@ namespace System.Runtime.CompilerServices {
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TaskAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Runtime.CompilerServices.INotifyCompletion
     {
-        public bool IsCompleted { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        public bool IsCompleted { get { return default(bool); } }
         public void GetResult() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void OnCompleted(System.Action continuation) { }
-        [System.Security.SecurityCriticalAttribute]
         public void UnsafeOnCompleted(System.Action continuation) { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TaskAwaiter<TResult> : System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Runtime.CompilerServices.INotifyCompletion
     {
-        public bool IsCompleted { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        public bool IsCompleted { get { return default(bool); } }
         public TResult GetResult() { return default(TResult); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void OnCompleted(System.Action continuation) { }
-        [System.Security.SecurityCriticalAttribute]
         public void UnsafeOnCompleted(System.Action continuation) { }
     }
 
@@ -8083,9 +6977,7 @@ namespace System.Runtime.CompilerServices {
         {
             public bool IsCompleted { get { return default(bool); } }
             public void GetResult() { }
-            [System.Security.SecuritySafeCriticalAttribute]
             public void OnCompleted(System.Action continuation) { }
-            [System.Security.SecurityCriticalAttribute]
             public void UnsafeOnCompleted(System.Action continuation) { }
         }
     }
@@ -8125,11 +7017,8 @@ namespace System.Runtime.ConstrainedExecution {
         MayCorruptProcess = 0,
         WillNotCorruptState = 3,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CriticalFinalizerObject
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         protected CriticalFinalizerObject() { }
         ~CriticalFinalizerObject() { }
     }
@@ -8160,7 +7049,7 @@ namespace System.Runtime.ExceptionServices {
     public partial class FirstChanceExceptionEventArgs : System.EventArgs
     {
         public FirstChanceExceptionEventArgs(System.Exception exception) { }
-        public System.Exception Exception { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(System.Exception); } }
+        public System.Exception Exception { get { return default(System.Exception); } }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]
@@ -8170,8 +7059,6 @@ namespace System.Runtime.ExceptionServices {
     }
 } // end of System.Runtime.ExceptionServices
 namespace System.Runtime.InteropServices {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CharSet
     {
         Ansi = 2,
@@ -8181,15 +7068,12 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ClassInterfaceAttribute : System.Attribute
     {
         public ClassInterfaceAttribute(short classInterfaceType) { }
         public ClassInterfaceAttribute(System.Runtime.InteropServices.ClassInterfaceType classInterfaceType) { }
         public System.Runtime.InteropServices.ClassInterfaceType Value { get { return default(System.Runtime.InteropServices.ClassInterfaceType); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ClassInterfaceType
     {
         AutoDispatch = 1,
@@ -8198,14 +7082,11 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComDefaultInterfaceAttribute : System.Attribute
     {
         public ComDefaultInterfaceAttribute(System.Type defaultInterface) { }
         public System.Type Value { get { return default(System.Type); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ComInterfaceType
     {
         InterfaceIsDual = 0,
@@ -8214,7 +7095,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5597), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ComVisibleAttribute : System.Attribute
     {
         public ComVisibleAttribute(bool visibility) { }
@@ -8222,14 +7102,11 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(960), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DispIdAttribute : System.Attribute
     {
         public DispIdAttribute(int dispId) { }
         public int Value { get { return default(int); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ExternalException : System.SystemException
     {
         public ExternalException() { }
@@ -8241,7 +7118,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FieldOffsetAttribute : System.Attribute
     {
         public FieldOffsetAttribute(int offset) { }
@@ -8249,7 +7125,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5149), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class GuidAttribute : System.Attribute
     {
         public GuidAttribute(string guid) { }
@@ -8257,15 +7132,12 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class InterfaceTypeAttribute : System.Attribute
     {
         public InterfaceTypeAttribute(short interfaceType) { }
         public InterfaceTypeAttribute(System.Runtime.InteropServices.ComInterfaceType interfaceType) { }
         public System.Runtime.InteropServices.ComInterfaceType Value { get { return default(System.Runtime.InteropServices.ComInterfaceType); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum LayoutKind
     {
         Auto = 3,
@@ -8274,7 +7146,6 @@ namespace System.Runtime.InteropServices {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OutAttribute : System.Attribute
     {
         public OutAttribute() { }
@@ -8286,7 +7157,6 @@ namespace System.Runtime.InteropServices {
         [System.CLSCompliantAttribute(false)]
         public ulong ByteLength { get { return default(ulong); } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public unsafe void AcquirePointer(ref byte* pointer) { }
         [System.CLSCompliantAttribute(false)]
         public void Initialize(uint numElements, uint sizeOfEachElement) { }
@@ -8295,59 +7165,36 @@ namespace System.Runtime.InteropServices {
         [System.CLSCompliantAttribute(false)]
         public void Initialize<T>(uint numElements) where T : struct { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public T Read<T>(ulong byteOffset) where T : struct { return default(T); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void ReleasePointer() { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public void Write<T>(ulong byteOffset, T value) where T : struct { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
         public override bool IsInvalid { get { return default(bool); } }
     }
-
-    [System.Security.SecurityCriticalAttribute]
     public abstract partial class SafeHandle : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable
     {
         protected System.IntPtr handle;
         protected SafeHandle() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         protected SafeHandle(System.IntPtr invalidHandleValue, bool ownsHandle) { }
-        public bool IsClosed { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2)), System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        public abstract bool IsInvalid { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get; }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecurityCriticalAttribute]
+        public bool IsClosed { get { return default(bool); } }
+        public abstract bool IsInvalid { get; }
         public void Close() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public void DangerousAddRef(ref bool success) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.IntPtr DangerousGetHandle() { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void DangerousRelease() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecuritySafeCriticalAttribute]
         public void Dispose() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Security.SecurityCriticalAttribute]
         protected virtual void Dispose(bool disposing) { }
         ~SafeHandle() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         protected abstract bool ReleaseHandle();
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected void SetHandle(System.IntPtr handle) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void SetHandleAsInvalid() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(12), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StructLayoutAttribute : System.Attribute
     {
         public System.Runtime.InteropServices.CharSet CharSet;
@@ -8359,15 +7206,12 @@ namespace System.Runtime.InteropServices {
     }
 } // end of System.Runtime.InteropServices
 namespace System.Runtime.Serialization {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IDeserializationCallback
     {
         void OnDeserialization(object sender);
     }
 
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IFormatterConverter
     {
         object Convert(object value, System.Type type);
@@ -8388,11 +7232,8 @@ namespace System.Runtime.Serialization {
         uint ToUInt32(object value);
         ulong ToUInt64(object value);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IObjectReference
     {
-        [System.Security.SecurityCriticalAttribute]
         object GetRealObject(System.Runtime.Serialization.StreamingContext context);
     }
 
@@ -8400,44 +7241,36 @@ namespace System.Runtime.Serialization {
     {
         void CompleteDeserialization(object deserialized);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISerializable
     {
-        [System.Security.SecurityCriticalAttribute]
         void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OnDeserializedAttribute : System.Attribute
     {
         public OnDeserializedAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OnDeserializingAttribute : System.Attribute
     {
         public OnDeserializingAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OnSerializedAttribute : System.Attribute
     {
         public OnSerializedAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OnSerializingAttribute : System.Attribute
     {
         public OnSerializingAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class OptionalFieldAttribute : System.Attribute
     {
         public OptionalFieldAttribute() { }
@@ -8450,8 +7283,6 @@ namespace System.Runtime.Serialization {
         public System.Runtime.Serialization.StreamingContext StreamingContext { get { return default(System.Runtime.Serialization.StreamingContext); } }
         public void AddSerializedState(System.Runtime.Serialization.ISafeSerializationData serializedState) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SerializationEntry
     {
@@ -8459,15 +7290,13 @@ namespace System.Runtime.Serialization {
         public System.Type ObjectType { get { return default(System.Type); } }
         public object Value { get { return default(object); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SerializationInfo
     {
         [System.CLSCompliantAttribute(false)]
         public SerializationInfo(System.Type type, System.Runtime.Serialization.IFormatterConverter converter) { }
         [System.CLSCompliantAttribute(false)]
         public SerializationInfo(System.Type type, System.Runtime.Serialization.IFormatterConverter converter, bool requireSameTokenInPartialTrust) { }
-        public string AssemblyName { get { return default(string); } [System.Security.SecuritySafeCriticalAttribute]set { } }
+        public string AssemblyName { get { return default(string); } set { } }
         public string FullTypeName { get { return default(string); } set { } }
         public bool IsAssemblyNameSetExplicit { get { return default(bool); } }
         public bool IsFullTypeNameSetExplicit { get { return default(bool); } }
@@ -8513,13 +7342,9 @@ namespace System.Runtime.Serialization {
         public uint GetUInt32(string name) { return default(uint); }
         [System.CLSCompliantAttribute(false)]
         public ulong GetUInt64(string name) { return default(ulong); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public object GetValue(string name, System.Type type) { return default(object); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void SetType(System.Type type) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SerializationInfoEnumerator : System.Collections.IEnumerator
     {
         internal SerializationInfoEnumerator() { }
@@ -8531,8 +7356,6 @@ namespace System.Runtime.Serialization {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct StreamingContext
     {
@@ -8545,7 +7368,6 @@ namespace System.Runtime.Serialization {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum StreamingContextStates
     {
         All = 255,
@@ -8571,7 +7393,6 @@ namespace System.Runtime.Versioning {
 } // end of System.Runtime.Versioning
 namespace System.Security {
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AllowPartiallyTrustedCallersAttribute : System.Attribute
     {
         public AllowPartiallyTrustedCallersAttribute() { }
@@ -8609,8 +7430,6 @@ namespace System.Security {
     {
         public SecurityCriticalAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SecurityException : System.SystemException
     {
         public SecurityException() { }
@@ -8619,18 +7438,13 @@ namespace System.Security {
         public SecurityException(string message, System.Exception inner) { }
         public SecurityException(string message, System.Type type) { }
         public SecurityException(string message, System.Type type, string state) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object Demanded { get { return default(object); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object DenySetInstance { get { return default(object); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Reflection.AssemblyName FailedAssemblyInfo { get { return default(System.Reflection.AssemblyName); } set { } }
         public string GrantedSet { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Reflection.MethodInfo Method { get { return default(System.Reflection.MethodInfo); } set { } }
         public string PermissionState { get { return default(string); } set { } }
         public System.Type PermissionType { get { return default(System.Type); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public object PermitOnlySetInstance { get { return default(object); } set { } }
         public string RefusedSet { get { return default(string); } set { } }
         public string Url { get { return default(string); } set { } }
@@ -8673,13 +7487,10 @@ namespace System.Security {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UnverifiableCodeAttribute : System.Attribute
     {
         public UnverifiableCodeAttribute() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class VerificationException : System.SystemException
     {
         public VerificationException() { }
@@ -8689,7 +7500,6 @@ namespace System.Security {
     }
 } // end of System.Security
 namespace System.Security.Policy {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Evidence : System.Collections.ICollection, System.Collections.IEnumerable
     {
         public Evidence() { }
@@ -8706,9 +7516,7 @@ namespace System.Security.Policy {
         public void AddAssembly(object id) { }
         [System.ObsoleteAttribute]
         public void AddHost(object id) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Clear() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Policy.Evidence Clone() { return default(System.Security.Policy.Evidence); }
         [System.ObsoleteAttribute]
         public void CopyTo(System.Array array, int index) { }
@@ -8717,7 +7525,6 @@ namespace System.Security.Policy {
         public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         public System.Collections.IEnumerator GetHostEnumerator() { return default(System.Collections.IEnumerator); }
         public void Merge(System.Security.Policy.Evidence evidence) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void RemoveType(System.Type t) { }
     }
     public abstract partial class EvidenceBase
@@ -8727,35 +7534,22 @@ namespace System.Security.Policy {
     }
 } // end of System.Security.Policy
 namespace System.Text {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Decoder
     {
         protected Decoder() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.DecoderFallback Fallback { get { return default(System.Text.DecoderFallback); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.DecoderFallbackBuffer FallbackBuffer { get { return default(System.Text.DecoderFallbackBuffer); } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual void Convert(byte* bytes, int byteCount, char* chars, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) { bytesUsed = default(int); charsUsed = default(int); completed = default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, bool flush, out int bytesUsed, out int charsUsed, out bool completed) { bytesUsed = default(int); charsUsed = default(int); completed = default(bool); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetCharCount(byte* bytes, int count, bool flush) { return default(int); }
         public abstract int GetCharCount(byte[] bytes, int index, int count);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int GetCharCount(byte[] bytes, int index, int count, bool flush) { return default(int); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetChars(byte* bytes, int byteCount, char* chars, int charCount, bool flush) { return default(int); }
         public abstract int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);
         public virtual int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, bool flush) { return default(int); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Reset() { }
     }
 
@@ -8777,32 +7571,20 @@ namespace System.Text {
         public abstract bool MovePrevious();
         public virtual void Reset() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Encoder
     {
         protected Encoder() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.EncoderFallback Fallback { get { return default(System.Text.EncoderFallback); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.EncoderFallbackBuffer FallbackBuffer { get { return default(System.Text.EncoderFallbackBuffer); } }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual void Convert(char* chars, int charCount, byte* bytes, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed) { charsUsed = default(int); bytesUsed = default(int); completed = default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Convert(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, bool flush, out int charsUsed, out int bytesUsed, out bool completed) { charsUsed = default(int); bytesUsed = default(int); completed = default(bool); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetByteCount(char* chars, int count, bool flush) { return default(int); }
         public abstract int GetByteCount(char[] chars, int index, int count, bool flush);
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetBytes(char* chars, int charCount, byte* bytes, int byteCount, bool flush) { return default(int); }
         public abstract int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, bool flush);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Reset() { }
     }
 
@@ -8825,20 +7607,16 @@ namespace System.Text {
         public abstract bool MovePrevious();
         public virtual void Reset() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Encoding : System.ICloneable
     {
         protected Encoding() { }
         protected Encoding(int codePage) { }
-        public static System.Text.Encoding ASCII { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Text.Encoding); } }
+        public static System.Text.Encoding ASCII { get { return default(System.Text.Encoding); } }
         public static System.Text.Encoding BigEndianUnicode { get { return default(System.Text.Encoding); } }
         public virtual string BodyName { get { return default(string); } }
         public virtual int CodePage { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.DecoderFallback DecoderFallback { get { return default(System.Text.DecoderFallback); } set { } }
-        public static System.Text.Encoding Default { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries"), System.Security.SecuritySafeCriticalAttribute]get { return default(System.Text.Encoding); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
+        public static System.Text.Encoding Default { get { return default(System.Text.Encoding); } }
         public System.Text.EncoderFallback EncoderFallback { get { return default(System.Text.EncoderFallback); } set { } }
         public virtual string EncodingName { get { return default(string); } }
         public virtual string HeaderName { get { return default(string); } }
@@ -8846,54 +7624,41 @@ namespace System.Text {
         public virtual bool IsBrowserSave { get { return default(bool); } }
         public virtual bool IsMailNewsDisplay { get { return default(bool); } }
         public virtual bool IsMailNewsSave { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool IsReadOnly { get { return default(bool); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool IsSingleByte { get { return default(bool); } }
-        public static System.Text.Encoding Unicode { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Text.Encoding); } }
+        public static System.Text.Encoding Unicode { get { return default(System.Text.Encoding); } }
         public static System.Text.Encoding UTF32 { get { return default(System.Text.Encoding); } }
         public static System.Text.Encoding UTF7 { get { return default(System.Text.Encoding); } }
-        public static System.Text.Encoding UTF8 { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Text.Encoding); } }
-        public virtual string WebName { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(string); } }
+        public static System.Text.Encoding UTF8 { get { return default(System.Text.Encoding); } }
+        public virtual string WebName { get { return default(string); } }
         public virtual int WindowsCodePage { get { return default(int); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual object Clone() { return default(object); }
         public static byte[] Convert(System.Text.Encoding srcEncoding, System.Text.Encoding dstEncoding, byte[] bytes) { return default(byte[]); }
         public static byte[] Convert(System.Text.Encoding srcEncoding, System.Text.Encoding dstEncoding, byte[] bytes, int index, int count) { return default(byte[]); }
         public override bool Equals(object value) { return default(bool); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetByteCount(char* chars, int count) { return default(int); }
         public virtual int GetByteCount(char[] chars) { return default(int); }
         public abstract int GetByteCount(char[] chars, int index, int count);
         public virtual int GetByteCount(string s) { return default(int); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetBytes(char* chars, int charCount, byte* bytes, int byteCount) { return default(int); }
         public virtual byte[] GetBytes(char[] chars) { return default(byte[]); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual byte[] GetBytes(char[] chars, int index, int count) { return default(byte[]); }
         public abstract int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex);
         public virtual byte[] GetBytes(string s) { return default(byte[]); }
         public virtual int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex) { return default(int); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetCharCount(byte* bytes, int count) { return default(int); }
         public virtual int GetCharCount(byte[] bytes) { return default(int); }
         public abstract int GetCharCount(byte[] bytes, int index, int count);
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe virtual int GetChars(byte* bytes, int byteCount, char* chars, int charCount) { return default(int); }
         public virtual char[] GetChars(byte[] bytes) { return default(char[]); }
         public virtual char[] GetChars(byte[] bytes, int index, int count) { return default(char[]); }
         public abstract int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);
         public virtual System.Text.Decoder GetDecoder() { return default(System.Text.Decoder); }
         public virtual System.Text.Encoder GetEncoder() { return default(System.Text.Encoder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Text.Encoding GetEncoding(int codepage) { return default(System.Text.Encoding); }
         public static System.Text.Encoding GetEncoding(int codepage, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback) { return default(System.Text.Encoding); }
         public static System.Text.Encoding GetEncoding(string name) { return default(System.Text.Encoding); }
@@ -8905,15 +7670,11 @@ namespace System.Text {
         public virtual byte[] GetPreamble() { return default(byte[]); }
         public virtual string GetString(byte[] bytes) { return default(string); }
         public virtual string GetString(byte[] bytes, int index, int count) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool IsAlwaysNormalized() { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool IsAlwaysNormalized(System.Text.NormalizationForm form) { return default(bool); }
         protected Encoding(int codePage, System.Text.EncoderFallback encoderFallback, System.Text.DecoderFallback decoderFallback) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe string GetString(byte* bytes, int byteCount) { return default(string); }
-        [System.Security.SecurityCriticalAttribute]
         public static void RegisterProvider(System.Text.EncodingProvider provider) { }
     }
 
@@ -8927,8 +7688,6 @@ namespace System.Text {
         public System.Text.Encoding GetEncoding() { return default(System.Text.Encoding); }
         public override int GetHashCode() { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum NormalizationForm
     {
         FormC = 1,
@@ -8936,47 +7695,35 @@ namespace System.Text {
         FormKC = 5,
         FormKD = 6,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StringBuilder : System.Runtime.Serialization.ISerializable
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringBuilder() { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringBuilder(int capacity) { }
         public StringBuilder(int capacity, int maxCapacity) { }
         public StringBuilder(string value) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public StringBuilder(string value, int capacity) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public StringBuilder(string value, int startIndex, int length, int capacity) { }
-        public int Capacity { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } set { } }
+        public int Capacity { get { return default(int); } set { } }
         [System.Runtime.CompilerServices.IndexerName("Chars")]
         public char this[int index] { get { return default(char); } set { } }
-        public int Length { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(int); } set { } }
+        public int Length { get { return default(int); } set { } }
         public int MaxCapacity { get { return default(int); } }
         public System.Text.StringBuilder Append(bool value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(byte value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(char value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(char value, int repeatCount) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(char[] value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(char[] value, int startIndex, int charCount) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(decimal value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(double value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(short value) { return default(System.Text.StringBuilder); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Text.StringBuilder Append(int value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(long value) { return default(System.Text.StringBuilder); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Text.StringBuilder Append(object value) { return default(System.Text.StringBuilder); }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Append(sbyte value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Append(float value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(string value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Append(string value, int startIndex, int count) { return default(System.Text.StringBuilder); }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Append(ushort value) { return default(System.Text.StringBuilder); }
@@ -8985,27 +7732,20 @@ namespace System.Text {
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Append(ulong value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(System.IFormatProvider provider, string format, params object[] args) { return default(System.Text.StringBuilder); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Text.StringBuilder AppendFormat(string format, object arg0) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(string format, object arg0, object arg1) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(string format, object arg0, object arg1, object arg2) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(string format, params object[] args) { return default(System.Text.StringBuilder); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.StringBuilder AppendLine() { return default(System.Text.StringBuilder); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Text.StringBuilder AppendLine(string value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Clear() { return default(System.Text.StringBuilder); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
-        [System.Security.SecuritySafeCriticalAttribute]
         public void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count) { }
         public int EnsureCapacity(int capacity) { return default(int); }
         public bool Equals(System.Text.StringBuilder sb) { return default(bool); }
         public System.Text.StringBuilder Insert(int index, bool value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Insert(int index, byte value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, char value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Insert(int index, char[] value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, char[] value, int startIndex, int charCount) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Insert(int index, decimal value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Insert(int index, double value) { return default(System.Text.StringBuilder); }
@@ -9016,9 +7756,7 @@ namespace System.Text {
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Insert(int index, sbyte value) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Insert(int index, float value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, string value) { return default(System.Text.StringBuilder); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Text.StringBuilder Insert(int index, string value, int count) { return default(System.Text.StringBuilder); }
         [System.CLSCompliantAttribute(false)]
         public System.Text.StringBuilder Insert(int index, ushort value) { return default(System.Text.StringBuilder); }
@@ -9031,14 +7769,10 @@ namespace System.Text {
         public System.Text.StringBuilder Replace(char oldChar, char newChar, int startIndex, int count) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Replace(string oldValue, string newValue) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder Replace(string oldValue, string newValue, int startIndex, int count) { return default(System.Text.StringBuilder); }
-        [System.Security.SecurityCriticalAttribute]
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override string ToString() { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public string ToString(int startIndex, int length) { return default(string); }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         public unsafe System.Text.StringBuilder Append(char* value, int valueCount) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(System.IFormatProvider provider, string format, object arg0) { return default(System.Text.StringBuilder); }
         public System.Text.StringBuilder AppendFormat(System.IFormatProvider provider, string format, object arg0, object arg1) { return default(System.Text.StringBuilder); }
@@ -9053,16 +7787,13 @@ namespace System.Text {
   }
 } // end of System.Text
 namespace System.Threading {
-
-    [System.Diagnostics.DebuggerDisplayAttribute("IsCancellationRequested = {IsCancellationRequested}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct CancellationToken
     {
         public CancellationToken(bool canceled) { throw new System.NotImplementedException(); }
-        public bool CanBeCanceled { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        public bool IsCancellationRequested { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        public static System.Threading.CancellationToken None { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Threading.CancellationToken); } }
+        public bool CanBeCanceled { get { return default(bool); } }
+        public bool IsCancellationRequested { get { return default(bool); } }
+        public static System.Threading.CancellationToken None { get { return default(System.Threading.CancellationToken); } }
         public System.Threading.WaitHandle WaitHandle { get { return default(System.Threading.WaitHandle); } }
         public override bool Equals(object other) { return default(bool); }
         public bool Equals(System.Threading.CancellationToken other) { return default(bool); }
@@ -9073,7 +7804,6 @@ namespace System.Threading {
         public System.Threading.CancellationTokenRegistration Register(System.Action callback, bool useSynchronizationContext) { return default(System.Threading.CancellationTokenRegistration); }
         public System.Threading.CancellationTokenRegistration Register(System.Action<object> callback, object state) { return default(System.Threading.CancellationTokenRegistration); }
         public System.Threading.CancellationTokenRegistration Register(System.Action<object> callback, object state, bool useSynchronizationContext) { return default(System.Threading.CancellationTokenRegistration); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public void ThrowIfCancellationRequested() { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -9086,16 +7816,13 @@ namespace System.Threading {
         public static bool operator ==(System.Threading.CancellationTokenRegistration left, System.Threading.CancellationTokenRegistration right) { return default(bool); }
         public static bool operator !=(System.Threading.CancellationTokenRegistration left, System.Threading.CancellationTokenRegistration right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class CancellationTokenSource : System.IDisposable
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public CancellationTokenSource() { }
         public CancellationTokenSource(int millisecondsDelay) { }
         public CancellationTokenSource(System.TimeSpan delay) { }
-        public bool IsCancellationRequested { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
-        public System.Threading.CancellationToken Token { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Threading.CancellationToken); } }
+        public bool IsCancellationRequested { get { return default(bool); } }
+        public System.Threading.CancellationToken Token { get { return default(System.Threading.CancellationToken); } }
         public void Cancel() { }
         public void Cancel(bool throwOnFirstException) { }
         public void CancelAfter(int millisecondsDelay) { }
@@ -9105,8 +7832,6 @@ namespace System.Threading {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public delegate void ContextCallback(object state);
     public partial class HostExecutionContext : System.IDisposable
     {
@@ -9122,7 +7847,6 @@ namespace System.Threading {
     {
         public HostExecutionContextManager() { }
         public virtual System.Threading.HostExecutionContext Capture() { return default(System.Threading.HostExecutionContext); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public virtual void Revert(object previousState) { }
         public virtual object SetHostExecutionContext(System.Threading.HostExecutionContext hostExecutionContext) { return default(object); }
     }
@@ -9133,16 +7857,11 @@ namespace System.Threading {
         None = 0,
         PublicationOnly = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Timeout
     {
         public const int Infinite = -1;
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static readonly System.TimeSpan InfiniteTimeSpan;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class WaitHandle :System.IDisposable
     {
         protected static readonly System.IntPtr InvalidHandle;
@@ -9150,7 +7869,7 @@ namespace System.Threading {
         protected WaitHandle() { }
         [System.ObsoleteAttribute("In the profiles > 2.x, use SafeHandle instead of Handle")]
         public virtual System.IntPtr Handle { get { return default(System.IntPtr); } set { } }
-        public Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]get { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); } [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]set { } }
+        public Microsoft.Win32.SafeHandles.SafeWaitHandle SafeWaitHandle { get { return default(Microsoft.Win32.SafeHandles.SafeWaitHandle); } set { } }
         public virtual void Close() { }
         public void Dispose() { }
         protected virtual void Dispose(bool explicitDisposing) { }
@@ -9162,15 +7881,10 @@ namespace System.Threading {
         public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext) { return default(bool); }
         public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout) { return default(bool); }
         public static bool WaitAll(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout, bool exitContext) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int WaitAny(System.Threading.WaitHandle[] waitHandles) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int WaitAny(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int WaitAny(System.Threading.WaitHandle[] waitHandles, int millisecondsTimeout, bool exitContext) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int WaitAny(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public static int WaitAny(System.Threading.WaitHandle[] waitHandles, System.TimeSpan timeout, bool exitContext) { return default(int); }
         public virtual bool WaitOne() { return default(bool); }
         public virtual bool WaitOne(int millisecondsTimeout) { return default(bool); }
@@ -9180,7 +7894,6 @@ namespace System.Threading {
     }
 } // end of System.Threading
 namespace System.Threading.Tasks {
-    [System.Diagnostics.DebuggerDisplayAttribute("Concurrent={ConcurrentTaskCountForDebugger}, Exclusive={ExclusiveTaskCountForDebugger}, Mode={ModeForDebugger}")]
     public partial class ConcurrentExclusiveSchedulerPair
     {
         public ConcurrentExclusiveSchedulerPair() { }
@@ -9192,8 +7905,6 @@ namespace System.Threading.Tasks {
         public System.Threading.Tasks.TaskScheduler ExclusiveScheduler { get { return default(System.Threading.Tasks.TaskScheduler); } }
         public void Complete() { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Id = {Id}, Status = {Status}, Method = {DebuggerDisplayMethodDescription}")]
     public partial class Task : System.IAsyncResult, System.IDisposable
     {
         public Task(System.Action action) { }
@@ -9211,12 +7922,11 @@ namespace System.Threading.Tasks {
         public static System.Threading.Tasks.TaskFactory Factory { get { return default(System.Threading.Tasks.TaskFactory); } }
         public int Id { get { return default(int); } }
         public bool IsCanceled { get { return default(bool); } }
-        public bool IsCompleted { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(bool); } }
+        public bool IsCompleted { get { return default(bool); } }
         public bool IsFaulted { get { return default(bool); } }
         public System.Threading.Tasks.TaskStatus Status { get { return default(System.Threading.Tasks.TaskStatus); } }
         System.Threading.WaitHandle System.IAsyncResult.AsyncWaitHandle { get { return default(System.Threading.WaitHandle); } }
         bool System.IAsyncResult.CompletedSynchronously { get { return default(bool); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Runtime.CompilerServices.ConfiguredTaskAwaitable ConfigureAwait(bool continueOnCapturedContext) { return default(System.Runtime.CompilerServices.ConfiguredTaskAwaitable); }
         public System.Threading.Tasks.Task ContinueWith(System.Action<System.Threading.Tasks.Task, object> continuationAction, object state) { return default(System.Threading.Tasks.Task); }
         public System.Threading.Tasks.Task ContinueWith(System.Action<System.Threading.Tasks.Task, object> continuationAction, object state, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
@@ -9245,7 +7955,6 @@ namespace System.Threading.Tasks {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
         public static System.Threading.Tasks.Task<TResult> FromResult<TResult>(TResult result) { return default(System.Threading.Tasks.Task<TResult>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public System.Runtime.CompilerServices.TaskAwaiter GetAwaiter() { return default(System.Runtime.CompilerServices.TaskAwaiter); }
         public static System.Threading.Tasks.Task Run(System.Action action) { return default(System.Threading.Tasks.Task); }
         public static System.Threading.Tasks.Task Run(System.Action action, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
@@ -9289,8 +7998,6 @@ namespace System.Threading.Tasks {
         public static System.Threading.Tasks.Task<TResult> FromException<TResult>(System.Exception exception) { return default(System.Threading.Tasks.Task<TResult>); }
         public static System.Threading.Tasks.Task CompletedTask { get { return default(System.Threading.Tasks.Task); } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Id = {Id}, Status = {Status}, Method = {DebuggerDisplayMethodDescription}, Result = {DebuggerDisplayResultDescription}")]
     public partial class Task<TResult> : System.Threading.Tasks.Task
     {
         public Task(System.Func<TResult> function) : base(default(System.Action)) { }
@@ -9303,8 +8010,7 @@ namespace System.Threading.Tasks {
         public Task(System.Func<object, TResult> function, object state, System.Threading.Tasks.TaskCreationOptions creationOptions) : base(default(System.Action)) { }
         public static new System.Threading.Tasks.TaskFactory<TResult> Factory { get { return default(System.Threading.Tasks.TaskFactory<TResult>); } }
         [System.Diagnostics.DebuggerBrowsableAttribute((System.Diagnostics.DebuggerBrowsableState)(0))]
-        public TResult Result { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(TResult); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        public TResult Result { get { return default(TResult); } }
         public new System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult> ConfigureAwait(bool continueOnCapturedContext) { return default(System.Runtime.CompilerServices.ConfiguredTaskAwaitable<TResult>); }
         public System.Threading.Tasks.Task ContinueWith(System.Action<System.Threading.Tasks.Task<TResult>, object> continuationAction, object state) { return default(System.Threading.Tasks.Task); }
         public System.Threading.Tasks.Task ContinueWith(System.Action<System.Threading.Tasks.Task<TResult>, object> continuationAction, object state, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
@@ -9326,7 +8032,6 @@ namespace System.Threading.Tasks {
         public System.Threading.Tasks.Task<TNewResult> ContinueWith<TNewResult>(System.Func<System.Threading.Tasks.Task<TResult>, object, TNewResult> continuationFunction, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler) { return default(System.Threading.Tasks.Task<TNewResult>); }
         public System.Threading.Tasks.Task<TNewResult> ContinueWith<TNewResult>(System.Func<System.Threading.Tasks.Task<TResult>, object, TNewResult> continuationFunction, object state, System.Threading.Tasks.TaskContinuationOptions continuationOptions) { return default(System.Threading.Tasks.Task<TNewResult>); }
         public System.Threading.Tasks.Task<TNewResult> ContinueWith<TNewResult>(System.Func<System.Threading.Tasks.Task<TResult>, object, TNewResult> continuationFunction, object state, System.Threading.Tasks.TaskScheduler scheduler) { return default(System.Threading.Tasks.Task<TNewResult>); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public new System.Runtime.CompilerServices.TaskAwaiter<TResult> GetAwaiter() { return default(System.Runtime.CompilerServices.TaskAwaiter<TResult>); }
     }
 
@@ -9515,8 +8220,6 @@ namespace System.Threading.Tasks {
         public System.Threading.Tasks.Task<TResult> StartNew(System.Func<object, TResult> function, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions, System.Threading.Tasks.TaskScheduler scheduler) { return default(System.Threading.Tasks.Task<TResult>); }
         public System.Threading.Tasks.Task<TResult> StartNew(System.Func<object, TResult> function, object state, System.Threading.Tasks.TaskCreationOptions creationOptions) { return default(System.Threading.Tasks.Task<TResult>); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Id={Id}")]
     public abstract partial class TaskScheduler
     {
         protected TaskScheduler() { }
@@ -9526,15 +8229,10 @@ namespace System.Threading.Tasks {
         public virtual int MaximumConcurrencyLevel { get { return default(int); } }
         public static event System.EventHandler<System.Threading.Tasks.UnobservedTaskExceptionEventArgs> UnobservedTaskException { add { } remove { } }
         public static System.Threading.Tasks.TaskScheduler FromCurrentSynchronizationContext() { return default(System.Threading.Tasks.TaskScheduler); }
-        [System.Security.SecurityCriticalAttribute]
         protected abstract System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task> GetScheduledTasks();
-        [System.Security.SecurityCriticalAttribute]
         protected internal abstract void QueueTask(System.Threading.Tasks.Task task);
-        [System.Security.SecurityCriticalAttribute]
         protected internal virtual bool TryDequeue(System.Threading.Tasks.Task task) { return default(bool); }
-        [System.Security.SecurityCriticalAttribute]
         protected bool TryExecuteTask(System.Threading.Tasks.Task task) { return default(bool); }
-        [System.Security.SecurityCriticalAttribute]
         protected abstract bool TryExecuteTaskInline(System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued);
     }
 

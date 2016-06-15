@@ -39,8 +39,6 @@ namespace System.ComponentModel {
         protected virtual string GetLocalizedString(string value) { return default(string); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ComponentCollection : System.Collections.ReadOnlyCollectionBase
     {
         public ComponentCollection(System.ComponentModel.IComponent[] components) { }
@@ -103,8 +101,6 @@ namespace System.ComponentModel {
         public override int GetHashCode() { return default(int); }
         public override bool IsDefaultAttribute() { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DesignerSerializationVisibility
     {
         Content = 2,
@@ -160,14 +156,11 @@ namespace System.ComponentModel {
         public void Dispose() { }
         public void RemoveHandler(object key, System.Delegate value) { }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IComponent : System.IDisposable
     {
         System.ComponentModel.ISite Site { get; set; }
         event System.EventHandler Disposed;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IContainer : System.IDisposable
     {
         System.ComponentModel.ComponentCollection Components { get; }
@@ -195,8 +188,6 @@ namespace System.ComponentModel {
         public InitializationEventAttribute(string eventName) { }
         public string EventName { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISite : System.IServiceProvider
     {
         System.ComponentModel.IComponent Component { get; }

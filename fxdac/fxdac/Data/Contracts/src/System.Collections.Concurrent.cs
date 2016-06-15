@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Collections.Concurrent {
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ConcurrentDictionary<TKey, TValue> : 
         System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, 
         System.Collections.Generic.IDictionary<TKey, TValue>, 
@@ -57,9 +55,6 @@ namespace System.Collections.Concurrent {
         System.Collections.Generic.IEnumerable<TKey> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys { get { return default(System.Collections.Generic.IEnumerable<TKey>); } }
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ConcurrentQueue<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
         public ConcurrentQueue() { }
@@ -79,8 +74,6 @@ namespace System.Collections.Concurrent {
         public bool TryDequeue(out T result) { result = default(T); return default(bool); }
         public bool TryPeek(out T result) { result = default(T); return default(bool); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class ConcurrentStack<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
         public ConcurrentStack() { }
@@ -149,8 +142,6 @@ namespace System.Collections.Concurrent {
         public virtual System.Collections.Generic.IEnumerable<TSource> GetDynamicPartitions() { return default(System.Collections.Generic.IEnumerable<TSource>); }
         public abstract System.Collections.Generic.IList<System.Collections.Generic.IEnumerator<TSource>> GetPartitions(int partitionCount);
     }
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}, Type = {m_collection}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class BlockingCollection<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.IDisposable
     {
         public BlockingCollection() { }
@@ -199,9 +190,6 @@ namespace System.Collections.Concurrent {
         public static int TryTakeFromAny(System.Collections.Concurrent.BlockingCollection<T>[] collections, out T item, int millisecondsTimeout, System.Threading.CancellationToken cancellationToken) { item = default(T); return default(int); }
         public static int TryTakeFromAny(System.Collections.Concurrent.BlockingCollection<T>[] collections, out T item, System.TimeSpan timeout) { item = default(T); return default(int); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ConcurrentBag<T> : System.Collections.Concurrent.IProducerConsumerCollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
         public ConcurrentBag() { }

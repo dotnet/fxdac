@@ -93,10 +93,8 @@ namespace System.IO.MemoryMappedFiles {
     {
         internal MemoryMappedViewAccessor() { }
         public long PointerOffset { get { return default(long); } }
-        public Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle); } }
-        [System.Security.SecuritySafeCriticalAttribute]
+        public Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle { get { return default(Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle); } }
         protected override void Dispose(bool disposing) { }
-        [System.Security.SecurityCriticalAttribute]
         public void Flush() { }
     }
 
@@ -104,10 +102,8 @@ namespace System.IO.MemoryMappedFiles {
     {
         internal MemoryMappedViewStream() { }
         public long PointerOffset { get { return default(long); } }
-        public Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle); } }
-        [System.Security.SecuritySafeCriticalAttribute]
+        public Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle SafeMemoryMappedViewHandle { get { return default(Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle); } }
         protected override void Dispose(bool disposing) { }
-        [System.Security.SecurityCriticalAttribute]
         public override void Flush() { }
         public override void SetLength(long value) { }
     }

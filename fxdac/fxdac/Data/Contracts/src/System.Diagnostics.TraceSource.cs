@@ -207,14 +207,12 @@ namespace System.Diagnostics {
         protected TraceListener() { }
         protected TraceListener(string name) { }
         public System.Collections.Specialized.StringDictionary Attributes { get { return default(System.Collections.Specialized.StringDictionary); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Diagnostics.TraceFilter Filter { get { return default(System.Diagnostics.TraceFilter); } set { } }
         public int IndentLevel { get { return default(int); } set { } }
         public int IndentSize { get { return default(int); } set { } }
         public virtual bool IsThreadSafe { get { return default(bool); } }
         public virtual string Name { get { return default(string); } set { } }
         protected bool NeedIndent { get { return default(bool); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Diagnostics.TraceOptions TraceOutputOptions { get { return default(System.Diagnostics.TraceOptions); } set { } }
         public virtual void Close() { }
         public void Dispose() { }
@@ -223,17 +221,11 @@ namespace System.Diagnostics {
         public virtual void Fail(string message, string detailMessage) { }
         public virtual void Flush() { }
         protected internal virtual string[] GetSupportedAttributes() { return default(string[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceData(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceData(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceEvent(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceEvent(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceEvent(System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void TraceTransfer(System.Diagnostics.TraceEventCache eventCache, string source, int id, string message, System.Guid relatedActivityId) { }
         public virtual void Write(object o) { }
         public virtual void Write(object o, string category) { }

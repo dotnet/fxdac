@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security.Principal {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class IdentityNotMappedException : System.SystemException
     {
         public IdentityNotMappedException() { }
@@ -10,8 +8,6 @@ namespace System.Security.Principal {
         public System.Security.Principal.IdentityReferenceCollection UnmappedIdentities { get { return default(System.Security.Principal.IdentityReferenceCollection); } }
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public abstract partial class IdentityReference
     {
         internal IdentityReference() { }
@@ -24,8 +20,6 @@ namespace System.Security.Principal {
         public abstract override string ToString();
         public abstract System.Security.Principal.IdentityReference Translate(System.Type targetType);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class IdentityReferenceCollection : System.Collections.Generic.ICollection<System.Security.Principal.IdentityReference>, System.Collections.Generic.IEnumerable<System.Security.Principal.IdentityReference>, System.Collections.IEnumerable
     {
         public IdentityReferenceCollection() { }
@@ -44,8 +38,6 @@ namespace System.Security.Principal {
         public System.Security.Principal.IdentityReferenceCollection Translate(System.Type targetType, bool forceSuccess) { return default(System.Security.Principal.IdentityReferenceCollection); }
         bool System.Collections.Generic.ICollection<System.Security.Principal.IdentityReference>.IsReadOnly { get { return default(bool); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class NTAccount : System.Security.Principal.IdentityReference
     {
         public NTAccount(string name) { }
@@ -59,8 +51,6 @@ namespace System.Security.Principal {
         public override string ToString() { return default(string); }
         public override System.Security.Principal.IdentityReference Translate(System.Type targetType) { return default(System.Security.Principal.IdentityReference); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class SecurityIdentifier : System.Security.Principal.IdentityReference, System.IComparable<System.Security.Principal.SecurityIdentifier>
     {
         public static readonly int MaxBinaryLength;
@@ -88,7 +78,6 @@ namespace System.Security.Principal {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TokenAccessLevels
     {
         AdjustDefault = 128,
@@ -105,8 +94,6 @@ namespace System.Security.Principal {
         Read = 131080,
         Write = 131296,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum WellKnownSidType
     {
         AccountAdministratorSid = 38,
@@ -172,8 +159,6 @@ namespace System.Security.Principal {
         WinBuiltinTerminalServerLicenseServersSid = 60,
         WorldSid = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum WindowsAccountType
     {
         Anonymous = 3,
@@ -181,8 +166,6 @@ namespace System.Security.Principal {
         Normal = 0,
         System = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum WindowsBuiltInRole
     {
         AccountOperator = 548,
@@ -195,8 +178,6 @@ namespace System.Security.Principal {
         SystemOperator = 549,
         User = 545,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsIdentity : System.Security.Claims.ClaimsIdentity, System.IDisposable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable, System.Security.Principal.IIdentity
     {
         public new const string DefaultIssuer = "AD AUTHORITY";
@@ -209,21 +190,16 @@ namespace System.Security.Principal {
         public WindowsIdentity(string sUserPrincipalName, string type) { }
         public sealed override string AuthenticationType { get { return default(string); } }
         public System.Security.Principal.IdentityReferenceCollection Groups { get { return default(System.Security.Principal.IdentityReferenceCollection); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Principal.TokenImpersonationLevel ImpersonationLevel { get { return default(System.Security.Principal.TokenImpersonationLevel); } }
         public virtual bool IsAnonymous { get { return default(bool); } }
         public override bool IsAuthenticated { get { return default(bool); } }
         public virtual bool IsGuest { get { return default(bool); } }
         public virtual bool IsSystem { get { return default(bool); } }
         public override string Name { get { return default(string); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Principal.SecurityIdentifier Owner { get { return default(System.Security.Principal.SecurityIdentifier); } }
         public virtual System.IntPtr Token { get { return default(System.IntPtr); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Principal.SecurityIdentifier User { get { return default(System.Security.Principal.SecurityIdentifier); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Dispose() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         protected virtual void Dispose(bool disposing) { }
         public static System.Security.Principal.WindowsIdentity GetAnonymous() { return default(System.Security.Principal.WindowsIdentity); }
         public static System.Security.Principal.WindowsIdentity GetCurrent() { return default(System.Security.Principal.WindowsIdentity); }
@@ -236,40 +212,31 @@ namespace System.Security.Principal {
         public override System.Security.Claims.ClaimsIdentity Clone() { return default(System.Security.Claims.ClaimsIdentity); }
         public static void RunImpersonated(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle safeAccessTokenHandle, System.Action action) { }
         public static T RunImpersonated<T>(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle safeAccessTokenHandle, System.Func<T> func) { return default(T); }
-        public Microsoft.Win32.SafeHandles.SafeAccessTokenHandle AccessToken { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
+        public Microsoft.Win32.SafeHandles.SafeAccessTokenHandle AccessToken { get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
         public override System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsImpersonationContext : System.IDisposable
     {
         internal WindowsImpersonationContext() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Dispose() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         protected virtual void Dispose(bool disposing) { }
         public void Undo() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WindowsPrincipal : System.Security.Claims.ClaimsPrincipal
     {
         public WindowsPrincipal(System.Security.Principal.WindowsIdentity ntIdentity) { }
         public override System.Security.Principal.IIdentity Identity { get { return default(System.Security.Principal.IIdentity); } }
         public virtual bool IsInRole(int rid) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual bool IsInRole(System.Security.Principal.SecurityIdentifier sid) { return default(bool); }
         public virtual bool IsInRole(System.Security.Principal.WindowsBuiltInRole role) { return default(bool); }
         public override bool IsInRole(string role) { return default(bool); }
     }
 } // end of System.Security.Principal
 namespace Microsoft.Win32.SafeHandles {
-  [System.Security.SecurityCriticalAttribute]
   public sealed partial class SafeAccessTokenHandle : System.Runtime.InteropServices.SafeHandle {
     public SafeAccessTokenHandle(System.IntPtr handle) : base (default(System.IntPtr), default(bool)) { }
-    public static Microsoft.Win32.SafeHandles.SafeAccessTokenHandle InvalidHandle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
-    [System.Security.SecurityCriticalAttribute]
+    public static Microsoft.Win32.SafeHandles.SafeAccessTokenHandle InvalidHandle { get { return default(Microsoft.Win32.SafeHandles.SafeAccessTokenHandle); } }
+    public override bool IsInvalid { get { return default(bool); } }
     protected override bool ReleaseHandle() { return default(bool); }
   }
 } // end of Microsoft.Win32.SafeHandles

@@ -55,7 +55,6 @@ namespace System.Runtime.Versioning {
     public static partial class VersioningHelper
     {
         public static string MakeVersionSafeName(string name, System.Runtime.Versioning.ResourceScope from, System.Runtime.Versioning.ResourceScope to) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static string MakeVersionSafeName(string name, System.Runtime.Versioning.ResourceScope from, System.Runtime.Versioning.ResourceScope to, System.Type type) { return default(string); }
     }
 } // end of System.Runtime.Versioning

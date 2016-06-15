@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.IO {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DriveInfo : System.Runtime.Serialization.ISerializable
     {
         public DriveInfo(string driveName) { }
@@ -18,8 +16,6 @@ namespace System.IO {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DriveNotFoundException : System.IO.IOException
     {
         public DriveNotFoundException() { }
@@ -27,8 +23,6 @@ namespace System.IO {
         public DriveNotFoundException(string message) { }
         public DriveNotFoundException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum DriveType
     {
         CDRom = 5,

@@ -104,18 +104,16 @@ namespace System.Diagnostics.Tracing {
         protected void WriteEvent(int eventId, string arg1, string arg2) { }
         protected void WriteEvent(int eventId, string arg1, string arg2, string arg3) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         protected unsafe void WriteEventCore(int eventId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data) { }
         protected void WriteEventWithRelatedActivityId(int eventId, System.Guid relatedActivityId, params object[] args) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Security.SecurityCriticalAttribute]
         protected unsafe void WriteEventWithRelatedActivityIdCore(int eventId, System.Guid* relatedActivityId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data) { }
         public void Write<T>(string eventName, System.Diagnostics.Tracing.EventSourceOptions options, T data) { }
         public void Write<T>(string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref System.Guid activityId, ref System.Guid relatedActivityId, ref T data) { }
         public void Write<T>(string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref T data) { }
         public void Write<T>(string eventName, T data) { }
         public System.Exception ConstructionException { get { return default(System.Exception); } }
-        public static System.Guid CurrentThreadActivityId { [System.Security.SecuritySafeCriticalAttribute]get { return default(System.Guid); } }
+        public static System.Guid CurrentThreadActivityId { get { return default(System.Guid); } }
         public System.Guid Guid { get { return default(System.Guid); } }
         public string Name { get { return default(string); } }
         public System.Diagnostics.Tracing.EventSourceSettings Settings { get { return default(System.Diagnostics.Tracing.EventSourceSettings); } }
@@ -248,7 +246,7 @@ namespace System.Diagnostics.Tracing {
   }
   public partial class EventWrittenEventArgs : System.EventArgs {
     internal EventWrittenEventArgs() { }
-    public System.Guid ActivityId { [System.Security.SecurityCriticalAttribute]get { return default(System.Guid); } }
+    public System.Guid ActivityId { get { return default(System.Guid); } }
     public System.Diagnostics.Tracing.EventChannel Channel { get { return default(System.Diagnostics.Tracing.EventChannel); } }
     public int EventId { get { return default(int); } }
     public string EventName { get { return default(string); } }
@@ -259,7 +257,7 @@ namespace System.Diagnostics.Tracing {
     public System.Diagnostics.Tracing.EventOpcode Opcode { get { return default(System.Diagnostics.Tracing.EventOpcode); } }
     public System.Collections.ObjectModel.ReadOnlyCollection<object> Payload { get { return default(System.Collections.ObjectModel.ReadOnlyCollection<object>); } }
     public System.Collections.ObjectModel.ReadOnlyCollection<string> PayloadNames { get { return default(System.Collections.ObjectModel.ReadOnlyCollection<string>); } }
-    public System.Guid RelatedActivityId { [System.Security.SecurityCriticalAttribute]get { return default(System.Guid); } }
+    public System.Guid RelatedActivityId { get { return default(System.Guid); } }
     public System.Diagnostics.Tracing.EventTags Tags { get { return default(System.Diagnostics.Tracing.EventTags); } }
     public System.Diagnostics.Tracing.EventTask Task { get { return default(System.Diagnostics.Tracing.EventTask); } }
     public byte Version { get { return default(byte); } }

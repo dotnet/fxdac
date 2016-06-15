@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.IO {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Directory
     {
         public static System.IO.DirectoryInfo CreateDirectory(string path) { return default(System.IO.DirectoryInfo); }
@@ -49,8 +47,6 @@ namespace System.IO {
         public static void SetLastWriteTime(string path, System.DateTime lastWriteTime) { }
         public static void SetLastWriteTimeUtc(string path, System.DateTime lastWriteTimeUtc) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DirectoryInfo : System.IO.FileSystemInfo
     {
         public DirectoryInfo(string path) { }
@@ -88,8 +84,6 @@ namespace System.IO {
         public void SetAccessControl(System.Security.AccessControl.DirectorySecurity directorySecurity) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class File
     {
         public static void AppendAllLines(string path, System.Collections.Generic.IEnumerable<string> contents) { }
@@ -145,8 +139,6 @@ namespace System.IO {
         public static void WriteAllText(string path, string contents, System.Text.Encoding encoding) { }
         public static System.IO.FileStream Create(string path, int bufferSize, System.IO.FileOptions options) { return default(System.IO.FileStream); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileInfo : System.IO.FileSystemInfo
     {
         public FileInfo(string fileName) { }
@@ -161,10 +153,8 @@ namespace System.IO {
         public System.IO.FileInfo CopyTo(string destFileName, bool overwrite) { return default(System.IO.FileInfo); }
         public System.IO.FileStream Create() { return default(System.IO.FileStream); }
         public System.IO.StreamWriter CreateText() { return default(System.IO.StreamWriter); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Decrypt() { }
         public override void Delete() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Encrypt() { }
         public void MoveTo(string destFileName) { }
         public System.IO.FileStream Open(System.IO.FileMode mode) { return default(System.IO.FileStream); }
@@ -175,8 +165,6 @@ namespace System.IO {
         public System.IO.FileStream OpenWrite() { return default(System.IO.FileStream); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class FileSystemInfo
     {
         protected string FullPath;
@@ -185,29 +173,23 @@ namespace System.IO {
         protected FileSystemInfo(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public System.IO.FileAttributes Attributes { get { return default(System.IO.FileAttributes); } set { } }
         public System.DateTime CreationTime { get { return default(System.DateTime); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.DateTime CreationTimeUtc { get { return default(System.DateTime); } set { } }
         public abstract bool Exists { get; }
         public string Extension { get { return default(string); } }
         public virtual string FullName { get { return default(string); } }
         public System.DateTime LastAccessTime { get { return default(System.DateTime); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.DateTime LastAccessTimeUtc { get { return default(System.DateTime); } set { } }
         public System.DateTime LastWriteTime { get { return default(System.DateTime); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.DateTime LastWriteTimeUtc { get { return default(System.DateTime); } set { } }
         public abstract string Name { get; }
         public abstract void Delete();
         public void Refresh() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SearchOption
     {
         AllDirectories = 1,
         TopDirectoryOnly = 0,
     }
-  [System.Security.SecurityCriticalAttribute]
   public static partial class FileSystemAclExtensions {
     public static System.Security.AccessControl.DirectorySecurity GetAccessControl(this System.IO.DirectoryInfo directoryInfo) { return default(System.Security.AccessControl.DirectorySecurity); }
     public static System.Security.AccessControl.DirectorySecurity GetAccessControl(this System.IO.DirectoryInfo directoryInfo, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.DirectorySecurity); }
@@ -326,7 +308,6 @@ namespace System.Security.AccessControl {
 namespace System.Security.Permissions {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileIOPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public FileIOPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }

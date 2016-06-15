@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class LocalDataStoreSlot
     {
         internal LocalDataStoreSlot() { }
@@ -9,7 +7,6 @@ namespace System {
     }
 } // end of System
 namespace System.Threading {
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class AbandonedMutexException : System.SystemException
     {
         public AbandonedMutexException() { }
@@ -22,8 +19,6 @@ namespace System.Threading {
         public System.Threading.Mutex Mutex { get { return default(System.Threading.Mutex); } }
         public int MutexIndex { get { return default(int); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ApartmentState
     {
         MTA = 1,
@@ -40,11 +35,8 @@ namespace System.Threading {
         public override int GetHashCode() { return default(int); }
         public static bool operator ==(System.Threading.AsyncFlowControl a, System.Threading.AsyncFlowControl b) { return default(bool); }
         public static bool operator !=(System.Threading.AsyncFlowControl a, System.Threading.AsyncFlowControl b) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public void Undo() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AutoResetEvent : System.Threading.EventWaitHandle
     {
         public AutoResetEvent(bool initialState) : base(default(bool), default(System.Threading.EventResetMode)) { }
@@ -54,18 +46,11 @@ namespace System.Threading {
     {
         internal CompressedStack() { }
         public static System.Threading.CompressedStack Capture() { return default(System.Threading.CompressedStack); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.CompressedStack CreateCopy() { return default(System.Threading.CompressedStack); }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Threading.CompressedStack GetCompressedStack() { return default(System.Threading.CompressedStack); }
-        [System.Security.SecurityCriticalAttribute]
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        [System.Security.SecurityCriticalAttribute]
         public static void Run(System.Threading.CompressedStack compressedStack, System.Threading.ContextCallback callback, object state) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Initial Count={InitialCount}, Current Count={CurrentCount}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class CountdownEvent : System.IDisposable
     {
         public CountdownEvent(int initialCount) { }
@@ -90,15 +75,11 @@ namespace System.Threading {
         public bool Wait(System.TimeSpan timeout) { return default(bool); }
         public bool Wait(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public enum EventResetMode
     {
         AutoReset = 0,
         ManualReset = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class EventWaitHandle : System.Threading.WaitHandle
     {
         public EventWaitHandle(bool initialState, System.Threading.EventResetMode mode) { }
@@ -113,58 +94,37 @@ namespace System.Threading {
     public sealed partial class ExecutionContext : System.IDisposable, System.Runtime.Serialization.ISerializable
     {
         internal ExecutionContext() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static System.Threading.ExecutionContext Capture() { return default(System.Threading.ExecutionContext); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public System.Threading.ExecutionContext CreateCopy() { return default(System.Threading.ExecutionContext); }
         public void Dispose() { }
-        [System.Security.SecurityCriticalAttribute]
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public static bool IsFlowSuppressed() { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public static void RestoreFlow() { }
-        [System.Security.SecurityCriticalAttribute]
         public static void Run(System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, object state) { }
-        [System.Security.SecurityCriticalAttribute]
         public static System.Threading.AsyncFlowControl SuppressFlow() { return default(System.Threading.AsyncFlowControl); }
     }
 
     public static partial class Interlocked
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Add(ref int location1, int value) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long Add(ref long location1, long value) { return default(long); }
         public static double CompareExchange(ref double location1, double value, double comparand) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int CompareExchange(ref int location1, int value, int comparand) { return default(int); }
         public static long CompareExchange(ref long location1, long value, long comparand) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr CompareExchange(ref System.IntPtr location1, System.IntPtr value, System.IntPtr comparand) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static object CompareExchange(ref object location1, object value, object comparand) { return default(object); }
         public static float CompareExchange(ref float location1, float value, float comparand) { return default(float); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static T CompareExchange<T>(ref T location1, T value, T comparand) where T : class { return default(T); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Decrement(ref int location) { return default(int); }
         public static long Decrement(ref long location) { return default(long); }
         public static double Exchange(ref double location1, double value) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Exchange(ref int location1, int value) { return default(int); }
         public static long Exchange(ref long location1, long value) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr Exchange(ref System.IntPtr location1, System.IntPtr value) { return default(System.IntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static object Exchange(ref object location1, object value) { return default(object); }
         public static float Exchange(ref float location1, float value) { return default(float); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public static T Exchange<T>(ref T location1, T value) where T : class { return default(T); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Increment(ref int location) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long Increment(ref long location) { return default(long); }
         public static void MemoryBarrier() { }
         public static long Read(ref long location) { return default(long); }
@@ -176,8 +136,6 @@ namespace System.Threading {
         public static T EnsureInitialized<T>(ref T target, ref bool initialized, ref object syncLock, System.Func<T> valueFactory) { return default(T); }
         public static T EnsureInitialized<T>(ref T target, System.Func<T> valueFactory) where T : class { return default(T); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct LockCookie
     {
@@ -194,15 +152,10 @@ namespace System.Threading {
         public LockRecursionException(string message) { }
         public LockRecursionException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ManualResetEvent : System.Threading.EventWaitHandle
     {
         public ManualResetEvent(bool initialState) : base(default(bool), default(System.Threading.EventResetMode)) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Set = {IsSet}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class ManualResetEventSlim : System.IDisposable
     {
         public ManualResetEventSlim() { }
@@ -222,13 +175,10 @@ namespace System.Threading {
         public bool Wait(System.TimeSpan timeout) { return default(bool); }
         public bool Wait(System.TimeSpan timeout, System.Threading.CancellationToken cancellationToken) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class Monitor
     {
         public static void Enter(object obj) { }
         public static void Enter(object obj, ref bool lockTaken) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Exit(object obj) { }
         public static bool IsEntered(object obj) { return default(bool); }
         public static void Pulse(object obj) { }
@@ -245,28 +195,21 @@ namespace System.Threading {
         public static bool Wait(object obj, System.TimeSpan timeout) { return default(bool); }
         public static bool Wait(object obj, System.TimeSpan timeout, bool exitContext) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Mutex : System.Threading.WaitHandle
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public Mutex() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public Mutex(bool initiallyOwned) { }
         public Mutex(bool initiallyOwned, string name) { }
         public Mutex(bool initiallyOwned, string name, out bool createdNew) { createdNew = default(bool); }
         public static System.Threading.Mutex OpenExisting(string name) { return default(System.Threading.Mutex); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public void ReleaseMutex() { }
         public static bool TryOpenExisting(string name, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReaderWriterLock : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
     {
         public ReaderWriterLock() { }
-        public bool IsReaderLockHeld { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
-        public bool IsWriterLockHeld { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
+        public bool IsReaderLockHeld { get { return default(bool); } }
+        public bool IsWriterLockHeld { get { return default(bool); } }
         public int WriterSeqNum { get { return default(int); } }
         public void AcquireReaderLock(int millisecondsTimeout) { }
         public void AcquireReaderLock(System.TimeSpan timeout) { }
@@ -276,17 +219,12 @@ namespace System.Threading {
         public void DowngradeFromWriterLock(ref System.Threading.LockCookie lockCookie) { }
         ~ReaderWriterLock() { }
         public System.Threading.LockCookie ReleaseLock() { return default(System.Threading.LockCookie); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void ReleaseReaderLock() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void ReleaseWriterLock() { }
         public void RestoreLock(ref System.Threading.LockCookie lockCookie) { }
         public System.Threading.LockCookie UpgradeToWriterLock(int millisecondsTimeout) { return default(System.Threading.LockCookie); }
         public System.Threading.LockCookie UpgradeToWriterLock(System.TimeSpan timeout) { return default(System.Threading.LockCookie); }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class SemaphoreFullException : System.SystemException
     {
         public SemaphoreFullException() { }
@@ -294,9 +232,6 @@ namespace System.Threading {
         public SemaphoreFullException(string message) { }
         public SemaphoreFullException(string message, System.Exception innerException) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Current Count = {m_currentCount}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class SemaphoreSlim : System.IDisposable
     {
         public SemaphoreSlim(int initialCount) { }
@@ -322,20 +257,15 @@ namespace System.Threading {
     }
 
     public delegate void SendOrPostCallback(object state);
-
-    [System.Diagnostics.DebuggerDisplayAttribute("IsHeld = {IsHeld}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SpinLock
     {
         public SpinLock(bool enableThreadOwnerTracking) { throw new System.NotImplementedException(); }
-        public bool IsHeld { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
-        public bool IsHeldByCurrentThread { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
-        public bool IsThreadOwnerTrackingEnabled { [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]get { return default(bool); } }
+        public bool IsHeld { get { return default(bool); } }
+        public bool IsHeldByCurrentThread { get { return default(bool); } }
+        public bool IsThreadOwnerTrackingEnabled { get { return default(bool); } }
         public void Enter(ref bool lockTaken) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void Exit() { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public void Exit(bool useMemoryBarrier) { }
         public void TryEnter(ref bool lockTaken) { }
         public void TryEnter(int millisecondsTimeout, ref bool lockTaken) { }
@@ -355,32 +285,23 @@ namespace System.Threading {
     public partial class SynchronizationContext
     {
         public SynchronizationContext() { }
-        public static System.Threading.SynchronizationContext Current { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Threading.SynchronizationContext); } }
+        public static System.Threading.SynchronizationContext Current { get { return default(System.Threading.SynchronizationContext); } }
         public virtual System.Threading.SynchronizationContext CreateCopy() { return default(System.Threading.SynchronizationContext); }
         public bool IsWaitNotificationRequired() { return default(bool); }
         public virtual void OperationCompleted() { }
         public virtual void OperationStarted() { }
         public virtual void Post(System.Threading.SendOrPostCallback d, object state) { }
         public virtual void Send(System.Threading.SendOrPostCallback d, object state) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
-        [System.Security.SecurityCriticalAttribute]
         public static void SetSynchronizationContext(System.Threading.SynchronizationContext syncContext) { }
-        [System.Security.SecurityCriticalAttribute]
         public static void SetThreadStaticContext(System.Threading.SynchronizationContext syncContext) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         protected void SetWaitNotificationRequired() { }
         [System.CLSCompliantAttribute(false)]
         [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
-        [System.Security.SecurityCriticalAttribute]
         public virtual int Wait(System.IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout) { return default(int); }
         [System.CLSCompliantAttribute(false)]
         [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
-        [System.Security.SecurityCriticalAttribute]
         protected static int WaitHelper(System.IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout) { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SynchronizationLockException : System.SystemException
     {
         public SynchronizationLockException() { }
@@ -388,14 +309,10 @@ namespace System.Threading {
         public SynchronizationLockException(string message) { }
         public SynchronizationLockException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ThreadAbortException : System.SystemException
     {
         internal ThreadAbortException() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ThreadInterruptedException : System.SystemException
     {
         public ThreadInterruptedException() { }
@@ -403,8 +320,6 @@ namespace System.Threading {
         public ThreadInterruptedException(string message) { }
         public ThreadInterruptedException(string message, System.Exception innerException) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("IsValueCreated={IsValueCreated}, Value={ValueForDebugDisplay}, Count={ValuesCountForDebugDisplay}")]
     public partial class ThreadLocal<T> : System.IDisposable
     {
         public ThreadLocal() { }
@@ -420,8 +335,6 @@ namespace System.Threading {
         ~ThreadLocal() { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ThreadPriority
     {
         AboveNormal = 3,
@@ -433,75 +346,45 @@ namespace System.Threading {
 
     public static partial class Volatile
     {
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static bool Read(ref bool location) { return default(bool); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static byte Read(ref byte location) { return default(byte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static double Read(ref double location) { return default(double); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static short Read(ref short location) { return default(short); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static int Read(ref int location) { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static long Read(ref long location) { return default(long); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.IntPtr Read(ref System.IntPtr location) { return default(System.IntPtr); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static sbyte Read(ref sbyte location) { return default(sbyte); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static float Read(ref float location) { return default(float); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ushort Read(ref ushort location) { return default(ushort); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static uint Read(ref uint location) { return default(uint); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static ulong Read(ref ulong location) { return default(ulong); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static System.UIntPtr Read(ref System.UIntPtr location) { return default(System.UIntPtr); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static T Read<T>(ref T location) where T : class { return default(T); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref bool location, bool value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref byte location, byte value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref double location, double value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref short location, short value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref int location, int value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref long location, long value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref System.IntPtr location, System.IntPtr value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref sbyte location, sbyte value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref float location, float value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref ushort location, ushort value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref uint location, uint value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref ulong location, ulong value) { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write(ref System.UIntPtr location, System.UIntPtr value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public static void Write<T>(ref T location, T value) where T : class { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class WaitHandleCannotBeOpenedException : System.ApplicationException
     {
         public WaitHandleCannotBeOpenedException() { }
@@ -509,8 +392,6 @@ namespace System.Threading {
         public WaitHandleCannotBeOpenedException(string message) { }
         public WaitHandleCannotBeOpenedException(string message, System.Exception innerException) { }
     }
-    [System.Diagnostics.DebuggerDisplayAttribute("Participant Count={ParticipantCount},Participants Remaining={ParticipantsRemaining}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Barrier : System.IDisposable
     {
         public Barrier(int participantCount) { }
@@ -536,13 +417,10 @@ namespace System.Threading {
     {
         public BarrierPostPhaseException() { }
         public BarrierPostPhaseException(System.Exception innerException) { }
-        [System.Security.SecurityCriticalAttribute]
         protected BarrierPostPhaseException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public BarrierPostPhaseException(string message) { }
         public BarrierPostPhaseException(string message, System.Exception innerException) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class Semaphore : System.Threading.WaitHandle
     {
         public Semaphore(int initialCount, int maximumCount) { }
@@ -550,9 +428,7 @@ namespace System.Threading {
         public Semaphore(int initialCount, int maximumCount, string name, out bool createdNew) { createdNew = default(bool); }
         public static System.Threading.Semaphore OpenExisting(string name) { return default(System.Threading.Semaphore); }
         [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public int Release() { return default(int); }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public int Release(int releaseCount) { return default(int); }
         public static bool TryOpenExisting(string name, out System.Threading.Semaphore result) { result = default(System.Threading.Semaphore); return default(bool); }
     }
@@ -592,7 +468,6 @@ namespace System.Threading {
     }
   public sealed partial class AsyncLocal<T> {
     public AsyncLocal() { }
-    [System.Security.SecurityCriticalAttribute]
     public AsyncLocal(System.Action<System.Threading.AsyncLocalValueChangedArgs<T>> valueChangedHandler) { }
     public T Value { get { return default(T); } set { } }
   }

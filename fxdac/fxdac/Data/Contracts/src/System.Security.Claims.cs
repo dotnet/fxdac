@@ -25,8 +25,6 @@ namespace System.Security.Claims {
         protected virtual void WriteTo(System.IO.BinaryWriter writer, byte[] userData) { }
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ClaimsIdentity : System.Security.Principal.IIdentity
     {
         public const string DefaultIssuer = "LOCAL AUTHORITY";
@@ -36,9 +34,7 @@ namespace System.Security.Claims {
         public ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims) { }
         public ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims, string authenticationType) { }
         public ClaimsIdentity(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims, string authenticationType, string nameType, string roleType) { }
-        [System.Security.SecurityCriticalAttribute]
         protected ClaimsIdentity(System.Runtime.Serialization.SerializationInfo info) { }
-        [System.Security.SecurityCriticalAttribute]
         protected ClaimsIdentity(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public ClaimsIdentity(System.Security.Principal.IIdentity identity) { }
         public ClaimsIdentity(System.Security.Principal.IIdentity identity, System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims) { }
@@ -47,29 +43,24 @@ namespace System.Security.Claims {
         public ClaimsIdentity(string authenticationType, string nameType, string roleType) { }
         public System.Security.Claims.ClaimsIdentity Actor { get { return default(System.Security.Claims.ClaimsIdentity); } set { } }
         public virtual string AuthenticationType { get { return default(string); } }
-        public object BootstrapContext { get { return default(object); } [System.Security.SecurityCriticalAttribute]set { } }
+        public object BootstrapContext { get { return default(object); } set { } }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); } }
         public virtual bool IsAuthenticated { get { return default(bool); } }
         public string Label { get { return default(string); } set { } }
         public virtual string Name { get { return default(string); } }
         public string NameClaimType { get { return default(string); } }
         public string RoleClaimType { get { return default(string); } }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void AddClaim(System.Security.Claims.Claim claim) { }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void AddClaims(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> claims) { }
         public virtual System.Security.Claims.ClaimsIdentity Clone() { return default(System.Security.Claims.ClaimsIdentity); }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> FindAll(System.Predicate<System.Security.Claims.Claim> match) { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> FindAll(string type) { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); }
         public virtual System.Security.Claims.Claim FindFirst(System.Predicate<System.Security.Claims.Claim> match) { return default(System.Security.Claims.Claim); }
         public virtual System.Security.Claims.Claim FindFirst(string type) { return default(System.Security.Claims.Claim); }
-        [System.Security.SecurityCriticalAttribute]
         protected virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual bool HasClaim(System.Predicate<System.Security.Claims.Claim> match) { return default(bool); }
         public virtual bool HasClaim(string type, string value) { return default(bool); }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void RemoveClaim(System.Security.Claims.Claim claim) { }
-        [System.Security.SecurityCriticalAttribute]
         public virtual bool TryRemoveClaim(System.Security.Claims.Claim claim) { return default(bool); }
         public ClaimsIdentity(System.IO.BinaryReader reader) { }
         protected ClaimsIdentity(System.Security.Claims.ClaimsIdentity other) { }
@@ -78,31 +69,25 @@ namespace System.Security.Claims {
         protected virtual void WriteTo(System.IO.BinaryWriter writer, byte[] userData) { }
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ClaimsPrincipal : System.Security.Principal.IPrincipal
     {
         public ClaimsPrincipal() { }
         public ClaimsPrincipal(System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity> identities) { }
-        [System.Security.SecurityCriticalAttribute]
         protected ClaimsPrincipal(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public ClaimsPrincipal(System.Security.Principal.IIdentity identity) { }
         public ClaimsPrincipal(System.Security.Principal.IPrincipal principal) { }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); } }
-        public static System.Func<System.Security.Claims.ClaimsPrincipal> ClaimsPrincipalSelector { get { return default(System.Func<System.Security.Claims.ClaimsPrincipal>); } [System.Security.SecurityCriticalAttribute]set { } }
+        public static System.Func<System.Security.Claims.ClaimsPrincipal> ClaimsPrincipalSelector { get { return default(System.Func<System.Security.Claims.ClaimsPrincipal>); } set { } }
         public static System.Security.Claims.ClaimsPrincipal Current { get { return default(System.Security.Claims.ClaimsPrincipal); } }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity> Identities { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity>); } }
         public virtual System.Security.Principal.IIdentity Identity { get { return default(System.Security.Principal.IIdentity); } }
-        public static System.Func<System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity>, System.Security.Claims.ClaimsIdentity> PrimaryIdentitySelector { get { return default(System.Func<System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity>, System.Security.Claims.ClaimsIdentity>); } [System.Security.SecurityCriticalAttribute]set { } }
-        [System.Security.SecurityCriticalAttribute]
+        public static System.Func<System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity>, System.Security.Claims.ClaimsIdentity> PrimaryIdentitySelector { get { return default(System.Func<System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity>, System.Security.Claims.ClaimsIdentity>); } set { } }
         public virtual void AddIdentities(System.Collections.Generic.IEnumerable<System.Security.Claims.ClaimsIdentity> identities) { }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void AddIdentity(System.Security.Claims.ClaimsIdentity identity) { }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> FindAll(System.Predicate<System.Security.Claims.Claim> match) { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); }
         public virtual System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> FindAll(string type) { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); }
         public virtual System.Security.Claims.Claim FindFirst(System.Predicate<System.Security.Claims.Claim> match) { return default(System.Security.Claims.Claim); }
         public virtual System.Security.Claims.Claim FindFirst(string type) { return default(System.Security.Claims.Claim); }
-        [System.Security.SecurityCriticalAttribute]
         protected virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual bool HasClaim(System.Predicate<System.Security.Claims.Claim> match) { return default(bool); }
         public virtual bool HasClaim(string type, string value) { return default(bool); }
@@ -114,8 +99,6 @@ namespace System.Security.Claims {
         protected virtual void WriteTo(System.IO.BinaryWriter writer, byte[] userData) { }
         protected virtual byte[] CustomSerializationData { get { return default(byte[]); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public static partial class ClaimTypes
     {
         public const string Actor = "http://schemas.xmlsoap.org/ws/2009/09/identity/claims/actor";
@@ -173,8 +156,6 @@ namespace System.Security.Claims {
         public const string WindowsUserClaim = "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsuserclaim";
         public const string X500DistinguishedName = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/x500distinguishedname";
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public static partial class ClaimValueTypes
     {
         public const string Base64Binary = "http://www.w3.org/2001/XMLSchema#base64Binary";
@@ -207,13 +188,10 @@ namespace System.Security.Claims {
     }
 } // end of System.Security.Claims
 namespace System.Security.Principal {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class GenericIdentity : System.Security.Claims.ClaimsIdentity
     {
         protected GenericIdentity(System.Security.Principal.GenericIdentity identity) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public GenericIdentity(string name) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public GenericIdentity(string name, string type) { }
         public override string AuthenticationType { get { return default(string); } }
         public override System.Collections.Generic.IEnumerable<System.Security.Claims.Claim> Claims { get { return default(System.Collections.Generic.IEnumerable<System.Security.Claims.Claim>); } }
@@ -221,8 +199,6 @@ namespace System.Security.Principal {
         public override string Name { get { return default(string); } }
         public override System.Security.Claims.ClaimsIdentity Clone() { return default(System.Security.Claims.ClaimsIdentity); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class GenericPrincipal : System.Security.Claims.ClaimsPrincipal
     {
         public GenericPrincipal(System.Security.Principal.IIdentity identity, string[] roles) { }

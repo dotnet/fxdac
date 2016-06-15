@@ -29,11 +29,16 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
 
         attributeName.StartsWith("System.Diagnostics.DebuggerTypeProxyAttribute") || // TODO: do we need this in reference assemblies?
         attributeName.StartsWith("System.Xml.Serialization.XmlIgnoreAttribute") || // TODO: decide what to do here. Switch.Attributes property has it applied.
+        attributeName.StartsWith("System.ComponentModel.TypeConverterAttribute") || // TODO: probably not all should be removed
+
+        // TODO: wes said to exclude these for now and review with Jan
+        attributeName.StartsWith("System.Security.SecurityCriticalAttribute") || 
+        attributeName.StartsWith("System.Security.SecuritySafeCriticalAttribute") ||
+        attributeName.StartsWith("System.Security.SecurityTransparentAttribute") ||
 
         attributeName.StartsWith("System.Security.Permission") || // CAS
-        attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttributeAttribute") || // CAS
         attributeName.StartsWith("System.Security.SuppressUnmanagedCodeSecurityAttribute") || // CAS
-        
+
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute") || // This attribute has been deprecated. Use DesignerSerializerAttribute instead.
 
         attributeName.StartsWith("System.ComponentModel.Design.Serialization.DesignerSerializerAttribute") ||
@@ -43,9 +48,19 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.ComponentModel.SRCategoryAttribute") ||
         attributeName.StartsWith("System.SRDescriptionAttribute") ||
 
+        // COM
+        attributeName.StartsWith("System.Runtime.InteropServices.ComVisibleAttribute") ||
+        attributeName.StartsWith("System.Runtime.InteropServices.ClassInterfaceAttribute") ||
         attributeName.StartsWith("System.Runtime.InteropServices.ComDefaultInterfaceAttribute") ||
 
-        attributeName.StartsWith("System.Runtime.CompilerServices.MethodImpl"); // wes said we don't add these to contracts
+        attributeName.StartsWith("System.Mono") ||
+
+        // Wes said that these should not be in contracts
+        attributeName.StartsWith("System.Runtime.ConstrainedExecution.ReliabilityContractAttribute") ||
+        attributeName.StartsWith("System.Runtime.CompilerServices.TypeForwardedFromAttribute") ||
+        attributeName.StartsWith("System.Diagnostics.DebuggerDisplayAttribute") ||
+        attributeName.StartsWith("System.Runtime.TargetedPatching") ||
+        attributeName.StartsWith("System.Runtime.CompilerServices.MethodImpl");
     });
 
     public static FxDependency[] s_AssemblyToTypeDependenciesToRemove = new FxDependency[] {
@@ -59,10 +74,6 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependency() { From="System.Runtime", To="System.Security.SecurityZone" },
         new FxDependency() { From="System.Runtime", To="System.Security.SecurityContextSource" },
         new FxDependency() { From="System.Runtime", To="System.MarshalByRefObject" },
-        new FxDependency() { From="System.Runtime", To="System.ComponentModel.TypeConverterAttribute" },
-
-        new FxDependency() { From="System.ComponentModel.Primitives", To="System.ComponentModel.TypeConverterAttribute" },
-        new FxDependency() { From="System.Net.Security", To="System.ComponentModel.TypeConverterAttribute" },
 
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleSecurity" },
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleRights" },
@@ -103,28 +114,20 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         _undesiredDependencies = s_AssemblyToTypeDependenciesToRemove.Where(dep => dep.From == _assembly).Select(dep => dep.To).ToList();
     }
 
-    public override SyntaxNode VisitAttributeList(AttributeListSyntax node)
+    public override SyntaxNode VisitAttributeList(AttributeListSyntax attributeList)
     {
-        var newNode = (AttributeListSyntax)base.VisitAttributeList(node);
-        if (newNode.Attributes.Count == 0) {
-            return null;
-        }
-        return newNode;
-    }
-
-    public override SyntaxNode VisitAttribute(AttributeSyntax node)
-    {
-        var name = node.Name.ToString();
-
-        if (s_ShouldRemoveAttributeApplication(name)) {
-            return null;
+        var nodesToRemove = attributeList.Attributes.Where(att => s_ShouldRemoveAttributeApplication(att.Name.ToString())).ToArray();
+        if (nodesToRemove.Length == attributeList.Attributes.Count) {
+            //Remove the entire attribute
+            return attributeList .RemoveNode(attributeList, SyntaxRemoveOptions.KeepNoTrivia);
+        } else {
+            //Remove just the matching ones recursively
+            foreach (var node in nodesToRemove)
+                return VisitAttributeList(attributeList.RemoveNode(node, SyntaxRemoveOptions.KeepNoTrivia));
         }
 
-        if (IsUndesiredDependency(name)) {
-            return null;
-        }
-
-        return node;
+        return
+            base.VisitAttributeList(attributeList);
     }
 
     private bool IsUndesiredDependency(string dependencyTypeName)

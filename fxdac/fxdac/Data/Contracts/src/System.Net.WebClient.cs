@@ -84,8 +84,6 @@ namespace System.Net {
     }
 
     public delegate void UploadValuesCompletedEventHandler(object sender, System.Net.UploadValuesCompletedEventArgs e);
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WebClient : System.ComponentModel.Component
     {
         public WebClient() { }
@@ -124,25 +122,19 @@ namespace System.Net {
         public byte[] DownloadData(System.Uri address) { return default(byte[]); }
         public void DownloadDataAsync(System.Uri address) { }
         public void DownloadDataAsync(System.Uri address, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> DownloadDataTaskAsync(string address) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> DownloadDataTaskAsync(System.Uri address) { return default(System.Threading.Tasks.Task<byte[]>); }
         public void DownloadFile(string address, string fileName) { }
         public void DownloadFile(System.Uri address, string fileName) { }
         public void DownloadFileAsync(System.Uri address, string fileName) { }
         public void DownloadFileAsync(System.Uri address, string fileName, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task DownloadFileTaskAsync(string address, string fileName) { return default(System.Threading.Tasks.Task); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task DownloadFileTaskAsync(System.Uri address, string fileName) { return default(System.Threading.Tasks.Task); }
         public string DownloadString(string address) { return default(string); }
         public string DownloadString(System.Uri address) { return default(string); }
         public void DownloadStringAsync(System.Uri address) { }
         public void DownloadStringAsync(System.Uri address, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> DownloadStringTaskAsync(string address) { return default(System.Threading.Tasks.Task<string>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> DownloadStringTaskAsync(System.Uri address) { return default(System.Threading.Tasks.Task<string>); }
         protected virtual System.Net.WebRequest GetWebRequest(System.Uri address) { return default(System.Net.WebRequest); }
         protected virtual System.Net.WebResponse GetWebResponse(System.Net.WebRequest request) { return default(System.Net.WebResponse); }
@@ -165,9 +157,7 @@ namespace System.Net {
         public System.IO.Stream OpenRead(System.Uri address) { return default(System.IO.Stream); }
         public void OpenReadAsync(System.Uri address) { }
         public void OpenReadAsync(System.Uri address, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenReadTaskAsync(string address) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenReadTaskAsync(System.Uri address) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
         public System.IO.Stream OpenWrite(string address) { return default(System.IO.Stream); }
         public System.IO.Stream OpenWrite(string address, string method) { return default(System.IO.Stream); }
@@ -176,13 +166,9 @@ namespace System.Net {
         public void OpenWriteAsync(System.Uri address) { }
         public void OpenWriteAsync(System.Uri address, string method) { }
         public void OpenWriteAsync(System.Uri address, string method, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenWriteTaskAsync(string address) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenWriteTaskAsync(string address, string method) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenWriteTaskAsync(System.Uri address) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<System.IO.Stream> OpenWriteTaskAsync(System.Uri address, string method) { return default(System.Threading.Tasks.Task<System.IO.Stream>); }
         public byte[] UploadData(string address, byte[] data) { return default(byte[]); }
         public byte[] UploadData(string address, string method, byte[] data) { return default(byte[]); }
@@ -191,13 +177,9 @@ namespace System.Net {
         public void UploadDataAsync(System.Uri address, byte[] data) { }
         public void UploadDataAsync(System.Uri address, string method, byte[] data) { }
         public void UploadDataAsync(System.Uri address, string method, byte[] data, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadDataTaskAsync(string address, byte[] data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadDataTaskAsync(string address, string method, byte[] data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadDataTaskAsync(System.Uri address, byte[] data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadDataTaskAsync(System.Uri address, string method, byte[] data) { return default(System.Threading.Tasks.Task<byte[]>); }
         public byte[] UploadFile(string address, string fileName) { return default(byte[]); }
         public byte[] UploadFile(string address, string method, string fileName) { return default(byte[]); }
@@ -206,13 +188,9 @@ namespace System.Net {
         public void UploadFileAsync(System.Uri address, string fileName) { }
         public void UploadFileAsync(System.Uri address, string method, string fileName) { }
         public void UploadFileAsync(System.Uri address, string method, string fileName, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadFileTaskAsync(string address, string fileName) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadFileTaskAsync(string address, string method, string fileName) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadFileTaskAsync(System.Uri address, string fileName) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadFileTaskAsync(System.Uri address, string method, string fileName) { return default(System.Threading.Tasks.Task<byte[]>); }
         public string UploadString(string address, string data) { return default(string); }
         public string UploadString(string address, string method, string data) { return default(string); }
@@ -221,13 +199,9 @@ namespace System.Net {
         public void UploadStringAsync(System.Uri address, string data) { }
         public void UploadStringAsync(System.Uri address, string method, string data) { }
         public void UploadStringAsync(System.Uri address, string method, string data, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> UploadStringTaskAsync(string address, string data) { return default(System.Threading.Tasks.Task<string>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> UploadStringTaskAsync(string address, string method, string data) { return default(System.Threading.Tasks.Task<string>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> UploadStringTaskAsync(System.Uri address, string data) { return default(System.Threading.Tasks.Task<string>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<string> UploadStringTaskAsync(System.Uri address, string method, string data) { return default(System.Threading.Tasks.Task<string>); }
         public byte[] UploadValues(string address, System.Collections.Specialized.NameValueCollection data) { return default(byte[]); }
         public byte[] UploadValues(string address, string method, System.Collections.Specialized.NameValueCollection data) { return default(byte[]); }
@@ -236,13 +210,9 @@ namespace System.Net {
         public void UploadValuesAsync(System.Uri address, System.Collections.Specialized.NameValueCollection data) { }
         public void UploadValuesAsync(System.Uri address, string method, System.Collections.Specialized.NameValueCollection data) { }
         public void UploadValuesAsync(System.Uri address, string method, System.Collections.Specialized.NameValueCollection data, object userToken) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadValuesTaskAsync(string address, System.Collections.Specialized.NameValueCollection data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadValuesTaskAsync(string address, string method, System.Collections.Specialized.NameValueCollection data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadValuesTaskAsync(System.Uri address, System.Collections.Specialized.NameValueCollection data) { return default(System.Threading.Tasks.Task<byte[]>); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Threading.Tasks.Task<byte[]> UploadValuesTaskAsync(System.Uri address, string method, System.Collections.Specialized.NameValueCollection data) { return default(System.Threading.Tasks.Task<byte[]>); }
     }
 

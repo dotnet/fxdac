@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Runtime.Serialization {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SerializationException : System.SystemException
     {
         public SerializationException() { }

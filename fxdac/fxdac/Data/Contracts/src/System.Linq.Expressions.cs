@@ -9,8 +9,6 @@ namespace System.Dynamic {
         public System.Dynamic.DynamicMetaObject FallbackBinaryOperation(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject arg) { return default(System.Dynamic.DynamicMetaObject); }
         public abstract System.Dynamic.DynamicMetaObject FallbackBinaryOperation(System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject arg, System.Dynamic.DynamicMetaObject errorSuggestion);
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("{DebugView}")]
     public abstract partial class BindingRestrictions
     {
         internal BindingRestrictions() { }

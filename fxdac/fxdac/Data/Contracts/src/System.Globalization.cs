@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TimeZone
     {
         protected TimeZone() { }
@@ -15,8 +13,6 @@ namespace System {
         public virtual System.DateTime ToLocalTime(System.DateTime time) { return default(System.DateTime); }
         public virtual System.DateTime ToUniversalTime(System.DateTime time) { return default(System.DateTime); }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public partial class TimeZoneNotFoundException : System.Exception
     {
         public TimeZoneNotFoundException() { }
@@ -38,8 +34,6 @@ namespace System.Globalization {
         public static System.Globalization.UnicodeCategory GetUnicodeCategory(char ch) { return default(System.Globalization.UnicodeCategory); }
         public static System.Globalization.UnicodeCategory GetUnicodeCategory(string s, int index) { return default(System.Globalization.UnicodeCategory); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DaylightTime
     {
         public DaylightTime(System.DateTime start, System.DateTime end, System.TimeSpan delta) { }
@@ -47,26 +41,20 @@ namespace System.Globalization {
         public System.DateTime End { get { return default(System.DateTime); } }
         public System.DateTime Start { get { return default(System.DateTime); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RegionInfo
     {
         public RegionInfo(int culture) { }
         public RegionInfo(string name) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual string CurrencyEnglishName { get { return default(string); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual string CurrencyNativeName { get { return default(string); } }
         public virtual string CurrencySymbol { get { return default(string); } }
         public static System.Globalization.RegionInfo CurrentRegion { get { return default(System.Globalization.RegionInfo); } }
         public virtual string DisplayName { get { return default(string); } }
         public virtual string EnglishName { get { return default(string); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual int GeoId { get { return default(int); } }
         public virtual bool IsMetric { get { return default(bool); } }
         public virtual string ISOCurrencySymbol { get { return default(string); } }
         public virtual string Name { get { return default(string); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual string NativeName { get { return default(string); } }
         public virtual string ThreeLetterISORegionName { get { return default(string); } }
         public virtual string ThreeLetterWindowsRegionName { get { return default(string); } }
@@ -87,17 +75,13 @@ namespace System.Globalization {
         public static bool operator ==(System.Globalization.SortVersion left, System.Globalization.SortVersion right) { return default(bool); }
         public static bool operator !=(System.Globalization.SortVersion left, System.Globalization.SortVersion right) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class StringInfo
     {
         public StringInfo() { }
         public StringInfo(string value) { }
         public int LengthInTextElements { get { return default(int); } }
         public string String { get { return default(string); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object value) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public static string GetNextTextElement(string str) { return default(string); }
         public static string GetNextTextElement(string str, int index) { return default(string); }
@@ -107,8 +91,6 @@ namespace System.Globalization {
         public string SubstringByTextElements(int startingTextElement) { return default(string); }
         public string SubstringByTextElements(int startingTextElement, int lengthInTextElements) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TextElementEnumerator : System.Collections.IEnumerator
     {
         internal TextElementEnumerator() { }

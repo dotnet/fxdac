@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SecurityElement
     {
         public SecurityElement(string tag) { }
@@ -13,7 +11,6 @@ namespace System.Security {
         public void AddAttribute(string name, string value) { }
         public void AddChild(System.Security.SecurityElement child) { }
         public string Attribute(string name) { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.SecurityElement Copy() { return default(System.Security.SecurityElement); }
         public bool Equal(System.Security.SecurityElement other) { return default(bool); }
         public static string Escape(string str) { return default(string); }
@@ -28,31 +25,23 @@ namespace System.Security {
     }
 } // end of System.Security
 namespace System.Security.Principal {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IIdentity
     {
         string AuthenticationType { get; }
         bool IsAuthenticated { get; }
         string Name { get; }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IPrincipal
     {
         System.Security.Principal.IIdentity Identity { get; }
         bool IsInRole(string role);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PrincipalPolicy
     {
         NoPrincipal = 1,
         UnauthenticatedPrincipal = 0,
         WindowsPrincipal = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TokenImpersonationLevel
     {
         Anonymous = 1,

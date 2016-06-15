@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Collections {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class BitArray : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
     {
         public BitArray(bool[] values) { }
@@ -33,7 +31,6 @@ namespace System.Collections {
     }
 
     [System.ObsoleteAttribute("Please use StringComparer instead.")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CaseInsensitiveHashCodeProvider : System.Collections.IHashCodeProvider
     {
         public CaseInsensitiveHashCodeProvider() { }
@@ -50,9 +47,6 @@ namespace System.Collections {
     }
 } // end of System.Collections
 namespace System.Collections.Generic {
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class LinkedList<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public LinkedList() { }
@@ -100,8 +94,6 @@ namespace System.Collections.Generic {
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public sealed partial class LinkedListNode<T>
     {
         public LinkedListNode(T value) { }
@@ -110,9 +102,6 @@ namespace System.Collections.Generic {
         public System.Collections.Generic.LinkedListNode<T> Previous { get { return default(System.Collections.Generic.LinkedListNode<T>); } }
         public T Value { get { return default(T); } set { } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Queue<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
         public Queue() { }
@@ -143,8 +132,6 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class SortedDictionary<TKey, TValue> : 
         System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, 
         System.Collections.Generic.IDictionary<TKey, TValue>, 
@@ -201,7 +188,6 @@ namespace System.Collections.Generic {
             public bool MoveNext() { return default(bool); }
             void System.Collections.IEnumerator.Reset() { }
         }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class KeyCollection : System.Collections.Generic.ICollection<TKey>, System.Collections.Generic.IEnumerable<TKey>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             public KeyCollection(System.Collections.Generic.SortedDictionary<TKey, TValue> dictionary) { }
@@ -228,7 +214,6 @@ namespace System.Collections.Generic {
                 void System.Collections.IEnumerator.Reset() { }
             }
         }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class ValueCollection : System.Collections.Generic.ICollection<TValue>, System.Collections.Generic.IEnumerable<TValue>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             public ValueCollection(System.Collections.Generic.SortedDictionary<TKey, TValue> dictionary) { }
@@ -258,9 +243,6 @@ namespace System.Collections.Generic {
         System.Collections.Generic.IEnumerable<TKey> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys { get { return default(System.Collections.Generic.IEnumerable<TKey>); } }
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class SortedList<TKey, TValue> : 
         System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, 
         System.Collections.Generic.IDictionary<TKey, TValue>, 
@@ -315,8 +297,6 @@ namespace System.Collections.Generic {
         System.Collections.Generic.IEnumerable<TKey> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Keys { get { return default(System.Collections.Generic.IEnumerable<TKey>); } }
         System.Collections.Generic.IEnumerable<TValue> System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>.Values { get { return default(System.Collections.Generic.IEnumerable<TValue>); } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class SortedSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public SortedSet() { }
@@ -344,11 +324,8 @@ namespace System.Collections.Generic {
         protected virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public virtual System.Collections.Generic.SortedSet<T> GetViewBetween(T lowerValue, T upperValue) { return default(System.Collections.Generic.SortedSet<T>); }
         public virtual void IntersectWith(System.Collections.Generic.IEnumerable<T> other) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool IsProperSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool IsProperSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool IsSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
         public bool IsSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
         protected virtual void OnDeserialization(object sender) { }
@@ -357,7 +334,6 @@ namespace System.Collections.Generic {
         public int RemoveWhere(System.Predicate<T> match) { return default(int); }
         [System.Diagnostics.DebuggerHiddenAttribute]
         public System.Collections.Generic.IEnumerable<T> Reverse() { return default(System.Collections.Generic.IEnumerable<T>); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public bool SetEquals(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
         public void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
         void System.Collections.Generic.ICollection<T>.Add(T item) { }
@@ -379,9 +355,6 @@ namespace System.Collections.Generic {
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
     {
         public Stack() { }
@@ -412,7 +385,6 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
         }
     }
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class HashSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public HashSet() { }
@@ -432,7 +404,6 @@ namespace System.Collections.Generic {
         public static System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>> CreateSetComparer() { return default(System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>>); }
         public void ExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
         public System.Collections.Generic.HashSet<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.HashSet<T>.Enumerator); }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public void IntersectWith(System.Collections.Generic.IEnumerable<T> other) { }
         public bool IsProperSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
