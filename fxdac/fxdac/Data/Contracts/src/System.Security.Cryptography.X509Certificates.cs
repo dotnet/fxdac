@@ -1,6 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security.Cryptography.X509Certificates {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class X509Certificate : System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public X509Certificate() { }
@@ -17,19 +16,15 @@ namespace System.Security.Cryptography.X509Certificates {
         public X509Certificate(string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
         public X509Certificate(string fileName, string password) { }
         public X509Certificate(string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.IntPtr Handle { get { return default(System.IntPtr); } }
         public string Issuer { get { return default(string); } }
         public string Subject { get { return default(string); } }
         public static System.Security.Cryptography.X509Certificates.X509Certificate CreateFromCertFile(string filename) { return default(System.Security.Cryptography.X509Certificates.X509Certificate); }
         public static System.Security.Cryptography.X509Certificates.X509Certificate CreateFromSignedFile(string filename) { return default(System.Security.Cryptography.X509Certificates.X509Certificate); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public virtual bool Equals(System.Security.Cryptography.X509Certificates.X509Certificate other) { return default(bool); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType) { return default(byte[]); }
         public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType, System.Security.SecureString password) { return default(byte[]); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password) { return default(byte[]); }
         protected static string FormatDate(System.DateTime date) { return default(string); }
         public virtual byte[] GetCertHash() { return default(byte[]); }
@@ -51,17 +46,12 @@ namespace System.Security.Cryptography.X509Certificates {
         public virtual string GetRawCertDataString() { return default(string); }
         public virtual byte[] GetSerialNumber() { return default(byte[]); }
         public virtual string GetSerialNumberString() { return default(string); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Import(byte[] rawData) { }
         public virtual void Import(byte[] rawData, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Import(byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Import(string fileName) { }
         public virtual void Import(string fileName, System.Security.SecureString password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Import(string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual void Reset() { }
         void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
@@ -70,8 +60,6 @@ namespace System.Security.Cryptography.X509Certificates {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum X509ContentType
     {
         Authenticode = 6,
@@ -85,7 +73,6 @@ namespace System.Security.Cryptography.X509Certificates {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum X509KeyStorageFlags
     {
         DefaultKeySet = 0,
@@ -598,7 +585,7 @@ namespace System.Security.Cryptography {
 namespace Microsoft.Win32.SafeHandles {
   public sealed partial class SafeX509ChainHandle : System.Runtime.InteropServices.SafeHandle {
     internal SafeX509ChainHandle() : base (default(System.IntPtr), default(bool)) { }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+    public override bool IsInvalid { get { return default(bool); } }
     protected override bool ReleaseHandle() { return default(bool); }
   }
 } // end of Microsoft.Win32.SafeHandles

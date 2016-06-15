@@ -1,6 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CodeAccessPermission : System.Security.IPermission, System.Security.ISecurityEncodable, System.Security.IStackWalk
     {
         protected CodeAccessPermission() { }
@@ -8,10 +7,8 @@ namespace System.Security {
         public abstract System.Security.IPermission Copy();
         public void Demand() { }
         public void Deny() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public abstract void FromXml(System.Security.SecurityElement elem);
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public abstract System.Security.IPermission Intersect(System.Security.IPermission target);
         public abstract bool IsSubsetOf(System.Security.IPermission target);
@@ -24,7 +21,6 @@ namespace System.Security {
         public abstract System.Security.SecurityElement ToXml();
         public virtual System.Security.IPermission Union(System.Security.IPermission other) { return default(System.Security.IPermission); }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HostProtectionException : System.SystemException
     {
         public HostProtectionException() { }
@@ -37,8 +33,6 @@ namespace System.Security {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HostSecurityManager
     {
         public HostSecurityManager() { }
@@ -51,7 +45,6 @@ namespace System.Security {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum HostSecurityManagerOptions
     {
         AllFlags = 31,
@@ -62,14 +55,10 @@ namespace System.Security {
         HostResolvePolicy = 16,
         None = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IEvidenceFactory
     {
         System.Security.Policy.Evidence Evidence { get; }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IPermission : System.Security.ISecurityEncodable
     {
         System.Security.IPermission Copy();
@@ -78,22 +67,16 @@ namespace System.Security {
         bool IsSubsetOf(System.Security.IPermission target);
         System.Security.IPermission Union(System.Security.IPermission target);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISecurityEncodable
     {
         void FromXml(System.Security.SecurityElement e);
         System.Security.SecurityElement ToXml();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISecurityPolicyEncodable
     {
         void FromXml(System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);
         System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IStackWalk
     {
         void Assert();
@@ -101,8 +84,6 @@ namespace System.Security {
         void Deny();
         void PermitOnly();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NamedPermissionSet : System.Security.PermissionSet
     {
         public NamedPermissionSet(System.Security.NamedPermissionSet permSet) : base(default(System.Security.Permissions.PermissionState)) { }
@@ -113,14 +94,11 @@ namespace System.Security {
         public string Name { get { return default(string); } set { } }
         public override System.Security.PermissionSet Copy() { return default(System.Security.PermissionSet); }
         public System.Security.NamedPermissionSet Copy(string name) { return default(System.Security.NamedPermissionSet); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public override void FromXml(System.Security.SecurityElement et) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public override System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
     }
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PermissionSet : System.Collections.ICollection, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Security.ISecurityEncodable, System.Security.IStackWalk
     {
         public PermissionSet(System.Security.Permissions.PermissionState state) { }
@@ -137,11 +115,9 @@ namespace System.Security {
         public virtual void CopyTo(System.Array array, int index) { }
         public void Demand() { }
         public void Deny() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public virtual void FromXml(System.Security.SecurityElement et) { }
         public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public System.Security.IPermission GetPermission(System.Type permClass) { return default(System.Security.IPermission); }
         public System.Security.PermissionSet Intersect(System.Security.PermissionSet other) { return default(System.Security.PermissionSet); }
@@ -157,8 +133,6 @@ namespace System.Security {
         public virtual System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.PermissionSet Union(System.Security.PermissionSet other) { return default(System.Security.PermissionSet); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PolicyLevelType
     {
         AppDomain = 3,
@@ -193,8 +167,6 @@ namespace System.Security {
         Everything = 1,
         Explicit = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class SecurityManager
     {
         [System.ObsoleteAttribute]
@@ -234,8 +206,6 @@ namespace System.Security {
         public abstract void EnsureState();
         public bool IsStateAvailable() { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SecurityZone
     {
         Internet = 3,
@@ -245,8 +215,6 @@ namespace System.Security {
         Trusted = 2,
         Untrusted = 4,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class XmlSyntaxException : System.SystemException
     {
         public XmlSyntaxException() { }
@@ -258,13 +226,10 @@ namespace System.Security {
 } // end of System.Security
 namespace System.Security.Permissions {
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CodeAccessSecurityAttribute : System.Security.Permissions.SecurityAttribute
     {
         protected CodeAccessSecurityAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class EnvironmentPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public EnvironmentPermission(System.Security.Permissions.EnvironmentPermissionAccess flag, string pathList) { }
@@ -282,7 +247,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum EnvironmentPermissionAccess
     {
         AllAccess = 3,
@@ -292,7 +256,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class EnvironmentPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public EnvironmentPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -301,8 +264,6 @@ namespace System.Security.Permissions {
         public string Write { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileDialogPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public FileDialogPermission(System.Security.Permissions.FileDialogPermissionAccess access) { }
@@ -318,7 +279,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileDialogPermissionAccess
     {
         None = 0,
@@ -328,7 +288,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileDialogPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public FileDialogPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -336,8 +295,6 @@ namespace System.Security.Permissions {
         public bool Save { get { return default(bool); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileIOPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public FileIOPermission(System.Security.Permissions.FileIOPermissionAccess access, System.Security.AccessControl.AccessControlActions control, string path) { }
@@ -350,10 +307,8 @@ namespace System.Security.Permissions {
         public void AddPathList(System.Security.Permissions.FileIOPermissionAccess access, string path) { }
         public void AddPathList(System.Security.Permissions.FileIOPermissionAccess access, string[] pathList) { }
         public override System.Security.IPermission Copy() { return default(System.Security.IPermission); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public override void FromXml(System.Security.SecurityElement esd) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public string[] GetPathList(System.Security.Permissions.FileIOPermissionAccess access) { return default(string[]); }
         public override System.Security.IPermission Intersect(System.Security.IPermission target) { return default(System.Security.IPermission); }
@@ -366,7 +321,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileIOPermissionAccess
     {
         AllAccess = 15,
@@ -376,8 +330,6 @@ namespace System.Security.Permissions {
         Read = 1,
         Write = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class GacIdentityPermission : System.Security.CodeAccessPermission
     {
         public GacIdentityPermission() { }
@@ -391,7 +343,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class GacIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public GacIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -399,7 +350,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(4205), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class HostProtectionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public HostProtectionAttribute() : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -408,7 +358,6 @@ namespace System.Security.Permissions {
         public bool ExternalThreading { get { return default(bool); } set { } }
         public bool MayLeakOnAbort { get { return default(bool); } set { } }
         public System.Security.Permissions.HostProtectionResource Resources { get { return default(System.Security.Permissions.HostProtectionResource); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public bool SecurityInfrastructure { get { return default(bool); } set { } }
         public bool SelfAffectingProcessMgmt { get { return default(bool); } set { } }
         public bool SelfAffectingThreading { get { return default(bool); } set { } }
@@ -419,7 +368,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum HostProtectionResource
     {
         All = 511,
@@ -434,15 +382,12 @@ namespace System.Security.Permissions {
         Synchronization = 1,
         UI = 128,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IUnrestrictedPermission
     {
         bool IsUnrestricted();
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PermissionSetAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public PermissionSetAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -454,15 +399,11 @@ namespace System.Security.Permissions {
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
         public System.Security.PermissionSet CreatePermissionSet() { return default(System.Security.PermissionSet); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PermissionState
     {
         None = 0,
         Unrestricted = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PrincipalPermission : System.Security.IPermission, System.Security.ISecurityEncodable, System.Security.Permissions.IUnrestrictedPermission
     {
         public PrincipalPermission(System.Security.Permissions.PermissionState state) { }
@@ -470,10 +411,8 @@ namespace System.Security.Permissions {
         public PrincipalPermission(string name, string role, bool isAuthenticated) { }
         public System.Security.IPermission Copy() { return default(System.Security.IPermission); }
         public void Demand() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public void FromXml(System.Security.SecurityElement elem) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public System.Security.IPermission Intersect(System.Security.IPermission target) { return default(System.Security.IPermission); }
         public bool IsSubsetOf(System.Security.IPermission target) { return default(bool); }
@@ -484,7 +423,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(68), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PrincipalPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public PrincipalPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -493,8 +431,6 @@ namespace System.Security.Permissions {
         public string Role { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PublisherIdentityPermission : System.Security.CodeAccessPermission
     {
         public PublisherIdentityPermission(System.Security.Cryptography.X509Certificates.X509Certificate certificate) { }
@@ -509,7 +445,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PublisherIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public PublisherIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -518,8 +453,6 @@ namespace System.Security.Permissions {
         public string X509Certificate { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReflectionPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public ReflectionPermission(System.Security.Permissions.PermissionState state) { }
@@ -535,7 +468,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ReflectionPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public ReflectionPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -550,7 +482,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ReflectionPermissionFlag
     {
         [System.ObsoleteAttribute]
@@ -559,13 +490,10 @@ namespace System.Security.Permissions {
         NoFlags = 0,
         [System.ObsoleteAttribute]
         ReflectionEmit = 4,
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         RestrictedMemberAccess = 8,
         [System.ObsoleteAttribute("not used anymore")]
         TypeInformation = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class RegistryPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public RegistryPermission(System.Security.Permissions.PermissionState state) { }
@@ -585,7 +513,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum RegistryPermissionAccess
     {
         AllAccess = 7,
@@ -596,7 +523,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class RegistryPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public RegistryPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -610,8 +536,6 @@ namespace System.Security.Permissions {
         public string Write { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SecurityAction
     {
         Assert = 3,
@@ -630,7 +554,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SecurityAttribute : System.Attribute
     {
         protected SecurityAttribute(System.Security.Permissions.SecurityAction action) { }
@@ -638,8 +561,6 @@ namespace System.Security.Permissions {
         public bool Unrestricted { get { return default(bool); } set { } }
         public abstract System.Security.IPermission CreatePermission();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SecurityPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public SecurityPermission(System.Security.Permissions.PermissionState state) { }
@@ -655,7 +576,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SecurityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public SecurityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -669,7 +589,6 @@ namespace System.Security.Permissions {
         public bool ControlThread { get { return default(bool); } set { } }
         public bool Execution { get { return default(bool); } set { } }
         public System.Security.Permissions.SecurityPermissionFlag Flags { get { return default(System.Security.Permissions.SecurityPermissionFlag); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public bool Infrastructure { get { return default(bool); } set { } }
         public bool RemotingConfiguration { get { return default(bool); } set { } }
         public bool SerializationFormatter { get { return default(bool); } set { } }
@@ -679,7 +598,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SecurityPermissionFlag
     {
         AllFlags = 16383,
@@ -699,8 +617,6 @@ namespace System.Security.Permissions {
         SkipVerification = 4,
         UnmanagedCode = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SiteIdentityPermission : System.Security.CodeAccessPermission
     {
         public SiteIdentityPermission(System.Security.Permissions.PermissionState state) { }
@@ -715,15 +631,12 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SiteIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public SiteIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
         public string Site { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StrongNameIdentityPermission : System.Security.CodeAccessPermission
     {
         public StrongNameIdentityPermission(System.Security.Permissions.PermissionState state) { }
@@ -740,7 +653,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StrongNameIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public StrongNameIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -749,8 +661,6 @@ namespace System.Security.Permissions {
         public string Version { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StrongNamePublicKeyBlob
     {
         public StrongNamePublicKeyBlob(byte[] publicKey) { }
@@ -758,8 +668,6 @@ namespace System.Security.Permissions {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UIPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public UIPermission(System.Security.Permissions.PermissionState state) { }
@@ -778,7 +686,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UIPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public UIPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -786,16 +693,12 @@ namespace System.Security.Permissions {
         public System.Security.Permissions.UIPermissionWindow Window { get { return default(System.Security.Permissions.UIPermissionWindow); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UIPermissionClipboard
     {
         AllClipboard = 2,
         NoClipboard = 0,
         OwnClipboard = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UIPermissionWindow
     {
         AllWindows = 3,
@@ -803,8 +706,6 @@ namespace System.Security.Permissions {
         SafeSubWindows = 1,
         SafeTopLevelWindows = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UrlIdentityPermission : System.Security.CodeAccessPermission
     {
         public UrlIdentityPermission(System.Security.Permissions.PermissionState state) { }
@@ -819,15 +720,12 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UrlIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public UrlIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
         public string Url { get { return default(string); } set { } }
         public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ZoneIdentityPermission : System.Security.CodeAccessPermission
     {
         public ZoneIdentityPermission(System.Security.Permissions.PermissionState state) { }
@@ -842,7 +740,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ZoneIdentityPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public ZoneIdentityPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -871,7 +768,6 @@ namespace System.Security.Permissions {
     }
 } // end of System.Security.Permissions
 namespace System.Security.Policy {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class AllMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public AllMembershipCondition() { }
@@ -885,8 +781,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationDirectory : System.Security.Policy.EvidenceBase
     {
         public ApplicationDirectory(string name) { }
@@ -896,8 +790,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationDirectoryMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public ApplicationDirectoryMembershipCondition() { }
@@ -911,8 +803,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationSecurityInfo
     {
         public ApplicationSecurityInfo(System.ActivationContext activationContext) { }
@@ -921,16 +811,12 @@ namespace System.Security.Policy {
         public System.Security.PermissionSet DefaultRequestSet { get { return default(System.Security.PermissionSet); } set { } }
         public System.ApplicationId DeploymentId { get { return default(System.ApplicationId); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public static partial class ApplicationSecurityManager
     {
         public static System.Security.Policy.IApplicationTrustManager ApplicationTrustManager { get { return default(System.Security.Policy.IApplicationTrustManager); } }
         public static System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts { get { return default(System.Security.Policy.ApplicationTrustCollection); } }
         public static bool DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationTrust : System.Security.Policy.EvidenceBase, System.Security.ISecurityEncodable
     {
         public ApplicationTrust() { }
@@ -945,8 +831,6 @@ namespace System.Security.Policy {
         public void FromXml(System.Security.SecurityElement element) { }
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationTrustCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         internal ApplicationTrustCollection() { }
@@ -969,8 +853,6 @@ namespace System.Security.Policy {
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ApplicationTrustEnumerator : System.Collections.IEnumerator
     {
         internal ApplicationTrustEnumerator() { }
@@ -979,15 +861,11 @@ namespace System.Security.Policy {
         public bool MoveNext() { return default(bool); }
         public void Reset() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum ApplicationVersionMatch
     {
         MatchAllVersions = 1,
         MatchExactVersion = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CodeConnectAccess
     {
         public static readonly string AnyScheme;
@@ -1002,8 +880,6 @@ namespace System.Security.Policy {
         public override bool Equals(object o) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CodeGroup
     {
         protected CodeGroup(System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy) { }
@@ -1030,8 +906,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FileCodeGroup : System.Security.Policy.CodeGroup
     {
         public FileCodeGroup(System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Permissions.FileIOPermissionAccess access) : base(default(System.Security.Policy.IMembershipCondition), default(System.Security.Policy.PolicyStatement)) { }
@@ -1046,8 +920,6 @@ namespace System.Security.Policy {
         public override System.Security.Policy.PolicyStatement Resolve(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.PolicyStatement); }
         public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.CodeGroup); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class FirstMatchCodeGroup : System.Security.Policy.CodeGroup
     {
         public FirstMatchCodeGroup(System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy) : base(default(System.Security.Policy.IMembershipCondition), default(System.Security.Policy.PolicyStatement)) { }
@@ -1056,8 +928,6 @@ namespace System.Security.Policy {
         public override System.Security.Policy.PolicyStatement Resolve(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.PolicyStatement); }
         public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.CodeGroup); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class GacInstalled : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public GacInstalled() { }
@@ -1067,8 +937,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class GacMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public GacMembershipCondition() { }
@@ -1082,8 +950,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Hash : System.Security.Policy.EvidenceBase, System.Runtime.Serialization.ISerializable
     {
         public Hash(System.Reflection.Assembly assembly) { }
@@ -1095,8 +961,6 @@ namespace System.Security.Policy {
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class HashMembershipCondition : System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable, System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public HashMembershipCondition(System.Security.Cryptography.HashAlgorithm hashAlg, byte[] value) { }
@@ -1114,20 +978,14 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IApplicationTrustManager : System.Security.ISecurityEncodable
     {
         System.Security.Policy.ApplicationTrust DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IIdentityPermissionFactory
     {
         System.Security.IPermission CreateIdentityPermission(System.Security.Policy.Evidence evidence);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface IMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable
     {
         bool Check(System.Security.Policy.Evidence evidence);
@@ -1135,8 +993,6 @@ namespace System.Security.Policy {
         bool Equals(object obj);
         string ToString();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NetCodeGroup : System.Security.Policy.CodeGroup
     {
         public static readonly string AbsentOriginScheme;
@@ -1156,8 +1012,6 @@ namespace System.Security.Policy {
         public override System.Security.Policy.PolicyStatement Resolve(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.PolicyStatement); }
         public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.CodeGroup); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PermissionRequestEvidence : System.Security.Policy.EvidenceBase
     {
         public PermissionRequestEvidence(System.Security.PermissionSet request, System.Security.PermissionSet optional, System.Security.PermissionSet denied) { }
@@ -1167,16 +1021,12 @@ namespace System.Security.Policy {
         public System.Security.Policy.PermissionRequestEvidence Copy() { return default(System.Security.Policy.PermissionRequestEvidence); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PolicyException :System.SystemException    {
         public PolicyException() { }
         protected PolicyException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public PolicyException(string message) { }
         public PolicyException(string message, System.Exception exception) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PolicyLevel
     {
         internal PolicyLevel() { }
@@ -1186,7 +1036,6 @@ namespace System.Security.Policy {
         public System.Collections.IList NamedPermissionSets { get { return default(System.Collections.IList); } }
         public System.Security.Policy.CodeGroup RootCodeGroup { get { return default(System.Security.Policy.CodeGroup); } set { } }
         public string StoreLocation { get { return default(string); } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.PolicyLevelType Type { get { return default(System.Security.PolicyLevelType); } }
         [System.ObsoleteAttribute("All GACed assemblies are now fully trusted and all permissions now succeed on fully trusted code.")]
         public void AddFullTrustAssembly(System.Security.Policy.StrongName sn) { }
@@ -1209,8 +1058,6 @@ namespace System.Security.Policy {
         public System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.CodeGroup); }
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PolicyStatement : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable
     {
         public PolicyStatement(System.Security.PermissionSet permSet) { }
@@ -1219,18 +1066,15 @@ namespace System.Security.Policy {
         public string AttributeString { get { return default(string); } }
         public System.Security.PermissionSet PermissionSet { get { return default(System.Security.PermissionSet); } set { } }
         public System.Security.Policy.PolicyStatement Copy() { return default(System.Security.Policy.PolicyStatement); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override bool Equals(object obj) { return default(bool); }
         public void FromXml(System.Security.SecurityElement et) { }
         public void FromXml(System.Security.SecurityElement et, System.Security.Policy.PolicyLevel level) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public override int GetHashCode() { return default(int); }
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum PolicyStatementAttribute
     {
         All = 3,
@@ -1238,8 +1082,6 @@ namespace System.Security.Policy {
         LevelFinal = 2,
         Nothing = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Publisher : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public Publisher(System.Security.Cryptography.X509Certificates.X509Certificate cert) { }
@@ -1250,8 +1092,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class PublisherMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public PublisherMembershipCondition(System.Security.Cryptography.X509Certificates.X509Certificate certificate) { }
@@ -1266,8 +1106,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Site : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public Site(string name) { }
@@ -1279,8 +1117,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SiteMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public SiteMembershipCondition(string site) { }
@@ -1295,8 +1131,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StrongName : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public StrongName(System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, System.Version version) { }
@@ -1309,8 +1143,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class StrongNameMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public StrongNameMembershipCondition(System.Security.Permissions.StrongNamePublicKeyBlob blob, string name, System.Version version) { }
@@ -1327,8 +1159,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TrustManagerContext
     {
         public TrustManagerContext() { }
@@ -1340,16 +1170,12 @@ namespace System.Security.Policy {
         public virtual System.ApplicationIdentity PreviousApplicationIdentity { get { return default(System.ApplicationIdentity); } set { } }
         public virtual System.Security.Policy.TrustManagerUIContext UIContext { get { return default(System.Security.Policy.TrustManagerUIContext); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum TrustManagerUIContext
     {
         Install = 0,
         Run = 2,
         Upgrade = 1,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UnionCodeGroup : System.Security.Policy.CodeGroup
     {
         public UnionCodeGroup(System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy) : base(default(System.Security.Policy.IMembershipCondition), default(System.Security.Policy.PolicyStatement)) { }
@@ -1358,8 +1184,6 @@ namespace System.Security.Policy {
         public override System.Security.Policy.PolicyStatement Resolve(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.PolicyStatement); }
         public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(System.Security.Policy.Evidence evidence) { return default(System.Security.Policy.CodeGroup); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Url : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public Url(string name) { }
@@ -1370,8 +1194,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class UrlMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public UrlMembershipCondition(string url) { }
@@ -1386,8 +1208,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Zone : System.Security.Policy.EvidenceBase, System.Security.Policy.IIdentityPermissionFactory
     {
         public Zone(System.Security.SecurityZone zone) { }
@@ -1399,8 +1219,6 @@ namespace System.Security.Policy {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class ZoneMembershipCondition : System.Security.ISecurityEncodable, System.Security.ISecurityPolicyEncodable, System.Security.Policy.IMembershipCondition
     {
         public ZoneMembershipCondition(System.Security.SecurityZone zone) { }

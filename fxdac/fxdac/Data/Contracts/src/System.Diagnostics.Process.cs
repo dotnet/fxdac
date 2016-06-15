@@ -65,37 +65,31 @@ namespace System.Diagnostics {
         [System.ObsoleteAttribute("Use NonpagedSystemMemorySize64")]
         public int NonpagedSystemMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The number of bytes that are not pageable.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long NonpagedSystemMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The number of bytes that are paged.")]
         [System.ObsoleteAttribute("Use PagedMemorySize64")]
         public int PagedMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The number of bytes that are paged.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PagedMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of paged system memory in bytes.")]
         [System.ObsoleteAttribute("Use PagedSystemMemorySize64")]
         public int PagedSystemMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of paged system memory in bytes.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PagedSystemMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of paged memory used by this process.")]
         [System.ObsoleteAttribute("Use PeakPagedMemorySize64")]
         public int PeakPagedMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of paged memory used by this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PeakPagedMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of virtual memory used by this process.")]
         [System.ObsoleteAttribute("Use PeakVirtualMemorySize64")]
         public int PeakVirtualMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of virtual memory used by this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PeakVirtualMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of system memory used by this process.")]
         [System.ObsoleteAttribute("Use PeakWorkingSet64")]
         public int PeakWorkingSet { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The maximum amount of system memory used by this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PeakWorkingSet64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("Process will be of higher priority while it is actively used.")]
         public bool PriorityBoostEnabled { get { return default(bool); } set { } }
@@ -105,7 +99,6 @@ namespace System.Diagnostics {
         [System.ObsoleteAttribute("Use PrivateMemorySize64")]
         public int PrivateMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of memory exclusively used by this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long PrivateMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of processing time spent in the OS core for this process.")]
         public System.TimeSpan PrivilegedProcessorTime { get { return default(System.TimeSpan); } }
@@ -145,13 +138,11 @@ namespace System.Diagnostics {
         [System.ObsoleteAttribute("Use VirtualMemorySize64")]
         public int VirtualMemorySize { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of virtual memory currently used for this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long VirtualMemorySize64 { get { return default(long); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of physical memory currently used for this process.")]
         [System.ObsoleteAttribute("Use WorkingSet64")]
         public int WorkingSet { get { return default(int); } }
         [System.Diagnostics.MonitoringDescriptionAttribute("The amount of physical memory currently used for this process.")]
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public long WorkingSet64 { get { return default(long); } }
         [System.ComponentModel.BrowsableAttribute(true)]
         [System.Diagnostics.MonitoringDescriptionAttribute("Raised when it receives error data")]
@@ -162,13 +153,9 @@ namespace System.Diagnostics {
         [System.ComponentModel.BrowsableAttribute(true)]
         [System.Diagnostics.MonitoringDescriptionAttribute("Raised when it receives output data")]
         public event System.Diagnostics.DataReceivedEventHandler OutputDataReceived { add { } remove { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void BeginErrorReadLine() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void BeginOutputReadLine() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void CancelErrorRead() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void CancelOutputRead() { }
         public void Close() { }
         public bool CloseMainWindow() { return default(bool); }
@@ -238,8 +225,6 @@ namespace System.Diagnostics {
         Normal = 32,
         RealTime = 256,
     }
-
-    [System.ComponentModel.TypeConverterAttribute(typeof(System.ComponentModel.ExpandableObjectConverter))]
     public sealed partial class ProcessStartInfo
     {
         public ProcessStartInfo() { }
@@ -247,7 +232,6 @@ namespace System.Diagnostics {
         public ProcessStartInfo(string filename, string arguments) { }
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
-        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("Command line agruments for this process.")]
         public string Arguments { get { return default(string); } set { } }
         [System.ComponentModel.DefaultValueAttribute(false)]
@@ -270,7 +254,6 @@ namespace System.Diagnostics {
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.EditorAttribute("System.Diagnostics.Design.StartFileNameEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
-        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The name of the resource to start this process.")]
         public string FileName { get { return default(string); } set { } }
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
@@ -298,7 +281,6 @@ namespace System.Diagnostics {
         public bool UseShellExecute { get { return default(bool); } set { } }
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
-        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.VerbConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The verb to apply to a used document.")]
         public string Verb { get { return default(string); } set { } }
         [System.ComponentModel.BrowsableAttribute(false)]
@@ -310,7 +292,6 @@ namespace System.Diagnostics {
         [System.ComponentModel.DefaultValueAttribute("")]
         [System.ComponentModel.EditorAttribute("System.Diagnostics.Design.WorkingDirectoryEditor, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.ComponentModel.NotifyParentPropertyAttribute(true)]
-        [System.ComponentModel.TypeConverterAttribute("System.Diagnostics.Design.StringValueConverter, System.Design, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
         [System.Diagnostics.MonitoringDescriptionAttribute("The initial directory for this process.")]
         public string WorkingDirectory { get { return default(string); } set { } }
         [System.ComponentModel.DefaultValueAttribute(null)]
@@ -414,10 +395,9 @@ namespace System.Diagnostics {
     }
 } // end of System.Diagnostics
 namespace Microsoft.Win32.SafeHandles {
-  [System.Security.SecurityCriticalAttribute]
   public sealed partial class SafeProcessHandle : System.Runtime.InteropServices.SafeHandle {
     public SafeProcessHandle(System.IntPtr existingHandle, bool ownsHandle) : base (default(System.IntPtr), default(bool)) { }
-    public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+    public override bool IsInvalid { get { return default(bool); } }
     protected override bool ReleaseHandle() { return default(bool); }
   }
 } // end of Microsoft.Win32.SafeHandles

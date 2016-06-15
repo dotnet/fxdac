@@ -1,6 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security.Cryptography {
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("System.Core, Version=2.0.5.0, Culture=Neutral, PublicKeyToken=7cec85d7bea7798e")]
     public abstract partial class Aes : System.Security.Cryptography.SymmetricAlgorithm
     {
         protected Aes() { }
@@ -9,8 +8,6 @@ namespace System.Security.Cryptography {
         public override System.Security.Cryptography.KeySizes[] LegalBlockSizes { get { return default(System.Security.Cryptography.KeySizes[]); } }
         public override System.Security.Cryptography.KeySizes[] LegalKeySizes { get { return default(System.Security.Cryptography.KeySizes[]); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class AsymmetricKeyExchangeDeformatter
     {
         protected AsymmetricKeyExchangeDeformatter() { }
@@ -18,8 +15,6 @@ namespace System.Security.Cryptography {
         public abstract byte[] DecryptKeyExchange(byte[] rgb);
         public abstract void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class AsymmetricKeyExchangeFormatter
     {
         protected AsymmetricKeyExchangeFormatter() { }
@@ -28,8 +23,6 @@ namespace System.Security.Cryptography {
         public abstract byte[] CreateKeyExchange(byte[] data, System.Type symAlgType);
         public abstract void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class AsymmetricSignatureDeformatter
     {
         protected AsymmetricSignatureDeformatter() { }
@@ -38,8 +31,6 @@ namespace System.Security.Cryptography {
         public abstract bool VerifySignature(byte[] rgbHash, byte[] rgbSignature);
         public virtual bool VerifySignature(System.Security.Cryptography.HashAlgorithm hash, byte[] rgbSignature) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class AsymmetricSignatureFormatter
     {
         protected AsymmetricSignatureFormatter() { }
@@ -48,8 +39,6 @@ namespace System.Security.Cryptography {
         public abstract void SetHashAlgorithm(string strName);
         public abstract void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CryptoAPITransform : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         internal CryptoAPITransform() { }
@@ -60,13 +49,10 @@ namespace System.Security.Cryptography {
         public int OutputBlockSize { get { return default(int); } }
         public void Clear() { }
         public void Dispose() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void Reset() { }
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CryptoConfig
     {
         public CryptoConfig() { }
@@ -76,8 +62,6 @@ namespace System.Security.Cryptography {
         public static byte[] EncodeOID(string str) { return default(byte[]); }
         public static string MapNameToOID(string name) { return default(string); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DeriveBytes : System.IDisposable
     {
         protected DeriveBytes() { }
@@ -86,8 +70,6 @@ namespace System.Security.Cryptography {
         public abstract byte[] GetBytes(int cb);
         public abstract void Reset();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DES : System.Security.Cryptography.SymmetricAlgorithm
     {
         protected DES() { }
@@ -97,8 +79,6 @@ namespace System.Security.Cryptography {
         public static bool IsSemiWeakKey(byte[] rgbKey) { return default(bool); }
         public static bool IsWeakKey(byte[] rgbKey) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DSA : System.Security.Cryptography.AsymmetricAlgorithm
     {
         protected DSA() { }
@@ -111,8 +91,6 @@ namespace System.Security.Cryptography {
         public override string ToXmlString(bool includePrivateParameters) { return default(string); }
         public abstract bool VerifySignature(byte[] rgbHash, byte[] rgbSignature);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct DSAParameters
     {
@@ -125,8 +103,6 @@ namespace System.Security.Cryptography {
         public byte[] X;
         public byte[] Y;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DSASignatureDeformatter : System.Security.Cryptography.AsymmetricSignatureDeformatter
     {
         public DSASignatureDeformatter() { }
@@ -135,8 +111,6 @@ namespace System.Security.Cryptography {
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
         public override bool VerifySignature(byte[] rgbHash, byte[] rgbSignature) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class DSASignatureFormatter : System.Security.Cryptography.AsymmetricSignatureFormatter
     {
         public DSASignatureFormatter() { }
@@ -145,8 +119,6 @@ namespace System.Security.Cryptography {
         public override void SetHashAlgorithm(string strName) { }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FromBase64Transform : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         public FromBase64Transform() { }
@@ -162,15 +134,11 @@ namespace System.Security.Cryptography {
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FromBase64TransformMode
     {
         DoNotIgnoreWhiteSpaces = 1,
         IgnoreWhiteSpaces = 0,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACMD5 : System.Security.Cryptography.HMAC
     {
         public HMACMD5() { }
@@ -182,15 +150,11 @@ namespace System.Security.Cryptography {
         public override int HashSize { get { return default(int); } }
         public override byte[] Key { get { return default(byte[]); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACRIPEMD160 : System.Security.Cryptography.HMAC
     {
         public HMACRIPEMD160() { }
         public HMACRIPEMD160(byte[] key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACSHA1 : System.Security.Cryptography.HMAC
     {
         public HMACSHA1() { }
@@ -203,8 +167,6 @@ namespace System.Security.Cryptography {
         public override int HashSize { get { return default(int); } }
         public override byte[] Key { get { return default(byte[]); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACSHA256 : System.Security.Cryptography.HMAC
     {
         public HMACSHA256() { }
@@ -216,12 +178,9 @@ namespace System.Security.Cryptography {
         public override int HashSize { get { return default(int); } }
         public override byte[] Key { get { return default(byte[]); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACSHA384 : System.Security.Cryptography.HMAC
     {
         public HMACSHA384() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public HMACSHA384(byte[] key) { }
         public bool ProduceLegacyHmacValues { get { return default(bool); } set { } }
         protected override void Dispose(bool disposing) { }
@@ -231,12 +190,9 @@ namespace System.Security.Cryptography {
         public override int HashSize { get { return default(int); } }
         public override byte[] Key { get { return default(byte[]); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class HMACSHA512 : System.Security.Cryptography.HMAC
     {
         public HMACSHA512() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public HMACSHA512(byte[] key) { }
         public bool ProduceLegacyHmacValues { get { return default(bool); } set { } }
         protected override void Dispose(bool disposing) { }
@@ -246,30 +202,22 @@ namespace System.Security.Cryptography {
         public override int HashSize { get { return default(int); } }
         public override byte[] Key { get { return default(byte[]); } set { } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MACTripleDES : System.Security.Cryptography.KeyedHashAlgorithm
     {
         public MACTripleDES() { }
         public MACTripleDES(byte[] rgbKey) { }
         public MACTripleDES(string strTripleDES, byte[] rgbKey) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Cryptography.PaddingMode Padding { get { return default(System.Security.Cryptography.PaddingMode); } set { } }
         protected override void Dispose(bool disposing) { }
         protected override void HashCore(byte[] rgbData, int ibStart, int cbSize) { }
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MaskGenerationMethod
     {
         protected MaskGenerationMethod() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(true)]
         public abstract byte[] GenerateMask(byte[] rgbSeed, int cbReturn);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class MD5 : System.Security.Cryptography.HashAlgorithm
     {
         protected MD5() { }
@@ -286,16 +234,12 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PKCS1MaskGenerationMethod : System.Security.Cryptography.MaskGenerationMethod
     {
         public PKCS1MaskGenerationMethod() { }
         public string HashName { get { return default(string); } set { } }
         public override byte[] GenerateMask(byte[] rgbSeed, int cbReturn) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class RandomNumberGenerator : System.IDisposable
     {
         protected RandomNumberGenerator() { }
@@ -306,8 +250,6 @@ namespace System.Security.Cryptography {
         public abstract void GetBytes(byte[] data);
         public virtual void GetNonZeroBytes(byte[] data) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class RC2 : System.Security.Cryptography.SymmetricAlgorithm
     {
         protected int EffectiveKeySizeValue;
@@ -327,8 +269,6 @@ namespace System.Security.Cryptography {
         public override void GenerateIV() { }
         public override void GenerateKey() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Rfc2898DeriveBytes : System.Security.Cryptography.DeriveBytes
     {
         public Rfc2898DeriveBytes(byte[] password, byte[] salt, int iterations) { }
@@ -342,8 +282,6 @@ namespace System.Security.Cryptography {
         public override byte[] GetBytes(int cb) { return default(byte[]); }
         public override void Reset() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class Rijndael : System.Security.Cryptography.SymmetricAlgorithm
     {
         protected Rijndael() { }
@@ -359,8 +297,6 @@ namespace System.Security.Cryptography {
         public override void GenerateIV() { }
         public override void GenerateKey() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class RijndaelManagedTransform : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         internal RijndaelManagedTransform() { }
@@ -375,22 +311,16 @@ namespace System.Security.Cryptography {
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class RIPEMD160 : System.Security.Cryptography.HashAlgorithm
     {
         protected RIPEMD160() { }
         public static new System.Security.Cryptography.RIPEMD160 Create() { return default(System.Security.Cryptography.RIPEMD160); }
         public static new System.Security.Cryptography.RIPEMD160 Create(string hashName) { return default(System.Security.Cryptography.RIPEMD160); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RIPEMD160Managed : System.Security.Cryptography.RIPEMD160
     {
         public RIPEMD160Managed() { }
-        [System.Security.SecuritySafeCriticalAttribute]
         protected override void HashCore(byte[] rgb, int ibStart, int cbSize) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
@@ -402,8 +332,6 @@ namespace System.Security.Cryptography {
         public override void GetBytes(byte[] data) { }
         public override void GetNonZeroBytes(byte[] data) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class RSA : System.Security.Cryptography.AsymmetricAlgorithm
     {
         protected RSA() { }
@@ -428,21 +356,14 @@ namespace System.Security.Cryptography {
         public bool VerifyData(System.IO.Stream data, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding) { return default(bool); }
         public abstract bool VerifyHash(byte[] hash, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);
     }
-
-
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAOAEPKeyExchangeDeformatter : System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
     {
         public RSAOAEPKeyExchangeDeformatter() { }
         public RSAOAEPKeyExchangeDeformatter(System.Security.Cryptography.AsymmetricAlgorithm key) { }
         public override string Parameters { get { return default(string); } set { } }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override byte[] DecryptKeyExchange(byte[] rgbData) { return default(byte[]); }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAOAEPKeyExchangeFormatter : System.Security.Cryptography.AsymmetricKeyExchangeFormatter
     {
         public RSAOAEPKeyExchangeFormatter() { }
@@ -450,13 +371,10 @@ namespace System.Security.Cryptography {
         public byte[] Parameter { get { return default(byte[]); } set { } }
         public override string Parameters { get { return default(string); } }
         public System.Security.Cryptography.RandomNumberGenerator Rng { get { return default(System.Security.Cryptography.RandomNumberGenerator); } set { } }
-        [System.Security.SecuritySafeCriticalAttribute]
         public override byte[] CreateKeyExchange(byte[] rgbData) { return default(byte[]); }
         public override byte[] CreateKeyExchange(byte[] rgbData, System.Type symAlgType) { return default(byte[]); }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct RSAParameters
     {
@@ -469,8 +387,6 @@ namespace System.Security.Cryptography {
         public byte[] P;
         public byte[] Q;
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAPKCS1KeyExchangeDeformatter : System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
     {
         public RSAPKCS1KeyExchangeDeformatter() { }
@@ -480,8 +396,6 @@ namespace System.Security.Cryptography {
         public override byte[] DecryptKeyExchange(byte[] rgbIn) { return default(byte[]); }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAPKCS1KeyExchangeFormatter : System.Security.Cryptography.AsymmetricKeyExchangeFormatter
     {
         public RSAPKCS1KeyExchangeFormatter() { }
@@ -492,8 +406,6 @@ namespace System.Security.Cryptography {
         public override byte[] CreateKeyExchange(byte[] rgbData, System.Type symAlgType) { return default(byte[]); }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAPKCS1SignatureDeformatter : System.Security.Cryptography.AsymmetricSignatureDeformatter
     {
         public RSAPKCS1SignatureDeformatter() { }
@@ -502,8 +414,6 @@ namespace System.Security.Cryptography {
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
         public override bool VerifySignature(byte[] rgbHash, byte[] rgbSignature) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class RSAPKCS1SignatureFormatter : System.Security.Cryptography.AsymmetricSignatureFormatter
     {
         public RSAPKCS1SignatureFormatter() { }
@@ -512,8 +422,6 @@ namespace System.Security.Cryptography {
         public override void SetHashAlgorithm(string strName) { }
         public override void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SHA1 : System.Security.Cryptography.HashAlgorithm
     {
         protected SHA1() { }
@@ -540,8 +448,6 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SHA256 : System.Security.Cryptography.HashAlgorithm
     {
         protected SHA256() { }
@@ -558,8 +464,6 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SHA384 : System.Security.Cryptography.HashAlgorithm
     {
         protected SHA384() { }
@@ -576,8 +480,6 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class SHA512 : System.Security.Cryptography.HashAlgorithm
     {
         protected SHA512() { }
@@ -594,8 +496,6 @@ namespace System.Security.Cryptography {
         protected override byte[] HashFinal() { return default(byte[]); }
         public override void Initialize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SignatureDescription
     {
         public SignatureDescription() { }
@@ -608,8 +508,6 @@ namespace System.Security.Cryptography {
         public virtual System.Security.Cryptography.HashAlgorithm CreateDigest() { return default(System.Security.Cryptography.HashAlgorithm); }
         public virtual System.Security.Cryptography.AsymmetricSignatureFormatter CreateFormatter(System.Security.Cryptography.AsymmetricAlgorithm key) { return default(System.Security.Cryptography.AsymmetricSignatureFormatter); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ToBase64Transform : System.IDisposable, System.Security.Cryptography.ICryptoTransform
     {
         public ToBase64Transform() { }
@@ -624,8 +522,6 @@ namespace System.Security.Cryptography {
         public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) { return default(int); }
         public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) { return default(byte[]); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class TripleDES : System.Security.Cryptography.SymmetricAlgorithm
     {
         protected TripleDES() { }

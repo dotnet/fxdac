@@ -1,19 +1,14 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Diagnostics.SymbolStore {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolBinder
     {
         [System.ObsoleteAttribute("This interface is not 64-bit clean.  Use ISymbolBinder1 instead")]
         System.Diagnostics.SymbolStore.ISymbolReader GetReader(int importer, string filename, string searchPath);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolBinder1
     {
         System.Diagnostics.SymbolStore.ISymbolReader GetReader(System.IntPtr importer, string filename, string searchPath);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolDocument
     {
         System.Guid CheckSumAlgorithmId { get; }
@@ -27,15 +22,11 @@ namespace System.Diagnostics.SymbolStore {
         byte[] GetCheckSum();
         byte[] GetSourceRange(int startLine, int startColumn, int endLine, int endColumn);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolDocumentWriter
     {
         void SetCheckSum(System.Guid algorithmId, byte[] checkSum);
         void SetSource(byte[] source);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolMethod
     {
         System.Diagnostics.SymbolStore.ISymbolScope RootScope { get; }
@@ -49,16 +40,12 @@ namespace System.Diagnostics.SymbolStore {
         void GetSequencePoints(int[] offsets, System.Diagnostics.SymbolStore.ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns);
         bool GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[] docs, int[] lines, int[] columns);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolNamespace
     {
         string Name { get; }
         System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces();
         System.Diagnostics.SymbolStore.ISymbolVariable[] GetVariables();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolReader
     {
         System.Diagnostics.SymbolStore.SymbolToken UserEntryPoint { get; }
@@ -72,8 +59,6 @@ namespace System.Diagnostics.SymbolStore {
         byte[] GetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken parent, string name);
         System.Diagnostics.SymbolStore.ISymbolVariable[] GetVariables(System.Diagnostics.SymbolStore.SymbolToken parent);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolScope
     {
         int EndOffset { get; }
@@ -84,8 +69,6 @@ namespace System.Diagnostics.SymbolStore {
         System.Diagnostics.SymbolStore.ISymbolVariable[] GetLocals();
         System.Diagnostics.SymbolStore.ISymbolNamespace[] GetNamespaces();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolVariable
     {
         int AddressField1 { get; }
@@ -98,8 +81,6 @@ namespace System.Diagnostics.SymbolStore {
         int StartOffset { get; }
         byte[] GetSignature();
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ISymbolWriter
     {
         void Close();
@@ -123,8 +104,6 @@ namespace System.Diagnostics.SymbolStore {
         void SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken entryMethod);
         void UsingNamespace(string fullName);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum SymAddressKind
     {
         BitField = 9,
@@ -138,8 +117,6 @@ namespace System.Diagnostics.SymbolStore {
         NativeSectionOffset = 10,
         NativeStackRegister = 8,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct SymbolToken
     {
@@ -151,15 +128,11 @@ namespace System.Diagnostics.SymbolStore {
         public static bool operator ==(System.Diagnostics.SymbolStore.SymbolToken a, System.Diagnostics.SymbolStore.SymbolToken b) { return default(bool); }
         public static bool operator !=(System.Diagnostics.SymbolStore.SymbolToken a, System.Diagnostics.SymbolStore.SymbolToken b) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SymDocumentType
     {
         public static readonly System.Guid Text;
         public SymDocumentType() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SymLanguageType
     {
         public static readonly System.Guid Basic;
@@ -175,8 +148,6 @@ namespace System.Diagnostics.SymbolStore {
         public static readonly System.Guid SMC;
         public SymLanguageType() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SymLanguageVendor
     {
         public static readonly System.Guid Microsoft;

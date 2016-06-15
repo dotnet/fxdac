@@ -34,7 +34,7 @@ namespace Microsoft.Win32 {
   }
   public sealed partial class RegistryKey : System.IDisposable {
     internal RegistryKey() { }
-    public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle { [System.Security.SecurityCriticalAttribute]get { return default(Microsoft.Win32.SafeHandles.SafeRegistryHandle); } }
+    public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle { get { return default(Microsoft.Win32.SafeHandles.SafeRegistryHandle); } }
     public string Name { get { return default(string); } }
     public int SubKeyCount { get { return default(int); } }
     public int ValueCount { get { return default(int); } }
@@ -50,9 +50,7 @@ namespace Microsoft.Win32 {
     public void DeleteValue(string name, bool throwOnMissingValue) { }
     public void Dispose() { }
     public void Flush() { }
-    [System.Security.SecurityCriticalAttribute]
     public static Microsoft.Win32.RegistryKey FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle handle) { return default(Microsoft.Win32.RegistryKey); }
-    [System.Security.SecurityCriticalAttribute]
     public static Microsoft.Win32.RegistryKey FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle handle, Microsoft.Win32.RegistryView view) { return default(Microsoft.Win32.RegistryKey); }
     public string[] GetSubKeyNames() { return default(string[]); }
     public object GetValue(string name) { return default(object); }
@@ -83,7 +81,6 @@ namespace Microsoft.Win32 {
     DoNotExpandEnvironmentNames = 1,
     None = 0,
   }
-  [System.Security.SecurityCriticalAttribute]
   public static partial class RegistryAclExtensions {
     public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key) { return default(System.Security.AccessControl.RegistrySecurity); }
     public static System.Security.AccessControl.RegistrySecurity GetAccessControl(this Microsoft.Win32.RegistryKey key, System.Security.AccessControl.AccessControlSections includeSections) { return default(System.Security.AccessControl.RegistrySecurity); }
@@ -91,15 +88,11 @@ namespace Microsoft.Win32 {
   }
 } // end of Microsoft.Win32
 namespace Microsoft.Win32.SafeHandles {
-
-    [System.Security.SecurityCriticalAttribute]
     public sealed partial class SafeRegistryHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
     {
-        [System.Security.SecurityCriticalAttribute]
         public SafeRegistryHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
-        [System.Security.SecurityCriticalAttribute]
         protected override bool ReleaseHandle() { return default(bool); }
-        public override bool IsInvalid { [System.Security.SecurityCriticalAttribute]get { return default(bool); } }
+        public override bool IsInvalid { get { return default(bool); } }
     }
 } // end of Microsoft.Win32.SafeHandles
 namespace System.Security.AccessControl {

@@ -22,10 +22,8 @@ namespace System.Globalization {
 namespace System {
   public static partial class StringNormalizationExtensions {
     public static bool IsNormalized(this string value) { return default(bool); }
-    [System.Security.SecurityCriticalAttribute]
     public static bool IsNormalized(this string value, System.Text.NormalizationForm normalizationForm) { return default(bool); }
     public static string Normalize(this string value) { return default(string); }
-    [System.Security.SecurityCriticalAttribute]
     public static string Normalize(this string value, System.Text.NormalizationForm normalizationForm) { return default(string); }
   }
 } // end of System

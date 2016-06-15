@@ -79,8 +79,6 @@ namespace System.Net {
         Warning = 9,
         WwwAuthenticate = 29,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class WebHeaderCollection :
         System.Collections.Specialized.NameValueCollection,
         System.Collections.IEnumerable,

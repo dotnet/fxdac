@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Resources {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingManifestResourceException : System.SystemException
     {
         public MissingManifestResourceException() { }
@@ -9,8 +7,6 @@ namespace System.Resources {
         public MissingManifestResourceException(string message) { }
         public MissingManifestResourceException(string message, System.Exception inner) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class MissingSatelliteAssemblyException : System.SystemException
     {
         public MissingSatelliteAssemblyException() { }
@@ -22,7 +18,6 @@ namespace System.Resources {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class NeutralResourcesLanguageAttribute : System.Attribute
     {
         public NeutralResourcesLanguageAttribute(string cultureName) { }
@@ -30,8 +25,6 @@ namespace System.Resources {
         public string CultureName { get { return default(string); } }
         public System.Resources.UltimateResourceFallbackLocation Location { get { return default(System.Resources.UltimateResourceFallbackLocation); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ResourceManager
     {
         protected string BaseNameField;
@@ -49,32 +42,24 @@ namespace System.Resources {
         public virtual bool IgnoreCase { get { return default(bool); } set { } }
         public virtual System.Type ResourceSetType { get { return default(System.Type); } }
         public static System.Resources.ResourceManager CreateFileBasedResourceManager(string baseName, string resourceDir, System.Type usingResourceSet) { return default(System.Resources.ResourceManager); }
-        [System.Security.SecuritySafeCriticalAttribute]
         protected static System.Globalization.CultureInfo GetNeutralResourcesLanguage(System.Reflection.Assembly a) { return default(System.Globalization.CultureInfo); }
         public virtual object GetObject(string name) { return default(object); }
         public virtual object GetObject(string name, System.Globalization.CultureInfo culture) { return default(object); }
         protected virtual string GetResourceFileName(System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual System.Resources.ResourceSet GetResourceSet(System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) { return default(System.Resources.ResourceSet); }
         protected static System.Version GetSatelliteContractVersion(System.Reflection.Assembly a) { return default(System.Version); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.IO.UnmanagedMemoryStream GetStream(string name) { return default(System.IO.UnmanagedMemoryStream); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.IO.UnmanagedMemoryStream GetStream(string name, System.Globalization.CultureInfo culture) { return default(System.IO.UnmanagedMemoryStream); }
         public virtual string GetString(string name) { return default(string); }
         public virtual string GetString(string name, System.Globalization.CultureInfo culture) { return default(string); }
-        [System.Security.SecuritySafeCriticalAttribute]
         protected virtual System.Resources.ResourceSet InternalGetResourceSet(System.Globalization.CultureInfo culture, bool createIfNotExists, bool tryParents) { return default(System.Resources.ResourceSet); }
         public virtual void ReleaseAllResources() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ResourceSet : System.Collections.IEnumerable, System.IDisposable
     {
         protected System.Resources.IResourceReader Reader;
         protected System.Collections.Hashtable Table;
         protected ResourceSet() { }
-        [System.Security.SecurityCriticalAttribute]
         public ResourceSet(System.IO.Stream stream) { }
         public ResourceSet(System.Resources.IResourceReader reader) { }
         public ResourceSet(string fileName) { }
@@ -83,7 +68,6 @@ namespace System.Resources {
         protected virtual void Dispose(bool disposing) { }
         public virtual System.Type GetDefaultReader() { return default(System.Type); }
         public virtual System.Type GetDefaultWriter() { return default(System.Type); }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public virtual System.Collections.IDictionaryEnumerator GetEnumerator() { return default(System.Collections.IDictionaryEnumerator); }
         public virtual object GetObject(string name) { return default(object); }
         public virtual object GetObject(string name, bool ignoreCase) { return default(object); }
@@ -94,14 +78,11 @@ namespace System.Resources {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class SatelliteContractVersionAttribute : System.Attribute
     {
         public SatelliteContractVersionAttribute(string version) { }
         public string Version { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum UltimateResourceFallbackLocation
     {
         MainAssembly = 0,

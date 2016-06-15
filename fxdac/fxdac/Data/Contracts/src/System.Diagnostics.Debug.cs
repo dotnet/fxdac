@@ -1,6 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Diagnostics {
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Debugger
     {
         public static readonly string DefaultCategory;
@@ -15,14 +14,12 @@ namespace System.Diagnostics {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerStepperBoundaryAttribute : System.Attribute
     {
         public DebuggerStepperBoundaryAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(13), AllowMultiple = true)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DebuggerVisualizerAttribute : System.Attribute
     {
         public DebuggerVisualizerAttribute(string visualizerTypeName) { }

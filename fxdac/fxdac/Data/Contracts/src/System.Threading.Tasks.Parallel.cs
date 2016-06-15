@@ -44,8 +44,6 @@ namespace System.Threading.Tasks {
         public bool IsCompleted { get { return default(bool); } }
         public System.Nullable<long> LowestBreakIteration { get { return default(System.Nullable<long>); } }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("ShouldExitCurrentIteration = {ShouldExitCurrentIteration}")]
     public partial class ParallelLoopState
     {
         internal ParallelLoopState() { }

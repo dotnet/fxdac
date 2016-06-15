@@ -1,8 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Collections.ObjectModel {
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(false)]
     public abstract partial class KeyedCollection<TKey, TItem> : System.Collections.ObjectModel.Collection<TItem>
     {
         protected KeyedCollection() { }
@@ -20,8 +17,6 @@ namespace System.Collections.ObjectModel {
         protected override void RemoveItem(int index) { }
         protected override void SetItem(int index, TItem item) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
     public partial class ReadOnlyDictionary<TKey, TValue> : System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IDictionary<TKey, TValue>, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyCollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>, System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
         public ReadOnlyDictionary(System.Collections.Generic.IDictionary<TKey, TValue> dictionary) { }
@@ -60,7 +55,6 @@ namespace System.Collections.ObjectModel {
         void System.Collections.IDictionary.Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         public bool TryGetValue(TKey key, out TValue value) { value = default(TValue); return default(bool); }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class KeyCollection : System.Collections.Generic.ICollection<TKey>, System.Collections.Generic.IEnumerable<TKey>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             internal KeyCollection() { }
@@ -77,7 +71,6 @@ namespace System.Collections.ObjectModel {
             void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
             System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         }
-        [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
         public sealed partial class ValueCollection : System.Collections.Generic.ICollection<TValue>, System.Collections.Generic.IEnumerable<TValue>, System.Collections.ICollection, System.Collections.IEnumerable
         {
             internal ValueCollection() { }
@@ -95,7 +88,6 @@ namespace System.Collections.ObjectModel {
             System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         }
     }
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class ObservableCollection<T> : System.Collections.ObjectModel.Collection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
         public ObservableCollection() { }
@@ -115,8 +107,6 @@ namespace System.Collections.ObjectModel {
         protected override void RemoveItem(int index) { }
         protected override void SetItem(int index, T item) { }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class ReadOnlyObservableCollection<T> : System.Collections.ObjectModel.ReadOnlyCollection<T>, System.Collections.Specialized.INotifyCollectionChanged, System.ComponentModel.INotifyPropertyChanged
     {
         public ReadOnlyObservableCollection(System.Collections.ObjectModel.ObservableCollection<T> list) : base(default(System.Collections.Generic.IList<T>)) { }
@@ -129,14 +119,10 @@ namespace System.Collections.ObjectModel {
     }
 } // end of System.Collections.ObjectModel
 namespace System.Collections.Specialized {
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial interface INotifyCollectionChanged
     {
         event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged;
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public enum NotifyCollectionChangedAction
     {
         Add = 0,
@@ -145,8 +131,6 @@ namespace System.Collections.Specialized {
         Replace = 2,
         Reset = 4,
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial class NotifyCollectionChangedEventArgs : System.EventArgs
     {
         public NotifyCollectionChangedEventArgs(System.Collections.Specialized.NotifyCollectionChangedAction action) { }
@@ -166,8 +150,6 @@ namespace System.Collections.Specialized {
         public System.Collections.IList OldItems { get { return default(System.Collections.IList); } }
         public int OldStartingIndex { get { return default(int); } }
     }
-
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("WindowsBase, Version=3.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")]
     public delegate void NotifyCollectionChangedEventHandler(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
 } // end of System.Collections.Specialized
 namespace System.ComponentModel {
@@ -207,7 +189,6 @@ namespace System.ComponentModel {
     public delegate void PropertyChangingEventHandler(object sender, System.ComponentModel.PropertyChangingEventArgs e);
 } // end of System.ComponentModel
 namespace System.Windows.Input {
-    [System.Runtime.CompilerServices.TypeForwardedFromAttribute("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")]
     public partial interface ICommand
     {
         event System.EventHandler CanExecuteChanged;

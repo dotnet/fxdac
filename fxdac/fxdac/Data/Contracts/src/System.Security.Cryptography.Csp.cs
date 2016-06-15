@@ -1,7 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Security.Cryptography {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CspKeyContainerInfo
     {
         public CspKeyContainerInfo(System.Security.Cryptography.CspParameters parameters) { }
@@ -19,8 +17,6 @@ namespace System.Security.Cryptography {
         public bool Removable { get { return default(bool); } }
         public string UniqueKeyContainerName { get { return default(string); } }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class CspParameters
     {
         public string KeyContainerName;
@@ -40,7 +36,6 @@ namespace System.Security.Cryptography {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum CspProviderFlags
     {
         CreateEphemeralKey = 128,
@@ -62,30 +57,24 @@ namespace System.Security.Cryptography {
         public override void GenerateIV() { }
         public override void GenerateKey() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class DSACryptoServiceProvider : System.Security.Cryptography.DSA, System.Security.Cryptography.ICspAsymmetricAlgorithm
     {
         public DSACryptoServiceProvider() { }
         public DSACryptoServiceProvider(int dwKeySize) { }
         public DSACryptoServiceProvider(int dwKeySize, System.Security.Cryptography.CspParameters parameters) { }
         public DSACryptoServiceProvider(System.Security.Cryptography.CspParameters parameters) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo { get { return default(System.Security.Cryptography.CspKeyContainerInfo); } }
         public override string KeyExchangeAlgorithm { get { return default(string); } }
         public override int KeySize { get { return default(int); } }
         public bool PersistKeyInCsp { get { return default(bool); } set { } }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public bool PublicOnly { get { return default(bool); } }
         public override string SignatureAlgorithm { get { return default(string); } }
         public static bool UseMachineKeyStore { get { return default(bool); } set { } }
         public override byte[] CreateSignature(byte[] rgbHash) { return default(byte[]); }
         protected override void Dispose(bool disposing) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public byte[] ExportCspBlob(bool includePrivateParameters) { return default(byte[]); }
         public override System.Security.Cryptography.DSAParameters ExportParameters(bool includePrivateParameters) { return default(System.Security.Cryptography.DSAParameters); }
         ~DSACryptoServiceProvider() { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public void ImportCspBlob(byte[] keyBlob) { }
         public override void ImportParameters(System.Security.Cryptography.DSAParameters parameters) { }
         public byte[] SignData(byte[] buffer) { return default(byte[]); }
@@ -96,29 +85,22 @@ namespace System.Security.Cryptography {
         public bool VerifyHash(byte[] rgbHash, string str, byte[] rgbSignature) { return default(bool); }
         public override bool VerifySignature(byte[] rgbHash, byte[] rgbSignature) { return default(bool); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial interface ICspAsymmetricAlgorithm
     {
         System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo { get; }
         byte[] ExportCspBlob(bool includePrivateParameters);
         void ImportCspBlob(byte[] rawData);
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum KeyNumber
     {
         Exchange = 1,
         Signature = 2,
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class PasswordDeriveBytes : System.Security.Cryptography.DeriveBytes
     {
         public PasswordDeriveBytes(byte[] password, byte[] salt) { }
         public PasswordDeriveBytes(byte[] password, byte[] salt, System.Security.Cryptography.CspParameters cspParams) { }
         public PasswordDeriveBytes(byte[] password, byte[] salt, string hashName, int iterations) { }
-        [System.Security.SecuritySafeCriticalAttribute]
         public PasswordDeriveBytes(byte[] password, byte[] salt, string hashName, int iterations, System.Security.Cryptography.CspParameters cspParams) { }
         public PasswordDeriveBytes(string strPassword, byte[] rgbSalt) { }
         public PasswordDeriveBytes(string strPassword, byte[] rgbSalt, System.Security.Cryptography.CspParameters cspParams) { }
@@ -127,18 +109,14 @@ namespace System.Security.Cryptography {
         public string HashName { get { return default(string); } set { } }
         public int IterationCount { get { return default(int); } set { } }
         public byte[] Salt { get { return default(byte[]); } set { } }
-        [System.Security.SecuritySafeCriticalAttribute]
         public byte[] CryptDeriveKey(string algname, string alghashname, int keySize, byte[] rgbIV) { return default(byte[]); }
         protected override void Dispose(bool disposing) { }
         [System.ObsoleteAttribute("Rfc2898DeriveBytes replaces PasswordDeriveBytes for deriving key material from a password and is preferred in new applications.")]
-        [System.Security.SecuritySafeCriticalAttribute]
         public override byte[] GetBytes(int cb) { return default(byte[]); }
         public override void Reset() { }
     }
 } // end of System.Security.Cryptography
 namespace System.Security.Permissions {
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public KeyContainerPermission(System.Security.Permissions.KeyContainerPermissionFlags flags) { }
@@ -154,8 +132,6 @@ namespace System.Security.Permissions {
         public override System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntry
     {
         public KeyContainerPermissionAccessEntry(System.Security.Cryptography.CspParameters parameters, System.Security.Permissions.KeyContainerPermissionFlags flags) { }
@@ -170,8 +146,6 @@ namespace System.Security.Permissions {
         public override bool Equals(object o) { return default(bool); }
         public override int GetHashCode() { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntryCollection : System.Collections.ICollection, System.Collections.IEnumerable
     {
         internal KeyContainerPermissionAccessEntryCollection() { }
@@ -188,8 +162,6 @@ namespace System.Security.Permissions {
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAccessEntryEnumerator : System.Collections.IEnumerator
     {
         internal KeyContainerPermissionAccessEntryEnumerator() { }
@@ -200,7 +172,6 @@ namespace System.Security.Permissions {
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class KeyContainerPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
     {
         public KeyContainerPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
@@ -214,7 +185,6 @@ namespace System.Security.Permissions {
     }
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum KeyContainerPermissionFlags
     {
         AllFlags = 13111,

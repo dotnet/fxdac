@@ -2,7 +2,6 @@
 namespace System.IO {
 
     [System.FlagsAttribute]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public enum FileAttributes
     {
         Archive = 32,

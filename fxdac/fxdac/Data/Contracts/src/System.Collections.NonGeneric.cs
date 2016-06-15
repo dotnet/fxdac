@@ -1,10 +1,7 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Collections {
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class ArrayList : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList, System.ICloneable
     {
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public ArrayList() { }
         public ArrayList(System.Collections.ICollection c) { }
         public ArrayList(int capacity) { }
@@ -17,7 +14,6 @@ namespace System.Collections {
         public virtual object SyncRoot { get { return default(object); } }
         public static System.Collections.ArrayList Adapter(System.Collections.IList list) { return default(System.Collections.ArrayList); }
         public virtual int Add(object value) { return default(int); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual void AddRange(System.Collections.ICollection c) { }
         public virtual int BinarySearch(int index, int count, object value, System.Collections.IComparer comparer) { return default(int); }
         public virtual int BinarySearch(object value) { return default(int); }
@@ -30,12 +26,9 @@ namespace System.Collections {
         public virtual void CopyTo(int index, System.Array array, int arrayIndex, int count) { }
         public static System.Collections.ArrayList FixedSize(System.Collections.ArrayList list) { return default(System.Collections.ArrayList); }
         public static System.Collections.IList FixedSize(System.Collections.IList list) { return default(System.Collections.IList); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual System.Collections.IEnumerator GetEnumerator(int index, int count) { return default(System.Collections.IEnumerator); }
         public virtual System.Collections.ArrayList GetRange(int index, int count) { return default(System.Collections.ArrayList); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual int IndexOf(object value) { return default(int); }
         public virtual int IndexOf(object value, int startIndex) { return default(int); }
         public virtual int IndexOf(object value, int startIndex, int count) { return default(int); }
@@ -46,7 +39,6 @@ namespace System.Collections {
         public virtual int LastIndexOf(object value, int startIndex, int count) { return default(int); }
         public static System.Collections.ArrayList ReadOnly(System.Collections.ArrayList list) { return default(System.Collections.ArrayList); }
         public static System.Collections.IList ReadOnly(System.Collections.IList list) { return default(System.Collections.IList); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual void Remove(object obj) { }
         public virtual void RemoveAt(int index) { }
         public virtual void RemoveRange(int index, int count) { }
@@ -60,12 +52,9 @@ namespace System.Collections {
         public static System.Collections.ArrayList Synchronized(System.Collections.ArrayList list) { return default(System.Collections.ArrayList); }
         public static System.Collections.IList Synchronized(System.Collections.IList list) { return default(System.Collections.IList); }
         public virtual object[] ToArray() { return default(object[]); }
-        [System.Security.SecuritySafeCriticalAttribute]
         public virtual System.Array ToArray(System.Type type) { return default(System.Array); }
         public virtual void TrimToSize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class CaseInsensitiveComparer : System.Collections.IComparer
     {
         public CaseInsensitiveComparer() { }
@@ -74,13 +63,10 @@ namespace System.Collections {
         public static System.Collections.CaseInsensitiveComparer DefaultInvariant { get { return default(System.Collections.CaseInsensitiveComparer); } }
         public int Compare(object a, object b) { return default(int); }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class CollectionBase : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         protected CollectionBase() { }
         protected CollectionBase(int capacity) { }
-        [System.Runtime.InteropServices.ComVisibleAttribute(false)]
         public int Capacity { get { return default(int); } set { } }
         public int Count { get { return default(int); } }
         protected System.Collections.ArrayList InnerList { get { return default(System.Collections.ArrayList); } }
@@ -109,19 +95,14 @@ namespace System.Collections {
         void System.Collections.IList.Insert(int index, object value) { }
         void System.Collections.IList.Remove(object value) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public sealed partial class Comparer : System.Collections.IComparer, System.Runtime.Serialization.ISerializable
     {
         public static readonly System.Collections.Comparer Default;
         public static readonly System.Collections.Comparer DefaultInvariant;
         public Comparer(System.Globalization.CultureInfo culture) { }
         public int Compare(object a, object b) { return default(int); }
-        [System.Security.SecurityCriticalAttribute]
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class DictionaryBase : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable
     {
         protected DictionaryBase() { }
@@ -153,9 +134,6 @@ namespace System.Collections {
         void System.Collections.IDictionary.Remove(object key) { }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Hashtable : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable, System.ICloneable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public Hashtable() { }
@@ -188,37 +166,26 @@ namespace System.Collections {
         public virtual bool IsFixedSize { get { return default(bool); } }
         public virtual bool IsReadOnly { get { return default(bool); } }
         public virtual bool IsSynchronized { get { return default(bool); } }
-        public virtual object this[object key] { get { return default(object); } [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]set { } }
-        public virtual System.Collections.ICollection Keys { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Collections.ICollection); } }
+        public virtual object this[object key] { get { return default(object); } set { } }
+        public virtual System.Collections.ICollection Keys { get { return default(System.Collections.ICollection); } }
         public virtual object SyncRoot { get { return default(object); } }
-        public virtual System.Collections.ICollection Values { [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]get { return default(System.Collections.ICollection); } }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
+        public virtual System.Collections.ICollection Values { get { return default(System.Collections.ICollection); } }
         public virtual void Add(object key, object value) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(2))]
         public virtual void Clear() { }
         public virtual object Clone() { return default(object); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual bool Contains(object key) { return default(bool); }
         public virtual bool ContainsKey(object key) { return default(bool); }
         public virtual bool ContainsValue(object value) { return default(bool); }
         public virtual void CopyTo(System.Array array, int arrayIndex) { }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         public virtual System.Collections.IDictionaryEnumerator GetEnumerator() { return default(System.Collections.IDictionaryEnumerator); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         protected virtual int GetHash(object key) { return default(int); }
-        [System.Security.SecurityCriticalAttribute]
         public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         protected virtual bool KeyEquals(object item, object key) { return default(bool); }
         public virtual void OnDeserialization(object sender) { }
-        [System.Runtime.ConstrainedExecution.ReliabilityContractAttribute((System.Runtime.ConstrainedExecution.Consistency)(3), (System.Runtime.ConstrainedExecution.Cer)(1))]
         public virtual void Remove(object key) { }
         public static System.Collections.Hashtable Synchronized(System.Collections.Hashtable table) { return default(System.Collections.Hashtable); }
-        [System.Runtime.TargetedPatchingOptOutAttribute("Performance critical to inline across NGen image boundaries")]
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Queue : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
     {
         public Queue() { }
@@ -240,8 +207,6 @@ namespace System.Collections {
         public virtual object[] ToArray() { return default(object[]); }
         public virtual void TrimToSize() { }
     }
-
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public abstract partial class ReadOnlyCollectionBase : System.Collections.ICollection, System.Collections.IEnumerable
     {
         protected ReadOnlyCollectionBase() { }
@@ -252,9 +217,6 @@ namespace System.Collections {
         public virtual System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
         void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class SortedList : System.Collections.ICollection, System.Collections.IDictionary, System.Collections.IEnumerable, System.ICloneable
     {
         public SortedList() { }
@@ -293,9 +255,6 @@ namespace System.Collections {
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
         public virtual void TrimToSize() { }
     }
-
-    [System.Diagnostics.DebuggerDisplayAttribute("Count = {Count}")]
-    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class Stack : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
     {
         public Stack() { }
