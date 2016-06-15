@@ -590,7 +590,7 @@ System.CodeDom.Compiler.GeneratedCodeAttribute
 // Grouped security APIs
 System.Security.Policy.Evidence
 System.Security.Policy.EvidenceBase
-System.Security.SecureString
+
 System.Security.VerificationException
 System.Security.SecurityTransparentAttribute
 System.Security.AllowPartiallyTrustedCallersAttribute

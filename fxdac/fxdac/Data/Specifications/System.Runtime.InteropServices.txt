@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Security.SecureString.dll
 
 System.Runtime.InteropServices.ComAwareEventInfo
 

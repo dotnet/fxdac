@@ -3,6 +3,7 @@
 /r:System.Security.Cryptography.Primitives.dll
 /r:System.Security.Cryptography.Algorithms.dll
 /r:System.Security.Cryptography.Encoding.dll
+/r:System.Security.SecureString.dll
 
 Microsoft.Win32.SafeHandles.SafeX509ChainHandle
 

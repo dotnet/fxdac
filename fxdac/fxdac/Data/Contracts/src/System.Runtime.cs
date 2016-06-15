@@ -7380,26 +7380,6 @@ namespace System.Security {
         NotVisibleByDefault = 1,
         VisibleToAllHosts = 0,
     }
-    public sealed partial class SecureString : System.IDisposable
-    {
-        public SecureString() { }
-        [System.CLSCompliantAttribute(false)]
-        public unsafe SecureString(char* value, int length) { }
-        public int Length { get { return default(int); } }
-        [System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute]
-        public void AppendChar(char c) { }
-        public void Clear() { }
-        public System.Security.SecureString Copy() { return default(System.Security.SecureString); }
-        public void Dispose() { }
-        [System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute]
-        public void InsertAt(int index, char c) { }
-        public bool IsReadOnly() { return default(bool); }
-        public void MakeReadOnly() { }
-        [System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute]
-        public void RemoveAt(int index) { }
-        [System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute]
-        public void SetAt(int index, char c) { }
-    }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5501), AllowMultiple = false, Inherited = false)]
     public sealed partial class SecurityCriticalAttribute : System.Attribute
