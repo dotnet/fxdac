@@ -1,0 +1,7 @@
+/r:System.Runtime.dll
+
+System.Runtime.ConstrainedExecution.Cer
+System.Runtime.ConstrainedExecution.Consistency
+System.Runtime.ConstrainedExecution.ReliabilityContractAttribute
+System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute 
+System.Runtime.ConstrainedExecution.CriticalFinalizerObject

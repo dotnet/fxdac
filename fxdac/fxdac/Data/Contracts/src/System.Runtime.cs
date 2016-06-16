@@ -6456,7 +6456,7 @@ namespace System.Runtime {
         public static System.Runtime.GCLatencyMode LatencyMode { get { return default(System.Runtime.GCLatencyMode); } set { } }
     }
 
-    public sealed partial class MemoryFailPoint : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable
+    public sealed partial class MemoryFailPoint :System.IDisposable
     {
         public MemoryFailPoint(int sizeInMegabytes) { }
         public void Dispose() { }
@@ -6970,41 +6970,6 @@ namespace System.Runtime.CompilerServices {
     public static System.FormattableString Create(string format, params object[] arguments) { return default(System.FormattableString); }
   }
 } // end of System.Runtime.CompilerServices
-namespace System.Runtime.ConstrainedExecution {
-    public enum Cer
-    {
-        MayFail = 1,
-        None = 0,
-        Success = 2,
-    }
-
-    public enum Consistency
-    {
-        MayCorruptAppDomain = 1,
-        MayCorruptInstance = 2,
-        MayCorruptProcess = 0,
-        WillNotCorruptState = 3,
-    }
-    public abstract partial class CriticalFinalizerObject
-    {
-        protected CriticalFinalizerObject() { }
-        ~CriticalFinalizerObject() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(96), Inherited = false)]
-    public sealed partial class PrePrepareMethodAttribute : System.Attribute
-    {
-        public PrePrepareMethodAttribute() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1133), Inherited = false)]
-    public sealed partial class ReliabilityContractAttribute : System.Attribute
-    {
-        public ReliabilityContractAttribute(System.Runtime.ConstrainedExecution.Consistency consistencyGuarantee, System.Runtime.ConstrainedExecution.Cer cer) { }
-        public System.Runtime.ConstrainedExecution.Cer Cer { get { return default(System.Runtime.ConstrainedExecution.Cer); } }
-        public System.Runtime.ConstrainedExecution.Consistency ConsistencyGuarantee { get { return default(System.Runtime.ConstrainedExecution.Consistency); } }
-    }
-} // end of System.Runtime.ConstrainedExecution
 namespace System.Runtime.ExceptionServices {
     public sealed partial class ExceptionDispatchInfo
     {
@@ -7143,7 +7108,7 @@ namespace System.Runtime.InteropServices {
         public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
         public override bool IsInvalid { get { return default(bool); } }
     }
-    public abstract partial class SafeHandle : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable
+    public abstract partial class SafeHandle :System.IDisposable
     {
         protected System.IntPtr handle;
         protected SafeHandle() { }

@@ -58,6 +58,7 @@
     <item text="Removed method MethodBase.System.Runtime.InteropServices._MethodBase.GetTypeInfoCount(uint):void"/>
     <item text="Removed method MethodBase.System.Runtime.InteropServices._MethodBase.Invoke(uint, System.Guid, uint, short, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr):void"/>
     <item text="Removed member Module.GetSignerCertificate():System.Security.Cryptography.X509Certificates.X509Certificate"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type MemoryFailPoint"/>
     <item text="Removed member RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode, object):void"/>
     <item text="Removed member RuntimeHelpers.PrepareConstrainedRegions():void"/>
     <item text="Removed member RuntimeHelpers.PrepareConstrainedRegionsNoOP():void"/>
@@ -84,6 +85,8 @@
     <item text="Removed type _SignatureHelper"/>
     <item text="Removed type _Thread"/>
     <item text="Removed type _Type"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type CriticalHandle"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type SafeHandle"/>
     <item text="Removed member SecurityException.ctor(string, object, object, System.Reflection.MethodInfo, object, System.Security.IPermission)"/>
     <item text="Removed member SecurityException.FirstPermissionThatFailed:System.Security.IPermission"/>
     <item text="Removed member SecurityException.Action:System.Security.Permissions.SecurityAction"/>
@@ -95,7 +98,9 @@
     <item text="Removed member Mutex.ctor(bool, string, bool, System.Security.AccessControl.MutexSecurity)"/>
     <item text="Removed member Mutex.OpenExisting(string, System.Security.AccessControl.MutexRights):System.Threading.Mutex"/>
     <item text="Removed member Mutex.TryOpenExisting(string, System.Security.AccessControl.MutexRights, System.Threading.Mutex):bool"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type ReaderWriterLock"/>
     <item text="Removed base System.MarshalByRefObject from type RegisteredWaitHandle"/>
+    <item text="Removed base System.Runtime.ConstrainedExecution.CriticalFinalizerObject from type Thread"/>
     <item text="Removed member Thread.GetDomain():System.AppDomain"/>
     <item text="Removed member Thread.CurrentContext:System.Runtime.Remoting.Contexts.Context"/>
     <item text="Removed base System.MarshalByRefObject from type Timer"/>

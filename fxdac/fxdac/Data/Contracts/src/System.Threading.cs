@@ -205,8 +205,7 @@ namespace System.Threading {
         public void ReleaseMutex() { }
         public static bool TryOpenExisting(string name, out System.Threading.Mutex result) { result = default(System.Threading.Mutex); return default(bool); }
     }
-    public sealed partial class ReaderWriterLock : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
-    {
+    public sealed partial class ReaderWriterLock     {
         public ReaderWriterLock() { }
         public bool IsReaderLockHeld { get { return default(bool); } }
         public bool IsWriterLockHeld { get { return default(bool); } }
@@ -296,10 +295,8 @@ namespace System.Threading {
         public static void SetThreadStaticContext(System.Threading.SynchronizationContext syncContext) { }
         protected void SetWaitNotificationRequired() { }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
         public virtual int Wait(System.IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout) { return default(int); }
         [System.CLSCompliantAttribute(false)]
-        [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
         protected static int WaitHelper(System.IntPtr[] waitHandles, bool waitAll, int millisecondsTimeout) { return default(int); }
     }
     public partial class SynchronizationLockException : System.SystemException
@@ -427,7 +424,6 @@ namespace System.Threading {
         public Semaphore(int initialCount, int maximumCount, string name) { }
         public Semaphore(int initialCount, int maximumCount, string name, out bool createdNew) { createdNew = default(bool); }
         public static System.Threading.Semaphore OpenExisting(string name) { return default(System.Threading.Semaphore); }
-        [System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute]
         public int Release() { return default(int); }
         public int Release(int releaseCount) { return default(int); }
         public static bool TryOpenExisting(string name, out System.Threading.Semaphore result) { result = default(System.Threading.Semaphore); return default(bool); }

@@ -1,7 +1,7 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Runtime.InteropServices {
 
-    public abstract partial class CriticalHandle : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, System.IDisposable
+    public abstract partial class CriticalHandle :System.IDisposable
     {
         protected System.IntPtr handle;
         protected CriticalHandle(System.IntPtr invalidHandleValue) { }

@@ -1,8 +1,7 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Threading {
     public delegate void ParameterizedThreadStart(object obj);
-    public sealed partial class Thread : System.Runtime.ConstrainedExecution.CriticalFinalizerObject
-    {
+    public sealed partial class Thread     {
         public Thread(System.Threading.ParameterizedThreadStart start) { }
         public Thread(System.Threading.ParameterizedThreadStart start, int maxStackSize) { }
         public Thread(System.Threading.ThreadStart start) { }
