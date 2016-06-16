@@ -6,6 +6,7 @@
 /r:System.Net.Primitives.dll
 /r:System.Net.WebHeaderCollection.dll
 /r:System.Net.Requests.dll
+/r:System.Text.Encoding.dll
 
 System.Net.WebClient
 System.Net.DownloadDataCompletedEventArgs

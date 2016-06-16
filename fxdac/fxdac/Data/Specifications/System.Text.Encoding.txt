@@ -1,7 +1,15 @@
 /r:System.Runtime.dll
 
 // for corefx
-
+System.Text.Decoder
+System.Text.DecoderFallback
+System.Text.DecoderFallbackBuffer
+System.Text.Encoder
+System.Text.EncoderFallback
+System.Text.EncoderFallbackBuffer
+System.Text.Encoding
+System.Text.EncodingInfo
+System.Text.EncodingProvider
 
 System.Text.DecoderExceptionFallback
 System.Text.DecoderExceptionFallbackBuffer

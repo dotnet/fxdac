@@ -1,5 +1,6 @@
 /r:System.Runtime.dll
 /r:System.IO.dll
+/r:System.Text.Encoding.dll
 
 System.CodeDom.Compiler.IndentedTextWriter
 

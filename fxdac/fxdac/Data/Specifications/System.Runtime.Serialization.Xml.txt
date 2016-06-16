@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Xml.ReaderWriter.dll
 /r:System.Runtime.Serialization.Primitives.dll
+/r:System.Text.Encoding.dll
 
 System.Xml.IXmlDictionary
 System.Xml.OnXmlDictionaryReaderClose

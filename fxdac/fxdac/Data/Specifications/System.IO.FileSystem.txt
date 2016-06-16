@@ -4,6 +4,7 @@
 /r:System.Security.Permissions.dll
 /r:System.Security.AccessControl.dll
 /r:System.Security.Principal.Windows.dll
+/r:System.Text.Encoding.dll
 
 System.IO.FileSystemAclExtensions
 System.Security.AccessControl.DirectoryObjectSecurity

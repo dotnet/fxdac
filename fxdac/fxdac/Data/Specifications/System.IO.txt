@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-
+/r:System.Text.Encoding.dll
 
 System.IO.InvalidDataException
 System.IO.BinaryReader

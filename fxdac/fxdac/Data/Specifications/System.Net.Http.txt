@@ -1,7 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Net.Primitives.dll
 /r:System.Security.Cryptography.X509Certificates.dll
-
+/r:System.Text.Encoding.dll
 
 System.Net.Http.ByteArrayContent
 System.Net.Http.ClientCertificateOption
