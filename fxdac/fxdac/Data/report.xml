@@ -58,6 +58,14 @@
     <item text="Removed method MethodBase.System.Runtime.InteropServices._MethodBase.GetTypeInfoCount(uint):void"/>
     <item text="Removed method MethodBase.System.Runtime.InteropServices._MethodBase.Invoke(uint, System.Guid, uint, short, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr):void"/>
     <item text="Removed member Module.GetSignerCertificate():System.Security.Cryptography.X509Certificates.X509Certificate"/>
+    <item text="Removed member RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode, object):void"/>
+    <item text="Removed member RuntimeHelpers.PrepareConstrainedRegions():void"/>
+    <item text="Removed member RuntimeHelpers.PrepareConstrainedRegionsNoOP():void"/>
+    <item text="Removed member RuntimeHelpers.PrepareContractedDelegate(System.Delegate):void"/>
+    <item text="Removed member RuntimeHelpers.PrepareDelegate(System.Delegate):void"/>
+    <item text="Removed member RuntimeHelpers.PrepareMethod(System.RuntimeMethodHandle):void"/>
+    <item text="Removed member RuntimeHelpers.PrepareMethod(System.RuntimeMethodHandle, System.RuntimeTypeHandle[]):void"/>
+    <item text="Removed member RuntimeHelpers.ProbeForSufficientStack():void"/>
     <item text="Removed type _Activator"/>
     <item text="Removed type _Assembly"/>
     <item text="Removed type _AssemblyName"/>
@@ -104,9 +112,9 @@
     <item text="Removed member Semaphore.OpenExisting(string, System.Security.AccessControl.SemaphoreRights):System.Threading.Semaphore"/>
     <item text="Removed member Semaphore.TryOpenExisting(string, System.Security.AccessControl.SemaphoreRights, System.Threading.Semaphore):bool"/>
   </REMOVED>
-  <MOVED_TYPES total="204" description="corefx types that changed their location">
+  <MOVED_TYPES total="209" description="corefx types that changed their location">
   <MOVED_VALID total="41" description="moves that have been deemed ok (list hardcoded)"/>
-  <MOVED_TO_SYSTEM_RUNTIME total="163" description="all moves to System.Runtime are OK"/>
+  <MOVED_TO_SYSTEM_RUNTIME total="168" description="all moves to System.Runtime are OK"/>
   </MOVED_TYPES>
   <TYPES_NOT_IN_ANY_ASSEMBLY total="1" description="types that are not in specification files">
     <item text="System.ArgIterator"/>

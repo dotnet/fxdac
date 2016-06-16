@@ -93,7 +93,6 @@ class LocationAnalysis
                     var ns = mr.GetString(namespaceHandle);
 
                     if (name == "<Module>") continue;
-                    if (string.IsNullOrEmpty(ns)) continue; // TODO: this needs to be removed and fixed
 
                     var typeName = ns + "." + name;
 

@@ -6853,17 +6853,9 @@ namespace System.Runtime.CompilerServices {
         public static int OffsetToStringData { get { return default(int); } }
         public static void EnsureSufficientExecutionStack() { }
         public static new bool Equals(object o1, object o2) { return default(bool); }
-        public static void ExecuteCodeWithGuaranteedCleanup(System.Runtime.CompilerServices.RuntimeHelpers.TryCode code, System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode backoutCode, object userData) { }
         public static int GetHashCode(object o) { return default(int); }
         public static object GetObjectValue(object obj) { return default(object); }
         public static void InitializeArray(System.Array array, System.RuntimeFieldHandle fldHandle) { }
-        public static void PrepareConstrainedRegions() { }
-        public static void PrepareConstrainedRegionsNoOP() { }
-        public static void PrepareContractedDelegate(System.Delegate d) { }
-        public static void PrepareDelegate(System.Delegate d) { }
-        public static void PrepareMethod(System.RuntimeMethodHandle method) { }
-        public static void PrepareMethod(System.RuntimeMethodHandle method, System.RuntimeTypeHandle[] instantiation) { }
-        public static void ProbeForSufficientStack() { }
         public static void RunClassConstructor(System.RuntimeTypeHandle type) { }
         public static void RunModuleConstructor(System.ModuleHandle module) { }
         public delegate void CleanupCode(object userData, bool exceptionThrown);
