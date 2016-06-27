@@ -442,10 +442,6 @@ System.Diagnostics.DebuggerNonUserCodeAttribute
 // These don't have to be here, but I think they make sense
 System.Runtime.CompilerServices.AsyncTaskMethodBuilder
 System.Runtime.CompilerServices.AsyncVoidMethodBuilder
-System.Runtime.CompilerServices.CallConvCdecl
-System.Runtime.CompilerServices.CallConvFastcall
-System.Runtime.CompilerServices.CallConvStdcall
-System.Runtime.CompilerServices.CallConvThiscall
 System.Runtime.CompilerServices.CompilerGlobalScopeAttribute
 System.Runtime.CompilerServices.CompilerMarshalOverride
 System.Runtime.CompilerServices.DefaultDependencyAttribute

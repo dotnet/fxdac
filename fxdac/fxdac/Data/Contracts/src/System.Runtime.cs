@@ -5824,22 +5824,6 @@ namespace System.Runtime.CompilerServices {
         [System.Diagnostics.DebuggerStepThroughAttribute]
         public void Start<TStateMachine>(ref TStateMachine stateMachine) where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine { }
     }
-    public partial class CallConvCdecl
-    {
-        public CallConvCdecl() { }
-    }
-    public partial class CallConvFastcall
-    {
-        public CallConvFastcall() { }
-    }
-    public partial class CallConvStdcall
-    {
-        public CallConvStdcall() { }
-    }
-    public partial class CallConvThiscall
-    {
-        public CallConvThiscall() { }
-    }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(2048), Inherited = false)]
     public sealed partial class CallerFilePathAttribute : System.Attribute

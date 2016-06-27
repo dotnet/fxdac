@@ -1,0 +1,7 @@
+﻿/r:System.Runtime.dll
+
+System.Runtime.CompilerServices.CallConvCdecl
+System.Runtime.CompilerServices.CallConvFastcall
+System.Runtime.CompilerServices.CallConvStdcall
+System.Runtime.CompilerServices.CallConvThiscall
+
