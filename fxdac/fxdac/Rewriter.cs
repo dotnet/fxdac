@@ -60,6 +60,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         attributeName.StartsWith("System.Runtime.InteropServices.ComVisibleAttribute") ||
         attributeName.StartsWith("System.Runtime.InteropServices.ClassInterfaceAttribute") ||
         attributeName.StartsWith("System.Runtime.InteropServices.ComDefaultInterfaceAttribute") ||
+        attributeName.StartsWith("System.Runtime.InteropServices.DispIdAttribute") ||
 
         attributeName.StartsWith("System.Mono") ||
 

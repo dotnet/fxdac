@@ -3351,7 +3351,6 @@ namespace System.Collections {
     }
     public partial interface IEnumerable
     {
-        [System.Runtime.InteropServices.DispIdAttribute(-4)]
         System.Collections.IEnumerator GetEnumerator();
     }
     public partial interface IEnumerator
@@ -6304,20 +6303,6 @@ namespace System.Runtime.InteropServices {
         Unicode = 3,
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(5), Inherited = false)]
-    public sealed partial class ClassInterfaceAttribute : System.Attribute
-    {
-        public ClassInterfaceAttribute(short classInterfaceType) { }
-        public ClassInterfaceAttribute(System.Runtime.InteropServices.ClassInterfaceType classInterfaceType) { }
-        public System.Runtime.InteropServices.ClassInterfaceType Value { get { return default(System.Runtime.InteropServices.ClassInterfaceType); } }
-    }
-    public enum ClassInterfaceType
-    {
-        AutoDispatch = 1,
-        AutoDual = 2,
-        None = 0,
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
     public sealed partial class ComDefaultInterfaceAttribute : System.Attribute
     {
@@ -6337,13 +6322,6 @@ namespace System.Runtime.InteropServices {
         public ComVisibleAttribute(bool visibility) { }
         public bool Value { get { return default(bool); } }
     }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(960), Inherited = false)]
-    public sealed partial class DispIdAttribute : System.Attribute
-    {
-        public DispIdAttribute(int dispId) { }
-        public int Value { get { return default(int); } }
-    }
     public partial class ExternalException : System.SystemException
     {
         public ExternalException() { }
@@ -6359,13 +6337,6 @@ namespace System.Runtime.InteropServices {
     {
         public FieldOffsetAttribute(int offset) { }
         public int Value { get { return default(int); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(5149), Inherited = false)]
-    public sealed partial class GuidAttribute : System.Attribute
-    {
-        public GuidAttribute(string guid) { }
-        public string Value { get { return default(string); } }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
