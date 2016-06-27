@@ -6,6 +6,7 @@
 /r:System.Net.Primitives.dll
 /r:System.Net.Mime.dll
 /r:System.Net.Requests.dll
+/r:System.Text.Encoding.dll
 
 System.Net.Mail.AlternateView
 System.Net.Mail.AlternateViewCollection

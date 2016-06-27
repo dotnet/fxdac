@@ -24,6 +24,7 @@
     <item text="Removed member Activator.CreateInstanceFrom(string, string, bool, System.Reflection.BindingFlags, System.Reflection.Binder, object[], System.Globalization.CultureInfo, object[]):System.Runtime.Remoting.ObjectHandle"/>
     <item text="Removed member Activator.CreateInstanceFrom(string, string, bool, System.Reflection.BindingFlags, System.Reflection.Binder, object[], System.Globalization.CultureInfo, object[], System.Security.Policy.Evidence):System.Runtime.Remoting.ObjectHandle"/>
     <item text="Removed member Activator.CreateInstanceFrom(string, string, object[]):System.Runtime.Remoting.ObjectHandle"/>
+    <item text="Removed member String.ctor(sbyte*, int, int, System.Text.Encoding)"/>
     <item text="Removed base System.Runtime.InteropServices._Type from type Type"/>
     <item text="Removed method Type.System.Runtime.InteropServices._Type.GetIDsOfNames(System.Guid, System.IntPtr, uint, uint, System.IntPtr):void"/>
     <item text="Removed method Type.System.Runtime.InteropServices._Type.GetTypeInfo(uint, uint, System.IntPtr):void"/>
@@ -117,9 +118,9 @@
     <item text="Removed member Semaphore.OpenExisting(string, System.Security.AccessControl.SemaphoreRights):System.Threading.Semaphore"/>
     <item text="Removed member Semaphore.TryOpenExisting(string, System.Security.AccessControl.SemaphoreRights, System.Threading.Semaphore):bool"/>
   </REMOVED>
-  <MOVED_TYPES total="209" description="corefx types that changed their location">
+  <MOVED_TYPES total="201" description="corefx types that changed their location">
   <MOVED_VALID total="41" description="moves that have been deemed ok (list hardcoded)"/>
-  <MOVED_TO_SYSTEM_RUNTIME total="168" description="all moves to System.Runtime are OK"/>
+  <MOVED_TO_SYSTEM_RUNTIME total="160" description="all moves to System.Runtime are OK"/>
   </MOVED_TYPES>
   <TYPES_NOT_IN_ANY_ASSEMBLY total="1" description="types that are not in specification files">
     <item text="System.ArgIterator"/>

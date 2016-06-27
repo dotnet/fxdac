@@ -8,6 +8,7 @@
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Security.Claims.dll
 /r:System.Security.Principal.dll 
+/r:System.Text.Encoding.dll
 
 System.Net.AuthenticationSchemeSelector
 

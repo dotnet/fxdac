@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Text.Encoding.dll
 
 System.IO.Compression.CompressionLevel
 System.IO.Compression.CompressionMode
