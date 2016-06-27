@@ -35,6 +35,14 @@
     <item text="Removed member Assembly.GetFile(string):System.IO.FileStream"/>
     <item text="Removed member Assembly.GetFiles():System.IO.FileStream[]"/>
     <item text="Removed member Assembly.GetFiles(bool):System.IO.FileStream[]"/>
+    <item text="Removed member Assembly.Evidence:System.Security.Policy.Evidence"/>
+    <item text="Removed member Assembly.Load(byte[], byte[], System.Security.Policy.Evidence):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.Load(System.Reflection.AssemblyName, System.Security.Policy.Evidence):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.Load(string, System.Security.Policy.Evidence):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.LoadFile(string, System.Security.Policy.Evidence):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.LoadFrom(string, System.Security.Policy.Evidence):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.LoadFrom(string, System.Security.Policy.Evidence, byte[], System.Configuration.Assemblies.AssemblyHashAlgorithm):System.Reflection.Assembly"/>
+    <item text="Removed member Assembly.LoadWithPartialName(string, System.Security.Policy.Evidence):System.Reflection.Assembly"/>
     <item text="Removed base System.MarshalByRefObject from type AssemblyNameProxy"/>
     <item text="Removed base System.Runtime.InteropServices._MemberInfo from type MemberInfo"/>
     <item text="Removed method MemberInfo.System.Runtime.InteropServices._MemberInfo.GetIDsOfNames(System.Guid, System.IntPtr, uint, uint, System.IntPtr):void"/>

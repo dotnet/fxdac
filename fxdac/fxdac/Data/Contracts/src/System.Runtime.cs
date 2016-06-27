@@ -4471,7 +4471,6 @@ namespace System.Reflection {
         public virtual System.Collections.Generic.IEnumerable<System.Reflection.TypeInfo> DefinedTypes { get { return default(System.Collections.Generic.IEnumerable<System.Reflection.TypeInfo>); } }
         public virtual System.Reflection.MethodInfo EntryPoint { get { return default(System.Reflection.MethodInfo); } }
         public virtual string EscapedCodeBase { get { return default(string); } }
-        public virtual System.Security.Policy.Evidence Evidence { get { return default(System.Security.Policy.Evidence); } }
         public virtual System.Collections.Generic.IEnumerable<System.Type> ExportedTypes { get { return default(System.Collections.Generic.IEnumerable<System.Type>); } }
         public virtual string FullName { get { return default(string); } }
         public virtual bool GlobalAssemblyCache { get { return default(bool); } }
@@ -4520,29 +4519,15 @@ namespace System.Reflection {
         public virtual bool IsDefined(System.Type attributeType, bool inherit) { return default(bool); }
         public static System.Reflection.Assembly Load(byte[] rawAssembly) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, System.Security.Policy.Evidence securityEvidence) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly Load(System.Reflection.AssemblyName assemblyRef) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly Load(System.Reflection.AssemblyName assemblyRef, System.Security.Policy.Evidence assemblySecurity) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly Load(string assemblyString) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly Load(string assemblyString, System.Security.Policy.Evidence assemblySecurity) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly LoadFile(string path) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly LoadFile(string path, System.Security.Policy.Evidence securityEvidence) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly LoadFrom(string assemblyFile) { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly LoadFrom(string assemblyFile, byte[] hashValue, System.Configuration.Assemblies.AssemblyHashAlgorithm hashAlgorithm) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly LoadFrom(string assemblyFile, System.Security.Policy.Evidence securityEvidence) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly LoadFrom(string assemblyFile, System.Security.Policy.Evidence securityEvidence, byte[] hashValue, System.Configuration.Assemblies.AssemblyHashAlgorithm hashAlgorithm) { return default(System.Reflection.Assembly); }
         public System.Reflection.Module LoadModule(string moduleName, byte[] rawModule) { return default(System.Reflection.Module); }
         public virtual System.Reflection.Module LoadModule(string moduleName, byte[] rawModule, byte[] rawSymbolStore) { return default(System.Reflection.Module); }
         [System.ObsoleteAttribute]
         public static System.Reflection.Assembly LoadWithPartialName(string partialName) { return default(System.Reflection.Assembly); }
-        [System.ObsoleteAttribute]
-        public static System.Reflection.Assembly LoadWithPartialName(string partialName, System.Security.Policy.Evidence securityEvidence) { return default(System.Reflection.Assembly); }
         public static bool operator ==(System.Reflection.Assembly left, System.Reflection.Assembly right) { return default(bool); }
         public static bool operator !=(System.Reflection.Assembly left, System.Reflection.Assembly right) { return default(bool); }
         public static System.Reflection.Assembly ReflectionOnlyLoad(byte[] rawAssembly) { return default(System.Reflection.Assembly); }
@@ -6671,40 +6656,6 @@ namespace System.Security {
         public VerificationException(string message, System.Exception innerException) { }
     }
 } // end of System.Security
-namespace System.Security.Policy {
-    public sealed partial class Evidence : System.Collections.ICollection, System.Collections.IEnumerable
-    {
-        public Evidence() { }
-        [System.ObsoleteAttribute]
-        public Evidence(object[] hostEvidence, object[] assemblyEvidence) { }
-        public Evidence(System.Security.Policy.Evidence evidence) { }
-        [System.ObsoleteAttribute]
-        public int Count { get { return default(int); } }
-        public bool IsReadOnly { get { return default(bool); } }
-        public bool IsSynchronized { get { return default(bool); } }
-        public bool Locked { get { return default(bool); } set { } }
-        public object SyncRoot { get { return default(object); } }
-        [System.ObsoleteAttribute]
-        public void AddAssembly(object id) { }
-        [System.ObsoleteAttribute]
-        public void AddHost(object id) { }
-        public void Clear() { }
-        public System.Security.Policy.Evidence Clone() { return default(System.Security.Policy.Evidence); }
-        [System.ObsoleteAttribute]
-        public void CopyTo(System.Array array, int index) { }
-        public System.Collections.IEnumerator GetAssemblyEnumerator() { return default(System.Collections.IEnumerator); }
-        [System.ObsoleteAttribute]
-        public System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public System.Collections.IEnumerator GetHostEnumerator() { return default(System.Collections.IEnumerator); }
-        public void Merge(System.Security.Policy.Evidence evidence) { }
-        public void RemoveType(System.Type t) { }
-    }
-    public abstract partial class EvidenceBase
-    {
-        protected EvidenceBase() { }
-        public virtual System.Security.Policy.EvidenceBase Clone() { return default(System.Security.Policy.EvidenceBase); }
-    }
-} // end of System.Security.Policy
 namespace System.Text {
     public enum NormalizationForm
     {

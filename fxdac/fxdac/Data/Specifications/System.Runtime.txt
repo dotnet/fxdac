@@ -548,8 +548,6 @@ System.Security.SecurityException
 System.CodeDom.Compiler.GeneratedCodeAttribute
 
 // Grouped security APIs
-System.Security.Policy.Evidence
-System.Security.Policy.EvidenceBase
 
 System.Security.VerificationException
 System.Security.SecurityTransparentAttribute

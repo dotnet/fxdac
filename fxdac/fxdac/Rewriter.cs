@@ -87,7 +87,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
 
         new FxDependency() { From="System.Runtime", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
         new FxDependency() { From="System.Runtime", To="System.IO.FileStream" },
-
+        new FxDependency() { From="System.Runtime", To="System.Security.Policy.Evidence" },
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleSecurity" },
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleRights" },
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.MutexSecurity" },
