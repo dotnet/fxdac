@@ -1842,3 +1842,22 @@ namespace System.Runtime.Serialization.Formatters.Binary {
         public object UnsafeDeserializeMethodResponse(System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) { return default(object); }
     }
 } // end of System.Runtime.Serialization.Formatters.Binary
+namespace System.Threading {
+    public partial class HostExecutionContext : System.IDisposable
+    {
+        public HostExecutionContext() { }
+        public HostExecutionContext(object state) { }
+        protected internal object State { get { return default(object); } set { } }
+        public virtual System.Threading.HostExecutionContext CreateCopy() { return default(System.Threading.HostExecutionContext); }
+        public void Dispose() { }
+        public virtual void Dispose(bool disposing) { }
+    }
+
+    public partial class HostExecutionContextManager
+    {
+        public HostExecutionContextManager() { }
+        public virtual System.Threading.HostExecutionContext Capture() { return default(System.Threading.HostExecutionContext); }
+        public virtual void Revert(object previousState) { }
+        public virtual object SetHostExecutionContext(System.Threading.HostExecutionContext hostExecutionContext) { return default(object); }
+    }
+} // end of System.Threading

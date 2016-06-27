@@ -418,9 +418,6 @@ System.ResolveEventHandler
 System.Runtime.CompilerServices.CompilationRelaxations
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 
-
-System.Threading.HostExecutionContext
-System.Threading.HostExecutionContextManager
 System.UnhandledExceptionEventArgs
 System.UnhandledExceptionEventHandler
 System.UriPartial
@@ -548,8 +545,6 @@ System.Security.SecurityException
 System.CodeDom.Compiler.GeneratedCodeAttribute
 
 // Grouped security APIs
-System.Security.Policy.Evidence
-System.Security.Policy.EvidenceBase
 
 System.Security.VerificationException
 System.Security.SecurityTransparentAttribute
