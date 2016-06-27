@@ -3947,13 +3947,11 @@ namespace System.Collections {
         object Key { get; }
         object Value { get; }
     }
-    [System.Runtime.InteropServices.GuidAttribute("496B0ABE-CDEE-11d3-88E8-00902754C43A")]
     public partial interface IEnumerable
     {
         [System.Runtime.InteropServices.DispIdAttribute(-4)]
         System.Collections.IEnumerator GetEnumerator();
     }
-    [System.Runtime.InteropServices.GuidAttribute("496B0ABF-CDEE-11d3-88E8-00902754C43A")]
     public partial interface IEnumerator
     {
         object Current { get; }
@@ -5677,7 +5675,6 @@ namespace System.Reflection {
         public InvalidFilterCriteriaException(string message) { }
         public InvalidFilterCriteriaException(string message, System.Exception inner) { }
     }
-    [System.Runtime.InteropServices.GuidAttribute("AFBF15E5-C37C-11d2-B88E-00A0C9B471B8")]
     public partial interface IReflect
     {
         System.Type UnderlyingSystemType { get; }

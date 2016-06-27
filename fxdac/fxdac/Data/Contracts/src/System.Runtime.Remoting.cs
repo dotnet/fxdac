@@ -1,7 +1,6 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
     [System.CLSCompliantAttribute(false)]
-    [System.Runtime.InteropServices.GuidAttribute("05F696DC-2B29-3663-AD8B-C4389CF2A713")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface _AppDomain
     {
@@ -243,7 +242,6 @@ namespace System {
         protected ContextBoundObject() { }
     }
     public delegate void CrossAppDomainDelegate();
-    [System.Runtime.InteropServices.GuidAttribute("27FFF232-A7A8-40dd-8D4A-734AD59FCD41")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IAppDomainSetup
     {
@@ -337,7 +335,6 @@ namespace System.Runtime.Remoting {
         [System.CLSCompliantAttribute(false)]
         public static void SetServerIdentity(System.Runtime.Remoting.Messaging.MethodCall m, object srvID) { }
     }
-    [System.Runtime.InteropServices.GuidAttribute("C460E2B4-E199-412a-8456-84DC3E4838C3")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IObjectHandle
     {

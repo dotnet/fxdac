@@ -459,7 +459,6 @@ namespace System.Runtime.InteropServices {
         INVOKE_PROPERTYPUT = 4,
         INVOKE_PROPERTYPUTREF = 8,
     }
-    [System.Runtime.InteropServices.GuidAttribute("CCBD682C-73A5-4568-B8B0-C7007E11ABA2")]
     public partial interface IRegistrationServices
     {
         System.Guid GetManagedCategoryGuid();
@@ -1319,8 +1318,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         FUNC_STATIC = 3,
         FUNC_VIRTUAL = 0,
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("0000000e-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IBindCtx
     {
@@ -1335,8 +1332,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int RevokeObjectParam(string pszKey);
         void SetBindOptions(ref System.Runtime.InteropServices.ComTypes.BIND_OPTS pbindopts);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("B196B286-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IConnectionPoint
     {
@@ -1346,8 +1341,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void GetConnectionPointContainer(out System.Runtime.InteropServices.ComTypes.IConnectionPointContainer ppCPC);
         void Unadvise(int dwCookie);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("B196B284-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IConnectionPointContainer
     {
@@ -1371,8 +1364,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         IDLFLAG_FRETVAL = (short)8,
         IDLFLAG_NONE = (short)0,
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("B196B285-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumConnectionPoints
     {
@@ -1381,8 +1372,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("B196B287-BAB4-101A-B69C-00AA00341D07")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumConnections
     {
@@ -1391,8 +1380,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00000102-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumMoniker
     {
@@ -1401,8 +1388,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00000101-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumString
     {
@@ -1411,8 +1396,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Reset();
         int Skip(int celt);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020404-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IEnumVARIANT
     {
@@ -1421,8 +1404,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Reset();
         int Skip(int celt);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("0000000f-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IMoniker
     {
@@ -1465,8 +1446,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         INVOKE_PROPERTYPUT = 4,
         INVOKE_PROPERTYPUTREF = 8,
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("0000010b-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IPersistFile
     {
@@ -1477,8 +1456,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void Save(string pszFileName, bool fRemember);
         void SaveCompleted(string pszFileName);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00000010-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IRunningObjectTable
     {
@@ -1490,8 +1467,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         int Register(int grfFlags, object punkObject, System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);
         void Revoke(int dwRegister);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("0000000c-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface IStream
     {
@@ -1507,16 +1482,12 @@ namespace System.Runtime.InteropServices.ComTypes {
         void UnlockRegion(long libOffset, long cb, int dwLockType);
         void Write(byte[] pv, int cb, System.IntPtr pcbWritten);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020403-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeComp
     {
         void Bind(string szName, int lHashVal, short wFlags, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.DESCKIND pDescKind, out System.Runtime.InteropServices.ComTypes.BINDPTR pBindPtr);
         void BindType(string szName, int lHashVal, out System.Runtime.InteropServices.ComTypes.ITypeInfo ppTInfo, out System.Runtime.InteropServices.ComTypes.ITypeComp ppTComp);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020401-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeInfo
     {
@@ -1540,8 +1511,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         void ReleaseTypeAttr(System.IntPtr pTypeAttr);
         void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020412-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeInfo2 : System.Runtime.InteropServices.ComTypes.ITypeInfo
     {
@@ -1581,8 +1550,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         new void ReleaseTypeAttr(System.IntPtr pTypeAttr);
         new void ReleaseVarDesc(System.IntPtr pVarDesc);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020402-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeLib
     {
@@ -1597,8 +1564,6 @@ namespace System.Runtime.InteropServices.ComTypes {
         bool IsName(string szNameBuf, int lHashVal);
         void ReleaseTLibAttr(System.IntPtr pTLibAttr);
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00020411-0000-0000-C000-000000000046")]
     [System.Runtime.InteropServices.InterfaceTypeAttribute((System.Runtime.InteropServices.ComInterfaceType)(1))]
     public partial interface ITypeLib2 : System.Runtime.InteropServices.ComTypes.ITypeLib
     {
@@ -1870,7 +1835,6 @@ namespace System.Runtime.InteropServices.ComTypes {
   }
 } // end of System.Runtime.InteropServices.ComTypes
 namespace System.Runtime.InteropServices.Expando {
-    [System.Runtime.InteropServices.GuidAttribute("AFBF15E6-C37C-11d2-B88E-00A0C9B471B8")]
     public partial interface IExpando : System.Reflection.IReflect
     {
         System.Reflection.FieldInfo AddField(string name);
@@ -1910,8 +1874,6 @@ namespace System.Runtime.InteropServices.WindowsRuntime {
         public void RemoveEventHandler(T handler) { }
         public void RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token) { }
     }
-
-    [System.Runtime.InteropServices.GuidAttribute("00000035-0000-0000-C000-000000000046")]
     public partial interface IActivationFactory
     {
         object ActivateInstance();
