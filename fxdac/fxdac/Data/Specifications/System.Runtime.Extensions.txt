@@ -1,7 +1,18 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
 
+System.Environment
+System.OperatingSystem
+System.PlatformID
+System.EnvironmentVariableTarget
+System.RuntimeArgumentHandle
+System.ApplicationId
+System.Base64FormattingOptions
+System.ContextMarshalException
+System.ContextStaticAttribute
+System.Convert
 System.Net.WebUtility
+System.MulticastNotSupportedException
 
 System.UriBuilder
 System.UriParser
