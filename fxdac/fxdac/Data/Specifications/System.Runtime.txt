@@ -556,13 +556,6 @@ System.Reflection.TargetParameterCountException
 System.Runtime.InteropServices.ExternalException
 System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
 
-// Remove:
-System.IO.FileAccess
-System.IO.FileMode
-System.IO.FileOptions
-System.IO.FileShare
-System.IO.FileStream
-
 // Added after API review
 System.Threading.Tasks.TaskExtensions
 System.Threading.CancellationTokenSource
