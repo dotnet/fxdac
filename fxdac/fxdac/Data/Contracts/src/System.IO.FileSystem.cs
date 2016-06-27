@@ -165,6 +165,55 @@ namespace System.IO {
         public System.IO.FileStream OpenWrite() { return default(System.IO.FileStream); }
         public override string ToString() { return default(string); }
     }
+    public partial class FileStream : System.IO.Stream
+    {
+        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]
+        public FileStream(System.IntPtr handle, System.IO.FileAccess access) { }
+        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]
+        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle) { }
+        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access, int bufferSize) instead")]
+        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle, int bufferSize) { }
+        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access, int bufferSize, bool isAsync) instead")]
+        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle, int bufferSize, bool isAsync) { }
+        public FileStream(string path, System.IO.FileMode mode) { }
+        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access) { }
+        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share) { }
+        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize) { }
+        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync) { }
+        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options) { }
+        public override bool CanRead { get { return default(bool); } }
+        public override bool CanSeek { get { return default(bool); } }
+        public override bool CanWrite { get { return default(bool); } }
+        [System.ObsoleteAttribute("Use SafeFileHandle instead")]
+        public virtual System.IntPtr Handle { get { return default(System.IntPtr); } }
+        public virtual bool IsAsync { get { return default(bool); } }
+        public override long Length { get { return default(long); } }
+        public string Name { get { return default(string); } }
+        public override long Position { get { return default(long); } set { } }
+        public virtual Microsoft.Win32.SafeHandles.SafeFileHandle SafeFileHandle { get { return default(Microsoft.Win32.SafeHandles.SafeFileHandle); } }
+        public override System.IAsyncResult BeginRead(byte[] array, int offset, int numBytes, System.AsyncCallback userCallback, object stateObject) { return default(System.IAsyncResult); }
+        public override System.IAsyncResult BeginWrite(byte[] array, int offset, int numBytes, System.AsyncCallback userCallback, object stateObject) { return default(System.IAsyncResult); }
+        protected override void Dispose(bool disposing) { }
+        public override int EndRead(System.IAsyncResult asyncResult) { return default(int); }
+        public override void EndWrite(System.IAsyncResult asyncResult) { }
+        ~FileStream() { }
+        public override void Flush() { }
+        public virtual void Flush(bool flushToDisk) { }
+        public override System.Threading.Tasks.Task FlushAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
+        public virtual void Lock(long position, long length) { }
+        public override int Read(byte[] array, int offset, int count) { array = default(byte[]); return default(int); }
+        public override System.Threading.Tasks.Task<int> ReadAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<int>); }
+        public override int ReadByte() { return default(int); }
+        public override long Seek(long offset, System.IO.SeekOrigin origin) { return default(long); }
+        public override void SetLength(long value) { }
+        public virtual void Unlock(long position, long length) { }
+        public override void Write(byte[] array, int offset, int count) { }
+        public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
+        public override void WriteByte(byte value) { }
+        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access) { }
+        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) { }
+        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize, bool isAsync) { }
+    }
     public abstract partial class FileSystemInfo
     {
         protected string FullPath;

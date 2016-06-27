@@ -4937,14 +4937,6 @@ namespace System.IO {
         public EndOfStreamException(string message) { }
         public EndOfStreamException(string message, System.Exception innerException) { }
     }
-
-    [System.FlagsAttribute]
-    public enum FileAccess
-    {
-        Read = 1,
-        ReadWrite = 3,
-        Write = 2,
-    }
     public partial class FileLoadException : System.IO.IOException
     {
         public FileLoadException() { }
@@ -4959,15 +4951,6 @@ namespace System.IO {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-    public enum FileMode
-    {
-        Append = 6,
-        Create = 2,
-        CreateNew = 1,
-        Open = 3,
-        OpenOrCreate = 4,
-        Truncate = 5,
-    }
     public partial class FileNotFoundException : System.IO.IOException
     {
         public FileNotFoundException() { }
@@ -4981,78 +4964,6 @@ namespace System.IO {
         public override string Message { get { return default(string); } }
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
-    }
-
-    [System.FlagsAttribute]
-    public enum FileOptions
-    {
-        Asynchronous = 1073741824,
-        DeleteOnClose = 67108864,
-        Encrypted = 16384,
-        None = 0,
-        RandomAccess = 268435456,
-        SequentialScan = 134217728,
-        WriteThrough = -2147483648,
-    }
-
-    [System.FlagsAttribute]
-    public enum FileShare
-    {
-        Delete = 4,
-        Inheritable = 16,
-        None = 0,
-        Read = 1,
-        ReadWrite = 3,
-        Write = 2,
-    }
-    public partial class FileStream : System.IO.Stream
-    {
-        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]
-        public FileStream(System.IntPtr handle, System.IO.FileAccess access) { }
-        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]
-        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle) { }
-        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access, int bufferSize) instead")]
-        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle, int bufferSize) { }
-        [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access, int bufferSize, bool isAsync) instead")]
-        public FileStream(System.IntPtr handle, System.IO.FileAccess access, bool ownsHandle, int bufferSize, bool isAsync) { }
-        public FileStream(string path, System.IO.FileMode mode) { }
-        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access) { }
-        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share) { }
-        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize) { }
-        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync) { }
-        public FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options) { }
-        public override bool CanRead { get { return default(bool); } }
-        public override bool CanSeek { get { return default(bool); } }
-        public override bool CanWrite { get { return default(bool); } }
-        [System.ObsoleteAttribute("Use SafeFileHandle instead")]
-        public virtual System.IntPtr Handle { get { return default(System.IntPtr); } }
-        public virtual bool IsAsync { get { return default(bool); } }
-        public override long Length { get { return default(long); } }
-        public string Name { get { return default(string); } }
-        public override long Position { get { return default(long); } set { } }
-        public virtual Microsoft.Win32.SafeHandles.SafeFileHandle SafeFileHandle { get { return default(Microsoft.Win32.SafeHandles.SafeFileHandle); } }
-        public override System.IAsyncResult BeginRead(byte[] array, int offset, int numBytes, System.AsyncCallback userCallback, object stateObject) { return default(System.IAsyncResult); }
-        public override System.IAsyncResult BeginWrite(byte[] array, int offset, int numBytes, System.AsyncCallback userCallback, object stateObject) { return default(System.IAsyncResult); }
-        protected override void Dispose(bool disposing) { }
-        public override int EndRead(System.IAsyncResult asyncResult) { return default(int); }
-        public override void EndWrite(System.IAsyncResult asyncResult) { }
-        ~FileStream() { }
-        public override void Flush() { }
-        public virtual void Flush(bool flushToDisk) { }
-        public override System.Threading.Tasks.Task FlushAsync(System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
-        public virtual void Lock(long position, long length) { }
-        public override int Read(byte[] array, int offset, int count) { array = default(byte[]); return default(int); }
-        public override System.Threading.Tasks.Task<int> ReadAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task<int>); }
-        public override int ReadByte() { return default(int); }
-        public override long Seek(long offset, System.IO.SeekOrigin origin) { return default(long); }
-        public override void SetLength(long value) { }
-        public virtual void Unlock(long position, long length) { }
-        public override void Write(byte[] array, int offset, int count) { }
-        public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken) { return default(System.Threading.Tasks.Task); }
-        public override void WriteByte(byte value) { }
-        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access) { }
-        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) { }
-        public FileStream(Microsoft.Win32.SafeHandles.SafeFileHandle handle, System.IO.FileAccess access, int bufferSize, bool isAsync) { }
     }
     public partial class IOException : System.SystemException
     {
@@ -5187,9 +5098,6 @@ namespace System.Reflection {
         public static System.Reflection.Assembly GetEntryAssembly() { return default(System.Reflection.Assembly); }
         public static System.Reflection.Assembly GetExecutingAssembly() { return default(System.Reflection.Assembly); }
         public virtual System.Type[] GetExportedTypes() { return default(System.Type[]); }
-        public virtual System.IO.FileStream GetFile(string name) { return default(System.IO.FileStream); }
-        public virtual System.IO.FileStream[] GetFiles() { return default(System.IO.FileStream[]); }
-        public virtual System.IO.FileStream[] GetFiles(bool getResourceModules) { return default(System.IO.FileStream[]); }
         public override int GetHashCode() { return default(int); }
         public System.Reflection.Module[] GetLoadedModules() { return default(System.Reflection.Module[]); }
         public virtual System.Reflection.Module[] GetLoadedModules(bool getResourceModules) { return default(System.Reflection.Module[]); }
@@ -6228,7 +6136,6 @@ namespace System.Reflection {
     public partial class StrongNameKeyPair : System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
     {
         public StrongNameKeyPair(byte[] keyPairArray) { }
-        public StrongNameKeyPair(System.IO.FileStream keyPairFile) { }
         protected StrongNameKeyPair(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public StrongNameKeyPair(string keyPairContainer) { }
         public byte[] PublicKey { get { return default(byte[]); } }

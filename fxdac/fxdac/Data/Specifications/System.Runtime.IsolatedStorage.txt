@@ -1,6 +1,8 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll
+/r:System.IO.FileSystem.Primitives.dll
+/r:System.IO.FileSystem.dll
 
 System.Security.Permissions.IsolatedStorageFilePermissionAttribute
 System.Security.Permissions.IsolatedStorageContainment

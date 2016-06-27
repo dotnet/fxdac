@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-
+/r:System.IO.FileSystem.Primitives.dll
 /r:System.Net.Primitives.dll
 
 System.Net.Sockets.IOControlCode

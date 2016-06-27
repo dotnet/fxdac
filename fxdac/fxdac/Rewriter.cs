@@ -84,6 +84,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         new FxDependency() { From="System.Runtime", To="System.Text.Encoding" },
 
         new FxDependency() { From="System.Runtime", To="System.Runtime.ConstrainedExecution.CriticalFinalizerObject" },
+        new FxDependency() { From="System.Runtime", To="System.IO.FileStream" },
 
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleSecurity" },
         new FxDependency() { From="System.Threading", To="System.Security.AccessControl.EventWaitHandleRights" },
@@ -307,10 +308,10 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         return base.VisitPropertyDeclaration(node);
     }
 
-    private bool DoesMethodDependOn(MethodDeclarationSyntax method, string dependecny)
+    private bool DoesMethodDependOn(MethodDeclarationSyntax method, string dependency)
     {
         var returnTypeName = method.ReturnType.ToString();
-        if (returnTypeName == dependecny) {
+        if (returnTypeName == dependency || returnTypeName == dependency + "[]") {
             return true;
         }
 
@@ -318,7 +319,7 @@ class FxdacSyntaxRewriter : CSharpSyntaxRewriter
         foreach (var parameter in parameters.Parameters) {
             var parameterType = parameter.Type;
             var parameterTypeName = parameterType!=null?parameter.Type.ToString():"";
-            if (parameterTypeName == dependecny) {
+            if (parameterTypeName == dependency) {
                 return true;
             }
         }
