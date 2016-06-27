@@ -482,39 +482,28 @@ System.Runtime.InteropServices.SafeBuffer
 
 // could be in extensions
 System.Progress`1
-System.AccessViolationException
-System.ApplicationId
-System.Base64FormattingOptions
 System.BitConverter
-System.ContextMarshalException
-System.ContextStaticAttribute
-System.Convert
+System.IServiceProvider
+System.Math
+System.Random
+System.StringComparer
+System.Runtime.MemoryFailPoint
+System.Configuration.Assemblies.AssemblyHash
+
+System.AccessViolationException
 System.DataMisalignedException
 System.DllNotFoundException
 System.DuplicateWaitObjectException
 System.EntryPointNotFoundException
-System.Environment
-System.EnvironmentVariableTarget
 System.ExecutionEngineException
-
 System.InsufficientMemoryException
-System.IServiceProvider
-System.LoaderOptimizationAttribute
-System.Math
-System.MulticastNotSupportedException
-
 System.NotFiniteNumberException
-System.OperatingSystem
-System.PlatformID
-System.Random
-System.RuntimeArgumentHandle
-System.StackOverflowException
-System.STAThreadAttribute
-System.StringComparer
 System.TypeUnloadedException
-System.Runtime.MemoryFailPoint
+System.StackOverflowException
+
+System.LoaderOptimizationAttribute
 System.Runtime.AssemblyTargetedPatchBandAttribute
-System.Configuration.Assemblies.AssemblyHash
+System.STAThreadAttribute
 
 // added because it seemed like the right thing to do:
 Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
