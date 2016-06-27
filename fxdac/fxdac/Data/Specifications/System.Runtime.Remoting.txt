@@ -5,6 +5,8 @@
 /r:System.Security.Principal.dll 
 
 System.Runtime.Hosting.ActivationArguments
+System.Threading.HostExecutionContext
+System.Threading.HostExecutionContextManager
 
 System.AppDomain
 System.AppDomainInitializer

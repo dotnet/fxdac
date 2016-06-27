@@ -6795,23 +6795,6 @@ namespace System.Threading {
         protected virtual void Dispose(bool disposing) { }
     }
     public delegate void ContextCallback(object state);
-    public partial class HostExecutionContext : System.IDisposable
-    {
-        public HostExecutionContext() { }
-        public HostExecutionContext(object state) { }
-        protected internal object State { get { return default(object); } set { } }
-        public virtual System.Threading.HostExecutionContext CreateCopy() { return default(System.Threading.HostExecutionContext); }
-        public void Dispose() { }
-        public virtual void Dispose(bool disposing) { }
-    }
-
-    public partial class HostExecutionContextManager
-    {
-        public HostExecutionContextManager() { }
-        public virtual System.Threading.HostExecutionContext Capture() { return default(System.Threading.HostExecutionContext); }
-        public virtual void Revert(object previousState) { }
-        public virtual object SetHostExecutionContext(System.Threading.HostExecutionContext hostExecutionContext) { return default(object); }
-    }
 
     public enum LazyThreadSafetyMode
     {

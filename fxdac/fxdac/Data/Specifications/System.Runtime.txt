@@ -418,9 +418,6 @@ System.ResolveEventHandler
 System.Runtime.CompilerServices.CompilationRelaxations
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 
-
-System.Threading.HostExecutionContext
-System.Threading.HostExecutionContextManager
 System.UnhandledExceptionEventArgs
 System.UnhandledExceptionEventHandler
 System.UriPartial
