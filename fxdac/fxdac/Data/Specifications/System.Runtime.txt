@@ -83,11 +83,6 @@ System.Globalization.UnicodeCategory
 System.Runtime.CompilerServices.MethodCodeType
 System.Runtime.CompilerServices.MethodImplAttribute
 System.Runtime.CompilerServices.MethodImplOptions
-System.Runtime.InteropServices.ClassInterfaceAttribute
-System.Runtime.InteropServices.ClassInterfaceType
-System.Runtime.InteropServices.ComVisibleAttribute
-System.Runtime.InteropServices.DispIdAttribute
-System.Runtime.InteropServices.GuidAttribute
 System.Security.SecuritySafeCriticalAttribute
 System.SystemException
 
@@ -567,4 +562,5 @@ System.Security.PartialTrustVisibilityLevel
 
 System.Diagnostics.Stopwatch
 System.ComponentModel.Win32Exception
+System.Runtime.InteropServices.ComVisibleAttribute
 

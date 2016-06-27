@@ -92,6 +92,20 @@ namespace System.Runtime.InteropServices {
         Winapi = 1,
     }
 
+    [System.AttributeUsageAttribute((System.AttributeTargets)(5), Inherited = false)]
+    public sealed partial class ClassInterfaceAttribute : System.Attribute
+    {
+        public ClassInterfaceAttribute(short classInterfaceType) { }
+        public ClassInterfaceAttribute(System.Runtime.InteropServices.ClassInterfaceType classInterfaceType) { }
+        public System.Runtime.InteropServices.ClassInterfaceType Value { get { return default(System.Runtime.InteropServices.ClassInterfaceType); } }
+    }
+    public enum ClassInterfaceType
+    {
+        AutoDispatch = 1,
+        AutoDual = 2,
+        None = 0,
+    }
+
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
     public sealed partial class CoClassAttribute : System.Attribute
     {
@@ -205,6 +219,13 @@ namespace System.Runtime.InteropServices {
         DESCKIND_NONE = 0,
         DESCKIND_TYPECOMP = 3,
         DESCKIND_VARDESC = 2,
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(960), Inherited = false)]
+    public sealed partial class DispIdAttribute : System.Attribute
+    {
+        public DispIdAttribute(int dispId) { }
+        public int Value { get { return default(int); } }
     }
 
     [System.ObsoleteAttribute]
@@ -349,6 +370,13 @@ namespace System.Runtime.InteropServices {
         Pinned = 3,
         Weak = 0,
         WeakTrackResurrection = 1,
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(5149), Inherited = false)]
+    public sealed partial class GuidAttribute : System.Attribute
+    {
+        public GuidAttribute(string guid) { }
+        public string Value { get { return default(string); } }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct HandleRef

@@ -173,3 +173,8 @@ System.Runtime.InteropServices.ComTypes.STATDATA
 System.Runtime.InteropServices.ComTypes.STGMEDIUM
 System.Runtime.InteropServices.ComTypes.TYMED
 
+System.Runtime.InteropServices.ClassInterfaceAttribute
+System.Runtime.InteropServices.ClassInterfaceType
+System.Runtime.InteropServices.DispIdAttribute
+System.Runtime.InteropServices.GuidAttribute
+
