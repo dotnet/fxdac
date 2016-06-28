@@ -406,8 +406,8 @@ System.WeakReference
 System.WeakReference`1
 
 // System.Runtime types in turn bring the following types from Xamarin
-System.ActivationContext
-System.ApplicationIdentity
+
+
 System.AssemblyLoadEventArgs
 System.AssemblyLoadEventHandler
 System.GCNotificationStatus
@@ -538,5 +538,16 @@ System.Diagnostics.Stopwatch
 System.ComponentModel.Win32Exception
 System.Runtime.InteropServices.ComVisibleAttribute
 
+// Added on 6-29-2016
+System.TimeZoneNotFoundException
 
+System.Diagnostics.Debug
 
+System.Collections.Generic.Stack`1
+System.Collections.Generic.Queue`1
+System.Collections.Generic.HashSet`1
+
+System.ComponentModel.CancelEventArgs
+System.ComponentModel.CancelEventHandler
+
+System.DBNull

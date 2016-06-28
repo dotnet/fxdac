@@ -156,6 +156,12 @@ namespace System.ComponentModel {
         public void Dispose() { }
         public void RemoveHandler(object key, System.Delegate value) { }
     }
+
+    public partial interface IChangeTracking
+    {
+        bool IsChanged { get; }
+        void AcceptChanges();
+    }
     public partial interface IComponent : System.IDisposable
     {
         System.ComponentModel.ISite Site { get; set; }
@@ -167,6 +173,13 @@ namespace System.ComponentModel {
         void Add(System.ComponentModel.IComponent component);
         void Add(System.ComponentModel.IComponent component, string name);
         void Remove(System.ComponentModel.IComponent component);
+    }
+
+    public partial interface IEditableObject
+    {
+        void BeginEdit();
+        void CancelEdit();
+        void EndEdit();
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
@@ -187,6 +200,11 @@ namespace System.ComponentModel {
     {
         public InitializationEventAttribute(string eventName) { }
         public string EventName { get { return default(string); } }
+    }
+
+    public partial interface IRevertibleChangeTracking : System.ComponentModel.IChangeTracking
+    {
+        void RejectChanges();
     }
     public partial interface ISite : System.IServiceProvider
     {

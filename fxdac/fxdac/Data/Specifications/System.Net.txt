@@ -7,7 +7,6 @@
 /r:System.Net.Security.dll
 /r:System.Security.Permissions.dll
 /r:System.Collections.NonGeneric.dll
-/r:System.Security.Principal.dll
 
 System.Net.AuthenticationManager
 System.Net.Authorization
@@ -35,9 +34,6 @@ System.Net.NetworkAccess
 System.Net.SecurityProtocolType
 
 System.Net.ServicePointManager
-
-System.Net.SocketPermission
-System.Net.SocketPermissionAttribute
 
 System.Net.TransportType
 

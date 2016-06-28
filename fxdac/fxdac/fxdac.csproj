@@ -220,7 +220,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\report.xml" />
+    <None Include="Data\report.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Data\Specifications\System.Reflection.Primitives.txt" />
     <None Include="Data\Specifications\System.Xml.XDocument.txt" />
     <None Include="Data\Specifications\System.Xml.XmlDocument.txt" />
@@ -276,7 +278,6 @@
     <None Include="Data\Specifications\System.Runtime.Handles.txt" />
     <None Include="Data\Specifications\System.Collections.NonGeneric.txt" />
     <None Include="Data\Specifications\System.Collections.Specialized.txt" />
-    <None Include="Data\Specifications\System.ComponentModel.txt" />
     <None Include="Data\Specifications\System.ComponentModel.TypeConverter.txt" />
     <None Include="Data\Specifications\System.CodeDom.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Contracts.txt" />
@@ -313,16 +314,14 @@
     <None Include="Data\Specifications\System.IO.Compression.txt" />
     <None Include="Data\Specifications\System.IO.MemoryMappedFiles.txt" />
     <None Include="Data\Specifications\System.Linq.txt" />
-    <None Include="Data\Specifications\System.Security.Cryptography.txt" />
     <None Include="Data\Specifications\System.Net.txt" />
     <None Include="Data\Specifications\System.Deployment.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.txt" />
     <None Include="Data\Specifications\System.Timer.txt" />
-    <None Include="Data\Specifications\System.Text.Encoding.Extensions.txt" />
     <None Include="Data\Specifications\System.Runtime.Versioning.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Tracing.txt" />
     <None Include="Data\Specifications\System.Resources.ResourceManager.txt" />
-    <None Include="Data\Specifications\System.Threading.Security.txt" />
+    <None Include="Data\Specifications\System.Threading.WindowsForms.txt" />
     <None Include="Data\Specifications\System.Threading.ThreadPool.txt" />
     <None Include="Data\Specifications\System.Threading.Tasks.Parallel.txt" />
     <None Include="Data\Specifications\System.Threading.Timer.txt" />
@@ -334,7 +333,6 @@
     <None Include="Data\Specifications\System.Console.txt" />
     <None Include="Data\Specifications\System.Globalization.txt" />
     <None Include="Data\Specifications\System.Runtime.InteropServices.txt" />
-    <None Include="Data\Specifications\Microsoft.Win32.SafeHandles.txt" />
     <None Include="Data\Specifications\System.Runtime.Remoting.txt" />
     <None Include="Data\Specifications\Microsoft.Win32.Registry.txt" />
     <None Include="Data\Specifications\System.Runtime.txt" />
@@ -353,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Specifications\System.Runtime.CompilerServices.VisualC.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Specifications\System.Globalization.TimeZone.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

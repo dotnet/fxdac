@@ -1,15 +1,18 @@
 ﻿/r:System.Runtime.dll
 
+System.Collections.ReadOnlyCollectionBase
+System.Collections.CollectionBase
+System.Collections.DictionaryBase
+
 System.Collections.Hashtable
 System.Collections.ArrayList
+System.Collections.Stack
+System.Collections.Queue
 
 System.Collections.CaseInsensitiveComparer
-System.Collections.CollectionBase
 System.Collections.Comparer
-System.Collections.DictionaryBase
-System.Collections.Queue
-System.Collections.ReadOnlyCollectionBase
+
 System.Collections.SortedList
-System.Collections.Stack
+
 System.Collections.Specialized.CollectionsUtil
 

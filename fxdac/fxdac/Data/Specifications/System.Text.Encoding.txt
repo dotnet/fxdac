@@ -22,3 +22,10 @@ System.Text.EncoderFallbackException
 System.Text.EncoderReplacementFallback
 System.Text.EncoderReplacementFallbackBuffer
 
+// could be in extensions
+System.Text.ASCIIEncoding
+System.Text.UnicodeEncoding
+System.Text.UTF32Encoding
+System.Text.UTF7Encoding
+System.Text.UTF8Encoding
+

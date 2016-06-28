@@ -4,3 +4,5 @@ System.Runtime.InteropServices.CriticalHandle
 System.IO.HandleInheritability
 System.Threading.WaitHandleExtensions
 
+Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid
+Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid

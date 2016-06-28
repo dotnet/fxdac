@@ -39,22 +39,6 @@ namespace System {
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
 
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in T8>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
-    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
-    {
-        internal ActivationContext() { }
-        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
-        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
-        public void Dispose() { }
-        ~ActivationContext() { }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public enum ContextForm
-        {
-            Loose = 0,
-            StoreBounded = 1,
-        }
-    }
     public static partial class Activator     {
         public static object CreateInstance(System.Type type) { return default(object); }
         public static object CreateInstance(System.Type type, bool nonPublic) { return default(object); }
@@ -89,14 +73,6 @@ namespace System {
         protected ApplicationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public ApplicationException(string message) { }
         public ApplicationException(string message, System.Exception innerException) { }
-    }
-    public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
-    {
-        public ApplicationIdentity(string applicationIdentityFullName) { }
-        public string CodeBase { get { return default(string); } }
-        public string FullName { get { return default(string); } }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public override string ToString() { return default(string); }
     }
     public partial class ArgumentException : System.SystemException, System.Runtime.Serialization.ISerializable
     {
@@ -819,6 +795,30 @@ namespace System {
         Thursday = 4,
         Tuesday = 2,
         Wednesday = 3,
+    }
+    public sealed partial class DBNull : System.IConvertible, System.Runtime.Serialization.ISerializable
+    {
+        internal DBNull() { }
+        public static readonly System.DBNull Value;
+        public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
+        bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
+        byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
+        char System.IConvertible.ToChar(System.IFormatProvider provider) { return default(char); }
+        System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider provider) { return default(System.DateTime); }
+        decimal System.IConvertible.ToDecimal(System.IFormatProvider provider) { return default(decimal); }
+        double System.IConvertible.ToDouble(System.IFormatProvider provider) { return default(double); }
+        short System.IConvertible.ToInt16(System.IFormatProvider provider) { return default(short); }
+        int System.IConvertible.ToInt32(System.IFormatProvider provider) { return default(int); }
+        long System.IConvertible.ToInt64(System.IFormatProvider provider) { return default(long); }
+        sbyte System.IConvertible.ToSByte(System.IFormatProvider provider) { return default(sbyte); }
+        float System.IConvertible.ToSingle(System.IFormatProvider provider) { return default(float); }
+        object System.IConvertible.ToType(System.Type type, System.IFormatProvider provider) { return default(object); }
+        ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
+        uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
+        ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
+        public override string ToString() { return default(string); }
+        public string ToString(System.IFormatProvider provider) { return default(string); }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Decimal : System.IComparable, System.IComparable<decimal>, System.IConvertible, System.IEquatable<decimal>, System.IFormattable, System.Runtime.Serialization.IDeserializationCallback
@@ -2443,6 +2443,13 @@ namespace System {
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
+    public partial class TimeZoneNotFoundException : System.Exception
+    {
+        public TimeZoneNotFoundException() { }
+        protected TimeZoneNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public TimeZoneNotFoundException(string message) { }
+        public TimeZoneNotFoundException(string message, System.Exception innerException) { }
+    }
 
     public static partial class Tuple
     {
@@ -3678,6 +3685,112 @@ namespace System.Collections.Generic {
         void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other);
         void UnionWith(System.Collections.Generic.IEnumerable<T> other);
     }
+    public partial class Queue<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Queue() { }
+        public Queue(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Queue(int capacity) { }
+        public int Count { get { return default(int); } }
+        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
+        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public T Dequeue() { return default(T); }
+        public void Enqueue(T item) { }
+        public System.Collections.Generic.Queue<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Queue<T>.Enumerator); }
+        public T Peek() { return default(T); }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public T[] ToArray() { return default(T[]); }
+        public void TrimExcess() { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
+    public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Stack() { }
+        public Stack(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Stack(int capacity) { }
+        public int Count { get { return default(int); } }
+        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
+        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public System.Collections.Generic.Stack<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Stack<T>.Enumerator); }
+        public T Peek() { return default(T); }
+        public T Pop() { return default(T); }
+        public void Push(T item) { }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        void System.Collections.ICollection.CopyTo(System.Array array, int arrayIndex) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public T[] ToArray() { return default(T[]); }
+        public void TrimExcess() { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
+    public partial class HashSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
+    {
+        public HashSet() { }
+        public HashSet(System.Collections.Generic.IEnumerable<T> collection) { }
+        public HashSet(System.Collections.Generic.IEnumerable<T> collection, System.Collections.Generic.IEqualityComparer<T> comparer) { }
+        public HashSet(System.Collections.Generic.IEqualityComparer<T> comparer) { }
+        protected HashSet(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public System.Collections.Generic.IEqualityComparer<T> Comparer { get { return default(System.Collections.Generic.IEqualityComparer<T>); } }
+        public int Count { get { return default(int); } }
+        bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
+        public bool Add(T item) { return default(bool); }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array) { }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public void CopyTo(T[] array, int arrayIndex, int count) { }
+        public static System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>> CreateSetComparer() { return default(System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>>); }
+        public void ExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
+        public System.Collections.Generic.HashSet<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.HashSet<T>.Enumerator); }
+        public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public void IntersectWith(System.Collections.Generic.IEnumerable<T> other) { }
+        public bool IsProperSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsProperSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public virtual void OnDeserialization(object sender) { }
+        public bool Overlaps(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool Remove(T item) { return default(bool); }
+        public int RemoveWhere(System.Predicate<T> match) { return default(int); }
+        public bool SetEquals(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
+        void System.Collections.Generic.ICollection<T>.Add(T item) { }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public void TrimExcess() { }
+        public void UnionWith(System.Collections.Generic.IEnumerable<T> other) { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
 } // end of System.Collections.Generic
 namespace System.Collections.ObjectModel {
     public partial class Collection<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IList<T>, System.Collections.Generic.IReadOnlyCollection<T>, System.Collections.Generic.IReadOnlyList<T>, System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
@@ -3860,6 +3973,71 @@ namespace System.Diagnostics {
         public string ProxyTypeName { get { return default(string); } }
         public System.Type Target { get { return default(System.Type); } set { } }
         public string TargetTypeName { get { return default(string); } set { } }
+    }
+
+    public static partial class Debug
+    {
+        public static bool AutoFlush { get { return default(bool); } set { } }
+        public static int IndentLevel { get { return default(int); } set { } }
+        public static int IndentSize { get { return default(int); } set { } }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Assert(bool condition) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Assert(bool condition, string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Assert(bool condition, string message, string detailMessage) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Assert(bool condition, string message, string detailMessageFormat, params object[] args) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Close() { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Fail(string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Fail(string message, string detailMessage) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Flush() { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Indent() { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Print(string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Print(string format, params object[] args) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Unindent() { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Write(object value) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Write(object value, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Write(string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void Write(string message, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteIf(bool condition, object value) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteIf(bool condition, object value, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteIf(bool condition, string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteIf(bool condition, string message, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLine(object value) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLine(object value, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLine(string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLine(string format, params object[] args) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLine(string message, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLineIf(bool condition, object value) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLineIf(bool condition, object value, string category) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLineIf(bool condition, string message) { }
+        [System.Diagnostics.ConditionalAttribute("DEBUG")]
+        public static void WriteLineIf(bool condition, string message, string category) { }
     }
 
     public partial class Stopwatch
@@ -7061,6 +7239,13 @@ namespace System.CodeDom.Compiler {
     }
 } // end of System.CodeDom.Compiler
 namespace System.ComponentModel {
+    public partial class CancelEventArgs : System.EventArgs
+    {
+        public CancelEventArgs() { }
+        public CancelEventArgs(bool cancel) { }
+        public bool Cancel { get { return default(bool); } set { } }
+    }
+    public delegate void CancelEventHandler(object sender, System.ComponentModel.CancelEventArgs e);
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767))]
     public partial class DefaultValueAttribute : System.Attribute

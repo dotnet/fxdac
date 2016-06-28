@@ -1,6 +1,34 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.Net {
 
+    public sealed partial class SocketPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
+    {
+        public const int AllPorts = -1;
+        public SocketPermission(System.Net.NetworkAccess access, System.Net.TransportType transport, string hostName, int portNumber) { }
+        public SocketPermission(System.Security.Permissions.PermissionState state) { }
+        public System.Collections.IEnumerator AcceptList { get { return default(System.Collections.IEnumerator); } }
+        public System.Collections.IEnumerator ConnectList { get { return default(System.Collections.IEnumerator); } }
+        public void AddPermission(System.Net.NetworkAccess access, System.Net.TransportType transport, string hostName, int portNumber) { }
+        public override System.Security.IPermission Copy() { return default(System.Security.IPermission); }
+        public override void FromXml(System.Security.SecurityElement securityElement) { }
+        public override System.Security.IPermission Intersect(System.Security.IPermission target) { return default(System.Security.IPermission); }
+        public override bool IsSubsetOf(System.Security.IPermission target) { return default(bool); }
+        public bool IsUnrestricted() { return default(bool); }
+        public override System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
+        public override System.Security.IPermission Union(System.Security.IPermission target) { return default(System.Security.IPermission); }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(109), AllowMultiple = true, Inherited = false)]
+    public sealed partial class SocketPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute
+    {
+        public SocketPermissionAttribute(System.Security.Permissions.SecurityAction action) : base(default(System.Security.Permissions.SecurityAction)) { }
+        public string Access { get { return default(string); } set { } }
+        public string Host { get { return default(string); } set { } }
+        public string Port { get { return default(string); } set { } }
+        public string Transport { get { return default(string); } set { } }
+        public override System.Security.IPermission CreatePermission() { return default(System.Security.IPermission); }
+    }
+
     public sealed partial class WebPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission
     {
         public WebPermission() { }

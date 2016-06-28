@@ -1,5 +1,21 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
+    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
+    {
+        internal ActivationContext() { }
+        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
+        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
+        public void Dispose() { }
+        ~ActivationContext() { }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public enum ContextForm
+        {
+            Loose = 0,
+            StoreBounded = 1,
+        }
+    }
     public sealed partial class ApplicationId
     {
         public ApplicationId(byte[] publicKeyToken, string name, System.Version version, string processorArchitecture, string culture) { }
@@ -11,6 +27,14 @@ namespace System {
         public System.ApplicationId Copy() { return default(System.ApplicationId); }
         public override bool Equals(object o) { return default(bool); }
         public override int GetHashCode() { return default(int); }
+        public override string ToString() { return default(string); }
+    }
+    public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
+    {
+        public ApplicationIdentity(string applicationIdentityFullName) { }
+        public string CodeBase { get { return default(string); } }
+        public string FullName { get { return default(string); } }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
 
