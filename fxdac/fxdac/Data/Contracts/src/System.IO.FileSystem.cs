@@ -1,4 +1,12 @@
 [assembly:System.CLSCompliant(true)]
+namespace Microsoft.Win32.SafeHandles {
+    public sealed partial class SafeFileHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
+    {
+        public SafeFileHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
+        protected override bool ReleaseHandle() { return default(bool); }
+        public override bool IsInvalid { get { return default(bool); } }
+    }
+} // end of Microsoft.Win32.SafeHandles
 namespace System.IO {
     public static partial class Directory
     {
@@ -164,6 +172,18 @@ namespace System.IO {
         public System.IO.StreamReader OpenText() { return default(System.IO.StreamReader); }
         public System.IO.FileStream OpenWrite() { return default(System.IO.FileStream); }
         public override string ToString() { return default(string); }
+    }
+
+    [System.FlagsAttribute]
+    public enum FileOptions
+    {
+        Asynchronous = 1073741824,
+        DeleteOnClose = 67108864,
+        Encrypted = 16384,
+        None = 0,
+        RandomAccess = 268435456,
+        SequentialScan = 134217728,
+        WriteThrough = -2147483648,
     }
     public partial class FileStream : System.IO.Stream
     {

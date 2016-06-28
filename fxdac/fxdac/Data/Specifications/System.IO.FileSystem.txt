@@ -6,8 +6,9 @@
 /r:System.Security.Principal.Windows.dll
 /r:System.Text.Encoding.dll
 
-
+System.IO.FileOptions
 System.IO.FileStream
+Microsoft.Win32.SafeHandles.SafeFileHandle
 
 System.IO.FileSystemAclExtensions
 System.Security.AccessControl.DirectoryObjectSecurity

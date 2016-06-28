@@ -40,18 +40,6 @@ namespace System.IO {
     }
 
     [System.FlagsAttribute]
-    public enum FileOptions
-    {
-        Asynchronous = 1073741824,
-        DeleteOnClose = 67108864,
-        Encrypted = 16384,
-        None = 0,
-        RandomAccess = 268435456,
-        SequentialScan = 134217728,
-        WriteThrough = -2147483648,
-    }
-
-    [System.FlagsAttribute]
     public enum FileShare
     {
         Delete = 4,

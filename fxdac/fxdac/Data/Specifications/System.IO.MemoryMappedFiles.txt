@@ -4,6 +4,7 @@
 /r:System.IO.UnmanagedMemoryStream.dll
 /r:System.Runtime.Handles.dll
 /r:System.Security.AccessControl.dll
+/r:System.Runtime.InteropServices.dll
 
 System.IO.MemoryMappedFiles.MemoryMappedFile
 System.IO.MemoryMappedFiles.MemoryMappedFileAccess

@@ -1,11 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace Microsoft.Win32.SafeHandles {
-    public sealed partial class SafeFileHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
-    {
-        public SafeFileHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
-        protected override bool ReleaseHandle() { return default(bool); }
-        public override bool IsInvalid { get { return default(bool); } }
-    }
     public abstract partial class SafeHandleMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle
     {
         protected SafeHandleMinusOneIsInvalid(bool ownsHandle) { }
@@ -610,12 +604,6 @@ namespace System {
     public delegate int Comparison<in T>(T x, T y);
 
     public delegate TOutput Converter<in TInput, out TOutput>(TInput input);
-    public sealed partial class DataMisalignedException : System.SystemException
-    {
-        public DataMisalignedException() { }
-        public DataMisalignedException(string message) { }
-        public DataMisalignedException(string message, System.Exception innerException) { }
-    }
 
     public partial struct DateTime : System.IComparable, System.IComparable<System.DateTime>, System.IConvertible, System.IEquatable<System.DateTime>, System.IFormattable, System.Runtime.Serialization.ISerializable
     {
@@ -1007,13 +995,6 @@ namespace System {
         protected DivideByZeroException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public DivideByZeroException(string message) { }
         public DivideByZeroException(string message, System.Exception innerException) { }
-    }
-    public partial class DllNotFoundException : System.TypeLoadException
-    {
-        public DllNotFoundException() { }
-        protected DllNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public DllNotFoundException(string message) { }
-        public DllNotFoundException(string message, System.Exception inner) { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Double : System.IComparable, System.IComparable<double>, System.IConvertible, System.IEquatable<double>, System.IFormattable
@@ -4372,33 +4353,6 @@ namespace System.IO {
         public IOException(string message, System.Exception innerException) { }
         public IOException(string message, int hresult) { }
     }
-    public static partial class Path
-    {
-        public static readonly char AltDirectorySeparatorChar;
-        public static readonly char DirectorySeparatorChar;
-        [System.ObsoleteAttribute("see GetInvalidPathChars and GetInvalidFileNameChars methods.")]
-        public static readonly char[] InvalidPathChars;
-        public static readonly char PathSeparator;
-        public static readonly char VolumeSeparatorChar;
-        public static string ChangeExtension(string path, string extension) { return default(string); }
-        public static string Combine(string path1, string path2) { return default(string); }
-        public static string Combine(string path1, string path2, string path3) { return default(string); }
-        public static string Combine(string path1, string path2, string path3, string path4) { return default(string); }
-        public static string Combine(params string[] paths) { return default(string); }
-        public static string GetDirectoryName(string path) { return default(string); }
-        public static string GetExtension(string path) { return default(string); }
-        public static string GetFileName(string path) { return default(string); }
-        public static string GetFileNameWithoutExtension(string path) { return default(string); }
-        public static string GetFullPath(string path) { return default(string); }
-        public static char[] GetInvalidFileNameChars() { return default(char[]); }
-        public static char[] GetInvalidPathChars() { return default(char[]); }
-        public static string GetPathRoot(string path) { return default(string); }
-        public static string GetRandomFileName() { return default(string); }
-        public static string GetTempFileName() { return default(string); }
-        public static string GetTempPath() { return default(string); }
-        public static bool HasExtension(string path) { return default(bool); }
-        public static bool IsPathRooted(string path) { return default(bool); }
-    }
     public partial class PathTooLongException : System.IO.IOException
     {
         public PathTooLongException() { }
@@ -5716,12 +5670,6 @@ namespace System.Reflection {
     }
 } // end of System.Reflection
 namespace System.Runtime {
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    public sealed partial class AssemblyTargetedPatchBandAttribute : System.Attribute
-    {
-        public AssemblyTargetedPatchBandAttribute(string targetedPatchBand) { }
-        public string TargetedPatchBand { get { return default(string); } }
-    }
 
     public enum GCLargeObjectHeapCompactionMode
     {
@@ -5749,13 +5697,6 @@ namespace System.Runtime {
         public MemoryFailPoint(int sizeInMegabytes) { }
         public void Dispose() { }
         ~MemoryFailPoint() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(96), AllowMultiple = false, Inherited = false)]
-    public sealed partial class TargetedPatchingOptOutAttribute : System.Attribute
-    {
-        public TargetedPatchingOptOutAttribute(string reason) { }
-        public string Reason { get { return default(string); } }
     }
 } // end of System.Runtime
 namespace System.Runtime.CompilerServices {
@@ -6213,19 +6154,6 @@ namespace System.Runtime.InteropServices {
         Unicode = 3,
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
-    public sealed partial class ComDefaultInterfaceAttribute : System.Attribute
-    {
-        public ComDefaultInterfaceAttribute(System.Type defaultInterface) { }
-        public System.Type Value { get { return default(System.Type); } }
-    }
-    public enum ComInterfaceType
-    {
-        InterfaceIsDual = 0,
-        InterfaceIsIDispatch = 2,
-        InterfaceIsIUnknown = 1,
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(5597), Inherited = false)]
     public sealed partial class ComVisibleAttribute : System.Attribute
     {
@@ -6248,14 +6176,6 @@ namespace System.Runtime.InteropServices {
         public FieldOffsetAttribute(int offset) { }
         public int Value { get { return default(int); } }
     }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    public sealed partial class InterfaceTypeAttribute : System.Attribute
-    {
-        public InterfaceTypeAttribute(short interfaceType) { }
-        public InterfaceTypeAttribute(System.Runtime.InteropServices.ComInterfaceType interfaceType) { }
-        public System.Runtime.InteropServices.ComInterfaceType Value { get { return default(System.Runtime.InteropServices.ComInterfaceType); } }
-    }
     public enum LayoutKind
     {
         Auto = 3,
@@ -6267,31 +6187,6 @@ namespace System.Runtime.InteropServices {
     public sealed partial class OutAttribute : System.Attribute
     {
         public OutAttribute() { }
-    }
-
-    public abstract partial class SafeBuffer : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid, System.IDisposable
-    {
-        protected SafeBuffer(bool ownsHandle) : base(default(bool)) { }
-        [System.CLSCompliantAttribute(false)]
-        public ulong ByteLength { get { return default(ulong); } }
-        [System.CLSCompliantAttribute(false)]
-        public unsafe void AcquirePointer(ref byte* pointer) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize(uint numElements, uint sizeOfEachElement) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize(ulong numBytes) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize<T>(uint numElements) where T : struct { }
-        [System.CLSCompliantAttribute(false)]
-        public T Read<T>(ulong byteOffset) where T : struct { return default(T); }
-        [System.CLSCompliantAttribute(false)]
-        public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-        public void ReleasePointer() { }
-        [System.CLSCompliantAttribute(false)]
-        public void Write<T>(ulong byteOffset, T value) where T : struct { }
-        [System.CLSCompliantAttribute(false)]
-        public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-        public override bool IsInvalid { get { return default(bool); } }
     }
     public abstract partial class SafeHandle :System.IDisposable
     {

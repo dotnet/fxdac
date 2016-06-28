@@ -691,6 +691,50 @@ namespace System {
         protected internal virtual string Resolve(System.Uri baseUri, System.Uri relativeUri, out System.UriFormatException parsingError) { parsingError = default(System.UriFormatException); return default(string); }
     }
 } // end of System
+namespace System.IO {
+    public static partial class Path
+    {
+        public static readonly char AltDirectorySeparatorChar;
+        public static readonly char DirectorySeparatorChar;
+        [System.ObsoleteAttribute("see GetInvalidPathChars and GetInvalidFileNameChars methods.")]
+        public static readonly char[] InvalidPathChars;
+        public static readonly char PathSeparator;
+        public static readonly char VolumeSeparatorChar;
+        public static string ChangeExtension(string path, string extension) { return default(string); }
+        public static string Combine(string path1, string path2) { return default(string); }
+        public static string Combine(string path1, string path2, string path3) { return default(string); }
+        public static string Combine(string path1, string path2, string path3, string path4) { return default(string); }
+        public static string Combine(params string[] paths) { return default(string); }
+        public static string GetDirectoryName(string path) { return default(string); }
+        public static string GetExtension(string path) { return default(string); }
+        public static string GetFileName(string path) { return default(string); }
+        public static string GetFileNameWithoutExtension(string path) { return default(string); }
+        public static string GetFullPath(string path) { return default(string); }
+        public static char[] GetInvalidFileNameChars() { return default(char[]); }
+        public static char[] GetInvalidPathChars() { return default(char[]); }
+        public static string GetPathRoot(string path) { return default(string); }
+        public static string GetRandomFileName() { return default(string); }
+        public static string GetTempFileName() { return default(string); }
+        public static string GetTempPath() { return default(string); }
+        public static bool HasExtension(string path) { return default(bool); }
+        public static bool IsPathRooted(string path) { return default(bool); }
+    }
+} // end of System.IO
+namespace System.Runtime {
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
+    public sealed partial class AssemblyTargetedPatchBandAttribute : System.Attribute
+    {
+        public AssemblyTargetedPatchBandAttribute(string targetedPatchBand) { }
+        public string TargetedPatchBand { get { return default(string); } }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(96), AllowMultiple = false, Inherited = false)]
+    public sealed partial class TargetedPatchingOptOutAttribute : System.Attribute
+    {
+        public TargetedPatchingOptOutAttribute(string reason) { }
+        public string Reason { get { return default(string); } }
+    }
+} // end of System.Runtime
 namespace System.Net {
 
     public static partial class WebUtility
