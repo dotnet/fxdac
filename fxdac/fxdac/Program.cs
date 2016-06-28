@@ -23,11 +23,11 @@ static class Program
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
     internal static bool s_logOrphanedTypes = true; // Orphaned types are types in the specifications that don't exist in master source.
-    internal static bool s_logValidMoves = false;
+    internal static bool s_logValidMoves = true;
     internal static bool s_logTypesNotInCoreFx = false;
     internal static bool s_logTypesNotInMasterSources = false;
     internal static bool s_logMissingContracts = false;
-    internal static bool s_logAddedContracts = false;
+    internal static bool s_logAddedContracts = true;
     internal static bool s_logExcludedWarnings = false;
 
     static void Main(string[] args)

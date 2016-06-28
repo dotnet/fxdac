@@ -29,3 +29,6 @@ System.UriIdnScope
 // from corefx
 System.Runtime.Versioning.FrameworkName
 
+System.Runtime.AssemblyTargetedPatchBandAttribute
+System.Runtime.TargetedPatchingOptOutAttribute
+System.IO.Path

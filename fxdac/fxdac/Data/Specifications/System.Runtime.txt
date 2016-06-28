@@ -192,7 +192,7 @@ System.Type
 System.Version
 
 // Xamarin
-Microsoft.Win32.SafeHandles.SafeFileHandle
+
 System.CharEnumerator
 System.Collections.IHashCodeProvider
 System.Configuration.Assemblies.AssemblyVersionCompatibility
@@ -215,9 +215,6 @@ System.Reflection.PortableExecutableKinds
 System.Reflection.StrongNameKeyPair
 System.ResolveEventArgs
 System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
-System.Runtime.InteropServices.ComDefaultInterfaceAttribute
-System.Runtime.InteropServices.ComInterfaceType
-System.Runtime.InteropServices.InterfaceTypeAttribute
 
 System.Runtime.Serialization.IDeserializationCallback
 System.Runtime.Serialization.IFormatterConverter
@@ -230,7 +227,7 @@ System.Runtime.Serialization.SerializationInfo
 System.Runtime.Serialization.SerializationInfoEnumerator
 System.Runtime.Serialization.StreamingContext
 System.Runtime.Serialization.StreamingContextStates
-System.Runtime.TargetedPatchingOptOutAttribute
+
 
 System.Text.NormalizationForm
 
@@ -454,7 +451,7 @@ System.Runtime.CompilerServices.StringFreezingAttribute
 System.Runtime.CompilerServices.SuppressIldasmAttribute
 System.Runtime.CompilerServices.IsConst
 
-System.Runtime.InteropServices.SafeBuffer
+
 
 // could be in extensions
 System.Progress`1
@@ -467,8 +464,7 @@ System.Runtime.MemoryFailPoint
 System.Configuration.Assemblies.AssemblyHash
 
 System.AccessViolationException
-System.DataMisalignedException
-System.DllNotFoundException
+
 System.DuplicateWaitObjectException
 System.EntryPointNotFoundException
 System.ExecutionEngineException
@@ -478,7 +474,6 @@ System.TypeUnloadedException
 System.StackOverflowException
 
 System.LoaderOptimizationAttribute
-System.Runtime.AssemblyTargetedPatchBandAttribute
 System.STAThreadAttribute
 
 // added because it seemed like the right thing to do:
@@ -491,7 +486,7 @@ System.Collections.Generic.EqualityComparer`1
 System.Collections.Generic.List`1
 System.Globalization.CultureNotFoundException
 System.IO.EndOfStreamException
-System.IO.Path
+
 System.Runtime.Serialization.OnDeserializedAttribute
 System.Runtime.Serialization.OnDeserializingAttribute
 System.Runtime.Serialization.OnSerializedAttribute

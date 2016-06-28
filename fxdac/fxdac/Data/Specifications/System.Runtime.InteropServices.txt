@@ -1,8 +1,13 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.SecureString.dll
 
+System.DataMisalignedException
+System.DllNotFoundException
+System.Runtime.InteropServices.SafeBuffer
 System.Runtime.InteropServices.ComAwareEventInfo
-
+System.Runtime.InteropServices.ComDefaultInterfaceAttribute
+System.Runtime.InteropServices.ComInterfaceType
+System.Runtime.InteropServices.InterfaceTypeAttribute
 System.Runtime.InteropServices.ComEventsHelper
 System.Runtime.InteropServices.ComImportAttribute
 System.Runtime.InteropServices.CustomQueryInterfaceMode
