@@ -5996,46 +5996,7 @@ namespace System.Runtime.CompilerServices {
         public string AssemblyName { get { return default(string); } }
     }
 
-    public static partial class IsBoxed
-    {
-    }
-
-    public static partial class IsByValue
-    {
-    }
-
     public static partial class IsConst
-    {
-    }
-    public static partial class IsCopyConstructed
-    {
-    }
-
-    public static partial class IsExplicitlyDereferenced
-    {
-    }
-
-    public static partial class IsImplicitlyDereferenced
-    {
-    }
-
-    public static partial class IsJitIntrinsic
-    {
-    }
-
-    public static partial class IsLong
-    {
-    }
-
-    public static partial class IsPinned
-    {
-    }
-
-    public static partial class IsSignUnspecifiedByte
-    {
-    }
-
-    public static partial class IsUdtReturn
     {
     }
     public static partial class IsVolatile
@@ -6046,13 +6007,6 @@ namespace System.Runtime.CompilerServices {
     public sealed partial class IteratorStateMachineAttribute : System.Runtime.CompilerServices.StateMachineAttribute
     {
         public IteratorStateMachineAttribute(System.Type stateMachineType) : base(default(System.Type)) { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    public sealed partial class IUnknownConstantAttribute : System.Runtime.CompilerServices.CustomConstantAttribute
-    {
-        public IUnknownConstantAttribute() { }
-        public override object Value { get { return default(object); } }
     }
 
     public enum LoadHint
@@ -6092,25 +6046,12 @@ namespace System.Runtime.CompilerServices {
         Unmanaged = 4,
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(8), Inherited = true)]
-    public sealed partial class NativeCppClassAttribute : System.Attribute
-    {
-        public NativeCppClassAttribute() { }
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
     public sealed partial class ReferenceAssemblyAttribute : System.Attribute
     {
         public ReferenceAssemblyAttribute() { }
         public ReferenceAssemblyAttribute(string description) { }
         public string Description { get { return default(string); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1052), AllowMultiple = true, Inherited = false)]
-    public sealed partial class RequiredAttributeAttribute : System.Attribute
-    {
-        public RequiredAttributeAttribute(System.Type requiredContract) { }
-        public System.Type RequiredContract { get { return default(System.Type); } }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false, AllowMultiple = false)]
