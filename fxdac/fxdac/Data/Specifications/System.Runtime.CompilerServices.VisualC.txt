@@ -5,3 +5,16 @@ System.Runtime.CompilerServices.CallConvFastcall
 System.Runtime.CompilerServices.CallConvStdcall
 System.Runtime.CompilerServices.CallConvThiscall
 
+System.Runtime.CompilerServices.IsBoxed
+System.Runtime.CompilerServices.IsByValue
+System.Runtime.CompilerServices.IsCopyConstructed
+System.Runtime.CompilerServices.IsExplicitlyDereferenced
+System.Runtime.CompilerServices.IsImplicitlyDereferenced
+System.Runtime.CompilerServices.IsJitIntrinsic
+System.Runtime.CompilerServices.IsLong
+System.Runtime.CompilerServices.IsPinned
+System.Runtime.CompilerServices.IsSignUnspecifiedByte
+System.Runtime.CompilerServices.IsUdtReturn
+System.Runtime.CompilerServices.IUnknownConstantAttribute
+System.Runtime.CompilerServices.NativeCppClassAttribute
+System.Runtime.CompilerServices.RequiredAttributeAttribute
