@@ -13,6 +13,14 @@ namespace System {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
+    public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
+    {
+        public ApplicationIdentity(string applicationIdentityFullName) { }
+        public string CodeBase { get { return default(string); } }
+        public string FullName { get { return default(string); } }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public override string ToString() { return default(string); }
+    }
 
     [System.FlagsAttribute]
     public enum Base64FormattingOptions

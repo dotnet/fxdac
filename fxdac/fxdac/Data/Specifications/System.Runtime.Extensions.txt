@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.IO.dll
 
+System.ApplicationIdentity
 System.Environment
 System.OperatingSystem
 System.PlatformID
@@ -32,3 +33,4 @@ System.Runtime.Versioning.FrameworkName
 System.Runtime.AssemblyTargetedPatchBandAttribute
 System.Runtime.TargetedPatchingOptOutAttribute
 System.IO.Path
+

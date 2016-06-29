@@ -102,36 +102,6 @@ namespace System.Collections.Generic {
         public System.Collections.Generic.LinkedListNode<T> Previous { get { return default(System.Collections.Generic.LinkedListNode<T>); } }
         public T Value { get { return default(T); } set { } }
     }
-    public partial class Queue<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
-    {
-        public Queue() { }
-        public Queue(System.Collections.Generic.IEnumerable<T> collection) { }
-        public Queue(int capacity) { }
-        public int Count { get { return default(int); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
-        public void Clear() { }
-        public bool Contains(T item) { return default(bool); }
-        public void CopyTo(T[] array, int arrayIndex) { }
-        public T Dequeue() { return default(T); }
-        public void Enqueue(T item) { }
-        public System.Collections.Generic.Queue<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Queue<T>.Enumerator); }
-        public T Peek() { return default(T); }
-        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
-        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public T[] ToArray() { return default(T[]); }
-        public void TrimExcess() { }
-        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
-        {
-            public T Current { get { return default(T); } }
-            object System.Collections.IEnumerator.Current { get { return default(object); } }
-            public void Dispose() { }
-            public bool MoveNext() { return default(bool); }
-            void System.Collections.IEnumerator.Reset() { }
-        }
-    }
     public partial class SortedDictionary<TKey, TValue> : 
         System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey, TValue>>, 
         System.Collections.Generic.IDictionary<TKey, TValue>, 
@@ -353,82 +323,6 @@ namespace System.Collections.Generic {
             void System.Collections.IEnumerator.Reset() { }
             void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) { }
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        }
-    }
-    public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
-    {
-        public Stack() { }
-        public Stack(System.Collections.Generic.IEnumerable<T> collection) { }
-        public Stack(int capacity) { }
-        public int Count { get { return default(int); } }
-        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
-        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
-        public void Clear() { }
-        public bool Contains(T item) { return default(bool); }
-        public void CopyTo(T[] array, int arrayIndex) { }
-        public System.Collections.Generic.Stack<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Stack<T>.Enumerator); }
-        public T Peek() { return default(T); }
-        public T Pop() { return default(T); }
-        public void Push(T item) { }
-        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
-        void System.Collections.ICollection.CopyTo(System.Array array, int arrayIndex) { }
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public T[] ToArray() { return default(T[]); }
-        public void TrimExcess() { }
-        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
-        {
-            public T Current { get { return default(T); } }
-            object System.Collections.IEnumerator.Current { get { return default(object); } }
-            public void Dispose() { }
-            public bool MoveNext() { return default(bool); }
-            void System.Collections.IEnumerator.Reset() { }
-        }
-    }
-    public partial class HashSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
-    {
-        public HashSet() { }
-        public HashSet(System.Collections.Generic.IEnumerable<T> collection) { }
-        public HashSet(System.Collections.Generic.IEnumerable<T> collection, System.Collections.Generic.IEqualityComparer<T> comparer) { }
-        public HashSet(System.Collections.Generic.IEqualityComparer<T> comparer) { }
-        protected HashSet(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public System.Collections.Generic.IEqualityComparer<T> Comparer { get { return default(System.Collections.Generic.IEqualityComparer<T>); } }
-        public int Count { get { return default(int); } }
-        bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
-        public bool Add(T item) { return default(bool); }
-        public void Clear() { }
-        public bool Contains(T item) { return default(bool); }
-        public void CopyTo(T[] array) { }
-        public void CopyTo(T[] array, int arrayIndex) { }
-        public void CopyTo(T[] array, int arrayIndex, int count) { }
-        public static System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>> CreateSetComparer() { return default(System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>>); }
-        public void ExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
-        public System.Collections.Generic.HashSet<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.HashSet<T>.Enumerator); }
-        public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public void IntersectWith(System.Collections.Generic.IEnumerable<T> other) { }
-        public bool IsProperSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public bool IsProperSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public bool IsSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public bool IsSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public virtual void OnDeserialization(object sender) { }
-        public bool Overlaps(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public bool Remove(T item) { return default(bool); }
-        public int RemoveWhere(System.Predicate<T> match) { return default(int); }
-        public bool SetEquals(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
-        public void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
-        void System.Collections.Generic.ICollection<T>.Add(T item) { }
-        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
-        public void TrimExcess() { }
-        public void UnionWith(System.Collections.Generic.IEnumerable<T> other) { }
-        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
-        {
-            public T Current { get { return default(T); } }
-            object System.Collections.IEnumerator.Current { get { return default(object); } }
-            public void Dispose() { }
-            public bool MoveNext() { return default(bool); }
-            void System.Collections.IEnumerator.Reset() { }
         }
     }
 } // end of System.Collections.Generic

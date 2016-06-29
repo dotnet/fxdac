@@ -7,3 +7,6 @@
 
 System.Net.WebPermission
 System.Net.WebPermissionAttribute
+
+System.Net.SocketPermission
+System.Net.SocketPermissionAttribute

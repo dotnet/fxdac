@@ -5,10 +5,7 @@
 /r:System.Resources.Reader.dll
 /r:System.Resources.Writer.dll
 
-
-
 System.ComponentModel.Component
-
 
 System.ComponentModel.Design.ActiveDesignerEventArgs
 System.ComponentModel.Design.ActiveDesignerEventHandler

@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Runtime.Extensions.dll
 /r:System.Runtime.InteropServices.dll
 /r:System.Collections.NonGeneric.dll
 /r:System.Threading.dll
@@ -191,3 +192,8 @@ System.Runtime.Serialization.Formatters.SoapFault
 System.Runtime.Serialization.Formatters.SoapMessage
 System.Runtime.Serialization.Formatters.TypeFilterLevel
 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+
+System.ActivationContext
+System.Security.Policy.ApplicationSecurityInfo
+System.Security.Policy.ApplicationSecurityManager
+System.Security.Policy.IApplicationTrustManager
