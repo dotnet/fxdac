@@ -2,7 +2,7 @@
 /r:System.IO.dll
 /r:System.ComponentModel.Primitives.dll
 /r:System.ComponentModel.TypeConverter.dll
-/r:System.Collections.Specialized.dll
+/r:System.Collections.dll
 /r:System.Diagnostics.FileVersionInfo.dll
 /r:System.Security.SecureString.dll
 /r:System.Text.Encoding.dll
