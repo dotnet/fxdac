@@ -10,4 +10,8 @@ System.Collections.Generic.SortedDictionary`2
 System.Collections.Generic.SortedList`2
 System.Collections.Generic.SortedSet`1
 
+System.Collections.Specialized.StringCollection
+System.Collections.Specialized.StringDictionary
+System.Collections.Specialized.StringEnumerator
+
 

@@ -1,5 +1,5 @@
 ﻿/r:System.Runtime.dll
-/r:System.Collections.Specialized.dll
+/r:System.Collections.dll
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Net.Primitives.dll
 /r:System.Net.WebHeaderCollection.dll
