@@ -130,7 +130,7 @@
     <item text="Removed member Semaphore.OpenExisting(string, System.Security.AccessControl.SemaphoreRights):System.Threading.Semaphore"/>
     <item text="Removed member Semaphore.TryOpenExisting(string, System.Security.AccessControl.SemaphoreRights, System.Threading.Semaphore):bool"/>
   </REMOVED>
-  <MOVED_TYPES total="181" description="corefx types that changed their location">
+  <MOVED_TYPES total="180" description="corefx types that changed their location">
     <MOVED_NEEDS_REVIEW total="8" description="unclear if the move is value, i.e. down in the dependency graph">
       <item text="System.ComponentModel.Primitives,System.ComponentModel.IChangeTracking moved from System.ComponentModel"/>
       <item text="System.ComponentModel.Primitives,System.ComponentModel.IEditableObject moved from System.ComponentModel"/>
@@ -183,7 +183,7 @@
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.CallSiteHelpers moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.DynamicAttribute moved from System.Dynamic.Runtime"/>
     </MOVED_VALID>
-    <MOVED_TO_SYSTEM_RUNTIME total="133" description="all moves to System.Runtime are OK">
+    <MOVED_TO_SYSTEM_RUNTIME total="132" description="all moves to System.Runtime are OK">
       <item text="System.Runtime,.ConfiguredTaskAwaiter moved from System.Threading.Tasks"/>
       <item text="System.Runtime,.Enumerator moved from System.Collections"/>
       <item text="System.Runtime,.KeyCollection moved from System.ObjectModel"/>
@@ -205,7 +205,6 @@
       <item text="System.Runtime,System.ComponentModel.Win32Exception moved from Microsoft.Win32.Primitives"/>
       <item text="System.Runtime,System.DBNull moved from System.Data.Common"/>
       <item text="System.Runtime,System.Diagnostics.CodeAnalysis.SuppressMessageAttribute moved from System.Diagnostics.Tools"/>
-      <item text="System.Runtime,System.Diagnostics.Debug moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerBrowsableAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerBrowsableState moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerDisplayAttribute moved from System.Diagnostics.Debug"/>
@@ -319,7 +318,7 @@
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="19">
+  <ADDED_CONTRACTS total="20">
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
     <item text="System.Diagnostics.SymbolStore"/>
@@ -336,6 +335,7 @@
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
+    <item text="System.Security.Cryptography.Csp"/>
     <item text="System.Security.Permissions"/>
     <item text="System.Threading.WindowsForms"/>
     <item text="System.Timer"/>

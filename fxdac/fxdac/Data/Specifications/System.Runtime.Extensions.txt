@@ -34,4 +34,3 @@ System.Runtime.AssemblyTargetedPatchBandAttribute
 System.Runtime.TargetedPatchingOptOutAttribute
 System.IO.Path
 
-System.ActivationContext

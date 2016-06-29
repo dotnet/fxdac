@@ -803,20 +803,6 @@ namespace System.Security.Policy {
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
     }
-    public sealed partial class ApplicationSecurityInfo
-    {
-        public ApplicationSecurityInfo(System.ActivationContext activationContext) { }
-        public System.Security.Policy.Evidence ApplicationEvidence { get { return default(System.Security.Policy.Evidence); } set { } }
-        public System.ApplicationId ApplicationId { get { return default(System.ApplicationId); } set { } }
-        public System.Security.PermissionSet DefaultRequestSet { get { return default(System.Security.PermissionSet); } set { } }
-        public System.ApplicationId DeploymentId { get { return default(System.ApplicationId); } set { } }
-    }
-    public static partial class ApplicationSecurityManager
-    {
-        public static System.Security.Policy.IApplicationTrustManager ApplicationTrustManager { get { return default(System.Security.Policy.IApplicationTrustManager); } }
-        public static System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts { get { return default(System.Security.Policy.ApplicationTrustCollection); } }
-        public static bool DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context) { return default(bool); }
-    }
     public sealed partial class ApplicationTrust : System.Security.Policy.EvidenceBase, System.Security.ISecurityEncodable
     {
         public ApplicationTrust() { }
@@ -1009,10 +995,6 @@ namespace System.Security.Policy {
         public override string ToString() { return default(string); }
         public System.Security.SecurityElement ToXml() { return default(System.Security.SecurityElement); }
         public System.Security.SecurityElement ToXml(System.Security.Policy.PolicyLevel level) { return default(System.Security.SecurityElement); }
-    }
-    public partial interface IApplicationTrustManager : System.Security.ISecurityEncodable
-    {
-        System.Security.Policy.ApplicationTrust DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);
     }
     public partial interface IIdentityPermissionFactory
     {

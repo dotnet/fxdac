@@ -1,21 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
-    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
-    {
-        internal ActivationContext() { }
-        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
-        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
-        public void Dispose() { }
-        ~ActivationContext() { }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public enum ContextForm
-        {
-            Loose = 0,
-            StoreBounded = 1,
-        }
-    }
     public sealed partial class ApplicationId
     {
         public ApplicationId(byte[] publicKeyToken, string name, System.Version version, string processorArchitecture, string culture) { }
