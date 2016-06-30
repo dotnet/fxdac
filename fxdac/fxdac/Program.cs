@@ -64,6 +64,8 @@ static class Program
                     }
                     reportWriter.WriteListEnd();
                 }
+
+                AnalyzeLayers(redist, reportWriter);
             }
         }
 
@@ -81,7 +83,7 @@ static class Program
 
         // load files describing the desired factoring. verify consistency of these files.
         redist = new FxRedist();
-        if (!ProcessSpecifications(redist)) {
+        if (!ProcessSpecifications(redist, reportWriter)) {
             Console.WriteLine("\nPress ENTER to exit ...");
             Console.ReadLine();
             return false;
@@ -151,7 +153,7 @@ static class Program
         }
     }
 
-    static bool ProcessSpecifications(FxRedist redist)
+    static bool ProcessSpecifications(FxRedist redist, ReportWriter reportWriter)
     {
         Console.WriteLine("PROCESSING SPECIFICATIONS");
 
@@ -183,6 +185,41 @@ static class Program
             }
         }
         return true;
+    }
+
+    private static void AnalyzeLayers(FxRedist redist, ReportWriter reportWriter)
+    {
+        var assemblies = new List<FxAssembly>(redist.Values);
+        assemblies.Remove(redist.Leftover);
+        Dictionary<int, List<FxAssembly>> layers = new Dictionary<int, List<FxAssembly>>();
+        int layerNumber = 0;
+
+        while (assemblies.Count != 0) {
+            var avaliabledependencies = layers.Values.SelectMany((l) => { return l; }).ToList();
+
+            var nextLayer = new List<FxAssembly>();
+            layers.Add(layerNumber, nextLayer);
+
+            for(int i=assemblies.Count - 1; i>=0; i--) {
+                var assembly = assemblies[i];
+                if (HasAllDependencies(assembly, avaliabledependencies)) {
+                    nextLayer.Add(assembly);
+                    assemblies.RemoveAt(i);
+                }
+            }
+            layerNumber++;
+        }
+
+        reportWriter.WriteListStart("Layers");
+        for(int i=0; i<layers.Count; i++) {
+            var layer = layers[i];
+            reportWriter.WriteListStart("Layer", "number", i);
+            foreach(var a in layer) {
+                reportWriter.WriteListItem(a.Name);
+            }
+            reportWriter.WriteListEnd();
+        }
+        reportWriter.WriteListEnd();
     }
 
     private static bool ProcessSpecification(FxRedist redist, Dictionary<string, string> alreadyLoadedSpecification, string assemblySpecificationFile)
