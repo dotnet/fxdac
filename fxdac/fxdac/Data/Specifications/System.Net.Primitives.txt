@@ -37,4 +37,9 @@ System.Security.Authentication.SslProtocols
 System.Security.Authentication.ExtendedProtection.ChannelBinding
 System.Security.Authentication.ExtendedProtection.ChannelBindingKind
 
+// added when factoring System.Net.dll
+System.Net.HttpVersion
+System.Net.NetworkAccess
+System.Net.TransportType
+
 

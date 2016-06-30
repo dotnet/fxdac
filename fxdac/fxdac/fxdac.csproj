@@ -314,7 +314,6 @@
     <None Include="Data\Specifications\System.IO.Compression.txt" />
     <None Include="Data\Specifications\System.IO.MemoryMappedFiles.txt" />
     <None Include="Data\Specifications\System.Linq.txt" />
-    <None Include="Data\Specifications\System.Net.txt" />
     <None Include="Data\Specifications\System.Deployment.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.txt" />
     <None Include="Data\Specifications\System.Timer.txt" />

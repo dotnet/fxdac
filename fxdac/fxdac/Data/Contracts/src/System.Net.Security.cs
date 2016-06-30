@@ -1,4 +1,31 @@
 [assembly:System.CLSCompliant(true)]
+namespace System.Net {
+
+    public partial class ServicePointManager
+    {
+        internal ServicePointManager() { }
+        public const int DefaultNonPersistentConnectionLimit = 4;
+        public const int DefaultPersistentConnectionLimit = 10;
+        [System.ObsoleteAttribute("Use ServerCertificateValidationCallback instead", false)]
+        public static System.Net.ICertificatePolicy CertificatePolicy { get { return default(System.Net.ICertificatePolicy); } set { } }
+        public static bool CheckCertificateRevocationList { get { return default(bool); } set { } }
+        public static System.Net.CipherSuitesCallback ClientCipherSuitesCallback { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Net.CipherSuitesCallback); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+        public static int DefaultConnectionLimit { get { return default(int); } set { } }
+        public static int DnsRefreshTimeout { get { return default(int); } set { } }
+        public static bool EnableDnsRoundRobin { get { return default(bool); } set { } }
+        public static bool Expect100Continue { get { return default(bool); } set { } }
+        public static int MaxServicePointIdleTime { get { return default(int); } set { } }
+        public static int MaxServicePoints { get { return default(int); } set { } }
+        public static System.Net.SecurityProtocolType SecurityProtocol { get { return default(System.Net.SecurityProtocolType); } set { } }
+        public static System.Net.Security.RemoteCertificateValidationCallback ServerCertificateValidationCallback { get { return default(System.Net.Security.RemoteCertificateValidationCallback); } set { } }
+        public static System.Net.CipherSuitesCallback ServerCipherSuitesCallback { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Net.CipherSuitesCallback); } [System.Runtime.CompilerServices.CompilerGeneratedAttribute]set { } }
+        public static bool UseNagleAlgorithm { get { return default(bool); } set { } }
+        public static System.Net.ServicePoint FindServicePoint(string uriString, System.Net.IWebProxy proxy) { return default(System.Net.ServicePoint); }
+        public static System.Net.ServicePoint FindServicePoint(System.Uri address) { return default(System.Net.ServicePoint); }
+        public static System.Net.ServicePoint FindServicePoint(System.Uri address, System.Net.IWebProxy proxy) { return default(System.Net.ServicePoint); }
+        public static void SetTcpKeepAlive(bool enabled, int keepAliveTime, int keepAliveInterval) { }
+    }
+} // end of System.Net
 namespace System.Net.Security {
     public abstract partial class AuthenticatedStream : System.IO.Stream
     {

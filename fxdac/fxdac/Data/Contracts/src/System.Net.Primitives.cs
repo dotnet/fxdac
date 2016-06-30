@@ -179,6 +179,13 @@ namespace System.Net {
         UseProxy = 305,
     }
 
+    public partial class HttpVersion
+    {
+        public static readonly System.Version Version10;
+        public static readonly System.Version Version11;
+        public HttpVersion() { }
+    }
+
     public partial interface ICredentials
     {
         System.Net.NetworkCredential GetCredential(System.Uri uri, string authType);
@@ -250,6 +257,13 @@ namespace System.Net {
         bool IsBypassed(System.Uri host);
     }
 
+    [System.FlagsAttribute]
+    public enum NetworkAccess
+    {
+        Accept = 128,
+        Connect = 64,
+    }
+
     public partial class NetworkCredential : System.Net.ICredentials, System.Net.ICredentialsByHost
     {
         public NetworkCredential() { }
@@ -281,6 +295,15 @@ namespace System.Net {
     {
         protected TransportContext() { }
         public abstract System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding(System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind);
+    }
+
+    public enum TransportType
+    {
+        All = 3,
+        Connectionless = 1,
+        ConnectionOriented = 2,
+        Tcp = 2,
+        Udp = 1,
     }
 } // end of System.Net
 namespace System.Net.NetworkInformation {

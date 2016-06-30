@@ -1,8 +1,8 @@
 ﻿/r:System.Runtime.dll
-
 /r:System.Net.Primitives.dll
 /r:System.Net.WebHeaderCollection.dll
-
+/r:System.Collections.dll
+/r:System.Collections.NonGeneric.dll
 /r:System.Security.Principal.dll 
 /r:System.Security.Cryptography.X509Certificates.dll
 
@@ -17,5 +17,31 @@ System.Net.WebResponse
 System.Net.HttpContinueDelegate
 System.Net.Cache.RequestCachePolicy
 System.Net.Cache.RequestCacheLevel
-System.Net.ServicePoint
+
 System.Net.BindIPEndPoint
+
+// added from System.Net.dll
+System.Net.AuthenticationManager
+System.Net.Authorization
+System.Net.CipherSuitesCallback
+System.Net.EndpointPermission
+System.Net.FileWebRequest
+System.Net.FileWebResponse
+System.Net.FtpStatusCode
+System.Net.FtpWebRequest
+System.Net.FtpWebResponse
+System.Net.GlobalProxySelection
+System.Net.IAuthenticationModule
+System.Net.ICertificatePolicy
+System.Net.ICredentialPolicy
+System.Net.IWebProxyScript
+
+System.Net.SecurityProtocolType
+System.Net.ServicePoint
+
+
+System.Net.WebProxy
+System.Net.WebRequestMethods
+System.Net.Cache.HttpCacheAgeControl
+System.Net.Cache.HttpRequestCacheLevel
+System.Net.Cache.HttpRequestCachePolicy

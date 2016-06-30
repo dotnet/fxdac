@@ -1,6 +1,7 @@
 ﻿/r:System.Runtime.dll
 /r:System.Security.Cryptography.X509Certificates.dll
 /r:System.Net.Primitives.dll
+/r:System.Net.Requests.dll
 /r:System.Collections.NonGeneric.dll
 /r:System.Security.Principal.dll 
 
@@ -22,5 +23,7 @@ System.Security.Authentication.ExtendedProtection.ServiceNameCollection
 
 // from corefx
 System.Net.Security.EncryptionPolicy
+
+System.Net.ServicePointManager
 
 
