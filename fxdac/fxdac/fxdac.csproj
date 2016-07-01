@@ -276,7 +276,6 @@
     <None Include="Data\Specifications\System.Runtime.Handles.txt" />
     <None Include="Data\Specifications\System.Collections.NonGeneric.txt" />
     <None Include="Data\Specifications\System.Collections.Specialized.txt" />
-    <None Include="Data\Specifications\System.ComponentModel.txt" />
     <None Include="Data\Specifications\System.ComponentModel.TypeConverter.txt" />
     <None Include="Data\Specifications\System.CodeDom.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Contracts.txt" />
@@ -303,7 +302,6 @@
     <None Include="Data\Specifications\System.Collections.txt" />
     <None Include="Data\Specifications\System.ComponentModel.EventBasedAsync.txt" />
     <None Include="Data\Specifications\System.Linq.Expressions.txt" />
-    <None Include="Data\Specifications\System.Text.Encoding.txt" />
     <None Include="Data\Specifications\System.Text.RegularExpressions.txt" />
     <None Include="Data\Specifications\System.Threading.Overlapped.txt" />
     <None Include="Data\Specifications\System.Threading.Thread.txt" />
@@ -318,7 +316,6 @@
     <None Include="Data\Specifications\System.Deployment.txt" />
     <None Include="Data\Specifications\System.IO.FileSystem.txt" />
     <None Include="Data\Specifications\System.Timer.txt" />
-    <None Include="Data\Specifications\System.Text.Encoding.Extensions.txt" />
     <None Include="Data\Specifications\System.Runtime.Versioning.txt" />
     <None Include="Data\Specifications\System.Diagnostics.Tracing.txt" />
     <None Include="Data\Specifications\System.Resources.ResourceManager.txt" />
@@ -353,6 +350,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Specifications\System.Runtime.CompilerServices.VisualC.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Specifications\System.Globalization.TimeZone.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Specifications\System.Text.Encoding.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

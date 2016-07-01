@@ -1,9 +1,0 @@
-/r:System.Runtime.dll
-/r:System.Text.Encoding.dll
-
-System.Text.ASCIIEncoding
-System.Text.UnicodeEncoding
-System.Text.UTF32Encoding
-System.Text.UTF7Encoding
-System.Text.UTF8Encoding
-

@@ -1,10 +1,8 @@
 ﻿/r:System.Runtime.dll
 
-System.TimeZone
 System.Globalization.CharUnicodeInfo
-System.Globalization.DaylightTime
-System.Globalization.RegionInfo
 System.Globalization.SortVersion
 System.Globalization.StringInfo
 System.Globalization.TextElementEnumerator
+System.Globalization.RegionInfo
 

@@ -7,7 +7,7 @@
 /r:System.Text.Encoding.dll
 
 Microsoft.Win32.SafeHandles.SafeFileHandle
-
+System.IO.FileOptions
 System.IO.FileStream
 
 System.IO.FileSystemAclExtensions

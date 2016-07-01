@@ -7,6 +7,15 @@
 /r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll 
 
+System.LoaderOptimization
+System.LoaderOptimizationAttribute
+System.ActivationContext
+System.AssemblyLoadEventArgs
+System.AssemblyLoadEventHandler
+System.Security.Policy.ApplicationSecurityInfo
+System.Security.Policy.ApplicationSecurityManager
+System.Security.Policy.IApplicationTrustManager
+
 System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 System.UnhandledExceptionEventArgs
 System.UnhandledExceptionEventHandler

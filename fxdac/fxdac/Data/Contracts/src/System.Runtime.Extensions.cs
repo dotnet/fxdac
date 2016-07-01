@@ -1,21 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
-    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
-    {
-        internal ActivationContext() { }
-        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
-        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
-        public void Dispose() { }
-        ~ActivationContext() { }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public enum ContextForm
-        {
-            Loose = 0,
-            StoreBounded = 1,
-        }
-    }
     public sealed partial class ApplicationId
     {
         public ApplicationId(byte[] publicKeyToken, string name, System.Version version, string processorArchitecture, string culture) { }
@@ -37,12 +21,6 @@ namespace System {
         void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public override string ToString() { return default(string); }
     }
-    public partial class AssemblyLoadEventArgs : System.EventArgs
-    {
-        public AssemblyLoadEventArgs(System.Reflection.Assembly loadedAssembly) { }
-        public System.Reflection.Assembly LoadedAssembly { get { return default(System.Reflection.Assembly); } }
-    }
-    public delegate void AssemblyLoadEventHandler(object sender, System.AssemblyLoadEventArgs args);
 
     [System.FlagsAttribute]
     public enum Base64FormattingOptions
@@ -596,25 +574,6 @@ namespace System {
         Machine = 2,
         Process = 0,
         User = 1,
-    }
-    public enum LoaderOptimization
-    {
-        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
-        DisallowBindings = 4,
-        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
-        DomainMask = 3,
-        MultiDomain = 2,
-        MultiDomainHost = 3,
-        NotSpecified = 0,
-        SingleDomain = 1,
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    public sealed partial class LoaderOptimizationAttribute : System.Attribute
-    {
-        public LoaderOptimizationAttribute(byte value) { }
-        public LoaderOptimizationAttribute(System.LoaderOptimization value) { }
-        public System.LoaderOptimization Value { get { return default(System.LoaderOptimization); } }
     }
     public sealed partial class MulticastNotSupportedException : System.SystemException
     {

@@ -25,3 +25,7 @@ System.ComponentModel.ParenthesizePropertyNameAttribute
 System.ComponentModel.ReadOnlyAttribute
 System.ComponentModel.RefreshProperties
 System.ComponentModel.RefreshPropertiesAttribute
+
+System.ComponentModel.IChangeTracking
+System.ComponentModel.IEditableObject
+System.ComponentModel.IRevertibleChangeTracking

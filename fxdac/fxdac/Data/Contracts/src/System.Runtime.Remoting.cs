@@ -56,6 +56,22 @@ namespace System {
         void SetThreadPrincipal(System.Security.Principal.IPrincipal principal);
         string ToString();
     }
+    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
+    {
+        internal ActivationContext() { }
+        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
+        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
+        public void Dispose() { }
+        ~ActivationContext() { }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public enum ContextForm
+        {
+            Loose = 0,
+            StoreBounded = 1,
+        }
+    }
     public sealed partial class AppDomain : System.MarshalByRefObject
     {
         internal AppDomain() { }
@@ -230,6 +246,12 @@ namespace System {
         public AppDomainUnloadedException(string message) { }
         public AppDomainUnloadedException(string message, System.Exception innerException) { }
     }
+    public partial class AssemblyLoadEventArgs : System.EventArgs
+    {
+        public AssemblyLoadEventArgs(System.Reflection.Assembly loadedAssembly) { }
+        public System.Reflection.Assembly LoadedAssembly { get { return default(System.Reflection.Assembly); } }
+    }
+    public delegate void AssemblyLoadEventHandler(object sender, System.AssemblyLoadEventArgs args);
     public partial class CannotUnloadAppDomainException : System.SystemException
     {
         public CannotUnloadAppDomainException() { }
@@ -255,6 +277,25 @@ namespace System {
         string PrivateBinPathProbe { get; set; }
         string ShadowCopyDirectories { get; set; }
         string ShadowCopyFiles { get; set; }
+    }
+    public enum LoaderOptimization
+    {
+        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
+        DisallowBindings = 4,
+        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
+        DomainMask = 3,
+        MultiDomain = 2,
+        MultiDomainHost = 3,
+        NotSpecified = 0,
+        SingleDomain = 1,
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
+    public sealed partial class LoaderOptimizationAttribute : System.Attribute
+    {
+        public LoaderOptimizationAttribute(byte value) { }
+        public LoaderOptimizationAttribute(System.LoaderOptimization value) { }
+        public System.LoaderOptimization Value { get { return default(System.LoaderOptimization); } }
     }
     public abstract partial class MarshalByRefObject
     {
@@ -1857,6 +1898,26 @@ namespace System.Runtime.Serialization.Formatters.Binary {
         public object UnsafeDeserializeMethodResponse(System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) { return default(object); }
     }
 } // end of System.Runtime.Serialization.Formatters.Binary
+namespace System.Security.Policy {
+    public sealed partial class ApplicationSecurityInfo
+    {
+        public ApplicationSecurityInfo(System.ActivationContext activationContext) { }
+        public System.Security.Policy.Evidence ApplicationEvidence { get { return default(System.Security.Policy.Evidence); } set { } }
+        public System.ApplicationId ApplicationId { get { return default(System.ApplicationId); } set { } }
+        public System.Security.PermissionSet DefaultRequestSet { get { return default(System.Security.PermissionSet); } set { } }
+        public System.ApplicationId DeploymentId { get { return default(System.ApplicationId); } set { } }
+    }
+    public static partial class ApplicationSecurityManager
+    {
+        public static System.Security.Policy.IApplicationTrustManager ApplicationTrustManager { get { return default(System.Security.Policy.IApplicationTrustManager); } }
+        public static System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts { get { return default(System.Security.Policy.ApplicationTrustCollection); } }
+        public static bool DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context) { return default(bool); }
+    }
+    public partial interface IApplicationTrustManager : System.Security.ISecurityEncodable
+    {
+        System.Security.Policy.ApplicationTrust DetermineApplicationTrust(System.ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);
+    }
+} // end of System.Security.Policy
 namespace System.Threading {
     public partial class HostExecutionContext : System.IDisposable
     {

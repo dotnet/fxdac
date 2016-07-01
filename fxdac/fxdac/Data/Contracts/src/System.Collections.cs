@@ -316,3 +316,60 @@ namespace System.Collections.Generic {
         }
     }
 } // end of System.Collections.Generic
+namespace System.Collections.Specialized {
+
+    public partial class StringCollection : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
+    {
+        public StringCollection() { }
+        public int Count { get { return default(int); } }
+        public bool IsReadOnly { get { return default(bool); } }
+        public bool IsSynchronized { get { return default(bool); } }
+        public string this[int index] { get { return default(string); } set { } }
+        public object SyncRoot { get { return default(object); } }
+        bool System.Collections.IList.IsFixedSize { get { return default(bool); } }
+        bool System.Collections.IList.IsReadOnly { get { return default(bool); } }
+        object System.Collections.IList.this[int index] { get { return default(object); } set { } }
+        public int Add(string value) { return default(int); }
+        public void AddRange(string[] value) { }
+        public void Clear() { }
+        public bool Contains(string value) { return default(bool); }
+        public void CopyTo(string[] array, int index) { }
+        public System.Collections.Specialized.StringEnumerator GetEnumerator() { return default(System.Collections.Specialized.StringEnumerator); }
+        public int IndexOf(string value) { return default(int); }
+        public void Insert(int index, string value) { }
+        public void Remove(string value) { }
+        public void RemoveAt(int index) { }
+        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        int System.Collections.IList.Add(object value) { return default(int); }
+        bool System.Collections.IList.Contains(object value) { return default(bool); }
+        int System.Collections.IList.IndexOf(object value) { return default(int); }
+        void System.Collections.IList.Insert(int index, object value) { }
+        void System.Collections.IList.Remove(object value) { }
+    }
+    public partial class StringDictionary : System.Collections.IEnumerable
+    {
+        public StringDictionary() { }
+        public virtual int Count { get { return default(int); } }
+        public virtual bool IsSynchronized { get { return default(bool); } }
+        public virtual string this[string key] { get { return default(string); } set { } }
+        public virtual System.Collections.ICollection Keys { get { return default(System.Collections.ICollection); } }
+        public virtual object SyncRoot { get { return default(object); } }
+        public virtual System.Collections.ICollection Values { get { return default(System.Collections.ICollection); } }
+        public virtual void Add(string key, string value) { }
+        public virtual void Clear() { }
+        public virtual bool ContainsKey(string key) { return default(bool); }
+        public virtual bool ContainsValue(string value) { return default(bool); }
+        public virtual void CopyTo(System.Array array, int index) { }
+        public virtual System.Collections.IEnumerator GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public virtual void Remove(string key) { }
+    }
+
+    public partial class StringEnumerator
+    {
+        internal StringEnumerator() { }
+        public string Current { get { return default(string); } }
+        public bool MoveNext() { return default(bool); }
+        public void Reset() { }
+    }
+} // end of System.Collections.Specialized

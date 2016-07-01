@@ -173,6 +173,18 @@ namespace System.IO {
         public System.IO.FileStream OpenWrite() { return default(System.IO.FileStream); }
         public override string ToString() { return default(string); }
     }
+
+    [System.FlagsAttribute]
+    public enum FileOptions
+    {
+        Asynchronous = 1073741824,
+        DeleteOnClose = 67108864,
+        Encrypted = 16384,
+        None = 0,
+        RandomAccess = 268435456,
+        SequentialScan = 134217728,
+        WriteThrough = -2147483648,
+    }
     public partial class FileStream : System.IO.Stream
     {
         [System.ObsoleteAttribute("Use FileStream(SafeFileHandle handle, FileAccess access) instead")]

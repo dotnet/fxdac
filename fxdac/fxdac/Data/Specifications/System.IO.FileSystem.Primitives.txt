@@ -2,7 +2,6 @@
 
 System.IO.FileAccess
 System.IO.FileMode
-System.IO.FileOptions
 System.IO.FileShare
 System.IO.FileAttributes
 

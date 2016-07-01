@@ -28,8 +28,6 @@ System.Security.Policy.StrongName
 System.Security.Policy.AllMembershipCondition
 System.Security.Policy.ApplicationDirectory
 System.Security.Policy.ApplicationDirectoryMembershipCondition
-System.Security.Policy.ApplicationSecurityInfo
-System.Security.Policy.ApplicationSecurityManager
 System.Security.Policy.ApplicationTrustCollection
 System.Security.Policy.ApplicationTrustEnumerator
 System.Security.Policy.ApplicationVersionMatch
@@ -39,7 +37,6 @@ System.Security.Policy.GacInstalled
 System.Security.Policy.GacMembershipCondition
 System.Security.Policy.Hash
 System.Security.Policy.HashMembershipCondition
-System.Security.Policy.IApplicationTrustManager
 System.Security.Policy.NetCodeGroup
 System.Security.Policy.PermissionRequestEvidence
 System.Security.Policy.PolicyException

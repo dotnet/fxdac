@@ -1,5 +1,6 @@
 /r:System.Runtime.dll
 /r:System.Runtime.Extensions.dll
+/r:System.Runtime.Remoting.dll
 
 System.Deployment.Internal.InternalActivationContextHelper
 System.Deployment.Internal.InternalApplicationIdentityHelper

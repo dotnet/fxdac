@@ -28,8 +28,7 @@ System.UriIdnScope
 
 // from corefx
 System.Runtime.Versioning.FrameworkName
-System.LoaderOptimization
-System.LoaderOptimizationAttribute
+
 
 
 System.ComponentModel.CancelEventArgs
@@ -45,6 +44,5 @@ System.Runtime.TargetedPatchingOptOutAttribute
 
 System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
 System.ApplicationIdentity
-System.ActivationContext
-System.AssemblyLoadEventArgs
-System.AssemblyLoadEventHandler
+
+
