@@ -3,6 +3,7 @@
 /r:System.Net.Primitives.dll
 /r:System.Collections.NonGeneric.dll
 /r:System.Security.Principal.dll 
+/r:System.Net.Requests.dll
 
 System.Security.Authentication.AuthenticationException
 System.Security.Authentication.InvalidCredentialException
@@ -22,5 +23,7 @@ System.Security.Authentication.ExtendedProtection.ServiceNameCollection
 
 // from corefx
 System.Net.Security.EncryptionPolicy
+System.Net.ServicePointManager
+
 
 

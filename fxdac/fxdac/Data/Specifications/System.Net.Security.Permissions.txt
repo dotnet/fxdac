@@ -1,9 +1,12 @@
 ﻿/r:System.Runtime.dll
+/r:System.Net.Primitives.dll
 
 /r:System.Text.RegularExpressions.dll
-/r:System.Net.dll
 /r:System.Security.Permissions.dll
 /r:System.Security.Principal.dll
 
 System.Net.WebPermission
 System.Net.WebPermissionAttribute
+System.Net.SocketPermission
+System.Net.SocketPermissionAttribute
+

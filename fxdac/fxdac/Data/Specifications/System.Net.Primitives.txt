@@ -36,4 +36,8 @@ System.Security.Authentication.SslProtocols
 System.Security.Authentication.ExtendedProtection.ChannelBinding
 System.Security.Authentication.ExtendedProtection.ChannelBindingKind
 
+System.Net.HttpVersion
+System.Net.TransportType
+System.Net.NetworkAccess
+
 
