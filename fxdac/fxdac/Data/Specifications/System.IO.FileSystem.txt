@@ -6,6 +6,7 @@
 /r:System.Security.Principal.Windows.dll
 /r:System.Text.Encoding.dll
 
+Microsoft.Win32.SafeHandles.SafeFileHandle
 
 System.IO.FileStream
 

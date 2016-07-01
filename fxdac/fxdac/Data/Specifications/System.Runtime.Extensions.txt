@@ -28,4 +28,23 @@ System.UriIdnScope
 
 // from corefx
 System.Runtime.Versioning.FrameworkName
+System.LoaderOptimization
+System.LoaderOptimizationAttribute
 
+
+System.ComponentModel.CancelEventArgs
+System.ComponentModel.CancelEventHandler
+System.IO.Path
+
+System.Reflection.ObfuscateAssemblyAttribute
+System.Reflection.ObfuscationAttribute
+
+System.Runtime.AssemblyTargetedPatchBandAttribute
+System.Runtime.TargetedPatchingOptOutAttribute
+
+
+System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
+System.ApplicationIdentity
+System.ActivationContext
+System.AssemblyLoadEventArgs
+System.AssemblyLoadEventHandler

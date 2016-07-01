@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Runtime.Extensions.dll
 
 System.Security.SecureStringMarshal
 System.Security.SecureString

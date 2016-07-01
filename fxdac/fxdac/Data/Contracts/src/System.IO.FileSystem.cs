@@ -1,4 +1,12 @@
 [assembly:System.CLSCompliant(true)]
+namespace Microsoft.Win32.SafeHandles {
+    public sealed partial class SafeFileHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
+    {
+        public SafeFileHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
+        protected override bool ReleaseHandle() { return default(bool); }
+        public override bool IsInvalid { get { return default(bool); } }
+    }
+} // end of Microsoft.Win32.SafeHandles
 namespace System.IO {
     public static partial class Directory
     {

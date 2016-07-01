@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Runtime.Extensions.dll
 /r:System.ComponentModel.Primitives.dll
 /r:System.ComponentModel.dll
 /r:System.Threading.dll

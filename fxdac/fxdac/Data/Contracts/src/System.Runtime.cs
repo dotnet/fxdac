@@ -1,11 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace Microsoft.Win32.SafeHandles {
-    public sealed partial class SafeFileHandle : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
-    {
-        public SafeFileHandle(System.IntPtr preexistingHandle, bool ownsHandle) : base(default(bool)) { }
-        protected override bool ReleaseHandle() { return default(bool); }
-        public override bool IsInvalid { get { return default(bool); } }
-    }
     public abstract partial class SafeHandleMinusOneIsInvalid : System.Runtime.InteropServices.SafeHandle
     {
         protected SafeHandleMinusOneIsInvalid(bool ownsHandle) { }
@@ -45,22 +39,6 @@ namespace System {
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7);
 
     public delegate void Action<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in T8>(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8);
-    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
-    {
-        internal ActivationContext() { }
-        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
-        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
-        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
-        public void Dispose() { }
-        ~ActivationContext() { }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public enum ContextForm
-        {
-            Loose = 0,
-            StoreBounded = 1,
-        }
-    }
     public static partial class Activator     {
         public static object CreateInstance(System.Type type) { return default(object); }
         public static object CreateInstance(System.Type type, bool nonPublic) { return default(object); }
@@ -95,14 +73,6 @@ namespace System {
         protected ApplicationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public ApplicationException(string message) { }
         public ApplicationException(string message, System.Exception innerException) { }
-    }
-    public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
-    {
-        public ApplicationIdentity(string applicationIdentityFullName) { }
-        public string CodeBase { get { return default(string); } }
-        public string FullName { get { return default(string); } }
-        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public override string ToString() { return default(string); }
     }
     public partial class ArgumentException : System.SystemException, System.Runtime.Serialization.ISerializable
     {
@@ -297,12 +267,6 @@ namespace System {
         public ArrayTypeMismatchException(string message) { }
         public ArrayTypeMismatchException(string message, System.Exception innerException) { }
     }
-    public partial class AssemblyLoadEventArgs : System.EventArgs
-    {
-        public AssemblyLoadEventArgs(System.Reflection.Assembly loadedAssembly) { }
-        public System.Reflection.Assembly LoadedAssembly { get { return default(System.Reflection.Assembly); } }
-    }
-    public delegate void AssemblyLoadEventHandler(object sender, System.AssemblyLoadEventArgs args);
     public delegate void AsyncCallback(System.IAsyncResult ar);
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited = true, AllowMultiple = false)]
@@ -832,6 +796,30 @@ namespace System {
         Tuesday = 2,
         Wednesday = 3,
     }
+    public sealed partial class DBNull : System.IConvertible, System.Runtime.Serialization.ISerializable
+    {
+        internal DBNull() { }
+        public static readonly System.DBNull Value;
+        public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public System.TypeCode GetTypeCode() { return default(System.TypeCode); }
+        bool System.IConvertible.ToBoolean(System.IFormatProvider provider) { return default(bool); }
+        byte System.IConvertible.ToByte(System.IFormatProvider provider) { return default(byte); }
+        char System.IConvertible.ToChar(System.IFormatProvider provider) { return default(char); }
+        System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider provider) { return default(System.DateTime); }
+        decimal System.IConvertible.ToDecimal(System.IFormatProvider provider) { return default(decimal); }
+        double System.IConvertible.ToDouble(System.IFormatProvider provider) { return default(double); }
+        short System.IConvertible.ToInt16(System.IFormatProvider provider) { return default(short); }
+        int System.IConvertible.ToInt32(System.IFormatProvider provider) { return default(int); }
+        long System.IConvertible.ToInt64(System.IFormatProvider provider) { return default(long); }
+        sbyte System.IConvertible.ToSByte(System.IFormatProvider provider) { return default(sbyte); }
+        float System.IConvertible.ToSingle(System.IFormatProvider provider) { return default(float); }
+        object System.IConvertible.ToType(System.Type type, System.IFormatProvider provider) { return default(object); }
+        ushort System.IConvertible.ToUInt16(System.IFormatProvider provider) { return default(ushort); }
+        uint System.IConvertible.ToUInt32(System.IFormatProvider provider) { return default(uint); }
+        ulong System.IConvertible.ToUInt64(System.IFormatProvider provider) { return default(ulong); }
+        public override string ToString() { return default(string); }
+        public string ToString(System.IFormatProvider provider) { return default(string); }
+    }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Decimal : System.IComparable, System.IComparable<decimal>, System.IConvertible, System.IEquatable<decimal>, System.IFormattable, System.Runtime.Serialization.IDeserializationCallback
     {
@@ -1007,13 +995,6 @@ namespace System {
         protected DivideByZeroException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public DivideByZeroException(string message) { }
         public DivideByZeroException(string message, System.Exception innerException) { }
-    }
-    public partial class DllNotFoundException : System.TypeLoadException
-    {
-        public DllNotFoundException() { }
-        protected DllNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public DllNotFoundException(string message) { }
-        public DllNotFoundException(string message, System.Exception inner) { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Double : System.IComparable, System.IComparable<double>, System.IConvertible, System.IEquatable<double>, System.IFormattable
@@ -1575,25 +1556,6 @@ namespace System {
         [System.Diagnostics.DebuggerBrowsableAttribute((System.Diagnostics.DebuggerBrowsableState)(0))]
         public T Value { get { return default(T); } }
         public override string ToString() { return default(string); }
-    }
-    public enum LoaderOptimization
-    {
-        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
-        DisallowBindings = 4,
-        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
-        DomainMask = 3,
-        MultiDomain = 2,
-        MultiDomainHost = 3,
-        NotSpecified = 0,
-        SingleDomain = 1,
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
-    public sealed partial class LoaderOptimizationAttribute : System.Attribute
-    {
-        public LoaderOptimizationAttribute(byte value) { }
-        public LoaderOptimizationAttribute(System.LoaderOptimization value) { }
-        public System.LoaderOptimization Value { get { return default(System.LoaderOptimization); } }
     }
 
     public static partial class Math
@@ -2462,6 +2424,13 @@ namespace System {
             void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         }
     }
+    public partial class TimeZoneNotFoundException : System.Exception
+    {
+        public TimeZoneNotFoundException() { }
+        protected TimeZoneNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public TimeZoneNotFoundException(string message) { }
+        public TimeZoneNotFoundException(string message, System.Exception innerException) { }
+    }
 
     public static partial class Tuple
     {
@@ -3038,13 +3007,6 @@ namespace System {
         public UnauthorizedAccessException(string message) { }
         public UnauthorizedAccessException(string message, System.Exception inner) { }
     }
-    public partial class UnhandledExceptionEventArgs : System.EventArgs
-    {
-        public UnhandledExceptionEventArgs(object exception, bool isTerminating) { }
-        public object ExceptionObject { get { return default(object); } }
-        public bool IsTerminating { get { return default(bool); } }
-    }
-    public delegate void UnhandledExceptionEventHandler(object sender, System.UnhandledExceptionEventArgs e);
     public abstract partial class ValueType
     {
         protected ValueType() { }
@@ -3362,12 +3324,6 @@ namespace System.Collections {
     public partial interface IEqualityComparer
     {
         bool Equals(object x, object y);
-        int GetHashCode(object obj);
-    }
-
-    [System.ObsoleteAttribute("Please use IEqualityComparer instead.")]
-    public partial interface IHashCodeProvider
-    {
         int GetHashCode(object obj);
     }
     public partial interface IList : System.Collections.ICollection, System.Collections.IEnumerable
@@ -3696,6 +3652,112 @@ namespace System.Collections.Generic {
         bool SetEquals(System.Collections.Generic.IEnumerable<T> other);
         void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other);
         void UnionWith(System.Collections.Generic.IEnumerable<T> other);
+    }
+    public partial class Queue<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Queue() { }
+        public Queue(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Queue(int capacity) { }
+        public int Count { get { return default(int); } }
+        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
+        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public T Dequeue() { return default(T); }
+        public void Enqueue(T item) { }
+        public System.Collections.Generic.Queue<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Queue<T>.Enumerator); }
+        public T Peek() { return default(T); }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        void System.Collections.ICollection.CopyTo(System.Array array, int index) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public T[] ToArray() { return default(T[]); }
+        public void TrimExcess() { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
+    public partial class Stack<T> : System.Collections.Generic.IEnumerable<T>, System.Collections.ICollection, System.Collections.IEnumerable
+    {
+        public Stack() { }
+        public Stack(System.Collections.Generic.IEnumerable<T> collection) { }
+        public Stack(int capacity) { }
+        public int Count { get { return default(int); } }
+        bool System.Collections.ICollection.IsSynchronized { get { return default(bool); } }
+        object System.Collections.ICollection.SyncRoot { get { return default(object); } }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public System.Collections.Generic.Stack<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.Stack<T>.Enumerator); }
+        public T Peek() { return default(T); }
+        public T Pop() { return default(T); }
+        public void Push(T item) { }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        void System.Collections.ICollection.CopyTo(System.Array array, int arrayIndex) { }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public T[] ToArray() { return default(T[]); }
+        public void TrimExcess() { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
+    }
+    public partial class HashSet<T> : System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.ISet<T>, System.Collections.IEnumerable, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable
+    {
+        public HashSet() { }
+        public HashSet(System.Collections.Generic.IEnumerable<T> collection) { }
+        public HashSet(System.Collections.Generic.IEnumerable<T> collection, System.Collections.Generic.IEqualityComparer<T> comparer) { }
+        public HashSet(System.Collections.Generic.IEqualityComparer<T> comparer) { }
+        protected HashSet(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public System.Collections.Generic.IEqualityComparer<T> Comparer { get { return default(System.Collections.Generic.IEqualityComparer<T>); } }
+        public int Count { get { return default(int); } }
+        bool System.Collections.Generic.ICollection<T>.IsReadOnly { get { return default(bool); } }
+        public bool Add(T item) { return default(bool); }
+        public void Clear() { }
+        public bool Contains(T item) { return default(bool); }
+        public void CopyTo(T[] array) { }
+        public void CopyTo(T[] array, int arrayIndex) { }
+        public void CopyTo(T[] array, int arrayIndex, int count) { }
+        public static System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>> CreateSetComparer() { return default(System.Collections.Generic.IEqualityComparer<System.Collections.Generic.HashSet<T>>); }
+        public void ExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
+        public System.Collections.Generic.HashSet<T>.Enumerator GetEnumerator() { return default(System.Collections.Generic.HashSet<T>.Enumerator); }
+        public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public void IntersectWith(System.Collections.Generic.IEnumerable<T> other) { }
+        public bool IsProperSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsProperSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsSubsetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool IsSupersetOf(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public virtual void OnDeserialization(object sender) { }
+        public bool Overlaps(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public bool Remove(T item) { return default(bool); }
+        public int RemoveWhere(System.Predicate<T> match) { return default(int); }
+        public bool SetEquals(System.Collections.Generic.IEnumerable<T> other) { return default(bool); }
+        public void SymmetricExceptWith(System.Collections.Generic.IEnumerable<T> other) { }
+        void System.Collections.Generic.ICollection<T>.Add(T item) { }
+        System.Collections.Generic.IEnumerator<T> System.Collections.Generic.IEnumerable<T>.GetEnumerator() { return default(System.Collections.Generic.IEnumerator<T>); }
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+        public void TrimExcess() { }
+        public void UnionWith(System.Collections.Generic.IEnumerable<T> other) { }
+        [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+        public partial struct Enumerator : System.Collections.Generic.IEnumerator<T>, System.Collections.IEnumerator, System.IDisposable
+        {
+            public T Current { get { return default(T); } }
+            object System.Collections.IEnumerator.Current { get { return default(object); } }
+            public void Dispose() { }
+            public bool MoveNext() { return default(bool); }
+            void System.Collections.IEnumerator.Reset() { }
+        }
     }
 } // end of System.Collections.Generic
 namespace System.Collections.ObjectModel {
@@ -4371,33 +4433,6 @@ namespace System.IO {
         public IOException(string message) { }
         public IOException(string message, System.Exception innerException) { }
         public IOException(string message, int hresult) { }
-    }
-    public static partial class Path
-    {
-        public static readonly char AltDirectorySeparatorChar;
-        public static readonly char DirectorySeparatorChar;
-        [System.ObsoleteAttribute("see GetInvalidPathChars and GetInvalidFileNameChars methods.")]
-        public static readonly char[] InvalidPathChars;
-        public static readonly char PathSeparator;
-        public static readonly char VolumeSeparatorChar;
-        public static string ChangeExtension(string path, string extension) { return default(string); }
-        public static string Combine(string path1, string path2) { return default(string); }
-        public static string Combine(string path1, string path2, string path3) { return default(string); }
-        public static string Combine(string path1, string path2, string path3, string path4) { return default(string); }
-        public static string Combine(params string[] paths) { return default(string); }
-        public static string GetDirectoryName(string path) { return default(string); }
-        public static string GetExtension(string path) { return default(string); }
-        public static string GetFileName(string path) { return default(string); }
-        public static string GetFileNameWithoutExtension(string path) { return default(string); }
-        public static string GetFullPath(string path) { return default(string); }
-        public static char[] GetInvalidFileNameChars() { return default(char[]); }
-        public static char[] GetInvalidPathChars() { return default(char[]); }
-        public static string GetPathRoot(string path) { return default(string); }
-        public static string GetRandomFileName() { return default(string); }
-        public static string GetTempFileName() { return default(string); }
-        public static string GetTempPath() { return default(string); }
-        public static bool HasExtension(string path) { return default(bool); }
-        public static bool IsPathRooted(string path) { return default(bool); }
     }
     public partial class PathTooLongException : System.IO.IOException
     {
@@ -5312,24 +5347,6 @@ namespace System.Reflection {
     }
     public delegate System.Reflection.Module ModuleResolveEventHandler(object sender, System.ResolveEventArgs e);
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false, Inherited = false)]
-    public sealed partial class ObfuscateAssemblyAttribute : System.Attribute
-    {
-        public ObfuscateAssemblyAttribute(bool assemblyIsPrivate) { }
-        public bool AssemblyIsPrivate { get { return default(bool); } }
-        public bool StripAfterObfuscation { get { return default(bool); } set { } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(8157), AllowMultiple = true, Inherited = false)]
-    public sealed partial class ObfuscationAttribute : System.Attribute
-    {
-        public ObfuscationAttribute() { }
-        public bool ApplyToMembers { get { return default(bool); } set { } }
-        public bool Exclude { get { return default(bool); } set { } }
-        public string Feature { get { return default(string); } set { } }
-        public bool StripAfterObfuscation { get { return default(bool); } set { } }
-    }
-
     [System.FlagsAttribute]
     public enum ParameterAttributes
     {
@@ -5716,12 +5733,6 @@ namespace System.Reflection {
     }
 } // end of System.Reflection
 namespace System.Runtime {
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    public sealed partial class AssemblyTargetedPatchBandAttribute : System.Attribute
-    {
-        public AssemblyTargetedPatchBandAttribute(string targetedPatchBand) { }
-        public string TargetedPatchBand { get { return default(string); } }
-    }
 
     public enum GCLargeObjectHeapCompactionMode
     {
@@ -5749,13 +5760,6 @@ namespace System.Runtime {
         public MemoryFailPoint(int sizeInMegabytes) { }
         public void Dispose() { }
         ~MemoryFailPoint() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(96), AllowMultiple = false, Inherited = false)]
-    public sealed partial class TargetedPatchingOptOutAttribute : System.Attribute
-    {
-        public TargetedPatchingOptOutAttribute(string reason) { }
-        public string Reason { get { return default(string); } }
     }
 } // end of System.Runtime
 namespace System.Runtime.CompilerServices {
@@ -5996,46 +6000,7 @@ namespace System.Runtime.CompilerServices {
         public string AssemblyName { get { return default(string); } }
     }
 
-    public static partial class IsBoxed
-    {
-    }
-
-    public static partial class IsByValue
-    {
-    }
-
     public static partial class IsConst
-    {
-    }
-    public static partial class IsCopyConstructed
-    {
-    }
-
-    public static partial class IsExplicitlyDereferenced
-    {
-    }
-
-    public static partial class IsImplicitlyDereferenced
-    {
-    }
-
-    public static partial class IsJitIntrinsic
-    {
-    }
-
-    public static partial class IsLong
-    {
-    }
-
-    public static partial class IsPinned
-    {
-    }
-
-    public static partial class IsSignUnspecifiedByte
-    {
-    }
-
-    public static partial class IsUdtReturn
     {
     }
     public static partial class IsVolatile
@@ -6046,13 +6011,6 @@ namespace System.Runtime.CompilerServices {
     public sealed partial class IteratorStateMachineAttribute : System.Runtime.CompilerServices.StateMachineAttribute
     {
         public IteratorStateMachineAttribute(System.Type stateMachineType) : base(default(System.Type)) { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(2304), Inherited = false)]
-    public sealed partial class IUnknownConstantAttribute : System.Runtime.CompilerServices.CustomConstantAttribute
-    {
-        public IUnknownConstantAttribute() { }
-        public override object Value { get { return default(object); } }
     }
 
     public enum LoadHint
@@ -6092,25 +6050,12 @@ namespace System.Runtime.CompilerServices {
         Unmanaged = 4,
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(8), Inherited = true)]
-    public sealed partial class NativeCppClassAttribute : System.Attribute
-    {
-        public NativeCppClassAttribute() { }
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false)]
     public sealed partial class ReferenceAssemblyAttribute : System.Attribute
     {
         public ReferenceAssemblyAttribute() { }
         public ReferenceAssemblyAttribute(string description) { }
         public string Description { get { return default(string); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1052), AllowMultiple = true, Inherited = false)]
-    public sealed partial class RequiredAttributeAttribute : System.Attribute
-    {
-        public RequiredAttributeAttribute(System.Type requiredContract) { }
-        public System.Type RequiredContract { get { return default(System.Type); } }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false, AllowMultiple = false)]
@@ -6250,18 +6195,6 @@ namespace System.Runtime.ExceptionServices {
         public static System.Runtime.ExceptionServices.ExceptionDispatchInfo Capture(System.Exception source) { return default(System.Runtime.ExceptionServices.ExceptionDispatchInfo); }
         public void Throw() { }
     }
-
-    public partial class FirstChanceExceptionEventArgs : System.EventArgs
-    {
-        public FirstChanceExceptionEventArgs(System.Exception exception) { }
-        public System.Exception Exception { get { return default(System.Exception); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]
-    public sealed partial class HandleProcessCorruptedStateExceptionsAttribute : System.Attribute
-    {
-        public HandleProcessCorruptedStateExceptionsAttribute() { }
-    }
 } // end of System.Runtime.ExceptionServices
 namespace System.Runtime.InteropServices {
     public enum CharSet
@@ -6270,19 +6203,6 @@ namespace System.Runtime.InteropServices {
         Auto = 4,
         None = 1,
         Unicode = 3,
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
-    public sealed partial class ComDefaultInterfaceAttribute : System.Attribute
-    {
-        public ComDefaultInterfaceAttribute(System.Type defaultInterface) { }
-        public System.Type Value { get { return default(System.Type); } }
-    }
-    public enum ComInterfaceType
-    {
-        InterfaceIsDual = 0,
-        InterfaceIsIDispatch = 2,
-        InterfaceIsIUnknown = 1,
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(5597), Inherited = false)]
@@ -6307,14 +6227,6 @@ namespace System.Runtime.InteropServices {
         public FieldOffsetAttribute(int offset) { }
         public int Value { get { return default(int); } }
     }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
-    public sealed partial class InterfaceTypeAttribute : System.Attribute
-    {
-        public InterfaceTypeAttribute(short interfaceType) { }
-        public InterfaceTypeAttribute(System.Runtime.InteropServices.ComInterfaceType interfaceType) { }
-        public System.Runtime.InteropServices.ComInterfaceType Value { get { return default(System.Runtime.InteropServices.ComInterfaceType); } }
-    }
     public enum LayoutKind
     {
         Auto = 3,
@@ -6326,31 +6238,6 @@ namespace System.Runtime.InteropServices {
     public sealed partial class OutAttribute : System.Attribute
     {
         public OutAttribute() { }
-    }
-
-    public abstract partial class SafeBuffer : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid, System.IDisposable
-    {
-        protected SafeBuffer(bool ownsHandle) : base(default(bool)) { }
-        [System.CLSCompliantAttribute(false)]
-        public ulong ByteLength { get { return default(ulong); } }
-        [System.CLSCompliantAttribute(false)]
-        public unsafe void AcquirePointer(ref byte* pointer) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize(uint numElements, uint sizeOfEachElement) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize(ulong numBytes) { }
-        [System.CLSCompliantAttribute(false)]
-        public void Initialize<T>(uint numElements) where T : struct { }
-        [System.CLSCompliantAttribute(false)]
-        public T Read<T>(ulong byteOffset) where T : struct { return default(T); }
-        [System.CLSCompliantAttribute(false)]
-        public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-        public void ReleasePointer() { }
-        [System.CLSCompliantAttribute(false)]
-        public void Write<T>(ulong byteOffset, T value) where T : struct { }
-        [System.CLSCompliantAttribute(false)]
-        public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
-        public override bool IsInvalid { get { return default(bool); } }
     }
     public abstract partial class SafeHandle :System.IDisposable
     {

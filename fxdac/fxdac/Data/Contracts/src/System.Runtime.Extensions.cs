@@ -1,5 +1,21 @@
 [assembly:System.CLSCompliant(true)]
 namespace System {
+    public sealed partial class ActivationContext : System.IDisposable, System.Runtime.Serialization.ISerializable
+    {
+        internal ActivationContext() { }
+        public System.ActivationContext.ContextForm Form { get { return default(System.ActivationContext.ContextForm); } }
+        public System.ApplicationIdentity Identity { get { return default(System.ApplicationIdentity); } }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity) { return default(System.ActivationContext); }
+        public static System.ActivationContext CreatePartialActivationContext(System.ApplicationIdentity identity, string[] manifestPaths) { return default(System.ActivationContext); }
+        public void Dispose() { }
+        ~ActivationContext() { }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public enum ContextForm
+        {
+            Loose = 0,
+            StoreBounded = 1,
+        }
+    }
     public sealed partial class ApplicationId
     {
         public ApplicationId(byte[] publicKeyToken, string name, System.Version version, string processorArchitecture, string culture) { }
@@ -13,6 +29,20 @@ namespace System {
         public override int GetHashCode() { return default(int); }
         public override string ToString() { return default(string); }
     }
+    public sealed partial class ApplicationIdentity : System.Runtime.Serialization.ISerializable
+    {
+        public ApplicationIdentity(string applicationIdentityFullName) { }
+        public string CodeBase { get { return default(string); } }
+        public string FullName { get { return default(string); } }
+        void System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public override string ToString() { return default(string); }
+    }
+    public partial class AssemblyLoadEventArgs : System.EventArgs
+    {
+        public AssemblyLoadEventArgs(System.Reflection.Assembly loadedAssembly) { }
+        public System.Reflection.Assembly LoadedAssembly { get { return default(System.Reflection.Assembly); } }
+    }
+    public delegate void AssemblyLoadEventHandler(object sender, System.AssemblyLoadEventArgs args);
 
     [System.FlagsAttribute]
     public enum Base64FormattingOptions
@@ -567,6 +597,25 @@ namespace System {
         Process = 0,
         User = 1,
     }
+    public enum LoaderOptimization
+    {
+        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
+        DisallowBindings = 4,
+        [System.ObsoleteAttribute("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
+        DomainMask = 3,
+        MultiDomain = 2,
+        MultiDomainHost = 3,
+        NotSpecified = 0,
+        SingleDomain = 1,
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(64))]
+    public sealed partial class LoaderOptimizationAttribute : System.Attribute
+    {
+        public LoaderOptimizationAttribute(byte value) { }
+        public LoaderOptimizationAttribute(System.LoaderOptimization value) { }
+        public System.LoaderOptimization Value { get { return default(System.LoaderOptimization); } }
+    }
     public sealed partial class MulticastNotSupportedException : System.SystemException
     {
         public MulticastNotSupportedException() { }
@@ -691,6 +740,87 @@ namespace System {
         protected internal virtual string Resolve(System.Uri baseUri, System.Uri relativeUri, out System.UriFormatException parsingError) { parsingError = default(System.UriFormatException); return default(string); }
     }
 } // end of System
+namespace System.IO {
+    public static partial class Path
+    {
+        public static readonly char AltDirectorySeparatorChar;
+        public static readonly char DirectorySeparatorChar;
+        [System.ObsoleteAttribute("see GetInvalidPathChars and GetInvalidFileNameChars methods.")]
+        public static readonly char[] InvalidPathChars;
+        public static readonly char PathSeparator;
+        public static readonly char VolumeSeparatorChar;
+        public static string ChangeExtension(string path, string extension) { return default(string); }
+        public static string Combine(string path1, string path2) { return default(string); }
+        public static string Combine(string path1, string path2, string path3) { return default(string); }
+        public static string Combine(string path1, string path2, string path3, string path4) { return default(string); }
+        public static string Combine(params string[] paths) { return default(string); }
+        public static string GetDirectoryName(string path) { return default(string); }
+        public static string GetExtension(string path) { return default(string); }
+        public static string GetFileName(string path) { return default(string); }
+        public static string GetFileNameWithoutExtension(string path) { return default(string); }
+        public static string GetFullPath(string path) { return default(string); }
+        public static char[] GetInvalidFileNameChars() { return default(char[]); }
+        public static char[] GetInvalidPathChars() { return default(char[]); }
+        public static string GetPathRoot(string path) { return default(string); }
+        public static string GetRandomFileName() { return default(string); }
+        public static string GetTempFileName() { return default(string); }
+        public static string GetTempPath() { return default(string); }
+        public static bool HasExtension(string path) { return default(bool); }
+        public static bool IsPathRooted(string path) { return default(bool); }
+    }
+} // end of System.IO
+namespace System.Reflection {
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = false, Inherited = false)]
+    public sealed partial class ObfuscateAssemblyAttribute : System.Attribute
+    {
+        public ObfuscateAssemblyAttribute(bool assemblyIsPrivate) { }
+        public bool AssemblyIsPrivate { get { return default(bool); } }
+        public bool StripAfterObfuscation { get { return default(bool); } set { } }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(8157), AllowMultiple = true, Inherited = false)]
+    public sealed partial class ObfuscationAttribute : System.Attribute
+    {
+        public ObfuscationAttribute() { }
+        public bool ApplyToMembers { get { return default(bool); } set { } }
+        public bool Exclude { get { return default(bool); } set { } }
+        public string Feature { get { return default(string); } set { } }
+        public bool StripAfterObfuscation { get { return default(bool); } set { } }
+    }
+} // end of System.Reflection
+namespace System.Runtime {
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
+    public sealed partial class AssemblyTargetedPatchBandAttribute : System.Attribute
+    {
+        public AssemblyTargetedPatchBandAttribute(string targetedPatchBand) { }
+        public string TargetedPatchBand { get { return default(string); } }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(96), AllowMultiple = false, Inherited = false)]
+    public sealed partial class TargetedPatchingOptOutAttribute : System.Attribute
+    {
+        public TargetedPatchingOptOutAttribute(string reason) { }
+        public string Reason { get { return default(string); } }
+    }
+} // end of System.Runtime
+namespace System.Runtime.ExceptionServices {
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]
+    public sealed partial class HandleProcessCorruptedStateExceptionsAttribute : System.Attribute
+    {
+        public HandleProcessCorruptedStateExceptionsAttribute() { }
+    }
+} // end of System.Runtime.ExceptionServices
+namespace System.ComponentModel {
+    public partial class CancelEventArgs : System.EventArgs
+    {
+        public CancelEventArgs() { }
+        public CancelEventArgs(bool cancel) { }
+        public bool Cancel { get { return default(bool); } set { } }
+    }
+    public delegate void CancelEventHandler(object sender, System.ComponentModel.CancelEventArgs e);
+} // end of System.ComponentModel
 namespace System.Net {
 
     public static partial class WebUtility

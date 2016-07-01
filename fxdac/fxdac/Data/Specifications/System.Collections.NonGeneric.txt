@@ -2,7 +2,8 @@
 
 System.Collections.Hashtable
 System.Collections.ArrayList
-
+System.Collections.IHashCodeProvider
+System.Collections.CaseInsensitiveHashCodeProvider
 System.Collections.CaseInsensitiveComparer
 System.Collections.CollectionBase
 System.Collections.Comparer

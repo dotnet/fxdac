@@ -264,7 +264,22 @@ namespace System {
         public virtual object InitializeLifetimeService() { return default(object); }
         protected System.MarshalByRefObject MemberwiseClone(bool cloneIdentity) { return default(System.MarshalByRefObject); }
     }
+    public partial class UnhandledExceptionEventArgs : System.EventArgs
+    {
+        public UnhandledExceptionEventArgs(object exception, bool isTerminating) { }
+        public object ExceptionObject { get { return default(object); } }
+        public bool IsTerminating { get { return default(bool); } }
+    }
+    public delegate void UnhandledExceptionEventHandler(object sender, System.UnhandledExceptionEventArgs e);
 } // end of System
+namespace System.Runtime.ExceptionServices {
+
+    public partial class FirstChanceExceptionEventArgs : System.EventArgs
+    {
+        public FirstChanceExceptionEventArgs(System.Exception exception) { }
+        public System.Exception Exception { get { return default(System.Exception); } }
+    }
+} // end of System.Runtime.ExceptionServices
 namespace System.Runtime.Hosting {
     public sealed partial class ActivationArguments : System.Security.Policy.EvidenceBase
     {

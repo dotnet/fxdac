@@ -1,12 +1,5 @@
 [assembly:System.CLSCompliant(true)]
 namespace System.ComponentModel {
-    public partial class CancelEventArgs : System.EventArgs
-    {
-        public CancelEventArgs() { }
-        public CancelEventArgs(bool cancel) { }
-        public bool Cancel { get { return default(bool); } set { } }
-    }
-    public delegate void CancelEventHandler(object sender, System.ComponentModel.CancelEventArgs e);
 
     public partial interface IChangeTracking
     {

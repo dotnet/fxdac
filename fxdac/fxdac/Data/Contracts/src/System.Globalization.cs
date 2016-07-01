@@ -13,13 +13,6 @@ namespace System {
         public virtual System.DateTime ToLocalTime(System.DateTime time) { return default(System.DateTime); }
         public virtual System.DateTime ToUniversalTime(System.DateTime time) { return default(System.DateTime); }
     }
-    public partial class TimeZoneNotFoundException : System.Exception
-    {
-        public TimeZoneNotFoundException() { }
-        protected TimeZoneNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public TimeZoneNotFoundException(string message) { }
-        public TimeZoneNotFoundException(string message, System.Exception innerException) { }
-    }
 } // end of System
 namespace System.Globalization {
 

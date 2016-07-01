@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Runtime.InteropServices.dll
 /r:System.IO.FileSystem.Primitives.dll
 /r:System.IO.FileSystem.dll
 /r:System.IO.UnmanagedMemoryStream.dll

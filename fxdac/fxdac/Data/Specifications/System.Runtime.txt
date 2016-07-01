@@ -72,6 +72,8 @@ System.Security.SecurityRuleSet
 System.Security.SecurityTreatAsSafeAttribute
 System.Security.UnverifiableCodeAttribute
 
+System.STAThreadAttribute
+
 // large mscorlib
 System.Action`1
 System.Collections.Generic.IReadOnlyCollection`1
@@ -193,11 +195,11 @@ System.Threading.Tasks.UnobservedTaskExceptionEventArgs
 System.Threading.WaitHandle
 System.Type
 System.Version
+System.TimeZoneNotFoundException
 
 // Xamarin
-Microsoft.Win32.SafeHandles.SafeFileHandle
+
 System.CharEnumerator
-System.Collections.IHashCodeProvider
 System.Configuration.Assemblies.AssemblyVersionCompatibility
 System.Converter`2
 System.Diagnostics.DebuggerTypeProxyAttribute
@@ -217,10 +219,7 @@ System.Reflection.ModuleResolveEventHandler
 System.Reflection.PortableExecutableKinds
 System.Reflection.StrongNameKeyPair
 System.ResolveEventArgs
-System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
-System.Runtime.InteropServices.ComDefaultInterfaceAttribute
-System.Runtime.InteropServices.ComInterfaceType
-System.Runtime.InteropServices.InterfaceTypeAttribute
+System.ResolveEventHandler
 
 System.Runtime.Serialization.IDeserializationCallback
 System.Runtime.Serialization.IFormatterConverter
@@ -233,7 +232,7 @@ System.Runtime.Serialization.SerializationInfo
 System.Runtime.Serialization.SerializationInfoEnumerator
 System.Runtime.Serialization.StreamingContext
 System.Runtime.Serialization.StreamingContextStates
-System.Runtime.TargetedPatchingOptOutAttribute
+
 
 System.Text.NormalizationForm
 
@@ -408,18 +407,14 @@ System.WeakReference
 System.WeakReference`1
 
 // System.Runtime types in turn bring the following types from Xamarin
-System.ActivationContext
-System.ApplicationIdentity
-System.AssemblyLoadEventArgs
-System.AssemblyLoadEventHandler
-System.GCNotificationStatus
-System.LoaderOptimization
-System.ResolveEventHandler
-System.Runtime.CompilerServices.CompilationRelaxations
-System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
 
-System.UnhandledExceptionEventArgs
-System.UnhandledExceptionEventHandler
+
+System.GCNotificationStatus
+
+System.Runtime.CompilerServices.CompilationRelaxations
+
+
+
 System.UriPartial
 
 // needed by higher level assemblies to avoid dependencies on System.Runtime.Extensions.dll
@@ -446,28 +441,15 @@ System.Runtime.CompilerServices.DependencyAttribute
 System.Runtime.CompilerServices.DiscardableAttribute
 System.Runtime.CompilerServices.FixedAddressValueTypeAttribute
 System.Runtime.CompilerServices.HasCopySemanticsAttribute
-System.Runtime.CompilerServices.IsBoxed
-System.Runtime.CompilerServices.IsByValue
-System.Runtime.CompilerServices.IsCopyConstructed
-System.Runtime.CompilerServices.IsExplicitlyDereferenced
-System.Runtime.CompilerServices.IsImplicitlyDereferenced
-System.Runtime.CompilerServices.IsJitIntrinsic
-System.Runtime.CompilerServices.IsLong
-System.Runtime.CompilerServices.IsPinned
-System.Runtime.CompilerServices.IsSignUnspecifiedByte
-System.Runtime.CompilerServices.IsUdtReturn
-System.Runtime.CompilerServices.IUnknownConstantAttribute
 System.Runtime.CompilerServices.LoadHint
-System.Runtime.CompilerServices.NativeCppClassAttribute
-System.Runtime.CompilerServices.RequiredAttributeAttribute
+
 System.Runtime.CompilerServices.RuntimeWrappedException
 System.Runtime.CompilerServices.ScopelessEnumAttribute
 System.Runtime.CompilerServices.SpecialNameAttribute
 System.Runtime.CompilerServices.StringFreezingAttribute
 System.Runtime.CompilerServices.SuppressIldasmAttribute
 
-System.Runtime.InteropServices.SafeBuffer
-
+System.DBNull
 // could be in extensions
 System.Progress`1
 System.BitConverter
@@ -480,7 +462,6 @@ System.Configuration.Assemblies.AssemblyHash
 
 System.AccessViolationException
 System.DataMisalignedException
-System.DllNotFoundException
 System.DuplicateWaitObjectException
 System.EntryPointNotFoundException
 System.ExecutionEngineException
@@ -488,10 +469,6 @@ System.InsufficientMemoryException
 System.NotFiniteNumberException
 System.TypeUnloadedException
 System.StackOverflowException
-
-System.LoaderOptimizationAttribute
-System.Runtime.AssemblyTargetedPatchBandAttribute
-System.STAThreadAttribute
 
 // added because it seemed like the right thing to do:
 Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
@@ -503,7 +480,6 @@ System.Collections.Generic.EqualityComparer`1
 System.Collections.Generic.List`1
 System.Globalization.CultureNotFoundException
 System.IO.EndOfStreamException
-System.IO.Path
 System.Runtime.Serialization.OnDeserializedAttribute
 System.Runtime.Serialization.OnDeserializingAttribute
 System.Runtime.Serialization.OnSerializedAttribute
@@ -519,8 +495,6 @@ System.Reflection.CustomAttributeFormatException
 System.Reflection.IntrospectionExtensions
 System.Reflection.InvalidFilterCriteriaException
 System.Reflection.Missing
-System.Reflection.ObfuscateAssemblyAttribute
-System.Reflection.ObfuscationAttribute
 System.Reflection.Pointer
 System.Reflection.ReflectionContext
 System.Reflection.ReflectionTypeLoadException
@@ -554,4 +528,8 @@ System.Security.PartialTrustVisibilityLevel
 System.Diagnostics.Stopwatch
 System.ComponentModel.Win32Exception
 System.Runtime.InteropServices.ComVisibleAttribute
+
+System.Collections.Generic.Stack`1
+System.Collections.Generic.Queue`1
+System.Collections.Generic.HashSet`1
 

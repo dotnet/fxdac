@@ -1,4 +1,5 @@
 ﻿/r:System.Runtime.dll
+/r:System.Collections.NonGeneric.dll
 
 System.Collections.Specialized.BitVector32
 System.Collections.Specialized.HybridDictionary

@@ -63,6 +63,16 @@ namespace System.Collections {
         public static System.Collections.CaseInsensitiveComparer DefaultInvariant { get { return default(System.Collections.CaseInsensitiveComparer); } }
         public int Compare(object a, object b) { return default(int); }
     }
+
+    [System.ObsoleteAttribute("Please use StringComparer instead.")]
+    public partial class CaseInsensitiveHashCodeProvider : System.Collections.IHashCodeProvider
+    {
+        public CaseInsensitiveHashCodeProvider() { }
+        public CaseInsensitiveHashCodeProvider(System.Globalization.CultureInfo culture) { }
+        public static System.Collections.CaseInsensitiveHashCodeProvider Default { get { return default(System.Collections.CaseInsensitiveHashCodeProvider); } }
+        public static System.Collections.CaseInsensitiveHashCodeProvider DefaultInvariant { get { return default(System.Collections.CaseInsensitiveHashCodeProvider); } }
+        public int GetHashCode(object obj) { return default(int); }
+    }
     public abstract partial class CollectionBase : System.Collections.ICollection, System.Collections.IEnumerable, System.Collections.IList
     {
         protected CollectionBase() { }
@@ -185,6 +195,12 @@ namespace System.Collections {
         public virtual void Remove(object key) { }
         public static System.Collections.Hashtable Synchronized(System.Collections.Hashtable table) { return default(System.Collections.Hashtable); }
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() { return default(System.Collections.IEnumerator); }
+    }
+
+    [System.ObsoleteAttribute("Please use IEqualityComparer instead.")]
+    public partial interface IHashCodeProvider
+    {
+        int GetHashCode(object obj);
     }
     public partial class Queue : System.Collections.ICollection, System.Collections.IEnumerable, System.ICloneable
     {

@@ -132,16 +132,17 @@
     <item text="Removed member Semaphore.OpenExisting(string, System.Security.AccessControl.SemaphoreRights):System.Threading.Semaphore"/>
     <item text="Removed member Semaphore.TryOpenExisting(string, System.Security.AccessControl.SemaphoreRights, System.Threading.Semaphore):bool"/>
   </REMOVED>
-  <MOVED_TYPES total="187" description="corefx types that changed their location">
-    <MOVED_NEEDS_REVIEW total="1" description="unclear if the move is value, i.e. down in the dependency graph">
+  <MOVED_TYPES total="174" description="corefx types that changed their location">
+    <MOVED_NEEDS_REVIEW total="3" description="unclear if the move is value, i.e. down in the dependency graph">
       <item text="System.IO.FileSystem.Primitives,System.IO.FileOptions moved from System.IO.FileSystem"/>
+      <item text="System.Runtime.Extensions,System.ComponentModel.CancelEventArgs moved from System.ComponentModel"/>
+      <item text="System.Runtime.Extensions,System.ComponentModel.CancelEventHandler moved from System.ComponentModel.TypeConverter"/>
     </MOVED_NEEDS_REVIEW>
-    <MOVED_VALID total="41" description="moves that have been deemed ok (list hardcoded)">
+    <MOVED_VALID total="40" description="moves that have been deemed ok (list hardcoded)">
       <item text="Microsoft.Win32.Registry,Microsoft.Win32.RegistryAclExtensions moved from Microsoft.Win32.Registry.AccessControl"/>
       <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistryAccessRule moved from Microsoft.Win32.Registry.AccessControl"/>
       <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistryAuditRule moved from Microsoft.Win32.Registry.AccessControl"/>
       <item text="Microsoft.Win32.Registry,System.Security.AccessControl.RegistrySecurity moved from Microsoft.Win32.Registry.AccessControl"/>
-      <item text="System.ComponentModel,System.ComponentModel.CancelEventHandler moved from System.ComponentModel.TypeConverter"/>
       <item text="System.ComponentModel.Primitives,System.ComponentModel.DefaultEventAttribute moved from System.ComponentModel.TypeConverter"/>
       <item text="System.IO.FileSystem,System.IO.FileSystemAclExtensions moved from System.IO.FileSystem.AccessControl"/>
       <item text="System.IO.FileSystem,System.Security.AccessControl.DirectoryObjectSecurity moved from System.IO.FileSystem.AccessControl"/>
@@ -179,13 +180,12 @@
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.CallSiteHelpers moved from System.Dynamic.Runtime"/>
       <item text="System.Linq.Expressions,System.Runtime.CompilerServices.DynamicAttribute moved from System.Dynamic.Runtime"/>
     </MOVED_VALID>
-    <MOVED_TO_SYSTEM_RUNTIME total="145" description="all moves to System.Runtime are OK">
+    <MOVED_TO_SYSTEM_RUNTIME total="131" description="all moves to System.Runtime are OK">
       <item text="System.Runtime,.ConfiguredTaskAwaiter moved from System.Threading.Tasks"/>
       <item text="System.Runtime,.Enumerator moved from System.Collections"/>
       <item text="System.Runtime,.KeyCollection moved from System.ObjectModel"/>
       <item text="System.Runtime,.ValueCollection moved from System.ObjectModel"/>
       <item text="System.Runtime,.YieldAwaiter moved from System.Threading.Tasks"/>
-      <item text="System.Runtime,Microsoft.Win32.SafeHandles.SafeFileHandle moved from System.IO.FileSystem"/>
       <item text="System.Runtime,Microsoft.Win32.SafeHandles.SafeWaitHandle moved from System.Runtime.Handles"/>
       <item text="System.Runtime,System.AggregateException moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.BitConverter moved from System.Runtime.Extensions"/>
@@ -193,9 +193,13 @@
       <item text="System.Runtime,System.Collections.Generic.Comparer`1 moved from System.Collections"/>
       <item text="System.Runtime,System.Collections.Generic.Dictionary`2 moved from System.Collections"/>
       <item text="System.Runtime,System.Collections.Generic.EqualityComparer`1 moved from System.Collections"/>
+      <item text="System.Runtime,System.Collections.Generic.HashSet`1 moved from System.Collections"/>
       <item text="System.Runtime,System.Collections.Generic.List`1 moved from System.Collections"/>
+      <item text="System.Runtime,System.Collections.Generic.Queue`1 moved from System.Collections"/>
+      <item text="System.Runtime,System.Collections.Generic.Stack`1 moved from System.Collections"/>
       <item text="System.Runtime,System.ComponentModel.Win32Exception moved from Microsoft.Win32.Primitives"/>
       <item text="System.Runtime,System.DataMisalignedException moved from System.Runtime.InteropServices"/>
+      <item text="System.Runtime,System.DBNull moved from System.Data.Common"/>
       <item text="System.Runtime,System.Diagnostics.CodeAnalysis.SuppressMessageAttribute moved from System.Diagnostics.Tools"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerBrowsableAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerBrowsableState moved from System.Diagnostics.Debug"/>
@@ -205,7 +209,6 @@
       <item text="System.Runtime,System.Diagnostics.DebuggerStepThroughAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.DebuggerTypeProxyAttribute moved from System.Diagnostics.Debug"/>
       <item text="System.Runtime,System.Diagnostics.Stopwatch moved from System.Runtime.Extensions"/>
-      <item text="System.Runtime,System.DllNotFoundException moved from System.Runtime.InteropServices"/>
       <item text="System.Runtime,System.Globalization.Calendar moved from System.Globalization"/>
       <item text="System.Runtime,System.Globalization.CalendarWeekRule moved from System.Globalization"/>
       <item text="System.Runtime,System.Globalization.CompareInfo moved from System.Globalization"/>
@@ -217,7 +220,6 @@
       <item text="System.Runtime,System.Globalization.TextInfo moved from System.Globalization"/>
       <item text="System.Runtime,System.Globalization.UnicodeCategory moved from System.Globalization"/>
       <item text="System.Runtime,System.IO.EndOfStreamException moved from System.IO"/>
-      <item text="System.Runtime,System.IO.Path moved from System.Runtime.Extensions"/>
       <item text="System.Runtime,System.IO.SeekOrigin moved from System.IO"/>
       <item text="System.Runtime,System.IO.Stream moved from System.IO"/>
       <item text="System.Runtime,System.IServiceProvider moved from System.ComponentModel"/>
@@ -281,24 +283,9 @@
       <item text="System.Runtime,System.Runtime.CompilerServices.IAsyncStateMachine moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Runtime.CompilerServices.ICriticalNotifyCompletion moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Runtime.CompilerServices.INotifyCompletion moved from System.Threading.Tasks"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsBoxed moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsByValue moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsCopyConstructed moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsExplicitlyDereferenced moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsImplicitlyDereferenced moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsJitIntrinsic moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsLong moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsSignUnspecifiedByte moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.IsUdtReturn moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.NativeCppClassAttribute moved from System.Runtime.CompilerServices.VisualC"/>
-      <item text="System.Runtime,System.Runtime.CompilerServices.RequiredAttributeAttribute moved from System.Runtime.CompilerServices.VisualC"/>
       <item text="System.Runtime,System.Runtime.CompilerServices.TaskAwaiter moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Runtime.CompilerServices.TaskAwaiter`1 moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Runtime.CompilerServices.YieldAwaitable moved from System.Threading.Tasks"/>
-      <item text="System.Runtime,System.Runtime.InteropServices.ComDefaultInterfaceAttribute moved from System.Runtime.InteropServices"/>
-      <item text="System.Runtime,System.Runtime.InteropServices.ComInterfaceType moved from System.Runtime.InteropServices"/>
-      <item text="System.Runtime,System.Runtime.InteropServices.InterfaceTypeAttribute moved from System.Runtime.InteropServices"/>
-      <item text="System.Runtime,System.Runtime.InteropServices.SafeBuffer moved from System.Runtime.InteropServices"/>
       <item text="System.Runtime,System.Runtime.InteropServices.SafeHandle moved from System.Runtime.Handles"/>
       <item text="System.Runtime,System.Runtime.Serialization.OnDeserializedAttribute moved from System.Runtime.Serialization.Primitives"/>
       <item text="System.Runtime,System.Runtime.Serialization.OnDeserializingAttribute moved from System.Runtime.Serialization.Primitives"/>
@@ -362,7 +349,6 @@
       <item text="System.Threading.Overlapped"/>
       <item text="System.Text.Encoding"/>
       <item text="System.ServiceProcess.ServiceController"/>
-      <item text="System.Security.SecureString"/>
       <item text="System.Security.Cryptography"/>
       <item text="System.Security.Cryptography.Primitives"/>
       <item text="System.Security.Cryptography.Encoding"/>
@@ -393,11 +379,9 @@
       <item text="System.Diagnostics.FileVersionInfo"/>
       <item text="System.Diagnostics.Debug"/>
       <item text="System.Diagnostics.Contracts"/>
-      <item text="System.Deployment"/>
       <item text="System.ComponentModel"/>
       <item text="System.ComponentModel.Annotations"/>
       <item text="System.Collections"/>
-      <item text="System.Collections.Specialized"/>
       <item text="System.Collections.NonGeneric"/>
       <item text="System.Collections.Concurrent"/>
       <item text="System.AppContext"/>
@@ -410,17 +394,12 @@
       <item text="System.Text.Encoding.Extensions"/>
       <item text="System.Text.Encoding.CodePages"/>
       <item text="System.Security.Principal"/>
-      <item text="System.Runtime.InteropServices"/>
-      <item text="System.Net.WebHeaderCollection"/>
-      <item text="System.Net.Primitives"/>
-      <item text="System.Net.Mime"/>
       <item text="System.Linq.Parallel"/>
       <item text="System.Linq.Expressions"/>
-      <item text="System.IO.UnmanagedMemoryStream"/>
       <item text="System.IO"/>
       <item text="System.IO.Compression"/>
-      <item text="System.Diagnostics.TraceSource"/>
       <item text="System.ComponentModel.Primitives"/>
+      <item text="System.Collections.Specialized"/>
       <item text="Microsoft.Win32.SafeHandles"/>
     </Layer>
     <Layer number="3">
@@ -429,18 +408,14 @@
       <item text="System.Security.Cryptography.Algorithms"/>
       <item text="System.Security.Claims"/>
       <item text="System.Runtime.Extensions"/>
-      <item text="System.Resources.ResourceManager"/>
-      <item text="System.Net.WebSockets"/>
-      <item text="System.Net.Sockets"/>
-      <item text="System.Net.NetworkInformation"/>
-      <item text="System.Net.NameResolution"/>
+      <item text="System.Net.WebHeaderCollection"/>
+      <item text="System.Net.Mime"/>
       <item text="System.Linq.Queryable"/>
       <item text="System.IO.Pipes"/>
       <item text="System.IO.Compression.ZipFile"/>
-      <item text="System.Diagnostics.TextWriterTraceListener"/>
+      <item text="System.Diagnostics.TraceSource"/>
       <item text="System.Data.Common"/>
       <item text="System.Console"/>
-      <item text="System.ComponentModel.EventBasedAsync"/>
       <item text="System.CodeDom"/>
       <item text="Microsoft.CSharp"/>
     </Layer>
@@ -449,38 +424,45 @@
       <item text="System.Xml.XmlSerializer"/>
       <item text="System.Xml.XmlDocument"/>
       <item text="System.Xml.XDocument"/>
+      <item text="System.Security.SecureString"/>
       <item text="System.Security.Principal.Windows"/>
-      <item text="System.Security.Cryptography.X509Certificates"/>
       <item text="System.Runtime.Serialization.Xml"/>
+      <item text="System.Diagnostics.TextWriterTraceListener"/>
       <item text="System.Diagnostics.StackTrace"/>
+      <item text="System.Deployment"/>
       <item text="System.Data.SqlClient"/>
-      <item text="System.ComponentModel.TypeConverter"/>
+      <item text="System.ComponentModel.EventBasedAsync"/>
     </Layer>
     <Layer number="5">
       <item text="System.Xml.XPath.XmlDocument"/>
       <item text="System.Xml.XPath.XDocument"/>
-      <item text="System.Timer"/>
+      <item text="System.Security.Cryptography.X509Certificates"/>
       <item text="System.Security.AccessControl"/>
-      <item text="System.Net.WebSockets.Client"/>
-      <item text="System.Net.Security"/>
-      <item text="System.Net.Requests"/>
-      <item text="System.Net.Ping"/>
-      <item text="System.Net.HttpListener"/>
-      <item text="System.Net.Http"/>
-      <item text="System.Diagnostics.Process"/>
+      <item text="System.Runtime.InteropServices"/>
+      <item text="System.Net.Primitives"/>
     </Layer>
     <Layer number="6">
       <item text="System.Threading.AccessControl"/>
       <item text="System.Security.Permissions"/>
-      <item text="System.Net.WebClient"/>
-      <item text="System.Net.Mail"/>
-      <item text="System.Net.Http.WinHttpHandler"/>
+      <item text="System.Net.WebSockets"/>
+      <item text="System.Net.Sockets"/>
+      <item text="System.Net.Security"/>
+      <item text="System.Net.Requests"/>
+      <item text="System.Net.NetworkInformation"/>
+      <item text="System.Net.NameResolution"/>
+      <item text="System.Net.Http"/>
+      <item text="System.IO.UnmanagedMemoryStream"/>
       <item text="Microsoft.Win32.Registry"/>
     </Layer>
     <Layer number="7">
       <item text="System.Security.Cryptography.Csp"/>
       <item text="System.Runtime.Remoting"/>
+      <item text="System.Resources.ResourceManager"/>
+      <item text="System.Net.WebSockets.Client"/>
       <item text="System.Net"/>
+      <item text="System.Net.Mail"/>
+      <item text="System.Net.HttpListener"/>
+      <item text="System.Net.Http.WinHttpHandler"/>
       <item text="System.IO.FileSystem"/>
     </Layer>
     <Layer number="8">
@@ -488,6 +470,13 @@
       <item text="System.Net.Security.Permissions"/>
       <item text="System.IO.MemoryMappedFiles"/>
       <item text="System.IO.FileSystem.DriveInfo"/>
+      <item text="System.ComponentModel.TypeConverter"/>
+    </Layer>
+    <Layer number="9">
+      <item text="System.Timer"/>
+      <item text="System.Net.WebClient"/>
+      <item text="System.Net.Ping"/>
+      <item text="System.Diagnostics.Process"/>
     </Layer>
   </Layers>
 </report>

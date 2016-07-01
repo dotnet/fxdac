@@ -1,7 +1,6 @@
 ﻿/r:System.Runtime.dll
 
 System.TimeZone
-System.TimeZoneNotFoundException
 System.Globalization.CharUnicodeInfo
 System.Globalization.DaylightTime
 System.Globalization.RegionInfo

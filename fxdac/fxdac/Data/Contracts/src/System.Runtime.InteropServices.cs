@@ -1,4 +1,13 @@
 [assembly:System.CLSCompliant(true)]
+namespace System {
+    public partial class DllNotFoundException : System.TypeLoadException
+    {
+        public DllNotFoundException() { }
+        protected DllNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public DllNotFoundException(string message) { }
+        public DllNotFoundException(string message, System.Exception inner) { }
+    }
+} // end of System
 namespace System.Runtime.InteropServices {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]
@@ -136,6 +145,13 @@ namespace System.Runtime.InteropServices {
         public ComConversionLossAttribute() { }
     }
 
+    [System.AttributeUsageAttribute((System.AttributeTargets)(4), Inherited = false)]
+    public sealed partial class ComDefaultInterfaceAttribute : System.Attribute
+    {
+        public ComDefaultInterfaceAttribute(System.Type defaultInterface) { }
+        public System.Type Value { get { return default(System.Type); } }
+    }
+
     [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
     public sealed partial class ComEventInterfaceAttribute : System.Attribute
     {
@@ -151,6 +167,12 @@ namespace System.Runtime.InteropServices {
         public COMException(string message, System.Exception inner) { }
         public COMException(string message, int errorCode) { }
         public override string ToString() { return default(string); }
+    }
+    public enum ComInterfaceType
+    {
+        InterfaceIsDual = 0,
+        InterfaceIsIDispatch = 2,
+        InterfaceIsIUnknown = 1,
     }
     public enum ComMemberType
     {
@@ -463,6 +485,14 @@ namespace System.Runtime.InteropServices {
     public sealed partial class InAttribute : System.Attribute
     {
         public InAttribute() { }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1024), Inherited = false)]
+    public sealed partial class InterfaceTypeAttribute : System.Attribute
+    {
+        public InterfaceTypeAttribute(short interfaceType) { }
+        public InterfaceTypeAttribute(System.Runtime.InteropServices.ComInterfaceType interfaceType) { }
+        public System.Runtime.InteropServices.ComInterfaceType Value { get { return default(System.Runtime.InteropServices.ComInterfaceType); } }
     }
     public partial class InvalidComObjectException : System.SystemException
     {
@@ -808,6 +838,31 @@ namespace System.Runtime.InteropServices {
         protected SafeArrayTypeMismatchException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public SafeArrayTypeMismatchException(string message) { }
         public SafeArrayTypeMismatchException(string message, System.Exception inner) { }
+    }
+
+    public abstract partial class SafeBuffer : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid, System.IDisposable
+    {
+        protected SafeBuffer(bool ownsHandle) : base(default(bool)) { }
+        [System.CLSCompliantAttribute(false)]
+        public ulong ByteLength { get { return default(ulong); } }
+        [System.CLSCompliantAttribute(false)]
+        public unsafe void AcquirePointer(ref byte* pointer) { }
+        [System.CLSCompliantAttribute(false)]
+        public void Initialize(uint numElements, uint sizeOfEachElement) { }
+        [System.CLSCompliantAttribute(false)]
+        public void Initialize(ulong numBytes) { }
+        [System.CLSCompliantAttribute(false)]
+        public void Initialize<T>(uint numElements) where T : struct { }
+        [System.CLSCompliantAttribute(false)]
+        public T Read<T>(ulong byteOffset) where T : struct { return default(T); }
+        [System.CLSCompliantAttribute(false)]
+        public void ReadArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
+        public void ReleasePointer() { }
+        [System.CLSCompliantAttribute(false)]
+        public void Write<T>(ulong byteOffset, T value) where T : struct { }
+        [System.CLSCompliantAttribute(false)]
+        public void WriteArray<T>(ulong byteOffset, T[] array, int index, int count) where T : struct { }
+        public override bool IsInvalid { get { return default(bool); } }
     }
     public partial class SEHException : System.Runtime.InteropServices.ExternalException
     {
