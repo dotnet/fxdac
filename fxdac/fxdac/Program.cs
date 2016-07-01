@@ -23,16 +23,18 @@ static class Program
 
     internal static string s_LefroverTypesAssembly = "System.Leftover"; // types not assigned to any assembly are placed here
     internal static bool s_logOrphanedTypes = true; // Orphaned types are types in the specifications that don't exist in master source.
-    internal static bool s_logValidMoves = false;
+    internal static bool s_logValidMoves = true;
     internal static bool s_logTypesNotInCoreFx = false;
     internal static bool s_logTypesNotInMasterSources = false;
     internal static bool s_logMissingContracts = false;
-    internal static bool s_logAddedContracts = false;
+    internal static bool s_logAddedContracts = true;
     internal static bool s_logExcludedWarnings = false;
 
     static void Main(string[] args)
     {
-        if(args.Length > 0) {
+        //RemoveSerialization();
+
+        if (args.Length > 0) {
             s_ExistingContracts = args[0];
         }
 
@@ -40,7 +42,8 @@ static class Program
 
         if (!Directory.Exists(s_ExistingContracts)) {
             WriteMessage(ConsoleColor.Red, "Existing contract folder {0} does not exist", s_ExistingContracts);
-        } else {
+        }
+        else {
 
             FxRedist redist;
             using (var reportWriter = new ReportWriter(s_ReportPath)) {
@@ -64,6 +67,8 @@ static class Program
                     }
                     reportWriter.WriteListEnd();
                 }
+
+                AnalyzeLayers(redist, reportWriter);
             }
         }
 
@@ -71,6 +76,49 @@ static class Program
             Console.WriteLine("\nPress ENTER to exit ...");
             Console.ReadLine();
         }
+    }
+
+    private static void RemoveSerialization()
+    {
+        RemoveSerializationFrom("System.Runtime");
+        RemoveSerializationFrom("System.Security.Cryptography.Primitives");
+        RemoveSerializationFrom("System.Threading");
+        RemoveSerializationFrom("System.Collections.NonGeneric");
+        RemoveSerializationFrom("System.Collections");
+        RemoveSerializationFrom("System.IO.FileSystem.Watcher");
+        RemoveSerializationFrom("System.Runtime.Extensions");
+        RemoveSerializationFrom("System.Collections.Specialized");
+        RemoveSerializationFrom("System.Text.RegularExpressions");
+        RemoveSerializationFrom("System.Threading.Thread");
+        RemoveSerializationFrom("System.Net.Primitives");
+        RemoveSerializationFrom("System.Runtime.InteropServices");
+        RemoveSerializationFrom("System.Security.Claims");
+        RemoveSerializationFrom("System.Security.Cryptography.X509Certificates");
+        RemoveSerializationFrom("System.Security.Principal.Windows");
+        RemoveSerializationFrom("System.Net.WebHeaderCollection");
+        RemoveSerializationFrom("System.Resources.ResourceManager");
+        RemoveSerializationFrom("System.Net.HttpListener");
+        RemoveSerializationFrom("System.Net.Requests");
+        RemoveSerializationFrom("System.Security.AccessControl");
+        RemoveSerializationFrom("System.ComponentModel.TypeConverter");
+        RemoveSerializationFrom("System.Net.Security");
+        RemoveSerializationFrom("System.Security.Permissions");
+        RemoveSerializationFrom("System.Net.Mail");
+        RemoveSerializationFrom("System.Net.Ping");
+        RemoveSerializationFrom("System.IO.FileSystem");
+        RemoveSerializationFrom("System.Runtime.IsolatedStorage");
+        RemoveSerializationFrom("System.IO.FileSystem.DriveInfo");
+        RemoveSerializationFrom("System.Runtime.Serialization.Primitives");
+    }
+
+    private static void RemoveSerializationFrom(string assembly)
+    {
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.IDeserializationCallback" });
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.ISerializable" });
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.SerializationInfo" });
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.StreamingContext" });
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.SafeSerializationEventArgs" });
+        FxdacSyntaxRewriter.s_AssemblyToTypeDependenciesToRemove.Add(new FxDependency() { From = assembly, To = "System.Runtime.Serialization.IObjectReference" });
     }
 
     private static bool RefactorAssemblies(ReportWriter reportWriter, out FxRedist redist)
@@ -81,7 +129,7 @@ static class Program
 
         // load files describing the desired factoring. verify consistency of these files.
         redist = new FxRedist();
-        if (!ProcessSpecifications(redist)) {
+        if (!ProcessSpecifications(redist, reportWriter)) {
             Console.WriteLine("\nPress ENTER to exit ...");
             Console.ReadLine();
             return false;
@@ -151,7 +199,7 @@ static class Program
         }
     }
 
-    static bool ProcessSpecifications(FxRedist redist)
+    static bool ProcessSpecifications(FxRedist redist, ReportWriter reportWriter)
     {
         Console.WriteLine("PROCESSING SPECIFICATIONS");
 
@@ -183,6 +231,41 @@ static class Program
             }
         }
         return true;
+    }
+
+    private static void AnalyzeLayers(FxRedist redist, ReportWriter reportWriter)
+    {
+        var assemblies = new List<FxAssembly>(redist.Values);
+        assemblies.Remove(redist.Leftover);
+        Dictionary<int, List<FxAssembly>> layers = new Dictionary<int, List<FxAssembly>>();
+        int layerNumber = 0;
+
+        while (assemblies.Count != 0) {
+            var avaliabledependencies = layers.Values.SelectMany((l) => { return l; }).ToList();
+
+            var nextLayer = new List<FxAssembly>();
+            layers.Add(layerNumber, nextLayer);
+
+            for(int i=assemblies.Count - 1; i>=0; i--) {
+                var assembly = assemblies[i];
+                if (HasAllDependencies(assembly, avaliabledependencies)) {
+                    nextLayer.Add(assembly);
+                    assemblies.RemoveAt(i);
+                }
+            }
+            layerNumber++;
+        }
+
+        reportWriter.WriteListStart("Layers");
+        for(int i=0; i<layers.Count; i++) {
+            var layer = layers[i];
+            reportWriter.WriteListStart("Layer", "number", i);
+            foreach(var a in layer) {
+                reportWriter.WriteListItem(a.Name);
+            }
+            reportWriter.WriteListEnd();
+        }
+        reportWriter.WriteListEnd();
     }
 
     private static bool ProcessSpecification(FxRedist redist, Dictionary<string, string> alreadyLoadedSpecification, string assemblySpecificationFile)
