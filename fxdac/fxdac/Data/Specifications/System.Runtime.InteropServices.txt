@@ -2,6 +2,7 @@
 /r:System.Security.SecureString.dll
 
 System.DllNotFoundException
+System.EntryPointNotFoundException
 System.Runtime.InteropServices.SafeBuffer
 
 System.Runtime.InteropServices.ComDefaultInterfaceAttribute

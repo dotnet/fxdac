@@ -11,7 +11,6 @@ System.Base64FormattingOptions
 System.ContextMarshalException
 System.ContextStaticAttribute
 System.Convert
-System.Net.WebUtility
 System.MulticastNotSupportedException
 
 System.UriBuilder
@@ -29,8 +28,6 @@ System.UriIdnScope
 // from corefx
 System.Runtime.Versioning.FrameworkName
 
-
-
 System.ComponentModel.CancelEventArgs
 System.ComponentModel.CancelEventHandler
 System.IO.Path
@@ -44,5 +41,8 @@ System.Runtime.TargetedPatchingOptOutAttribute
 
 System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
 System.ApplicationIdentity
+System.TypeUnloadedException
 
+// preexisting type
+System.Net.WebUtility 
 

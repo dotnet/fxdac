@@ -72,6 +72,8 @@ class LocationAnalysis
         new Move(from:"System.ComponentModel.TypeConverter", to:"System.ComponentModel.Primitives"),
         new Move(from:"Microsoft.Win32.Registry.AccessControl", to:"Microsoft.Win32.Registry"),
         new Move(from:"System.IO.FileSystem.AccessControl", to:"System.IO.FileSystem"),
+        new Move(from:"System.Collections.Specialized", to:"System.Collections"),
+        new Move(from:"System.Text.Encoding.Extensions", to:"System.Text.Encoding")
     };
 
     public static void GenerateDump(string directory, List<ReportType> types, bool current)
@@ -130,6 +132,7 @@ class LocationAnalysis
         var types = new List<ReportType>(3000);
         GenerateDump(previous, types, false);
         GenerateDump(current, types, true);
+        types.RemoveAll((t) => { return t.FullName.StartsWith(".", StringComparison.Ordinal); });
 
         var missing = types.Where((t) => t.CurrentAssembly == null).ToList();
         missing.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
@@ -138,6 +141,10 @@ class LocationAnalysis
         var moved = types.Where((t) => t.CurrentAssembly != t.PreviousAssembly && t.CurrentAssembly != null && t.PreviousAssembly != null).ToList();
         moved.Sort((left, right) => { return left.AssemblyQualifiedName.CompareTo(right.AssemblyQualifiedName); });
         var movedToSystemRuntime = moved.Where((t) => t.CurrentAssembly == "System.Runtime").ToList();
+        var addedToSystemRuntime = added.Where((t) => t.CurrentAssembly == "System.Runtime").ToList();
+        var newToSystemRuntime = new List<ReportType>(addedToSystemRuntime);
+        newToSystemRuntime.AddRange(movedToSystemRuntime);
+        newToSystemRuntime.Sort((left, right) => { return left.FullName.CompareTo(right.FullName); });
         var movedToOtherThanSystemRuntime = moved.Where((t) => t.CurrentAssembly != "System.Runtime").ToList();
         var validMoves = movedToOtherThanSystemRuntime.Where((t) => IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
         var unknownMoves = movedToOtherThanSystemRuntime.Where((t) => !IsValidMove(t.PreviousAssembly, t.CurrentAssembly)).ToList();
@@ -184,6 +191,17 @@ class LocationAnalysis
             }
             else {
                 reportWriter.WriteElement("MOVED_TO_SYSTEM_RUNTIME", "total", movedToSystemRuntime.Count, "description", "all moves to System.Runtime are OK"); ;
+            }
+
+            if (Program.s_logValidMoves && newToSystemRuntime.Count > 0) {
+                reportWriter.WriteListStart("NEW_TO_SYSTEM_RUNTIME", "total", newToSystemRuntime.Count);
+                foreach (var addedType in newToSystemRuntime) {
+                    reportWriter.WriteListItem(addedType.FullName);
+                }
+                reportWriter.WriteListEnd();
+            }
+            else {
+                reportWriter.WriteElement("NEW_TO_SYSTEM_RUNTIME", "total", newToSystemRuntime.Count); ;
             }
 
             reportWriter.WriteListEnd();

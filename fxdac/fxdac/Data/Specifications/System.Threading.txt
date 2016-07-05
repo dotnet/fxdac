@@ -20,6 +20,7 @@ System.Threading.ThreadLocal`1
 
 System.Threading.ApartmentState
 System.Threading.ExecutionContext
+System.Threading.ContextCallback
 System.Threading.CompressedStack
 
 System.Threading.AsyncFlowControl

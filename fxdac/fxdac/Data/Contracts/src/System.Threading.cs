@@ -51,6 +51,7 @@ namespace System.Threading {
         public void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
         public static void Run(System.Threading.CompressedStack compressedStack, System.Threading.ContextCallback callback, object state) { }
     }
+    public delegate void ContextCallback(object state);
     public partial class CountdownEvent : System.IDisposable
     {
         public CountdownEvent(int initialCount) { }

@@ -96,7 +96,6 @@
     <None Include="Data\Contracts\src\System.Collections.cs" />
     <None Include="Data\Contracts\src\System.Collections.NonGeneric.cs" />
     <None Include="Data\Contracts\src\System.Collections.Specialized.cs" />
-    <None Include="Data\Contracts\src\System.ComponentModel.cs" />
     <None Include="Data\Contracts\src\System.ComponentModel.EventBasedAsync.cs" />
     <None Include="Data\Contracts\src\System.ComponentModel.TypeConverter.cs" />
     <None Include="Data\Contracts\src\System.Console.cs" />
@@ -120,12 +119,10 @@
     <None Include="Data\Contracts\src\System.IO.FileSystem.Watcher.cs" />
     <None Include="Data\Contracts\src\System.IO.MemoryMappedFiles.cs" />
     <None Include="Data\Contracts\src\System.IO.UnmanagedMemoryStream.cs" />
-    <None Include="Data\Contracts\src\System.Leftover.cs" />
     <None Include="Data\Contracts\src\System.Linq.cs" />
     <None Include="Data\Contracts\src\System.Linq.Expressions.cs" />
     <None Include="Data\Contracts\src\System.Linq.Parallel.cs" />
     <None Include="Data\Contracts\src\System.Linq.Queryable.cs" />
-    <None Include="Data\Contracts\src\System.Net.cs" />
     <None Include="Data\Contracts\src\System.Net.HttpListener.cs" />
     <None Include="Data\Contracts\src\System.Net.Mail.cs" />
     <None Include="Data\Contracts\src\System.Net.Mime.cs" />
@@ -164,7 +161,6 @@
     <None Include="Data\Contracts\src\System.Security.Principal.cs" />
     <None Include="Data\Contracts\src\System.Security.Principal.Windows.cs" />
     <None Include="Data\Contracts\src\System.Text.Encoding.cs" />
-    <None Include="Data\Contracts\src\System.Text.Encoding.Extensions.cs" />
     <None Include="Data\Contracts\src\System.Text.RegularExpressions.cs" />
     <None Include="Data\Contracts\src\System.Threading.cs" />
     <None Include="Data\Contracts\src\System.Threading.Overlapped.cs" />
@@ -220,7 +216,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\report.xml" />
+    <None Include="Data\report.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Data\Specifications\System.Reflection.Primitives.txt" />
     <None Include="Data\Specifications\System.Xml.XDocument.txt" />
     <None Include="Data\Specifications\System.Xml.XmlDocument.txt" />

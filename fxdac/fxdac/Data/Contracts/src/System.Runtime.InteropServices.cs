@@ -7,6 +7,13 @@ namespace System {
         public DllNotFoundException(string message) { }
         public DllNotFoundException(string message, System.Exception inner) { }
     }
+    public partial class EntryPointNotFoundException : System.TypeLoadException
+    {
+        public EntryPointNotFoundException() { }
+        protected EntryPointNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public EntryPointNotFoundException(string message) { }
+        public EntryPointNotFoundException(string message, System.Exception inner) { }
+    }
 } // end of System
 namespace System.Runtime.InteropServices {
 

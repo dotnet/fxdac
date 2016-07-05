@@ -606,6 +606,13 @@ namespace System {
     public partial struct RuntimeArgumentHandle
     {
     }
+    public partial class TypeUnloadedException : System.SystemException
+    {
+        public TypeUnloadedException() { }
+        protected TypeUnloadedException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+        public TypeUnloadedException(string message) { }
+        public TypeUnloadedException(string message, System.Exception innerException) { }
+    }
     public partial class FileStyleUriParser : System.UriParser
     {
         public FileStyleUriParser() { }

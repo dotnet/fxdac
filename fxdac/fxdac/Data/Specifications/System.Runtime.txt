@@ -419,7 +419,7 @@ System.UriPartial
 
 // needed by higher level assemblies to avoid dependencies on System.Runtime.Extensions.dll
 System.ApplicationException
-System.Threading.ContextCallback
+
 
 // they seem to make sense here
 System.Threading.Tasks.TaskCanceledException
@@ -463,11 +463,9 @@ System.Configuration.Assemblies.AssemblyHash
 System.AccessViolationException
 System.DataMisalignedException
 System.DuplicateWaitObjectException
-System.EntryPointNotFoundException
 System.ExecutionEngineException
 System.InsufficientMemoryException
 System.NotFiniteNumberException
-System.TypeUnloadedException
 System.StackOverflowException
 
 // added because it seemed like the right thing to do:

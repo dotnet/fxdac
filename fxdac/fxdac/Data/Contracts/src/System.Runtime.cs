@@ -1057,13 +1057,6 @@ namespace System {
         public DuplicateWaitObjectException(string message, System.Exception innerException) { }
         public DuplicateWaitObjectException(string parameterName, string message) { }
     }
-    public partial class EntryPointNotFoundException : System.TypeLoadException
-    {
-        public EntryPointNotFoundException() { }
-        protected EntryPointNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public EntryPointNotFoundException(string message) { }
-        public EntryPointNotFoundException(string message, System.Exception inner) { }
-    }
     public abstract partial class Enum : System.ValueType, System.IComparable, System.IConvertible, System.IFormattable
     {
         protected Enum() { }
@@ -2817,13 +2810,6 @@ namespace System {
         public override string Message { get { return default(string); } }
         public string TypeName { get { return default(string); } }
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-    }
-    public partial class TypeUnloadedException : System.SystemException
-    {
-        public TypeUnloadedException() { }
-        protected TypeUnloadedException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-        public TypeUnloadedException(string message) { }
-        public TypeUnloadedException(string message, System.Exception innerException) { }
     }
 
     [System.CLSCompliantAttribute(false)]
@@ -6681,7 +6667,6 @@ namespace System.Threading {
         public void Dispose() { }
         protected virtual void Dispose(bool disposing) { }
     }
-    public delegate void ContextCallback(object state);
 
     public enum LazyThreadSafetyMode
     {
