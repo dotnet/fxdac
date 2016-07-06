@@ -46,3 +46,10 @@ System.TypeUnloadedException
 // preexisting type
 System.Net.WebUtility 
 
+// legacy
+System.Runtime.CompilerServices.SuppressIldasmAttribute
+System.Runtime.CompilerServices.DefaultDependencyAttribute
+System.Runtime.CompilerServices.DependencyAttribute
+System.Runtime.CompilerServices.StringFreezingAttribute
+System.Runtime.CompilerServices.LoadHint
+

@@ -19,3 +19,8 @@ System.Runtime.CompilerServices.IUnknownConstantAttribute
 System.Runtime.CompilerServices.NativeCppClassAttribute
 System.Runtime.CompilerServices.RequiredAttributeAttribute
 
+System.Runtime.CompilerServices.CompilerMarshalOverride
+System.Runtime.CompilerServices.HasCopySemanticsAttribute
+System.Runtime.CompilerServices.ScopelessEnumAttribute
+System.Runtime.CompilerServices.DiscardableAttribute
+System.Runtime.CompilerServices.FixedAddressValueTypeAttribute
