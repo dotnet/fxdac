@@ -5844,10 +5844,6 @@ namespace System.Runtime.CompilerServices {
         public CompilerGlobalScopeAttribute() { }
     }
 
-    public static partial class CompilerMarshalOverride
-    {
-    }
-
     public sealed partial class ConditionalWeakTable<TKey, TValue> where TKey : class where TValue : class
     {
         public ConditionalWeakTable() { }
@@ -5911,35 +5907,10 @@ namespace System.Runtime.CompilerServices {
         public decimal Value { get { return default(decimal); } }
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1))]
-    public sealed partial class DefaultDependencyAttribute : System.Attribute
-    {
-        public DefaultDependencyAttribute(System.Runtime.CompilerServices.LoadHint loadHintArgument) { }
-        public System.Runtime.CompilerServices.LoadHint LoadHint { get { return default(System.Runtime.CompilerServices.LoadHint); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = true)]
-    public sealed partial class DependencyAttribute : System.Attribute
-    {
-        public DependencyAttribute(string dependentAssemblyArgument, System.Runtime.CompilerServices.LoadHint loadHintArgument) { }
-        public string DependentAssembly { get { return default(string); } }
-        public System.Runtime.CompilerServices.LoadHint LoadHint { get { return default(System.Runtime.CompilerServices.LoadHint); } }
-    }
-    public partial class DiscardableAttribute : System.Attribute
-    {
-        public DiscardableAttribute() { }
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(69))]
     public sealed partial class ExtensionAttribute : System.Attribute
     {
         public ExtensionAttribute() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(256))]
-    public sealed partial class FixedAddressValueTypeAttribute : System.Attribute
-    {
-        public FixedAddressValueTypeAttribute() { }
     }
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(256), Inherited = false)]
@@ -5948,12 +5919,6 @@ namespace System.Runtime.CompilerServices {
         public FixedBufferAttribute(System.Type elementType, int length) { }
         public System.Type ElementType { get { return default(System.Type); } }
         public int Length { get { return default(int); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(8))]
-    public sealed partial class HasCopySemanticsAttribute : System.Attribute
-    {
-        public HasCopySemanticsAttribute() { }
     }
 
     public partial interface IAsyncStateMachine
@@ -5997,13 +5962,6 @@ namespace System.Runtime.CompilerServices {
     public sealed partial class IteratorStateMachineAttribute : System.Runtime.CompilerServices.StateMachineAttribute
     {
         public IteratorStateMachineAttribute(System.Type stateMachineType) : base(default(System.Type)) { }
-    }
-
-    public enum LoadHint
-    {
-        Always = 1,
-        Default = 0,
-        Sometimes = 2,
     }
     public enum MethodCodeType
     {
@@ -6072,12 +6030,6 @@ namespace System.Runtime.CompilerServices {
         public override void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
     }
 
-    [System.AttributeUsageAttribute((System.AttributeTargets)(16))]
-    public sealed partial class ScopelessEnumAttribute : System.Attribute
-    {
-        public ScopelessEnumAttribute() { }
-    }
-
     [System.AttributeUsageAttribute((System.AttributeTargets)(972))]
     public sealed partial class SpecialNameAttribute : System.Attribute
     {
@@ -6089,18 +6041,6 @@ namespace System.Runtime.CompilerServices {
     {
         public StateMachineAttribute(System.Type stateMachineType) { }
         public System.Type StateMachineType { [System.Runtime.CompilerServices.CompilerGeneratedAttribute]get { return default(System.Type); } }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
-    public sealed partial class StringFreezingAttribute : System.Attribute
-    {
-        public StringFreezingAttribute() { }
-    }
-
-    [System.AttributeUsageAttribute((System.AttributeTargets)(3))]
-    public sealed partial class SuppressIldasmAttribute : System.Attribute
-    {
-        public SuppressIldasmAttribute() { }
     }
     [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TaskAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion, System.Runtime.CompilerServices.INotifyCompletion

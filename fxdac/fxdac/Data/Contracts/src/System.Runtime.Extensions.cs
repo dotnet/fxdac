@@ -770,6 +770,42 @@ namespace System.Runtime {
         public string Reason { get { return default(string); } }
     }
 } // end of System.Runtime
+namespace System.Runtime.CompilerServices {
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1))]
+    public sealed partial class DefaultDependencyAttribute : System.Attribute
+    {
+        public DefaultDependencyAttribute(System.Runtime.CompilerServices.LoadHint loadHintArgument) { }
+        public System.Runtime.CompilerServices.LoadHint LoadHint { get { return default(System.Runtime.CompilerServices.LoadHint); } }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1), AllowMultiple = true)]
+    public sealed partial class DependencyAttribute : System.Attribute
+    {
+        public DependencyAttribute(string dependentAssemblyArgument, System.Runtime.CompilerServices.LoadHint loadHintArgument) { }
+        public string DependentAssembly { get { return default(string); } }
+        public System.Runtime.CompilerServices.LoadHint LoadHint { get { return default(System.Runtime.CompilerServices.LoadHint); } }
+    }
+
+    public enum LoadHint
+    {
+        Always = 1,
+        Default = 0,
+        Sometimes = 2,
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(1), Inherited = false)]
+    public sealed partial class StringFreezingAttribute : System.Attribute
+    {
+        public StringFreezingAttribute() { }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(3))]
+    public sealed partial class SuppressIldasmAttribute : System.Attribute
+    {
+        public SuppressIldasmAttribute() { }
+    }
+} // end of System.Runtime.CompilerServices
 namespace System.Runtime.ExceptionServices {
 
     [System.AttributeUsageAttribute((System.AttributeTargets)(64), AllowMultiple = false, Inherited = false)]

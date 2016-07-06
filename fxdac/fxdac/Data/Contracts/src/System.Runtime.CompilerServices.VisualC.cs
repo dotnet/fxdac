@@ -17,6 +17,26 @@ namespace System.Runtime.CompilerServices {
         public CallConvThiscall() { }
     }
 
+    public static partial class CompilerMarshalOverride
+    {
+    }
+    public partial class DiscardableAttribute : System.Attribute
+    {
+        public DiscardableAttribute() { }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(256))]
+    public sealed partial class FixedAddressValueTypeAttribute : System.Attribute
+    {
+        public FixedAddressValueTypeAttribute() { }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(8))]
+    public sealed partial class HasCopySemanticsAttribute : System.Attribute
+    {
+        public HasCopySemanticsAttribute() { }
+    }
+
     public static partial class IsBoxed
     {
     }
@@ -74,5 +94,11 @@ namespace System.Runtime.CompilerServices {
     {
         public RequiredAttributeAttribute(System.Type requiredContract) { }
         public System.Type RequiredContract { get { return default(System.Type); } }
+    }
+
+    [System.AttributeUsageAttribute((System.AttributeTargets)(16))]
+    public sealed partial class ScopelessEnumAttribute : System.Attribute
+    {
+        public ScopelessEnumAttribute() { }
     }
 } // end of System.Runtime.CompilerServices

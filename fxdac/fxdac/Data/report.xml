@@ -317,7 +317,7 @@
       <item text="System.Runtime,System.Threading.Tasks.TaskStatus moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
-    <NEW_TO_SYSTEM_RUNTIME total="201">
+    <NEW_TO_SYSTEM_RUNTIME total="191">
       <item text="Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid"/>
       <item text="Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"/>
       <item text="Microsoft.Win32.SafeHandles.SafeWaitHandle"/>
@@ -449,24 +449,14 @@
       <item text="System.Runtime.CompilerServices.AsyncVoidMethodBuilder"/>
       <item text="System.Runtime.CompilerServices.CompilationRelaxations"/>
       <item text="System.Runtime.CompilerServices.CompilerGlobalScopeAttribute"/>
-      <item text="System.Runtime.CompilerServices.CompilerMarshalOverride"/>
       <item text="System.Runtime.CompilerServices.ConfiguredTaskAwaitable"/>
       <item text="System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1"/>
-      <item text="System.Runtime.CompilerServices.DefaultDependencyAttribute"/>
-      <item text="System.Runtime.CompilerServices.DependencyAttribute"/>
-      <item text="System.Runtime.CompilerServices.DiscardableAttribute"/>
-      <item text="System.Runtime.CompilerServices.FixedAddressValueTypeAttribute"/>
-      <item text="System.Runtime.CompilerServices.HasCopySemanticsAttribute"/>
       <item text="System.Runtime.CompilerServices.IAsyncStateMachine"/>
       <item text="System.Runtime.CompilerServices.ICriticalNotifyCompletion"/>
       <item text="System.Runtime.CompilerServices.INotifyCompletion"/>
-      <item text="System.Runtime.CompilerServices.LoadHint"/>
       <item text="System.Runtime.CompilerServices.MethodCodeType"/>
       <item text="System.Runtime.CompilerServices.RuntimeWrappedException"/>
-      <item text="System.Runtime.CompilerServices.ScopelessEnumAttribute"/>
       <item text="System.Runtime.CompilerServices.SpecialNameAttribute"/>
-      <item text="System.Runtime.CompilerServices.StringFreezingAttribute"/>
-      <item text="System.Runtime.CompilerServices.SuppressIldasmAttribute"/>
       <item text="System.Runtime.CompilerServices.TaskAwaiter"/>
       <item text="System.Runtime.CompilerServices.TaskAwaiter`1"/>
       <item text="System.Runtime.CompilerServices.YieldAwaitable"/>
@@ -521,7 +511,7 @@
       <item text="System.UriPartial"/>
     </NEW_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="19">
+  <ADDED_CONTRACTS total="20">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -538,6 +528,7 @@
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
+    <item text="System.Security.Cryptography.Csp"/>
     <item text="System.Security.Permissions"/>
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>
