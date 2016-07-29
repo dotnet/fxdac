@@ -5,7 +5,6 @@ System.Environment
 System.OperatingSystem
 System.PlatformID
 System.EnvironmentVariableTarget
-System.RuntimeArgumentHandle
 System.ApplicationId
 System.Base64FormattingOptions
 System.ContextMarshalException

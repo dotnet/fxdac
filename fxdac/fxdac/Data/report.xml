@@ -317,7 +317,7 @@
       <item text="System.Runtime,System.Threading.Tasks.TaskStatus moved from System.Threading.Tasks"/>
       <item text="System.Runtime,System.Threading.Tasks.UnobservedTaskExceptionEventArgs moved from System.Threading.Tasks"/>
     </MOVED_TO_SYSTEM_RUNTIME>
-    <NEW_TO_SYSTEM_RUNTIME total="191">
+    <NEW_TO_SYSTEM_RUNTIME total="192">
       <item text="Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid"/>
       <item text="Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"/>
       <item text="Microsoft.Win32.SafeHandles.SafeWaitHandle"/>
@@ -479,6 +479,7 @@
       <item text="System.Runtime.Serialization.SerializationInfoEnumerator"/>
       <item text="System.Runtime.Serialization.StreamingContext"/>
       <item text="System.Runtime.Serialization.StreamingContextStates"/>
+      <item text="System.RuntimeArgumentHandle"/>
       <item text="System.Security.PartialTrustVisibilityLevel"/>
       <item text="System.Security.SecurityRulesAttribute"/>
       <item text="System.Security.SecurityRuleSet"/>
@@ -511,7 +512,7 @@
       <item text="System.UriPartial"/>
     </NEW_TO_SYSTEM_RUNTIME>
   </MOVED_TYPES>
-  <ADDED_CONTRACTS total="20">
+  <ADDED_CONTRACTS total="19">
     <item text="Microsoft.Win32.SafeHandles"/>
     <item text="System.CodeDom"/>
     <item text="System.Deployment"/>
@@ -528,7 +529,6 @@
     <item text="System.Runtime.IsolatedStorage"/>
     <item text="System.Runtime.Remoting"/>
     <item text="System.Runtime.Versioning"/>
-    <item text="System.Security.Cryptography.Csp"/>
     <item text="System.Security.Permissions"/>
     <item text="System.Threading.Security"/>
     <item text="System.Timer"/>

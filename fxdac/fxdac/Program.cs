@@ -39,7 +39,7 @@ static class Program
             s_ExistingContracts = args[0];
         }
 
-        s_ExistingContracts = @"C:\Users\Krzysztof\Desktop\ExistingContracts";
+        //s_ExistingContracts = @"C:\Users\Krzysztof\Desktop\ExistingContracts";
 
         if (!Directory.Exists(s_ExistingContracts)) {
             WriteMessage(ConsoleColor.Red, "Existing contract folder {0} does not exist", s_ExistingContracts);
