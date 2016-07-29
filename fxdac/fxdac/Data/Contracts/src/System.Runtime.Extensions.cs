@@ -602,10 +602,6 @@ namespace System {
         WinCE = 3,
         Xbox = 5,
     }
-    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct RuntimeArgumentHandle
-    {
-    }
     public partial class TypeUnloadedException : System.SystemException
     {
         public TypeUnloadedException() { }

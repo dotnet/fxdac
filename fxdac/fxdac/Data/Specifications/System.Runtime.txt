@@ -522,3 +522,5 @@ System.Collections.Generic.Stack`1
 System.Collections.Generic.Queue`1
 System.Collections.Generic.HashSet`1
 
+System.RuntimeArgumentHandle
+
